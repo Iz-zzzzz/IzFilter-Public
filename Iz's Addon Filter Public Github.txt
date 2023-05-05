@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230505232434
+! Version: 20230506000252
 ! Expires: 7-30 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -691,6 +691,10 @@ shibaanime.com##div.hero.common-hero:nth-child(2)
 novel-lucky.com##.advanced_floating_content 
 novel-lucky.com##.container-fluid
 novel-lucky.com##.c-sidebar
+novel-lucky.com###bottom_center_ads_1
+
+!aileen-novel.online
+aileen-novel.online##.c-top-sidebar
 
 !Movie 
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|seriesubthai.co|24-hd.com|1412hd.com|doonungsub.com
