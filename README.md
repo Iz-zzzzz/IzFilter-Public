@@ -11,7 +11,7 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 - Ad Elements (image, link, widget)
 - Annoyances elements
 - โดเมนและโฆษณาการพนันไทย
-> filter นี้ใช้งานได้ดีกับ AdGuard Base Filter
+> filter นี้"ต้อง"ใช้งานร่วมกับ AdGuard Base Filter
 
 Subscribe [here](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
 
