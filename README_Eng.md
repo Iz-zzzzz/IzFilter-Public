@@ -13,7 +13,11 @@ The goal of this filter is to additional block ads/annoyances on English, Intern
 - Thai bet ads/domains
 > This filter works perfectly with AdGuard Base Filter.
 
-Subscribe [here]()
+Subscribe [here](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
+
+### How to add filter to your adblocker
+- AdGuard : click "Filters" > At the bottom, click "Custom" > Click "Add custom filter" > In "Enter URL or file path" enter: [this url](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > Click "Next" > Click "Subscribe"
+- uBlock Origin : Click "Filterlists"-page > scroll down and tick the box where it says: "Import" > enter: [this url](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > In the top click on "Apply Changes"
 
 # Contributing to Iz's Filter Public Version
 ## Report Issues
