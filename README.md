@@ -16,10 +16,8 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 Subscribe [here](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
 
 ###วิธีเพิ่ม Filter
-- AdGuard ไปที่แถบ Filters > Custom > ปุ่มสีเขียว Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
- > (ไม่จำเป็น) ติ๊ก Trusted > Subscribe
-- uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
- > ปุ่ม Apply changes
+- AdGuard ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > (ไม่จำเป็น) ติ๊ก Trusted > กดปุ่ม Subscribe
+- uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กดปุ่ม Apply changes
 
 # ต้องการมีส่วนร่วมกับ Iz's Filter Public Version
 ## รายงานปัญหา
