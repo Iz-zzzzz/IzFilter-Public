@@ -13,7 +13,11 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 - โดเมนและโฆษณาการพนันไทย
 > filter นี้ใช้งานได้ดีกับ AdGuard Base Filter
 
-Subscribe [here]()
+Subscribe [here](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt)
+
+###วิธีเพิ่ม Filter
+- AdGuard ไปที่แถบ Filters > Custom > ปุ่มสีเขียว Add Custom filter > ใส่ Url > (ไม่จำเป็น) ติ๊ก Trusted > Subscribe
+- uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ Url > ปุ่ม Apply changes
 
 # ต้องการมีส่วนร่วมกับ Iz's Filter Public Version
 ## รายงานปัญหา
