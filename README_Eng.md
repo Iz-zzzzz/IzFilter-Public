@@ -2,7 +2,6 @@
 
 # Iz's Filter Public Version
 - These filters mainly were used for AdGuard and uBlock origin.
-- For the purpose to block most of ads, annoyances, and cookie popups as many as possible.
 
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Iz-zzzzz/IzFilter-Public">
 
