@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230506164857
+! Version: 20230506231334
 ! Expires: 7-30 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -198,6 +198,20 @@ thestandard.co##.cwc-sdk-container
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thestandard.co##.adsbyadop
 thestandard.co##div[class="banner-box hidden-xs"]
+
+!workpointtoday.com
+workpointtoday.com##div[class^="dpdpa--popup"]
+workpointtoday.com##.insert_ads
+
+!men.kapook.com
+!anti adblock detect
+men.kapook.com##.taboola-x2-widget
+men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
+men.kapook.com##div[class="ads728 h90"]
+men.kapook.com##div.aside_article
+men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
+men.kapook.com##div[data-item-syndicated="true"]
+
 !
 !---education ---
 !
@@ -258,6 +272,9 @@ wikiwand.com##div[class^="footer_donation_"]
 
 !Apkcombo
 apkcombo.com##[data-m-ad-id]
+
+!apkdone.com
+apkdone.com###acceptCookie
 
 !
 !---dictionary ---
@@ -443,6 +460,7 @@ raymond.cc##.adsbygoogle
 
 !howtogeek.com
 howtogeek.com##.widget-area
+howtogeek.com##.adslot970
 
 !androidpolice.com
 androidpolice.com##[id^="google_ads_iframe"]
@@ -961,6 +979,10 @@ blender.stackexchange.com##.js-consent-banner
 
 !geeksforgeeks.org
 geeksforgeeks.org##.cookie-consent:not(body):not(html)
+
+!apkdone.com
+apkdone.com###acceptCookie
+apkdone.com###cookie-law-info-bar
 
 !
 !
