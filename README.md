@@ -2,7 +2,6 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 # Iz's Filter Public Version
 
 - Filter เหล่านี้หลักๆ ใช้กับ Program AdGuard และ UBlock Origin
-- โดยมีจุดประสงค์คือ บล็อกโษณา, สิ่งรบกวน และ cookies popup ให้มากที่สุดเท่าที่เป็นไปได้
 
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Iz-zzzzz/IzFilter-Public">
 
