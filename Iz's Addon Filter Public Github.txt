@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230506000252
+! Version: 20230506164857
 ! Expires: 7-30 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -27,8 +27,8 @@ https://content.jwplatform.com/libraries/*.js
 ||agabreloomr.com^$all
 ||ptaimpeerte.com^$all
 ||breedwaste.com^$all
-||exness.com/?campaign=^$all
-||exness.com/?utm_source=^$all
+||exness.com/?campaign*$all
+||exness.com/?utm_source*$all
 ||hethisisath.xyz^$all
 ||s.optnx.com^$all
 ||redclo.net^$all
@@ -54,6 +54,9 @@ https://content.jwplatform.com/libraries/*.js
 ||thaibetsite.com^$all
 ||dspmega.com^$all
 ||glersakr.com^$all
+
+!official popup blocker test
+||rrc.texas.gov^$popup
 
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
@@ -130,7 +133,7 @@ businessinsider.com##.dianomi-ad
 !---thai news ---
 !
 !kapook
-kapook.com##div:has(> div[id^="div-gpt-"])
+kapook.com##div:has(> div[id^="div-gpt-ad"]):not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !hilight.kapook.com 20230430153642
 hilight.kapook.com###container > div.fullbanner
@@ -165,7 +168,7 @@ thairath.co.th###article-div > div:nth-of-type(1) > div:nth-of-type(3)
 !END thairath.co.th/sport
 
 !ch3plus.com
-ch3plus.com##div[id^="div-gpt-ad"]
+ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ch3plus.com##.sp-banner
 ch3plus.com##.relate-article:nth-of-type(1)
 
@@ -185,22 +188,28 @@ tnews.co.th##.default-sticky
 
 !thansettakij.com 
 thansettakij.com##.ads-billboard
-thansettakij.com##div[id^="div-gpt-"]
+thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !catdumb.com
 catdumb.com##.tdc-row
+
+!thestandard.co
+thestandard.co##.cwc-sdk-container
+thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+thestandard.co##.adsbyadop
+thestandard.co##div[class="banner-box hidden-xs"]
 !
 !---education ---
 !
 !clearnotebooks.com
 clearnotebooks.com##.asOverlayAd__wrap
-clearnotebooks.com##div[id^="div-gpt-ad"]
+clearnotebooks.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 clearnotebooks.com##li[class="notebook-page-ad-banner"]
 clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]
 ||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
 
 !camphub.in.th
-camphub.in.th##div[id^="div-gpt-ad"]
+camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !ptable.com 
 ptable.com###Notice
@@ -355,12 +364,12 @@ uploadmx.com##.adsbygoogle
 !
 
 !gsmarena.com
-gsmarena.com##div[id^="div-gpt-ad"]
+gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 gsmarena.com##.adv
 gsmarena.com###topAdv
 
 !droidsans.com
-droidsans.com##div[id^="div-gpt-ad-"]
+droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !siamblockchain.com
 siamblockchain.com##.header-banner
@@ -369,7 +378,7 @@ siamblockchain.com###block-6
 
 !iphone-droid.net 
 iphone-droid.net##.widget_text
-iphone-droid.net##div[id^="div-gpt-ad-"]
+iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !extremeit.com 
 extremeit.com##table[border="0"]
@@ -419,14 +428,14 @@ techtalkthai.com###text-9
 techtalkthai.com###text-18
 
 !blognone.com
-blognone.com##div[id^="div-gpt-ad"]
+blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !flashfly.net
 flashfly.net##iframe[width="500"][height="190"]
 flashfly.net##ins.adsbygoogle
 
 !droidsans.com
-droidsans.com##[id^="div-gpt-ad"]
+droidsans.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !raymond.cc
 raymond.cc##ins.adsbygoogle
@@ -441,7 +450,7 @@ androidpolice.com##.adsninja-ad-zone
 androidpolice.com##.ad-current
 androidpolice.com##.ad-zone-container
 androidpolice.com##.ad-zone
-androidpolice.com##div[id^="div-gpt-"]
+androidpolice.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !trustedreviews.com
 trustedreviews.com##.ipc-advert
@@ -481,7 +490,7 @@ xda-developers.com##.ad-zone
 xda-developers.com##.ad-zone-container
 xda-developers.com##.ad-current
 xda-developers.com##.adsninja-ad-zone
-xda-developers.com##div[id^="div-gpt-"]
+xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 xda-developers.com##[id^="google_ads_iframe"]
 
 !alphr.com
@@ -495,7 +504,7 @@ alphr.com##.sticky-ads
 
 !sourceforge.net
 sourceforge.net##[id^="google_ads_iframe"]
-sourceforge.net##div[id^="div-gpt-"]
+sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !tutorialstonight.com
 tutorialstonight.com##span[class^="ezoic-"]
@@ -503,7 +512,7 @@ tutorialstonight.com##div[id^="ez-sidebar"]
 tutorialstonight.com##[id^="google_ads_iframe"]
 tutorialstonight.com##.banner_ads
 tutorialstonight.com##[data-ez-name]
-tutorialstonight.com##[id^="div-gpt-ad"]
+tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 tutorialstonight.com###ezmobfooter
 
 !freecodecamp.org 20230430155258
@@ -515,6 +524,17 @@ linuxhint.com##.adthrive
 linuxhint.com##.adthrive-content
 linuxhint.com##.adthrive-ad
 linuxhint.com##.adthrive-header
+
+!thepythoncode.com
+thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
+thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+thepythoncode.com##[data-ez-name]
+thepythoncode.com##.ezoic-floating-bottom
+thepythoncode.com##.ezoic-ad-adaptive
+thepythoncode.com##.ezoic-ad
+thepythoncode.com##.ezmob-footer-desktop
+thepythoncode.com##.ezmob-footer
+
 !
 !---web builder ---
 !
@@ -547,7 +567,7 @@ alternativeto.net##ins.adsbygoogle
 ##.ad_336
 !
 !---Manga Thai---
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|niceoppai.net|kingsmanga.net|nekopost.org|mangafin.net|mangafins.com|mangahits.com|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|kuro-manga.com|thaimanga.net|mangath.co|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.com
+||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|niceoppai.net|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|kuro-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
 
@@ -592,7 +612,7 @@ moodtoon.com##.chdesc > p
 moodtoon.com##.ads-info
 moodtoon.com##.mt-ad
 
-!Niceoppai
+!niceoppai.net
 niceoppai.net###text-90
 niceoppai.net###text-33
 !niceoppai.net###sct_top_banner
@@ -623,8 +643,21 @@ loli-manga.com##div[class*="ads"]
 !thaimanga.net
 thaimanga.net##.chdesc > p
 
-!manga-za.com
-manga-za.com##.chaptertags
+!mangaisekaithai.com
+mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+
+!mangafins.net
+mangafins.net##.c-top-sidebar
+
+!murim-manga.com
+murim-manga.com##.dessert-frame
+
+!ped-manga.com
+ped-manga.com##.dessert-frame
+ped-manga.com###wbnn
+
+!dokimori.com
+dokimori.com##.col-md-12
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com
@@ -684,7 +717,12 @@ fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
 shibaanime.com##a[rel$="sponsored"]
 shibaanime.com##div.hero.common-hero:nth-child(2)
 
-!Novel
+!anime-hit.com
+||anime-hit.com^$popup,domain=~anime-hit.com
+##a[hreaf^="https://anime-hit.com"]
+anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
+
+!---Novel ---
 ||*.gif$image,domain=novel-lucky.com|aileen-novel
 
 !novel-lucky.com
@@ -696,9 +734,13 @@ novel-lucky.com###bottom_center_ads_1
 !aileen-novel.online
 aileen-novel.online##.c-top-sidebar
 
-!Movie 
-||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|seriesubthai.co|24-hd.com|1412hd.com|doonungsub.com
+!---Movie ---
+||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
 !
+
+/series-indy
+/928hd
+/series168*
 
 !nungdeedee.com
 ||nungdeedee.com/externallink$all
@@ -720,6 +762,20 @@ doonungsub.com##.popup
 !1112hd.com
 1112hd.com##.tt_banner_above_vdo_player
 
+!ดูหนังใหม่ชนโรง.com
+##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
+ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
+
+!dooseries.com
+##a[href^="https://dooseries.com"]
+dooseries.com#@#a[href^="https://dooseries.com"]
+
+!serie-master.com
+||serie-master.com$popup
+
+||movie-free.org/ads$popup
+||bit.ly/hdmovie$popup
+
 !------------Specific Ads Rules----------END
 !----------------------------------------END
 !----------------------------------------END
@@ -730,6 +786,12 @@ doonungsub.com##.popup
 
 !MadeByMe
 /_xa/ads_batch?ads=$xmlhttprequest,script
+
+!gif
+/928hd.gif
+series-indy*.webp
+
+##a[href^="https://syndication.realsrv.com"]
 
 !---------------General Rules------------END
 !----------------------------------------END
@@ -742,6 +804,17 @@ doonungsub.com##.popup
 !Google ads
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu
 @@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu
+! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
+! google contributor anti adblock
+#@#.div-gpt-ad
+#@#div[class^="div-gpt-ad"]
+#@#[class^="div-gpt-ad"]
+#@#[id^="div-gpt-ad"]
+#@#div[id^="div-gpt-"]
+##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
 !----------Anti ad block detect----------END
 !----------------------------------------END
@@ -882,6 +955,12 @@ stackoverflow.com##.js-consent-banner
 
 !goshujin.tk
 goshujin.tk###banner
+
+!blender.stackexchange.com
+blender.stackexchange.com##.js-consent-banner
+
+!geeksforgeeks.org
+geeksforgeeks.org##.cookie-consent:not(body):not(html)
 
 !
 !
