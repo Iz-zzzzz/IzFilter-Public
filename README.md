@@ -21,12 +21,12 @@ Subscribe [here](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main
 # ต้องการมีส่วนร่วมกับ Iz's Filter Public Version
 ## รายงานปัญหา
 กรุณาปัญหาที่นี้ [here](https://github.com/Iz-zzzzz/IzFilter-Public/issues) โดยให้รายละเอียดดังนี้ :
-- URL ที่ถูกต้องของเว็บไซต์
-- Screenshot
-- filter ที่ใช้งานอื่นๆ
+- URL ที่ครบถ้วนของเว็บไซต์ที่พบปัญหา
+- Screenshot พร้อมวงใช้ชัดเจน
+- filter ที่ใช้งานอื่นๆ ขณะพบปัญหา
 - extension/app ที่ใช้งาน
 - (ถ้าใช้ AdGuard) Stealth mode options ที่ใช้
-- ปัญหา
+- ปัญหาที่พบ
 
 ## Disclaimer
 - This filter may contain other's filter. I will comment the sources.
