@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230506231334
-! Expires: 7-30 days
+! Version: 20230508195827
+! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
 !
@@ -165,6 +165,7 @@ thairath.co.th##div[style^="width: 100vw; overflow: hidden; text-align: center; 
 !START thairath.co.th/sport
 thairath.co.th##.__item_article_content_similar
 thairath.co.th###article-div > div:nth-of-type(1) > div:nth-of-type(3)
+thairath.co.th##div[data-container-id="ivs-player"]
 !END thairath.co.th/sport
 
 !ch3plus.com
@@ -272,9 +273,6 @@ wikiwand.com##div[class^="footer_donation_"]
 
 !Apkcombo
 apkcombo.com##[data-m-ad-id]
-
-!apkdone.com
-apkdone.com###acceptCookie
 
 !
 !---dictionary ---
@@ -833,6 +831,8 @@ series-indy*.webp
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+google.com#@##bottomads
+google.co.th#@##bottomads
 
 !----------Anti ad block detect----------END
 !----------------------------------------END
@@ -984,6 +984,9 @@ geeksforgeeks.org##.cookie-consent:not(body):not(html)
 apkdone.com###acceptCookie
 apkdone.com###cookie-law-info-bar
 
+!true.th
+true.th###floater-bnr-box
+
 !
 !
 !
@@ -1006,6 +1009,7 @@ apkdone.com###cookie-law-info-bar
 ##.cwc-sdk-container
 ##.eupopup-body
 ##.eupopup-head
+###floater-bnr-box
 /pdpa.js
 !
 !
