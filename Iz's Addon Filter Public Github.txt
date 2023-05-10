@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230509214626
+! Version: 20230510172919
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -133,11 +133,11 @@ businessinsider.com##.dianomi-ad
 !---thai news ---
 !
 !kapook
-kapook.com##div:has(> div[id^="div-gpt-ad"]):not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+kapook.com##div.ads728
 
 !hilight.kapook.com 20230430153642
 hilight.kapook.com###container > div.fullbanner
-hilight.kapook.com##div.ads728
 hilight.kapook.com##div.90
 hilight.kapook.com###aside_article
 hilight.kapook.com##div.taboola-x2-widget:last-child
@@ -212,6 +212,26 @@ men.kapook.com##div[class="ads728 h90"]
 men.kapook.com##div.aside_article
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
 men.kapook.com##div[data-item-syndicated="true"]
+
+!pptvhd36.com
+pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+pptvhd36.com##[id^="google_ads_iframe"]
+pptvhd36.com##.ads-wrapper
+pptvhd36.com###taboola-below-article-thumbnails
+pptvhd36.com##.ads-ppn
+pptvhd36.com##.special-gateway__img
+
+!dailynews.co.th
+dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+dailynews.co.th###taboola-below-article-thumbnails
+dailynews.co.th##div[id^="elementor-popup-modal-"]
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
+dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
+
+!khaosod.co.th
+khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+khaosod.co.th##div[id*="ScriptRoot"]
 
 !
 !---education ---
@@ -990,6 +1010,11 @@ apkdone.com###cookie-law-info-bar
 !true.th
 true.th###floater-bnr-box
 
+!pptvhd36.com
+pptvhd36.com##.consent-popup
+
+!khaosod.co.th
+khaosod.co.th###pdpa-wrapper
 !
 !
 !
