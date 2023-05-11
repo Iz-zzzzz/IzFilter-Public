@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230510172919
+! Version: 20230511232952
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -340,6 +340,9 @@ macmillandictionary.com,macmillanthesaurus.com###topslot_container
 
 !tower-of-fantasy-map.appsample.com
 tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
+
+!lineupsvalorant.com
+lineupsvalorant.com##ins.adsbygoogles
 
 !
 !---game news ---
@@ -841,8 +844,8 @@ series-indy*.webp
 !----------------------------------------START
 
 !Google ads
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu
-@@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+@@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 ! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
 ! google contributor anti adblock
 #@#.div-gpt-ad
