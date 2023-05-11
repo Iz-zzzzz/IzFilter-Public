@@ -5,7 +5,7 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 
 ## Iz's Addon Filter Public Version
 - Filter เหล่าสามารถใช้ได้เต็มประสิทธิภาพกับ AdGuard([Extension](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg), [Windows](https://adguard.com/en/adguard-windows/overview.html), [Android](https://adguard.com/en/adguard-android/overview.html), [iOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162), [Mac](https://adguard.com/en/adguard-mac/overview.html)), uBlock Origin([Extension](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=th)) แต่ program อื่นๆ ไม่ทราบ
-- จุดประสงค์ของ filter นี้ คือ บล็อกโฆษณาและ Annoyances elements เพิ่มเติมที่พบในเว็บภาษาอังกฤษ, สากล และโดยเฉพาะเว็บภาษาไทย ที่ AdGuard Base Filter ไม่ได้บล็อก
+- จุดประสงค์ของ filter นี้ คือ บล็อกโฆษณาและ Annoyances elements เพิ่มเติมที่พบในเว็บภาษาสากล แต่เน้นไปที่เว็บภาษาไทย ที่ AdGuard Base Filter ไม่ได้บล็อก
 
 โดยมีรายละเอียดดังนี้
 1. Ad Elements (image, link, widget)
