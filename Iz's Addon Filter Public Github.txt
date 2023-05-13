@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230511232952
+! Version: 20230513145326
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -1018,6 +1018,9 @@ pptvhd36.com##.consent-popup
 
 !khaosod.co.th
 khaosod.co.th###pdpa-wrapper
+
+!brother.co.th
+brother.co.th###CookieAcceptionArea
 !
 !
 !
@@ -1037,10 +1040,28 @@ khaosod.co.th###pdpa-wrapper
 !^.*(cookie|policy|pdpa).*\n?
 
 !MadeByMe
-##.cwc-sdk-container
-##.eupopup-body
-##.eupopup-head
-###floater-bnr-box
+##.cwc-sdk-container:not(body):not(html):not(article)
+##.eupopup-body:not(body):not(html):not(article)
+##.eupopup-head:not(body):not(html):not(article)
+###floater-bnr-box:not(body):not(html):not(article)
+###CookieAcceptionArea:not(body):not(html):not(article)
+###pdpa-wrapper:not(body):not(html):not(article)
+##.consent-popup:not(body):not(html):not(article)
+###acceptCookie:not(body):not(html):not(article)
+###cookie-law-info-bar:not(body):not(html):not(article)
+##.js-consent-banner:not(body):not(html):not(article)
+###cookiePopup:not(body):not(html):not(article)
+###cookie-accept-footer:not(body):not(html):not(article)
+##.footer-policy:not(body):not(html):not(article)
+###onetrust-banner-sdk:not(body):not(html):not(article)
+##.pdpa:not(body):not(html):not(article)
+##.cookies-notification:not(body):not(html):not(article)
+##.cookies-settings-pop:not(body):not(html):not(article)
+###cookie_policy:not(body):not(html):not(article)
+##.ConsentBanner:not(body):not(html):not(article)
+##.cookiewrap:not(body):not(html):not(article)
+###cookiePopup:not(body):not(html):not(article)
+##.cookie-bar:not(body):not(html):not(article)
 /pdpa.js
 !
 !
