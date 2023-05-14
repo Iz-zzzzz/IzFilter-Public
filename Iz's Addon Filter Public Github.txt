@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230513145326
+! Version: 20230514231003
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -195,7 +195,6 @@ thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; po
 catdumb.com##.tdc-row
 
 !thestandard.co
-thestandard.co##.cwc-sdk-container
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thestandard.co##.adsbyadop
 thestandard.co##div[class="banner-box hidden-xs"]
@@ -232,6 +231,18 @@ dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
 !khaosod.co.th
 khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 khaosod.co.th##div[id*="ScriptRoot"]
+
+!nationtv.tv
+nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+nationtv.tv##[id^="google_ads_iframe"]
+nationtv.tv##.ads-billboard
+nationtv.tv##.ads-postarticle
+nationtv.tv##div[class^="ads-sticky-"]
+nationtv.tv##div[class^="ads-inarticle-"]
+
+!voicetv.co.th
+voicetv.co.th##.article-ad
+voicetv.co.th###taboola-below-article-thumbnails
 
 !
 !---education ---
@@ -1021,6 +1032,20 @@ khaosod.co.th###pdpa-wrapper
 
 !brother.co.th
 brother.co.th###CookieAcceptionArea
+
+!thestandard.co
+!การเลือกตั้ง 2566
+https://election2566.thestandard.co##.ant-drawer-bottom
+thestandard.co##.cwc-sdk-container
+
+!thematter.co
+thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
+
+!voicetv.co.th
+voicetv.co.th###cookie-notification
+
+!workpointtoday.com
+workpointtoday.com##div[class^="dpdpa--popup"]
 !
 !
 !
