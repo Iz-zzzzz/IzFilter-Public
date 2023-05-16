@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230516152821
+! Version: 20230516164456
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -58,6 +58,8 @@ https://content.jwplatform.com/libraries/*.js
 ||ilokhkvijq.com^$all
 ||digitalgiftshopping.com^$all
 ||betteradsystem.com^$all,important
+||fcqqbrfucuf.com^$all,third-party
+||ytfezzava.com^$all,third-party
 
 ||exness.com^$all,domain=~exness.com
 
@@ -395,6 +397,9 @@ pubhtml5.com##.adsbygoogle
 !---ebook e book e-book publisher japan japanese ---
 !
 
+!comic-walker.com
+comic-walker.com###right_top_banner
+
 !
 !---ebook e book e-book publisher thai ---
 !
@@ -684,8 +689,8 @@ niceoppai.net###sct_content > div.wpm_pag.mng_rdr:nth-child(4) > center:nth-chil
 mangadeemak.com##div[id^="ads"]
 mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
 
-!mangauptocats.net mangauptocats.com
-mangauptocats.com,mangauptocats.net##div[class="c-sidebar c-top-sidebar wp-manga"]
+!manga-uptocats.com
+manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 
 !kingsmanga.net
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
@@ -800,8 +805,8 @@ aileen-novel.online##.c-top-sidebar
 !novelpdf.xyz
 novelpdf.xyz#%#//scriptlet('prevent-window-open')
 novelpdf.xyz##+js(window.open-defuser)
-||fcqqbrfucuf.com^$all,third-party
-||ytfezzava.com^$all,third-party
+||ticket.leaforfree.com^$all,third-party
+://$script,third-party,domain=novelpdf.xyz
 
 !---Movie ---
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
@@ -1069,6 +1074,9 @@ notebookspec.com##.dpdpa--popup
 !mangozero.com
 mangozero.com##.dpdpa--popup
 
+!techcommunity.microsoft.com
+techcommunity.microsoft.com###cookie-banner
+
 !
 !
 !
@@ -1095,21 +1103,9 @@ mangozero.com##.dpdpa--popup
 ###CookieAcceptionArea:not(body):not(html):not(article)
 ###pdpa-wrapper:not(body):not(html):not(article)
 ##.consent-popup:not(body):not(html):not(article)
-###acceptCookie:not(body):not(html):not(article)
-###cookie-law-info-bar:not(body):not(html):not(article)
-##.js-consent-banner:not(body):not(html):not(article)
-###cookiePopup:not(body):not(html):not(article)
-###cookie-accept-footer:not(body):not(html):not(article)
-##.footer-policy:not(body):not(html):not(article)
 ###onetrust-banner-sdk:not(body):not(html):not(article)
 ##.pdpa:not(body):not(html):not(article)
-##.cookies-notification:not(body):not(html):not(article)
 ##.cookies-settings-pop:not(body):not(html):not(article)
-###cookie_policy:not(body):not(html):not(article)
-##.ConsentBanner:not(body):not(html):not(article)
-##.cookiewrap:not(body):not(html):not(article)
-###cookiePopup:not(body):not(html):not(article)
-##.cookie-bar:not(body):not(html):not(article)
 ##.dpdpa--popup:not(body):not(html):not(article)
 /pdpa.js
 !
