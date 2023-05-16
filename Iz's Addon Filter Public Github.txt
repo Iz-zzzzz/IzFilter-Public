@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230515000709
+! Version: 20230516152821
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -56,6 +56,10 @@ https://content.jwplatform.com/libraries/*.js
 ||dspmega.com^$all
 ||glersakr.com^$all
 ||ilokhkvijq.com^$all
+||digitalgiftshopping.com^$all
+||betteradsystem.com^$all,important
+
+||exness.com^$all,domain=~exness.com
 
 !official popup blocker test
 ||rrc.texas.gov^$popup
@@ -465,7 +469,7 @@ worldittoday.com##ins.adsbygoogle
 
 !Notebookspec
 notebookspec.com##iframe[src^="https://openx.notebookspec.com"]
-notebookspec.com##section:not(.main-body)
+notebookspec.com##.zox-widget-ad
 
 !thaimobilecenter.com
 thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
@@ -548,6 +552,9 @@ xda-developers.com##[id^="google_ads_iframe"]
 alphr.com##[data-freestar-ad]
 alphr.com##.sticky-ads-container
 alphr.com##.sticky-ads
+
+!mangozero.com
+mangozero.com##.banner-ads
 
 !
 !---code coding ---
@@ -748,6 +755,7 @@ animekimi.com##.module_home_x
 !anifume.com
 */ready$domain=anifume.com,all
 anifume.com#%#//scriptlet('prevent-window-open')
+anifume.com##+js(window.open-defuser)
 
 !anime-suba.com
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s
@@ -790,9 +798,10 @@ novel-lucky.com###bottom_center_ads_1
 aileen-novel.online##.c-top-sidebar
 
 !novelpdf.xyz
-novelpdf.xyz#%#//scriptlet('prevent-popads-net')
 novelpdf.xyz#%#//scriptlet('prevent-window-open')
-novelpdf.xyz#%#//scriptlet('remove-cookie')
+novelpdf.xyz##+js(window.open-defuser)
+||fcqqbrfucuf.com^$all,third-party
+||ytfezzava.com^$all,third-party
 
 !---Movie ---
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
@@ -1042,7 +1051,7 @@ brother.co.th###CookieAcceptionArea
 
 !thestandard.co
 !การเลือกตั้ง 2566
-https://election2566.thestandard.co##.ant-drawer-bottom
+election2566.thestandard.co##.ant-drawer-bottom
 thestandard.co##.cwc-sdk-container
 
 !thematter.co
@@ -1053,6 +1062,13 @@ voicetv.co.th###cookie-notification
 
 !workpointtoday.com
 workpointtoday.com##div[class^="dpdpa--popup"]
+
+!notebookspec.com
+notebookspec.com##.dpdpa--popup 
+
+!mangozero.com
+mangozero.com##.dpdpa--popup
+
 !
 !
 !
@@ -1094,6 +1110,7 @@ workpointtoday.com##div[class^="dpdpa--popup"]
 ##.cookiewrap:not(body):not(html):not(article)
 ###cookiePopup:not(body):not(html):not(article)
 ##.cookie-bar:not(body):not(html):not(article)
+##.dpdpa--popup:not(body):not(html):not(article)
 /pdpa.js
 !
 !
