@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230516164456
+! Version: 20230516183035
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -250,6 +250,9 @@ nationtv.tv##div[class^="ads-inarticle-"]
 !voicetv.co.th
 voicetv.co.th##.article-ad
 voicetv.co.th###taboola-below-article-thumbnails
+
+!mangozero.com
+mangozero.com##.banner-ads
 
 !
 !---education ---
@@ -558,8 +561,8 @@ alphr.com##[data-freestar-ad]
 alphr.com##.sticky-ads-container
 alphr.com##.sticky-ads
 
-!mangozero.com
-mangozero.com##.banner-ads
+!sammyfans.com
+sammyfans.com##ins.adsbygoogle
 
 !
 !---code coding ---
