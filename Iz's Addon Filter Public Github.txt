@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230516183035
+! Version: 20230517172252
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -254,6 +254,12 @@ voicetv.co.th###taboola-below-article-thumbnails
 !mangozero.com
 mangozero.com##.banner-ads
 
+!kaijeaw.com
+kaijeaw.com##small
+kaijeaw.com##ins.adsbygoogle
+kaijeaw.com##div[data-google-query-id]
+kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
+
 !
 !---education ---
 !
@@ -365,12 +371,17 @@ tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
 !lineupsvalorant.com
 lineupsvalorant.com##ins.adsbygoogles
 
+!blitz.gg
+!https://blitz.gg/valorant/lineups right ads widget
+blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]
+blitz.gg##.aside-content-column
+
 !
 !---game news ---
 !
 !mustplay.in.th 
 mustplay.in.th##a[href^="/banner/id/"]
-mustplay.in.th###container\  > div.col-md-12.hidden-xs.hidden-sm.fillters.filll:nth-child(18) > div.container.main_index:first-child > div:last-child > div.rote.card.banner:nth-child(3)
+mustplay.in.th##div[class*="promote"]
 
 !thisisgamethailand.com 
 thisisgamethailand.com###bg_banner_left
@@ -1079,6 +1090,9 @@ mangozero.com##.dpdpa--popup
 
 !techcommunity.microsoft.com
 techcommunity.microsoft.com###cookie-banner
+
+!mustplay.in.th
+mustplay.in.th##.cookiealert
 
 !
 !
