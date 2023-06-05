@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230604230344
+! Version: 20230605181841
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -1111,6 +1111,11 @@ pharmacy.mahidol.ac.th###endzoommain
 !siphhospital.com
 siphhospital.com###cookit
 
+!advice.co.th
+advice.co.th##.foot-cookie
+
+!ihavecpu.com
+ihavecpu.com###cookie-banner
 !
 !
 !
