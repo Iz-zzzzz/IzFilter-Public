@@ -721,6 +721,7 @@ kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-
 !kuro-manga.com
 kuro-manga.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 kuro-manga.com##div[id="custom_html-6"]
+kuro-manga.com###bottom_center_ads
 
 !rh2plusmanga.com
 rh2plusmanga.com##.ads
@@ -816,7 +817,7 @@ shibaanime.com##div.hero.common-hero:nth-child(2)
 anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 
 !---Novel ---
-||*.gif$image,domain=novel-lucky.com|aileen-novel
+||*.gif$image,domain=novel-lucky.com|aileen-novel|cat2auto.com
 
 !novel-lucky.com
 novel-lucky.com##.advanced_floating_content 
@@ -832,6 +833,15 @@ novelpdf.xyz#%#//scriptlet('prevent-window-open')
 novelpdf.xyz##+js(window.open-defuser)
 ||ticket.leaforfree.com^$all,third-party
 ://$script,third-party,domain=novelpdf.xyz
+
+!cat2auto.com
+cat2auto.com###custom_html-35
+
+!อ่านทั้งวัน.com
+xn--72c5afc3e6a4acd3tpa.com##div.section-sponser
+
+!นิยายฟรี.com
+xn--q3cmiag1gmn.com##div.header-ads-section
 
 !---Movie ---
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
