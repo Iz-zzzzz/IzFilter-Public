@@ -17,11 +17,6 @@ English version click [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/ma
 - AdGuard ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > (ไม่จำเป็น) ติ๊ก Trusted > กดปุ่ม Subscribe
 - uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กดปุ่ม Apply changes
 
-## Iz's DNS Filter
-- Filter เหล่าสามารถใช้ได้กับ AdGuard DNS และอื่นๆ ที่รองรับการเพิ่ม User rules
-- จุดประสงค์ของ filter นี้ คือ บล็อกเว็บอันตรายต่างๆ โดยเฉพาะเว็บภาษาไทย
-> Filter นี้สามารถใช้งานร่วมกับ AdGuard DNS Filter และ OISD ได้
-
 # ต้องการมีส่วนร่วมกับ Iz's Filter Public Version
 ## รายงานปัญหา
 กรุณารายงานปัญหา[ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/issues) โดยให้รายละเอียดดังนี้ :
