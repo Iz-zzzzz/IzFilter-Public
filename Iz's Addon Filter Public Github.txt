@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230622215910
+! Version: 20230721143611
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -647,6 +647,8 @@ obsproject.com##.notice--cookie:not(body):not(html)
 
 !mawtoload.com
 mawtoload.com###sticky-banner
+mawtoload.com##a[rel="dofollow noopener"]
+mawtoload.com###banner-post
 
 !---Manga Foreign---
 !www.novelupdates.com
@@ -830,11 +832,6 @@ aileen-novel.online##.c-top-sidebar
 !novelpdf.xyz
 novelpdf.xyz#%#//scriptlet('prevent-window-open')
 novelpdf.xyz##+js(window.open-defuser)
-||betteradsystem.com^$all,important
-||fcqqbrfucuf.com^$all,third-party
-||ytfezzava.com^$all,third-party
-||dzjnejsffqqih.com^$all,third-party
-||ndryqdqwtnn.com^$all,third-party
 ||ticket.leaforfree.com^$all,third-party
 ://$script,third-party,domain=novelpdf.xyz
 
@@ -905,6 +902,9 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 !gif
 /928hd.gif
 series-indy*.webp
+
+!redirect to ads domain when click backward
+/popunder.js
 
 ##a[href^="https://syndication.realsrv.com"]
 
@@ -1138,6 +1138,9 @@ thaiware.com##div#pdpa_setting
 
 !patreon.com
 patreon.com##body:style(overflow: auto !important;)
+
+!mercular.com
+mercular.com##div[class="MuiBox-root css-1gw67gw"]
 !
 !
 !
