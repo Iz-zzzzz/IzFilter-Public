@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230721143611
+! Version: 20230731000201
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -727,6 +727,7 @@ rh2plusmanga.com##.ads-float
 
 !loli-manga.com
 loli-manga.com##div[class*="ads"]
+loli-manga.com##.popup-wrap
 
 !thaimanga.net
 thaimanga.net##.chdesc > p
@@ -1141,6 +1142,9 @@ patreon.com##body:style(overflow: auto !important;)
 
 !mercular.com
 mercular.com##div[class="MuiBox-root css-1gw67gw"]
+
+!wordpress.com
+wordpress.com##.ads-active.hide-on-button
 !
 !
 !
