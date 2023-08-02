@@ -199,6 +199,7 @@ catdumb.com##.tdc-row
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thestandard.co##.adsbyadop
 thestandard.co##div[class="banner-box hidden-xs"]
+thestandard.co##.mySlidesMasthead
 
 !workpointtoday.com
 workpointtoday.com##.insert_ads
@@ -669,7 +670,6 @@ manga168.com###ads_fox_bottom
 manga168.com##.slider-ads
 manga168.com###colophon > div:nth-of-type(3)
 manga168.com##.chdesc > p
-manga168.com##.chaptertags
 ||manga168.com/wp-content/uploads/banner/ww.webp$image
 !background
 ||manga168.com/over-cover.webp
@@ -677,16 +677,13 @@ manga168.com##.chaptertags
 !tanuki-manga.com
 tanuki-manga.com##.ads
 tanuki-manga.com##.chdesc
-tanuki-manga.com##.chaptertags
 tanuki-manga.com###footer
 
 !garasumanga.com
 garasumanga.com##.bottom
 garasumanga.com##.chdesc
-garasumanga.com##.chaptertags
 
 !tamamanga.com
-tamamanga.com##.chaptertags
 !tamamanga.com##.site-footer
 tamamanga.com##.chdesc > p
 
@@ -695,7 +692,6 @@ manga-sugoi.com##div[id="wbnn"]
 manga-sugoi.com##.blox, .mlb, .kln
 
 !moodtoon.com
-moodtoon.com##.chaptertags
 moodtoon.com##.chdesc > p
 moodtoon.com##.ads-info
 moodtoon.com##.mt-ad
@@ -724,6 +720,7 @@ kuro-manga.com##div.widget_text
 !rh2plusmanga.com
 rh2plusmanga.com##.ads
 rh2plusmanga.com##.ads-float
+://$script,third-party,domain=rh2plusmanga.com
 
 !loli-manga.com
 loli-manga.com##div[class*="ads"]
@@ -1145,6 +1142,10 @@ mercular.com##div[class="MuiBox-root css-1gw67gw"]
 
 !wordpress.com
 wordpress.com##.ads-active.hide-on-button
+
+!panyasociety.com
+panyasociety.com###consentTrackAndCookieBar
+
 !
 !
 !
@@ -1175,6 +1176,7 @@ wordpress.com##.ads-active.hide-on-button
 ##.pdpa:not(body):not(html):not(article)
 ##.cookies-settings-pop:not(body):not(html):not(article)
 ##.dpdpa--popup:not(body):not(html):not(article)
+###consentTrackAndCookieBar:not(body):not(html):not(article)
 /pdpa.js
 !
 !
