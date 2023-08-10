@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230731000201
+! Version: 20230811004756
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -57,6 +57,11 @@ https://content.jwplatform.com/libraries/*.js
 ||glersakr.com^$all
 ||ilokhkvijq.com^$all
 ||digitalgiftshopping.com^$all
+https://ad.a-ads.com^$all
+https://a.realsrv.com^$all
+https://www.blockadsnot.com^$all
+||mndsrv.com^$all
+https://come-get-s0me.net^$all
 
 ||exness.com^$all,domain=~exness.com
 
@@ -83,6 +88,7 @@ googleads.g.doubleclick.net###mys-wrapper
 !youtube.com removeparam
 youtube.com$removeparam=redir_token
 youtube.com$removeparam=feature
+youtube.com##ytd-ad-slot-renderer
 
 !---Microsoft ---
 !
@@ -280,6 +286,11 @@ ptable.com##ins.adsbygoogle
 
 !ieltsbuddy.com 
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
+
+!w3schools.com
+w3schools.com###mainLeaderboard
+w3schools.com##.sidesection
+
 !
 !---redirect qr code ---
 !
@@ -747,8 +758,15 @@ ped-manga.com###wbnn
 !dokimori.com
 dokimori.com##.col-md-12
 
+!manhwabreakup.com
+manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+manhwabreakup.com##div[class="ads-float"]
+
+!mangapdf-online.com
+://$script,third-party,domain=mangapdf-online.com
+
 !---Anime Web---
-||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com
+||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
 
 !Anime Sugoi
 !ที่ว่างบนplayer จาก rule ที่ออกออกแถวplayerไม่หมด
@@ -788,7 +806,7 @@ anifume.com##+js(window.open-defuser)
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s
 
 !animehayai.net
-animehayai.net##img[class^="img-ads"]
+animehayai.net##.col-12
 animehayai.net##.ads-banner
 animehayai.net##.banner-close
 
@@ -1145,6 +1163,12 @@ wordpress.com##.ads-active.hide-on-button
 
 !panyasociety.com
 panyasociety.com###consentTrackAndCookieBar
+
+!mycourseville.com
+mycourseville.com###cvcookie-notice
+
+!goodnotes.com
+goodnotes.com##.fscc
 
 !
 !
