@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version
 ! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230811004756
+! Version: 20230822130049
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -77,17 +77,10 @@ https://come-get-s0me.net^$all
 !----------------------------------------START
 
 !---Google ---
-!Chrome Extension store to Other Ex. Youtube.com removeparam
-$removeparam=embeds_euri
-!Google Ads in other sites
-*$from=googleads.g.doubleclick.net
 googleads.g.doubleclick.net###abgc
 googleads.g.doubleclick.net###mys-wrapper
 
 !YOUTUBE
-!youtube.com removeparam
-youtube.com$removeparam=redir_token
-youtube.com$removeparam=feature
 youtube.com##ytd-ad-slot-renderer
 
 !---Microsoft ---
@@ -309,6 +302,10 @@ me-qr.com##div[class="bg-success"]
 !Old layout
 m.facebook.com##article[data-ft*="adid"]
 
+!reddit.com
+reddit.com###adblocktest:style(display: block !important;)
+reddit.com###acceptabletest:style(display: block !important;)
+
 !
 !---wiki ---
 !
@@ -529,6 +526,7 @@ raymond.cc##.adsbygoogle
 !howtogeek.com
 howtogeek.com##.widget-area
 howtogeek.com##.adslot970
+howtogeek.com##.adsninja-ad-zone
 
 !androidpolice.com
 androidpolice.com##[id^="google_ads_iframe"]
@@ -586,6 +584,17 @@ alphr.com##.sticky-ads
 
 !sammyfans.com
 sammyfans.com##ins.adsbygoogle
+
+!bleepingcomputer.com
+bleepingcomputer.com##section[class="cz-oa-wrapp"]
+bleepingcomputer.com##section[class="cz-boa-wrapp"]
+bleepingcomputer.com##.fs-dynamic
+bleepingcomputer.com##.asa
+bleepingcomputer.com##ins.adsbygoogle
+
+!pcworld.com
+pcworld.com##div.wp-block-column:nth-of-type(2)
+pcworld.com##div[data-ad-template="banner"]
 
 !
 !---code coding ---
@@ -710,7 +719,7 @@ moodtoon.com##.mt-ad
 !niceoppai.net
 niceoppai.net###text-90
 niceoppai.net###text-33
-!niceoppai.net###sct_top_banner
+niceoppai.net###sct_top_banner.reader
 niceoppai.net###sct_content > div.wpm_pag.mng_rdr:nth-child(4) > center:nth-child(9)
 ||1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png
 
@@ -764,6 +773,10 @@ manhwabreakup.com##div[class="ads-float"]
 
 !mangapdf-online.com
 ://$script,third-party,domain=mangapdf-online.com
+
+!tpnoodle.com
+tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
+tpnoodle.com##div[class="col-3 mt-2"]
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
@@ -897,6 +910,10 @@ doonungsub.com##.popup
 !dooseries.com
 ##a[href^="https://dooseries.com"]
 dooseries.com#@#a[href^="https://dooseries.com"]
+
+!ดูหนัง.tv
+ดูหนัง.tv##.row
+://$script,third-party,domain=xn--72czp5e5a8b.tv
 
 !serie-master.com
 ||serie-master.com$popup
