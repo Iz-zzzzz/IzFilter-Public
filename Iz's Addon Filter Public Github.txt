@@ -1,10 +1,12 @@
-! Title: Iz's Addon Filter Public Version
-! Description: Use to block most of Thai website Ads which Adguard Filter doesn't block. Working in Adguard and uBlock Origin. This is addon of Adguard Base Filter.
-! Version: 20230822130049
+! Title: Iz's Addon Filter Public Version (mini version)
+! Description: Use to block most of Thai website Ads which Adguard Filter, uBlock filter and Easylist doesn't block
+! Version: 20230828234812
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
 !
+! Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
+
 !!!------------Ad Server/Links-----------START
 !----------------------------------------START
 !----------------------------------------START
@@ -67,6 +69,9 @@ https://come-get-s0me.net^$all
 
 !official popup blocker test
 ||rrc.texas.gov^$popup
+
+!From https://novelpdf.xyz/
+||betteradsystem.com^$all
 
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
@@ -822,6 +827,7 @@ anifume.com##+js(window.open-defuser)
 animehayai.net##.col-12
 animehayai.net##.ads-banner
 animehayai.net##.banner-close
+animehayai.net##div[class="text-center bottom-2x"]
 
 !anime-kimuchi.com
 anime-kimuchi.com###scrollUp
@@ -846,6 +852,16 @@ anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 !animetako.net
 animetako.net##div[id^="animekimiads"]
 
+!https://www.kurokami.me
+kurokami.me##div[class="col-6 banner728x200-div"]
+kurokami.me##div[id^="ads_0"]
+kurokami.me##p
+
+!https://animelizm.com/
+animelizm.com##.dessert-frame
+animelizm.com##div.al-ads
+animelizm.com##section[id="custom_html-60"]
+
 !---Novel ---
 ||*.gif$image,domain=novel-lucky.com|aileen-novel|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 
@@ -854,9 +870,6 @@ novel-lucky.com##.advanced_floating_content
 novel-lucky.com##.container-fluid
 novel-lucky.com##.c-sidebar
 novel-lucky.com###bottom_center_ads_1
-
-!aileen-novel.online
-aileen-novel.online##.c-top-sidebar
 
 !novelpdf.xyz
 novelpdf.xyz#%#//scriptlet('prevent-window-open')
