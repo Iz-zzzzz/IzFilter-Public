@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
-! Description: Use to block most of Thai website Ads which Adguard Filter, uBlock filter and Easylist doesn't block
-! Version: 20230828234812
+! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
+! Version: 20230902214233
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -59,19 +59,19 @@ https://content.jwplatform.com/libraries/*.js
 ||glersakr.com^$all
 ||ilokhkvijq.com^$all
 ||digitalgiftshopping.com^$all
-https://ad.a-ads.com^$all
-https://a.realsrv.com^$all
-https://www.blockadsnot.com^$all
+||a-ads.com^$all
+||realsrv.com^$all
+||blockadsnot.com^$all
 ||mndsrv.com^$all
-https://come-get-s0me.net^$all
+||come-get-s0me.net^$all
+||displayvertising.com^$all
+||betteradsystem.com^$all
+||d3mzokty951c5w.cloudfront.net^$all
 
 ||exness.com^$all,domain=~exness.com
 
 !official popup blocker test
 ||rrc.texas.gov^$popup
-
-!From https://novelpdf.xyz/
-||betteradsystem.com^$all
 
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
@@ -106,7 +106,7 @@ terabox.com##.drainage
 
 !
 !
-!---picture ---
+!---picture image host---
 !
 !imgur.*
 imgur.*##.Post-item-external-ad:upward(div[style])
@@ -115,6 +115,10 @@ imgur.*##.Gallery-Content-BottomAd
 imgur.*##.BottomAd-container
 !inline ad
 imgur.*##div[style="height: 250px; margin-bottom: 16px; position: relative; z-index: 1;"]
+
+!imgbox.com
+imgbox.com##div.full-page-redirect
+
 !
 !---video ---
 !streamable.com
@@ -143,7 +147,6 @@ kapook.com##div.ads728
 
 !hilight.kapook.com 20230430153642
 hilight.kapook.com###container > div.fullbanner
-hilight.kapook.com##div.90
 hilight.kapook.com###aside_article
 hilight.kapook.com##div.taboola-x2-widget:last-child
 hilight.kapook.com##.fullbanner
@@ -407,6 +410,15 @@ thisisgamethailand.com##div[id="adsbannermtigads"]
 gamefever.co##[id^="ads"]
 gamefever.co##div[style="width:100vw;height:89px"]
 gamefever.co#$#.d-none {padding-top: 0px !important;}
+
+!gamingdose.com
+gamingdose.com##section.ads_header
+gamingdose.com##div.ads_side
+gamingdose.com##div.banner_side
+gamingdose.com##div.gamin-sticky
+gamingdose.com##div.gamin-popup-desktop
+gamingdose.com##div.gamin-popup-mobile
+gamingdose.com##div.advads-background
 !
 !
 !
@@ -1200,6 +1212,8 @@ mycourseville.com###cvcookie-notice
 !goodnotes.com
 goodnotes.com##.fscc
 
+!askubuntu.com
+askubuntu.com##div.js-consent-banner
 !
 !
 !
@@ -1226,12 +1240,15 @@ goodnotes.com##.fscc
 ###CookieAcceptionArea:not(body):not(html):not(article)
 ###pdpa-wrapper:not(body):not(html):not(article)
 ##.consent-popup:not(body):not(html):not(article)
+#@#onetrust-consent-sdk
 ###onetrust-banner-sdk:not(body):not(html):not(article)
 ##.pdpa:not(body):not(html):not(article)
 ##.cookies-settings-pop:not(body):not(html):not(article)
 ##.dpdpa--popup:not(body):not(html):not(article)
 ###consentTrackAndCookieBar:not(body):not(html):not(article)
+###js-consent-banner:not(body):not(html):not(article)
 /pdpa.js
+/cookie-prompt.
 !
 !
 !
