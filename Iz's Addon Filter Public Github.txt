@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20230902214233
+! Version: 20230924234334
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -118,6 +118,7 @@ imgur.*##div[style="height: 250px; margin-bottom: 16px; position: relative; z-in
 
 !imgbox.com
 imgbox.com##div.full-page-redirect
+imgbox.com##div._ln-floater
 
 !
 !---video ---
@@ -194,13 +195,12 @@ beartai.com###ai_widget-2
 
 !tnews.co.th 
 tnews.co.th##.default-sticky
+tnews.co.th##div.mobile
+tnews.co.th##div.desktop
 
 !thansettakij.com 
 thansettakij.com##.ads-billboard
 thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-
-!catdumb.com
-catdumb.com##.tdc-row
 
 !thestandard.co
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -732,6 +732,7 @@ manga-sugoi.com##.blox, .mlb, .kln
 moodtoon.com##.chdesc > p
 moodtoon.com##.ads-info
 moodtoon.com##.mt-ad
+moodtoon.com##.chaptertags
 
 !niceoppai.net
 niceoppai.net###text-90
@@ -757,7 +758,6 @@ kuro-manga.com##div.widget_text
 !rh2plusmanga.com
 rh2plusmanga.com##.ads
 rh2plusmanga.com##.ads-float
-://$script,third-party,domain=rh2plusmanga.com
 
 !loli-manga.com
 loli-manga.com##div[class*="ads"]
@@ -765,6 +765,7 @@ loli-manga.com##.popup-wrap
 
 !thaimanga.net
 thaimanga.net##.chdesc > p
+thaimanga.net##.ads
 
 !mangaisekaithai.com
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
@@ -794,6 +795,27 @@ manhwabreakup.com##div[class="ads-float"]
 !tpnoodle.com
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
 tpnoodle.com##div[class="col-3 mt-2"]
+
+!makimaaaaa.com
+makimaaaaa.com##div[class="blox mlb kln"]
+makimaaaaa.com##div[id="wbnn"]
+makimaaaaa.com##div[class="kln"]
+makimaaaaa.com##div.chdesc
+
+!romance-manga.com
+romance-manga.com##div.rm-ads
+romance-manga.com##div.ads-info
+
+!https://germa-66.com/
+germa-66.com##div[class="blox mlb kln"]
+germa-66.com##div[id="wbnn"]
+
+!manhuakey.com
+manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+
+!manga-moons.net
+manga-moons.net##.chaptertags
+manga-moons.net##.chdesc > p
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
@@ -1241,6 +1263,7 @@ askubuntu.com##div.js-consent-banner
 ###pdpa-wrapper:not(body):not(html):not(article)
 ##.consent-popup:not(body):not(html):not(article)
 #@#onetrust-consent-sdk
+###onetrust-consent-sdk:not(body):not(html):not(article)
 ###onetrust-banner-sdk:not(body):not(html):not(article)
 ##.pdpa:not(body):not(html):not(article)
 ##.cookies-settings-pop:not(body):not(html):not(article)
