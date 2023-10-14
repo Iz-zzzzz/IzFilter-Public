@@ -3,14 +3,14 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Iz-zzzzz/IzFilter-Public">
 
 ## Iz's Addon Filter Public Version
-- ควรใช้กับ AdGuard([Extension](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg), [Windows](https://adguard.com/en/adguard-windows/overview.html), [Android อีกตัวที่ไม่ใช่ใน Google Play](https://adguard.com/en/adguard-android/overview.html), [iOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162), [Mac](https://adguard.com/en/adguard-mac/overview.html)), uBlock Origin([Extension](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=th)) แต่ program อื่นๆ ไม่ทราบ
-- จุดประสงค์ของ filter นี้ คือ บล็อกโฆษณา และ Annoyances elements เพิ่มเติมเน้นไปที่เว็บภาษาไทย ที่ AdGuard Base Filter ไม่ได้บล็อก
+- ควรใช้กับ AdGuard([Extension](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg), [Windows](https://adguard.com/en/adguard-windows/overview.html), [Android app](https://adguard.com/en/adguard-android/overview.html), [iOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162), [Mac](https://adguard.com/en/adguard-mac/overview.html)), uBlock Origin([Extension](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=th)) แต่ program อื่นๆ ไม่ทราบ
+- จุดประสงค์ของ filter นี้ คือ บล็อกโฆษณา และ Annoyances elements เพิ่มเติมเน้นไปที่เว็บภาษาไทย ที่ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List ไม่ได้บล็อก
 
 ### วิธีเพิ่ม Filter
 - AdGuard ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > (ไม่จำเป็น) ติ๊ก Trusted > กดปุ่ม Subscribe
 - uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กดปุ่ม Apply changes
 
-`Filter นี้"ควร"ใช้งานร่วมกับ AdGuard Base Filter เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด`
+`Filter นี้"ควร"ใช้งานร่วมกับ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด`
 
 ## ต้องการมีส่วนร่วมกับ Iz's Filter Public Version
 ### รายงานปัญหา
