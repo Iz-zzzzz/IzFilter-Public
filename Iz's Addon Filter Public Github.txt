@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231006205830
+! Version: 20231101010715
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -73,6 +73,12 @@ https://www.gqdhsmwzpc.com^$all
 
 ||exness.com^$all,domain=~exness.com
 
+!mangapdf-online.com
+https://www.xwojiijs.com^$all
+https://www.okx.com^$all
+https://www.zpigericvlz.com^$all
+
+
 !official popup blocker test
 ||rrc.texas.gov^$popup
 
@@ -122,6 +128,9 @@ imgur.*##div[style="height: 250px; margin-bottom: 16px; position: relative; z-in
 !imgbox.com
 imgbox.com##div.full-page-redirect
 imgbox.com##div._ln-floater
+
+!pixiv.net
+pixiv.net##div[class^="ad-frame-container"]
 
 !
 !---video ---
@@ -312,10 +321,15 @@ me-qr.com##div[class="bg-success"]
 !Block Sponsered m.facebook.com
 !Old layout
 m.facebook.com##article[data-ft*="adid"]
+!picture not loading
+@@||www.facebook.com/ajax/bnzai$xhr,domain=www.facebook.com
 
 !reddit.com
 reddit.com###adblocktest:style(display: block !important;)
 reddit.com###acceptabletest:style(display: block !important;)
+
+!pantip.com
+pantip.com##div.ads-leaderboard
 
 !
 !---wiki ---
@@ -340,6 +354,9 @@ wikiwand.com##div[class^="footer_donation_"]
 
 !Apkcombo
 apkcombo.com##[data-m-ad-id]
+
+!https://www.apkmoddone.com/
+apkmoddone.com##div#addons-widget
 
 !
 !---dictionary ---
@@ -408,6 +425,8 @@ thisisgamethailand.com###bg_banner_left
 thisisgamethailand.com###bg_banner_right
 thisisgamethailand.com##div[class="mod_banner_Rectangle"]
 thisisgamethailand.com##div[id="adsbannermtigads"]
+://$script,third-party,domain=thisisgamethailand.com
+@@https://cdn.tigthai.com^
 
 !gamefever.co 
 gamefever.co##[id^="ads"]
@@ -422,6 +441,13 @@ gamingdose.com##div.gamin-sticky
 gamingdose.com##div.gamin-popup-desktop
 gamingdose.com##div.gamin-popup-mobile
 gamingdose.com##div.advads-background
+
+!playulti.com
+playulti.com#$#.space_content {padding-top: 60px !important;}
+playulti.com#$#.sidebar {top: 80px !important;}
+playulti.com#$#.uk-width-expand {margin-top: -10px !important;}
+playulti.com##.space_side
+
 !
 !
 !
@@ -481,6 +507,7 @@ siamblockchain.com###block-6
 !iphone-droid.net 
 iphone-droid.net##.widget_text
 iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+iphone-droid.net##div[class^="dpdpa--popup"]
 
 !extremeit.com 
 extremeit.com##table[border="0"]
@@ -616,6 +643,12 @@ bleepingcomputer.com##ins.adsbygoogle
 pcworld.com##div.wp-block-column:nth-of-type(2)
 pcworld.com##div[data-ad-template="banner"]
 
+!it24hrs.com
+it24hrs.com##ins.adsbygoogle
+it24hrs.com##.bottom-ads
+it24hrs.com##.adrotate_widgets
+https://s.vidpulse.com/all/vp.js
+
 !
 !---code coding ---
 !
@@ -696,7 +729,7 @@ mawtoload.com###banner-post
 ##.ad_336
 !
 !---Manga Thai---
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|niceoppai.net|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com
+||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|niceoppai.net|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
 
@@ -724,18 +757,21 @@ garasumanga.com##.bottom
 garasumanga.com##.chdesc
 
 !tamamanga.com
-!tamamanga.com##.site-footer
 tamamanga.com##.chdesc > p
+tamamanga.com#$#.postbody.full {padding-top: 20px !important;}
+tamamanga.com#$##content {padding-bottom: 80px !important;}
 
 !manga-sugoi.com
 manga-sugoi.com##div[id="wbnn"]
 manga-sugoi.com##.blox, .mlb, .kln
 
 !moodtoon.com
-moodtoon.com##.chdesc > p
-moodtoon.com##.ads-info
-moodtoon.com##.mt-ad
-moodtoon.com##.chaptertags
+moodtoon.com##div.chdesc > p
+moodtoon.com##div.ads-info
+moodtoon.com##div.mt-ad
+moodtoon.com##div.chaptertags
+moodtoon.com##li#menu-item-595198
+moodtoon.com#$##content {margin-top: 0px !important;}
 
 !niceoppai.net
 niceoppai.net###text-90
@@ -747,6 +783,7 @@ niceoppai.net###sct_content > div.wpm_pag.mng_rdr:nth-child(4) > center:nth-chil
 !mangadeemak.com
 mangadeemak.com##div[id^="ads"]
 mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
+https://mangadeemak.com/wp-content/uploads/2017/10/bg-search-2.jpg
 
 !manga-uptocats.com
 manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
@@ -769,11 +806,13 @@ loli-manga.com##.popup-wrap
 !thaimanga.net
 thaimanga.net##.chdesc > p
 thaimanga.net##.ads
+://$script,third-party,domain=thaimanga.net
 
 !mangaisekaithai.com
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
-!unbreak background broke darkmode
+!unbreak background break darkmode
 https://www.mangaisekaithai.com/wp-content/themes/madara/images/bg-search.jpg
+mangaisekaithai.com#$#.tab-summary  {padding-bottom: 0px !important;}
 
 !mangafins.net
 mangafins.net##.c-top-sidebar
@@ -791,9 +830,6 @@ dokimori.com##.col-md-12
 !manhwabreakup.com
 manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 manhwabreakup.com##div[class="ads-float"]
-
-!mangapdf-online.com
-://$script,third-party,domain=mangapdf-online.com
 
 !tpnoodle.com
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
@@ -819,6 +855,7 @@ manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !manga-moons.net
 manga-moons.net##.chaptertags
 manga-moons.net##.chdesc > p
+manga-moons.net#$#.terebody {padding-top: 20px !important;}
 
 !dragon-manga.com
 dragon-manga.com##div.chdesc
@@ -827,6 +864,32 @@ dragon-manga.com##div.chaptertags
 !mangathailand.com
 mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
 mangathailand.com##div[data-id="43c9931"]
+
+!popsmanga.com
+popsmanga.com##div.dessert-frame
+popsmanga.com##div#wbnn
+popsmanga.com##div.kln
+popsmanga.com##div.chdesc
+popsmanga.com#$#.postbody.full {padding-top: 20px !important;}
+popsmanga.com#$##content {padding-bottom: 0px !important;}
+wss://$domain=popsmanga.com
+
+
+!toomtam-manga.com
+toomtam-manga.com##div#wbnn
+toomtam-manga.com##div.dessert-frame
+toomtam-manga.com##div.chdesc
+toomtam-manga.com##div.kln
+toomtam-manga.com##div.chaptertags
+
+!manga-za.net
+manga-za.net##div[class="mt-ad text-center"]
+manga-za.net##div.chdesc
+manga-za.net#$#.postbody.full {padding-top: 80px !important;}
+manga-za.net#$##content {margin-top: 0px !important;}
+
+!mangapdf-online.com
+://$script,third-party,domain=mangapdf-online.com
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
@@ -861,9 +924,10 @@ anime-masters.com##.col-md-9 > span
 animekimi.com##.module_home_x
 
 !anifume.com
-*/ready$domain=anifume.com,all
-anifume.com#%#//scriptlet('prevent-window-open')
-anifume.com##+js(window.open-defuser)
+anifume.com##div[id^="display-"]
+anifume.com##div.F4uDjm45n
+anifume.com##div.topml
+://$script,third-party,domain=anifume.com
 
 !anime-suba.com
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s
@@ -1035,21 +1099,8 @@ google.co.th#@##bottomads
 !----------------------------------------START
 !----------------------------------------START
 
-!mathcenter.net
-mathcenter.net##div:last-child > div.row > div.col-xs-12.col-md-3.pdpa-block
-
-!myanimelist mal 
-myanimelist.net##div.for-pc
-myanimelist.net##div.for-sp
-
-!www.camphub.in.th
-!##div[class="dpdpa--popup active"]
-!
 !www.phoenixnext.com
 phoenixnext.com##div[class="cwc-sdk-container"]
-
-!global.bookwalker.jp
-bookwalker.*##.gdpr-pop
 
 !wongnai
 wongnai.com###cc_div
@@ -1142,10 +1193,6 @@ thansettakij.com##.ot-sdk-container
 !g2.com
 g2.com##div[role="dialog"]
 
-!spotify.com
-open.spotify.com###onetrust-banner-sdk
-open.spotify.com###div[role="alertdialog"]
-
 !kapook.com
 kapook.com##.footer-policy
 
@@ -1157,6 +1204,7 @@ www.techmoblog.com###cookiePopup
 
 !Pantip
 pantip.com##.pt-snackbar
+pantip.com#@#.pt-snackbar__surface
 
 !thisisgamethailand.com
 thisisgamethailand.com###true
@@ -1253,6 +1301,12 @@ askubuntu.com##div.js-consent-banner
 
 !sf-international.com
 sf-international.com##.cookie-terms
+
+!sony-asia.com
+sony-asia.com###__tealiumGDPRecModal
+
+!playulti.com
+playulti.com##.cookiealert
 
 !MadeByMe Cosmestic rules
 ##.eupopup-body
