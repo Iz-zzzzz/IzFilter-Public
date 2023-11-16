@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231101010715
+! Version: 20231116205917
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -317,12 +317,38 @@ me-qr.com##div[class="bg-success"]
 !---social platform ---
 !
 
-!Facebook 
-!Block Sponsered m.facebook.com
-!Old layout
-m.facebook.com##article[data-ft*="adid"]
-!picture not loading
-@@||www.facebook.com/ajax/bnzai$xhr,domain=www.facebook.com
+!facebook.com
+!!จาก uBlock filters – Ads
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby])
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/watch) #watch_feed div:not([class]) > div:not([class]) div[class] span[class] > a span[aria-labelledby]:has(> span[style="display: flex;"] > span[class]:has-text(/^S$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^p$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^d$/)):upward(div:not([class]) > div:not([class]))
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+!!จาก AdGuard – Ads
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href="/ads/about/?entry_product=ad_preferences"]
+
+!m.facebook.com old interface
+!!from uBlock - Ads
+!m.alpha.facebook.com,touch.alpha.facebook.com,mtouch.alpha.facebook.com,x.alpha.facebook.com,iphone.alpha.facebook.com,touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,touch.beta.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebook.com,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebook.com,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mobile.facebook.com,mobile.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##article[data-sigil*="AdStory"]
+
+!m.facebook.com new interface
+!!from uBlock - Ads
+!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="feed"] > div[class]:has([data-ad-preview])
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3):has(+ :is(.bg-s2, .bg-s3) + :is(.bg-s2, .bg-s3):has(> .m > .m .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]))
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3):has(+ :is(.bg-s2, .bg-s3):has(> .m > .m .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]))
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4)
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4) + .m
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4) + .m + .m
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5)
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m
+m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m + .m
+
+!twitter.com
+!/home
+twitter.com##:matches-path(/home) [data-testid="trend"]:has-text(/Promoted|Gesponsert|Promocionado|Patrocinat|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Promotert|Promoveret|Sponsrad|Mainostettu|Sponzorováno|Promovat|Ajánlott|Προωθημένο|Dipromosikan|Được quảng bá|推廣|推广|推薦|推荐|プロモーション|프로모션|ประชาสัมพันธ์|प्रचारित|বিজ্ঞাপিত|تشہیر شدہ|مُروَّج|تبلیغی|מקודם/):upward(1)
+twitter.com##:matches-path(/home) div[data-testid="cellInnerDiv"] > div.css-1dbjc4n > div[class="css-1dbjc4n"] > div[class="css-1dbjc4n"][data-testid="placementTracking"]
+!/i/list
+twitter.com##:matches-path(/i/list) [data-testid="trend"]:has-text(/Promoted|Gesponsert|Promocionado|Patrocinat|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Promotert|Promoveret|Sponsrad|Mainostettu|Sponzorováno|Promovat|Ajánlott|Προωθημένο|Dipromosikan|Được quảng bá|推廣|推广|推薦|推荐|プロモーション|프로모션|ประชาสัมพันธ์|प्रचारित|বিজ্ঞাপিত|تشہیر شدہ|مُروَّج|تبلیغی|מקודם/):upward(1)
+!/explore
+twitter.com##:matches-path(/explore) div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
 
 !reddit.com
 reddit.com###adblocktest:style(display: block !important;)
@@ -331,6 +357,9 @@ reddit.com###acceptabletest:style(display: block !important;)
 !pantip.com
 pantip.com##div.ads-leaderboard
 
+!instagram.com
+!feed home
+instagram.com##:matches-path(/^/$/) main > div div[style*="flex-direction: column;"] > article > div:has(a[href^="https://www.facebook.com/ads/ig_redirect/"][target="_blank"]):style(height: 1px !important; visibility: hidden !important;)
 !
 !---wiki ---
 !
@@ -390,13 +419,6 @@ macmillandictionary.com,macmillanthesaurus.com###topslot_container
 !
 !---shopping online ---
 !
-!Shopee popup
-||shope.ee/an_redir?origin_link=$popup,domain=~shope.ee
-!
-!Lazada popup
-||s.lazada.co.th$popup,domain=~lazada.co.th
-||pages.lazada.co.th$popup,domain=~lazada.co.th
-~lazada.co.th##a[href^="https://c.lazada.co.th/t"]
 
 !
 !---game ---
@@ -649,6 +671,10 @@ it24hrs.com##.bottom-ads
 it24hrs.com##.adrotate_widgets
 https://s.vidpulse.com/all/vp.js
 
+!iphonemod.net
+iphonemod.net##center
+iphonemod.net###quads-ad4
+
 !
 !---code coding ---
 !
@@ -729,7 +755,7 @@ mawtoload.com###banner-post
 ##.ad_336
 !
 !---Manga Thai---
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|niceoppai.net|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com
+||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
 
@@ -774,11 +800,21 @@ moodtoon.com##li#menu-item-595198
 moodtoon.com#$##content {margin-top: 0px !important;}
 
 !niceoppai.net
-niceoppai.net###text-90
-niceoppai.net###text-33
-niceoppai.net###sct_top_banner.reader
-niceoppai.net###sct_content > div.wpm_pag.mng_rdr:nth-child(4) > center:nth-child(9)
-||1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png
+niceoppai.net##div[class="top_page widget_text"]
+niceoppai.net##li[class="wid widget_text"][id="text-6"]
+!หน้าอ่าน
+niceoppai.net##div[id="sct_top_banner"]
+niceoppai.net##div[id="sct_footer_banner"]
+niceoppai.net##center > a
+!ads banner
+https://1.bp.blogspot.com/*$domain=niceoppai.net
+https://blogger.googleusercontent.com/img/b*.gif$domain=niceoppai.net
+https://image5.niceoppai.net/$domain=niceoppai.net
+https://www.niceoppai.net/wp-content/uploads*.gif$domain=niceoppai.net
+https://i.imgur.com*.gif$domain=niceoppai.net
+https://i0.wp.com/niceoppai.net/wp-content$domain=niceoppai.net
+https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp
+@@https://1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png
 
 !mangadeemak.com
 mangadeemak.com##div[id^="ads"]
@@ -810,8 +846,6 @@ thaimanga.net##.ads
 
 !mangaisekaithai.com
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
-!unbreak background break darkmode
-https://www.mangaisekaithai.com/wp-content/themes/madara/images/bg-search.jpg
 mangaisekaithai.com#$#.tab-summary  {padding-bottom: 0px !important;}
 
 !mangafins.net
@@ -873,7 +907,6 @@ popsmanga.com##div.chdesc
 popsmanga.com#$#.postbody.full {padding-top: 20px !important;}
 popsmanga.com#$##content {padding-bottom: 0px !important;}
 wss://$domain=popsmanga.com
-
 
 !toomtam-manga.com
 toomtam-manga.com##div#wbnn
