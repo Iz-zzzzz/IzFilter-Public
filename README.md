@@ -5,16 +5,16 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 # Iz's Addon Filter Public Version
 - ควรใช้ใน
   - Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
-  - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) ${^1}$, [Android app](https://adguard.com/en/adguard-android/overview.html) ${^1}$, [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) ${^1}$, [Mac](https://adguard.com/en/adguard-mac/overview.html) ${^1}$.
-  - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) ${^2}$
+  - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [1](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [Android app](https://adguard.com/en/adguard-android/overview.html) [1](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [1](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [Mac](https://adguard.com/en/adguard-mac/overview.html) [1](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8).
+  - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [2](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
 
   **program อื่นๆ อาจจะสามารถใช้ได้ แต่แค่ยังไม่ได้ลอง
 
 - การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อไม่ทำให้ performance drop มากเกินความจำเป็น
 - จุดประสงค์ของ filter นี้ คือ 
-  - บล็อกโฆษณาทุกชนิด รวมถึงเว็บพuัuด้วย $^{3}$
-  - บล็อก annoyances elements $^{3}$
-  - unblock rules ที่ไม่จำเป็น ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น $^{1}$ $^{3}$
+  - บล็อกโฆษณาทุกชนิด รวมถึงเว็บพuัuด้วย [3](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
+  - บล็อก annoyances elements [3](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
+  - unblock rules ที่ไม่จำเป็น ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [1](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8) [3](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ อาจจะได้ประโยชน์จากการบล็อกเว็บ international และ unblock rules ที่ไม่จำเป็นใน filter list นี้
 
 `Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด`
