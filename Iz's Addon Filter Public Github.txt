@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231116205917
+! Version: 20231203225051
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -78,6 +78,8 @@ https://www.xwojiijs.com^$all
 https://www.okx.com^$all
 https://www.zpigericvlz.com^$all
 
+!from siamblockchain.com
+||cryptojimmy.care^$all
 
 !official popup blocker test
 ||rrc.texas.gov^$popup
@@ -93,6 +95,11 @@ https://www.zpigericvlz.com^$all
 !---Google ---
 googleads.g.doubleclick.net###abgc
 googleads.g.doubleclick.net###mys-wrapper
+
+!may contains ads or mal sites or useful sites
+google.*###tads[aria-label]:style(opacity: 30% !important;)
+google.*##span[class$="U3A9Ac qV8iec"]:style(color: red !important;)
+google.*##div.cu-container:style(opacity: 30% !important;)
 
 !YOUTUBE
 youtube.com##ytd-ad-slot-renderer
@@ -341,18 +348,18 @@ m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"
 m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m
 m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m + .m
 
-!twitter.com
+!twitter.com supports ENG and TH langauges
 !/home
-twitter.com##:matches-path(/home) [data-testid="trend"]:has-text(/Promoted|Gesponsert|Promocionado|Patrocinat|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Promotert|Promoveret|Sponsrad|Mainostettu|Sponzorováno|Promovat|Ajánlott|Προωθημένο|Dipromosikan|Được quảng bá|推廣|推广|推薦|推荐|プロモーション|프로모션|ประชาสัมพันธ์|प्रचारित|বিজ্ঞাপিত|تشہیر شدہ|مُروَّج|تبلیغی|מקודם/):upward(1)
+twitter.com##:matches-path(/home) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
 twitter.com##:matches-path(/home) div[data-testid="cellInnerDiv"] > div.css-1dbjc4n > div[class="css-1dbjc4n"] > div[class="css-1dbjc4n"][data-testid="placementTracking"]
 !/i/list
-twitter.com##:matches-path(/i/list) [data-testid="trend"]:has-text(/Promoted|Gesponsert|Promocionado|Patrocinat|Sponsorisé|Sponsorizzato|Promowane|Promovido|Реклама|Uitgelicht|Sponsorlu|Promotert|Promoveret|Sponsrad|Mainostettu|Sponzorováno|Promovat|Ajánlott|Προωθημένο|Dipromosikan|Được quảng bá|推廣|推广|推薦|推荐|プロモーション|프로모션|ประชาสัมพันธ์|प्रचारित|বিজ্ঞাপিত|تشہیر شدہ|مُروَّج|تبلیغی|מקודם/):upward(1)
+twitter.com##:matches-path(/i/list) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
 !/explore
 twitter.com##:matches-path(/explore) div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
-
-!reddit.com
-reddit.com###adblocktest:style(display: block !important;)
-reddit.com###acceptabletest:style(display: block !important;)
+!/media
+twitter.com##:matches-path(/media) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
+!user profile experimental
+!twitter.com##:matches-path(/^(?!\/home|\/lists|\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings)/) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
 
 !pantip.com
 pantip.com##div.ads-leaderboard
@@ -360,6 +367,7 @@ pantip.com##div.ads-leaderboard
 !instagram.com
 !feed home
 instagram.com##:matches-path(/^/$/) main > div div[style*="flex-direction: column;"] > article > div:has(a[href^="https://www.facebook.com/ads/ig_redirect/"][target="_blank"]):style(height: 1px !important; visibility: hidden !important;)
+
 !
 !---wiki ---
 !
@@ -453,7 +461,7 @@ thisisgamethailand.com##div[id="adsbannermtigads"]
 !gamefever.co 
 gamefever.co##[id^="ads"]
 gamefever.co##div[style="width:100vw;height:89px"]
-gamefever.co#$#.d-none {padding-top: 0px !important;}
+gamefever.co##.d-none:style(padding-top: 0px !important)
 
 !gamingdose.com
 gamingdose.com##section.ads_header
@@ -465,9 +473,9 @@ gamingdose.com##div.gamin-popup-mobile
 gamingdose.com##div.advads-background
 
 !playulti.com
-playulti.com#$#.space_content {padding-top: 60px !important;}
-playulti.com#$#.sidebar {top: 80px !important;}
-playulti.com#$#.uk-width-expand {margin-top: -10px !important;}
+playulti.com##.space_content:style(padding-top: 60px !important)
+playulti.com##.sidebar:style(top: 80px !important)
+playulti.com##.uk-width-expand:style(margin-top: -10px !important)
 playulti.com##.space_side
 
 !
@@ -495,7 +503,11 @@ comic-walker.com###right_top_banner
 !---ebook e book e-book publisher thai ---
 !
 !nekopost.net
-!/ads*.jpg$domain=nekopost.net
+!nekopost.net##ins.adsbygoogle
+nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
+nekopost.net##div.svelte-1d0qhdr.h-4
+
+
 !
 !---benmarck speedtest web ---
 !
@@ -525,6 +537,7 @@ droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posit
 siamblockchain.com##.header-banner
 siamblockchain.com###block-3
 siamblockchain.com###block-6
+siamblockchain.com##div#topheader-desktop-banner
 
 !iphone-droid.net 
 iphone-droid.net##.widget_text
@@ -613,10 +626,14 @@ trustedreviews.com##.top-advert
 trustedreviews.com##.squirrel_widget
 
 !androidcentral.com
-androidcentral.com##.dfp-leaderboard-container
-androidcentral.com##.ad-unit
-androidcentral.com##.widget-ads
-androidcentral.com##.sponsored-post
+androidcentral.com##div.dfp-leaderboard-container
+androidcentral.com##div[id="widgetArea17"]
+androidcentral.com##div.related-articles-block
+androidcentral.com##div.van_taboola
+androidcentral.com##div[class="van_vid_carousel vid-present"]
+androidcentral.com##div[class="in-article ad-unit"]
+androidcentral.com##div[id="top-leaderboard"]
+androidcentral.com##div[class="ad-unit"]
 
 !pcgamer.com
 pcgamer.com##.ad-placement
@@ -675,6 +692,15 @@ https://s.vidpulse.com/all/vp.js
 iphonemod.net##center
 iphonemod.net###quads-ad4
 
+!specphone.com
+specphone.com##div#custom_html-2
+specphone.com##div#custom_html-4
+specphone.com##div#sp_top_phone_widget-2
+specphone.com##div.ads-desktop
+specphone.com##div.ads-mobile
+specphone.com##div#footer-ads
+specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
+
 !
 !---code coding ---
 !
@@ -694,7 +720,6 @@ tutorialstonight.com###ezmobfooter
 
 !freecodecamp.org 20230430155258
 freecodecamp.org##.sidebar
-freecodecamp.org#$#.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 
 !linuxhint.com 20230503020240
 linuxhint.com##.adthrive
@@ -783,9 +808,11 @@ garasumanga.com##.bottom
 garasumanga.com##.chdesc
 
 !tamamanga.com
-tamamanga.com##.chdesc > p
-tamamanga.com#$#.postbody.full {padding-top: 20px !important;}
-tamamanga.com#$##content {padding-bottom: 80px !important;}
+tamamanga.com##div.chdesc > p
+tamamanga.com##div.chaptertags
+tamamanga.com##div[class="ts-breadcrumb bixbox"]
+tamamanga.com##.postbody.full:style(padding-top: 20px !important)
+tamamanga.com###content:style(padding-bottom: 80px !important)
 
 !manga-sugoi.com
 manga-sugoi.com##div[id="wbnn"]
@@ -797,7 +824,7 @@ moodtoon.com##div.ads-info
 moodtoon.com##div.mt-ad
 moodtoon.com##div.chaptertags
 moodtoon.com##li#menu-item-595198
-moodtoon.com#$##content {margin-top: 0px !important;}
+moodtoon.com###content:style(margin-top: 0px !important)
 
 !niceoppai.net
 niceoppai.net##div[class="top_page widget_text"]
@@ -809,7 +836,6 @@ niceoppai.net##center > a
 !ads banner
 https://1.bp.blogspot.com/*$domain=niceoppai.net
 https://blogger.googleusercontent.com/img/b*.gif$domain=niceoppai.net
-https://image5.niceoppai.net/$domain=niceoppai.net
 https://www.niceoppai.net/wp-content/uploads*.gif$domain=niceoppai.net
 https://i.imgur.com*.gif$domain=niceoppai.net
 https://i0.wp.com/niceoppai.net/wp-content$domain=niceoppai.net
@@ -846,7 +872,7 @@ thaimanga.net##.ads
 
 !mangaisekaithai.com
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
-mangaisekaithai.com#$#.tab-summary  {padding-bottom: 0px !important;}
+mangaisekaithai.com##.tab-summary:style(padding-bottom: 0px !important)
 
 !mangafins.net
 mangafins.net##.c-top-sidebar
@@ -886,10 +912,13 @@ germa-66.com##div[id="wbnn"]
 !manhuakey.com
 manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 
+!manhuabug.com
+manhuabug.com##div[class="header-ads-section"]
+
 !manga-moons.net
 manga-moons.net##.chaptertags
 manga-moons.net##.chdesc > p
-manga-moons.net#$#.terebody {padding-top: 20px !important;}
+manga-moons.net##.terebody:style(padding-top: 20px !important)
 
 !dragon-manga.com
 dragon-manga.com##div.chdesc
@@ -904,8 +933,8 @@ popsmanga.com##div.dessert-frame
 popsmanga.com##div#wbnn
 popsmanga.com##div.kln
 popsmanga.com##div.chdesc
-popsmanga.com#$#.postbody.full {padding-top: 20px !important;}
-popsmanga.com#$##content {padding-bottom: 0px !important;}
+popsmanga.com##.postbody.full:style(padding-top: 20px !important)
+popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
 
 !toomtam-manga.com
@@ -918,11 +947,14 @@ toomtam-manga.com##div.chaptertags
 !manga-za.net
 manga-za.net##div[class="mt-ad text-center"]
 manga-za.net##div.chdesc
-manga-za.net#$#.postbody.full {padding-top: 80px !important;}
-manga-za.net#$##content {margin-top: 0px !important;}
+manga-za.net##.postbody.full:style(padding-top: 80px !important)
+manga-za.net###content:style(margin-top: 0px !important)
 
 !mangapdf-online.com
 ://$script,third-party,domain=mangapdf-online.com
+
+!oremanga.net
+oremanga.net##.info-chapter
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
@@ -1277,6 +1309,7 @@ thestandard.co##.cwc-sdk-container
 
 !thematter.co
 thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
+!thematter.co###cliSettingsPopup
 
 !voicetv.co.th
 voicetv.co.th###cookie-notification
@@ -1340,6 +1373,18 @@ sony-asia.com###__tealiumGDPRecModal
 
 !playulti.com
 playulti.com##.cookiealert
+
+!xbox.com
+xbox.com##div#cookie-banner
+
+!mega.io
+mega.io##div.cookie-banner
+
+!ctrlg.gg
+ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+
+!scrintal.com
+scrintal.com##div.c-elDcAj
 
 !MadeByMe Cosmestic rules
 ##.eupopup-body
