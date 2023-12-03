@@ -14,8 +14,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 - จุดประสงค์ของ filter นี้ คือ 
   - บล็อกโฆษณาทุกชนิด รวมถึงเว็บพuัuด้วย $^{3}$
   - บล็อก annoyances elements $^{3}$
-  - unblock rules ที่ไม่จำเป็น ทำให้ performance ดีขึ้น และเช่น facebook.com, twitter.com, instagram.com เป็นต้น $^{1}$ $^{3}$
-- หากเป็นชาวต่างชาติ แล้วใช้ filter list นี้ อาจจะได้ประโยชน์จากการบล็อกเว็บ international และ unblock rules ที่ไม่จำเป็นใน filter list นี้
+  - unblock rules ที่ไม่จำเป็น ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น $^{1}$ $^{3}$
+- หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ อาจจะได้ประโยชน์จากการบล็อกเว็บ international และ unblock rules ที่ไม่จำเป็นใน filter list นี้
 
 `Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด`
 
