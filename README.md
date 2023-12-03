@@ -21,7 +21,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 `ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads และ uBlock filters – Privacy ด้วย`
 
-`Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมกว่ามาก แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันดีเกินไป`
+`Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่ามาก แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันดีเกินไป`
 
 ## วิธีเพิ่ม Filter
 - AdGuard ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > (ไม่จำเป็น) ติ๊ก Trusted > กดปุ่ม Subscribe
