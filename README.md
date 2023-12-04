@@ -42,12 +42,14 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 ### หากรู้วิธีแก้ไขปัญหาเอง
 กรุณาเพิ่ม Pull request [ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/pulls)
 
-## Disclaimer
-- This filter may contain other's filter. I already commented the sources.
-
 ## หมายเหตุ
 1: Filter นี้ทำให้ uBlock Origin เป็นหลัก ดังนั้น rules ที่ถูกปรับแต่งให้ทำงานไวขึ้นทั้งหมด(มีไม่กี่ rules เช่น ใน facebook.com, instagram.com, twitter.com)จะใช้ไม่ได้ใน AdGuard และ Brave แต่ AdGuard ก็มี rules ของตัวเองที่ดีอยู่แล้ว
 
 2: Brave built-in AdBlock ไม่ได้รองรับทุก syntax ที่ AdGuard และ uBlock Origin รองรับ จะมีบางเว็บที่ element ซับซ้อน เช่น facebook.com, instagram.com ที่ไม่สามารถบล็อกได้ แต่ youtube.com บล็อกได้
 
 3: เพิ่มเติมจากที่ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List ที่ไม่ได้ครอบคลุมส่วนนี้
+
+## Disclaimer
+- This filter may contain other's filter. I already commented the sources.
+
+*filter list นี้บล็อกโษณาที่ผิดกฏหมายหรือไม่เป็นธรรมเป็นหลัก กรุณาสนับสนุนเว็บที่โฆษณาอย่างถูกกฏหมายและเป็นธรรมด้วยการ Whitelist หรือ Allow list.
