@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231203225051
+! Version: 20231218235441
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -62,11 +62,13 @@ https://content.jwplatform.com/libraries/*.js
 ||a-ads.com^$all
 ||realsrv.com^$all
 ||blockadsnot.com^$all
-||mndsrv.com^$all
 ||come-get-s0me.net^$all
 ||displayvertising.com^$all
 ||betteradsystem.com^$all
 ||d3mzokty951c5w.cloudfront.net^$all
+!mangapdf-online.com
+||impartialpath.com^$all
+||alarming-rule.com^$all
 !aileen-novel.online
 https://www.yprdfnihszoaq.com^$all
 https://www.gqdhsmwzpc.com^$all
@@ -93,29 +95,23 @@ https://www.zpigericvlz.com^$all
 !----------------------------------------START
 
 !---Google ---
+!20231212003326
 googleads.g.doubleclick.net###abgc
 googleads.g.doubleclick.net###mys-wrapper
 
-!may contains ads or mal sites or useful sites
+!may contains ads or mal sites or useful sites 20231212003322
 google.*###tads[aria-label]:style(opacity: 30% !important;)
 google.*##span[class$="U3A9Ac qV8iec"]:style(color: red !important;)
 google.*##div.cu-container:style(opacity: 30% !important;)
 
-!YOUTUBE
-youtube.com##ytd-ad-slot-renderer
-
 !---Microsoft ---
 !
-
-!bing.com
-!not work
-bing.com#?#msft-article-card:has(> msft-article) 
 
 !
 !---clouds cloud ---
 !
 
-!terabox.com
+!terabox.com 20231212003320
 terabox.com##.seo-banner-box
 terabox.com##.adsense
 terabox.com##.drainage
@@ -124,168 +120,26 @@ terabox.com##.drainage
 !
 !---picture image host---
 !
-!imgur.*
-imgur.*##.Post-item-external-ad:upward(div[style])
-imgur.*##.ad-slot
-imgur.*##.Gallery-Content-BottomAd
-imgur.*##.BottomAd-container
-!inline ad
-imgur.*##div[style="height: 250px; margin-bottom: 16px; position: relative; z-index: 1;"]
 
-!imgbox.com
+!imgbox.com 20231212003318
 imgbox.com##div.full-page-redirect
 imgbox.com##div._ln-floater
 
-!pixiv.net
-pixiv.net##div[class^="ad-frame-container"]
-
 !
 !---video ---
-!streamable.com
+
+!streamable.com 20231212003316
 ||socket.streamable.com^
 
-!client.iamtheme.com
+!client.iamtheme.com 20231212003315
 ||client.iamtheme.com/images/banners/$media,redirect-rule=noopmp3-0.1s
+
 !
 !---international news ---
 !
 
-!CNN 
-cnn.com##.ad-slot-header
-cnn.com##.ad-1
-cnn.com##.ad-2
-
-!businessinsider.com
-businessinsider.com##.right-rail-min-height-250
-businessinsider.com##.dianomi-ad
-!
-!---thai news ---
-!
-!kapook
-kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-kapook.com##div.ads728
-
-!hilight.kapook.com 20230430153642
-hilight.kapook.com###container > div.fullbanner
-hilight.kapook.com###aside_article
-hilight.kapook.com##div.taboola-x2-widget:last-child
-hilight.kapook.com##.fullbanner
-hilight.kapook.com###google_esf
-
-!thairath.co.th
-!
-!sponser ตาม element ต่างๆ pc
-thairath.co.th##div[style="min-height: 800px; height: 1110.17px;"]
-thairath.co.th##div[style^="text-align: center; margin: 30px 0px; padding: 5px 0px; background: rgb(242, 242, 242); min-height: 300px;"]
-thairath.co.th##div[style="height:300px"]
-thairath.co.th##div.nohight:nth-child(1) > div > div:nth-of-type(1)
-thairath.co.th##div.nohight:nth-child(2)
-!sponser ตาม element ต่างๆ mobile
-thairath.co.th##div[style="height: 130px;"]
-thairath.co.th##div[class^="ads-slot"]
-thairath.co.th##div[style="height: 300px; margin-top: 0px;"]
-thairath.co.th##div[style^="width: 100vw; overflow: hidden; text-align: center; margin: 30px -15px; padding: 5px 0px; background: rgb(242, 242, 242);"]
-!END thairath.co.th/news
-!
-!START thairath.co.th/home
-!END thairath.co.th/home
-!
-!START thairath.co.th/sport
-thairath.co.th##.__item_article_content_similar
-thairath.co.th###article-div > div:nth-of-type(1) > div:nth-of-type(3)
-thairath.co.th##div[data-container-id="ivs-player"]
-!END thairath.co.th/sport
-
-!ch3plus.com
-ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-ch3plus.com##.sp-banner
-ch3plus.com##.relate-article:nth-of-type(1)
-
-!matichon.co.th
-matichon.co.th##.matichon-pdpa-wrapper
-matichon.co.th##.skeleton-ad
-matichon.co.th##.td-a-rec
-
-!brighttv.co.th
-brighttv.co.th##.b-banner
-
-!beartai.com
-beartai.com###ai_widget-2
-
-!tnews.co.th 
-tnews.co.th##.default-sticky
-tnews.co.th##div.mobile
-tnews.co.th##div.desktop
-
-!thansettakij.com 
-thansettakij.com##.ads-billboard
-thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-
-!thestandard.co
-thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-thestandard.co##.adsbyadop
-thestandard.co##div[class="banner-box hidden-xs"]
-thestandard.co##.mySlidesMasthead
-
-!workpointtoday.com
-workpointtoday.com##.insert_ads
-
-!men.kapook.com
-!anti adblock detect
-men.kapook.com##.taboola-x2-widget
-men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
-men.kapook.com##div[class="ads728 h90"]
-men.kapook.com##div.aside_article
-men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
-men.kapook.com##div[data-item-syndicated="true"]
-
-!pptvhd36.com
-pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-pptvhd36.com##[id^="google_ads_iframe"]
-pptvhd36.com##.ads-wrapper
-pptvhd36.com###taboola-below-article-thumbnails
-pptvhd36.com##.ads-ppn
-pptvhd36.com##.special-gateway__img
-
-!dailynews.co.th
-dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-dailynews.co.th###taboola-below-article-thumbnails
-dailynews.co.th##div[id^="elementor-popup-modal-"]
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
-dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
-
-!khaosod.co.th
-khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-khaosod.co.th##div[id*="ScriptRoot"]
-
-!nationtv.tv
-nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-nationtv.tv##[id^="google_ads_iframe"]
-nationtv.tv##.ads-billboard
-nationtv.tv##.ads-postarticle
-nationtv.tv##div[class^="ads-sticky-"]
-nationtv.tv##div[class^="ads-inarticle-"]
-
-!voicetv.co.th
-voicetv.co.th##.article-ad
-voicetv.co.th###taboola-below-article-thumbnails
-
-!mangozero.com
-mangozero.com##.banner-ads
-
-!kaijeaw.com
-kaijeaw.com##small
-kaijeaw.com##ins.adsbygoogle
-kaijeaw.com##div[data-google-query-id]
-kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
-
-!thaihitz.com
-thaihitz.com##.code-block 
-
-!kaazip.com
-kaazip.com##.adsense
-kaazip.com##ins.adsbygoogle
+!collider.com 20231212003313
+collider.com##div.ad-zone
 
 !
 !---education ---
@@ -324,49 +178,46 @@ me-qr.com##div[class="bg-success"]
 !---social platform ---
 !
 
-!facebook.com
+!facebook.com 20231212012355
+!!MadeByMe
+!!marketplace
+!!!รายการแรกที่เป็นโฆษณา 20231212012356
+www.facebook.com##:matches-path(/marketplace) a[href*="__tn__=H-R"]:nth-ancestor(6)
+!!ads of side feed 20231213191619
+www.facebook.com##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
+!!feed sponsored 20231214011051
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+!!feed suggested for you 20231214011053
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) span:not([class]):not([id]):has-text(Suggested for you):upward(div[aria-posinset])
+
+
 !!จาก uBlock filters – Ads
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby])
+!!ads of side feed
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby])
+
+!!watch 20231212012402
 www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/watch) #watch_feed div:not([class]) > div:not([class]) div[class] span[class] > a span[aria-labelledby]:has(> span[style="display: flex;"] > span[class]:has-text(/^S$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^p$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^d$/)):upward(div:not([class]) > div:not([class]))
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
-!!จาก AdGuard – Ads
+!!feed sponsored มี MadeByMe ที่ perofrmance ดีกว่า
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+
+!!จาก AdGuard – Ads 20231212012407
+!!marketplace ลบคำว่า sponsored
 www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href="/ads/about/?entry_product=ad_preferences"]
 
-!m.facebook.com old interface
-!!from uBlock - Ads
-!m.alpha.facebook.com,touch.alpha.facebook.com,mtouch.alpha.facebook.com,x.alpha.facebook.com,iphone.alpha.facebook.com,touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,touch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mtouch.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,x.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,iphone.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,touch.beta.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,m.facebook.com,m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,b-m.facebook.com,b-m.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,mobile.facebook.com,mobile.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##article[data-sigil*="AdStory"]
+!m.facebook.com
+!!modified from AdGuard – Mobile Ads 20231218230647
+m.facebook.com##span:has-text(/(Sponsored|Gesponsert|Sponsorlu|Sponsorowane|Ispoonsara godhameera|Geborg|Bersponsor|Ditaja|Disponsori|Giisponsoran|Sponzorováno|Sponsoreret|Publicidad|May Sponsor|Sponsorisée|Oipytyvôva|Ɗaukar Nayin|Sponzorirano|Uterwa inkunga|Sponsorizzato|Imedhaminiwa|Hirdetés|Misy Mpiantoka|Gesponsord|Sponset|Patrocinado|Patrocinado|Sponsorizat|Sponzorované|Sponsoroitu|Sponsrat|Được tài trợ|Χορηγούμενη|Спонсорирано|Спонзорирано|Ивээн тэтгэсэн|Реклама|Спонзорисано|במימון|سپانسرڈ|دارای پشتیبانی مالی|ስፖንሰር የተደረገ|प्रायोजित|ተደረገ|प|प्रायोजित|স্পনসর্ড|ਪ੍ਰਯੋਜਿਤ|પ્રાયોજિત|ପ୍ରାୟୋଜିତ|செய்யப்பட்ட செய்யப்பட்ட|చేయబడినది చేయబడినది|ಪ್ರಾಯೋಜಿಸಲಾಗಿದೆ|ചെയ്‌തത് ചെയ്‌തത്|ලද ලද ලද|สนับสนุน สนับสนุน รับ สนับสนุน สนับสนุน|ကြော်ငြာ ကြော်ငြာ|ឧបត្ថម្ភ ឧបត្ថម្ភ ឧបត្ថម្ភ|광고|贊助|赞助内容|広告|സ്‌പോൺസർ ചെയ്‌തത്)/)):upward(div[data-mcomponent="MContainer"])
 
-!m.facebook.com new interface
-!!from uBlock - Ads
-!facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="feed"] > div[class]:has([data-ad-preview])
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3):has(+ :is(.bg-s2, .bg-s3) + :is(.bg-s2, .bg-s3):has(> .m > .m .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]))
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3):has(+ :is(.bg-s2, .bg-s3):has(> .m > .m .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]))
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4)
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4) + .m
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(4) + .m + .m
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5)
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m
-m.facebook.com,touch.facebook.com##:matches-path(/^/$/) .m[data-type="vscroller"] > :is(.bg-s2, .bg-s3) > .m > .m > .m > .nb[style*="clip-path:inset(0 0 0 0 round 4px)"] > [style*="margin-top:1px;"][style*="margin-left:1px;"]:upward(5) + .m + .m
-
-!twitter.com supports ENG and TH langauges
-!/home
-twitter.com##:matches-path(/home) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
-twitter.com##:matches-path(/home) div[data-testid="cellInnerDiv"] > div.css-1dbjc4n > div[class="css-1dbjc4n"] > div[class="css-1dbjc4n"][data-testid="placementTracking"]
-!/i/list
-twitter.com##:matches-path(/i/list) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
-!/explore
-twitter.com##:matches-path(/explore) div[data-testid="eventHero"]:has(path[d$="10H8.996V8h7v7z"])
-!/media
-twitter.com##:matches-path(/media) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
-!user profile experimental
-!twitter.com##:matches-path(/^(?!\/home|\/lists|\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings)/) [data-testid="trend"]:has-text(/Promoted|ประชาสัมพันธ์/):upward(1)
-
-!pantip.com
-pantip.com##div.ads-leaderboard
+!twitter.com
+!!MadeByMe
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:matches-path(/^(?!\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings|\/media)/) div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
 
 !instagram.com
-!feed home
-instagram.com##:matches-path(/^/$/) main > div div[style*="flex-direction: column;"] > article > div:has(a[href^="https://www.facebook.com/ads/ig_redirect/"][target="_blank"]):style(height: 1px !important; visibility: hidden !important;)
+!!จาก uBlock filters – Ads
+!!feed home
+!รอ
 
 !
 !---wiki ---
@@ -500,17 +351,16 @@ pubhtml5.com##.adsbygoogle
 comic-walker.com###right_top_banner
 
 !
-!---ebook e book e-book publisher thai ---
-!
-!nekopost.net
-!nekopost.net##ins.adsbygoogle
-nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
-nekopost.net##div.svelte-1d0qhdr.h-4
-
-
-!
 !---benmarck speedtest web ---
 !
+
+!
+!--- test ---
+!
+
+!keyboard-test.space
+keyboard-test.space###tgroup_40
+keyboard-test.space##ins.adsbygoogle
 
 !
 !---file transfer ---
@@ -577,9 +427,12 @@ techpp.com###brxe-djelsv
 !worldittoday.com 
 worldittoday.com##ins.adsbygoogle
 
-!Notebookspec
-notebookspec.com##iframe[src^="https://openx.notebookspec.com"]
+!Notebookspec 20231216213644
 notebookspec.com##.zox-widget-ad
+notebookspec.com##.zox_ad_widget
+notebookspec.com##.banner-set-left-box
+notebookspec.com##.banner-set-top-box
+notebookspec.com##.banner-set-right-box
 
 !thaimobilecenter.com
 thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
@@ -776,11 +629,13 @@ mawtoload.com##a[rel="dofollow noopener"]
 mawtoload.com###banner-post
 
 !---Manga Foreign---
+
 !www.novelupdates.com
 ##.ad_336
+
 !
 !---Manga Thai---
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com
+||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
 
@@ -793,54 +648,38 @@ manga168.com##.dessert-frame > center
 manga168.com###ads_fox_bottom
 manga168.com##.slider-ads
 manga168.com###colophon > div:nth-of-type(3)
-manga168.com##.chdesc > p
+
 ||manga168.com/wp-content/uploads/banner/ww.webp$image
 !background
 ||manga168.com/over-cover.webp
 
 !tanuki-manga.com
 tanuki-manga.com##.ads
-tanuki-manga.com##.chdesc
-tanuki-manga.com###footer
-
-!garasumanga.com
-garasumanga.com##.bottom
-garasumanga.com##.chdesc
-
-!tamamanga.com
-tamamanga.com##div.chdesc > p
-tamamanga.com##div.chaptertags
-tamamanga.com##div[class="ts-breadcrumb bixbox"]
-tamamanga.com##.postbody.full:style(padding-top: 20px !important)
-tamamanga.com###content:style(padding-bottom: 80px !important)
 
 !manga-sugoi.com
-manga-sugoi.com##div[id="wbnn"]
 manga-sugoi.com##.blox, .mlb, .kln
 
 !moodtoon.com
-moodtoon.com##div.chdesc > p
 moodtoon.com##div.ads-info
 moodtoon.com##div.mt-ad
-moodtoon.com##div.chaptertags
 moodtoon.com##li#menu-item-595198
-moodtoon.com###content:style(margin-top: 0px !important)
 
 !niceoppai.net
-niceoppai.net##div[class="top_page widget_text"]
-niceoppai.net##li[class="wid widget_text"][id="text-6"]
+www.niceoppai.net##div[class="top_page widget_text"]
+www.niceoppai.net##li[class="wid widget_text"][id="text-6"]
+www.niceoppai.net##li[class="wid widget_text"][id="text-9"]
 !หน้าอ่าน
-niceoppai.net##div[id="sct_top_banner"]
-niceoppai.net##div[id="sct_footer_banner"]
-niceoppai.net##center > a
+www.niceoppai.net##div[id="sct_top_banner"]
+www.niceoppai.net##div[id="sct_footer_banner"]
+www.niceoppai.net##center > a:nth-ancestor(1)
 !ads banner
-https://1.bp.blogspot.com/*$domain=niceoppai.net
-https://blogger.googleusercontent.com/img/b*.gif$domain=niceoppai.net
-https://www.niceoppai.net/wp-content/uploads*.gif$domain=niceoppai.net
-https://i.imgur.com*.gif$domain=niceoppai.net
-https://i0.wp.com/niceoppai.net/wp-content$domain=niceoppai.net
-https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp
-@@https://1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png
+https://1.bp.blogspot.com/*$domain=www.niceoppai.net
+https://blogger.googleusercontent.com/img/b*.gif$domain=www.niceoppai.net
+https://www.niceoppai.net/wp-content/uploads*.gif$domain=www.niceoppai.net
+https://i.imgur.com*.gif$domain=www.niceoppai.net
+https://i0.wp.com/niceoppai.net/wp-content$domain=www.niceoppai.net
+https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$domain=www.niceoppai.net
+@@https://1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png$domain=www.niceoppai.net
 
 !mangadeemak.com
 mangadeemak.com##div[id^="ads"]
@@ -866,13 +705,13 @@ loli-manga.com##div[class*="ads"]
 loli-manga.com##.popup-wrap
 
 !thaimanga.net
-thaimanga.net##.chdesc > p
+
 thaimanga.net##.ads
 ://$script,third-party,domain=thaimanga.net
 
 !mangaisekaithai.com
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
-mangaisekaithai.com##.tab-summary:style(padding-bottom: 0px !important)
+!mangaisekaithai.com##.tab-summary:style(padding-bottom: 0px !important)
 
 !mangafins.net
 mangafins.net##.c-top-sidebar
@@ -899,13 +738,12 @@ tpnoodle.com##div[class="col-3 mt-2"]
 makimaaaaa.com##div[class="blox mlb kln"]
 makimaaaaa.com##div[id="wbnn"]
 makimaaaaa.com##div[class="kln"]
-makimaaaaa.com##div.chdesc
 
 !romance-manga.com
 romance-manga.com##div.rm-ads
 romance-manga.com##div.ads-info
 
-!https://germa-66.com/
+!germa-66.com
 germa-66.com##div[class="blox mlb kln"]
 germa-66.com##div[id="wbnn"]
 
@@ -916,13 +754,8 @@ manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 manhuabug.com##div[class="header-ads-section"]
 
 !manga-moons.net
-manga-moons.net##.chaptertags
-manga-moons.net##.chdesc > p
-manga-moons.net##.terebody:style(padding-top: 20px !important)
+!manga-moons.net##.terebody:style(padding-top: 20px !important)
 
-!dragon-manga.com
-dragon-manga.com##div.chdesc
-dragon-manga.com##div.chaptertags
 
 !mangathailand.com
 mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
@@ -932,29 +765,44 @@ mangathailand.com##div[data-id="43c9931"]
 popsmanga.com##div.dessert-frame
 popsmanga.com##div#wbnn
 popsmanga.com##div.kln
-popsmanga.com##div.chdesc
-popsmanga.com##.postbody.full:style(padding-top: 20px !important)
-popsmanga.com###content:style(padding-bottom: 0px !important)
+!popsmanga.com##.postbody.full:style(padding-top: 20px !important)
+!popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
 
 !toomtam-manga.com
 toomtam-manga.com##div#wbnn
 toomtam-manga.com##div.dessert-frame
-toomtam-manga.com##div.chdesc
 toomtam-manga.com##div.kln
-toomtam-manga.com##div.chaptertags
+
 
 !manga-za.net
 manga-za.net##div[class="mt-ad text-center"]
-manga-za.net##div.chdesc
-manga-za.net##.postbody.full:style(padding-top: 80px !important)
-manga-za.net###content:style(margin-top: 0px !important)
 
 !mangapdf-online.com
 ://$script,third-party,domain=mangapdf-online.com
 
 !oremanga.net
-oremanga.net##.info-chapter
+||imgbox.com/*.gif$domain=oremanga.net
+
+!manga-lc.net
+manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]
+
+!chocomanga.com
+chocomanga.com##div[class="ads"]
+https://www.chocomanga.com/wp-content/themes/madara/images/bg-search.jpg
+
+!doodmanga.com
+doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+
+!manga-post.com 20231217005704
+manga-post.com##center > a:nth-ancestor(1)
+
+!mafia-manga.com 20231217005325
+://$script,third-party,domain=mafia-manga.com
+mafia-manga.com##div.dessert-frame
+
+mafia-manga.com##.allc
+mafia-manga.com##a[href="https://ufabet24auto.com/"]:nth-ancestor(1)
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
@@ -1036,6 +884,10 @@ animelizm.com##.dessert-frame
 animelizm.com##div.al-ads
 animelizm.com##section[id="custom_html-60"]
 
+!animeshiro.com
+https://blogger.googleusercontent.com/*.gif$domain=animeshiro.com
+animeshiro.com##div.banner-wrapper
+
 !---Novel ---
 ||*.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 
@@ -1115,6 +967,184 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 !----------------------------------------END
 !----------------------------------------END
 
+!
+!---social platform ---
+!
+
+!pantip.com
+pantip.com##div.ads-leaderboard
+
+!
+!---ebook e book e-book publisher thai ---
+!
+
+!nekopost.net
+nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
+nekopost.net##div.svelte-1d0qhdr.h-4
+
+!
+!---thai news ---
+!
+
+!kapook.com 20231212003311
+kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+kapook.com##div.ads728
+kapook.com###container > div.fullbanner
+kapook.com###aside_article
+kapook.com##div.taboola-x2-widget:last-child
+kapook.com###google_esf
+
+!thairath.co.th
+!
+!หน้าข่าว pc 20231212003942
+thairath.co.th##div#slot-billboard:nth-ancestor(3)
+thairath.co.th##div#slot-tower:nth-ancestor(3)
+thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
+thairath.co.th##div[style="height:300px"]
+thairath.co.th##div#slot-right_rail:nth-ancestor(2)
+thairath.co.th##div[style="text-align: center; opacity: 1;"]
+thairath.co.th##div[class^="ads-slot-"]:nth-ancestor(1)
+!
+!หน้าหลัก pc 20231212004228
+thairath.co.th##div#homepage-top:nth-ancestor(3)
+thairath.co.th##div#homepage-rectangle:nth-ancestor(2)
+!
+!หน้าข่าว mobile 20231212005218
+thairath.co.th##div#slot-headline:nth-ancestor(2)
+thairath.co.th##div#slot-postarticle:nth-ancestor(3)
+!
+!thairath.co.th/sport
+thairath.co.th##div[data-container-id="ivs-player"]
+
+!ch3plus.com 20231212005721
+ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+ch3plus.com##.sp-banner
+
+!matichon.co.th 20231216214133
+matichon.co.th##.td-a-rec
+
+!brighttv.co.th
+brighttv.co.th##.b-banner
+
+!beartai.com
+beartai.com###ai_widget-2
+
+!tnews.co.th 
+tnews.co.th##.default-sticky
+tnews.co.th##div.mobile
+tnews.co.th##div.desktop
+
+!thansettakij.com 
+thansettakij.com##.ads-billboard
+thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+
+!thestandard.co
+thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+thestandard.co##.adsbyadop
+thestandard.co##div[class="banner-box hidden-xs"]
+thestandard.co##.mySlidesMasthead
+
+!workpointtoday.com
+workpointtoday.com##.insert_ads
+
+!men.kapook.com 20231212005902
+men.kapook.com##.taboola-x2-widget
+men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
+men.kapook.com##div[class="ads728 h90"]
+men.kapook.com##div.aside_article
+men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
+men.kapook.com##div[data-item-syndicated="true"]
+
+!pptvhd36.com
+pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+pptvhd36.com##[id^="google_ads_iframe"]
+pptvhd36.com##.ads-wrapper
+pptvhd36.com###taboola-below-article-thumbnails
+pptvhd36.com##.ads-ppn
+pptvhd36.com##.special-gateway__img
+
+!dailynews.co.th
+dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+dailynews.co.th###taboola-below-article-thumbnails
+dailynews.co.th##div[id^="elementor-popup-modal-"]
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
+dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
+
+!khaosod.co.th
+khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+khaosod.co.th##div[id*="ScriptRoot"]
+
+!nationtv.tv
+nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+nationtv.tv##[id^="google_ads_iframe"]
+nationtv.tv##.ads-billboard
+nationtv.tv##.ads-postarticle
+nationtv.tv##div[class^="ads-sticky-"]
+nationtv.tv##div[class^="ads-inarticle-"]
+
+!voicetv.co.th
+voicetv.co.th##.article-ad
+voicetv.co.th###taboola-below-article-thumbnails
+
+!mangozero.com
+mangozero.com##.banner-ads
+
+!kaijeaw.com
+kaijeaw.com##small
+kaijeaw.com##ins.adsbygoogle
+kaijeaw.com##div[data-google-query-id]
+kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
+
+!thaihitz.com
+thaihitz.com##.code-block 
+
+!kaazip.com
+kaazip.com##.adsense
+kaazip.com##ins.adsbygoogle
+
+!!!--------General Cosmetic Rules--------START
+!----------------------------------------START
+!----------------------------------------START
+
+!from oksheets.com
+##.mv-ad-box
+
+!thewindowsclub.com
+###ezmobfooter
+
+##a[href^="https://syndication.realsrv.com"]
+!keyboard-test.space
+##a[href^="https://rtx.super47.net"]
+
+!Powerful Cosmetic Rules
+!/(_|-|^)+(ad|ads)+(_|-|$|)/
+!##[class^="ads"]:not(body):not(html):not(article)
+!##[class*="_ads"]:not(body):not(html):not(article)
+!##[class*="-ads"]:not(body):not(html):not(article)
+!##[id^="ads"]:not(body):not(html):not(article)
+!##[id*="_ads"]:not(body):not(html):not(article)
+!##[id*="-ads"]:not(body):not(html):not(article)
+
+!##[class^="ad_"]:not(body):not(html):not(article)
+!##[class^="ad-"]:not(body):not(html):not(article)
+!##[class$="-ad"]:not(body):not(html):not(article)
+!##[class$="_ad"]:not(body):not(html):not(article)
+!##[id^="ad_"]:not(body):not(html):not(article)
+!##[id^="ad-"]:not(body):not(html):not(article)
+!##[id$="-ad"]:not(body):not(html):not(article)
+!##[id$="_ad"]:not(body):not(html):not(article)
+
+!##[class*="advert"]:not(body):not(html):not(article)
+!##[id*="advert"]:not(body):not(html):not(article)
+
+!##[class*="sponsor"]:not(body):not(html):not(article)
+!##[id*="sponsor"]:not(body):not(html):not(article)
+
+!----------General Cosmetic Rules--------END
+!----------------------------------------END
+!----------------------------------------END
+
 !!!-------------General Rules------------START
 !----------------------------------------START
 !----------------------------------------START
@@ -1126,10 +1156,8 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 /928hd.gif
 series-indy*.webp
 
-!redirect to ads domain when click backward
-/popunder.js
-
-##a[href^="https://syndication.realsrv.com"]
+!redirect to ads domain when click backward (popunder pop-under)
+/popunder*.js
 
 !---------------General Rules------------END
 !----------------------------------------END
@@ -1257,9 +1285,6 @@ thansettakij.com##.ot-sdk-container
 
 !g2.com
 g2.com##div[role="dialog"]
-
-!kapook.com
-kapook.com##.footer-policy
 
 !mediafire.com
 mediafire.com###cookie-accept-footer
@@ -1414,4 +1439,3 @@ scrintal.com##div.c-elDcAj
 !----------------------------------------END
 !----------------------------------------END
 
-
