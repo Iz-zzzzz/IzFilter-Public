@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231218235441
+! Version: 20231219014033
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -96,8 +96,8 @@ https://www.zpigericvlz.com^$all
 
 !---Google ---
 !20231212003326
-googleads.g.doubleclick.net###abgc
-googleads.g.doubleclick.net###mys-wrapper
+googleads.g.doubleclick.net###abgc:remove()
+googleads.g.doubleclick.net###mys-wrapper:remove()
 
 !may contains ads or mal sites or useful sites 20231212003322
 google.*###tads[aria-label]:style(opacity: 30% !important;)
@@ -112,9 +112,9 @@ google.*##div.cu-container:style(opacity: 30% !important;)
 !
 
 !terabox.com 20231212003320
-terabox.com##.seo-banner-box
-terabox.com##.adsense
-terabox.com##.drainage
+terabox.com##.seo-banner-box:remove()
+terabox.com##.adsense:remove()
+terabox.com##.drainage:remove()
 
 !
 !
@@ -122,8 +122,8 @@ terabox.com##.drainage
 !
 
 !imgbox.com 20231212003318
-imgbox.com##div.full-page-redirect
-imgbox.com##div._ln-floater
+imgbox.com##div.full-page-redirect:remove()
+imgbox.com##div._ln-floater:remove()
 
 !
 !---video ---
@@ -139,37 +139,37 @@ imgbox.com##div._ln-floater
 !
 
 !collider.com 20231212003313
-collider.com##div.ad-zone
+collider.com##div.ad-zone:remove()
 
 !
 !---education ---
 !
 !clearnotebooks.com
-clearnotebooks.com##.asOverlayAd__wrap
-clearnotebooks.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-clearnotebooks.com##li[class="notebook-page-ad-banner"]
-clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]
+clearnotebooks.com##.asOverlayAd__wrap:remove()
+clearnotebooks.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+clearnotebooks.com##li[class="notebook-page-ad-banner"]:remove()
+clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]:remove()
 ||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
 
 !camphub.in.th
-camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !ptable.com 
-ptable.com###Notice
-ptable.com##ins.adsbygoogle
+ptable.com###Notice:remove()
+ptable.com##ins.adsbygoogle:remove()
 
 !ieltsbuddy.com 
-ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
+ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]:remove()
 
 !w3schools.com
-w3schools.com###mainLeaderboard
-w3schools.com##.sidesection
+w3schools.com###mainLeaderboard:remove()
+w3schools.com##.sidesection:remove()
 
 !
 !---redirect qr code ---
 !
 !me-qr.com
-me-qr.com##div[class="bg-success"]
+me-qr.com##div[class="bg-success"]:remove()
 !
 !---music ---
 !
@@ -182,37 +182,37 @@ me-qr.com##div[class="bg-success"]
 !!MadeByMe
 !!marketplace
 !!!รายการแรกที่เป็นโฆษณา 20231212012356
-www.facebook.com##:matches-path(/marketplace) a[href*="__tn__=H-R"]:nth-ancestor(6)
+www.facebook.com##:matches-path(/marketplace) a[href*="__tn__=H-R"]:nth-ancestor(6):remove()
 !!ads of side feed 20231213191619
-www.facebook.com##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
+www.facebook.com##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span:remove()
 !!feed sponsored 20231214011051
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
 !!feed suggested for you 20231214011053
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) span:not([class]):not([id]):has-text(Suggested for you):upward(div[aria-posinset])
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) span:not([class]):not([id]):has-text(Suggested for you):upward(div[aria-posinset]):remove()
 
 
 !!จาก uBlock filters – Ads
 !!ads of side feed
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby])
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby]):remove()
 
 !!watch 20231212012402
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/watch) #watch_feed div:not([class]) > div:not([class]) div[class] span[class] > a span[aria-labelledby]:has(> span[style="display: flex;"] > span[class]:has-text(/^S$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^p$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^d$/)):upward(div:not([class]) > div:not([class]))
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/watch) #watch_feed div:not([class]) > div:not([class]) div[class] span[class] > a span[aria-labelledby]:has(> span[style="display: flex;"] > span[class]:has-text(/^S$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^p$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^d$/)):upward(div:not([class]) > div:not([class])):remove()
 !!feed sponsored มี MadeByMe ที่ perofrmance ดีกว่า
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
+!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
 
 !!จาก AdGuard – Ads 20231212012407
 !!marketplace ลบคำว่า sponsored
-www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href="/ads/about/?entry_product=ad_preferences"]
+www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href="/ads/about/?entry_product=ad_preferences"]:remove()
 
 !m.facebook.com
 !!modified from AdGuard – Mobile Ads 20231218230647
-m.facebook.com##span:has-text(/(Sponsored|Gesponsert|Sponsorlu|Sponsorowane|Ispoonsara godhameera|Geborg|Bersponsor|Ditaja|Disponsori|Giisponsoran|Sponzorováno|Sponsoreret|Publicidad|May Sponsor|Sponsorisée|Oipytyvôva|Ɗaukar Nayin|Sponzorirano|Uterwa inkunga|Sponsorizzato|Imedhaminiwa|Hirdetés|Misy Mpiantoka|Gesponsord|Sponset|Patrocinado|Patrocinado|Sponsorizat|Sponzorované|Sponsoroitu|Sponsrat|Được tài trợ|Χορηγούμενη|Спонсорирано|Спонзорирано|Ивээн тэтгэсэн|Реклама|Спонзорисано|במימון|سپانسرڈ|دارای پشتیبانی مالی|ስፖንሰር የተደረገ|प्रायोजित|ተደረገ|प|प्रायोजित|স্পনসর্ড|ਪ੍ਰਯੋਜਿਤ|પ્રાયોજિત|ପ୍ରାୟୋଜିତ|செய்யப்பட்ட செய்யப்பட்ட|చేయబడినది చేయబడినది|ಪ್ರಾಯೋಜಿಸಲಾಗಿದೆ|ചെയ്‌തത് ചെയ്‌തത്|ලද ලද ලද|สนับสนุน สนับสนุน รับ สนับสนุน สนับสนุน|ကြော်ငြာ ကြော်ငြာ|ឧបត្ថម្ភ ឧបត្ថម្ភ ឧបត្ថម្ភ|광고|贊助|赞助内容|広告|സ്‌പോൺസർ ചെയ്‌തത്)/)):upward(div[data-mcomponent="MContainer"])
+m.facebook.com##span:has-text(/(Sponsored|Gesponsert|Sponsorlu|Sponsorowane|Ispoonsara godhameera|Geborg|Bersponsor|Ditaja|Disponsori|Giisponsoran|Sponzorováno|Sponsoreret|Publicidad|May Sponsor|Sponsorisée|Oipytyvôva|Ɗaukar Nayin|Sponzorirano|Uterwa inkunga|Sponsorizzato|Imedhaminiwa|Hirdetés|Misy Mpiantoka|Gesponsord|Sponset|Patrocinado|Patrocinado|Sponsorizat|Sponzorované|Sponsoroitu|Sponsrat|Được tài trợ|Χορηγούμενη|Спонсорирано|Спонзорирано|Ивээн тэтгэсэн|Реклама|Спонзорисано|במימון|سپانسرڈ|دارای پشتیبانی مالی|ስፖንሰር የተደረገ|प्रायोजित|ተደረገ|प|प्रायोजित|স্পনসর্ড|ਪ੍ਰਯੋਜਿਤ|પ્રાયોજિત|ପ୍ରାୟୋଜିତ|செய்யப்பட்ட செய்யப்பட்ட|చేయబడినది చేయబడినది|ಪ್ರಾಯೋಜಿಸಲಾಗಿದೆ|ചെയ്‌തത് ചെയ്‌തത്|ලද ලද ලද|สนับสนุน สนับสนุน รับ สนับสนุน สนับสนุน|ကြော်ငြာ ကြော်ငြာ|ឧបត្ថម្ភ ឧបត្ថម្ភ ឧបត្ថម្ភ|광고|贊助|赞助内容|広告|സ്‌പോൺസർ ചെയ്‌തത്)/)):upward(div[data-mcomponent="MContainer"]):remove()
 
 !twitter.com
 !!MadeByMe
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:matches-path(/^(?!\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings|\/media)/) div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:matches-path(/^(?!\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings|\/media)/) div[data-testid="cellInnerDiv"] > div > div[class] > div[class][data-testid="placementTracking"]:remove()
 
 !instagram.com
 !!จาก uBlock filters – Ads
@@ -223,58 +223,58 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:mat
 !---wiki ---
 !
 !fandom.com 
-fandom.com##.top-ads-container
-fandom.com##.ad-slot-placeholder
+fandom.com##.top-ads-container:remove()
+fandom.com##.ad-slot-placeholder:remove()
 
 !siam.wiki
-siam.wiki##.chat-popup
+siam.wiki##.chat-popup:remove()
 
 !wikihow.com
-wikihow.com##.wh_ad_inner
-wikihow.com###intro_ad_1
+wikihow.com##.wh_ad_inner:remove()
+wikihow.com###intro_ad_1:remove()
 
 !wikiwand
-wikiwand.com##div[class^="footer_donation_"]
+wikiwand.com##div[class^="footer_donation_"]:remove()
 
 !
 !---Apk ---
 !
 
 !Apkcombo
-apkcombo.com##[data-m-ad-id]
+apkcombo.com##[data-m-ad-id]:remove()
 
 !https://www.apkmoddone.com/
-apkmoddone.com##div#addons-widget
+apkmoddone.com##div#addons-widget:remove()
 
 !
 !---dictionary ---
 !
 
 !wordreference.com 
-wordreference.com##body #ad1
+wordreference.com##body #ad1:remove()
 
 !dict.longdo.com เอาแทบโฆษณาออก
-dict.longdo.com###sidebar
+dict.longdo.com###sidebar:remove()
 
 !oxfordlearnersdictionaries.com 
-oxfordlearnersdictionaries.com###ad_btmslot
-oxfordlearnersdictionaries.com###ad_topslot
+oxfordlearnersdictionaries.com###ad_btmslot:remove()
+oxfordlearnersdictionaries.com###ad_topslot:remove()
 
 !Dictionary.com 
-dictionary.com##.TeixwVbjB8cchva8bDlg
-dictionary.com###dcomHomeTop-728x90
+dictionary.com##.TeixwVbjB8cchva8bDlg:remove()
+dictionary.com###dcomHomeTop-728x90:remove()
 
 !www.etymonline.com 
-etymonline.com##div[class="adContainer--6CVz1 horizontal"]
+etymonline.com##div[class="adContainer--6CVz1 horizontal"]:remove()
 
 !collinsdictionary.com 
-collinsdictionary.com###ad_topslot
+collinsdictionary.com###ad_topslot:remove()
 
 !thefreedictionary.com freethesaurus.com
-freethesaurus.com,thefreedictionary.com##ins.adsbygoogle
+freethesaurus.com,thefreedictionary.com##ins.adsbygoogle:remove()
 
 !macmillandictionary.com macmillanthesaurus.com 
-macmillandictionary.com,macmillanthesaurus.com###topslot_container
+macmillandictionary.com,macmillanthesaurus.com###topslot_container:remove()
 !
 !---shopping online ---
 !
@@ -284,50 +284,50 @@ macmillandictionary.com,macmillanthesaurus.com###topslot_container
 !
 
 !tower-of-fantasy-map.appsample.com
-tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
+tower-of-fantasy-map.appsample.com###pc-br-300x250-tof:remove()
 
 !lineupsvalorant.com
-lineupsvalorant.com##ins.adsbygoogles
+lineupsvalorant.com##ins.adsbygoogles:remove()
 
 !blitz.gg
 !https://blitz.gg/valorant/lineups right ads widget
-blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]
-blitz.gg##.aside-content-column
+blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]:remove()
+blitz.gg##.aside-content-column:remove()
 
 !
 !---game news ---
 !
 !mustplay.in.th 
-mustplay.in.th##a[href^="/banner/id/"]
-mustplay.in.th##div[class*="promote"]
+mustplay.in.th##a[href^="/banner/id/"]:remove()
+mustplay.in.th##div[class*="promote"]:remove()
 
 !thisisgamethailand.com 
-thisisgamethailand.com###bg_banner_left
-thisisgamethailand.com###bg_banner_right
-thisisgamethailand.com##div[class="mod_banner_Rectangle"]
-thisisgamethailand.com##div[id="adsbannermtigads"]
+thisisgamethailand.com###bg_banner_left:remove()
+thisisgamethailand.com###bg_banner_right:remove()
+thisisgamethailand.com##div[class="mod_banner_Rectangle"]:remove()
+thisisgamethailand.com##div[id="adsbannermtigads"]:remove()
 ://$script,third-party,domain=thisisgamethailand.com
 @@https://cdn.tigthai.com^
 
 !gamefever.co 
-gamefever.co##[id^="ads"]
-gamefever.co##div[style="width:100vw;height:89px"]
+gamefever.co##[id^="ads"]:remove()
+gamefever.co##div[style="width:100vw;height:89px"]:remove()
 gamefever.co##.d-none:style(padding-top: 0px !important)
 
 !gamingdose.com
-gamingdose.com##section.ads_header
-gamingdose.com##div.ads_side
-gamingdose.com##div.banner_side
-gamingdose.com##div.gamin-sticky
-gamingdose.com##div.gamin-popup-desktop
-gamingdose.com##div.gamin-popup-mobile
-gamingdose.com##div.advads-background
+gamingdose.com##section.ads_header:remove()
+gamingdose.com##div.ads_side:remove()
+gamingdose.com##div.banner_side:remove()
+gamingdose.com##div.gamin-sticky:remove()
+gamingdose.com##div.gamin-popup-desktop:remove()
+gamingdose.com##div.gamin-popup-mobile:remove()
+gamingdose.com##div.advads-background:remove()
 
 !playulti.com
 playulti.com##.space_content:style(padding-top: 60px !important)
 playulti.com##.sidebar:style(top: 80px !important)
 playulti.com##.uk-width-expand:style(margin-top: -10px !important)
-playulti.com##.space_side
+playulti.com##.space_side:remove()
 
 !
 !
@@ -342,13 +342,13 @@ playulti.com##.space_side
 !---ebook e book e-book publisher ---
 !
 !pubhtml5.com
-pubhtml5.com##.adsbygoogle
+pubhtml5.com##.adsbygoogle:remove()
 !
 !---ebook e book e-book publisher japan japanese ---
 !
 
 !comic-walker.com
-comic-walker.com###right_top_banner
+comic-walker.com###right_top_banner:remove()
 
 !
 !---benmarck speedtest web ---
@@ -359,236 +359,236 @@ comic-walker.com###right_top_banner
 !
 
 !keyboard-test.space
-keyboard-test.space###tgroup_40
-keyboard-test.space##ins.adsbygoogle
+keyboard-test.space###tgroup_40:remove()
+keyboard-test.space##ins.adsbygoogle:remove()
 
 !
 !---file transfer ---
 !
 
 !pixeldrain.com 
-pixeldrain.com##.skyscraper
+pixeldrain.com##.skyscraper:remove()
 
 !uploadmx.com
-uploadmx.com##.adsbygoogle
+uploadmx.com##.adsbygoogle:remove()
 !
 !---tech news ---
 !
 
 !gsmarena.com
-gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-gsmarena.com##.adv
-gsmarena.com###topAdv
+gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+gsmarena.com##.adv:remove()
+gsmarena.com###topAdv:remove()
 
 !droidsans.com
-droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !siamblockchain.com
-siamblockchain.com##.header-banner
-siamblockchain.com###block-3
-siamblockchain.com###block-6
-siamblockchain.com##div#topheader-desktop-banner
+siamblockchain.com##.header-banner:remove()
+siamblockchain.com###block-3:remove()
+siamblockchain.com###block-6:remove()
+siamblockchain.com##div#topheader-desktop-banner:remove()
 
 !iphone-droid.net 
-iphone-droid.net##.widget_text
-iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-iphone-droid.net##div[class^="dpdpa--popup"]
+iphone-droid.net##.widget_text:remove()
+iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+iphone-droid.net##div[class^="dpdpa--popup"]:remove()
 
 !extremeit.com 
-extremeit.com##table[border="0"]
-extremeit.com###tdi_73
+extremeit.com##table[border="0"]:remove()
+extremeit.com###tdi_73:remove()
 
 !computerworld.com
-computerworld.com##.ad
-computerworld.com##.ad-header
-computerworld.com##.ad-placement
+computerworld.com##.ad:remove()
+computerworld.com##.ad-header:remove()
+computerworld.com##.ad-placement:remove()
 
 
 !androidauthority.com
-androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
-androidauthority.com##.ad-banner
-androidauthority.com##.__Af
+androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty):remove()
+androidauthority.com##.ad-banner:remove()
+androidauthority.com##.__Af:remove()
 ||androidauth.wpengine.com/wp-json/api/advanced_placement
 
 !gizchina.com
-gizchina.com##.mrf-adv__wrapper
+gizchina.com##.mrf-adv__wrapper:remove()
 
 !makeuseof.com
-makeuseof.com##div.adsninja-ad-zone
+makeuseof.com##div.adsninja-ad-zone:remove()
 
 !sammobile.com
-sammobile.com##.in-content-ad-container
-sammobile.com##ins.adsbygoogle
+sammobile.com##.in-content-ad-container:remove()
+sammobile.com##ins.adsbygoogle:remove()
 
 !techpp.com
-techpp.com###tppAdsID
-techpp.com###brxe-djelsv
+techpp.com###tppAdsID:remove()
+techpp.com###brxe-djelsv:remove()
 
 !worldittoday.com 
-worldittoday.com##ins.adsbygoogle
+worldittoday.com##ins.adsbygoogle:remove()
 
 !Notebookspec 20231216213644
-notebookspec.com##.zox-widget-ad
-notebookspec.com##.zox_ad_widget
-notebookspec.com##.banner-set-left-box
-notebookspec.com##.banner-set-top-box
-notebookspec.com##.banner-set-right-box
+notebookspec.com##.zox-widget-ad:remove()
+notebookspec.com##.zox_ad_widget:remove()
+notebookspec.com##.banner-set-left-box:remove()
+notebookspec.com##.banner-set-top-box:remove()
+notebookspec.com##.banner-set-right-box:remove()
 
 !thaimobilecenter.com
-thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
-thaimobilecenter.com##ins.adsbygoogle
+thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]:remove()
+thaimobilecenter.com##ins.adsbygoogle:remove()
 
 !techtalkthai.com
-techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
-techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
-techtalkthai.com###text-9
-techtalkthai.com###text-18
+techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2):remove()
+techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4):remove()
+techtalkthai.com###text-9:remove()
+techtalkthai.com###text-18:remove()
 
 !blognone.com
-blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !flashfly.net
-flashfly.net##iframe[width="500"][height="190"]
-flashfly.net##ins.adsbygoogle
+flashfly.net##iframe[width="500"][height="190"]:remove()
+flashfly.net##ins.adsbygoogle:remove()
 
 !droidsans.com
-droidsans.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+droidsans.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !raymond.cc
-raymond.cc##ins.adsbygoogle
-raymond.cc##.adsbygoogle
+raymond.cc##ins.adsbygoogle:remove()
+raymond.cc##.adsbygoogle:remove()
 
 !howtogeek.com
-howtogeek.com##.widget-area
-howtogeek.com##.adslot970
-howtogeek.com##.adsninja-ad-zone
+howtogeek.com##.widget-area:remove()
+howtogeek.com##.adslot970:remove()
+howtogeek.com##.adsninja-ad-zone:remove()
 
 !androidpolice.com
-androidpolice.com##[id^="google_ads_iframe"]
-androidpolice.com##.adsninja-ad-zone
-androidpolice.com##.ad-current
-androidpolice.com##.ad-zone-container
-androidpolice.com##.ad-zone
-androidpolice.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+androidpolice.com##[id^="google_ads_iframe"]:remove()
+androidpolice.com##.adsninja-ad-zone:remove()
+androidpolice.com##.ad-current:remove()
+androidpolice.com##.ad-zone-container:remove()
+androidpolice.com##.ad-zone:remove()
+androidpolice.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !trustedreviews.com
-trustedreviews.com##.ipc-advert
-trustedreviews.com##.ad-holder
-trustedreviews.com##.post_detail_right_advert
-trustedreviews.com##.top-advert
-trustedreviews.com##.squirrel_widget
+trustedreviews.com##.ipc-advert:remove()
+trustedreviews.com##.ad-holder:remove()
+trustedreviews.com##.post_detail_right_advert:remove()
+trustedreviews.com##.top-advert:remove()
+trustedreviews.com##.squirrel_widget:remove()
 
 !androidcentral.com
-androidcentral.com##div.dfp-leaderboard-container
-androidcentral.com##div[id="widgetArea17"]
-androidcentral.com##div.related-articles-block
-androidcentral.com##div.van_taboola
-androidcentral.com##div[class="van_vid_carousel vid-present"]
-androidcentral.com##div[class="in-article ad-unit"]
-androidcentral.com##div[id="top-leaderboard"]
-androidcentral.com##div[class="ad-unit"]
+androidcentral.com##div.dfp-leaderboard-container:remove()
+androidcentral.com##div[id="widgetArea17"]:remove()
+androidcentral.com##div.related-articles-block:remove()
+androidcentral.com##div.van_taboola:remove()
+androidcentral.com##div[class="van_vid_carousel vid-present"]:remove()
+androidcentral.com##div[class="in-article ad-unit"]:remove()
+androidcentral.com##div[id="top-leaderboard"]:remove()
+androidcentral.com##div[class="ad-unit"]:remove()
 
 !pcgamer.com
-pcgamer.com##.ad-placement
-pcgamer.com##.sponsored-post
-pcgamer.com###hawkMagWidget
-pcgamer.com##.dfp-leaderboard-container
+pcgamer.com##.ad-placement:remove()
+pcgamer.com##.sponsored-post:remove()
+pcgamer.com###hawkMagWidget:remove()
+pcgamer.com##.dfp-leaderboard-container:remove()
 
 !whathifi.com
-whathifi.com##.sponsored-post
-whathifi.com##.ad-unit
-whathifi.com##.dfp-leaderboard-container
-whathifi.com##.newsletter-inbodyContent-slice
-whathifi.com###hawkMagWidget
+whathifi.com##.sponsored-post:remove()
+whathifi.com##.ad-unit:remove()
+whathifi.com##.dfp-leaderboard-container:remove()
+whathifi.com##.newsletter-inbodyContent-slice:remove()
+whathifi.com###hawkMagWidget:remove()
 
 !tomsguide.com 20230430152716
-tomsguide.com##.sponsored-post
-tomsguide.com###taboola-below-article-thumbnails
-tomsguide.com##.vid-present > .van_vid_carousel__padding
-tomsguide.com##.dfp-leaderboard-container
-tomsguide.com##.sponsored-post
+tomsguide.com##.sponsored-post:remove()
+tomsguide.com###taboola-below-article-thumbnails:remove()
+tomsguide.com##.vid-present > .van_vid_carousel__padding:remove()
+tomsguide.com##.dfp-leaderboard-container:remove()
+tomsguide.com##.sponsored-post:remove()
 
 !xda-developers.com
-xda-developers.com##.ad-zone
-xda-developers.com##.ad-zone-container
-xda-developers.com##.ad-current
-xda-developers.com##.adsninja-ad-zone
-xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-xda-developers.com##[id^="google_ads_iframe"]
+xda-developers.com##.ad-zone:remove()
+xda-developers.com##.ad-zone-container:remove()
+xda-developers.com##.ad-current:remove()
+xda-developers.com##.adsninja-ad-zone:remove()
+xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+xda-developers.com##[id^="google_ads_iframe"]:remove()
 
 !alphr.com
-alphr.com##[data-freestar-ad]
-alphr.com##.sticky-ads-container
-alphr.com##.sticky-ads
+alphr.com##[data-freestar-ad]:remove()
+alphr.com##.sticky-ads-container:remove()
+alphr.com##.sticky-ads:remove()
 
 !sammyfans.com
-sammyfans.com##ins.adsbygoogle
+sammyfans.com##ins.adsbygoogle:remove()
 
 !bleepingcomputer.com
-bleepingcomputer.com##section[class="cz-oa-wrapp"]
-bleepingcomputer.com##section[class="cz-boa-wrapp"]
-bleepingcomputer.com##.fs-dynamic
-bleepingcomputer.com##.asa
-bleepingcomputer.com##ins.adsbygoogle
+bleepingcomputer.com##section[class="cz-oa-wrapp"]:remove()
+bleepingcomputer.com##section[class="cz-boa-wrapp"]:remove()
+bleepingcomputer.com##.fs-dynamic:remove()
+bleepingcomputer.com##.asa:remove()
+bleepingcomputer.com##ins.adsbygoogle:remove()
 
 !pcworld.com
-pcworld.com##div.wp-block-column:nth-of-type(2)
-pcworld.com##div[data-ad-template="banner"]
+pcworld.com##div.wp-block-column:nth-of-type(2):remove()
+pcworld.com##div[data-ad-template="banner"]:remove()
 
 !it24hrs.com
-it24hrs.com##ins.adsbygoogle
-it24hrs.com##.bottom-ads
-it24hrs.com##.adrotate_widgets
+it24hrs.com##ins.adsbygoogle:remove()
+it24hrs.com##.bottom-ads:remove()
+it24hrs.com##.adrotate_widgets:remove()
 https://s.vidpulse.com/all/vp.js
 
 !iphonemod.net
-iphonemod.net##center
-iphonemod.net###quads-ad4
+iphonemod.net##center:remove()
+iphonemod.net###quads-ad4:remove()
 
 !specphone.com
-specphone.com##div#custom_html-2
-specphone.com##div#custom_html-4
-specphone.com##div#sp_top_phone_widget-2
-specphone.com##div.ads-desktop
-specphone.com##div.ads-mobile
-specphone.com##div#footer-ads
-specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
+specphone.com##div#custom_html-2:remove()
+specphone.com##div#custom_html-4:remove()
+specphone.com##div#sp_top_phone_widget-2:remove()
+specphone.com##div.ads-desktop:remove()
+specphone.com##div.ads-mobile:remove()
+specphone.com##div#footer-ads:remove()
+specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]:remove()
 
 !
 !---code coding ---
 !
 
 !sourceforge.net
-sourceforge.net##[id^="google_ads_iframe"]
-sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+sourceforge.net##[id^="google_ads_iframe"]:remove()
+sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !tutorialstonight.com
-tutorialstonight.com##span[class^="ezoic-"]
-tutorialstonight.com##div[id^="ez-sidebar"]
-tutorialstonight.com##[id^="google_ads_iframe"]
-tutorialstonight.com##.banner_ads
-tutorialstonight.com##[data-ez-name]
-tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-tutorialstonight.com###ezmobfooter
+tutorialstonight.com##span[class^="ezoic-"]:remove()
+tutorialstonight.com##div[id^="ez-sidebar"]:remove()
+tutorialstonight.com##[id^="google_ads_iframe"]:remove()
+tutorialstonight.com##.banner_ads:remove()
+tutorialstonight.com##[data-ez-name]:remove()
+tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+tutorialstonight.com###ezmobfooter:remove()
 
 !freecodecamp.org 20230430155258
-freecodecamp.org##.sidebar
+freecodecamp.org##.sidebar:remove()
 
 !linuxhint.com 20230503020240
-linuxhint.com##.adthrive
-linuxhint.com##.adthrive-content
-linuxhint.com##.adthrive-ad
-linuxhint.com##.adthrive-header
+linuxhint.com##.adthrive:remove()
+linuxhint.com##.adthrive-content:remove()
+linuxhint.com##.adthrive-ad:remove()
+linuxhint.com##.adthrive-header:remove()
 
 !thepythoncode.com
-thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
-thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-thepythoncode.com##[data-ez-name]
-thepythoncode.com##.ezoic-floating-bottom
-thepythoncode.com##.ezoic-ad-adaptive
-thepythoncode.com##.ezoic-ad
-thepythoncode.com##.ezmob-footer-desktop
-thepythoncode.com##.ezmob-footer
+thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]:remove()
+thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+thepythoncode.com##[data-ez-name]:remove()
+thepythoncode.com##.ezoic-floating-bottom:remove()
+thepythoncode.com##.ezoic-ad-adaptive:remove()
+thepythoncode.com##.ezoic-ad:remove()
+thepythoncode.com##.ezmob-footer-desktop:remove()
+thepythoncode.com##.ezmob-footer:remove()
 
 !
 !---web builder ---
@@ -599,18 +599,18 @@ thepythoncode.com##.ezmob-footer
 !
 
 !adfoc.us 
-adfoc.us##.content > iframe
+adfoc.us##.content > iframe:remove()
 
 !
 !---alternative ---
 !
 !alternativeto.net 
-alternativeto.net##ins.adsbygoogle
+alternativeto.net##ins.adsbygoogle:remove()
 
 !---apps programs ---
 
 !obsproject.com
-obsproject.com##.notice--cookie:not(body):not(html)
+obsproject.com##.notice--cookie:not(body):not(html):remove()
 
 !
 !---music illegitimate ---
@@ -624,18 +624,18 @@ obsproject.com##.notice--cookie:not(body):not(html)
 ||colabtutorials.com/thank-for-choose-our-site/$popup
 
 !mawtoload.com
-mawtoload.com###sticky-banner
-mawtoload.com##a[rel="dofollow noopener"]
-mawtoload.com###banner-post
+mawtoload.com###sticky-banner:remove()
+mawtoload.com##a[rel="dofollow noopener"]:remove()
+mawtoload.com###banner-post:remove()
 
 !---Manga Foreign---
 
 !www.novelupdates.com
-##.ad_336
+##.ad_336:remove()
 
 !
 !---Manga Thai---
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com
+||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
 
@@ -644,34 +644,35 @@ mawtoload.com###banner-post
 ||1.bp.blogspot.com/$domain=manga168.com
 ||amz-cdn*.manga168.com/images/*.gif$domain=manga168.com
 ||i.imgur.com/*.gif$domain=manga168.com
-manga168.com##.dessert-frame > center
-manga168.com###ads_fox_bottom
-manga168.com##.slider-ads
-manga168.com###colophon > div:nth-of-type(3)
+manga168.com##.dessert-frame > center:remove()
+manga168.com###ads_fox_bottom:remove()
+manga168.com##.slider-ads:remove()
+manga168.com###colophon > div:nth-of-type(3):remove()
 
 ||manga168.com/wp-content/uploads/banner/ww.webp$image
 !background
 ||manga168.com/over-cover.webp
 
 !tanuki-manga.com
-tanuki-manga.com##.ads
+tanuki-manga.com##.ads:remove()
 
 !manga-sugoi.com
-manga-sugoi.com##.blox, .mlb, .kln
+manga-sugoi.com##.blox, .mlb, .kln:remove()
 
 !moodtoon.com
-moodtoon.com##div.ads-info
-moodtoon.com##div.mt-ad
-moodtoon.com##li#menu-item-595198
+moodtoon.com##div.ads-info:remove()
+moodtoon.com##div.mt-ad:remove()
+moodtoon.com##li#menu-item-595198:remove()
+moodtoon.com##div[id^="ads_"]:remove()
 
 !niceoppai.net
-www.niceoppai.net##div[class="top_page widget_text"]
-www.niceoppai.net##li[class="wid widget_text"][id="text-6"]
-www.niceoppai.net##li[class="wid widget_text"][id="text-9"]
+www.niceoppai.net##div[class="top_page widget_text"]:remove()
+www.niceoppai.net##li[class="wid widget_text"][id="text-6"]:remove()
+www.niceoppai.net##li[class="wid widget_text"][id="text-9"]:remove()
 !หน้าอ่าน
-www.niceoppai.net##div[id="sct_top_banner"]
-www.niceoppai.net##div[id="sct_footer_banner"]
-www.niceoppai.net##center > a:nth-ancestor(1)
+www.niceoppai.net##div[id="sct_top_banner"]:remove()
+www.niceoppai.net##div[id="sct_footer_banner"]:remove()
+www.niceoppai.net##center > a:nth-ancestor(1):remove()
 !ads banner
 https://1.bp.blogspot.com/*$domain=www.niceoppai.net
 https://blogger.googleusercontent.com/img/b*.gif$domain=www.niceoppai.net
@@ -682,101 +683,101 @@ https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$domain=www.ni
 @@https://1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png$domain=www.niceoppai.net
 
 !mangadeemak.com
-mangadeemak.com##div[id^="ads"]
-mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
+mangadeemak.com##div[id^="ads"]:remove()
+mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar:remove()
 https://mangadeemak.com/wp-content/uploads/2017/10/bg-search-2.jpg
 
 !manga-uptocats.com
-manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]:remove()
 
 !kingsmanga.net
-kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
+kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width:remove()
 
 !kuro-manga.com
-kuro-manga.com##div[class="c-sidebar"]
-kuro-manga.com##div.widget_text
+kuro-manga.com##div[class="c-sidebar"]:remove()
+kuro-manga.com##div.widget_text:remove()
 
 !rh2plusmanga.com
-rh2plusmanga.com##.ads
-rh2plusmanga.com##.ads-float
+rh2plusmanga.com##.ads:remove()
+rh2plusmanga.com##.ads-float:remove()
 
 !loli-manga.com
-loli-manga.com##div[class*="ads"]
-loli-manga.com##.popup-wrap
+loli-manga.com##div[class*="ads"]:remove()
+loli-manga.com##.popup-wrap:remove()
 
 !thaimanga.net
 
-thaimanga.net##.ads
+thaimanga.net##.ads:remove()
 ://$script,third-party,domain=thaimanga.net
 
 !mangaisekaithai.com
-mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]:remove()
 !mangaisekaithai.com##.tab-summary:style(padding-bottom: 0px !important)
 
 !mangafins.net
-mangafins.net##.c-top-sidebar
+mangafins.net##.c-top-sidebar:remove()
 
 !murim-manga.com
-murim-manga.com##.dessert-frame
+murim-manga.com##.dessert-frame:remove()
 
 !ped-manga.com
-ped-manga.com##.dessert-frame
-ped-manga.com###wbnn
+ped-manga.com##.dessert-frame:remove()
+ped-manga.com###wbnn:remove()
 
 !dokimori.com
-dokimori.com##.col-md-12
+dokimori.com##.col-md-12:remove()
 
 !manhwabreakup.com
-manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
-manhwabreakup.com##div[class="ads-float"]
+manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]:remove()
+manhwabreakup.com##div[class="ads-float"]:remove()
 
 !tpnoodle.com
-tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
-tpnoodle.com##div[class="col-3 mt-2"]
+tpnoodle.com##div[class="row mt-3"]:nth-of-type(1):remove()
+tpnoodle.com##div[class="col-3 mt-2"]:remove()
 
 !makimaaaaa.com
-makimaaaaa.com##div[class="blox mlb kln"]
-makimaaaaa.com##div[id="wbnn"]
-makimaaaaa.com##div[class="kln"]
+makimaaaaa.com##div[class="blox mlb kln"]:remove()
+makimaaaaa.com##div[id="wbnn"]:remove()
+makimaaaaa.com##div[class="kln"]:remove()
 
 !romance-manga.com
-romance-manga.com##div.rm-ads
-romance-manga.com##div.ads-info
+romance-manga.com##div.rm-ads:remove()
+romance-manga.com##div.ads-info:remove()
 
 !germa-66.com
-germa-66.com##div[class="blox mlb kln"]
-germa-66.com##div[id="wbnn"]
+germa-66.com##div[class="blox mlb kln"]:remove()
+germa-66.com##div[id="wbnn"]:remove()
 
 !manhuakey.com
-manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]:remove()
 
 !manhuabug.com
-manhuabug.com##div[class="header-ads-section"]
+manhuabug.com##div[class="header-ads-section"]:remove()
 
 !manga-moons.net
 !manga-moons.net##.terebody:style(padding-top: 20px !important)
 
 
 !mangathailand.com
-mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
-mangathailand.com##div[data-id="43c9931"]
+mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]:remove()
+mangathailand.com##div[data-id="43c9931"]:remove()
 
 !popsmanga.com
-popsmanga.com##div.dessert-frame
-popsmanga.com##div#wbnn
-popsmanga.com##div.kln
+popsmanga.com##div.dessert-frame:remove()
+popsmanga.com##div#wbnn:remove()
+popsmanga.com##div.kln:remove()
 !popsmanga.com##.postbody.full:style(padding-top: 20px !important)
 !popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
 
 !toomtam-manga.com
-toomtam-manga.com##div#wbnn
-toomtam-manga.com##div.dessert-frame
-toomtam-manga.com##div.kln
+toomtam-manga.com##div#wbnn:remove()
+toomtam-manga.com##div.dessert-frame:remove()
+toomtam-manga.com##div.kln:remove()
 
 
 !manga-za.net
-manga-za.net##div[class="mt-ad text-center"]
+manga-za.net##div[class="mt-ad text-center"]:remove()
 
 !mangapdf-online.com
 ://$script,third-party,domain=mangapdf-online.com
@@ -785,137 +786,137 @@ manga-za.net##div[class="mt-ad text-center"]
 ||imgbox.com/*.gif$domain=oremanga.net
 
 !manga-lc.net
-manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]
+manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]:remove()
 
 !chocomanga.com
-chocomanga.com##div[class="ads"]
+chocomanga.com##div[class="ads"]:remove()
 https://www.chocomanga.com/wp-content/themes/madara/images/bg-search.jpg
 
 !doodmanga.com
-doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]:remove()
 
 !manga-post.com 20231217005704
-manga-post.com##center > a:nth-ancestor(1)
+manga-post.com##center > a:nth-ancestor(1):remove()
 
 !mafia-manga.com 20231217005325
 ://$script,third-party,domain=mafia-manga.com
-mafia-manga.com##div.dessert-frame
+mafia-manga.com##div.dessert-frame:remove()
 
-mafia-manga.com##.allc
-mafia-manga.com##a[href="https://ufabet24auto.com/"]:nth-ancestor(1)
+mafia-manga.com##.allc:remove()
+mafia-manga.com##a[href="https://ufabet24auto.com/"]:nth-ancestor(1):remove()
 
 !---Anime Web---
 ||*.gif$image,domain=animehayai.net|anime-sugoi.com|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
 
 !Anime Sugoi
 !ที่ว่างบนplayer จาก rule ที่ออกออกแถวplayerไม่หมด
-anime-sugoi.com##center > a[rel="nofollow"]~br
+anime-sugoi.com##center > a[rel="nofollow"]~br:remove()
 !เอา box ที่เขียนว่า โฆษณา ออก
-anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2)
+anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2):remove()
 !เอาdiv โฆษณาอันแรกออก
-anime-sugoi.com##.container > .row > .col-md-8
+anime-sugoi.com##.container > .row > .col-md-8:remove()
 !เอาdiv โฆษณาอัน2ออก
-anime-sugoi.com##.container > .row > center
+anime-sugoi.com##.container > .row > center:remove()
 !เอาdiv บนplayerออก
-!anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4)
+!anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4):remove()
 !เอาdiv ล่างplayerออก
-!anime-sugoi.com##center:nth-of-type(3)
+!anime-sugoi.com##center:nth-of-type(3):remove()
 !เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
-anime-sugoi.com##.panel-body > center > a
+anime-sugoi.com##.panel-body > center > a:remove()
 !เอา tagออก
-anime-sugoi.com##.panel-body > center > p
-anime-sugoi.com###bt-ads
+anime-sugoi.com##.panel-body > center > p:remove()
+anime-sugoi.com###bt-ads:remove()
 ||anime-sugoi.com/pic/
 
 !anime-masters.com
-anime-masters.com##div.container > .row > .center_lnwphp
-anime-masters.com##center:nth-of-type(2)
-anime-masters.com##center:nth-of-type(4)
-anime-masters.com##.col-md-9 > span
+anime-masters.com##div.container > .row > .center_lnwphp:remove()
+anime-masters.com##center:nth-of-type(2):remove()
+anime-masters.com##center:nth-of-type(4):remove()
+anime-masters.com##.col-md-9 > span:remove()
 
 !animekimi.com
-animekimi.com##.module_home_x
+animekimi.com##.module_home_x:remove()
 
 !anifume.com
-anifume.com##div[id^="display-"]
-anifume.com##div.F4uDjm45n
-anifume.com##div.topml
+anifume.com##div[id^="display-"]:remove()
+anifume.com##div.F4uDjm45n:remove()
+anifume.com##div.topml:remove()
 ://$script,third-party,domain=anifume.com
 
 !anime-suba.com
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s
 
 !animehayai.net
-animehayai.net##.col-12
-animehayai.net##.ads-banner
-animehayai.net##.banner-close
-animehayai.net##div[class="text-center bottom-2x"]
+animehayai.net##.col-12:remove()
+animehayai.net##.ads-banner:remove()
+animehayai.net##.banner-close:remove()
+animehayai.net##div[class="text-center bottom-2x"]:remove()
 
 !anime-kimuchi.com
-anime-kimuchi.com###scrollUp
-anime-kimuchi.com###slider-r
+anime-kimuchi.com###scrollUp:remove()
+anime-kimuchi.com###slider-r:remove()
 
 !neko-miku.com
-neko-miku.com###footer > .container p
+neko-miku.com###footer > .container p:remove()
 
 !fairyanime.net
-fairyanime.net###kosana
-fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
+fairyanime.net###kosana:remove()
+fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5):remove()
 
 !shibaanime.com
-shibaanime.com##a[rel$="sponsored"]
-shibaanime.com##div.hero.common-hero:nth-child(2)
+shibaanime.com##a[rel$="sponsored"]:remove()
+shibaanime.com##div.hero.common-hero:nth-child(2):remove()
 
 !anime-hit.com
 ||anime-hit.com^$popup,domain=~anime-hit.com
-##a[hreaf^="https://anime-hit.com"]
+##a[hreaf^="https://anime-hit.com"]:remove()
 anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 
 !animetako.net
-animetako.net##div[id^="animekimiads"]
+animetako.net##div[id^="animekimiads"]:remove()
 
 !https://www.kurokami.me
-kurokami.me##div[class="col-6 banner728x200-div"]
-kurokami.me##div[id^="ads_0"]
-kurokami.me##p
+kurokami.me##div[class="col-6 banner728x200-div"]:remove()
+kurokami.me##div[id^="ads_0"]:remove()
+kurokami.me##p:remove()
 
 !https://animelizm.com/
-animelizm.com##.dessert-frame
-animelizm.com##div.al-ads
-animelizm.com##section[id="custom_html-60"]
+animelizm.com##.dessert-frame:remove()
+animelizm.com##div.al-ads:remove()
+animelizm.com##section[id="custom_html-60"]:remove()
 
 !animeshiro.com
 https://blogger.googleusercontent.com/*.gif$domain=animeshiro.com
-animeshiro.com##div.banner-wrapper
+animeshiro.com##div.banner-wrapper:remove()
 
 !---Novel ---
 ||*.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 
 !novel-lucky.com
-novel-lucky.com##.advanced_floating_content 
-novel-lucky.com##.container-fluid
-novel-lucky.com##.c-sidebar
-novel-lucky.com###bottom_center_ads_1
+novel-lucky.com##.advanced_floating_content:remove()
+novel-lucky.com##.container-fluid:remove()
+novel-lucky.com##.c-sidebar:remove()
+novel-lucky.com###bottom_center_ads_1:remove()
 
 !aileen-novel.online
 ://$script,third-party,domain=aileen-novel.online
 
 !novelpdf.xyz
 novelpdf.xyz#%#//scriptlet('prevent-window-open')
-novelpdf.xyz##+js(window.open-defuser)
+novelpdf.xyz##+js(window.open-defuser):remove()
 ||ticket.leaforfree.com^$all,third-party
 ://$script,third-party,domain=novelpdf.xyz
 
 !cat2auto.com
-cat2auto.com##div.widget_text
-cat2auto.com##div[id*="ads_"]
-cat2auto.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+cat2auto.com##div.widget_text:remove()
+cat2auto.com##div[id*="ads_"]:remove()
+cat2auto.com##div[class="c-sidebar c-top-sidebar wp-manga"]:remove()
 
 !อ่านทั้งวัน.com
-xn--72c5afc3e6a4acd3tpa.com##div.section-sponser
+xn--72c5afc3e6a4acd3tpa.com##div.section-sponser:remove()
 
 !นิยายฟรี.com
-xn--q3cmiag1gmn.com##div.header-ads-section
+xn--q3cmiag1gmn.com##div.header-ads-section:remove()
 
 !---Movie ---
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
@@ -927,34 +928,34 @@ xn--q3cmiag1gmn.com##div.header-ads-section
 
 !nungdeedee.com
 ||nungdeedee.com/externallink$all
-nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
+nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]:remove()
 
 !doomovie-hd.com
-doomovie-hd.com##.left-floating-banana
-doomovie-hd.com##.right-floating-banana
-doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]
-doomovie-hd.com##div[class^="horizontal-ad-bar"]
+doomovie-hd.com##.left-floating-banana:remove()
+doomovie-hd.com##.right-floating-banana:remove()
+doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]:remove()
+doomovie-hd.com##div[class^="horizontal-ad-bar"]:remove()
 
 !24-hd.com
-24-hd.com##.ad
+24-hd.com##.ad:remove()
 
 !doonungsub.com
-doonungsub.com##.banner
-doonungsub.com##.popup
+doonungsub.com##.banner:remove()
+doonungsub.com##.popup:remove()
 
 !1112hd.com
-1112hd.com##.tt_banner_above_vdo_player
+1112hd.com##.tt_banner_above_vdo_player:remove()
 
 !ดูหนังใหม่ชนโรง.com
-##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
+##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]:remove()
 ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
 
 !dooseries.com
-##a[href^="https://dooseries.com"]
+##a[href^="https://dooseries.com"]:remove()
 dooseries.com#@#a[href^="https://dooseries.com"]
 
 !ดูหนัง.tv
-ดูหนัง.tv##.row
+ดูหนัง.tv##.row:remove()
 ://$script,third-party,domain=xn--72czp5e5a8b.tv
 
 !serie-master.com
@@ -972,174 +973,174 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 !
 
 !pantip.com
-pantip.com##div.ads-leaderboard
+pantip.com##div.ads-leaderboard:remove()
 
 !
 !---ebook e book e-book publisher thai ---
 !
 
 !nekopost.net
-nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
-nekopost.net##div.svelte-1d0qhdr.h-4
+nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg:remove()
+nekopost.net##div.svelte-1d0qhdr.h-4:remove()
 
 !
 !---thai news ---
 !
 
 !kapook.com 20231212003311
-kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-kapook.com##div.ads728
-kapook.com###container > div.fullbanner
-kapook.com###aside_article
-kapook.com##div.taboola-x2-widget:last-child
-kapook.com###google_esf
+kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+kapook.com##div.ads728:remove()
+kapook.com###container > div.fullbanner:remove()
+kapook.com###aside_article:remove()
+kapook.com##div.taboola-x2-widget:last-child:remove()
+kapook.com###google_esf:remove()
 
 !thairath.co.th
 !
 !หน้าข่าว pc 20231212003942
-thairath.co.th##div#slot-billboard:nth-ancestor(3)
-thairath.co.th##div#slot-tower:nth-ancestor(3)
+thairath.co.th##div#slot-billboard:nth-ancestor(3):remove()
+thairath.co.th##div#slot-tower:nth-ancestor(3):remove()
 thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
-thairath.co.th##div[style="height:300px"]
-thairath.co.th##div#slot-right_rail:nth-ancestor(2)
-thairath.co.th##div[style="text-align: center; opacity: 1;"]
-thairath.co.th##div[class^="ads-slot-"]:nth-ancestor(1)
+thairath.co.th##div[style="height:300px"]:remove()
+thairath.co.th##div#slot-right_rail:nth-ancestor(2):remove()
+thairath.co.th##div[style="text-align: center; opacity: 1;"]:remove()
+thairath.co.th##div[class^="ads-slot-"]:nth-ancestor(1):remove()
 !
 !หน้าหลัก pc 20231212004228
-thairath.co.th##div#homepage-top:nth-ancestor(3)
-thairath.co.th##div#homepage-rectangle:nth-ancestor(2)
+thairath.co.th##div#homepage-top:nth-ancestor(3):remove()
+thairath.co.th##div#homepage-rectangle:nth-ancestor(2):remove()
 !
 !หน้าข่าว mobile 20231212005218
-thairath.co.th##div#slot-headline:nth-ancestor(2)
-thairath.co.th##div#slot-postarticle:nth-ancestor(3)
+thairath.co.th##div#slot-headline:nth-ancestor(2):remove()
+thairath.co.th##div#slot-postarticle:nth-ancestor(3):remove()
 !
 !thairath.co.th/sport
-thairath.co.th##div[data-container-id="ivs-player"]
+thairath.co.th##div[data-container-id="ivs-player"]:remove()
 
 !ch3plus.com 20231212005721
-ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-ch3plus.com##.sp-banner
+ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+ch3plus.com##.sp-banner:remove()
 
 !matichon.co.th 20231216214133
-matichon.co.th##.td-a-rec
+matichon.co.th##.td-a-rec:remove()
 
 !brighttv.co.th
-brighttv.co.th##.b-banner
+brighttv.co.th##.b-banner:remove()
 
 !beartai.com
-beartai.com###ai_widget-2
+beartai.com###ai_widget-2:remove()
 
 !tnews.co.th 
-tnews.co.th##.default-sticky
-tnews.co.th##div.mobile
-tnews.co.th##div.desktop
+tnews.co.th##.default-sticky:remove()
+tnews.co.th##div.mobile:remove()
+tnews.co.th##div.desktop:remove()
 
 !thansettakij.com 
-thansettakij.com##.ads-billboard
-thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+thansettakij.com##.ads-billboard:remove()
+thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 
 !thestandard.co
-thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-thestandard.co##.adsbyadop
-thestandard.co##div[class="banner-box hidden-xs"]
-thestandard.co##.mySlidesMasthead
+thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+thestandard.co##.adsbyadop:remove()
+thestandard.co##div[class="banner-box hidden-xs"]:remove()
+thestandard.co##.mySlidesMasthead:remove()
 
 !workpointtoday.com
-workpointtoday.com##.insert_ads
+workpointtoday.com##.insert_ads:remove()
 
 !men.kapook.com 20231212005902
-men.kapook.com##.taboola-x2-widget
-men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
-men.kapook.com##div[class="ads728 h90"]
-men.kapook.com##div.aside_article
-men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
-men.kapook.com##div[data-item-syndicated="true"]
+men.kapook.com##.taboola-x2-widget:remove()
+men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]:remove()
+men.kapook.com##div[class="ads728 h90"]:remove()
+men.kapook.com##div.aside_article:remove()
+men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]:remove()
+men.kapook.com##div[data-item-syndicated="true"]:remove()
 
 !pptvhd36.com
-pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-pptvhd36.com##[id^="google_ads_iframe"]
-pptvhd36.com##.ads-wrapper
-pptvhd36.com###taboola-below-article-thumbnails
-pptvhd36.com##.ads-ppn
-pptvhd36.com##.special-gateway__img
+pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+pptvhd36.com##[id^="google_ads_iframe"]:remove()
+pptvhd36.com##.ads-wrapper:remove()
+pptvhd36.com###taboola-below-article-thumbnails:remove()
+pptvhd36.com##.ads-ppn:remove()
+pptvhd36.com##.special-gateway__img:remove()
 
 !dailynews.co.th
-dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-dailynews.co.th###taboola-below-article-thumbnails
-dailynews.co.th##div[id^="elementor-popup-modal-"]
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
-dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
+dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+dailynews.co.th###taboola-below-article-thumbnails:remove()
+dailynews.co.th##div[id^="elementor-popup-modal-"]:remove()
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1):remove()
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7):remove()
+dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]:remove()
 
 !khaosod.co.th
-khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-khaosod.co.th##div[id*="ScriptRoot"]
+khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+khaosod.co.th##div[id*="ScriptRoot"]:remove()
 
 !nationtv.tv
-nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-nationtv.tv##[id^="google_ads_iframe"]
-nationtv.tv##.ads-billboard
-nationtv.tv##.ads-postarticle
-nationtv.tv##div[class^="ads-sticky-"]
-nationtv.tv##div[class^="ads-inarticle-"]
+nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+nationtv.tv##[id^="google_ads_iframe"]:remove()
+nationtv.tv##.ads-billboard:remove()
+nationtv.tv##.ads-postarticle:remove()
+nationtv.tv##div[class^="ads-sticky-"]:remove()
+nationtv.tv##div[class^="ads-inarticle-"]:remove()
 
 !voicetv.co.th
-voicetv.co.th##.article-ad
-voicetv.co.th###taboola-below-article-thumbnails
+voicetv.co.th##.article-ad:remove()
+voicetv.co.th###taboola-below-article-thumbnails:remove()
 
 !mangozero.com
-mangozero.com##.banner-ads
+mangozero.com##.banner-ads:remove()
 
 !kaijeaw.com
-kaijeaw.com##small
-kaijeaw.com##ins.adsbygoogle
-kaijeaw.com##div[data-google-query-id]
-kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
+kaijeaw.com##small:remove()
+kaijeaw.com##ins.adsbygoogle:remove()
+kaijeaw.com##div[data-google-query-id]:remove()
+kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]:remove()
 
 !thaihitz.com
-thaihitz.com##.code-block 
+thaihitz.com##.code-block:remove()
 
 !kaazip.com
-kaazip.com##.adsense
-kaazip.com##ins.adsbygoogle
+kaazip.com##.adsense:remove()
+kaazip.com##ins.adsbygoogle:remove()
 
 !!!--------General Cosmetic Rules--------START
 !----------------------------------------START
 !----------------------------------------START
 
 !from oksheets.com
-##.mv-ad-box
+##.mv-ad-box:remove()
 
 !thewindowsclub.com
-###ezmobfooter
+###ezmobfooter:remove()
 
-##a[href^="https://syndication.realsrv.com"]
+##a[href^="https://syndication.realsrv.com"]:remove()
 !keyboard-test.space
-##a[href^="https://rtx.super47.net"]
+##a[href^="https://rtx.super47.net"]:remove()
 
 !Powerful Cosmetic Rules
 !/(_|-|^)+(ad|ads)+(_|-|$|)/
-!##[class^="ads"]:not(body):not(html):not(article)
-!##[class*="_ads"]:not(body):not(html):not(article)
-!##[class*="-ads"]:not(body):not(html):not(article)
-!##[id^="ads"]:not(body):not(html):not(article)
-!##[id*="_ads"]:not(body):not(html):not(article)
-!##[id*="-ads"]:not(body):not(html):not(article)
+!##[class^="ads"]:not(body):not(html):not(article):remove()
+!##[class*="_ads"]:not(body):not(html):not(article):remove()
+!##[class*="-ads"]:not(body):not(html):not(article):remove()
+!##[id^="ads"]:not(body):not(html):not(article):remove()
+!##[id*="_ads"]:not(body):not(html):not(article):remove()
+!##[id*="-ads"]:not(body):not(html):not(article):remove()
 
-!##[class^="ad_"]:not(body):not(html):not(article)
-!##[class^="ad-"]:not(body):not(html):not(article)
-!##[class$="-ad"]:not(body):not(html):not(article)
-!##[class$="_ad"]:not(body):not(html):not(article)
-!##[id^="ad_"]:not(body):not(html):not(article)
-!##[id^="ad-"]:not(body):not(html):not(article)
-!##[id$="-ad"]:not(body):not(html):not(article)
-!##[id$="_ad"]:not(body):not(html):not(article)
+!##[class^="ad_"]:not(body):not(html):not(article):remove()
+!##[class^="ad-"]:not(body):not(html):not(article):remove()
+!##[class$="-ad"]:not(body):not(html):not(article):remove()
+!##[class$="_ad"]:not(body):not(html):not(article):remove()
+!##[id^="ad_"]:not(body):not(html):not(article):remove()
+!##[id^="ad-"]:not(body):not(html):not(article):remove()
+!##[id$="-ad"]:not(body):not(html):not(article):remove()
+!##[id$="_ad"]:not(body):not(html):not(article):remove()
 
-!##[class*="advert"]:not(body):not(html):not(article)
-!##[id*="advert"]:not(body):not(html):not(article)
+!##[class*="advert"]:not(body):not(html):not(article):remove()
+!##[id*="advert"]:not(body):not(html):not(article):remove()
 
-!##[class*="sponsor"]:not(body):not(html):not(article)
-!##[id*="sponsor"]:not(body):not(html):not(article)
+!##[class*="sponsor"]:not(body):not(html):not(article):remove()
+!##[id*="sponsor"]:not(body):not(html):not(article):remove()
 
 !----------General Cosmetic Rules--------END
 !----------------------------------------END
@@ -1177,10 +1178,10 @@ series-indy*.webp
 #@#[class^="div-gpt-ad"]
 #@#[id^="div-gpt-ad"]
 #@#div[id^="div-gpt-"]
-##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
+##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 google.com#@##bottomads
 google.co.th#@##bottomads
 
@@ -1193,231 +1194,231 @@ google.co.th#@##bottomads
 !----------------------------------------START
 
 !www.phoenixnext.com
-phoenixnext.com##div[class="cwc-sdk-container"]
+phoenixnext.com##div[class="cwc-sdk-container"]:remove()
 
 !wongnai
-wongnai.com###cc_div
+wongnai.com###cc_div:remove()
 
 !mahidol.ac.th
-mahidol.ac.th###cc_div
+mahidol.ac.th###cc_div:remove()
 
 !superuser.com
-superuser.com##div.js-consent-banner
+superuser.com##div.js-consent-banner:remove()
 
 !apkmirror
-apkmirror.com###bottom-slider
+apkmirror.com###bottom-slider:remove()
 
 !riotgames.com
-riotgames.com##.dialog
+riotgames.com##.dialog:remove()
 
 !theguardian.com
-theguardian.com##div[id="sp_message_container_752142"]
-theguardian.com##div[class="dcr-8xye2h"]
+theguardian.com##div[id="sp_message_container_752142"]:remove()
+theguardian.com##div[class="dcr-8xye2h"]:remove()
 ||sourcepoint.theguardian.com
 
 !economist.com
-economist.com##div[class="message-container teg-container"]
+economist.com##div[class="message-container teg-container"]:remove()
 ||cdn.optimizely.com$domain=economist.com
 ||static.cloudflareinsights.com$domain=economist.com
 ||consent.economist.com$domain=economist.com
 ||buy.tinypass.com$domain=economist.com
 
 !ondemand.in.th
-ondemand.in.th##.cwc-sdk-container
+ondemand.in.th##.cwc-sdk-container:remove()
 
 !tcaster.net
-tcaster.net##.cwc-sdk-container
+tcaster.net##.cwc-sdk-container:remove()
 
 !425degree.com
-425degree.com##.amgdprcookie-bar-template
+425degree.com##.amgdprcookie-bar-template:remove()
 
 !samsung.com
-samsung.com##.cookie-bar
+samsung.com##.cookie-bar:remove()
 
 !droidsans.com
-droidsans.com##div[class="dpdpa--popup active"]
+droidsans.com##div[class="dpdpa--popup active"]:remove()
 
 !thaimobilecenter.com
-thaimobilecenter.com###cookiePopup
+thaimobilecenter.com###cookiePopup:remove()
 
 !matichon.co.th
-matichon.co.th##.matichon-pdpa-wrapper
+matichon.co.th##.matichon-pdpa-wrapper:remove()
 
 !thairath.co.th
-thairath.co.th##.cookiewrap
-plus.thairath.co.th##.__TRPlus_Policy_Box
+thairath.co.th##.cookiewrap:remove()
+plus.thairath.co.th##.__TRPlus_Policy_Box:remove()
 
 !brighttv.co.th
-brighttv.co.th##.dpdpa--popup
+brighttv.co.th##.dpdpa--popup:remove()
 
 !sanook.com
-sanook.com##.ConsentBanner
+sanook.com##.ConsentBanner:remove()
 
 !ch3plus.com
-ch3plus.com###cookie_policy
+ch3plus.com###cookie_policy:remove()
 
 !ch7.com
-ch7.com##.cookies-settings-pop
+ch7.com##.cookies-settings-pop:remove()
 
 !toyota.co.th
-toyota.co.th##.popup__pdpa
+toyota.co.th##.popup__pdpa:remove()
 
 !similarweb.com
-similarweb.com##.cookies-notification
+similarweb.com##.cookies-notification:remove()
 
 !joox.com
-joox.com##.pdpa
+joox.com##.pdpa:remove()
 
 !longdo.com
-longdo.com###pdpa-longdocom-div
+longdo.com###pdpa-longdocom-div:remove()
 
 !oxfordlearnersdictionaries.com
-oxfordlearnersdictionaries.com###onetrust-consent-sdk
+oxfordlearnersdictionaries.com###onetrust-consent-sdk:remove()
 
 !collinsdictionary.com
-collinsdictionary.com###onetrust-consent-sdk
+collinsdictionary.com###onetrust-consent-sdk:remove()
 
 !macmillandictionary.com macmillanthesaurus.com
-macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk
+macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk:remove()
 
 !thansettakij.com
-thansettakij.com##.ot-sdk-container
+thansettakij.com##.ot-sdk-container:remove()
 
 !g2.com
-g2.com##div[role="dialog"]
+g2.com##div[role="dialog"]:remove()
 
 !mediafire.com
-mediafire.com###cookie-accept-footer
+mediafire.com###cookie-accept-footer:remove()
 
 !techmoblog.com
-www.techmoblog.com###cookiePopup
+www.techmoblog.com###cookiePopup:remove()
 
 !Pantip
-pantip.com##.pt-snackbar
+pantip.com##.pt-snackbar:remove()
 pantip.com#@#.pt-snackbar__surface
 
 !thisisgamethailand.com
-thisisgamethailand.com###true
+thisisgamethailand.com###true:remove()
 
 !stackoverflow.com
-stackoverflow.com##.js-consent-banner
+stackoverflow.com##.js-consent-banner:remove()
 
 !goshujin.tk
-goshujin.tk###banner
+goshujin.tk###banner:remove()
 
 !blender.stackexchange.com
-blender.stackexchange.com##.js-consent-banner
+blender.stackexchange.com##.js-consent-banner:remove()
 
 !geeksforgeeks.org
-geeksforgeeks.org##.cookie-consent:not(body):not(html)
+geeksforgeeks.org##.cookie-consent:not(body):not(html):remove()
 
 !apkdone.com
-apkdone.com###acceptCookie
-apkdone.com###cookie-law-info-bar
+apkdone.com###acceptCookie:remove()
+apkdone.com###cookie-law-info-bar:remove()
 
 !true.th
-true.th###floater-bnr-box
+true.th###floater-bnr-box:remove()
 
 !pptvhd36.com
-pptvhd36.com##.consent-popup
+pptvhd36.com##.consent-popup:remove()
 
 !khaosod.co.th
-khaosod.co.th###pdpa-wrapper
+khaosod.co.th###pdpa-wrapper:remove()
 
 !brother.co.th
-brother.co.th###CookieAcceptionArea
+brother.co.th###CookieAcceptionArea:remove()
 
 !thestandard.co
 !การเลือกตั้ง 2566
-election2566.thestandard.co##.ant-drawer-bottom
-thestandard.co##.cwc-sdk-container
+election2566.thestandard.co##.ant-drawer-bottom:remove()
+thestandard.co##.cwc-sdk-container:remove()
 
 !thematter.co
-thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
-!thematter.co###cliSettingsPopup
+thematter.co###cookie-law-info-bar:not(body):not(html):not(article):remove()
+!thematter.co###cliSettingsPopup:remove()
 
 !voicetv.co.th
-voicetv.co.th###cookie-notification
+voicetv.co.th###cookie-notification:remove()
 
 !workpointtoday.com
-workpointtoday.com##div[class^="dpdpa--popup"]
+workpointtoday.com##div[class^="dpdpa--popup"]:remove()
 
 !notebookspec.com
-notebookspec.com##.dpdpa--popup 
+notebookspec.com##.dpdpa--popup:remove()
 
 !mangozero.com
-mangozero.com##.dpdpa--popup
+mangozero.com##.dpdpa--popup:remove()
 
 !techcommunity.microsoft.com
-techcommunity.microsoft.com###cookie-banner
+techcommunity.microsoft.com###cookie-banner:remove()
 
 !mustplay.in.th
-mustplay.in.th##.cookiealert
+mustplay.in.th##.cookiealert:remove()
 
 !pharmacy.mahidol.ac.th
-pharmacy.mahidol.ac.th###endzoommain
+pharmacy.mahidol.ac.th###endzoommain:remove()
 
 !siphhospital.com
-siphhospital.com###cookit
+siphhospital.com###cookit:remove()
 
 !advice.co.th
-advice.co.th##.foot-cookie
+advice.co.th##.foot-cookie:remove()
 
 !ihavecpu.com
-ihavecpu.com###cookie-banner
+ihavecpu.com###cookie-banner:remove()
 
 !thaiware.com
-thaiware.com##div#pdpa_setting
+thaiware.com##div#pdpa_setting:remove()
 
 !patreon.com
 patreon.com##body:style(overflow: auto !important;)
 
 !mercular.com
-mercular.com##div[class="MuiBox-root css-1gw67gw"]
+mercular.com##div[class="MuiBox-root css-1gw67gw"]:remove()
 
 !wordpress.com
-wordpress.com##.ads-active.hide-on-button
+wordpress.com##.ads-active.hide-on-button:remove()
 
 !panyasociety.com
-panyasociety.com###consentTrackAndCookieBar
+panyasociety.com###consentTrackAndCookieBar:remove()
 
 !mycourseville.com
-mycourseville.com###cvcookie-notice
+mycourseville.com###cvcookie-notice:remove()
 
 !goodnotes.com
-goodnotes.com##.fscc
+goodnotes.com##.fscc:remove()
 
 !askubuntu.com
-askubuntu.com##div.js-consent-banner
+askubuntu.com##div.js-consent-banner:remove()
 
 !sf-international.com
-sf-international.com##.cookie-terms
+sf-international.com##.cookie-terms:remove()
 
 !sony-asia.com
-sony-asia.com###__tealiumGDPRecModal
+sony-asia.com###__tealiumGDPRecModal:remove()
 
 !playulti.com
-playulti.com##.cookiealert
+playulti.com##.cookiealert:remove()
 
 !xbox.com
-xbox.com##div#cookie-banner
+xbox.com##div#cookie-banner:remove()
 
 !mega.io
-mega.io##div.cookie-banner
+mega.io##div.cookie-banner:remove()
 
 !ctrlg.gg
-ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]:remove()
 
 !scrintal.com
-scrintal.com##div.c-elDcAj
+scrintal.com##div.c-elDcAj:remove()
 
 !MadeByMe Cosmestic rules
-##.eupopup-body
-##.eupopup-head
-###pdpa-wrapper
-##.pdpa
-###consentTrackAndCookieBar
-###js-consent-banner
+##.eupopup-body:remove()
+##.eupopup-head:remove()
+###pdpa-wrapper:remove()
+##.pdpa:remove()
+###consentTrackAndCookieBar:remove()
+###js-consent-banner:remove()
 /pdpa.js
 
 !
@@ -1426,14 +1427,14 @@ scrintal.com##div.c-elDcAj
 !
 !
 !General rules
-!##[class*="cookie"]:not(body):not(html):not(article)
-!##[id*="cookie"]:not(body):not(html):not(article)
+!##[class*="cookie"]:not(body):not(html):not(article):remove()
+!##[id*="cookie"]:not(body):not(html):not(article):remove()
 
-!##[class*="policy"]:not(body):not(html):not(article)
-!##[id*="policy"]:not(body):not(html):not(article)
+!##[class*="policy"]:not(body):not(html):not(article):remove()
+!##[id*="policy"]:not(body):not(html):not(article):remove()
 
-!##[class*="pdpa"]:not(body):not(html):not(article)
-!##[id*="pdpa"]:not(body):not(html):not(article)
+!##[class*="pdpa"]:not(body):not(html):not(article):remove()
+!##[id*="pdpa"]:not(body):not(html):not(article):remove()
 
 !----------------Cookie -----------------END
 !----------------------------------------END
