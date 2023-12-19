@@ -26,7 +26,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 ## วิธีเพิ่ม Filter
 - AdGuard extension ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > ติ๊ก Trusted > กดปุ่ม Subscribe
 - uBlock Origin ไปที่แถบ Filter lists > เลื่อนลงสุด > ติ๊ก Import > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กดปุ่ม Apply changes
-- Brave built-in AdBlock ไปที่การตั้งค่าของ browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กด Add
+- Brave built-in AdBlock ไปที่การตั้งค่าของ browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github-NoRemove.txt) > กด Add
 ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของเว็บ Whilelist, Allow list ทั้งหลาย
 
 ## ต้องการทำให้ Iz's Filter Public Version ดีขึ้นหรือไม่
