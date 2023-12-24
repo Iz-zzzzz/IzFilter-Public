@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231224233804
+! Version: 20231225010437
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -77,6 +77,7 @@ https://wowrapidly.com^$all
 !----------------------------------------END
 !----------------------------------------END
 
+!>>>>>mode<<<<< html remove
 !!!----------Specific Ads Rules----------START
 !----------------------------------------START
 !----------------------------------------START
@@ -89,7 +90,6 @@ google.*##div.cu-container:style(opacity: 40% !important; -webkit-opacity: 40% !
 !
 
 !
-!mode html remove
 !---clouds cloud ---
 !
 !terabox.com 20231224182134
@@ -258,7 +258,7 @@ me-qr.com##div[class="bg-success"]
 !
 !---social platform ---
 !
-!mode
+!>>>>>mode<<<<<
 !facebook.com 20231212012355
 !!MadeByMe
 !!marketplace
@@ -297,7 +297,7 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:mat
 !!feed home
 !รอ
 !
-!mode html remove
+!>>>>>mode<<<<< html remove
 !---wiki ---
 !
 !fandom.com 
@@ -1299,16 +1299,7 @@ bleepingcomputer.com##ins.adsbygoogle:remove()
 bleepingcomputer.com##ins.adsbygoogle
 !#endif
 !pcworld.com
-!#if cap_html_filtering
-pcworld.com##^div.wp-block-column:nth-of-type(2)
-pcworld.com$$div.wp-block-column:nth-of-type(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-pcworld.com##div.wp-block-column:nth-of-type(2):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 pcworld.com##div.wp-block-column:nth-of-type(2)
-!#endif
 !#if cap_html_filtering
 pcworld.com##^div[data-ad-template="banner"]
 pcworld.com$$div[data-ad-template="banner"]
@@ -2287,26 +2278,8 @@ dailynews.co.th##div[id^="elementor-popup-modal-"]:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[id^="elementor-popup-modal-"]
 !#endif
-!#if cap_html_filtering
-dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(1)
-dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
-!#endif
-!#if cap_html_filtering
-dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(7)
-dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(7)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
-!#endif
 !#if cap_html_filtering
 dailynews.co.th##^div[style="height: 600px; margin: 20px auto;"]
 dailynews.co.th$$div[style="height: 600px; margin: 20px auto;"]
@@ -3186,16 +3159,7 @@ manga168.com##.slider-ads:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 manga168.com##.slider-ads
 !#endif
-!#if cap_html_filtering
-manga168.com##^#colophon > div:nth-of-type(3)
-manga168.com$$#colophon > div:nth-of-type(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-manga168.com###colophon > div:nth-of-type(3):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 manga168.com###colophon > div:nth-of-type(3)
-!#endif
 ||manga168.com/wp-content/uploads/banner/ww.webp$image
 !!background
 ||manga168.com/over-cover.webp
@@ -3537,16 +3501,7 @@ manhwabreakup.com##div[class="ads-float"]:remove()
 manhwabreakup.com##div[class="ads-float"]
 !#endif
 !tpnoodle.com
-!#if cap_html_filtering
-tpnoodle.com##^div[class="row mt-3"]:nth-of-type(1)
-tpnoodle.com$$div[class="row mt-3"]:nth-of-type(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-tpnoodle.com##div[class="row mt-3"]:nth-of-type(1):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
-!#endif
 !#if cap_html_filtering
 tpnoodle.com##^div[class="col-3 mt-2"]
 tpnoodle.com$$div[class="col-3 mt-2"]
@@ -3834,28 +3789,8 @@ mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
 !
 ||*.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
 !Anime Sugoi
-!!ที่ว่างบนplayer จาก rule ที่ออกออกแถวplayerไม่หมด
-!#if cap_html_filtering
-anime-sugoi.com##^center > a[rel="nofollow"]~br
-anime-sugoi.com$$center > a[rel="nofollow"]~br
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-anime-sugoi.com##center > a[rel="nofollow"]~br:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-anime-sugoi.com##center > a[rel="nofollow"]~br
-!#endif
 !!เอา box ที่เขียนว่า โฆษณา ออก
-!#if cap_html_filtering
-anime-sugoi.com##^div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2)
-anime-sugoi.com$$div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-child(2)
-!#endif
+anime-sugoi.com##.panel-danger.panel:nth-of-type(2)
 !!เอาdiv โฆษณาอันแรกออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > .col-md-8
@@ -3878,28 +3813,6 @@ anime-sugoi.com##.container > .row > center:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 anime-sugoi.com##.container > .row > center
 !#endif
-!!เอาdiv บนplayerออก
-!#if cap_html_filtering
-!anime-sugoi.com##^div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4)
-!anime-sugoi.com$$div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-!anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-9:nth-child(4) > div.panel.panel-danger > div.panel-body:last-child > center:nth-child(4)
-!#endif
-!เ!อาdiv ล่างplayerออก
-!#if cap_html_filtering
-!anime-sugoi.com##^center:nth-of-type(3)
-!anime-sugoi.com$$center:nth-of-type(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!anime-sugoi.com##center:nth-of-type(3):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-!anime-sugoi.com##center:nth-of-type(3)
-!#endif
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
 !#if cap_html_filtering
 anime-sugoi.com##^.panel-body > center > a
@@ -3910,17 +3823,6 @@ anime-sugoi.com##.panel-body > center > a:remove()
 !#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 anime-sugoi.com##.panel-body > center > a
-!#endif
-!!เอา tagออก
-!#if cap_html_filtering
-anime-sugoi.com##^.panel-body > center > p
-anime-sugoi.com$$.panel-body > center > p
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-anime-sugoi.com##.panel-body > center > p:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-anime-sugoi.com##.panel-body > center > p
 !#endif
 !#if cap_html_filtering
 anime-sugoi.com##^#bt-ads
@@ -3944,26 +3846,8 @@ anime-masters.com##div.container > .row > .center_lnwphp:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 anime-masters.com##div.container > .row > .center_lnwphp
 !#endif
-!#if cap_html_filtering
-anime-masters.com##^center:nth-of-type(2)
-anime-masters.com$$center:nth-of-type(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-anime-masters.com##center:nth-of-type(2):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 anime-masters.com##center:nth-of-type(2)
-!#endif
-!#if cap_html_filtering
-anime-masters.com##^center:nth-of-type(4)
-anime-masters.com$$center:nth-of-type(4)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-anime-masters.com##center:nth-of-type(4):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 anime-masters.com##center:nth-of-type(4)
-!#endif
 !#if cap_html_filtering
 anime-masters.com##^.col-md-9 > span
 anime-masters.com$$.col-md-9 > span
