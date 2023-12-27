@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231225010437
+! Version: 20231228010329
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -77,67 +77,47 @@ https://wowrapidly.com^$all
 !----------------------------------------END
 !----------------------------------------END
 
-!>>>>>mode<<<<< html remove
 !!!----------Specific Ads Rules----------START
 !----------------------------------------START
 !----------------------------------------START
 !---Google ---
+!google search >>>>>mode<<<<<
 !may contains ads or mal sites or useful sites 20231212003322
 google.*###tads[aria-label]:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
 google.*##span[class$="U3A9Ac qV8iec"]:style(color: red !important;)
 google.*##div.cu-container:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
-!---Microsoft ---
-!
+google.*##div.uEierd:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
+
+!youtube >>>>>mode<<<<< remove
+!youtube โฆษณาด้านขวา เหนือ recommeneded video
+!#if adugard || ext_ublock
+www.youtube.com##ytd-ad-slot-renderer:remove()
+!#endif
+!#if !adugard || !ext_ublock
+www.youtube.com##ytd-ad-slot-renderer
+!#endif
 
 !
-!---clouds cloud ---
+!---clouds cloud --- >>>>>mode<<<<< remove
 !
 !terabox.com 20231224182134
-!#if cap_html_filtering
-terabox.com##^.seo-banner-box
-terabox.com$$.seo-banner-box
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 terabox.com##.seo-banner-box:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 terabox.com##.seo-banner-box
 !#endif
-!#if cap_html_filtering
-terabox.com##^.drainage
-terabox.com$$.drainage
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 terabox.com##.drainage:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 terabox.com##.drainage
 !#endif
 !
 !
 !---picture image host---
 !
-!imgbox.com 20231212003318
-!#if cap_html_filtering
-imgbox.com##^div.full-page-redirect
-imgbox.com$$div.full-page-redirect
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-imgbox.com##div.full-page-redirect:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-imgbox.com##div.full-page-redirect
-!#endif
-!#if cap_html_filtering
-imgbox.com##^div._ln-floater
-imgbox.com$$div._ln-floater
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-imgbox.com##div._ln-floater:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-imgbox.com##div._ln-floater
-!#endif
+
 !
 !---video streaming---
 !
@@ -148,14 +128,12 @@ imgbox.com##div._ln-floater
 !
 !---international news ---
 !
-!collider.com 20231212003313
+!collider.com 20231212003313 >>>>>mode<<<<< html or remove
 !#if cap_html_filtering
 collider.com##^div.ad-zone
 collider.com$$div.ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 collider.com##div.ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 collider.com##div.ad-zone
 !#endif
@@ -164,44 +142,12 @@ collider.com##div.ad-zone
 !
 !clearnotebooks.com
 !#if cap_html_filtering
-clearnotebooks.com##^.asOverlayAd__wrap
-clearnotebooks.com$$.asOverlayAd__wrap
+clearnotebooks.com##^div[class$="-notebook-page-banners"]
+clearnotebooks.com$$div[class$="-notebook-page-banners"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-clearnotebooks.com##.asOverlayAd__wrap:remove()
-!#endif
+clearnotebooks.com##div[class$="-notebook-page-banners"]:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
-clearnotebooks.com##.asOverlayAd__wrap
-!#endif
-!#if cap_html_filtering
-clearnotebooks.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-clearnotebooks.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-clearnotebooks.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-clearnotebooks.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if cap_html_filtering
-clearnotebooks.com##^li[class="notebook-page-ad-banner"]
-clearnotebooks.com$$li[class="notebook-page-ad-banner"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-clearnotebooks.com##li[class="notebook-page-ad-banner"]:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-clearnotebooks.com##li[class="notebook-page-ad-banner"]
-!#endif
-!#if cap_html_filtering
-clearnotebooks.com##^div[style="height: 90px; background: rgb(245, 245, 245);"]
-clearnotebooks.com$$div[style="height: 90px; background: rgb(245, 245, 245);"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
-clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]
+clearnotebooks.com##div[class$="-notebook-page-banners"]
 !#endif
 ||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
 !ptable.com 
@@ -209,9 +155,7 @@ clearnotebooks.com##div[style="height: 90px; background: rgb(245, 245, 245);"]
 ptable.com##^#Notice
 ptable.com$$#Notice
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ptable.com###Notice:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ptable.com###Notice
 !#endif
@@ -219,9 +163,7 @@ ptable.com###Notice
 ptable.com##^ins.adsbygoogle
 ptable.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ptable.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ptable.com##ins.adsbygoogle
 !#endif
@@ -230,9 +172,7 @@ ptable.com##ins.adsbygoogle
 ieltsbuddy.com##^div[class="modal_block modal_ ss-ui-bootstrap"]
 ieltsbuddy.com$$div[class="modal_block modal_ ss-ui-bootstrap"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !#endif
@@ -245,9 +185,7 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 me-qr.com##^div[class="bg-success"]
 me-qr.com$$div[class="bg-success"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 me-qr.com##div[class="bg-success"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 me-qr.com##div[class="bg-success"]
 !#endif
@@ -297,7 +235,7 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:mat
 !!feed home
 !รอ
 !
-!>>>>>mode<<<<< html remove
+!>>>>>mode<<<<< html or remove
 !---wiki ---
 !
 !fandom.com 
@@ -305,9 +243,7 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:mat
 fandom.com##^.top-ads-container
 fandom.com$$.top-ads-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 fandom.com##.top-ads-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 fandom.com##.top-ads-container
 !#endif
@@ -315,9 +251,7 @@ fandom.com##.top-ads-container
 fandom.com##^.ad-slot-placeholder
 fandom.com$$.ad-slot-placeholder
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 fandom.com##.ad-slot-placeholder:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 fandom.com##.ad-slot-placeholder
 !#endif
@@ -326,9 +260,7 @@ fandom.com##.ad-slot-placeholder
 wikihow.com##^.wh_ad_inner
 wikihow.com$$.wh_ad_inner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wikihow.com##.wh_ad_inner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wikihow.com##.wh_ad_inner
 !#endif
@@ -336,9 +268,7 @@ wikihow.com##.wh_ad_inner
 wikihow.com##^#intro_ad_1
 wikihow.com$$#intro_ad_1
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wikihow.com###intro_ad_1:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wikihow.com###intro_ad_1
 !#endif
@@ -347,9 +277,7 @@ wikihow.com###intro_ad_1
 wikiwand.com##^div[class^="footer_donation_"]
 wikiwand.com$$div[class^="footer_donation_"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wikiwand.com##div[class^="footer_donation_"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wikiwand.com##div[class^="footer_donation_"]
 !#endif
@@ -361,9 +289,7 @@ wikiwand.com##div[class^="footer_donation_"]
 apkcombo.com##^[data-m-ad-id]
 apkcombo.com$$[data-m-ad-id]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 apkcombo.com##[data-m-ad-id]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 apkcombo.com##[data-m-ad-id]
 !#endif
@@ -372,9 +298,7 @@ apkcombo.com##[data-m-ad-id]
 apkmoddone.com##^div#addons-widget
 apkmoddone.com$$div#addons-widget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 apkmoddone.com##div#addons-widget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 apkmoddone.com##div#addons-widget
 !#endif
@@ -386,9 +310,7 @@ apkmoddone.com##div#addons-widget
 wordreference.com##^body #ad1
 wordreference.com$$body #ad1
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wordreference.com##body #ad1:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wordreference.com##body #ad1
 !#endif
@@ -397,9 +319,7 @@ wordreference.com##body #ad1
 oxfordlearnersdictionaries.com##^#ad_btmslot
 oxfordlearnersdictionaries.com$$#ad_btmslot
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###ad_btmslot:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###ad_btmslot
 !#endif
@@ -407,9 +327,7 @@ oxfordlearnersdictionaries.com###ad_btmslot
 oxfordlearnersdictionaries.com##^#ad_topslot
 oxfordlearnersdictionaries.com$$#ad_topslot
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###ad_topslot:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###ad_topslot
 !#endif
@@ -418,9 +336,7 @@ oxfordlearnersdictionaries.com###ad_topslot
 dictionary.com##^.TeixwVbjB8cchva8bDlg
 dictionary.com$$.TeixwVbjB8cchva8bDlg
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dictionary.com##.TeixwVbjB8cchva8bDlg:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dictionary.com##.TeixwVbjB8cchva8bDlg
 !#endif
@@ -428,9 +344,7 @@ dictionary.com##.TeixwVbjB8cchva8bDlg
 dictionary.com##^#dcomHomeTop-728x90
 dictionary.com$$#dcomHomeTop-728x90
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dictionary.com###dcomHomeTop-728x90:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dictionary.com###dcomHomeTop-728x90
 !#endif
@@ -439,9 +353,7 @@ dictionary.com###dcomHomeTop-728x90
 etymonline.com##^div[class="adContainer--6CVz1 horizontal"]
 etymonline.com$$div[class="adContainer--6CVz1 horizontal"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 etymonline.com##div[class="adContainer--6CVz1 horizontal"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 etymonline.com##div[class="adContainer--6CVz1 horizontal"]
 !#endif
@@ -450,9 +362,7 @@ etymonline.com##div[class="adContainer--6CVz1 horizontal"]
 collinsdictionary.com##^#ad_topslot
 collinsdictionary.com$$#ad_topslot
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 collinsdictionary.com###ad_topslot:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 collinsdictionary.com###ad_topslot
 !#endif
@@ -461,9 +371,7 @@ collinsdictionary.com###ad_topslot
 freethesaurus.com,thefreedictionary.com##^ins.adsbygoogle
 freethesaurus.com,thefreedictionary.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 freethesaurus.com,thefreedictionary.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 freethesaurus.com,thefreedictionary.com##ins.adsbygoogle
 !#endif
@@ -472,9 +380,7 @@ freethesaurus.com,thefreedictionary.com##ins.adsbygoogle
 macmillandictionary.com,macmillanthesaurus.com##^#topslot_container
 macmillandictionary.com,macmillanthesaurus.com$$#topslot_container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com###topslot_container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com###topslot_container
 !#endif
@@ -490,9 +396,7 @@ macmillandictionary.com,macmillanthesaurus.com###topslot_container
 tower-of-fantasy-map.appsample.com##^#pc-br-300x250-tof
 tower-of-fantasy-map.appsample.com$$#pc-br-300x250-tof
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tower-of-fantasy-map.appsample.com###pc-br-300x250-tof:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
 !#endif
@@ -501,9 +405,7 @@ tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
 lineupsvalorant.com##^ins.adsbygoogles
 lineupsvalorant.com$$ins.adsbygoogles
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 lineupsvalorant.com##ins.adsbygoogles:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 lineupsvalorant.com##ins.adsbygoogles
 !#endif
@@ -513,9 +415,7 @@ lineupsvalorant.com##ins.adsbygoogles
 blitz.gg##^div[style="--content-start: 115px; --sticky-header-height: 59px;"]
 blitz.gg$$div[style="--content-start: 115px; --sticky-header-height: 59px;"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]
 !#endif
@@ -523,9 +423,7 @@ blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]
 blitz.gg##^.aside-content-column
 blitz.gg$$.aside-content-column
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 blitz.gg##.aside-content-column:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 blitz.gg##.aside-content-column
 !#endif
@@ -551,9 +449,7 @@ blitz.gg##.aside-content-column
 pubhtml5.com##^.adsbygoogle
 pubhtml5.com$$.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pubhtml5.com##.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pubhtml5.com##.adsbygoogle
 !#endif
@@ -565,9 +461,7 @@ pubhtml5.com##.adsbygoogle
 comic-walker.com##^#right_top_banner
 comic-walker.com$$#right_top_banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 comic-walker.com###right_top_banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 comic-walker.com###right_top_banner
 !#endif
@@ -583,9 +477,7 @@ comic-walker.com###right_top_banner
 keyboard-test.space##^#tgroup_40
 keyboard-test.space$$#tgroup_40
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 keyboard-test.space###tgroup_40:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 keyboard-test.space###tgroup_40
 !#endif
@@ -593,9 +485,7 @@ keyboard-test.space###tgroup_40
 keyboard-test.space##^ins.adsbygoogle
 keyboard-test.space$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 keyboard-test.space##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 keyboard-test.space##ins.adsbygoogle
 !#endif
@@ -607,9 +497,7 @@ keyboard-test.space##ins.adsbygoogle
 pixeldrain.com##^.skyscraper
 pixeldrain.com$$.skyscraper
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pixeldrain.com##.skyscraper:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pixeldrain.com##.skyscraper
 !#endif
@@ -618,9 +506,7 @@ pixeldrain.com##.skyscraper
 uploadmx.com##^.adsbygoogle
 uploadmx.com$$.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 uploadmx.com##.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 uploadmx.com##.adsbygoogle
 !#endif
@@ -632,9 +518,7 @@ uploadmx.com##.adsbygoogle
 gsmarena.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 gsmarena.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -642,9 +526,7 @@ gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; positi
 gsmarena.com##^.adv
 gsmarena.com$$.adv
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gsmarena.com##.adv:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gsmarena.com##.adv
 !#endif
@@ -652,9 +534,7 @@ gsmarena.com##.adv
 gsmarena.com##^#topAdv
 gsmarena.com$$#topAdv
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gsmarena.com###topAdv:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gsmarena.com###topAdv
 !#endif
@@ -663,9 +543,7 @@ gsmarena.com###topAdv
 extremeit.com##^table[border="0"]
 extremeit.com$$table[border="0"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 extremeit.com##table[border="0"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 extremeit.com##table[border="0"]
 !#endif
@@ -673,9 +551,7 @@ extremeit.com##table[border="0"]
 extremeit.com##^#tdi_73
 extremeit.com$$#tdi_73
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 extremeit.com###tdi_73:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 extremeit.com###tdi_73
 !#endif
@@ -684,9 +560,7 @@ extremeit.com###tdi_73
 computerworld.com##^.ad
 computerworld.com$$.ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 computerworld.com##.ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 computerworld.com##.ad
 !#endif
@@ -694,9 +568,7 @@ computerworld.com##.ad
 computerworld.com##^.ad-header
 computerworld.com$$.ad-header
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 computerworld.com##.ad-header:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 computerworld.com##.ad-header
 !#endif
@@ -704,9 +576,7 @@ computerworld.com##.ad-header
 computerworld.com##^.ad-placement
 computerworld.com$$.ad-placement
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 computerworld.com##.ad-placement:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 computerworld.com##.ad-placement
 !#endif
@@ -715,9 +585,7 @@ computerworld.com##.ad-placement
 androidauthority.com##^.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
 androidauthority.com$$.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
 !#endif
@@ -725,9 +593,7 @@ androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: 
 androidauthority.com##^.ad-banner
 androidauthority.com$$.ad-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidauthority.com##.ad-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidauthority.com##.ad-banner
 !#endif
@@ -735,9 +601,7 @@ androidauthority.com##.ad-banner
 androidauthority.com##^.__Af
 androidauthority.com$$.__Af
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidauthority.com##.__Af:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidauthority.com##.__Af
 !#endif
@@ -747,9 +611,7 @@ androidauthority.com##.__Af
 gizchina.com##^.mrf-adv__wrapper
 gizchina.com$$.mrf-adv__wrapper
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gizchina.com##.mrf-adv__wrapper:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gizchina.com##.mrf-adv__wrapper
 !#endif
@@ -758,9 +620,7 @@ gizchina.com##.mrf-adv__wrapper
 makeuseof.com##^div.adsninja-ad-zone
 makeuseof.com$$div.adsninja-ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 makeuseof.com##div.adsninja-ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 makeuseof.com##div.adsninja-ad-zone
 !#endif
@@ -769,9 +629,7 @@ makeuseof.com##div.adsninja-ad-zone
 sammobile.com##^.in-content-ad-container
 sammobile.com$$.in-content-ad-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sammobile.com##.in-content-ad-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sammobile.com##.in-content-ad-container
 !#endif
@@ -779,9 +637,7 @@ sammobile.com##.in-content-ad-container
 sammobile.com##^ins.adsbygoogle
 sammobile.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sammobile.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sammobile.com##ins.adsbygoogle
 !#endif
@@ -790,9 +646,7 @@ sammobile.com##ins.adsbygoogle
 techpp.com##^#tppAdsID
 techpp.com$$#tppAdsID
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 techpp.com###tppAdsID:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 techpp.com###tppAdsID
 !#endif
@@ -800,9 +654,7 @@ techpp.com###tppAdsID
 techpp.com##^#brxe-djelsv
 techpp.com$$#brxe-djelsv
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 techpp.com###brxe-djelsv:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 techpp.com###brxe-djelsv
 !#endif
@@ -811,9 +663,7 @@ techpp.com###brxe-djelsv
 raymond.cc##^ins.adsbygoogle
 raymond.cc$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 raymond.cc##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 raymond.cc##ins.adsbygoogle
 !#endif
@@ -821,9 +671,7 @@ raymond.cc##ins.adsbygoogle
 raymond.cc##^.adsbygoogle
 raymond.cc$$.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 raymond.cc##.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 raymond.cc##.adsbygoogle
 !#endif
@@ -832,9 +680,7 @@ raymond.cc##.adsbygoogle
 howtogeek.com##^.widget-area
 howtogeek.com$$.widget-area
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 howtogeek.com##.widget-area:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 howtogeek.com##.widget-area
 !#endif
@@ -842,9 +688,7 @@ howtogeek.com##.widget-area
 howtogeek.com##^.adslot970
 howtogeek.com$$.adslot970
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 howtogeek.com##.adslot970:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 howtogeek.com##.adslot970
 !#endif
@@ -852,9 +696,7 @@ howtogeek.com##.adslot970
 howtogeek.com##^.adsninja-ad-zone
 howtogeek.com$$.adsninja-ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 howtogeek.com##.adsninja-ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 howtogeek.com##.adsninja-ad-zone
 !#endif
@@ -863,9 +705,7 @@ howtogeek.com##.adsninja-ad-zone
 androidpolice.com##^.adsninja-ad-zone
 androidpolice.com$$.adsninja-ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidpolice.com##.adsninja-ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidpolice.com##.adsninja-ad-zone
 !#endif
@@ -874,9 +714,7 @@ androidpolice.com##.adsninja-ad-zone
 trustedreviews.com##^.ipc-advert
 trustedreviews.com$$.ipc-advert
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 trustedreviews.com##.ipc-advert:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 trustedreviews.com##.ipc-advert
 !#endif
@@ -884,9 +722,7 @@ trustedreviews.com##.ipc-advert
 trustedreviews.com##^.ad-holder
 trustedreviews.com$$.ad-holder
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 trustedreviews.com##.ad-holder:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 trustedreviews.com##.ad-holder
 !#endif
@@ -894,9 +730,7 @@ trustedreviews.com##.ad-holder
 trustedreviews.com##^.post_detail_right_advert
 trustedreviews.com$$.post_detail_right_advert
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 trustedreviews.com##.post_detail_right_advert:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 trustedreviews.com##.post_detail_right_advert
 !#endif
@@ -904,9 +738,7 @@ trustedreviews.com##.post_detail_right_advert
 trustedreviews.com##^.top-advert
 trustedreviews.com$$.top-advert
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 trustedreviews.com##.top-advert:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 trustedreviews.com##.top-advert
 !#endif
@@ -914,9 +746,7 @@ trustedreviews.com##.top-advert
 trustedreviews.com##^.squirrel_widget
 trustedreviews.com$$.squirrel_widget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 trustedreviews.com##.squirrel_widget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 trustedreviews.com##.squirrel_widget
 !#endif
@@ -925,9 +755,7 @@ trustedreviews.com##.squirrel_widget
 androidcentral.com##^div.dfp-leaderboard-container
 androidcentral.com$$div.dfp-leaderboard-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div.dfp-leaderboard-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div.dfp-leaderboard-container
 !#endif
@@ -935,9 +763,7 @@ androidcentral.com##div.dfp-leaderboard-container
 androidcentral.com##^div[id="widgetArea17"]
 androidcentral.com$$div[id="widgetArea17"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div[id="widgetArea17"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div[id="widgetArea17"]
 !#endif
@@ -945,9 +771,7 @@ androidcentral.com##div[id="widgetArea17"]
 androidcentral.com##^div.related-articles-block
 androidcentral.com$$div.related-articles-block
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div.related-articles-block:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div.related-articles-block
 !#endif
@@ -955,9 +779,7 @@ androidcentral.com##div.related-articles-block
 androidcentral.com##^div.van_taboola
 androidcentral.com$$div.van_taboola
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div.van_taboola:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div.van_taboola
 !#endif
@@ -965,9 +787,7 @@ androidcentral.com##div.van_taboola
 androidcentral.com##^div[class="van_vid_carousel vid-present"]
 androidcentral.com$$div[class="van_vid_carousel vid-present"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="van_vid_carousel vid-present"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="van_vid_carousel vid-present"]
 !#endif
@@ -975,9 +795,7 @@ androidcentral.com##div[class="van_vid_carousel vid-present"]
 androidcentral.com##^div[class="in-article ad-unit"]
 androidcentral.com$$div[class="in-article ad-unit"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="in-article ad-unit"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="in-article ad-unit"]
 !#endif
@@ -985,9 +803,7 @@ androidcentral.com##div[class="in-article ad-unit"]
 androidcentral.com##^div[id="top-leaderboard"]
 androidcentral.com$$div[id="top-leaderboard"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div[id="top-leaderboard"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div[id="top-leaderboard"]
 !#endif
@@ -995,9 +811,7 @@ androidcentral.com##div[id="top-leaderboard"]
 androidcentral.com##^div[class="ad-unit"]
 androidcentral.com$$div[class="ad-unit"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="ad-unit"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 androidcentral.com##div[class="ad-unit"]
 !#endif
@@ -1006,9 +820,7 @@ androidcentral.com##div[class="ad-unit"]
 pcgamer.com##^.ad-placement
 pcgamer.com$$.ad-placement
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pcgamer.com##.ad-placement:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pcgamer.com##.ad-placement
 !#endif
@@ -1016,9 +828,7 @@ pcgamer.com##.ad-placement
 pcgamer.com##^.sponsored-post
 pcgamer.com$$.sponsored-post
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pcgamer.com##.sponsored-post:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pcgamer.com##.sponsored-post
 !#endif
@@ -1026,9 +836,7 @@ pcgamer.com##.sponsored-post
 pcgamer.com##^#hawkMagWidget
 pcgamer.com$$#hawkMagWidget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pcgamer.com###hawkMagWidget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pcgamer.com###hawkMagWidget
 !#endif
@@ -1036,9 +844,7 @@ pcgamer.com###hawkMagWidget
 pcgamer.com##^.dfp-leaderboard-container
 pcgamer.com$$.dfp-leaderboard-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pcgamer.com##.dfp-leaderboard-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pcgamer.com##.dfp-leaderboard-container
 !#endif
@@ -1047,9 +853,7 @@ pcgamer.com##.dfp-leaderboard-container
 whathifi.com##^.sponsored-post
 whathifi.com$$.sponsored-post
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 whathifi.com##.sponsored-post:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 whathifi.com##.sponsored-post
 !#endif
@@ -1057,9 +861,7 @@ whathifi.com##.sponsored-post
 whathifi.com##^.ad-unit
 whathifi.com$$.ad-unit
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 whathifi.com##.ad-unit:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 whathifi.com##.ad-unit
 !#endif
@@ -1067,9 +869,7 @@ whathifi.com##.ad-unit
 whathifi.com##^.dfp-leaderboard-container
 whathifi.com$$.dfp-leaderboard-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 whathifi.com##.dfp-leaderboard-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 whathifi.com##.dfp-leaderboard-container
 !#endif
@@ -1077,9 +877,7 @@ whathifi.com##.dfp-leaderboard-container
 whathifi.com##^.newsletter-inbodyContent-slice
 whathifi.com$$.newsletter-inbodyContent-slice
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 whathifi.com##.newsletter-inbodyContent-slice:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 whathifi.com##.newsletter-inbodyContent-slice
 !#endif
@@ -1087,9 +885,7 @@ whathifi.com##.newsletter-inbodyContent-slice
 whathifi.com##^#hawkMagWidget
 whathifi.com$$#hawkMagWidget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 whathifi.com###hawkMagWidget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 whathifi.com###hawkMagWidget
 !#endif
@@ -1098,9 +894,7 @@ whathifi.com###hawkMagWidget
 tomsguide.com##^.sponsored-post
 tomsguide.com$$.sponsored-post
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tomsguide.com##.sponsored-post:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tomsguide.com##.sponsored-post
 !#endif
@@ -1108,9 +902,7 @@ tomsguide.com##.sponsored-post
 tomsguide.com##^#taboola-below-article-thumbnails
 tomsguide.com$$#taboola-below-article-thumbnails
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tomsguide.com###taboola-below-article-thumbnails:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tomsguide.com###taboola-below-article-thumbnails
 !#endif
@@ -1118,9 +910,7 @@ tomsguide.com###taboola-below-article-thumbnails
 tomsguide.com##^.vid-present > .van_vid_carousel__padding
 tomsguide.com$$.vid-present > .van_vid_carousel__padding
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tomsguide.com##.vid-present > .van_vid_carousel__padding:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tomsguide.com##.vid-present > .van_vid_carousel__padding
 !#endif
@@ -1128,9 +918,7 @@ tomsguide.com##.vid-present > .van_vid_carousel__padding
 tomsguide.com##^.dfp-leaderboard-container
 tomsguide.com$$.dfp-leaderboard-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tomsguide.com##.dfp-leaderboard-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tomsguide.com##.dfp-leaderboard-container
 !#endif
@@ -1138,9 +926,7 @@ tomsguide.com##.dfp-leaderboard-container
 tomsguide.com##^.sponsored-post
 tomsguide.com$$.sponsored-post
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tomsguide.com##.sponsored-post:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tomsguide.com##.sponsored-post
 !#endif
@@ -1149,9 +935,7 @@ tomsguide.com##.sponsored-post
 xda-developers.com##^.ad-zone
 xda-developers.com$$.ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-zone
 !#endif
@@ -1159,9 +943,7 @@ xda-developers.com##.ad-zone
 xda-developers.com##^.ad-zone-container
 xda-developers.com$$.ad-zone-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-zone-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-zone-container
 !#endif
@@ -1169,9 +951,7 @@ xda-developers.com##.ad-zone-container
 xda-developers.com##^.ad-current
 xda-developers.com$$.ad-current
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-current:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##.ad-current
 !#endif
@@ -1179,9 +959,7 @@ xda-developers.com##.ad-current
 xda-developers.com##^.adsninja-ad-zone
 xda-developers.com$$.adsninja-ad-zone
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##.adsninja-ad-zone:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##.adsninja-ad-zone
 !#endif
@@ -1189,9 +967,7 @@ xda-developers.com##.adsninja-ad-zone
 xda-developers.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 xda-developers.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1199,9 +975,7 @@ xda-developers.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; 
 xda-developers.com##^[id^="google_ads_iframe"]
 xda-developers.com$$[id^="google_ads_iframe"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xda-developers.com##[id^="google_ads_iframe"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xda-developers.com##[id^="google_ads_iframe"]
 !#endif
@@ -1210,9 +984,7 @@ xda-developers.com##[id^="google_ads_iframe"]
 alphr.com##^[data-freestar-ad]
 alphr.com$$[data-freestar-ad]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 alphr.com##[data-freestar-ad]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 alphr.com##[data-freestar-ad]
 !#endif
@@ -1220,9 +992,7 @@ alphr.com##[data-freestar-ad]
 alphr.com##^.sticky-ads-container
 alphr.com$$.sticky-ads-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 alphr.com##.sticky-ads-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 alphr.com##.sticky-ads-container
 !#endif
@@ -1230,9 +1000,7 @@ alphr.com##.sticky-ads-container
 alphr.com##^.sticky-ads
 alphr.com$$.sticky-ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 alphr.com##.sticky-ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 alphr.com##.sticky-ads
 !#endif
@@ -1241,9 +1009,7 @@ alphr.com##.sticky-ads
 sammyfans.com##^ins.adsbygoogle
 sammyfans.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sammyfans.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sammyfans.com##ins.adsbygoogle
 !#endif
@@ -1252,9 +1018,7 @@ sammyfans.com##ins.adsbygoogle
 bleepingcomputer.com##^section[class="cz-oa-wrapp"]
 bleepingcomputer.com$$section[class="cz-oa-wrapp"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 bleepingcomputer.com##section[class="cz-oa-wrapp"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 bleepingcomputer.com##section[class="cz-oa-wrapp"]
 !#endif
@@ -1262,9 +1026,7 @@ bleepingcomputer.com##section[class="cz-oa-wrapp"]
 bleepingcomputer.com##^section[class="cz-boa-wrapp"]
 bleepingcomputer.com$$section[class="cz-boa-wrapp"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 bleepingcomputer.com##section[class="cz-boa-wrapp"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 bleepingcomputer.com##section[class="cz-boa-wrapp"]
 !#endif
@@ -1272,9 +1034,7 @@ bleepingcomputer.com##section[class="cz-boa-wrapp"]
 bleepingcomputer.com##^.fs-dynamic
 bleepingcomputer.com$$.fs-dynamic
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 bleepingcomputer.com##.fs-dynamic:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 bleepingcomputer.com##.fs-dynamic
 !#endif
@@ -1282,9 +1042,7 @@ bleepingcomputer.com##.fs-dynamic
 bleepingcomputer.com##^.asa
 bleepingcomputer.com$$.asa
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 bleepingcomputer.com##.asa:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 bleepingcomputer.com##.asa
 !#endif
@@ -1292,21 +1050,22 @@ bleepingcomputer.com##.asa
 bleepingcomputer.com##^ins.adsbygoogle
 bleepingcomputer.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 bleepingcomputer.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 bleepingcomputer.com##ins.adsbygoogle
 !#endif
 !pcworld.com
+!#if cap_html_filtering
+pcworld.com##^div.wp-block-column:nth-of-type(2)
+pcworld.com$$div.wp-block-column:nth-of-type(2)
+!#endif
 pcworld.com##div.wp-block-column:nth-of-type(2)
+
 !#if cap_html_filtering
 pcworld.com##^div[data-ad-template="banner"]
 pcworld.com$$div[data-ad-template="banner"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pcworld.com##div[data-ad-template="banner"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pcworld.com##div[data-ad-template="banner"]
 !#endif
@@ -1315,9 +1074,7 @@ pcworld.com##div[data-ad-template="banner"]
 neowin.net##^div[data-freestar-ad]:upward(1)
 neowin.net$$div[data-freestar-ad]:upward(1)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 neowin.net##div[data-freestar-ad]:upward(1):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 neowin.net##div[data-freestar-ad]:upward(1)
 !#endif
@@ -1329,9 +1086,7 @@ neowin.net##div[data-freestar-ad]:upward(1)
 sourceforge.net##^[id^="google_ads_iframe"]
 sourceforge.net$$[id^="google_ads_iframe"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sourceforge.net##[id^="google_ads_iframe"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sourceforge.net##[id^="google_ads_iframe"]
 !#endif
@@ -1339,9 +1094,7 @@ sourceforge.net##[id^="google_ads_iframe"]
 sourceforge.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 sourceforge.net$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1350,9 +1103,7 @@ sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; pos
 tutorialstonight.com##^span[class^="ezoic-"]
 tutorialstonight.com$$span[class^="ezoic-"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##span[class^="ezoic-"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##span[class^="ezoic-"]
 !#endif
@@ -1360,9 +1111,7 @@ tutorialstonight.com##span[class^="ezoic-"]
 tutorialstonight.com##^div[id^="ez-sidebar"]
 tutorialstonight.com$$div[id^="ez-sidebar"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##div[id^="ez-sidebar"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##div[id^="ez-sidebar"]
 !#endif
@@ -1370,9 +1119,7 @@ tutorialstonight.com##div[id^="ez-sidebar"]
 tutorialstonight.com##^[id^="google_ads_iframe"]
 tutorialstonight.com$$[id^="google_ads_iframe"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##[id^="google_ads_iframe"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##[id^="google_ads_iframe"]
 !#endif
@@ -1380,9 +1127,7 @@ tutorialstonight.com##[id^="google_ads_iframe"]
 tutorialstonight.com##^.banner_ads
 tutorialstonight.com$$.banner_ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##.banner_ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##.banner_ads
 !#endif
@@ -1390,9 +1135,7 @@ tutorialstonight.com##.banner_ads
 tutorialstonight.com##^[data-ez-name]
 tutorialstonight.com$$[data-ez-name]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##[data-ez-name]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##[data-ez-name]
 !#endif
@@ -1400,9 +1143,7 @@ tutorialstonight.com##[data-ez-name]
 tutorialstonight.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 tutorialstonight.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1410,9 +1151,7 @@ tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; p
 tutorialstonight.com##^#ezmobfooter
 tutorialstonight.com$$#ezmobfooter
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tutorialstonight.com###ezmobfooter:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tutorialstonight.com###ezmobfooter
 !#endif
@@ -1421,9 +1160,7 @@ tutorialstonight.com###ezmobfooter
 freecodecamp.org##^.sidebar
 freecodecamp.org$$.sidebar
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 freecodecamp.org##.sidebar:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 freecodecamp.org##.sidebar
 !#endif
@@ -1432,9 +1169,7 @@ freecodecamp.org##.sidebar
 linuxhint.com##^.adthrive
 linuxhint.com$$.adthrive
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive
 !#endif
@@ -1442,9 +1177,7 @@ linuxhint.com##.adthrive
 linuxhint.com##^.adthrive-content
 linuxhint.com$$.adthrive-content
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-content:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-content
 !#endif
@@ -1452,9 +1185,7 @@ linuxhint.com##.adthrive-content
 linuxhint.com##^.adthrive-ad
 linuxhint.com$$.adthrive-ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-ad
 !#endif
@@ -1462,9 +1193,7 @@ linuxhint.com##.adthrive-ad
 linuxhint.com##^.adthrive-header
 linuxhint.com$$.adthrive-header
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-header:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 linuxhint.com##.adthrive-header
 !#endif
@@ -1473,9 +1202,7 @@ linuxhint.com##.adthrive-header
 thepythoncode.com##^span[id^="ezoic-pub-ad-placeholder-"]
 thepythoncode.com$$span[id^="ezoic-pub-ad-placeholder-"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
 !#endif
@@ -1483,9 +1210,7 @@ thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
 thepythoncode.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thepythoncode.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1493,9 +1218,7 @@ thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posi
 thepythoncode.com##^[data-ez-name]
 thepythoncode.com$$[data-ez-name]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##[data-ez-name]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##[data-ez-name]
 !#endif
@@ -1503,9 +1226,7 @@ thepythoncode.com##[data-ez-name]
 thepythoncode.com##^.ezoic-floating-bottom
 thepythoncode.com$$.ezoic-floating-bottom
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-floating-bottom:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-floating-bottom
 !#endif
@@ -1513,9 +1234,7 @@ thepythoncode.com##.ezoic-floating-bottom
 thepythoncode.com##^.ezoic-ad-adaptive
 thepythoncode.com$$.ezoic-ad-adaptive
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-ad-adaptive:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-ad-adaptive
 !#endif
@@ -1523,9 +1242,7 @@ thepythoncode.com##.ezoic-ad-adaptive
 thepythoncode.com##^.ezoic-ad
 thepythoncode.com$$.ezoic-ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezoic-ad
 !#endif
@@ -1533,9 +1250,7 @@ thepythoncode.com##.ezoic-ad
 thepythoncode.com##^.ezmob-footer-desktop
 thepythoncode.com$$.ezmob-footer-desktop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezmob-footer-desktop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezmob-footer-desktop
 !#endif
@@ -1543,9 +1258,7 @@ thepythoncode.com##.ezmob-footer-desktop
 thepythoncode.com##^.ezmob-footer
 thepythoncode.com$$.ezmob-footer
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezmob-footer:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thepythoncode.com##.ezmob-footer
 !#endif
@@ -1561,9 +1274,7 @@ thepythoncode.com##.ezmob-footer
 adfoc.us##^.content > iframe
 adfoc.us$$.content > iframe
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 adfoc.us##.content > iframe:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 adfoc.us##.content > iframe
 !#endif
@@ -1576,9 +1287,7 @@ adfoc.us##.content > iframe
 alternativeto.net##^ins.adsbygoogle
 alternativeto.net$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 alternativeto.net##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 alternativeto.net##ins.adsbygoogle
 !#endif
@@ -1588,9 +1297,7 @@ alternativeto.net##ins.adsbygoogle
 obsproject.com##^.notice--cookie:not(body):not(html)
 obsproject.com$$.notice--cookie:not(body):not(html)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 obsproject.com##.notice--cookie:not(body):not(html):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 obsproject.com##.notice--cookie:not(body):not(html)
 !#endif
@@ -1604,14 +1311,10 @@ obsproject.com##.notice--cookie:not(body):not(html)
 
 !---Manga Foreign---
 !www.novelupdates.com
-!#if cap_html_filtering
-##^.ad_336
-$$.ad_336
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##.ad_336:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.ad_336
 !#endif
 !------------Specific Ads Rules----------END
@@ -1629,15 +1332,14 @@ $$.ad_336
 camphub.in.th##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 camphub.in.th$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
 !
 !---social platform ---
 !
+!>>>>>mode<<<<< html and remove
 !pantip.com
 !#if cap_html_filtering
 pantip.com##^div.ads-leaderboard
@@ -1649,6 +1351,7 @@ pantip.com##div.ads-leaderboard:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pantip.com##div.ads-leaderboard
 !#endif
+!>>>>>mode<<<<< html or remove
 !
 !---wiki ---
 !
@@ -1657,9 +1360,7 @@ pantip.com##div.ads-leaderboard
 siam.wiki##^.chat-popup
 siam.wiki$$.chat-popup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siam.wiki##.chat-popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siam.wiki##.chat-popup
 !#endif
@@ -1671,9 +1372,7 @@ siam.wiki##.chat-popup
 dict.longdo.com##^#sidebar
 dict.longdo.com$$#sidebar
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dict.longdo.com###sidebar:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dict.longdo.com###sidebar
 !#endif
@@ -1684,297 +1383,189 @@ dict.longdo.com###sidebar
 !
 !---thai news ข่าว---
 !
+!>>>>>mode<<<<< remove
 !kapook.com 20231212003311
-!#if cap_html_filtering
-kapook.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-kapook.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if cap_html_filtering
-kapook.com##^div.ads728
-kapook.com$$div.ads728
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com##div.ads728:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com##div.ads728
 !#endif
-!#if cap_html_filtering
-kapook.com##^#container > div.fullbanner
-kapook.com$$#container > div.fullbanner
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com###container > div.fullbanner:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com###container > div.fullbanner
 !#endif
-!#if cap_html_filtering
-kapook.com##^#aside_article
-kapook.com$$#aside_article
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com###aside_article:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com###aside_article
 !#endif
-!#if cap_html_filtering
-kapook.com##^div.taboola-x2-widget:last-child
-kapook.com$$div.taboola-x2-widget:last-child
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com##div.taboola-x2-widget:last-child:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com##div.taboola-x2-widget:last-child
 !#endif
-!#if cap_html_filtering
-kapook.com##^#google_esf
-kapook.com$$#google_esf
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 kapook.com###google_esf:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 kapook.com###google_esf
 !#endif
 !thairath.co.th
 !!หน้าข่าว pc 20231212003942
-!#if cap_html_filtering
-thairath.co.th##^div#slot-billboard:upward(3)
-thairath.co.th$$div#slot-billboard:upward(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-billboard:upward(3):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-billboard:upward(3)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-tower:upward(3)
-thairath.co.th$$div#slot-tower:upward(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-tower:upward(3):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-tower:upward(3)
 !#endif
 thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
-!#if cap_html_filtering
-thairath.co.th##^div[style="height:300px"]
-thairath.co.th$$div[style="height:300px"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div[style="height:300px"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div[style="height:300px"]
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-right_rail:upward(2)
-thairath.co.th$$div#slot-right_rail:upward(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-right_rail:upward(2):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-right_rail:upward(2)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div[style="text-align: center; opacity: 1;"]
-thairath.co.th$$div[style="text-align: center; opacity: 1;"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div[style="text-align: center; opacity: 1;"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div[class^="ads-slot-"]:upward(1)
-thairath.co.th$$div[class^="ads-slot-"]:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div[class^="ads-slot-"]:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div[class^="ads-slot-"]:upward(1)
 !#endif
 !!หน้าหลัก pc 20231212004228
-!#if cap_html_filtering
-thairath.co.th##^div#homepage-top:upward(3)
-thairath.co.th$$div#homepage-top:upward(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#homepage-top:upward(3):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#homepage-top:upward(3)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#homepage-rectangle:upward(2)
-thairath.co.th$$div#homepage-rectangle:upward(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#homepage-rectangle:upward(2):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#homepage-rectangle:upward(2)
 !#endif
 !!หน้าข่าว mobile 20231212005218
-!#if cap_html_filtering
-thairath.co.th##^div#slot-headline:upward(2)
-thairath.co.th$$div#slot-headline:upward(2)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-headline:upward(2):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-headline:upward(2)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-postarticle:upward(3)
-thairath.co.th$$div#slot-postarticle:upward(3)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-postarticle:upward(3):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-postarticle:upward(3)
 !#endif
 !!thairath.co.th/sport
-!#if cap_html_filtering
-thairath.co.th##^div[data-container-id="ivs-player"]
-thairath.co.th$$div[data-container-id="ivs-player"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div[data-container-id="ivs-player"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div[data-container-id="ivs-player"]
 !#endif
 !!thairath.co.th/money 20231222211603
 !!!หน้าหลัก
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-top-desktop:upward(1)
-thairath.co.th$$div#slot-money-top-desktop:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-top-desktop:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-top-desktop:upward(1)
 !#endif
 !!!หน้าข่าว
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-billboard:upward(1)
-thairath.co.th$$div#slot-money-billboard:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-billboard:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-billboard:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-rigth-rail-desktop:upward(1)
-thairath.co.th$$div#slot-money-rigth-rail-desktop:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-rigth-rail-desktop:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-rigth-rail-desktop:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div[id^="slot-money-inarticle"]:upward(1)
-thairath.co.th$$div[id^="slot-money-inarticle"]:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div[id^="slot-money-inarticle"]:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div[id^="slot-money-inarticle"]:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-middle-postarticle-desktop:upward(1)
-thairath.co.th$$div#slot-money-middle-postarticle-desktop:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div.btn--close:upward(1)
-thairath.co.th$$div.btn--close:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div.btn--close:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div.btn--close:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
-thairath.co.th$$div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
 !#endif
 !!!mobile
 !!!หน้าหลัก
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-top-mobile:upward(1)
-thairath.co.th$$div#slot-money-top-mobile:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-top-mobile:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-top-mobile:upward(1)
 !#endif
 !!!หน้าข่าว
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-headline:upward(1)
-thairath.co.th$$div#slot-money-headline:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-headline:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-headline:upward(1)
 !#endif
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-middle-postarticle-mobile:upward(1)
-thairath.co.th$$div#slot-money-middle-postarticle-mobile:upward(1)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 !#endif
+!>>>>>mode<<<<< html or remove
 !ch3plus.com 20231212005721
 !#if cap_html_filtering
 ch3plus.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ch3plus.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1982,9 +1573,7 @@ ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: 
 ch3plus.com##^.sp-banner
 ch3plus.com$$.sp-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ch3plus.com##.sp-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ch3plus.com##.sp-banner
 !#endif
@@ -1993,9 +1582,7 @@ ch3plus.com##.sp-banner
 matichon.co.th##^.td-a-rec
 matichon.co.th$$.td-a-rec
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 matichon.co.th##.td-a-rec:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 matichon.co.th##.td-a-rec
 !#endif
@@ -2004,9 +1591,7 @@ matichon.co.th##.td-a-rec
 brighttv.co.th##^.b-banner
 brighttv.co.th$$.b-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 brighttv.co.th##.b-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 brighttv.co.th##.b-banner
 !#endif
@@ -2015,9 +1600,7 @@ brighttv.co.th##.b-banner
 beartai.com##^#ai_widget-2
 beartai.com$$#ai_widget-2
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 beartai.com###ai_widget-2:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 beartai.com###ai_widget-2
 !#endif
@@ -2026,9 +1609,7 @@ beartai.com###ai_widget-2
 tnews.co.th##^.default-sticky
 tnews.co.th$$.default-sticky
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tnews.co.th##.default-sticky:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tnews.co.th##.default-sticky
 !#endif
@@ -2036,9 +1617,7 @@ tnews.co.th##.default-sticky
 tnews.co.th##^div.mobile
 tnews.co.th$$div.mobile
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tnews.co.th##div.mobile:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tnews.co.th##div.mobile
 !#endif
@@ -2046,9 +1625,7 @@ tnews.co.th##div.mobile
 tnews.co.th##^div.desktop
 tnews.co.th$$div.desktop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tnews.co.th##div.desktop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tnews.co.th##div.desktop
 !#endif
@@ -2057,9 +1634,7 @@ tnews.co.th##div.desktop
 thansettakij.com##^.ads-billboard
 thansettakij.com$$.ads-billboard
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thansettakij.com##.ads-billboard:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thansettakij.com##.ads-billboard
 !#endif
@@ -2067,9 +1642,7 @@ thansettakij.com##.ads-billboard
 thansettakij.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thansettakij.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2078,9 +1651,7 @@ thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; po
 thestandard.co##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 thestandard.co$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2088,9 +1659,7 @@ thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posi
 thestandard.co##^.adsbyadop
 thestandard.co$$.adsbyadop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thestandard.co##.adsbyadop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thestandard.co##.adsbyadop
 !#endif
@@ -2098,9 +1667,7 @@ thestandard.co##.adsbyadop
 thestandard.co##^div[class="banner-box hidden-xs"]
 thestandard.co$$div[class="banner-box hidden-xs"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thestandard.co##div[class="banner-box hidden-xs"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thestandard.co##div[class="banner-box hidden-xs"]
 !#endif
@@ -2108,9 +1675,7 @@ thestandard.co##div[class="banner-box hidden-xs"]
 thestandard.co##^.mySlidesMasthead
 thestandard.co$$.mySlidesMasthead
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thestandard.co##.mySlidesMasthead:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thestandard.co##.mySlidesMasthead
 !#endif
@@ -2119,9 +1684,7 @@ thestandard.co##.mySlidesMasthead
 workpointtoday.com##^.insert_ads
 workpointtoday.com$$.insert_ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 workpointtoday.com##.insert_ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 workpointtoday.com##.insert_ads
 !#endif
@@ -2130,9 +1693,7 @@ workpointtoday.com##.insert_ads
 men.kapook.com##^.taboola-x2-widget
 men.kapook.com$$.taboola-x2-widget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##.taboola-x2-widget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##.taboola-x2-widget
 !#endif
@@ -2140,9 +1701,7 @@ men.kapook.com##.taboola-x2-widget
 men.kapook.com##^div[id^="div-gpt-ad"][class="skin_vdo"]
 men.kapook.com$$div[id^="div-gpt-ad"][class="skin_vdo"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
 !#endif
@@ -2150,9 +1709,7 @@ men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
 men.kapook.com##^div[class="ads728 h90"]
 men.kapook.com$$div[class="ads728 h90"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##div[class="ads728 h90"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##div[class="ads728 h90"]
 !#endif
@@ -2160,9 +1717,7 @@ men.kapook.com##div[class="ads728 h90"]
 men.kapook.com##^div.aside_article
 men.kapook.com$$div.aside_article
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##div.aside_article:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##div.aside_article
 !#endif
@@ -2170,9 +1725,7 @@ men.kapook.com##div.aside_article
 men.kapook.com##^ins[class="adsbygoogle adsbygoogle-noablate"]
 men.kapook.com$$ins[class="adsbygoogle adsbygoogle-noablate"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
 !#endif
@@ -2180,9 +1733,7 @@ men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
 men.kapook.com##^div[data-item-syndicated="true"]
 men.kapook.com$$div[data-item-syndicated="true"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 men.kapook.com##div[data-item-syndicated="true"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 men.kapook.com##div[data-item-syndicated="true"]
 !#endif
@@ -2191,9 +1742,7 @@ men.kapook.com##div[data-item-syndicated="true"]
 pptvhd36.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 pptvhd36.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2201,9 +1750,7 @@ pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; positi
 pptvhd36.com##^[id^="google_ads_iframe"]
 pptvhd36.com$$[id^="google_ads_iframe"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##[id^="google_ads_iframe"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##[id^="google_ads_iframe"]
 !#endif
@@ -2211,9 +1758,7 @@ pptvhd36.com##[id^="google_ads_iframe"]
 pptvhd36.com##^.ads-wrapper
 pptvhd36.com$$.ads-wrapper
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##.ads-wrapper:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##.ads-wrapper
 !#endif
@@ -2221,9 +1766,7 @@ pptvhd36.com##.ads-wrapper
 pptvhd36.com##^#taboola-below-article-thumbnails
 pptvhd36.com$$#taboola-below-article-thumbnails
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com###taboola-below-article-thumbnails:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com###taboola-below-article-thumbnails
 !#endif
@@ -2231,9 +1774,7 @@ pptvhd36.com###taboola-below-article-thumbnails
 pptvhd36.com##^.ads-ppn
 pptvhd36.com$$.ads-ppn
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##.ads-ppn:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##.ads-ppn
 !#endif
@@ -2241,9 +1782,7 @@ pptvhd36.com##.ads-ppn
 pptvhd36.com##^.special-gateway__img
 pptvhd36.com$$.special-gateway__img
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##.special-gateway__img:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##.special-gateway__img
 !#endif
@@ -2252,9 +1791,7 @@ pptvhd36.com##.special-gateway__img
 dailynews.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 dailynews.co.th$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2262,9 +1799,7 @@ dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; posit
 dailynews.co.th##^#taboola-below-article-thumbnails
 dailynews.co.th$$#taboola-below-article-thumbnails
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dailynews.co.th###taboola-below-article-thumbnails:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th###taboola-below-article-thumbnails
 !#endif
@@ -2272,21 +1807,27 @@ dailynews.co.th###taboola-below-article-thumbnails
 dailynews.co.th##^div[id^="elementor-popup-modal-"]
 dailynews.co.th$$div[id^="elementor-popup-modal-"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dailynews.co.th##div[id^="elementor-popup-modal-"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[id^="elementor-popup-modal-"]
 !#endif
+!#if cap_html_filtering
+dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(1)
+dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(1)
+!#endif
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
+
+!#if cap_html_filtering
+dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(7)
+dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(7)
+!#endif
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
+
 !#if cap_html_filtering
 dailynews.co.th##^div[style="height: 600px; margin: 20px auto;"]
 dailynews.co.th$$div[style="height: 600px; margin: 20px auto;"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
 !#endif
@@ -2295,9 +1836,7 @@ dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
 khaosod.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 khaosod.co.th$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2305,9 +1844,7 @@ khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; positio
 khaosod.co.th##^div[id*="ScriptRoot"]
 khaosod.co.th$$div[id*="ScriptRoot"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 khaosod.co.th##div[id*="ScriptRoot"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 khaosod.co.th##div[id*="ScriptRoot"]
 !#endif
@@ -2316,9 +1853,7 @@ khaosod.co.th##div[id*="ScriptRoot"]
 nationtv.tv##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 nationtv.tv$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2326,9 +1861,7 @@ nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position:
 nationtv.tv##^[id^="google_ads_iframe"]
 nationtv.tv$$[id^="google_ads_iframe"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##[id^="google_ads_iframe"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##[id^="google_ads_iframe"]
 !#endif
@@ -2336,9 +1869,7 @@ nationtv.tv##[id^="google_ads_iframe"]
 nationtv.tv##^.ads-billboard
 nationtv.tv$$.ads-billboard
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##.ads-billboard:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##.ads-billboard
 !#endif
@@ -2346,9 +1877,7 @@ nationtv.tv##.ads-billboard
 nationtv.tv##^.ads-postarticle
 nationtv.tv$$.ads-postarticle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##.ads-postarticle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##.ads-postarticle
 !#endif
@@ -2356,9 +1885,7 @@ nationtv.tv##.ads-postarticle
 nationtv.tv##^div[class^="ads-sticky-"]
 nationtv.tv$$div[class^="ads-sticky-"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##div[class^="ads-sticky-"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##div[class^="ads-sticky-"]
 !#endif
@@ -2366,9 +1893,7 @@ nationtv.tv##div[class^="ads-sticky-"]
 nationtv.tv##^div[class^="ads-inarticle-"]
 nationtv.tv$$div[class^="ads-inarticle-"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nationtv.tv##div[class^="ads-inarticle-"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nationtv.tv##div[class^="ads-inarticle-"]
 !#endif
@@ -2377,9 +1902,7 @@ nationtv.tv##div[class^="ads-inarticle-"]
 voicetv.co.th##^.article-ad
 voicetv.co.th$$.article-ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 voicetv.co.th##.article-ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 voicetv.co.th##.article-ad
 !#endif
@@ -2387,9 +1910,7 @@ voicetv.co.th##.article-ad
 voicetv.co.th##^#taboola-below-article-thumbnails
 voicetv.co.th$$#taboola-below-article-thumbnails
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 voicetv.co.th###taboola-below-article-thumbnails:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 voicetv.co.th###taboola-below-article-thumbnails
 !#endif
@@ -2398,9 +1919,7 @@ voicetv.co.th###taboola-below-article-thumbnails
 mangozero.com##^.banner-ads
 mangozero.com$$.banner-ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mangozero.com##.banner-ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mangozero.com##.banner-ads
 !#endif
@@ -2409,9 +1928,7 @@ mangozero.com##.banner-ads
 kaijeaw.com##^small
 kaijeaw.com$$small
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaijeaw.com##small:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaijeaw.com##small
 !#endif
@@ -2419,9 +1936,7 @@ kaijeaw.com##small
 kaijeaw.com##^ins.adsbygoogle
 kaijeaw.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaijeaw.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaijeaw.com##ins.adsbygoogle
 !#endif
@@ -2429,9 +1944,7 @@ kaijeaw.com##ins.adsbygoogle
 kaijeaw.com##^div[data-google-query-id]
 kaijeaw.com$$div[data-google-query-id]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaijeaw.com##div[data-google-query-id]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaijeaw.com##div[data-google-query-id]
 !#endif
@@ -2439,9 +1952,7 @@ kaijeaw.com##div[data-google-query-id]
 kaijeaw.com##^a[href^="https://adclick.g.doubleclick.net/"]
 kaijeaw.com$$a[href^="https://adclick.g.doubleclick.net/"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
 !#endif
@@ -2450,9 +1961,7 @@ kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
 thaihitz.com##^.code-block 
 thaihitz.com$$.code-block 
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thaihitz.com##.code-block:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thaihitz.com##.code-block 
 !#endif
@@ -2461,9 +1970,7 @@ thaihitz.com##.code-block
 kaazip.com##^.adsense
 kaazip.com$$.adsense
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaazip.com##.adsense:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaazip.com##.adsense
 !#endif
@@ -2471,9 +1978,7 @@ kaazip.com##.adsense
 kaazip.com##^ins.adsbygoogle
 kaazip.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 kaazip.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 kaazip.com##ins.adsbygoogle
 !#endif
@@ -2482,9 +1987,7 @@ kaazip.com##ins.adsbygoogle
 springnews.co.th##^.mobile
 springnews.co.th$$.mobile
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 springnews.co.th##.mobile:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 springnews.co.th##.mobile
 !#endif
@@ -2492,11 +1995,18 @@ springnews.co.th##.mobile
 springnews.co.th##^.desktop
 springnews.co.th$$.desktop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 springnews.co.th##.desktop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 springnews.co.th##.desktop
+!#endif
+!ejan.co
+!#if cap_html_filtering
+ejan.co##^#taboola-below-article-thumbnails
+ejan.co$$#taboola-below-article-thumbnails
+!#endif
+ejan.co###taboola-below-article-thumbnails:remove()
+!#if !adugard || !ext_ublock && !cap_html_filtering
+ejan.co###taboola-below-article-thumbnails
 !#endif
 !
 !---tech news ---
@@ -2506,9 +2016,7 @@ springnews.co.th##.desktop
 droidsans.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 droidsans.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2517,9 +2025,7 @@ droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posit
 siamblockchain.com##^.header-banner
 siamblockchain.com$$.header-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siamblockchain.com##.header-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siamblockchain.com##.header-banner
 !#endif
@@ -2527,9 +2033,7 @@ siamblockchain.com##.header-banner
 siamblockchain.com##^#block-3
 siamblockchain.com$$#block-3
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siamblockchain.com###block-3:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siamblockchain.com###block-3
 !#endif
@@ -2537,9 +2041,7 @@ siamblockchain.com###block-3
 siamblockchain.com##^#block-6
 siamblockchain.com$$#block-6
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siamblockchain.com###block-6:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siamblockchain.com###block-6
 !#endif
@@ -2547,9 +2049,7 @@ siamblockchain.com###block-6
 siamblockchain.com##^div#topheader-desktop-banner
 siamblockchain.com$$div#topheader-desktop-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siamblockchain.com##div#topheader-desktop-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siamblockchain.com##div#topheader-desktop-banner
 !#endif
@@ -2558,9 +2058,7 @@ siamblockchain.com##div#topheader-desktop-banner
 iphone-droid.net##^.widget_text
 iphone-droid.net$$.widget_text
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 iphone-droid.net##.widget_text:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 iphone-droid.net##.widget_text
 !#endif
@@ -2568,9 +2066,7 @@ iphone-droid.net##.widget_text
 iphone-droid.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 iphone-droid.net$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2578,9 +2074,7 @@ iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; po
 iphone-droid.net##^div[class^="dpdpa--popup"]
 iphone-droid.net$$div[class^="dpdpa--popup"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 iphone-droid.net##div[class^="dpdpa--popup"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 iphone-droid.net##div[class^="dpdpa--popup"]
 !#endif
@@ -2589,9 +2083,7 @@ iphone-droid.net##div[class^="dpdpa--popup"]
 worldittoday.com##^ins.adsbygoogle
 worldittoday.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 worldittoday.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 worldittoday.com##ins.adsbygoogle
 !#endif
@@ -2600,9 +2092,7 @@ worldittoday.com##ins.adsbygoogle
 notebookspec.com##^.zox-widget-ad
 notebookspec.com$$.zox-widget-ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.zox-widget-ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.zox-widget-ad
 !#endif
@@ -2610,9 +2100,7 @@ notebookspec.com##.zox-widget-ad
 notebookspec.com##^.zox_ad_widget
 notebookspec.com$$.zox_ad_widget
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.zox_ad_widget:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.zox_ad_widget
 !#endif
@@ -2620,9 +2108,7 @@ notebookspec.com##.zox_ad_widget
 notebookspec.com##^.banner-set-left-box
 notebookspec.com$$.banner-set-left-box
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-left-box:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-left-box
 !#endif
@@ -2630,9 +2116,7 @@ notebookspec.com##.banner-set-left-box
 notebookspec.com##^.banner-set-top-box
 notebookspec.com$$.banner-set-top-box
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-top-box:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-top-box
 !#endif
@@ -2640,9 +2124,7 @@ notebookspec.com##.banner-set-top-box
 notebookspec.com##^.banner-set-right-box
 notebookspec.com$$.banner-set-right-box
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-right-box:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.banner-set-right-box
 !#endif
@@ -2651,9 +2133,7 @@ notebookspec.com##.banner-set-right-box
 thaimobilecenter.com##^.container.hidden-xs div[class^="col-"][align="right"]
 thaimobilecenter.com$$.container.hidden-xs div[class^="col-"][align="right"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
 !#endif
@@ -2661,9 +2141,7 @@ thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
 thaimobilecenter.com##^ins.adsbygoogle
 thaimobilecenter.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thaimobilecenter.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thaimobilecenter.com##ins.adsbygoogle
 !#endif
@@ -2672,29 +2150,19 @@ thaimobilecenter.com##ins.adsbygoogle
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
 techtalkthai.com$$#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
-!#endif
+
 !#if cap_html_filtering
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
 techtalkthai.com$$#wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
-!#endif
+
 !#if cap_html_filtering
 techtalkthai.com##^#text-9
 techtalkthai.com$$#text-9
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 techtalkthai.com###text-9:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 techtalkthai.com###text-9
 !#endif
@@ -2702,9 +2170,7 @@ techtalkthai.com###text-9
 techtalkthai.com##^#text-18
 techtalkthai.com$$#text-18
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 techtalkthai.com###text-18:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 techtalkthai.com###text-18
 !#endif
@@ -2713,9 +2179,7 @@ techtalkthai.com###text-18
 blognone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 blognone.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -2724,9 +2188,7 @@ blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; positi
 flashfly.net##^iframe[width="500"][height="190"]
 flashfly.net$$iframe[width="500"][height="190"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 flashfly.net##iframe[width="500"][height="190"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 flashfly.net##iframe[width="500"][height="190"]
 !#endif
@@ -2734,9 +2196,7 @@ flashfly.net##iframe[width="500"][height="190"]
 flashfly.net##^ins.adsbygoogle
 flashfly.net$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 flashfly.net##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 flashfly.net##ins.adsbygoogle
 !#endif
@@ -2744,9 +2204,7 @@ flashfly.net##ins.adsbygoogle
 flashfly.net##^div.jeg_ad
 flashfly.net$$div.jeg_ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 flashfly.net##div.jeg_ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 flashfly.net##div.jeg_ad
 !#endif
@@ -2754,9 +2212,7 @@ flashfly.net##div.jeg_ad
 flashfly.net##^div[align="center"]:upward(1)
 flashfly.net$$div[align="center"]:upward(1)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 flashfly.net##div[align="center"]:upward(1):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 flashfly.net##div[align="center"]:upward(1)
 !#endif
@@ -2765,9 +2221,7 @@ flashfly.net##div[align="center"]:upward(1)
 it24hrs.com##^ins.adsbygoogle
 it24hrs.com$$ins.adsbygoogle
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 it24hrs.com##ins.adsbygoogle:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 it24hrs.com##ins.adsbygoogle
 !#endif
@@ -2775,9 +2229,7 @@ it24hrs.com##ins.adsbygoogle
 it24hrs.com##^.bottom-ads
 it24hrs.com$$.bottom-ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 it24hrs.com##.bottom-ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 it24hrs.com##.bottom-ads
 !#endif
@@ -2785,9 +2237,7 @@ it24hrs.com##.bottom-ads
 it24hrs.com##^.adrotate_widgets
 it24hrs.com$$.adrotate_widgets
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 it24hrs.com##.adrotate_widgets:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 it24hrs.com##.adrotate_widgets
 !#endif
@@ -2797,9 +2247,7 @@ https://s.vidpulse.com/all/vp.js
 iphonemod.net##^center
 iphonemod.net$$center
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 iphonemod.net##center:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 iphonemod.net##center
 !#endif
@@ -2807,9 +2255,7 @@ iphonemod.net##center
 iphonemod.net##^#quads-ad4
 iphonemod.net$$#quads-ad4
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 iphonemod.net###quads-ad4:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 iphonemod.net###quads-ad4
 !#endif
@@ -2818,9 +2264,7 @@ iphonemod.net###quads-ad4
 specphone.com##^div#custom_html-2
 specphone.com$$div#custom_html-2
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div#custom_html-2:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div#custom_html-2
 !#endif
@@ -2828,9 +2272,7 @@ specphone.com##div#custom_html-2
 specphone.com##^div#custom_html-4
 specphone.com$$div#custom_html-4
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div#custom_html-4:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div#custom_html-4
 !#endif
@@ -2838,9 +2280,7 @@ specphone.com##div#custom_html-4
 specphone.com##^div#sp_top_phone_widget-2
 specphone.com$$div#sp_top_phone_widget-2
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div#sp_top_phone_widget-2:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div#sp_top_phone_widget-2
 !#endif
@@ -2848,9 +2288,7 @@ specphone.com##div#sp_top_phone_widget-2
 specphone.com##^div.ads-desktop
 specphone.com$$div.ads-desktop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div.ads-desktop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div.ads-desktop
 !#endif
@@ -2858,9 +2296,7 @@ specphone.com##div.ads-desktop
 specphone.com##^div.ads-mobile
 specphone.com$$div.ads-mobile
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div.ads-mobile:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div.ads-mobile
 !#endif
@@ -2868,9 +2304,7 @@ specphone.com##div.ads-mobile
 specphone.com##^div#footer-ads
 specphone.com$$div#footer-ads
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div#footer-ads:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div#footer-ads
 !#endif
@@ -2878,9 +2312,7 @@ specphone.com##div#footer-ads
 specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
 specphone.com$$div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
@@ -2892,9 +2324,7 @@ specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 mustplay.in.th##^a[href^="/banner/id/"]
 mustplay.in.th$$a[href^="/banner/id/"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mustplay.in.th##a[href^="/banner/id/"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mustplay.in.th##a[href^="/banner/id/"]
 !#endif
@@ -2902,9 +2332,7 @@ mustplay.in.th##a[href^="/banner/id/"]
 mustplay.in.th##^div[class*="promote"]
 mustplay.in.th$$div[class*="promote"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mustplay.in.th##div[class*="promote"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mustplay.in.th##div[class*="promote"]
 !#endif
@@ -2913,9 +2341,7 @@ mustplay.in.th##div[class*="promote"]
 thisisgamethailand.com##^#bg_banner_left
 thisisgamethailand.com$$#bg_banner_left
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thisisgamethailand.com###bg_banner_left:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thisisgamethailand.com###bg_banner_left
 !#endif
@@ -2923,9 +2349,7 @@ thisisgamethailand.com###bg_banner_left
 thisisgamethailand.com##^#bg_banner_right
 thisisgamethailand.com$$#bg_banner_right
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thisisgamethailand.com###bg_banner_right:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thisisgamethailand.com###bg_banner_right
 !#endif
@@ -2933,9 +2357,7 @@ thisisgamethailand.com###bg_banner_right
 thisisgamethailand.com##^div[class="mod_banner_Rectangle"]
 thisisgamethailand.com$$div[class="mod_banner_Rectangle"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thisisgamethailand.com##div[class="mod_banner_Rectangle"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thisisgamethailand.com##div[class="mod_banner_Rectangle"]
 !#endif
@@ -2943,9 +2365,7 @@ thisisgamethailand.com##div[class="mod_banner_Rectangle"]
 thisisgamethailand.com##^div[id="adsbannermtigads"]
 thisisgamethailand.com$$div[id="adsbannermtigads"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thisisgamethailand.com##div[id="adsbannermtigads"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thisisgamethailand.com##div[id="adsbannermtigads"]
 !#endif
@@ -2956,9 +2376,7 @@ thisisgamethailand.com##div[id="adsbannermtigads"]
 gamefever.co##^[id^="ads"]
 gamefever.co$$[id^="ads"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamefever.co##[id^="ads"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamefever.co##[id^="ads"]
 !#endif
@@ -2966,9 +2384,7 @@ gamefever.co##[id^="ads"]
 gamefever.co##^div[style="width:100vw;height:89px"]
 gamefever.co$$div[style="width:100vw;height:89px"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamefever.co##div[style="width:100vw;height:89px"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamefever.co##div[style="width:100vw;height:89px"]
 !#endif
@@ -2978,9 +2394,7 @@ gamefever.co##.d-none:style(padding-top: 0px !important)
 gamingdose.com##^section.ads_header
 gamingdose.com$$section.ads_header
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##section.ads_header:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##section.ads_header
 !#endif
@@ -2988,9 +2402,7 @@ gamingdose.com##section.ads_header
 gamingdose.com##^div.ads_side
 gamingdose.com$$div.ads_side
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.ads_side:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.ads_side
 !#endif
@@ -2998,9 +2410,7 @@ gamingdose.com##div.ads_side
 gamingdose.com##^div.banner_side
 gamingdose.com$$div.banner_side
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.banner_side:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.banner_side
 !#endif
@@ -3008,9 +2418,7 @@ gamingdose.com##div.banner_side
 gamingdose.com##^div.gamin-sticky
 gamingdose.com$$div.gamin-sticky
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-sticky:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-sticky
 !#endif
@@ -3018,9 +2426,7 @@ gamingdose.com##div.gamin-sticky
 gamingdose.com##^div.gamin-popup-desktop
 gamingdose.com$$div.gamin-popup-desktop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-popup-desktop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-popup-desktop
 !#endif
@@ -3028,9 +2434,7 @@ gamingdose.com##div.gamin-popup-desktop
 gamingdose.com##^div.gamin-popup-mobile
 gamingdose.com$$div.gamin-popup-mobile
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-popup-mobile:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.gamin-popup-mobile
 !#endif
@@ -3038,9 +2442,7 @@ gamingdose.com##div.gamin-popup-mobile
 gamingdose.com##^div.advads-background
 gamingdose.com$$div.advads-background
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 gamingdose.com##div.advads-background:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 gamingdose.com##div.advads-background
 !#endif
@@ -3052,9 +2454,7 @@ playulti.com##.uk-width-expand:style(margin-top: -10px !important)
 playulti.com##^.space_side
 playulti.com$$.space_side
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 playulti.com##.space_side:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 playulti.com##.space_side
 !#endif
@@ -3068,9 +2468,7 @@ playulti.com##.space_side
 mawtoload.com##^#sticky-banner
 mawtoload.com$$#sticky-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mawtoload.com###sticky-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mawtoload.com###sticky-banner
 !#endif
@@ -3078,9 +2476,7 @@ mawtoload.com###sticky-banner
 mawtoload.com##^a[rel="dofollow noopener"]
 mawtoload.com$$a[rel="dofollow noopener"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mawtoload.com##a[rel="dofollow noopener"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mawtoload.com##a[rel="dofollow noopener"]
 !#endif
@@ -3088,9 +2484,7 @@ mawtoload.com##a[rel="dofollow noopener"]
 mawtoload.com##^#banner-post
 mawtoload.com$$#banner-post
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mawtoload.com###banner-post:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mawtoload.com###banner-post
 !#endif
@@ -3102,9 +2496,7 @@ mawtoload.com###banner-post
 nekopost.net##^div.bg-slate-800.px-2\.5.py-2.rounded-lg
 nekopost.net$$div.bg-slate-800.px-2\.5.py-2.rounded-lg
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
 !#endif
@@ -3112,9 +2504,7 @@ nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
 nekopost.net##^div.svelte-1d0qhdr.h-4
 nekopost.net$$div.svelte-1d0qhdr.h-4
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nekopost.net##div.svelte-1d0qhdr.h-4:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nekopost.net##div.svelte-1d0qhdr.h-4
 !#endif
@@ -3124,6 +2514,7 @@ nekopost.net##div.svelte-1d0qhdr.h-4
 ||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com
 ||*.mp4$media,domain=manga-sugoi.com
 ||*.webp$image,domain=mangauptocats.net|mangauptocats.com
+!>>>>>mode<<<<< html and remove
 !manga168.com 
 ||manga168.com/god^$domain=manga168.com
 ||1.bp.blogspot.com/$domain=manga168.com
@@ -3159,7 +2550,12 @@ manga168.com##.slider-ads:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 manga168.com##.slider-ads
 !#endif
+!#if cap_html_filtering
+manga168.com##^#colophon > div:nth-of-type(3)
+manga168.com$$#colophon > div:nth-of-type(3)
+!#endif
 manga168.com###colophon > div:nth-of-type(3)
+
 ||manga168.com/wp-content/uploads/banner/ww.webp$image
 !!background
 ||manga168.com/over-cover.webp
@@ -3333,12 +2729,8 @@ manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 kingsmanga.net##^#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
 kingsmanga.net$$#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width:remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
-!#endif
+
 !kuro-manga.com
 !#if cap_html_filtering
 kuro-manga.com##^div[class="c-sidebar"]
@@ -3436,7 +2828,7 @@ mangafins.net##.c-top-sidebar:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mangafins.net##.c-top-sidebar
 !#endif
-!murim-manga.com
+!murim-manga.com 20231225133557
 !#if cap_html_filtering
 murim-manga.com##^.dessert-frame
 murim-manga.com$$.dessert-frame
@@ -3446,6 +2838,16 @@ murim-manga.com##.dessert-frame:remove()
 !#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 murim-manga.com##.dessert-frame
+!#endif
+!#if cap_html_filtering
+murim-manga.com##^.slider-ads
+murim-manga.com$$.slider-ads
+!#endif
+!#if adugard || ext_ublock && !cap_html_filtering
+murim-manga.com##.slider-ads:remove()
+!#endif
+!#if !adugard || !ext_ublock && !cap_html_filtering
+murim-manga.com##.slider-ads
 !#endif
 !ped-manga.com
 !#if cap_html_filtering
@@ -3501,7 +2903,12 @@ manhwabreakup.com##div[class="ads-float"]:remove()
 manhwabreakup.com##div[class="ads-float"]
 !#endif
 !tpnoodle.com
+!#if cap_html_filtering
+tpnoodle.com##^div[class="row mt-3"]:nth-of-type(1)
+tpnoodle.com$$div[class="row mt-3"]:nth-of-type(1)
+!#endif
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
+
 !#if cap_html_filtering
 tpnoodle.com##^div[class="col-3 mt-2"]
 tpnoodle.com$$div[class="col-3 mt-2"]
@@ -3788,9 +3195,14 @@ mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
 ||*.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
-!Anime Sugoi
+!Anime Sugoi 20231225134824
 !!เอา box ที่เขียนว่า โฆษณา ออก
-anime-sugoi.com##.panel-danger.panel:nth-of-type(2)
+!#if cap_html_filtering
+anime-sugoi.com##^div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+anime-sugoi.com$$div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!#endif
+anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+
 !!เอาdiv โฆษณาอันแรกออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > .col-md-8
@@ -3846,8 +3258,18 @@ anime-masters.com##div.container > .row > .center_lnwphp:remove()
 !#if !adugard || !ext_ublock && !cap_html_filtering
 anime-masters.com##div.container > .row > .center_lnwphp
 !#endif
+!#if cap_html_filtering
+anime-masters.com##^center:nth-of-type(2)
+anime-masters.com$$center:nth-of-type(2)
+!#endif
 anime-masters.com##center:nth-of-type(2)
+
+!#if cap_html_filtering
+anime-masters.com##^center:nth-of-type(4)
+anime-masters.com$$center:nth-of-type(4)
+!#endif
 anime-masters.com##center:nth-of-type(4)
+
 !#if cap_html_filtering
 anime-masters.com##^.col-md-9 > span
 anime-masters.com$$.col-md-9 > span
@@ -3991,12 +3413,8 @@ fairyanime.net###kosana
 fairyanime.net##^#main-content > div.concise.animated.bounce:nth-child(5)
 fairyanime.net$$#main-content > div.concise.animated.bounce:nth-child(5)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
-!#endif
+
 !shibaanime.com
 !#if cap_html_filtering
 shibaanime.com##^a[rel$="sponsored"]
@@ -4012,22 +3430,14 @@ shibaanime.com##a[rel$="sponsored"]
 shibaanime.com##^div.hero.common-hero:nth-child(2)
 shibaanime.com$$div.hero.common-hero:nth-child(2)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-shibaanime.com##div.hero.common-hero:nth-child(2):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 shibaanime.com##div.hero.common-hero:nth-child(2)
-!#endif
+
 !anime-hit.com
 ||anime-hit.com^$popup,domain=~anime-hit.com
-!#if cap_html_filtering
-##^a[hreaf^="https://anime-hit.com"]
-$$a[hreaf^="https://anime-hit.com"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##a[hreaf^="https://anime-hit.com"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##a[hreaf^="https://anime-hit.com"]
 !#endif
 anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
@@ -4223,6 +3633,7 @@ xn--q3cmiag1gmn.com##div.header-ads-section
 !#endif
 !
 !---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
+!>>>>>mode<<<<< html or remove
 !
 ||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
 !
@@ -4235,9 +3646,7 @@ xn--q3cmiag1gmn.com##div.header-ads-section
 nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
 nungdeedee.com$$a[href^="https://nungdeedee.com/externallink"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 !#endif
@@ -4246,9 +3655,7 @@ nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 doomovie-hd.com##^.left-floating-banana
 doomovie-hd.com$$.left-floating-banana
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doomovie-hd.com##.left-floating-banana:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doomovie-hd.com##.left-floating-banana
 !#endif
@@ -4256,9 +3663,7 @@ doomovie-hd.com##.left-floating-banana
 doomovie-hd.com##^.right-floating-banana
 doomovie-hd.com$$.right-floating-banana
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doomovie-hd.com##.right-floating-banana:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doomovie-hd.com##.right-floating-banana
 !#endif
@@ -4266,9 +3671,7 @@ doomovie-hd.com##.right-floating-banana
 doomovie-hd.com##^div[onclick^="window.ultimateBananaClicked"]
 doomovie-hd.com$$div[onclick^="window.ultimateBananaClicked"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]
 !#endif
@@ -4276,9 +3679,7 @@ doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]
 doomovie-hd.com##^div[class^="horizontal-ad-bar"]
 doomovie-hd.com$$div[class^="horizontal-ad-bar"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doomovie-hd.com##div[class^="horizontal-ad-bar"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doomovie-hd.com##div[class^="horizontal-ad-bar"]
 !#endif
@@ -4287,9 +3688,7 @@ doomovie-hd.com##div[class^="horizontal-ad-bar"]
 24-hd.com##^.ad
 24-hd.com$$.ad
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 24-hd.com##.ad:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 24-hd.com##.ad
 !#endif
@@ -4298,9 +3697,7 @@ doomovie-hd.com##div[class^="horizontal-ad-bar"]
 doonungsub.com##^.banner
 doonungsub.com$$.banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doonungsub.com##.banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doonungsub.com##.banner
 !#endif
@@ -4308,9 +3705,7 @@ doonungsub.com##.banner
 doonungsub.com##^.popup
 doonungsub.com$$.popup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 doonungsub.com##.popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 doonungsub.com##.popup
 !#endif
@@ -4319,33 +3714,23 @@ doonungsub.com##.popup
 1112hd.com##^.tt_banner_above_vdo_player
 1112hd.com$$.tt_banner_above_vdo_player
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 1112hd.com##.tt_banner_above_vdo_player:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 1112hd.com##.tt_banner_above_vdo_player
 !#endif
 !ดูหนังใหม่ชนโรง.com
-!#if cap_html_filtering
-##^a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
-$$a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
 !#endif
 ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
 !dooseries.com
-!#if cap_html_filtering
-##^a[href^="https://dooseries.com"]
-$$a[href^="https://dooseries.com"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##a[href^="https://dooseries.com"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##a[href^="https://dooseries.com"]
 !#endif
 dooseries.com#@#a[href^="https://dooseries.com"]
@@ -4354,9 +3739,7 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 ดูหนัง.tv##^.row
 ดูหนัง.tv$$.row
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ดูหนัง.tv##.row:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ดูหนัง.tv##.row
 !#endif
@@ -4371,234 +3754,56 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 !----------------------------------------START
 !----------------------------------------START
 !from oksheets.com
-!#if cap_html_filtering
-##^.mv-ad-box
-$$.mv-ad-box
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##.mv-ad-box:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.mv-ad-box
 !#endif
 !thewindowsclub.com
-!#if cap_html_filtering
-##^#ezmobfooter
-$$#ezmobfooter
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ###ezmobfooter:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ###ezmobfooter
 !#endif
 !
-!#if cap_html_filtering
-##^a[href^="https://syndication.realsrv.com"]
-$$a[href^="https://syndication.realsrv.com"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##a[href^="https://syndication.realsrv.com"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##a[href^="https://syndication.realsrv.com"]
 !#endif
 !keyboard-test.space
-!#if cap_html_filtering
-##^a[href^="https://rtx.super47.net"]
-$$a[href^="https://rtx.super47.net"]
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##a[href^="https://rtx.super47.net"]:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##a[href^="https://rtx.super47.net"]
 !#endif
 !Powerful Cosmetic Rules
 !!/(_|-|^)+(ad|ads)+(_|-|$|)/
-!#if cap_html_filtering
-!##^[class^="ads"]:not(body):not(html):not(article)
-!$$[class^="ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class^="ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class^="ads"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[class*="_ads"]:not(body):not(html):not(article)
-!$$[class*="_ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="_ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="_ads"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[class*="-ads"]:not(body):not(html):not(article)
-!$$[class*="-ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="-ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="-ads"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id^="ads"]:not(body):not(html):not(article)
-!$$[id^="ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id^="ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id^="ads"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="_ads"]:not(body):not(html):not(article)
-!$$[id*="_ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="_ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="_ads"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="-ads"]:not(body):not(html):not(article)
-!$$[id*="-ads"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="-ads"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="-ads"]:not(body):not(html):not(article)
-!#endif
 
-!#if cap_html_filtering
-!##^[class^="ad_"]:not(body):not(html):not(article)
-!$$[class^="ad_"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class^="ad_"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class^="ad_"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[class^="ad-"]:not(body):not(html):not(article)
-!$$[class^="ad-"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class^="ad-"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class^="ad-"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[class$="-ad"]:not(body):not(html):not(article)
-!$$[class$="-ad"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class$="-ad"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class$="-ad"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[class$="_ad"]:not(body):not(html):not(article)
-!$$[class$="_ad"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class$="_ad"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class$="_ad"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id^="ad_"]:not(body):not(html):not(article)
-!$$[id^="ad_"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id^="ad_"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id^="ad_"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id^="ad-"]:not(body):not(html):not(article)
-!$$[id^="ad-"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id^="ad-"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id^="ad-"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id$="-ad"]:not(body):not(html):not(article)
-!$$[id$="-ad"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id$="-ad"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id$="-ad"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id$="_ad"]:not(body):not(html):not(article)
-!$$[id$="_ad"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id$="_ad"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id$="_ad"]:not(body):not(html):not(article)
-!#endif
 
-!#if cap_html_filtering
-!##^[class*="advert"]:not(body):not(html):not(article)
-!$$[class*="advert"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="advert"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="advert"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="advert"]:not(body):not(html):not(article)
-!$$[id*="advert"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="advert"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="advert"]:not(body):not(html):not(article)
-!#endif
 
-!#if cap_html_filtering
-!##^[class*="sponsor"]:not(body):not(html):not(article)
-!$$[class*="sponsor"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="sponsor"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="sponsor"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="sponsor"]:not(body):not(html):not(article)
-!$$[id*="sponsor"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="sponsor"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="sponsor"]:not(body):not(html):not(article)
-!#endif
 
 !----------General Cosmetic Rules--------END
 !----------------------------------------END
@@ -4635,44 +3840,28 @@ series-indy*.webp
 #@#[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 #@#[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 #@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-##^.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-$$.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if cap_html_filtering
-##^[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-$$[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if cap_html_filtering
-##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
-!#if cap_html_filtering
-##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
 google.com#@##bottomads
@@ -4681,6 +3870,7 @@ google.co.th#@##bottomads
 !----------------------------------------END
 !----------------------------------------END
 
+!>>>>>mode<<<<< html or remove
 !!!--------------Cookie -----------------START
 !----------------------------------------START
 !----------------------------------------START
@@ -4688,9 +3878,7 @@ google.co.th#@##bottomads
 phoenixnext.com##^div[class="cwc-sdk-container"]
 phoenixnext.com$$div[class="cwc-sdk-container"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 phoenixnext.com##div[class="cwc-sdk-container"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 phoenixnext.com##div[class="cwc-sdk-container"]
 !#endif
@@ -4698,9 +3886,7 @@ phoenixnext.com##div[class="cwc-sdk-container"]
 wongnai.com##^#cc_div
 wongnai.com$$#cc_div
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wongnai.com###cc_div:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wongnai.com###cc_div
 !#endif
@@ -4708,9 +3894,7 @@ wongnai.com###cc_div
 mahidol.ac.th##^#cc_div
 mahidol.ac.th$$#cc_div
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mahidol.ac.th###cc_div:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mahidol.ac.th###cc_div
 !#endif
@@ -4718,9 +3902,7 @@ mahidol.ac.th###cc_div
 superuser.com##^div.js-consent-banner
 superuser.com$$div.js-consent-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 superuser.com##div.js-consent-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 superuser.com##div.js-consent-banner
 !#endif
@@ -4728,9 +3910,7 @@ superuser.com##div.js-consent-banner
 apkmirror.com##^#bottom-slider
 apkmirror.com$$#bottom-slider
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 apkmirror.com###bottom-slider:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 apkmirror.com###bottom-slider
 !#endif
@@ -4738,9 +3918,7 @@ apkmirror.com###bottom-slider
 riotgames.com##^.dialog
 riotgames.com$$.dialog
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 riotgames.com##.dialog:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 riotgames.com##.dialog
 !#endif
@@ -4749,9 +3927,7 @@ riotgames.com##.dialog
 theguardian.com##^div[id="sp_message_container_752142"]
 theguardian.com$$div[id="sp_message_container_752142"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 theguardian.com##div[id="sp_message_container_752142"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 theguardian.com##div[id="sp_message_container_752142"]
 !#endif
@@ -4759,9 +3935,7 @@ theguardian.com##div[id="sp_message_container_752142"]
 theguardian.com##^div[class="dcr-8xye2h"]
 theguardian.com$$div[class="dcr-8xye2h"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 theguardian.com##div[class="dcr-8xye2h"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 theguardian.com##div[class="dcr-8xye2h"]
 !#endif
@@ -4771,9 +3945,7 @@ theguardian.com##div[class="dcr-8xye2h"]
 economist.com##^div[class="message-container teg-container"]
 economist.com$$div[class="message-container teg-container"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 economist.com##div[class="message-container teg-container"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 economist.com##div[class="message-container teg-container"]
 !#endif
@@ -4786,9 +3958,7 @@ economist.com##div[class="message-container teg-container"]
 ondemand.in.th##^.cwc-sdk-container
 ondemand.in.th$$.cwc-sdk-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ondemand.in.th##.cwc-sdk-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ondemand.in.th##.cwc-sdk-container
 !#endif
@@ -4796,9 +3966,7 @@ ondemand.in.th##.cwc-sdk-container
 tcaster.net##^.cwc-sdk-container
 tcaster.net$$.cwc-sdk-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 tcaster.net##.cwc-sdk-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 tcaster.net##.cwc-sdk-container
 !#endif
@@ -4806,9 +3974,7 @@ tcaster.net##.cwc-sdk-container
 425degree.com##^.amgdprcookie-bar-template
 425degree.com$$.amgdprcookie-bar-template
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 425degree.com##.amgdprcookie-bar-template:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 425degree.com##.amgdprcookie-bar-template
 !#endif
@@ -4816,9 +3982,7 @@ tcaster.net##.cwc-sdk-container
 samsung.com##^.cookie-bar
 samsung.com$$.cookie-bar
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 samsung.com##.cookie-bar:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 samsung.com##.cookie-bar
 !#endif
@@ -4826,9 +3990,7 @@ samsung.com##.cookie-bar
 droidsans.com##^div[class="dpdpa--popup active"]
 droidsans.com$$div[class="dpdpa--popup active"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 droidsans.com##div[class="dpdpa--popup active"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 droidsans.com##div[class="dpdpa--popup active"]
 !#endif
@@ -4836,9 +3998,7 @@ droidsans.com##div[class="dpdpa--popup active"]
 thaimobilecenter.com##^#cookiePopup
 thaimobilecenter.com$$#cookiePopup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thaimobilecenter.com###cookiePopup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thaimobilecenter.com###cookiePopup
 !#endif
@@ -4846,9 +4006,7 @@ thaimobilecenter.com###cookiePopup
 matichon.co.th##^.matichon-pdpa-wrapper
 matichon.co.th$$.matichon-pdpa-wrapper
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 matichon.co.th##.matichon-pdpa-wrapper:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 matichon.co.th##.matichon-pdpa-wrapper
 !#endif
@@ -4856,9 +4014,7 @@ matichon.co.th##.matichon-pdpa-wrapper
 thairath.co.th##^.cookiewrap
 thairath.co.th$$.cookiewrap
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thairath.co.th##.cookiewrap:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thairath.co.th##.cookiewrap
 !#endif
@@ -4867,9 +4023,7 @@ thairath.co.th##.cookiewrap
 thairath.co.th##^.__money_cookies
 thairath.co.th$$.__money_cookies
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thairath.co.th##.__money_cookies:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thairath.co.th##.__money_cookies
 !#endif
@@ -4878,9 +4032,7 @@ thairath.co.th##.__money_cookies
 plus.thairath.co.th##^.__TRPlus_Policy_Box
 plus.thairath.co.th$$.__TRPlus_Policy_Box
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 plus.thairath.co.th##.__TRPlus_Policy_Box:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 plus.thairath.co.th##.__TRPlus_Policy_Box
 !#endif
@@ -4888,9 +4040,7 @@ plus.thairath.co.th##.__TRPlus_Policy_Box
 brighttv.co.th##^.dpdpa--popup
 brighttv.co.th$$.dpdpa--popup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 brighttv.co.th##.dpdpa--popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 brighttv.co.th##.dpdpa--popup
 !#endif
@@ -4898,9 +4048,7 @@ brighttv.co.th##.dpdpa--popup
 sanook.com##^.ConsentBanner
 sanook.com$$.ConsentBanner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sanook.com##.ConsentBanner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sanook.com##.ConsentBanner
 !#endif
@@ -4908,9 +4056,7 @@ sanook.com##.ConsentBanner
 ch3plus.com##^#cookie_policy
 ch3plus.com$$#cookie_policy
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ch3plus.com###cookie_policy:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ch3plus.com###cookie_policy
 !#endif
@@ -4918,9 +4064,7 @@ ch3plus.com###cookie_policy
 ch7.com##^.cookies-settings-pop
 ch7.com$$.cookies-settings-pop
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ch7.com##.cookies-settings-pop:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ch7.com##.cookies-settings-pop
 !#endif
@@ -4928,9 +4072,7 @@ ch7.com##.cookies-settings-pop
 toyota.co.th##^.popup__pdpa
 toyota.co.th$$.popup__pdpa
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 toyota.co.th##.popup__pdpa:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 toyota.co.th##.popup__pdpa
 !#endif
@@ -4938,9 +4080,7 @@ toyota.co.th##.popup__pdpa
 similarweb.com##^.cookies-notification
 similarweb.com$$.cookies-notification
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 similarweb.com##.cookies-notification:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 similarweb.com##.cookies-notification
 !#endif
@@ -4948,9 +4088,7 @@ similarweb.com##.cookies-notification
 joox.com##^.pdpa
 joox.com$$.pdpa
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 joox.com##.pdpa:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 joox.com##.pdpa
 !#endif
@@ -4958,9 +4096,7 @@ joox.com##.pdpa
 longdo.com##^#pdpa-longdocom-div
 longdo.com$$#pdpa-longdocom-div
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 longdo.com###pdpa-longdocom-div:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 longdo.com###pdpa-longdocom-div
 !#endif
@@ -4968,9 +4104,7 @@ longdo.com###pdpa-longdocom-div
 oxfordlearnersdictionaries.com##^#onetrust-consent-sdk
 oxfordlearnersdictionaries.com$$#onetrust-consent-sdk
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###onetrust-consent-sdk:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 oxfordlearnersdictionaries.com###onetrust-consent-sdk
 !#endif
@@ -4978,9 +4112,7 @@ oxfordlearnersdictionaries.com###onetrust-consent-sdk
 collinsdictionary.com##^#onetrust-consent-sdk
 collinsdictionary.com$$#onetrust-consent-sdk
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 collinsdictionary.com###onetrust-consent-sdk:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 collinsdictionary.com###onetrust-consent-sdk
 !#endif
@@ -4988,9 +4120,7 @@ collinsdictionary.com###onetrust-consent-sdk
 macmillandictionary.com,macmillanthesaurus.com##^#onetrust-consent-sdk
 macmillandictionary.com,macmillanthesaurus.com$$#onetrust-consent-sdk
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk
 !#endif
@@ -4998,9 +4128,7 @@ macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk
 thansettakij.com##^.ot-sdk-container
 thansettakij.com$$.ot-sdk-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thansettakij.com##.ot-sdk-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thansettakij.com##.ot-sdk-container
 !#endif
@@ -5008,9 +4136,7 @@ thansettakij.com##.ot-sdk-container
 g2.com##^div[role="dialog"]
 g2.com$$div[role="dialog"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 g2.com##div[role="dialog"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 g2.com##div[role="dialog"]
 !#endif
@@ -5018,9 +4144,7 @@ g2.com##div[role="dialog"]
 mediafire.com##^#cookie-accept-footer
 mediafire.com$$#cookie-accept-footer
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mediafire.com###cookie-accept-footer:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mediafire.com###cookie-accept-footer
 !#endif
@@ -5028,12 +4152,11 @@ mediafire.com###cookie-accept-footer
 www.techmoblog.com##^#cookiePopup
 www.techmoblog.com$$#cookiePopup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 www.techmoblog.com###cookiePopup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 www.techmoblog.com###cookiePopup
 !#endif
+!>>>>>mode<<<<< html and remove
 !#if cap_html_filtering
 pantip.com##^.pt-snackbar
 pantip.com$$.pt-snackbar
@@ -5045,13 +4168,12 @@ pantip.com##.pt-snackbar:remove()
 pantip.com##.pt-snackbar
 !#endif
 pantip.com#@#.pt-snackbar__surface
+!>>>>>mode<<<<< html or remove
 !#if cap_html_filtering
 thisisgamethailand.com##^#true
 thisisgamethailand.com$$#true
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thisisgamethailand.com###true:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thisisgamethailand.com###true
 !#endif
@@ -5059,9 +4181,7 @@ thisisgamethailand.com###true
 stackoverflow.com##^.js-consent-banner
 stackoverflow.com$$.js-consent-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 stackoverflow.com##.js-consent-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 stackoverflow.com##.js-consent-banner
 !#endif
@@ -5069,9 +4189,7 @@ stackoverflow.com##.js-consent-banner
 goshujin.tk##^#banner
 goshujin.tk$$#banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 goshujin.tk###banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 goshujin.tk###banner
 !#endif
@@ -5079,9 +4197,7 @@ goshujin.tk###banner
 blender.stackexchange.com##^.js-consent-banner
 blender.stackexchange.com$$.js-consent-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 blender.stackexchange.com##.js-consent-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 blender.stackexchange.com##.js-consent-banner
 !#endif
@@ -5089,9 +4205,7 @@ blender.stackexchange.com##.js-consent-banner
 geeksforgeeks.org##^.cookie-consent:not(body):not(html)
 geeksforgeeks.org$$.cookie-consent:not(body):not(html)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 geeksforgeeks.org##.cookie-consent:not(body):not(html):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 geeksforgeeks.org##.cookie-consent:not(body):not(html)
 !#endif
@@ -5099,9 +4213,7 @@ geeksforgeeks.org##.cookie-consent:not(body):not(html)
 apkdone.com##^#acceptCookie
 apkdone.com$$#acceptCookie
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 apkdone.com###acceptCookie:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 apkdone.com###acceptCookie
 !#endif
@@ -5109,9 +4221,7 @@ apkdone.com###acceptCookie
 apkdone.com##^#cookie-law-info-bar
 apkdone.com$$#cookie-law-info-bar
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 apkdone.com###cookie-law-info-bar:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 apkdone.com###cookie-law-info-bar
 !#endif
@@ -5119,9 +4229,7 @@ apkdone.com###cookie-law-info-bar
 true.th##^#floater-bnr-box
 true.th$$#floater-bnr-box
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 true.th###floater-bnr-box:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 true.th###floater-bnr-box
 !#endif
@@ -5129,9 +4237,7 @@ true.th###floater-bnr-box
 pptvhd36.com##^.consent-popup
 pptvhd36.com$$.consent-popup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pptvhd36.com##.consent-popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pptvhd36.com##.consent-popup
 !#endif
@@ -5139,9 +4245,7 @@ pptvhd36.com##.consent-popup
 khaosod.co.th##^#pdpa-wrapper
 khaosod.co.th$$#pdpa-wrapper
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 khaosod.co.th###pdpa-wrapper:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 khaosod.co.th###pdpa-wrapper
 !#endif
@@ -5149,9 +4253,7 @@ khaosod.co.th###pdpa-wrapper
 brother.co.th##^#CookieAcceptionArea
 brother.co.th$$#CookieAcceptionArea
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 brother.co.th###CookieAcceptionArea:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 brother.co.th###CookieAcceptionArea
 !#endif
@@ -5160,9 +4262,7 @@ brother.co.th###CookieAcceptionArea
 election2566.thestandard.co##^.ant-drawer-bottom
 election2566.thestandard.co$$.ant-drawer-bottom
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 election2566.thestandard.co##.ant-drawer-bottom:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 election2566.thestandard.co##.ant-drawer-bottom
 !#endif
@@ -5170,9 +4270,7 @@ election2566.thestandard.co##.ant-drawer-bottom
 thestandard.co##^.cwc-sdk-container
 thestandard.co$$.cwc-sdk-container
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thestandard.co##.cwc-sdk-container:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thestandard.co##.cwc-sdk-container
 !#endif
@@ -5181,9 +4279,7 @@ thestandard.co##.cwc-sdk-container
 thematter.co##^#cookie-law-info-bar:not(body):not(html):not(article)
 thematter.co$$#cookie-law-info-bar:not(body):not(html):not(article)
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thematter.co###cookie-law-info-bar:not(body):not(html):not(article):remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
 !#endif
@@ -5191,9 +4287,7 @@ thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
 voicetv.co.th##^#cookie-notification
 voicetv.co.th$$#cookie-notification
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 voicetv.co.th###cookie-notification:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 voicetv.co.th###cookie-notification
 !#endif
@@ -5201,9 +4295,7 @@ voicetv.co.th###cookie-notification
 workpointtoday.com##^div[class^="dpdpa--popup"]
 workpointtoday.com$$div[class^="dpdpa--popup"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 workpointtoday.com##div[class^="dpdpa--popup"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 workpointtoday.com##div[class^="dpdpa--popup"]
 !#endif
@@ -5211,9 +4303,7 @@ workpointtoday.com##div[class^="dpdpa--popup"]
 notebookspec.com##^.dpdpa--popup 
 notebookspec.com$$.dpdpa--popup 
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 notebookspec.com##.dpdpa--popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 notebookspec.com##.dpdpa--popup 
 !#endif
@@ -5221,9 +4311,7 @@ notebookspec.com##.dpdpa--popup
 mangozero.com##^.dpdpa--popup
 mangozero.com$$.dpdpa--popup
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mangozero.com##.dpdpa--popup:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mangozero.com##.dpdpa--popup
 !#endif
@@ -5231,9 +4319,7 @@ mangozero.com##.dpdpa--popup
 techcommunity.microsoft.com##^#cookie-banner
 techcommunity.microsoft.com$$#cookie-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 techcommunity.microsoft.com###cookie-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 techcommunity.microsoft.com###cookie-banner
 !#endif
@@ -5241,9 +4327,7 @@ techcommunity.microsoft.com###cookie-banner
 mustplay.in.th##^.cookiealert
 mustplay.in.th$$.cookiealert
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mustplay.in.th##.cookiealert:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mustplay.in.th##.cookiealert
 !#endif
@@ -5251,9 +4335,7 @@ mustplay.in.th##.cookiealert
 pharmacy.mahidol.ac.th##^#endzoommain
 pharmacy.mahidol.ac.th$$#endzoommain
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 pharmacy.mahidol.ac.th###endzoommain:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 pharmacy.mahidol.ac.th###endzoommain
 !#endif
@@ -5261,9 +4343,7 @@ pharmacy.mahidol.ac.th###endzoommain
 siphhospital.com##^#cookit
 siphhospital.com$$#cookit
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 siphhospital.com###cookit:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 siphhospital.com###cookit
 !#endif
@@ -5271,9 +4351,7 @@ siphhospital.com###cookit
 advice.co.th##^.foot-cookie
 advice.co.th$$.foot-cookie
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 advice.co.th##.foot-cookie:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 advice.co.th##.foot-cookie
 !#endif
@@ -5281,9 +4359,7 @@ advice.co.th##.foot-cookie
 ihavecpu.com##^#cookie-banner
 ihavecpu.com$$#cookie-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ihavecpu.com###cookie-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ihavecpu.com###cookie-banner
 !#endif
@@ -5291,9 +4367,7 @@ ihavecpu.com###cookie-banner
 thaiware.com##^div#pdpa_setting
 thaiware.com$$div#pdpa_setting
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 thaiware.com##div#pdpa_setting:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 thaiware.com##div#pdpa_setting
 !#endif
@@ -5302,9 +4376,7 @@ patreon.com##body:style(overflow: auto !important;)
 mercular.com##^div[class="MuiBox-root css-1gw67gw"]
 mercular.com$$div[class="MuiBox-root css-1gw67gw"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mercular.com##div[class="MuiBox-root css-1gw67gw"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mercular.com##div[class="MuiBox-root css-1gw67gw"]
 !#endif
@@ -5312,9 +4384,7 @@ mercular.com##div[class="MuiBox-root css-1gw67gw"]
 wordpress.com##^.ads-active.hide-on-button
 wordpress.com$$.ads-active.hide-on-button
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 wordpress.com##.ads-active.hide-on-button:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 wordpress.com##.ads-active.hide-on-button
 !#endif
@@ -5322,9 +4392,7 @@ wordpress.com##.ads-active.hide-on-button
 panyasociety.com##^#consentTrackAndCookieBar
 panyasociety.com$$#consentTrackAndCookieBar
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 panyasociety.com###consentTrackAndCookieBar:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 panyasociety.com###consentTrackAndCookieBar
 !#endif
@@ -5332,9 +4400,7 @@ panyasociety.com###consentTrackAndCookieBar
 mycourseville.com##^#cvcookie-notice
 mycourseville.com$$#cvcookie-notice
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mycourseville.com###cvcookie-notice:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mycourseville.com###cvcookie-notice
 !#endif
@@ -5342,9 +4408,7 @@ mycourseville.com###cvcookie-notice
 goodnotes.com##^.fscc
 goodnotes.com$$.fscc
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 goodnotes.com##.fscc:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 goodnotes.com##.fscc
 !#endif
@@ -5352,9 +4416,7 @@ goodnotes.com##.fscc
 askubuntu.com##^div.js-consent-banner
 askubuntu.com$$div.js-consent-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 askubuntu.com##div.js-consent-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 askubuntu.com##div.js-consent-banner
 !#endif
@@ -5362,9 +4424,7 @@ askubuntu.com##div.js-consent-banner
 sf-international.com##^.cookie-terms
 sf-international.com$$.cookie-terms
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sf-international.com##.cookie-terms:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sf-international.com##.cookie-terms
 !#endif
@@ -5372,9 +4432,7 @@ sf-international.com##.cookie-terms
 sony-asia.com##^#__tealiumGDPRecModal
 sony-asia.com$$#__tealiumGDPRecModal
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sony-asia.com###__tealiumGDPRecModal:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sony-asia.com###__tealiumGDPRecModal
 !#endif
@@ -5382,9 +4440,7 @@ sony-asia.com###__tealiumGDPRecModal
 playulti.com##^.cookiealert
 playulti.com$$.cookiealert
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 playulti.com##.cookiealert:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 playulti.com##.cookiealert
 !#endif
@@ -5392,9 +4448,7 @@ playulti.com##.cookiealert
 xbox.com##^div#cookie-banner
 xbox.com$$div#cookie-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 xbox.com##div#cookie-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 xbox.com##div#cookie-banner
 !#endif
@@ -5402,9 +4456,7 @@ xbox.com##div#cookie-banner
 mega.io##^div.cookie-banner
 mega.io$$div.cookie-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 mega.io##div.cookie-banner:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 mega.io##div.cookie-banner
 !#endif
@@ -5412,9 +4464,7 @@ mega.io##div.cookie-banner
 ctrlg.gg##^div[style*="background-color:rgba(0, 0, 0, 0.4)"]
 ctrlg.gg$$div[style*="background-color:rgba(0, 0, 0, 0.4)"]
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
 !#endif
@@ -5422,9 +4472,7 @@ ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
 scrintal.com##^div.c-elDcAj
 scrintal.com$$div.c-elDcAj
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 scrintal.com##div.c-elDcAj:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 scrintal.com##div.c-elDcAj
 !#endif
@@ -5432,9 +4480,7 @@ scrintal.com##div.c-elDcAj
 sec.or.th##^#bodyCookie
 sec.or.th$$#bodyCookie
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sec.or.th###bodyCookie:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sec.or.th###bodyCookie
 !#endif
@@ -5442,71 +4488,69 @@ sec.or.th###bodyCookie
 sec.or.th##^#overlay
 sec.or.th$$#overlay
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
 sec.or.th###overlay:remove()
-!#endif
 !#if !adugard || !ext_ublock && !cap_html_filtering
 sec.or.th###overlay
 !#endif
-!MadeByMe Cosmestic rules
 !#if cap_html_filtering
-##^.eupopup-body
-$$.eupopup-body
+ejan.co##^#glowCookies-banner
+ejan.co$$#glowCookies-banner
 !#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+ejan.co###glowCookies-banner:remove()
+!#if !adugard || !ext_ublock && !cap_html_filtering
+ejan.co###glowCookies-banner
+!#endif
+!#if cap_html_filtering
+snp1344.com##^.cookie-consent
+snp1344.com$$.cookie-consent
+!#endif
+snp1344.com##.cookie-consent:remove()
+!#if !adugard || !ext_ublock && !cap_html_filtering
+snp1344.com##.cookie-consent
+!#endif
+!#if cap_html_filtering
+biobeamcenter.com##^.cwc-sdk-container
+biobeamcenter.com$$.cwc-sdk-container
+!#endif
+biobeamcenter.com##.cwc-sdk-container:remove()
+!#if !adugard || !ext_ublock && !cap_html_filtering
+biobeamcenter.com##.cwc-sdk-container
+!#endif
+!MadeByMe Cosmestic rules
+!#if adugard || ext_ublock
 ##.eupopup-body:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.eupopup-body
 !#endif
-!#if cap_html_filtering
-##^.eupopup-head
-$$.eupopup-head
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##.eupopup-head:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.eupopup-head
 !#endif
-!#if cap_html_filtering
-##^#pdpa-wrapper
-$$#pdpa-wrapper
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ###pdpa-wrapper:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ###pdpa-wrapper
 !#endif
-!#if cap_html_filtering
-##^.pdpa
-$$.pdpa
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ##.pdpa:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ##.pdpa
 !#endif
-!#if cap_html_filtering
-##^#consentTrackAndCookieBar
-$$#consentTrackAndCookieBar
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ###consentTrackAndCookieBar:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ###consentTrackAndCookieBar
 !#endif
-!#if cap_html_filtering
-##^#js-consent-banner
-$$#js-consent-banner
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
+!#if adugard || ext_ublock
 ###js-consent-banner:remove()
 !#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
+!#if !adugard || !ext_ublock
 ###js-consent-banner
 !#endif
 /pdpa.js
@@ -5516,68 +4560,14 @@ $$#js-consent-banner
 !
 !
 !General rules
-!#if cap_html_filtering
-!##^[class*="cookie"]:not(body):not(html):not(article)
-!$$[class*="cookie"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="cookie"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="cookie"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="cookie"]:not(body):not(html):not(article)
-!$$[id*="cookie"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="cookie"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="cookie"]:not(body):not(html):not(article)
-!#endif
 !
-!#if cap_html_filtering
-!##^[class*="policy"]:not(body):not(html):not(article)
-!$$[class*="policy"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="policy"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="policy"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="policy"]:not(body):not(html):not(article)
-!$$[id*="policy"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="policy"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="policy"]:not(body):not(html):not(article)
-!#endif
 !
-!#if cap_html_filtering
-!##^[class*="pdpa"]:not(body):not(html):not(article)
-!$$[class*="pdpa"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[class*="pdpa"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[class*="pdpa"]:not(body):not(html):not(article)
-!#endif
-!#if cap_html_filtering
-!##^[id*="pdpa"]:not(body):not(html):not(article)
-!$$[id*="pdpa"]:not(body):not(html):not(article)
-!#endif
-!#if adugard || ext_ublock && !cap_html_filtering
-!##[id*="pdpa"]:not(body):not(html):not(article):remove()
-!#endif
-!#if !adugard || !ext_ublock && !cap_html_filtering
 !##[id*="pdpa"]:not(body):not(html):not(article)
-!#endif
 !
 !----------------Cookie -----------------END
 !----------------------------------------END
