@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231228210059
+! Version: 20231230013624
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -90,26 +90,17 @@ google.*##div.uEierd:style(opacity: 40% !important; -webkit-opacity: 40% !import
 
 !youtube
 !youtube โฆษณาด้านขวา เหนือ recommeneded video
-!#if cap_html_filtering
-www.youtube.com##^ytd-ad-slot-renderer
-www.youtube.com$$ytd-ad-slot-renderer
-!#endif
+!>>>>>mode<<<<<
 www.youtube.com##ytd-ad-slot-renderer
-
+!>>>>>mode<<<<< html and default
 !
 !---clouds cloud ---
 !
+!>>>>>mode<<<<<
 !terabox.com 20231224182134
-!#if cap_html_filtering
-terabox.com##^.seo-banner-box
-terabox.com$$.seo-banner-box
-!#endif
 terabox.com##.seo-banner-box
-!#if cap_html_filtering
-terabox.com##^.drainage
-terabox.com$$.drainage
-!#endif
 terabox.com##.drainage
+!>>>>>mode<<<<< html and default
 !
 !
 !---picture image host---
@@ -954,16 +945,20 @@ camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posit
 !---social platform ---
 !
 !pantip.com
+!>>>>>mode<<<<< html or default
 !#if cap_html_filtering
 pantip.com##^div.ads-leaderboard
 pantip.com$$div.ads-leaderboard
-!#endif
+!#else
 pantip.com##div.ads-leaderboard
+!#endif
 !#if cap_html_filtering
 pantip.com##^div.ads-topbillboard
 pantip.com$$div.ads-topbillboard
-!#endif
+!#else
 pantip.com##div.ads-topbillboard
+!#endif
+!>>>>>mode<<<<< html and default
 !
 !---wiki ---
 !
@@ -1760,103 +1755,130 @@ nekopost.net##div.svelte-1d0qhdr.h-4
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-||*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|murim-manga.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com
-||*.mp4$media,domain=manga-sugoi.com
-||*.webp$image,domain=mangauptocats.net|mangauptocats.com
-!manga168.com 
-||manga168.com/god^$domain=manga168.com
-||1.bp.blogspot.com/$domain=manga168.com
-||amz-cdn*.manga168.com/images/*.gif$domain=manga168.com
-||i.imgur.com/*.gif$domain=manga168.com
+/*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com
+/*.mp4$media,domain=manga-sugoi.com
+/*.webp$image,domain=mangauptocats.net|mangauptocats.com
+!>>>>>mode<<<<< html or default
+!manga168.com
 !#if cap_html_filtering
 manga168.com##^.dessert-frame > center
 manga168.com$$.dessert-frame > center
-!#endif
+!#else
 manga168.com##.dessert-frame > center
+!#endif
 !#if cap_html_filtering
 manga168.com##^#ads_fox_bottom
 manga168.com$$#ads_fox_bottom
-!#endif
+!#else
 manga168.com###ads_fox_bottom
+!#endif
 !#if cap_html_filtering
 manga168.com##^.slider-ads
 manga168.com$$.slider-ads
-!#endif
+!#else
 manga168.com##.slider-ads
+!#endif
+!#if cap_html_filtering
+manga168.com##^.ads-info
+manga168.com$$.ads-info
+!#else
+manga168.com##.ads-info
+!#endif
 !#if cap_html_filtering
 manga168.com##^#colophon > div:nth-of-type(3)
 manga168.com$$#colophon > div:nth-of-type(3)
-!#endif
+!#else
 manga168.com###colophon > div:nth-of-type(3)
-||manga168.com/wp-content/uploads/banner/ww.webp$image
-!!background
-||manga168.com/over-cover.webp
+!#endif
+!#if cap_html_filtering
+manga168.com##^.kln
+manga168.com$$.kln
+!#else
+manga168.com##.kln
+!#endif
+https://go.xn--16-ftitt.com/inw2.jpg$domain=manga168.com
 !tanuki-manga.com
 !#if cap_html_filtering
 tanuki-manga.com##^.ads
 tanuki-manga.com$$.ads
-!#endif
+!#else
 tanuki-manga.com##.ads
+!#endif
 !manga-sugoi.com
 !#if cap_html_filtering
 manga-sugoi.com##^.blox, .mlb, .kln
 manga-sugoi.com$$.blox, .mlb, .kln
-!#endif
+!#else
 manga-sugoi.com##.blox, .mlb, .kln
+!#endif
 !moodtoon.com
 !#if cap_html_filtering
 moodtoon.com##^div.ads-info
 moodtoon.com$$div.ads-info
-!#endif
+!#else
 moodtoon.com##div.ads-info
+!#endif
 !#if cap_html_filtering
 moodtoon.com##^div.mt-ad
 moodtoon.com$$div.mt-ad
-!#endif
+!#else
 moodtoon.com##div.mt-ad
+!#endif
 !#if cap_html_filtering
 moodtoon.com##^li#menu-item-595198
 moodtoon.com$$li#menu-item-595198
-!#endif
+!#else
 moodtoon.com##li#menu-item-595198
+!#endif
 !#if cap_html_filtering
 moodtoon.com##^div[id^="ads_"]
 moodtoon.com$$div[id^="ads_"]
-!#endif
+!#else
 moodtoon.com##div[id^="ads_"]
+!#endif
 !niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
 www.niceoppai.net$$div[class="top_page widget_text"]
-!#endif
+!#else
 www.niceoppai.net##div[class="top_page widget_text"]
+!#endif
 !#if cap_html_filtering
 www.niceoppai.net##^li[class="wid widget_text"][id="text-6"]
 www.niceoppai.net$$li[class="wid widget_text"][id="text-6"]
-!#endif
+!#else
 www.niceoppai.net##li[class="wid widget_text"][id="text-6"]
+!#endif
 !#if cap_html_filtering
 www.niceoppai.net##^li[class="wid widget_text"][id="text-9"]
 www.niceoppai.net$$li[class="wid widget_text"][id="text-9"]
-!#endif
+!#else
 www.niceoppai.net##li[class="wid widget_text"][id="text-9"]
+!#endif
 !!หน้าอ่าน
 !#if cap_html_filtering
 www.niceoppai.net##^div[id="sct_top_banner"]
 www.niceoppai.net$$div[id="sct_top_banner"]
-!#endif
+!#else
 www.niceoppai.net##div[id="sct_top_banner"]
+!#endif
 !#if cap_html_filtering
 www.niceoppai.net##^div[id="sct_footer_banner"]
 www.niceoppai.net$$div[id="sct_footer_banner"]
-!#endif
+!#else
 www.niceoppai.net##div[id="sct_footer_banner"]
+!#endif
 !#if cap_html_filtering
 www.niceoppai.net##^.mng_rdr.wpm_pag > center
 www.niceoppai.net$$.mng_rdr.wpm_pag > center
-!#endif
+!#else
 www.niceoppai.net##.mng_rdr.wpm_pag > center
+!#endif
 !!ads banner
+https://image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg
+https://image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg
+https://image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg
+https://image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg
 https://1.bp.blogspot.com/*$domain=www.niceoppai.net
 https://blogger.googleusercontent.com/img/b*.gif$domain=www.niceoppai.net
 https://www.niceoppai.net/wp-content/uploads*.gif$domain=www.niceoppai.net
@@ -1868,204 +1890,249 @@ https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$domain=www.ni
 !#if cap_html_filtering
 mangadeemak.com##^div[id^="ads"]
 mangadeemak.com$$div[id^="ads"]
-!#endif
+!#else
 mangadeemak.com##div[id^="ads"]
+!#endif
 !#if cap_html_filtering
 mangadeemak.com##^.wp-manga.c-top-sidebar.c-sidebar
 mangadeemak.com$$.wp-manga.c-top-sidebar.c-sidebar
-!#endif
+!#else
 mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
+!#endif
 !manga-uptocats.com
 !#if cap_html_filtering
 manga-uptocats.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
 manga-uptocats.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
-!#endif
+!#else
 manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !kingsmanga.net
 !#if cap_html_filtering
 kingsmanga.net##^#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
 kingsmanga.net$$#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
-!#endif
+!#else
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
+!#endif
 !kuro-manga.com
 !#if cap_html_filtering
 kuro-manga.com##^div[class="c-sidebar"]
 kuro-manga.com$$div[class="c-sidebar"]
-!#endif
+!#else
 kuro-manga.com##div[class="c-sidebar"]
+!#endif
 !#if cap_html_filtering
 kuro-manga.com##^div.widget_text
 kuro-manga.com$$div.widget_text
-!#endif
+!#else
 kuro-manga.com##div.widget_text
+!#endif
 !rh2plusmanga.com
 !#if cap_html_filtering
 rh2plusmanga.com##^.ads
 rh2plusmanga.com$$.ads
-!#endif
+!#else
 rh2plusmanga.com##.ads
+!#endif
 !#if cap_html_filtering
 rh2plusmanga.com##^.ads-float
 rh2plusmanga.com$$.ads-float
-!#endif
+!#else
 rh2plusmanga.com##.ads-float
+!#endif
 !loli-manga.com
 !#if cap_html_filtering
 loli-manga.com##^div[class*="ads"]
 loli-manga.com$$div[class*="ads"]
-!#endif
+!#else
 loli-manga.com##div[class*="ads"]
+!#endif
 !#if cap_html_filtering
 loli-manga.com##^.popup-wrap
 loli-manga.com$$.popup-wrap
-!#endif
+!#else
 loli-manga.com##.popup-wrap
+!#endif
 !thaimanga.net
 !#if cap_html_filtering
 thaimanga.net##^.ads
 thaimanga.net$$.ads
-!#endif
+!#else
 thaimanga.net##.ads
+!#endif
 ://$script,third-party,domain=thaimanga.net
 !mangaisekaithai.com
 !#if cap_html_filtering
 mangaisekaithai.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 mangaisekaithai.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
-!#endif
+!#else
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !mangafins.net
 !#if cap_html_filtering
 mangafins.net##^.c-top-sidebar
 mangafins.net$$.c-top-sidebar
-!#endif
+!#else
 mangafins.net##.c-top-sidebar
+!#endif
 !murim-manga.com 20231225133557
 !#if cap_html_filtering
 murim-manga.com##^.dessert-frame
 murim-manga.com$$.dessert-frame
-!#endif
+!#else
 murim-manga.com##.dessert-frame
+!#endif
 !#if cap_html_filtering
 murim-manga.com##^.slider-ads
 murim-manga.com$$.slider-ads
-!#endif
+!#else
 murim-manga.com##.slider-ads
+!#endif
+!#if cap_html_filtering
+murim-manga.com##^#ads_fox_bottom
+murim-manga.com$$#ads_fox_bottom
+!#else
+murim-manga.com###ads_fox_bottom
+!#endif
+https://*.murim-manga.com/images/*.gif$domain=murim-manga.com
+https://*.murim-manga.com/images/*.webp$domain=murim-manga.com
 !ped-manga.com
 !#if cap_html_filtering
 ped-manga.com##^.dessert-frame
 ped-manga.com$$.dessert-frame
-!#endif
+!#else
 ped-manga.com##.dessert-frame
+!#endif
 !#if cap_html_filtering
 ped-manga.com##^#wbnn
 ped-manga.com$$#wbnn
-!#endif
+!#else
 ped-manga.com###wbnn
+!#endif
 !dokimori.com
 !#if cap_html_filtering
 dokimori.com##^.col-md-12
 dokimori.com$$.col-md-12
-!#endif
+!#else
 dokimori.com##.col-md-12
+!#endif
 !manhwabreakup.com
 !#if cap_html_filtering
 manhwabreakup.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 manhwabreakup.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
-!#endif
+!#else
 manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !#if cap_html_filtering
 manhwabreakup.com##^div[class="ads-float"]
 manhwabreakup.com$$div[class="ads-float"]
-!#endif
+!#else
 manhwabreakup.com##div[class="ads-float"]
+!#endif
 !tpnoodle.com
 !#if cap_html_filtering
 tpnoodle.com##^div[class="row mt-3"]:nth-of-type(1)
 tpnoodle.com$$div[class="row mt-3"]:nth-of-type(1)
-!#endif
+!#else
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
+!#endif
 !#if cap_html_filtering
 tpnoodle.com##^div[class="col-3 mt-2"]
 tpnoodle.com$$div[class="col-3 mt-2"]
-!#endif
+!#else
 tpnoodle.com##div[class="col-3 mt-2"]
+!#endif
 !makimaaaaa.com
 !#if cap_html_filtering
 makimaaaaa.com##^div[class="blox mlb kln"]
 makimaaaaa.com$$div[class="blox mlb kln"]
-!#endif
+!#else
 makimaaaaa.com##div[class="blox mlb kln"]
+!#endif
 !#if cap_html_filtering
 makimaaaaa.com##^div[id="wbnn"]
 makimaaaaa.com$$div[id="wbnn"]
-!#endif
+!#else
 makimaaaaa.com##div[id="wbnn"]
+!#endif
 !#if cap_html_filtering
 makimaaaaa.com##^div[class="kln"]
 makimaaaaa.com$$div[class="kln"]
-!#endif
+!#else
 makimaaaaa.com##div[class="kln"]
+!#endif
+https://*.makimaaaaa.com/images/*.gif$domain=makimaaaaa.com
 !romance-manga.com
 !#if cap_html_filtering
 romance-manga.com##^div.rm-ads
 romance-manga.com$$div.rm-ads
-!#endif
+!#else
 romance-manga.com##div.rm-ads
+!#endif
 !#if cap_html_filtering
 romance-manga.com##^div.ads-info
 romance-manga.com$$div.ads-info
-!#endif
+!#else
 romance-manga.com##div.ads-info
+!#endif
 !germa-66.com
 !#if cap_html_filtering
 germa-66.com##^div[class="blox mlb kln"]
 germa-66.com$$div[class="blox mlb kln"]
-!#endif
+!#else
 germa-66.com##div[class="blox mlb kln"]
+!#endif
 !#if cap_html_filtering
 germa-66.com##^div[id="wbnn"]
 germa-66.com$$div[id="wbnn"]
-!#endif
+!#else
 germa-66.com##div[id="wbnn"]
+!#endif
 !manhuakey.com
 !#if cap_html_filtering
 manhuakey.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 manhuakey.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
-!#endif
+!#else
 manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !manhuabug.com
 !#if cap_html_filtering
 manhuabug.com##^div[class="header-ads-section"]
 manhuabug.com$$div[class="header-ads-section"]
-!#endif
+!#else
 manhuabug.com##div[class="header-ads-section"]
+!#endif
 !mangathailand.com
 !#if cap_html_filtering
 mangathailand.com##^div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
 mangathailand.com$$div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
-!#endif
+!#else
 mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
+!#endif
 !#if cap_html_filtering
 mangathailand.com##^div[data-id="43c9931"]
 mangathailand.com$$div[data-id="43c9931"]
-!#endif
+!#else
 mangathailand.com##div[data-id="43c9931"]
+!#endif
 !popsmanga.com
 !#if cap_html_filtering
 popsmanga.com##^div.dessert-frame
 popsmanga.com$$div.dessert-frame
-!#endif
+!#else
 popsmanga.com##div.dessert-frame
+!#endif
 !#if cap_html_filtering
 popsmanga.com##^div#wbnn
 popsmanga.com$$div#wbnn
-!#endif
+!#else
 popsmanga.com##div#wbnn
+!#endif
 !#if cap_html_filtering
 popsmanga.com##^div.kln
 popsmanga.com$$div.kln
-!#endif
+!#else
 popsmanga.com##div.kln
+!#endif
 !popsmanga.com##.postbody.full:style(padding-top: 20px !important)
 !popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
@@ -2073,24 +2140,28 @@ wss://$domain=popsmanga.com
 !#if cap_html_filtering
 toomtam-manga.com##^div#wbnn
 toomtam-manga.com$$div#wbnn
-!#endif
+!#else
 toomtam-manga.com##div#wbnn
+!#endif
 !#if cap_html_filtering
 toomtam-manga.com##^div.dessert-frame
 toomtam-manga.com$$div.dessert-frame
-!#endif
+!#else
 toomtam-manga.com##div.dessert-frame
+!#endif
 !#if cap_html_filtering
 toomtam-manga.com##^div.kln
 toomtam-manga.com$$div.kln
-!#endif
+!#else
 toomtam-manga.com##div.kln
+!#endif
 !manga-za.net
 !#if cap_html_filtering
 manga-za.net##^div[class="mt-ad text-center"]
 manga-za.net$$div[class="mt-ad text-center"]
-!#endif
+!#else
 manga-za.net##div[class="mt-ad text-center"]
+!#endif
 !mangapdf-online.com
 ://$script,third-party,domain=mangapdf-online.com
 !oremanga.net
@@ -2099,121 +2170,141 @@ manga-za.net##div[class="mt-ad text-center"]
 !#if cap_html_filtering
 manga-lc.net##^div[class="c-sidebar c-top-sidebar wp-manga"]
 manga-lc.net$$div[class="c-sidebar c-top-sidebar wp-manga"]
-!#endif
+!#else
 manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !chocomanga.com
 !#if cap_html_filtering
 chocomanga.com##^div[class="ads"]
 chocomanga.com$$div[class="ads"]
-!#endif
+!#else
 chocomanga.com##div[class="ads"]
+!#endif
 !doodmanga.com
 !#if cap_html_filtering
 doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 doodmanga.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
-!#endif
+!#else
 doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !manga-post.com 20231217005704
 !#if cap_html_filtering
 manga-post.com##^center > a:upward(1)
 manga-post.com$$center > a:upward(1)
-!#endif
+!#else
 manga-post.com##center > a:upward(1)
+!#endif
 !mafia-manga.com 20231217005325
 ://$script,third-party,domain=mafia-manga.com
 !#if cap_html_filtering
 mafia-manga.com##^div.dessert-frame
 mafia-manga.com$$div.dessert-frame
-!#endif
+!#else
 mafia-manga.com##div.dessert-frame
+!#endif
 !#if cap_html_filtering
 mafia-manga.com##^.allc
 mafia-manga.com$$.allc
-!#endif
+!#else
 mafia-manga.com##.allc
+!#endif
 !#if cap_html_filtering
 mafia-manga.com##^a[href="https://ufabet24auto.com/"]:upward(1)
 mafia-manga.com$$a[href="https://ufabet24auto.com/"]:upward(1)
-!#endif
+!#else
 mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
+!#endif
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-||*.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
+/*.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
 !Anime Sugoi 20231225134824
 !!เอา box ที่เขียนว่า โฆษณา ออก
 !#if cap_html_filtering
 anime-sugoi.com##^div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 anime-sugoi.com$$div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
-!#endif
+!#else
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!#endif
 !!เอาdiv โฆษณาอันแรกออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > .col-md-8
 anime-sugoi.com$$.container > .row > .col-md-8
-!#endif
+!#else
 anime-sugoi.com##.container > .row > .col-md-8
+!#endif
 !!เอาdiv โฆษณาอัน2ออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > center
 anime-sugoi.com$$.container > .row > center
-!#endif
+!#else
 anime-sugoi.com##.container > .row > center
+!#endif
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
 !#if cap_html_filtering
 anime-sugoi.com##^.panel-body > center > a
 anime-sugoi.com$$.panel-body > center > a
-!#endif
+!#else
 anime-sugoi.com##.panel-body > center > a
+!#endif
 !#if cap_html_filtering
 anime-sugoi.com##^#bt-ads
 anime-sugoi.com$$#bt-ads
-!#endif
+!#else
 anime-sugoi.com###bt-ads
+!#endif
 ||anime-sugoi.com/pic/
 !anime-masters.com
 !#if cap_html_filtering
 anime-masters.com##^div.container > .row > .center_lnwphp
 anime-masters.com$$div.container > .row > .center_lnwphp
-!#endif
+!#else
 anime-masters.com##div.container > .row > .center_lnwphp
+!#endif
 !#if cap_html_filtering
 anime-masters.com##^center:nth-of-type(2)
 anime-masters.com$$center:nth-of-type(2)
-!#endif
+!#else
 anime-masters.com##center:nth-of-type(2)
+!#endif
 !#if cap_html_filtering
 anime-masters.com##^center:nth-of-type(4)
 anime-masters.com$$center:nth-of-type(4)
-!#endif
+!#else
 anime-masters.com##center:nth-of-type(4)
+!#endif
 !#if cap_html_filtering
 anime-masters.com##^.col-md-9 > span
 anime-masters.com$$.col-md-9 > span
-!#endif
+!#else
 anime-masters.com##.col-md-9 > span
+!#endif
 !animekimi.com
 !#if cap_html_filtering
 animekimi.com##^.module_home_x
 animekimi.com$$.module_home_x
-!#endif
+!#else
 animekimi.com##.module_home_x
+!#endif
 !anifume.com
 !#if cap_html_filtering
 anifume.com##^div[id^="display-"]
 anifume.com$$div[id^="display-"]
-!#endif
+!#else
 anifume.com##div[id^="display-"]
+!#endif
 !#if cap_html_filtering
 anifume.com##^div.F4uDjm45n
 anifume.com$$div.F4uDjm45n
-!#endif
+!#else
 anifume.com##div.F4uDjm45n
+!#endif
 !#if cap_html_filtering
 anifume.com##^div.topml
 anifume.com$$div.topml
-!#endif
+!#else
 anifume.com##div.topml
+!#endif
 ://$script,third-party,domain=anifume.com
 !anime-suba.com
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s
@@ -2221,62 +2312,73 @@ anifume.com##div.topml
 !#if cap_html_filtering
 animehayai.net##^.col-12
 animehayai.net$$.col-12
-!#endif
+!#else
 animehayai.net##.col-12
+!#endif
 !#if cap_html_filtering
 animehayai.net##^.ads-banner
 animehayai.net$$.ads-banner
-!#endif
+!#else
 animehayai.net##.ads-banner
+!#endif
 !#if cap_html_filtering
 animehayai.net##^.banner-close
 animehayai.net$$.banner-close
-!#endif
+!#else
 animehayai.net##.banner-close
+!#endif
 !#if cap_html_filtering
 animehayai.net##^div[class="text-center bottom-2x"]
 animehayai.net$$div[class="text-center bottom-2x"]
-!#endif
+!#else
 animehayai.net##div[class="text-center bottom-2x"]
+!#endif
 !anime-kimuchi.com
 !#if cap_html_filtering
 anime-kimuchi.com##^#scrollUp
 anime-kimuchi.com$$#scrollUp
-!#endif
+!#else
 anime-kimuchi.com###scrollUp
+!#endif
 !#if cap_html_filtering
 anime-kimuchi.com##^#slider-r
 anime-kimuchi.com$$#slider-r
-!#endif
+!#else
 anime-kimuchi.com###slider-r
+!#endif
 !neko-miku.com
 !#if cap_html_filtering
 neko-miku.com##^#footer > .container p
 neko-miku.com$$#footer > .container p
-!#endif
+!#else
 neko-miku.com###footer > .container p
+!#endif
 !fairyanime.net
 !#if cap_html_filtering
 fairyanime.net##^#kosana
 fairyanime.net$$#kosana
-!#endif
+!#else
 fairyanime.net###kosana
+!#endif
 !#if cap_html_filtering
 fairyanime.net##^#main-content > div.concise.animated.bounce:nth-child(5)
 fairyanime.net$$#main-content > div.concise.animated.bounce:nth-child(5)
-!#endif
+!#else
 fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
+!#endif
 !shibaanime.com
 !#if cap_html_filtering
 shibaanime.com##^a[rel$="sponsored"]
 shibaanime.com$$a[rel$="sponsored"]
-!#endif
+!#else
 shibaanime.com##a[rel$="sponsored"]
+!#endif
 !#if cap_html_filtering
 shibaanime.com##^div.hero.common-hero:nth-child(2)
 shibaanime.com$$div.hero.common-hero:nth-child(2)
-!#endif
+!#else
 shibaanime.com##div.hero.common-hero:nth-child(2)
+!#endif
 !anime-hit.com
 ||anime-hit.com^$popup,domain=~anime-hit.com
 ##a[hreaf^="https://anime-hit.com"]
@@ -2285,143 +2387,139 @@ anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 !#if cap_html_filtering
 animetako.net##^div[id^="animekimiads"]
 animetako.net$$div[id^="animekimiads"]
-!#endif
+!#else
 animetako.net##div[id^="animekimiads"]
+!#endif
 !https://www.kurokami.me
 !#if cap_html_filtering
 kurokami.me##^div[class="col-6 banner728x200-div"]
 kurokami.me$$div[class="col-6 banner728x200-div"]
-!#endif
+!#else
 kurokami.me##div[class="col-6 banner728x200-div"]
+!#endif
 !#if cap_html_filtering
 kurokami.me##^div[id^="ads_0"]
 kurokami.me$$div[id^="ads_0"]
-!#endif
+!#else
 kurokami.me##div[id^="ads_0"]
+!#endif
 !#if cap_html_filtering
 kurokami.me##^p
 kurokami.me$$p
-!#endif
+!#else
 kurokami.me##p
+!#endif
 !https://animelizm.com/
 !#if cap_html_filtering
 animelizm.com##^.dessert-frame
 animelizm.com$$.dessert-frame
-!#endif
+!#else
 animelizm.com##.dessert-frame
+!#endif
 !#if cap_html_filtering
 animelizm.com##^div.al-ads
 animelizm.com$$div.al-ads
-!#endif
+!#else
 animelizm.com##div.al-ads
+!#endif
 !#if cap_html_filtering
 animelizm.com##^section[id="custom_html-60"]
 animelizm.com$$section[id="custom_html-60"]
-!#endif
+!#else
 animelizm.com##section[id="custom_html-60"]
+!#endif
 !animeshiro.com
 https://blogger.googleusercontent.com/*.gif$domain=animeshiro.com
 !#if cap_html_filtering
 animeshiro.com##^div.banner-wrapper
 animeshiro.com$$div.banner-wrapper
-!#endif
+!#else
 animeshiro.com##div.banner-wrapper
+!#endif
 !
 !---Novel ---
 !
-||*.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
+/*.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 !novel-lucky.com
 !#if cap_html_filtering
 novel-lucky.com##^.advanced_floating_content 
 novel-lucky.com$$.advanced_floating_content 
-!#endif
+!#else
 novel-lucky.com##.advanced_floating_content 
+!#endif
 !#if cap_html_filtering
 novel-lucky.com##^.container-fluid
 novel-lucky.com$$.container-fluid
-!#endif
+!#else
 novel-lucky.com##.container-fluid
+!#endif
 !#if cap_html_filtering
 novel-lucky.com##^.c-sidebar
 novel-lucky.com$$.c-sidebar
-!#endif
+!#else
 novel-lucky.com##.c-sidebar
+!#endif
 !#if cap_html_filtering
 novel-lucky.com##^#bottom_center_ads_1
 novel-lucky.com$$#bottom_center_ads_1
-!#endif
+!#else
 novel-lucky.com###bottom_center_ads_1
+!#endif
 !aileen-novel.online
 ://$script,third-party,domain=aileen-novel.online
 !novelpdf.xyz
-novelpdf.xyz#%#//scriptlet('prevent-window-open')
-novelpdf.xyz##+js(window.open-defuser)
-||ticket.leaforfree.com^$all,third-party
+||ticket.leaforfree.com^$all
 ://$script,third-party,domain=novelpdf.xyz
 !cat2auto.com
 !#if cap_html_filtering
 cat2auto.com##^div.widget_text
 cat2auto.com$$div.widget_text
-!#endif
+!#else
 cat2auto.com##div.widget_text
+!#endif
 !#if cap_html_filtering
 cat2auto.com##^div[id*="ads_"]
 cat2auto.com$$div[id*="ads_"]
-!#endif
+!#else
 cat2auto.com##div[id*="ads_"]
+!#endif
 !#if cap_html_filtering
 cat2auto.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
 cat2auto.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
-!#endif
+!#else
 cat2auto.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !อ่านทั้งวัน.com
 !#if cap_html_filtering
 xn--72c5afc3e6a4acd3tpa.com##^div.section-sponser
 xn--72c5afc3e6a4acd3tpa.com$$div.section-sponser
-!#endif
+!#else
 xn--72c5afc3e6a4acd3tpa.com##div.section-sponser
+!#endif
 !นิยายฟรี.com
 !#if cap_html_filtering
 xn--q3cmiag1gmn.com##^div.header-ads-section
 xn--q3cmiag1gmn.com$$div.header-ads-section
-!#endif
+!#else
 xn--q3cmiag1gmn.com##div.header-ads-section
+!#endif
 !
 !---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-||*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|doomovie-hd.com|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
+/*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
 !
 /series-indy
 /928hd
 /series168*
 !nungdeedee.com
-||nungdeedee.com/externallink$all
+||nungdeedee.com/externallink*$all,domain=nungdeedee.com
 !#if cap_html_filtering
 nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
 nungdeedee.com$$a[href^="https://nungdeedee.com/externallink"]
-!#endif
+!#else
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
-!doomovie-hd.com
-!#if cap_html_filtering
-doomovie-hd.com##^.left-floating-banana
-doomovie-hd.com$$.left-floating-banana
 !#endif
-doomovie-hd.com##.left-floating-banana
-!#if cap_html_filtering
-doomovie-hd.com##^.right-floating-banana
-doomovie-hd.com$$.right-floating-banana
-!#endif
-doomovie-hd.com##.right-floating-banana
-!#if cap_html_filtering
-doomovie-hd.com##^div[onclick^="window.ultimateBananaClicked"]
-doomovie-hd.com$$div[onclick^="window.ultimateBananaClicked"]
-!#endif
-doomovie-hd.com##div[onclick^="window.ultimateBananaClicked"]
-!#if cap_html_filtering
-doomovie-hd.com##^div[class^="horizontal-ad-bar"]
-doomovie-hd.com$$div[class^="horizontal-ad-bar"]
-!#endif
-doomovie-hd.com##div[class^="horizontal-ad-bar"]
+!>>>>>mode<<<<< html and default
 !24-hd.com
 !#if cap_html_filtering
 24-hd.com##^.ad
@@ -2513,6 +2611,10 @@ dooseries.com#@#a[href^="https://dooseries.com"]
 series-indy*.webp
 !redirect to ads domain when click backward (popunder pop-under)
 /popunder*.js
+!mal usage ส่วนใหญ่ชอบใช้ ผิดวัตถุประสงค์ เช่น การโฆษณา
+https://media.discordapp.net/attachments/*/*/*.jpg
+https://media.discordapp.net/attachments/*/*/*.gif
+https://media.discordapp.net/attachments/*/*/*.webp
 !---------------General Rules------------END
 !----------------------------------------END
 !----------------------------------------END
