@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20231230013624
+! Version: 20240102165223
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -65,14 +65,19 @@ https://www.gqdhsmwzpc.com^$all
 https://www.xwojiijs.com^$all
 https://www.okx.com^$all
 https://www.zpigericvlz.com^$all
+https://www.fogtweybq.com^$all
 !manhwazmove.com
 https://wowrapidly.com^$all
+!novelpdf.xyz
+||ticket.leaforfree.com^$all
 !
 ||exness.com^$all,domain=~exness.com
 !from siamblockchain.com
 ||cryptojimmy.care^$all
 !official popup blocker test
 ||rrc.texas.gov^$popup
+!freespin ad พบได้ใน cats-translator.com
+/freespin-ts.gif
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
 !----------------------------------------END
@@ -172,7 +177,11 @@ me-qr.com##div[class="bg-success"]
 !!!รายการแรกที่เป็นโฆษณา 20231212012356
 web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href*="__tn__=H-R"]:upward(6):remove()
 !!ads of side feed 20231213191619
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span:remove()
+!#if cap_html_filtering
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##^div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion$$div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
+!#endif
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
 !!feed sponsored 20231214011051
 web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
 web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
@@ -924,7 +933,16 @@ obsproject.com##.notice--cookie:not(body):not(html)
 
 !---Manga Foreign---
 !www.novelupdates.com
-##.ad_336
+!#if cap_html_filtering
+www.novelupdates.com##^.ad_336
+www.novelupdates.com$$.ad_336
+!#endif
+www.novelupdates.com##.ad_336
+!#if cap_html_filtering
+www.novelupdates.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+www.novelupdates.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+www.novelupdates.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !------------Specific Ads Rules----------END
 !----------------------------------------END
 !----------------------------------------END
@@ -1755,7 +1773,7 @@ nekopost.net##div.svelte-1d0qhdr.h-4
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-/*.gif$image,domain=mangauptocats.net|mangauptocats.com|manga-uptocats.com|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com
+/*.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|manhuakey.com|manhuabug.com|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com
 /*.mp4$media,domain=manga-sugoi.com
 /*.webp$image,domain=mangauptocats.net|mangauptocats.com
 !>>>>>mode<<<<< html or default
@@ -1875,10 +1893,12 @@ www.niceoppai.net$$.mng_rdr.wpm_pag > center
 www.niceoppai.net##.mng_rdr.wpm_pag > center
 !#endif
 !!ads banner
-https://image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg
-https://image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg
-https://image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg
-https://image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg
+https://image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$domain=www.niceoppai.net
+https://image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$domain=www.niceoppai.net
+https://image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$domain=www.niceoppai.net
+https://image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$domain=www.niceoppai.net
+https://image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$domain=www.niceoppai.net
+https://image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$domain=www.niceoppai.net
 https://1.bp.blogspot.com/*$domain=www.niceoppai.net
 https://blogger.googleusercontent.com/img/b*.gif$domain=www.niceoppai.net
 https://www.niceoppai.net/wp-content/uploads*.gif$domain=www.niceoppai.net
@@ -1898,13 +1918,6 @@ mangadeemak.com##^.wp-manga.c-top-sidebar.c-sidebar
 mangadeemak.com$$.wp-manga.c-top-sidebar.c-sidebar
 !#else
 mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
-!#endif
-!manga-uptocats.com
-!#if cap_html_filtering
-manga-uptocats.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
-manga-uptocats.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
-!#else
-manga-uptocats.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
 !kingsmanga.net
 !#if cap_html_filtering
@@ -2214,6 +2227,19 @@ mafia-manga.com$$a[href="https://ufabet24auto.com/"]:upward(1)
 !#else
 mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
 !#endif
+!cats-translator.com 20240102001320
+!#if cap_html_filtering
+cats-translator.com##^div[id^="ads_"]
+cats-translator.com$$div[id^="ads_"]
+!#else
+cats-translator.com##div[id^="ads_"]
+!#endif
+!#if cap_html_filtering
+cats-translator.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+cats-translator.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
@@ -2380,9 +2406,9 @@ shibaanime.com$$div.hero.common-hero:nth-child(2)
 shibaanime.com##div.hero.common-hero:nth-child(2)
 !#endif
 !anime-hit.com
-||anime-hit.com^$popup,domain=~anime-hit.com
-##a[hreaf^="https://anime-hit.com"]
-anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
+!||anime-hit.com^$popup,domain=~anime-hit.com
+!##a[hreaf^="https://anime-hit.com"]
+!anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 !animetako.net
 !#if cap_html_filtering
 animetako.net##^div[id^="animekimiads"]
@@ -2468,7 +2494,6 @@ novel-lucky.com###bottom_center_ads_1
 !aileen-novel.online
 ://$script,third-party,domain=aileen-novel.online
 !novelpdf.xyz
-||ticket.leaforfree.com^$all
 ://$script,third-party,domain=novelpdf.xyz
 !cat2auto.com
 !#if cap_html_filtering
@@ -2544,11 +2569,11 @@ doonungsub.com##.popup
 !#endif
 1112hd.com##.tt_banner_above_vdo_player
 !ดูหนังใหม่ชนโรง.com
-##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
-ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
+!##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
+!ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
 !dooseries.com
-##a[href^="https://dooseries.com"]
-dooseries.com#@#a[href^="https://dooseries.com"]
+!##a[href^="https://dooseries.com"]
+!dooseries.com#@#a[href^="https://dooseries.com"]
 !ดูหนัง.tv
 !#if cap_html_filtering
 ดูหนัง.tv##^.row
@@ -3053,6 +3078,11 @@ biobeamcenter.com##^.cwc-sdk-container
 biobeamcenter.com$$.cwc-sdk-container
 !#endif
 biobeamcenter.com##.cwc-sdk-container
+!#if cap_html_filtering
+urlscan.io##^.grecaptcha-badge
+urlscan.io$$.grecaptcha-badge
+!#endif
+urlscan.io##.grecaptcha-badge
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
