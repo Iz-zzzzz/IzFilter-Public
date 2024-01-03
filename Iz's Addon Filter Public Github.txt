@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20240102165223
+! Version: 20240103155457
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -1736,6 +1736,20 @@ playulti.com$$.space_side
 !#endif
 playulti.com##.space_side
 !
+!---life sytle ---
+!
+!trueid.net
+!#if cap_html_filtering
+trueid.net##^section[class^="style__BannerSticky-sc-"]
+trueid.net$$section[class^="style__BannerSticky-sc-"]
+!#endif
+trueid.net##section[class^="style__BannerSticky-sc-"]
+!#if cap_html_filtering
+trueid.net##^div[class^="style__AdsStyle-sc-"]
+trueid.net$$div[class^="style__AdsStyle-sc-"]
+!#endif
+trueid.net##div[class^="style__AdsStyle-sc-"]
+!
 !---tech illegitimate ---
 !
 !axeload.com
@@ -3083,6 +3097,11 @@ urlscan.io##^.grecaptcha-badge
 urlscan.io$$.grecaptcha-badge
 !#endif
 urlscan.io##.grecaptcha-badge
+!#if cap_html_filtering
+theptarin.com##^.cwc-cookie-banner-ui-sdk
+theptarin.com$$.cwc-cookie-banner-ui-sdk
+!#endif
+theptarin.com##.cwc-cookie-banner-ui-sdk
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
@@ -3097,6 +3116,9 @@ urlscan.io##.grecaptcha-badge
 !
 !
 !General rules
+!cookiewow api
+!!พบได้ใน theptarin.com
+https://cookiecdn.com^$3p,script
 !##[class*="cookie"]:not(body):not(html):not(article)
 !##[id*="cookie"]:not(body):not(html):not(article)
 !
