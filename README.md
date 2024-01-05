@@ -3,61 +3,90 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Iz-zzzzz/IzFilter-Public">
 
 # Iz's Addon Filter Public Version
+
+- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อไม่ทำให้ performance drop น้อยที่สุด
+- จุดประสงค์ของ filter list นี้ คือ 
+  - บล็อกโฆษณาทุกชนิด [^3]
+    - script โฆษณา
+    - โฆษณาประจำเว็บ (specific) (ไม่รวมถึง โฆษณาที่ไม่ได้การสนับสนุนภายนอก)
+    - โฆษณาประเภทรูป
+    - โฆษณาประเภทข้อความ
+    - โฆษณาประเภท video  (video ad)
+    - โฆษณาประเภทเว็บพuัu
+    - โฆษณาทั่วไป (generic ad)
+    - Ad Server
+    - popup ad
+    - popunder ad
+    - notification ad
+    - anti adblock [^4]
+  - บล็อกสื่งต่างๆ ที่น่ารำคาญ หรือดึงดูดความสนใจ [^3]
+    - paywall ที่ไม่สมเหตุสมผล [^4]
+    - cookie consent
+    - ป้องกันคลิกขวา
+    - ป้องกันลากคลุมข้อความ
+  - ความเป็นส่วนตัว [^3]
+    - Analytics
+    - Telemetry
+    - Parameter
+    - script หรือ element ไม่จำเป็น (ไม่รวม back to top button)
+  - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter
+  - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
+  - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
+- หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
+
+>Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ AdGuard Filter, AdGuard – Cookie Notices, AdGuard Tracking Protection, AdGuard URL Tracking Protection, AdGuard – Mobile Ads, EasyList, Easylist Cookie List, Easy Privacy เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
+
+>ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
+
+>Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่า แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันมีข้อผิดพลาดเยอะมาก
+
+## วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
 - ควรใช้ใน
-  - Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
-  - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [Android app](https://adguard.com/en/adguard-android/overview.html) [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8), [Mac](https://adguard.com/en/adguard-mac/overview.html) [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8).
-  - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [[2]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
+  - Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
+  - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [^1], [Android app](https://adguard.com/en/adguard-android/overview.html) [^1], [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [^1], [Mac](https://adguard.com/en/adguard-mac/overview.html) [^1].
+  - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [^2]
 
   **program อื่นๆ อาจจะสามารถใช้ได้ แต่แค่ยังไม่ได้ลอง
 
-- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อไม่ทำให้ performance drop มากเกินความจำเป็น
-- จุดประสงค์ของ filter นี้ คือ 
-  - บล็อกโฆษณาทุกชนิด รวมถึงเว็บพuัuด้วย [[3]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
-  - บล็อก annoyances elements [[3]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
-  - unblock rules ที่ไม่จำเป็น ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [[1]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8) [[3]](https://github.com/Iz-zzzzz/IzFilter-Public#%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8)
-- หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ อาจจะได้ประโยชน์จากการบล็อกเว็บ international และ unblock rules ที่ไม่จำเป็นใน filter list นี้
-
-`Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด`
-
-`ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads และ uBlock filters – Privacy ด้วย`
-
-`Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่ามาก แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันมีข้อผิดพลาดเยอะมาก`
-
-## วิธีเพิ่ม Filter
 - AdGuard extension
-  - ไปที่แถบ Filters > กด Custom ด้านล่างสุด > กดปุ่ม Add Custom filter > ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > ติ๊ก Trusted > กดปุ่ม Subscribe
+  - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
 - uBlock Origin
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Subscribe ที่มุมขวาบน
 - Brave built-in AdBlock
-  - ไปที่การตั้งค่าของ browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ [Url นี้](https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt) > กด Add
+  - ไปที่การตั้งค่าของ Brave browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > กด Add
 
-`เมื่อเพิ่ม filter แล้ว AdBlock ของคุณจะดาวโหลดข้อมูลเป็นระยะๆ โดยอัตโนมัติ`
+>เมื่อเพิ่ม filter list แล้ว AdBlock ของคุณจะดาวโหลดข้อมูล filter list นี้เป็นระยะๆ โดยอัตโนมัติ
 
-`ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของเว็บ Whilelist, Allow list ทั้งหลาย`
+>ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของแต่ละเว็บ, Whilelist และ Allow list ทั้งหลาย
 
-## ต้องการทำให้ Iz's Filter Public Version ดีขึ้นหรือไม่
+## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
 ### รายงานปัญหาให้แก้ไข
-กรุณารายงานปัญหา[ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/issues) โดยให้รายละเอียดดังนี้ :
-- URL ที่ครบถ้วนของเว็บไซต์ที่พบปัญหา
-- Screenshot พร้อมวงจุดที่คิดว่าผิดพลาดให้ชัดเจน
-- Filter อื่นๆ ที่ใช้งาน ขณะพบปัญหา
+กรุณารายงานปัญหา[ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/issues) 
+โดยให้รายละเอียดดังนี้ :
+- URL ของไซต์ที่พบปัญหา(ขอแบบเป๊ะ)
+- (ไม่จำเป็น) Screenshot พร้อมวงจุดที่คิดว่าผิดพลาดให้ชัดเจน
+- Filter list อื่นๆ ที่ใช้งาน ขณะพบปัญหา
 - Extension/Application AdBlock ที่ใช้งาน
 - (ถ้าใช้ AdGuard) Stealth mode options ที่ใช้
 - ปัญหาที่พบ
 
 ### หากรู้วิธีแก้ไขปัญหาเอง
-กรุณาเพิ่ม Pull request [ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/pulls)
+
+กรุณาเพิ่ม Pull request เอง [ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/pulls)
+
+## อื่นๆ
+
+- This filter list may contain other filter lists. I already commented the sources.
+- The reason why I have not pull request to EasyList Thailand repository because EasyList contains only basic syntax. But this filter list contains a lot of extended syntax.
 
 ## หมายเหตุ
-1: Filter นี้ทำให้ uBlock Origin เป็นหลัก ดังนั้น rules ที่ถูกปรับแต่งให้ทำงานไวขึ้นทั้งหมด(มีไม่กี่ rules เช่น ใน facebook.com, instagram.com, twitter.com)จะใช้ไม่ได้ใน AdGuard และ Brave แต่ AdGuard ก็มี rules ของตัวเองที่ดีอยู่แล้ว
 
-2: Brave built-in AdBlock ไม่ได้รองรับทุก syntax ที่ AdGuard และ uBlock Origin รองรับ จะมีบางเว็บที่ element ซับซ้อน เช่น facebook.com, instagram.com ที่ไม่สามารถบล็อกได้ (youtube.com บล็อกได้)
+[^1]: Filter list นี้ทำให้ uBlock Origin เป็นหลัก ดังนั้น rules ที่ถูกปรับแต่งให้ทำงานไวขึ้นทั้งหมด(มีไม่กี่ rules เช่น ใน facebook.com, instagram.com, twitter.com)จะใช้ไม่ได้ใน AdGuard และ Brave แต่ AdGuard ก็มี rules ของตัวเองที่ดีอยู่แล้ว
 
-3: เพิ่มเติมจากที่ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List ที่ไม่ได้ครอบคลุมส่วนนี้
+[^2]: Brave built-in AdBlock ไม่ได้รองรับทุก syntax ที่ AdGuard และ uBlock Origin รองรับ จะมีบางเว็บที่ element ซับซ้อน เช่น facebook.com, instagram.com ที่ไม่สามารถบล็อกได้ (youtube.com บล็อกได้)
 
-## Disclaimer
-- This filter may contain other's filter. I already commented the sources.
+[^3]: เพิ่มเติมจากที่ AdGuard Base Filter, AdGuard – Cookie Notices, EasyList, Easylist Cookie List ที่ไม่ได้ครอบคลุมส่วนนี้
 
-* The reason why I have not pull request to EasyList Thailand repository because EasyList contains only basic syntax. But this filter list contains a lot of extended syntax.
-* This filter list can replace EasyList Thailand.
-*filter list นี้บล็อกโษณาที่ผิดกฏหมายหรือไม่เป็นธรรมเป็นหลัก กรุณาสนับสนุนเว็บที่โฆษณาอย่างถูกกฏหมายและเป็นธรรมด้วยการ Whitelist หรือ Allow list.
+[^4]: filter list นี้บล็อกโษณาที่ผิดกฏหมายหรือไม่เป็นธรรมเป็นหลัก กรุณาสนับสนุนเว็บที่โฆษณาอย่างถูกกฏหมายและเป็นธรรมด้วยการ Whitelist หรือ Allow list.
+
+[^5]:  HTML filtering ทำงานใน uBO and AdGuard extension ใน Gecko based browser และ stand alone AdGuard app เท่านั้น. กรุณาดูข้อมูลเพิ่มเติมที่ [uBO wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) or [AdGuard wiki](https://adguard.com/kb/general/ad-filtering/create-own-filters/#html-filtering-rules)
