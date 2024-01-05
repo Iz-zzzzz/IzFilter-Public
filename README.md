@@ -14,7 +14,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - โฆษณาประเภท video  (video ad)
     - โฆษณาประเภทเว็บพuัu
     - โฆษณาทั่วไป (generic ad)
-    - Ad Server
+    - ad Server
     - popup ad
     - popunder ad
     - notification ad
@@ -25,9 +25,9 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - ป้องกันคลิกขวา
     - ป้องกันลากคลุมข้อความ
   - ความเป็นส่วนตัว [^3]
-    - Analytics
-    - Telemetry
-    - Parameter
+    - analytics
+    - telemetry
+    - network request parameter ที่ไม่จำเป็น
     - script หรือ element ไม่จำเป็น (ไม่รวม back to top button)
   - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter
   - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
