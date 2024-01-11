@@ -34,7 +34,17 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
   - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
 
->Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ AdGuard Filter, AdGuard – Cookie Notices, AdGuard Tracking Protection, AdGuard URL Tracking Protection, AdGuard – Mobile Ads, EasyList, Easylist Cookie List, Easy Privacy เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
+> [!IMPORTANT]
+> Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ filter
+> - AdGuard Filter
+> - AdGuard – Cookie Notices
+> - AdGuard Tracking Protection
+> - AdGuard URL Tracking Protection
+> - AdGuard – Mobile Ads
+> - EasyList
+> - Easylist Cookie List
+> - Easy Privacy 
+> เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
 
 >ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
