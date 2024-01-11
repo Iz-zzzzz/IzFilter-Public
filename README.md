@@ -90,7 +90,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 ## อื่นๆ
 
 - This filter list may contain other filter lists. I already commented the sources.
-- The reason why I have not pull request to EasyList Thailand repository because EasyList contains only basic syntax. But this filter list contains a lot of extended syntax.
+- The reason why I have not pull request to EasyList Thailand repository is EasyList contains only basic syntax. But this filter list contains a lot of extended syntax.
 
 ## หมายเหตุ
 
