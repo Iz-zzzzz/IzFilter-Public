@@ -40,20 +40,22 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 >Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่า แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันมีข้อผิดพลาดเยอะมาก
 
-## วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
-- ควรใช้ใน
-  - Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
+ควรใช้ใน
+  - Browser Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
   - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [^1], [Android app](https://adguard.com/en/adguard-android/overview.html) [^1], [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [^1], [Mac](https://adguard.com/en/adguard-mac/overview.html) [^1].
   - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [^2]
 
   **program อื่นๆ อาจจะสามารถใช้ได้ แต่แค่ยังไม่ได้ลอง
 
+## วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
+
 - AdGuard extension
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
-- uBlock Origin
+- uBlock Origin extension
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Subscribe ที่มุมขวาบน
 - Brave built-in AdBlock
   - ไปที่การตั้งค่าของ Brave browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > กด Add
+- อื่นๆ : ให้หา menu ประมาณ custom filter lists แล้วนำลิงก์ไปใส่ด้วยตัวเอง
 
 >เมื่อเพิ่ม filter list แล้ว AdBlock ของคุณจะดาวโหลดข้อมูล filter list นี้เป็นระยะๆ โดยอัตโนมัติ
 
