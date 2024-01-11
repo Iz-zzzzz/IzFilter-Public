@@ -44,13 +44,14 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 > - EasyList
 > - Easylist Cookie List
 > - Easy Privacy 
+>
 > เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
 
 >ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
 >Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่า แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันมีข้อผิดพลาดเยอะมาก
 
-ควรใช้ใน
+#### ควรใช้ใน
   - Browser Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
   - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [^1], [Android app](https://adguard.com/en/adguard-android/overview.html) [^1], [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [^1], [Mac](https://adguard.com/en/adguard-mac/overview.html) [^1].
   - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [^2]
