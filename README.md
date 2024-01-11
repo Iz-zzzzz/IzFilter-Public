@@ -4,7 +4,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 # Iz's Addon Filter Public Version
 
-- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อไม่ทำให้ performance drop น้อยที่สุด
+- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
 - จุดประสงค์ของ filter list นี้ คือ 
   - บล็อกโฆษณาทุกชนิด [^3]
     - script โฆษณา
