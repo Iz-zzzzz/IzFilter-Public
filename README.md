@@ -6,9 +6,9 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 - การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
 - จุดประสงค์ของ filter list นี้ คือ 
-  - บล็อกโฆษณาทุกชนิด [^3]
+  - บล็อกโฆษณาทุกชนิด [^3][^6]
     - script โฆษณา
-    - โฆษณาประจำเว็บ (specific) (ไม่รวมถึง โฆษณาที่ไม่ได้การสนับสนุนภายนอก)
+    - โฆษณาประจำเว็บ (specific) (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
     - โฆษณาประเภทรูป
     - โฆษณาประเภทข้อความ
     - โฆษณาประเภท video  (video ad)
@@ -19,17 +19,18 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - popunder ad
     - notification ad
     - anti adblock [^4]
-  - บล็อกสื่งต่างๆ ที่น่ารำคาญ หรือดึงดูดความสนใจ [^3]
+  - บล็อกสื่งต่างๆ ที่น่ารำคาญ หรือดึงดูดความสนใจ [^3][^6]
     - paywall ที่ไม่สมเหตุสมผล [^4]
     - cookie consent
     - ป้องกันคลิกขวา
     - ป้องกันลากคลุมข้อความ
-  - ความเป็นส่วนตัว [^3]
+  - ความเป็นส่วนตัว [^3][^6]
     - analytics
     - telemetry
     - network request parameter ที่ไม่จำเป็น
     - script หรือ element ไม่จำเป็น (ไม่รวม back to top button)
-  - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter
+  - บล็อกเว็บอันตราย เช่น spam ใน Facebook(บล็อกหลังคลิกที่ลิงก์อันตรายจะมีข้อความเตือน ไม่ใช่ซ่อนลิงก์ในเว็บ Facebook), ลิงก์ Phishing [^6]
+  - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter [^6]
   - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
   - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
@@ -68,9 +69,9 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
   - ไปที่การตั้งค่าของ Brave browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > กด Add
 - อื่นๆ : ให้หา menu ประมาณ custom filter lists แล้วนำลิงก์ไปใส่ด้วยตัวเอง
 
->เมื่อเพิ่ม filter list แล้ว AdBlock ของคุณจะดาวโหลดข้อมูล filter list นี้เป็นระยะๆ โดยอัตโนมัติ
+> เมื่อเพิ่ม filter list แล้ว AdBlock ของคุณจะดาวโหลดข้อมูล filter list นี้เป็นระยะๆ โดยอัตโนมัติ
 
->ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของแต่ละเว็บ, Whilelist และ Allow list ทั้งหลาย
+> ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของแต่ละเว็บ, Whilelist และ Allow list ทั้งหลาย
 
 ## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
 ### รายงานปัญหาให้แก้ไข
@@ -103,3 +104,5 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 [^4]: filter list นี้บล็อกโษณาที่ผิดกฏหมายหรือไม่เป็นธรรมเป็นหลัก กรุณาสนับสนุนเว็บที่โฆษณาอย่างถูกกฏหมายและเป็นธรรมด้วยการ Whitelist หรือ Allow list.
 
 [^5]:  HTML filtering ทำงานใน uBO and AdGuard extension ใน Gecko based browser และ stand alone AdGuard app เท่านั้น. กรุณาดูข้อมูลเพิ่มเติมที่ [uBO wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) หรือ [AdGuard wiki](https://adguard.com/kb/general/ad-filtering/create-own-filters/#html-filtering-rules)
+
+[^6]: ครอบคลุมเท่าที่ผมจะได้
