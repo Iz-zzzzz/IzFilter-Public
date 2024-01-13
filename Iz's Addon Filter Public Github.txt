@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
-! Description: Use to block most of Thai website Ads which Adguard Filter and Easylist doesn't block
-! Version: 20240104190511
+! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
+! Version: 20240113230116
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -76,8 +76,6 @@ https://wowrapidly.com^$all
 ||cryptojimmy.care^$all
 !official popup blocker test
 ||rrc.texas.gov^$popup
-!freespin ad พบได้ใน cats-translator.com
-/freespin-ts.gif$image
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
 !----------------------------------------END
@@ -86,17 +84,11 @@ https://wowrapidly.com^$all
 !----------------------------------------START
 !----------------------------------------START
 !---Google ---
-!google search
-!may contains ads or mal sites or useful sites 20231212003322
-www.google.*###tads[aria-label]:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
-www.google.*##span[class$="U3A9Ac qV8iec"]:style(color: red !important;)
-www.google.*##div.cu-container:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
-www.google.*##div.uEierd:style(opacity: 40% !important; -webkit-opacity: 40% !important;)
 
 !youtube
 !youtube โฆษณาด้านขวา เหนือ recommeneded video
 !>>>>>mode<<<<<
-www.youtube.com##ytd-ad-slot-renderer
+www.youtube.com##div[id="player-ads"]
 !>>>>>mode<<<<< html and default
 !
 !---clouds cloud ---
@@ -171,47 +163,7 @@ me-qr.com##div[class="bg-success"]
 !
 !---social platform ---
 !
-!facebook.com 20231212012355
-!!MadeByMe
-!!marketplace
-!!!รายการแรกที่เป็นโฆษณา 20231212012356
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href*="__tn__=H-R"]:upward(6):remove()
-!!ads of side feed 20231213191619
-!#if cap_html_filtering
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##^div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion$$div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
-!#endif
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[role="complementary"] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div.x1y1aw1k > div:nth-of-type(1) > span
-!!feed sponsored 20231214011051
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) a[href]:not([href^="/groups/"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset]):remove()
-!!ads of side feed image 20231222142014
-https://scontent.fbkk*.fna.fbcdn.net/v/*/*_n.jpg?stp=cp0_dst-jpg_p*_q75_sps444*$image,from=facebook.com
-!!sponsored below video in feed 20231223143420 ไม่ค่อยเจอ เลยปิดไว้เพื่อไม่ให้มันกิน
-!web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) span[class][dir]:not([id]):has-text(Sponsored):upward(a[aria-label]):remove()
-!
-!!จาก uBlock filters – Ads
-!!ads of side feed
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[role="complementary"] div:not([class]):not([id]) > span:not([class]):not([id]):not([aria-labelledby])
-!!watch 20231212012402
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/watch) #watch_feed div:not([class]) > div:not([class]) div[class] span[class] > a span[aria-labelledby]:has(> span[style="display: flex;"] > span[class]:has-text(/^S$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^p$/)):has(> span[style="display: flex;"] > span[class]:has-text(/^d$/)):upward(div:not([class]) > div:not([class])):remove()
-!!feed sponsored มี MadeByMe ที่ perofrmance ดีกว่า
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
-!www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/?filter=) div[aria-posinset] :is(h3, h4) span > a[href]:not([href^="/groups/"]):not([href*="section_header_type"]):matches-attr(href="/__cft__\[0\]=[-\w]{270,}/"):upward(div[aria-posinset])
-!
-!!จาก AdGuard – Ads 20231212012407
-!!marketplace ลบคำว่า sponsored
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/marketplace) a[href="/ads/about/?entry_product=ad_preferences"]:remove()
-!m.facebook.com
-!!modified from AdGuard – Mobile Ads 20231218230647
 
-!twitter.com
-!!MadeByMe
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##:matches-path(/^(?!\/explore|\/notifications|\/messages|\/communities|\/verified-choose|\/settings|\/media)/) div[data-testid="top-impression-pixel"]:upward(3):remove()
-!instagram.com
-!!จาก uBlock filters – Ads
-!!feed home
-!รอ
 !
 !---wiki ---
 !
@@ -906,7 +858,15 @@ adfoc.us##^.content > iframe
 adfoc.us$$.content > iframe
 !#endif
 adfoc.us##.content > iframe
-
+!
+!---automatic ---
+!
+!zapier.com
+!#if cap_html_filtering
+zapier.com##^div[data-testid="signup-popup"]
+zapier.com$$div[data-testid="signup-popup"]
+!#endif
+zapier.com##div[data-testid="signup-popup"]
 !
 !---alternative ---
 !
@@ -1440,6 +1400,12 @@ ejan.co##^#taboola-below-article-thumbnails
 ejan.co$$#taboola-below-article-thumbnails
 !#endif
 ejan.co###taboola-below-article-thumbnails
+!komchadluek.net 20240110144745
+!#if cap_html_filtering
+komchadluek.net##^div[class^="dynamic-ads__"]
+komchadluek.net$$div[class^="dynamic-ads__"]
+!#endif
+komchadluek.net##div[class^="dynamic-ads__"]
 !
 !---tech news ---
 !
@@ -1492,7 +1458,7 @@ worldittoday.com##^ins.adsbygoogle
 worldittoday.com$$ins.adsbygoogle
 !#endif
 worldittoday.com##ins.adsbygoogle
-!Notebookspec 20231216213644
+!Notebookspec 20240113203926
 !#if cap_html_filtering
 notebookspec.com##^.zox-widget-ad
 notebookspec.com$$.zox-widget-ad
@@ -1504,20 +1470,10 @@ notebookspec.com$$.zox_ad_widget
 !#endif
 notebookspec.com##.zox_ad_widget
 !#if cap_html_filtering
-notebookspec.com##^.banner-set-left-box
-notebookspec.com$$.banner-set-left-box
+notebookspec.com##^#zox-lead-bot
+notebookspec.com$$#zox-lead-bot
 !#endif
-notebookspec.com##.banner-set-left-box
-!#if cap_html_filtering
-notebookspec.com##^.banner-set-top-box
-notebookspec.com$$.banner-set-top-box
-!#endif
-notebookspec.com##.banner-set-top-box
-!#if cap_html_filtering
-notebookspec.com##^.banner-set-right-box
-notebookspec.com$$.banner-set-right-box
-!#endif
-notebookspec.com##.banner-set-right-box
+notebookspec.com###zox-lead-bot
 !thaimobilecenter.com
 !#if cap_html_filtering
 thaimobilecenter.com##^.container.hidden-xs div[class^="col-"][align="right"]
@@ -1529,6 +1485,7 @@ thaimobilecenter.com##^ins.adsbygoogle
 thaimobilecenter.com$$ins.adsbygoogle
 !#endif
 thaimobilecenter.com##ins.adsbygoogle
+https://www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
 !techtalkthai.com
 !#if cap_html_filtering
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
@@ -1644,7 +1601,7 @@ specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 !
 !---game news ---
 !
-!mustplay.in.th 
+!mustplay.in.th 20240112003329
 !#if cap_html_filtering
 mustplay.in.th##^a[href^="/banner/id/"]
 mustplay.in.th$$a[href^="/banner/id/"]
@@ -1655,6 +1612,17 @@ mustplay.in.th##^div[class*="promote"]
 mustplay.in.th$$div[class*="promote"]
 !#endif
 mustplay.in.th##div[class*="promote"]
+!#if cap_html_filtering
+mustplay.in.th##^.cover_preload
+mustplay.in.th$$.cover_preload
+!#endif
+mustplay.in.th##.cover_preload
+!#if cap_html_filtering
+mustplay.in.th##^.preloader
+mustplay.in.th$$.preloader
+!#endif
+mustplay.in.th##.preloader
+https://www.mustplay.in.th/data/setting/banner/
 !thisisgamethailand.com 20240103182550
 !#if cap_html_filtering
 thisisgamethailand.com##^#bg_banner_left
@@ -1769,17 +1737,17 @@ mawtoload.com###banner-post
 !
 !---Manga มังงะ Thai ไทย legal ถูกลิขสิทธิ์---
 !
-!nekopost.net
+!www.nekopost.net,2nd.nekopost.net
 !#if cap_html_filtering
-nekopost.net##^div.bg-slate-800.px-2\.5.py-2.rounded-lg
-nekopost.net$$div.bg-slate-800.px-2\.5.py-2.rounded-lg
+www.nekopost.net,2nd.nekopost.net##^div.bg-slate-800.px-2\.5.py-2.rounded-lg
+www.nekopost.net,2nd.nekopost.net$$div.bg-slate-800.px-2\.5.py-2.rounded-lg
 !#endif
-nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
+www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
 !#if cap_html_filtering
-nekopost.net##^div.svelte-1d0qhdr.h-4
-nekopost.net$$div.svelte-1d0qhdr.h-4
+www.nekopost.net,2nd.nekopost.net##^body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
+www.nekopost.net,2nd.nekopost.net$$body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
 !#endif
-nekopost.net##div.svelte-1d0qhdr.h-4
+www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
@@ -1987,7 +1955,6 @@ thaimanga.net$$.ads
 !#else
 thaimanga.net##.ads
 !#endif
-://$script,third-party,domain=thaimanga.net
 !mangaisekaithai.com
 !#if cap_html_filtering
 mangaisekaithai.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
@@ -2666,7 +2633,6 @@ doonungsub.com##.popup
 !!!-------------General Rules------------START
 !----------------------------------------START
 !----------------------------------------START
-!MadeByMe
 /_xa/ads_batch?ads=$xmlhttprequest,script
 !redirect to ads domain when click backward (popunder pop-under)
 /popunder*.js$script
@@ -2674,6 +2640,8 @@ doonungsub.com##.popup
 https://media.discordapp.net/attachments/*/*/*.jpg$image,domain=~discordapp.net|~discord.com
 https://media.discordapp.net/attachments/*/*/*.gif$image,domain=~discordapp.net|~discord.com
 https://media.discordapp.net/attachments/*/*/*.webp$image,domain=~discordapp.net|~discord.com
+!freespin ad พบได้ใน cats-translator.com
+/freespin-ts.gif$image
 !---------------General Rules------------END
 !----------------------------------------END
 !----------------------------------------END
@@ -2695,12 +2663,17 @@ https://media.discordapp.net/attachments/*/*/*.webp$image,domain=~discordapp.net
 #@#[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 #@#[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 #@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##.div-gpt-ad:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 google.com#@##bottomads
 google.co.th#@##bottomads
+
+!https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-mobile.txt
+#@#.ad-slot
+!EasyList
+#@#.ad-link
+!
+##.ad-slot:not(.adsbox):not(.adsbygoogle)
 !----------Anti ad block detect----------END
 !----------------------------------------END
 !----------------------------------------END
