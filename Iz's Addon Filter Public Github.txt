@@ -1,11 +1,12 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20240118132847
+! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
+! Version: 20240124205604
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
 !
-! Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
+! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
 
 !!!------------Ad Server/Links-----------START
 !----------------------------------------START
@@ -87,19 +88,12 @@ https://wowrapidly.com^$all
 !----------------------------------------START
 !---Google ---
 
-!youtube
-!youtube โฆษณาด้านขวา เหนือ recommeneded video
-!>>>>>mode<<<<<
-www.youtube.com##div[id="player-ads"]
-!>>>>>mode<<<<< html and default
 !
 !---clouds cloud ---
 !
-!>>>>>mode<<<<<
 !terabox.com 20231224182134
 terabox.com##.seo-banner-box
 terabox.com##.drainage
-!>>>>>mode<<<<< html and default
 !
 !
 !---picture image host---
@@ -121,6 +115,28 @@ collider.com##^div.ad-zone
 collider.com$$div.ad-zone
 !#endif
 collider.com##div.ad-zone
+
+!www.newsweek.com 20240123185621
+!#if cap_html_filtering
+www.newsweek.com##^#topad
+www.newsweek.com$$#topad
+!#endif
+www.newsweek.com###topad
+!#if cap_html_filtering
+www.newsweek.com##^#right1ad
+www.newsweek.com$$#right1ad
+!#endif
+www.newsweek.com###right1ad
+!#if cap_html_filtering
+www.newsweek.com##^div[id^="dfp-ad-inarticle"]
+www.newsweek.com$$div[id^="dfp-ad-inarticle"]
+!#endif
+www.newsweek.com##div[id^="dfp-ad-inarticle"]
+!#if cap_html_filtering
+www.newsweek.com##^.block-fusion-ads
+www.newsweek.com$$.block-fusion-ads
+!#endif
+www.newsweek.com##.block-fusion-ads
 !
 !---education ---
 !
@@ -167,12 +183,6 @@ me-qr.com##div[class="bg-success"]
 !
 
 !Facebook
-!#if cap_html_filtering
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##^:matches-path(/^/$/) a[aria-label="Vietjet"][class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion$$:matches-path(/^/$/) a[aria-label="Vietjet"][class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
-!#endif
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##:matches-path(/^/$/) a[aria-label="Vietjet"][class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
-
 
 !
 !---wiki ---
@@ -706,12 +716,22 @@ pcworld.com##^div[data-ad-template="banner"]
 pcworld.com$$div[data-ad-template="banner"]
 !#endif
 pcworld.com##div[data-ad-template="banner"]
-!neowin.net
+!neowin.net 20240124130101
 !#if cap_html_filtering
-neowin.net##^div[data-freestar-ad]:upward(1)
-neowin.net$$div[data-freestar-ad]:upward(1)
+neowin.net##^.header-banner-ads
+neowin.net$$.header-banner-ads
 !#endif
-neowin.net##div[data-freestar-ad]:upward(1)
+neowin.net##.header-banner-ads
+!#if cap_html_filtering
+neowin.net##^div[data-freestar-ad]
+neowin.net$$div[data-freestar-ad]
+!#endif
+neowin.net##div[data-freestar-ad]
+!#if cap_html_filtering
+neowin.net##^.widget-ad
+neowin.net$$.widget-ad
+!#endif
+neowin.net##.widget-ad
 !tomshardware.com 20240114140930
 !#if cap_html_filtering
 tomshardware.com##^.dfp-leaderboard-container
@@ -852,12 +872,6 @@ adfoc.us##.content > iframe
 !
 !---automatic ---
 !
-!zapier.com
-!#if cap_html_filtering
-zapier.com##^div[data-testid="signup-popup"]
-zapier.com$$div[data-testid="signup-popup"]
-!#endif
-zapier.com##div[data-testid="signup-popup"]
 !
 !---alternative ---
 !
@@ -914,7 +928,6 @@ camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posit
 !---social platform ---
 !
 !pantip.com
-!>>>>>mode<<<<< html or default
 !#if cap_html_filtering
 pantip.com##^div.ads-leaderboard
 pantip.com$$div.ads-leaderboard
@@ -927,7 +940,6 @@ pantip.com$$div.ads-topbillboard
 !#else
 pantip.com##div.ads-topbillboard
 !#endif
-!>>>>>mode<<<<< html and default
 !
 !---wiki ---
 !
@@ -1481,7 +1493,7 @@ thaimobilecenter.com##^ins.adsbygoogle
 thaimobilecenter.com$$ins.adsbygoogle
 !#endif
 thaimobilecenter.com##ins.adsbygoogle
-https://www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
+||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
 !techtalkthai.com
 !#if cap_html_filtering
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
@@ -1546,7 +1558,7 @@ it24hrs.com##^.adrotate_widgets
 it24hrs.com$$.adrotate_widgets
 !#endif
 it24hrs.com##.adrotate_widgets
-https://s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
+||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
 !iphonemod.net
 !#if cap_html_filtering
 iphonemod.net##^center
@@ -1618,7 +1630,7 @@ mustplay.in.th##^.preloader
 mustplay.in.th$$.preloader
 !#endif
 mustplay.in.th##.preloader
-https://www.mustplay.in.th/data/setting/banner/
+||www.mustplay.in.th/data/setting/banner/
 !thisisgamethailand.com 20240103182550
 !#if cap_html_filtering
 thisisgamethailand.com##^#bg_banner_left
@@ -1734,15 +1746,7 @@ mawtoload.com###banner-post
 !---Manga มังงะ Thai ไทย legal ถูกลิขสิทธิ์---
 !
 !www.nekopost.net,2nd.nekopost.net
-!#if cap_html_filtering
-www.nekopost.net,2nd.nekopost.net##^div.bg-slate-800.px-2\.5.py-2.rounded-lg
-www.nekopost.net,2nd.nekopost.net$$div.bg-slate-800.px-2\.5.py-2.rounded-lg
-!#endif
 www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
-!#if cap_html_filtering
-www.nekopost.net,2nd.nekopost.net##^body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
-www.nekopost.net,2nd.nekopost.net$$body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
-!#endif
 www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
@@ -1750,7 +1754,6 @@ www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400
 /*.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com
 /*.mp4$media,domain=manga-sugoi.com
 /*.webp$image,domain=mangauptocats.net|mangauptocats.com
-!>>>>>mode<<<<< html or default
 !manga168.com
 !#if cap_html_filtering
 manga168.com##^.dessert-frame > center
@@ -1791,9 +1794,9 @@ manga168.com##.kln
 !!bad performance rule from AdGuard - Ads
 /*.gif$from=manga168.com,badfilter
 !!some specific banner
-https://go.xn--16-ftitt.com/inw2.jpg$image,domain=manga168.com
+||go.xn--16-ftitt.com/inw2.jpg$image,domain=manga168.com
 !!close button
-https://amz-cdn3.manga168.com/images/e511b3bd897d86f3db0a9449aa18faf9.png$image,domain=manga168.com
+||amz-cdn3.manga168.com/images/e511b3bd897d86f3db0a9449aa18faf9.png$image,domain=manga168.com
 !tanuki-manga.com
 !#if cap_html_filtering
 tanuki-manga.com##^.ads
@@ -1872,19 +1875,19 @@ www.niceoppai.net$$.mng_rdr.wpm_pag > center
 www.niceoppai.net##.mng_rdr.wpm_pag > center
 !#endif
 !!ads banner image
-https://image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://1.bp.blogspot.com/*$image,domain=www.niceoppai.net
-https://blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
-https://www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
-https://i.imgur.com*.gif$image,domain=www.niceoppai.net
-https://i0.wp.com/niceoppai.net/wp-content$image,domain=www.niceoppai.net
-https://www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,domain=www.niceoppai.net
-@@https://1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png$image,domain=www.niceoppai.net
+||image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||1.bp.blogspot.com/*$image,domain=www.niceoppai.net
+||blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
+||i.imgur.com*.gif$image,domain=www.niceoppai.net
+||i0.wp.com/niceoppai.net/wp-content$image,domain=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,domain=www.niceoppai.net
+@@||1.bp.blogspot.com/-tiGDYaW_8Q4/XQ5nG-oOjkI/AAAAAAAAAlg/OdPIeQTB_d43NhVJT3RyBGj9-hsBcnHRACLcBGAs/s0/bgniceoppaitrue.png$image,domain=www.niceoppai.net
 !mangadeemak.com
 !#if cap_html_filtering
 mangadeemak.com##^div[id^="ads"]
@@ -2127,8 +2130,6 @@ popsmanga.com$$div.kln
 !#else
 popsmanga.com##div.kln
 !#endif
-!popsmanga.com##.postbody.full:style(padding-top: 20px !important)
-!popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
 !toomtam-manga.com
 !#if cap_html_filtering
@@ -2286,7 +2287,7 @@ anime-masters.com$$.col-md-9 > span
 !#else
 anime-masters.com##.col-md-9 > span
 !#endif
-https://www.anime-masters.com/image/X11-icon.png*$image,domain=anime-masters.com
+||www.anime-masters.com/image/X11-icon.png*$image,domain=anime-masters.com
 !animekimi.com
 !#if cap_html_filtering
 animekimi.com##^.module_home_x
@@ -2294,7 +2295,7 @@ animekimi.com$$.module_home_x
 !#else
 animekimi.com##.module_home_x
 !#endif
-!anifume.com
+!anifume.com 20240121222714
 !#if cap_html_filtering
 anifume.com##^div[id^="display-"]
 anifume.com$$div[id^="display-"]
@@ -2313,13 +2314,11 @@ anifume.com$$div.topml
 !#else
 anifume.com##div.topml
 !#endif
-://$script,third-party,domain=anifume.com
-!!https://github.com/gorhill/uBlock/wiki/Resources-Library#nowoifjs-
+||anifume.com/a4Eof1D0f/close-x.png$domain=anifume.com
+||anifume.com/a4Eof1D0f/loadgame-float.jpg$domain=anifume.com
 anifume.com##+js(nowoif)
 !anime-suba.com 20240103193717
-!!https://github.com/gorhill/uBlock/wiki/Resources-Library#empty-redirect-resources
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,domain=anime-suba.com
-!!https://github.com/gorhill/uBlock/wiki/Resources-Library#nowoifjs-
 anime-suba.com##+js(nowoif)
 !!!invisible popup overlay video
 !#if cap_html_filtering
@@ -2328,7 +2327,6 @@ anime-suba.com$$.overlay-0
 !#else
 anime-suba.com##.overlay-0
 !#endif
-!!https://github.com/gorhill/uBlock/wiki/Resources-Library#nano-sibjs- speed up skip ad button countdown
 anime-suba.com##+js(nano-sib, , *)
 !animehayai.net
 !#if cap_html_filtering
@@ -2402,9 +2400,6 @@ shibaanime.com$$div.hero.common-hero:nth-child(2)
 shibaanime.com##div.hero.common-hero:nth-child(2)
 !#endif
 !anime-hit.com
-!||anime-hit.com^$popup,domain=~anime-hit.com
-!##a[hreaf^="https://anime-hit.com"]
-!anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 !animetako.net
 !#if cap_html_filtering
 animetako.net##^div[id^="animekimiads"]
@@ -2544,7 +2539,6 @@ nungdeedee.com$$a[href^="https://nungdeedee.com/externallink"]
 !#else
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 !#endif
-!>>>>>mode<<<<< html and default
 !24-hd.com
 !#if cap_html_filtering
 24-hd.com##^.ad
@@ -2569,11 +2563,7 @@ doonungsub.com##.popup
 !#endif
 1112hd.com##.tt_banner_above_vdo_player
 !ดูหนังใหม่ชนโรง.com
-!##a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
-!ดูหนังใหม่ชนโรง.com#@#a[href^="https://www.ดูหนังใหม่ชนโรง.com"]
 !dooseries.com
-!##a[href^="https://dooseries.com"]
-!dooseries.com#@#a[href^="https://dooseries.com"]
 !ดูหนัง.tv
 !#if cap_html_filtering
 ดูหนัง.tv##^.row
@@ -2591,36 +2581,14 @@ doonungsub.com##.popup
 !----------------------------------------START
 !----------------------------------------START
 !from oksheets.com
-!##.mv-ad-box
 !thewindowsclub.com
-!###ezmobfooter
 !
-!##a[href^="https://syndication.realsrv.com"]
 !keyboard-test.space
-!##a[href^="https://rtx.super47.net"]
 !Powerful Cosmetic Rules
 !!/(_|-|^)+(ad|ads)+(_|-|$|)/
-!##[class^="ads"]:not(body):not(html):not(article)
-!##[class*="_ads"]:not(body):not(html):not(article)
-!##[class*="-ads"]:not(body):not(html):not(article)
-!##[id^="ads"]:not(body):not(html):not(article)
-!##[id*="_ads"]:not(body):not(html):not(article)
-!##[id*="-ads"]:not(body):not(html):not(article)
 
-!##[class^="ad_"]:not(body):not(html):not(article)
-!##[class^="ad-"]:not(body):not(html):not(article)
-!##[class$="-ad"]:not(body):not(html):not(article)
-!##[class$="_ad"]:not(body):not(html):not(article)
-!##[id^="ad_"]:not(body):not(html):not(article)
-!##[id^="ad-"]:not(body):not(html):not(article)
-!##[id$="-ad"]:not(body):not(html):not(article)
-!##[id$="_ad"]:not(body):not(html):not(article)
 
-!##[class*="advert"]:not(body):not(html):not(article)
-!##[id*="advert"]:not(body):not(html):not(article)
 
-!##[class*="sponsor"]:not(body):not(html):not(article)
-!##[id*="sponsor"]:not(body):not(html):not(article)
 
 !----------General Cosmetic Rules--------END
 !----------------------------------------END
@@ -2633,9 +2601,9 @@ doonungsub.com##.popup
 !redirect to ads domain when click backward (popunder pop-under)
 /popunder*.js$script
 !mal usage ส่วนใหญ่ชอบใช้ ผิดวัตถุประสงค์ เช่น การโฆษณา
-https://media.discordapp.net/attachments/*/*/*.jpg$image,domain=~discordapp.net|~discord.com
-https://media.discordapp.net/attachments/*/*/*.gif$image,domain=~discordapp.net|~discord.com
-https://media.discordapp.net/attachments/*/*/*.webp$image,domain=~discordapp.net|~discord.com
+||media.discordapp.net/attachments/*/*/*.jpg$image,domain=~discordapp.net|~discord.com
+||media.discordapp.net/attachments/*/*/*.gif$image,domain=~discordapp.net|~discord.com
+||media.discordapp.net/attachments/*/*/*.webp$image,domain=~discordapp.net|~discord.com
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
 !---------------General Rules------------END
@@ -3114,17 +3082,17 @@ smilearm.com##.policy-position
 !General rules
 !cookiewow api
 !!พบได้ใน theptarin.com
-https://cookiecdn.com^$3p,script
-!##[class*="cookie"]:not(body):not(html):not(article)
-!##[id*="cookie"]:not(body):not(html):not(article)
-!
-!##[class*="policy"]:not(body):not(html):not(article)
-!##[id*="policy"]:not(body):not(html):not(article)
-!
-!##[class*="pdpa"]:not(body):not(html):not(article)
-!##[id*="pdpa"]:not(body):not(html):not(article)
+||cookiecdn.com^$3p,script
 !
 !----------------Cookie -----------------END
 !----------------------------------------END
 !----------------------------------------END
 
+!-------------Remove cookie -------------START
+!----------------------------------------START
+!----------------------------------------START
+
+
+!-------------Remove cookie -------------END
+!----------------------------------------END
+!----------------------------------------END
