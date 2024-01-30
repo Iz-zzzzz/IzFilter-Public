@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240130210647
+! Version: 20240130225252
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -75,6 +75,7 @@
 ||tcaadwa.com^$all
 ||myfindr.com^$all
 ||s.akamaicdn.cloud^$all
+||toonzaa.com^$all
 !Dangerous web DATA from Bitdefender
 ||doonungsub.com^$all
 !Malware DATA from self gathering CONFIRM 
@@ -607,6 +608,7 @@ https://siampoker.com^$all
 ||displayvertising.com^$all
 ||betteradsystem.com^$all
 ||d3mzokty951c5w.cloudfront.net^$all
+||qvorcqfon.com^$all
 !จาก mangapdf-online.com
 ||impartialpath.com^$all
 ||alarming-rule.com^$all
@@ -627,7 +629,9 @@ https://wowrapidly.com^$all
 !จาก imgbox.com
 !https://cdn52969391.ahacdn.me^$all
 ||ahacdn.me^$all
-https://adsmediabox.com^$all
+||adsmediabox.com^$all
+!พบใน เช่น compgamer.com
+||to0s.biz^$all
 !
 ||exness.com^$all,domain=~exness.com
 !from siamblockchain.com
@@ -1862,6 +1866,12 @@ khaosod.co.th##^div[id*="ScriptRoot"]
 khaosod.co.th$$div[id*="ScriptRoot"]
 !#endif
 khaosod.co.th##div[id*="ScriptRoot"]
+!khaosodenglish.com 20240130222122
+!#if cap_html_filtering
+khaosodenglish.com##^span.td-adspot-title:upward(1)
+khaosodenglish.com$$span.td-adspot-title:upward(1)
+!#endif
+khaosodenglish.com##span.td-adspot-title:upward(1)
 !nationtv.tv
 !#if cap_html_filtering
 nationtv.tv##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -1971,6 +1981,12 @@ komchadluek.net##^div[class^="dynamic-ads__"]
 komchadluek.net$$div[class^="dynamic-ads__"]
 !#endif
 komchadluek.net##div[class^="dynamic-ads__"]
+!petmaya.com
+!#if cap_html_filtering
+petmaya.com##^ins.adsbygoogle
+petmaya.com$$ins.adsbygoogle
+!#endif
+petmaya.com##ins.adsbygoogle
 !
 !---tech news ---
 !
@@ -2271,6 +2287,22 @@ playulti.com##^.space_side
 playulti.com$$.space_side
 !#endif
 playulti.com##.space_side
+!compgamer.com 20240130223724
+!#if cap_html_filtering
+compgamer.com##^#alert_popup_dialog
+compgamer.com$$#alert_popup_dialog
+!#endif
+compgamer.com###alert_popup_dialog
+compgamer.com##body:style(overflow: auto !important;)
+!
+!---game ---
+!
+!jokergameth.com 20240130224346
+!#if cap_html_filtering
+jokergameth.com##^div[align="center"]
+jokergameth.com$$div[align="center"]
+!#endif
+jokergameth.com##div[align="center"]
 !
 !---life sytle ---
 !
@@ -2305,11 +2337,20 @@ mawtoload.com$$#banner-post
 !#endif
 mawtoload.com###banner-post
 !
-!---Manga มังงะ Thai ไทย legal ถูกลิขสิทธิ์---
+!---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 !
 !www.nekopost.net,2nd.nekopost.net
 www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
 www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
+!
+!---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
+!animeranku.com 20240130221146
+!#if cap_html_filtering
+animeranku.com##^ins.adsbygoogle
+animeranku.com$$ins.adsbygoogle
+!#endif
+animeranku.com##ins.adsbygoogle
+
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
@@ -2787,7 +2828,7 @@ cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
+.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net
 !Anime Sugoi 20231225134824
 !!เอา box ที่เขียนว่า โฆษณา ออก
 !#if cap_html_filtering
@@ -3015,6 +3056,20 @@ animeshiro.com$$div.banner-wrapper
 !#else
 animeshiro.com##div.banner-wrapper
 !#endif
+!anime-ox.com 20240130220905
+!#if cap_html_filtering
+anime-ox.com##^#contenedor > div[align="center"]
+anime-ox.com$$#contenedor > div[align="center"]
+!#else
+anime-ox.com###contenedor > div[align="center"]
+!#endif
+!anime-subthai.net 20240130221830
+!#if cap_html_filtering
+anime-subthai.net##^#main_content > div > div.b-ads
+anime-subthai.net$$#main_content > div > div.b-ads
+!#else
+anime-subthai.net###main_content > div > div.b-ads
+!#endif
 !
 !---Novel ---
 !
@@ -3138,6 +3193,9 @@ doonungsub.com##.popup
 !
 ||movie-free.org/ads$popup
 ||bit.ly/hdmovie$popup
+!
+!--- Others
+!
 
 !!!--------General Cosmetic Rules--------START
 !----------------------------------------START
@@ -3633,6 +3691,8 @@ google.co.th#@##bottomads
 !--- git ---
 @@||gitlab.com^$generichide
 @@||gitea.angry.im^$generichide
+!--- anime mange novel legal
+@@||animeranku.com^$generichide
 !--- others ---
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
@@ -3681,6 +3741,7 @@ google.co.th#@##bottomads
 @@||pptvhd36.com^$generichide
 @@||dailynews.co.th^$generichide
 @@||khaosod.co.th^$generichide
+@@||khaosodenglish.com^$generichide
 @@||thematter.co^$generichide
 @@||voicetv.co.th^$generichide
 @@||nationtv.tv^$generichide
@@ -3692,6 +3753,7 @@ google.co.th#@##bottomads
 @@||themomentum.co^$generichide
 @@||www.ejan.co^$generichide
 @@||www.komchadluek.net^$generichide
+@@||petmaya.com^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -3699,6 +3761,7 @@ google.co.th#@##bottomads
 !---thai blog ---
 @@||nuuneoi.com^$generichide
 @@||kafaak.blog^$generichide
+@@||mthai.com^$generichide
 !---education ---
 @@||ibooking.ondemand.in.th^$ehide
 @@||ondemand.in.th^$generichide
@@ -3714,12 +3777,15 @@ google.co.th#@##bottomads
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
 @@||www.blockdit.com^$generichide
+!---game ---
+@@||jokergameth.com^$generichide
 !---game news ---
 @@||mustplay.in.th^$generichide
 @@||thisisgamethailand.com^$generichide
 @@||gamefever.co^$generichide
 @@||www.gamingdose.com^$generichide
 @@||playulti.com^$generichide
+@@||compgamer.com^$generichide
 !---foods food serices ---
 @@||wongnai.com^$generichide
 @@||snp1344.com*$generichide
@@ -3729,6 +3795,7 @@ google.co.th#@##bottomads
 @@||phoenixnext.com^$generichide
 @@||mebmarket.com^$generichide
 @@||bookwalker.*$generichide
+!---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 @@||www.nekopost.net^$generichide
 @@||kuro.nekopost.net^$generichide
 !---tech news ---
@@ -3748,6 +3815,7 @@ google.co.th#@##bottomads
 @@||www.iphonemod.net^$generichide
 @@||www.it24hrs.com^$generichide
 @@||specphone.com^$generichide
+@@||itnews24hrs.com^$generichide
 !--- science news ---
 @@||www.mitrearth.org^$generichide
 !---multipurpose ---
@@ -3816,6 +3884,7 @@ google.co.th#@##bottomads
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
 @@||wiki.anime-os.com^$ehide
+@@||akibatan.com^$ehide
 !---anime illegitimate ---
 @@||anime-sugoi.com^$generichide
 @@||anime-masters.com^$generichide
@@ -3843,6 +3912,35 @@ google.co.th#@##bottomads
 !
 @@||allinone-th.blogspot.com^$generichide
 @@||allinone-th-view.blogspot.com^$generichide
+!--- movie illegitimate ---
+@@||movie007hd.com^$generichide
+@@||037hdmovie.com^$generichide
+@@||movies-d.com^$generichide
+@@||dooseries4k.com^$generichide
+@@||9nunghd.com^$generichide
+@@||nung2movies.com^$generichide
+@@||nung2hdd.com^$generichide
+@@||zeanmoviehd.com^$generichide
+@@||nungdeedee.com^$generichide
+@@||doofree365.com^$generichide
+@@||movie44.com^$generichide
+@@||doomovie-hd.com^$generichide
+@@||kingmovie88.com^$generichide
+@@||i-moviehd.com^$generichide
+@@||subthai.tv^$generichide
+@@||moviehdfree.net^$generichide
+@@||movie678.com^$generichide
+@@||doonungonline.com^$generichide
+@@||24-hd.com^$generichide
+@@||1412hd.com^$generichide
+@@||doonungsub.com^$generichide
+@@||seriethai.co^$generichide
+@@||ดูหนังใหม่ชนโรง.com^$generichide
+@@||serie-master.com^$generichide
+!--- Torrent
+@@||dedbit.com^$generichide
+!--- Others
+@@||online-station.net$generichide
 
 !!!---------Performance Thai ------------END
 !----------------------------------------END
@@ -3895,17 +3993,13 @@ theguardian.com##^div[class="dcr-8xye2h"]
 theguardian.com$$div[class="dcr-8xye2h"]
 !#endif
 theguardian.com##div[class="dcr-8xye2h"]
-||sourcepoint.theguardian.com
 !economist.com
 !#if cap_html_filtering
 economist.com##^div[class="message-container teg-container"]
 economist.com$$div[class="message-container teg-container"]
 !#endif
 economist.com##div[class="message-container teg-container"]
-||cdn.optimizely.com$domain=economist.com
-||static.cloudflareinsights.com$domain=economist.com
 ||consent.economist.com$domain=economist.com
-||buy.tinypass.com$domain=economist.com
 !
 !#if cap_html_filtering
 ondemand.in.th##^.cwc-sdk-container
@@ -4273,19 +4367,11 @@ smilearm.com##^.policy-position
 smilearm.com$$.policy-position
 !#endif
 smilearm.com##.policy-position
-!MadeByMe Cosmestic rules
-##.eupopup-body
-##.eupopup-head
-###pdpa-wrapper
-##.pdpa
-###consentTrackAndCookieBar
-###js-consent-banner
-/pdpa.js$script
-!!พบได้ เช่น ejan.co
-/glow-cookies.min.js$script
-!!จาก thaipbs.or.th 
-!https://app.themis-technology.com/cdn/pdpa-cookieconsent.js
-/pdpa-cookieconsent.js$script
+!#if cap_html_filtering
+mthai.com##^div.pdpa_cookies
+mthai.com$$div.pdpa_cookies
+!#endif
+mthai.com##div.pdpa_cookies
 !
 !
 !
@@ -4298,6 +4384,27 @@ smilearm.com##.policy-position
 !!พบได้ใน เช่น superuser.com
 ||cdn.cookielaw.org^$3p
 ||geolocation.onetrust.com^$3p
+!MadeByMe Cosmestic rules
+##.eupopup-body
+##.eupopup-head
+###pdpa-wrapper
+##.pdpa
+###consentTrackAndCookieBar
+###js-consent-banner
+/pdpa.js$script
+!!พบได้ เช่น ejan.co
+/glow-cookies.min.js$script
+!!พบได้ เช่น  thaipbs.or.th 
+!https://app.themis-technology.com/cdn/pdpa-cookieconsent.js
+/pdpa-cookieconsent.js$script
+!!พบได้ เช่น kafaak.blog เป็นส่วนหนึ่งของ /wp-content
+/designil-pdpa$script,image,xhr
+!!พบได้ เช่น online-station.net เป็นส่วนหนึ่งของ /wp-content
+/cookie-law-info$script,image,xhr
+!
+!
+!
+!
 !
 !----------------Cookie -----------------END
 !----------------------------------------END
