@@ -1,12 +1,563 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240124205604
+! Version: 20240130210647
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
 !
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
+
+
+!!!------------Dangerous web-------------START
+!----------------------------------------START
+!----------------------------------------START
+!Dangerous web DATA from Malwarebyte
+||dugothitachan.com^$all
+||image.baan-series.com^$all
+||nessainy.net^$all
+||agacelebir.com^$all
+||eu.dspultra.com^$all
+||operatehighlyadvancedtheproduct.vip^$all
+||eu.messenger-notify.digital^$all
+||adspredictiv.com^$all
+||inrhyhorntor.com^$all
+||certaintysurroundingcab.com^$all
+||remparleyfaining.icu^$all
+||hime-anime.com^$all
+||snipertopanime.net^$all
+||nice-anime.com^$all
+||animedd.xyz^$all
+||proposedpartly.com^$all
+||imodtoy.com^$all
+||th.nex-software.com^$all
+||vinegarfactorelevator.com^$all
+||restoro.com^$all
+||glugherg.net^$all
+||limitationvolleyballdejected.com^$all
+||obituaryfuneral.com^$all
+||skipdearbeautify.com^$all
+||perryvolleyball.com^$all
+||orchestraanticipation.com^$all
+||pgmall.my^$all
+||xm.com^$all
+||speechfountaindigestion.com^$all
+||thaudray.com^$all
+||ninebartv2.xyz^$all
+||app.hilobet.cc^$all
+||slaves6.com^$all
+||mukohphetra.com^$all
+||waisheph.com^$all
+||mosaic.unite.com^$all
+||shibaanime.com^$all
+!Dangerous web DATA from self gathering CONFIRM 
+||syndication.realsrv.com^$all
+||invaderannihilationperky.com^$all
+||sicknessfestivity.com^$all
+||creepingbrings.com^$all
+||takepalpablenuisance.com^$all
+||addresseepaper.com^$all
+||haglance.com^$all
+||dwightadjoining.com^$all
+||f.el7ref.com^$all
+||hentaiplaytime.com^$all
+||pc-kf.plusfuns.com^$all
+||reasonablelandmark.com^$all
+||forgerylimit.com^$all
+||strakerecombs.website^$all
+||lockfireshimself.com^$all
+||outlookabsorb.com^$all
+||kinhincauking.website^$all
+||notifyoutspoken.com^$all
+||adblockstreaming.com^$all
+||live.pushub.net^$all
+||ccy122.com^$all
+||tcaadwa.com^$all
+||myfindr.com^$all
+||s.akamaicdn.cloud^$all
+!Dangerous web DATA from Bitdefender
+||doonungsub.com^$all
+!Malware DATA from self gathering CONFIRM 
+||excelgraduate.com^$all
+!Phishing DATA from self gathering CONFIRM 
+||software.technotipspedia.com^$all
+||healthlands.org^$all
+||exness.com^$all
+!หลอกได้รางวัล from self gathering CONFIRM 
+||88lg.com^$all
+||naggingirresponsible.com^$all
+!หลอกให้โหลดแอป แล้วโอนเงิน from self gathering CONFIRM 
+||cc2.lol^$all
+||allorigins.win^$all
+||dps-th.com^$all
+!หลอกให้กรอกข้อมูล ธนาคาร from self gathering CONFIRM 
+||kasikorn.go-line.cc^$all
+||ksecrity.the-line.cc^$all
+||ksecurity.ta-th.cc^$all
+!Mal redirect link from self gathering CONFIRM 
+||lliinks.com^$all
+||coinw.com^$all
+||xn--16-ftitt.com^$all
+!Mal-advertising from self gathering CONFIRM 
+||blacknesskeepplan.com^$all
+||adblock-pro-download.com^$all
+||gracelessbrief.com^$all
+||yournicejournal.com^$all
+||rekadvert.com^$all
+||hotcoin.com^$all
+||hoaxbasesalad.com^$all
+!Mal script from self gathering CONFIRM 
+||advdomlab.com^$all
+!Mal Captcha from self gathering CONFIRM 
+||vantsolutions.com^$all
+!Scam from self gathering CONFIRM 
+||survey-smiles.com^$all
+!Mal from self gathering CONFIRM 
+||happylukebet.com^$all
+||silkspan.com^$all
+||thai-iphone.com^$all
+!Fraud from self gathering CONFIRM 
+||phognekrsurvey.space^$all
+!Mal search engine from self gathering CONFIRM 
+||bestsearch.ai^$all
+!SMS from self gathering CONFIRM 
+||ipi.in^$all
+||xpay168.vip^$all
+||lv5vip.com^$all
+||iba888.com^$all
+||kng.wtf^$all
+!Try to download PUA from Bitdefender
+||virus-removal-guide.net^$all
+!Spam in Facebook.com from self gathering CONFIRM 
+||uich.cc^$all
+||sshon.info^$all
+||thaimedia.shop^$all
+||shorten.is^$all
+||thaitubtv.shop^$all
+||2no.co^$all
+||rrhonka.com^$all
+||neverforget.mom^$all
+||uejdi.icu^$all
+||kipokans.buzz^$all
+||dazedarticulate.com^$all
+||dailycoverage.asia^$all
+||ezstat.ru^$all
+||iplogger.com^$all
+||iyp.my.id^$all
+||go-via.cc^$all
+||abre.ai^$all
+||iplog.co^$all
+||twentyseven.ltd^$all
+||qptr.ru^$all
+||mediahotstar.shop^$all
+||boscurtiespedia.pics^$all
+||ny-x.cc^$all
+||citly.me^$all
+||telegra.ph^$all
+||ln.run^$all
+||cbsmedia.shop^$all
+||l.facebook.com/l.php?u=http://tinyurl.com^$all
+||l.facebook.com/l.php?u=https://shorter.me^$all
+!!hide spam link comments by detecting "text link" in "a" element
+!Discord spam
+http://7link.ru^$all
+!--------------Dangerous web-------------END
+!----------------------------------------END
+!----------------------------------------END
+
+!!!-------------illegal site-------------START
+!----------------------------------------START
+!----------------------------------------START
+
+!----------URL general Rules ----------
+https://*.bet^$all
+https://*bet.$all
+https://sexygame*.com^$all
+https://www.ufa*.$all
+https://ufa*.$all
+https://*ssgame*/$all
+https://*casino*.$all
+
+!block both link and ads video
+/brazil$media
+/lotto$media
+/ufanance$media
+/okcasino$media
+/nexobet$media
+/Lcd168$media
+/Ufac4$media
+/teenoi168$media
+!/heng99.jpg
+/heng99$image
+!/juad8881 และ /juad8882
+/juad*.gif$image
+/juad*.webp$image
+!/ufobet728x90
+/ufobet*.gif$image
+!/riches888all และ /riches888pg
+/riches.gif$image
+!/singha678
+/singha*.gif$image
+!/sexygame992 และ /sexybaccarat
+/sexygame*.gif$image
+/sexygame*.webp$image
+!/hydra888
+/*hydra*.gif$image
+/*Hydra*.gif$image
+/*Hydra*.webp$image
+!/brazil999
+/*brazil*.gif$image
+/*brazil*.webp$image
+!/lockdown168
+/lockdown*.gif$image
+!/london168
+/*london*.gif$image
+/*london*.webp$image
+/ld168.gif$image
+!/ufa และ /ufazeed
+!/ufanance*.gif ซ้ำ
+!/kingdom66
+/*kingdom*.gif$image
+/*kingdom*.webp$image
+!/ufazeed ซ้ำ
+!/ufa ซ้ำ
+!/lotto4321
+/*lotto*.gif$image
+/*lotto*.webp$image
+!/hotgraph88
+/*hotgraph*.gif$image
+/*hotgraph*.webp$image
+!/mahagame88
+/*mahagame*.gif$image
+/*mahagame*.webp$image
+!/ssgame666
+/*ssgam*.gif$image
+/ssgame*.webp$image
+!/vip168sa
+/*vip168*.gif$image
+/*vip168*.webp$image
+!/sagame350v3
+/*sagam*.gif$image
+!/8xbetv2
+/8xbet*.gif$image
+!/huc99728x90
+/huc99*.gif$image
+!/luca99th
+/luca99*.gif$image
+!/baccarat99th
+/baccarat*.gif$image
+!/slot1234 และ slotnexobet
+/*slot*.gif$image
+/*slot*.webp$image
+!/newyork888 และ !/newyork168.gif
+/*newyork*.gif$image
+/*newyork*.webp$image
+!/bufac4 /Bufazeed
+/*ufa*.gif$image
+/*ufa*.webp$image
+!/ss666
+/*ss666*.gif$image
+!/betflixcasino /betflixslot /betflix2k
+/betflix*.gif$image
+/BETFLIX*.webp$image
+!
+/*Lockdown*.gif$image
+/*Lockdown*.webp$image
+/panama*.gif$image
+/*panama*.webp$image
+/ALL*.webp$image
+/*bacara*$image
+/*Lcd168.gif$image
+/*nance*.gif$image
+/*casino*.gif$image
+/meyou*.gif$image
+/SA-lucky*.gif$image
+/lucky135*.gif$image
+/jinda8*.gif$image
+/bcr99*.gif$image
+/ekings*.gif$image
+/qq288*.gif$image
+/THAISBET*.webp$image
+/*vj*soccer*.gif$image
+/*jbet*.gif$image
+/*vj*soccer*.gif$image
+/*jbet*.gif$image
+/gclub*.jpg$image
+/Sagame*.webp$image
+/*GCLUB*.jpg$image
+/fhm*.gif$image
+!
+/999bet$image
+/qq101$image
+/rb88asia$image
+/qq288we$image
+/FUN88$image
+/betway$image
+/newvegas168$image
+/wmbet444$image
+/sbfplay99$image
+/dafabet$image
+/Empire777$image
+/huc33$image
+/188bet$image
+/365kub$image
+/pgwin88$image
+/1688ufabet$image
+/sbfplay$image
+/play69$image
+/AD1108$image
+/baccarat2gold$image
+/sa-gaming$image
+/spinix188$image
+/ligaz77king$image
+/r9betting$image
+/wmpro444$image
+/way88$image
+/red168$image
+/DATAbet88$image
+/pgjoker$image
+/bet777th$image
+/pcgotham$image
+/amb2win$image
+/newyoke168.gif$image
+/punpro7772.gif$image
+/QQ724.gif$image
+/8xbet.webp$image
+/pay69.webp$image
+/fafa*.webp$image
+/aoxx69.gif$image
+/116lotto.png$image
+/pgslo999.webp$image
+/pay69.gif$image
+/teenoi168.gif$image
+/Evolution.gif$image
+/xgbet369.gif$image
+/baccarat$image
+/ufa77$image
+!
+/*728x*.gif$image
+/*728x*.webp$image
+/750x375*.gif$image
+/676x140*.gif$image
+/r800x300$image
+/300x100$image
+/140x250$image
+!----------URL specific Rules ----------
+http://bit.ly/3GRDdCh$all
+http://bit.ly/3hC5suJ$all
+http://bit.ly/3HM8wNR$all
+http://bit.ly/3jfrZOW$all
+http://bit.ly/3K5kZiw$all
+http://bit.ly/3PAUBhl$all
+http://bit.ly/3VrYSWw$all
+http://daws-api.tv-asahi.co.jp^$all
+http://london1681.com^$all
+https://168*sagame.com^$all
+https://168pretty.*$all
+https://188th.co^$all
+https://789steps.com^$all
+https://8xbet-vip.*$all
+https://8xbet0.com^$all
+https://928hd.com^$all
+https://99tded.com^$all
+https://9slotgame.net^$all
+https://aff.123-boss.app^$all
+https://aff.123aff.in^$all
+https://aff.camelv1.com^$all
+https://aff.easy365.cc^$all
+https://aff.kingkong-89.cc^$all
+https://aff.lion-123.app^$all
+https://affhy88.com^$all
+https://ambbeth.com^$all
+https://anime-hit.com^$all
+https://app.shark-center.cc^$all
+https://app.xgbet369.com^$all
+https://baccarat888.com^$all
+https://bcr99th.com^$all
+https://bet777th.com^$all
+https://betflix*.com^$all
+https://bit.ly/38y9PSG$all
+https://bit.ly/39SJ38y$all
+https://bit.ly/3BOp05j$all
+https://bit.ly/3Dc6chd$all
+https://bit.ly/3EDlr4R$all
+https://bit.ly/3EL7eQz$all
+https://bit.ly/3eQUrEn$all
+https://bit.ly/3fgsjL7$all
+https://bit.ly/3Ii9guh$all
+https://bit.ly/3IImjFH$all
+https://bit.ly/3J1akmo$all
+https://bit.ly/3JXckyF$all
+https://bit.ly/3kGMAJM$all
+https://bit.ly/3KLcYg4$all
+https://bit.ly/3KPWg0l$all
+https://bit.ly/3LvnJX0$all
+https://bit.ly/3LwYxy7$all
+https://bit.ly/3mjB6iE$all
+https://bit.ly/3MOkx6w$all
+https://bit.ly/3NqDek8$all
+https://bit.ly/3pg77slbn1$all
+https://bit.ly/3PN1nzk$all
+https://bit.ly/3qEXOAJ$all
+https://bit.ly/3Qup284$all
+https://bit.ly/3Qwqzff$all
+https://bit.ly/3QzKPv2$all
+https://bit.ly/3RY5Ocz$all
+https://bit.ly/3sHnA99$all
+https://bit.ly/3UYH9Fa$all
+https://bit.ly/3W61vgX$all
+https://bit.ly/3xkgtGt$all
+https://bit.ly/3XO14cv$all
+https://bit.ly/3Ylg2FW$all
+https://bit.ly/3zVLFg9$all
+https://bit.ly/41BuuMq$all
+https://bit.ly/992-sexygame-sagame-pgslot-joker123$all
+https://bit.ly/anime-sugoii$all
+https://bit.ly/newvegas168-l*$all
+https://bit.ly/pgjoker69-*$all
+https://bit.ly/Pgjoker69-*$all
+https://bit.ly/pgslot-pg-sagaming-newvegas168$all
+https://bit.ly/sbobet-neevegas168-pgslot-fifa55$all
+https://bit.ly/sexygame-*$all
+https://bit.ly/ufabet*$all
+https://bmjverification-qa.bma.org.uk^$all
+https://brazil999.*$all
+https://cat999.com^$all
+https://click.a-ads.com^$all
+https://clsapitest.fdot.gov^$all
+https://d99d99.click^$all
+https://dev.pwm.basf.com^$all
+https://df011.com^$all
+https://dhorball.com^$all
+https://fx8.s3.ap-southeast-1.amazonaws.com^$all
+https://ggband.gg^$all
+https://hengjing168.win^$all
+https://heylink.me/fox888.vip$all
+https://hotgraph88.co^$all
+https://hotgraph883.com^$all
+https://hydra88*.co^$all
+https://jinda888.vip^$all
+https://joker123th.com^$all
+https://juad888*.com^$all
+https://k9wyyl.com^$all
+https://kingdom6*.com^$all
+https://lcbet168.com^$all
+https://ligaz77king.com^$all
+https://lin.ee/1ALiEXl$all
+https://line.me/R/ti/p/%40214gglya$all
+https://line.me/ti/p/lETR15cN-P$all
+https://lion123.asia^$all
+https://lkk135.com^$all
+https://lockdown168*$all
+https://london168*$all
+https://lotto*.co*$all
+https://luca99th.com^$all
+https://lucabet168.com^$all
+https://lucky135.com^$all
+https://lucky269.com^$all
+https://lucky629.com^$all
+https://mahagame88*.com^$all
+https://mayalounge.net^$all
+https://member.365kub.com^$all
+https://meyou147.com^$all
+https://mhandee88.com^$all
+https://nazavip.com^$all
+https://newyork888s.co*$all
+https://panama888*$all
+https://pg-gameslot.com^$all
+https://pigpg.com^$all
+https://pok10.com^$all
+https://r9betting.com^$all
+https://rebrand.ly^$all
+https://record.mytopaff.com^$all
+https://red168.com^$all
+https://sagame6*.co*$all
+https://sexygame*.com^$all
+https://shorturl.asia/IYvTC$all
+https://shorturl.asia/uUy3t$all
+https://shorturl.at/DEG56$all
+https://singha678.com^$all
+https://site.luckyniki88.com^$all
+https://slotheng.com^$all
+https://slotpgthai.net^$all
+https://smhotelingapicloud.deloitte.com^$all
+https://spinix188.com^$all
+https://tangtem168.com^$all
+https://thais4.com^$all
+https://thais7.com^$all
+https://tinyurl.com/2g58f3kv^$all
+https://tinyurl.com/2jrg2axo^$all
+https://track.cdnyz.com^$all
+https://vip168sa*$all
+https://wcmdevaks01.fairfaxcounty.gov^$all
+https://wmbet444.com^$all
+https://wvd.simon.com^$all
+https://www.188league.com^$all
+https://www.512xiaojin.com^$all
+https://www.azure.csuci.edu^$all
+https://www.betflix991.com^$all
+https://www.betg11.com^$all
+https://www.fun888asia.com^$all
+https://www.huc33.com^$all
+https://www.jinda888.vip^$all
+https://www.juad888*$all
+https://www.newyork888s.co^$all
+https://www.pg133.com^$all
+https://www.pgslot9999.co^$all
+https://www.sbfplay*$all
+https://www.scb9.net^$all
+https://www.sexy168.vip^$all
+https://www.slot1234.com^$all
+https://www.slotxo24hr.co^$all
+https://www.ufa*.*$all
+https://www.usa567.cc^$all
+https://www.xn--m3cd7amyt0n2a.com^$all
+https://wy88bets.com^$all
+https://xn--72c1abpacq3blf5b5e1c2kjb5d7bzabg4g.net^$all
+https://xn--b3cw4apb2b3e1a1gxc.com^$all
+mailto:kingsmanga@protonmail.com^$all
+https://grand-prize.xyz^$all
+https://www.royalprojectthailand.com^$all
+https://sbobet888.win^$all
+https://siammillion.com^$all
+https://www.allslot.bio^$all
+https://csbet88.com^$all
+https://goatbet88.com^$all
+https://goatbet888.com^$all
+https://psth888.com^$all
+https://scrt888.com^$all
+https://www.millenniumvillages.org^$all
+https://www.hapilabs.com^$all
+https://e15initiative.org^$all
+https://e15initiative.org^$all
+https://e15initiative.org^$all
+https://ohiovaxamillion.com^$all
+https://pg888t.com^$all
+https://lcbet88.com^$all
+https://spnx888.com^$all
+https://betplay569.com^$all
+https://lcbetasia.com^$all
+https://pgs88asia.com^$all
+https://pg999st.com^$all
+https://lcbet24hr.com^$all
+https://whanmhoo569.com^$all
+https://e15initiative.org^$all
+https://gclub321.com^$all
+https://www.siriusretail.com^$all
+https://paragon-usa.com^$all
+https://nashvillelgbtchamber.org^$all
+https://hydra888z.com^$all
+https://www.phelpsgov.org^$all
+https://lionth.com^$all
+https://sexycasino.co^$all
+https://shorturl.asia/gjxW1$all
+https://168pretty.com^$all
+https://www.gxy888.vip^$all
+https://siampoker.com^$all
+
+!---------- fake game ----------!
+!*เกมเถื่อน
+||qq288.com$all
 
 !!!------------Ad Server/Links-----------START
 !----------------------------------------START
@@ -56,23 +607,27 @@
 ||displayvertising.com^$all
 ||betteradsystem.com^$all
 ||d3mzokty951c5w.cloudfront.net^$all
-!mangapdf-online.com
+!จาก mangapdf-online.com
 ||impartialpath.com^$all
 ||alarming-rule.com^$all
-!aileen-novel.online
+!จาก aileen-novel.online
 https://www.yprdfnihszoaq.com^$all
 https://www.gqdhsmwzpc.com^$all
-!mangapdf-online.com
+!จาก mangapdf-online.com
 https://www.xwojiijs.com^$all
 https://www.okx.com^$all
 https://www.zpigericvlz.com^$all
 https://www.fogtweybq.com^$all
 https://www.sxirpkuxm.com^$all
 https://www.laeiwbkt.com^$all
-!manhwazmove.com
+!จาก manhwazmove.com
 https://wowrapidly.com^$all
-!novelpdf.xyz
+!จาก novelpdf.xyz
 ||ticket.leaforfree.com^$all
+!จาก imgbox.com
+!https://cdn52969391.ahacdn.me^$all
+||ahacdn.me^$all
+https://adsmediabox.com^$all
 !
 ||exness.com^$all,domain=~exness.com
 !from siamblockchain.com
@@ -98,6 +653,13 @@ terabox.com##.drainage
 !
 !---picture image host---
 !
+
+!imgbox.com mobile 20240128204852
+!#if cap_html_filtering
+imgbox.com##^._ln-floater:upward(1)
+imgbox.com$$._ln-floater:upward(1)
+!#endif
+imgbox.com##._ln-floater:upward(1)
 
 !
 !---video streaming---
@@ -1751,9 +2313,9 @@ www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-/*.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com
-/*.mp4$media,domain=manga-sugoi.com
-/*.webp$image,domain=mangauptocats.net|mangauptocats.com
+.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com
+.mp4$media,domain=manga-sugoi.com
+.webp$image,domain=mangauptocats.net|mangauptocats.com
 !manga168.com
 !#if cap_html_filtering
 manga168.com##^.dessert-frame > center
@@ -1791,7 +2353,7 @@ manga168.com$$.kln
 !#else
 manga168.com##.kln
 !#endif
-!!bad performance rule from AdGuard - Ads
+!!duplicate rule from AdGuard - Ads
 /*.gif$from=manga168.com,badfilter
 !!some specific banner
 ||go.xn--16-ftitt.com/inw2.jpg$image,domain=manga168.com
@@ -1881,7 +2443,7 @@ www.niceoppai.net##.mng_rdr.wpm_pag > center
 ||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
 ||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
 ||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||1.bp.blogspot.com/*$image,domain=www.niceoppai.net
+||1.bp.blogspot.com^$image,domain=www.niceoppai.net
 ||blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
 ||www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
 ||i.imgur.com*.gif$image,domain=www.niceoppai.net
@@ -2158,7 +2720,7 @@ manga-za.net$$div[class="mt-ad text-center"]
 manga-za.net##div[class="mt-ad text-center"]
 !#endif
 !mangapdf-online.com
-://$script,third-party,domain=mangapdf-online.com
+*$script,third-party,domain=mangapdf-online.com
 !oremanga.net
 ||imgbox.com/*.gif$image,domain=oremanga.net
 !manga-lc.net
@@ -2190,7 +2752,7 @@ manga-post.com$$center > a:upward(1)
 manga-post.com##center > a:upward(1)
 !#endif
 !mafia-manga.com 20231217005325
-://$script,third-party,domain=mafia-manga.com
+*$script,third-party,domain=mafia-manga.com
 !#if cap_html_filtering
 mafia-manga.com##^div.dessert-frame
 mafia-manga.com$$div.dessert-frame
@@ -2225,7 +2787,7 @@ cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-/*.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
+.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com
 !Anime Sugoi 20231225134824
 !!เอา box ที่เขียนว่า โฆษณา ออก
 !#if cap_html_filtering
@@ -2456,7 +3018,7 @@ animeshiro.com##div.banner-wrapper
 !
 !---Novel ---
 !
-/*.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
+.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 !novel-lucky.com
 !#if cap_html_filtering
 novel-lucky.com##^.advanced_floating_content 
@@ -2485,11 +3047,11 @@ novel-lucky.com###bottom_center_ads_1
 !aileen-novel.online
 !!https://github.com/gorhill/uBlock/wiki/Resources-Library#nowoifjs-
 aileen-novel.online##+js(nowoif)
-://$script,third-party,domain=aileen-novel.online
+*$script,third-party,domain=aileen-novel.online
 !novelpdf.xyz
 !!https://github.com/gorhill/uBlock/wiki/Resources-Library#nowoifjs-
 novelpdf.xyz##+js(nowoif)
-://$script,third-party,domain=novelpdf.xyz
+*$script,third-party,domain=novelpdf.xyz
 !cat2auto.com
 !#if cap_html_filtering
 cat2auto.com##^div.widget_text
@@ -2526,7 +3088,7 @@ xn--q3cmiag1gmn.com##div.header-ads-section
 !
 !---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-/*.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
 !
 /series-indy$image
 /928hd$image
@@ -2570,7 +3132,7 @@ doonungsub.com##.popup
 ดูหนัง.tv$$.row
 !#endif
 ดูหนัง.tv##.row
-://$script,third-party,domain=xn--72czp5e5a8b.tv
+*$script,third-party,domain=xn--72czp5e5a8b.tv
 !serie-master.com
 ||serie-master.com$popup
 !
@@ -2601,9 +3163,7 @@ doonungsub.com##.popup
 !redirect to ads domain when click backward (popunder pop-under)
 /popunder*.js$script
 !mal usage ส่วนใหญ่ชอบใช้ ผิดวัตถุประสงค์ เช่น การโฆษณา
-||media.discordapp.net/attachments/*/*/*.jpg$image,domain=~discordapp.net|~discord.com
-||media.discordapp.net/attachments/*/*/*.gif$image,domain=~discordapp.net|~discord.com
-||media.discordapp.net/attachments/*/*/*.webp$image,domain=~discordapp.net|~discord.com
+||media.discordapp.net/attachments^$image,domain=~discordapp.net|~discord.com
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
 !---------------General Rules------------END
@@ -2642,6 +3202,660 @@ google.co.th#@##bottomads
 !----------------------------------------END
 !----------------------------------------END
 
+!!!------------Performance --------------START
+!----------------------------------------START
+!----------------------------------------START
+!---Google ---
+@@||www.google.*$generichide
+@@||meet.google.com^$generichide
+@@||classroom.google.com^$generichide
+@@||cloud.google.com^$generichide
+@@||docs.google.com^$ehide
+@@||drive.google.com^$ehide
+@@||mail.google.com^$ehide
+@@||play.google.com^$ehide
+@@||news.google.com^$generichide
+@@||translate.google.com^$ehide
+@@||myaccount.google.com^$ehide
+@@||photos.google.com^$ehide
+@@||www.youtube.com^$generichide
+@@||m.youtube.com^$generichide
+@@||i.ytimg.com^$generichide
+@@||studio.youtube.com^$generichide
+@@||music.youtube.com^$generichide
+@@||earth.google.com^$ehide
+@@||bard.google.com^$ehide
+@@||accounts.google.com^$ehide
+@@||googlesource.com^$ehide
+!---Microsoft ---
+@@||account.live.com^$generichide
+@@||github.com^$generichide
+@@||www.githubstatus.com^$generichide
+@@||raw.githubusercontent.com^$generichide
+@@||onedrive.live.com^$ehide
+@@||outlook.live.com^$generichide
+@@||login.microsoftonline.com^$generichide
+@@||www.msn.com^$generichide
+@@||visualstudio.microsoft.com^$generichide
+@@||www.office.com^$ehide
+@@||devblogs.microsoft.com^$generichide
+@@||learn.microsoft.com^$generichide
+@@||*.swiftkey.com^$generichide
+@@||techcommunity.microsoft.com^$generichide
+@@||account.microsoft.com^$ehide
+@@||support.microsoft.com^$ehide
+!---clouds cloud ---
+@@||mega.nz^$ehide
+@@||mega.io^$generichide
+@@||terabox.com^$generichide
+@@||dropbox.com^$generichide
+@@||pcloud.com^$generichide
+@@||icedrive.net^$generichide
+@@||koofr.eu^$generichide
+@@||mediafire.com^$generichide
+@@||storj.io^$ehide
+@@||icloud.com^$ehide
+!---picture image or host---
+@@||imgur.*$generichide
+@@||imgbb.com^$generichide
+@@||imgbox.com^$generichide
+@@photopea.co^$generichide
+!---video ---
+@@||streamable.com^$generichide
+@@||jwplayer.com^$generichide
+@@||client.iamtheme.com^$generichide
+!---ai ---
+@@||openai.com^$generichide
+!---desgin ---
+@@||canva.com^$generichide
+!---work ---
+@@||workona.com^$generichide
+@@||hive.com^$generichide
+@@||jaggaer.com^$generichide
+!---international news ---
+@@||bbc.*$generichide
+@@||cnn.*$generichide
+@@||economist.com^$generichide
+@@||forbes.com^$generichide
+@@||businessinsider.com^$generichide
+@@||collider.com^$generichide
+@@||www.ign.com^$generichide
+@@||www.rd.com^$generichide
+@@||indiatoday.in^$generichide
+@@||www.newsweek.com^$generichide
+
+!---conference ---
+@@||slack.com^$ehide
+@@||teams.microsoft.com^$generichide
+@@||telegram.org^$generichide
+@@||whatsapp.com^$generichide
+!---music ---
+@@||open.spotify.com^$ehide
+@@||developer.spotify.com^$ehide
+@@||tidal.com^$generichide
+@@||joox.com^$generichide
+@@||www.last.fm^$generichide
+@@||www.deezer.com^$generichide
+@@||soundcloud.com^$generichide
+!---education ---
+@@||clearnotebooks.com^$generichide
+@@||imtranslator.net^$generichide
+@@||ptable.com^$generichide
+@@||ieltsbuddy.com^$generichide
+@@||ptable.com^$generichide
+@@||ludwig.guru^$generichide
+@@||wolframalpha.com^$generichide
+@@||desmos.com^$generichide
+@@||geogebra.org^$generichide
+@@||grammarly.com^$ehide
+@@||panyasociety.com^$generichide
+@@||khanacademy.org^$ehide
+!---free web host ---
+@@||000webhost.com^$generichide
+@@||infinityfreeapp.com^$generichide
+@@||filemanager.ai^$generichide
+!---redirect qr code ---
+@@||qrbridge.me^$generichide
+!---social platform ---
+@@||discord.com^$ehide
+@@||line.me^$generichide
+@@||facebook.com^$generichide
+@@||instagram.com^$generichide
+@@||twitter.com^$generichide
+@@||twitch.tv^$generichide
+@@||disqus.com^$generichide
+@@||tiktok.com^$generichide
+@@||www.reddit.com^$generichide
+@@||quora.com^$generichide
+@@||pixiv.net^$generichide
+@@||i.pximg.net^$generichide
+@@||feedly.com^$generichide
+!---adblock ---
+@@||adguard.com^$ehide
+@@||local.adguard.org^
+!---wiki ---
+@@||wikibooks.org^$generichide
+@@||wikidata.org^$generichide
+@@||wikinews.org^$generichide
+@@||wikipedia.org^$ehide
+@@||wikiquote.org^$generichide
+@@||wikiversity.org^$generichide
+@@||wiktionary.org^$generichide
+@@||fandom.com^$generichide
+!---Apk ---
+@@||apkmirror.com^$generichide
+@@||apkpure.com^$generichide
+@@||apkcombo.com^$generichide
+@@||apkmody.io^$generichide
+@@||download-new.apkmody.fun^$generichide
+@@||modyolo.com^$generichide
+@@||apkdone.com^$generichide
+!---dictionary ---
+@@||wordreference.com^$generichide
+@@||oxfordlearnersdictionaries.com^$generichide
+@@||dictionary.com^$generichide
+@@||etymonline.com^$generichide
+@@||collinsdictionary.com^$generichide
+@@||thefreedictionary.com^$generichide
+@@||freethesaurus.com^$generichide
+@@||quillbot.com^$generichide
+@@||www.ldoceonline.com^$generichide
+!---other search engines ---
+@@||bing.com/search?^
+@@||duckduckgo.com/?q=^
+@@||yandex.com/search/?^
+!---shopping online sale---
+@@||shopee.co.th^$ehide
+@@||lazada.co.th^$generichide
+@@||425degree.com^$generichide
+@@||mercular.com^$generichide
+@@||bnn.in.th^$generichide
+@@||advice.co.th^$generichide
+@@||stacksocial.com^$generichide
+@@||amazon.com^$generichide
+@@||remobie.com^$generichide
+!---dns ---
+@@||adguard-dns.io^$ehide
+@@||nextdns.io^$ehide
+!---game ---
+@@||epicgames.com^$ehide
+@@||steampowered.com^$ehide
+@@||mihoyo.com^$generichide
+@@||hoyoverse.com^$generichide
+@@||hoyo.link^$generichide
+@@||hoyolab.com^$generichide
+@@||minecraft.net^$generichide
+@@||mojang.com^$generichide
+@@||xbox.com^$generichide
+@@||riotgames.com^$generichide
+@@||ubisoft.asia^$generichide
+@@||ubisoft.com^$generichide
+@@||store.ubisoft.com^$ehide
+@@||ubisoftconnect.com^$ehide
+@@||connect.ubisoft.com^$ehide
+@@||register.ubisoft.com^$generichide
+@@||accounts.krafton.com^$generichide
+@@||pubg.com^$generichide
+@@||modrinth.com^$generichide
+@@||chunkbase.com^$generichide
+@@||curseforge.com^$generichide
+@@||lineupsvalorant.com^$generichide
+@@||tracker.gg^$generichide
+@@||blitz.gg^$generichide
+@@||genshin.gg^$generichide
+@@||xenon.club^$generichide
+!---game news ---
+
+!---foods food serices ---
+@@||www.kfc.*$ehide
+@@||www.grab.com^$generichide
+@@||www.foodpanda.*$generichide
+!---watchlist review movie anime tv show ---
+@@||myanimelist.net^$generichide
+@@||rottentomatoes.com^$generichide
+@@||imdb.com^$generichide
+@@||anilist.co^$ehide
+@@||simkl.com^$generichide
+@@||letterboxd.com^$generichide
+!---ebook e book e-book publisher ---
+@@||pubhtml5.com^$generichide
+!---ebook e book e-book publisher japan japanese ---
+@@||comic-boost.com^$generichide
+@@||urasunday.com^$generichide
+@@||bookwalker.jp^$generichide
+@@||nijigencospa.com^$generichide
+@@||web-ace.jp^$generichide
+@@||zerosumonline.com^$generichide
+@@||kadokawa.*$generichide
+@@||kakuyomu.jp^$generichide
+@@||gs-ch.com^$generichide
+@@||comic-walker.com^$generichide
+@@||www.ganganonline.com^$generichide
+!---benmarck speedtest web ---
+@@||speedtest.net^$generichide
+@@||basemark.com^$ehide
+@@||browserbench.org^$ehide
+@@||www.principledtechnologies.com^$ehide
+!--- test ---
+@@||keyboard-test.space^$generichide
+!---auto web ---
+@@||toyota.co.th^$generichide
+!---file transfer ---
+@@||wetransfer.com^$generichide
+@@||send-anywhere.com^$generichide
+@@||snapdrop.net^$ehide
+@@||pairdrop.net^$ehide
+@@||sharedrop.io^$generichide
+@@||send.cm^$generichide
+@@||uploadmx.com^$generichide
+@@||pastebin.com^$generichide
+@@||fromsmash.com^$generichide
+@@||pixeldrain.com^$generichide
+!---tech news ---
+@@||dxomark.com^$generichide
+@@||gsmarena.com^$generichide
+@@||nanoreview.net^$generichide
+@@||tomshardware.com^$generichide
+@@||gizmochina.com^$generichide
+@@||makeuseof.com^$generichide
+@@||sammobile.com^$generichide
+@@||lifehacker.com^$generichide
+@@||g2.com^$generichide
+@@||cloudwards.net^$generichide
+@@||androidauthority.com^$generichide
+@@||iphoneiosthailand.com^$generichide
+@@||neowin.net^$generichide
+@@||raymond.cc^$generichide
+@@||theverge.com^$generichide
+@@||businessinsider.com^$generichide
+@@||pcmag.com^$generichide
+@@||phonearena.com^$generichide
+@@||thinkbroadband.com^$generichide
+@@||howtogeek.com^$generichide
+@@||androidpolice.com^$generichide
+@@||convergeddevices.net^$generichide
+@@||trustedreviews.com^$generichide
+@@||androidcentral.com^$generichide
+@@||pcgmaer.com^$generichide
+@@||whathifi.com^$generichide
+@@||tomsguide.com^$generichide
+@@||xda-developers.com^$generichide
+@@||interestingengineering.com^$generichide
+@@||computerworld.com^$generichide
+@@||alphr.com^$generichide
+@@||towardsdatascience.com^$generichide
+@@||sammyfans.com^$generichide
+@@||www.bleepingcomputer.com^$generichide
+@@||www.pcworld.com^$generichide
+@@||www.macrumors.com^$generichide
+@@||thehackernews.com^$generichide
+@@||bgr.com^$generichide
+@@||interestingengineering.com^$generichide
+@@||arstechnica.com^$generichide
+@@||9to5mac.com^$generichide
+@@||9to5google.com^$generichide
+@@||9to5toys.com^$generichide
+@@||electrek.co^$generichide
+@@||dronedj.com^$generichide
+@@||spaceexplored.com^$generichide
+@@||www.techspot.com^$generichide
+!--- science news ---
+
+!---note ---
+@@||goodnotes.com^$generichide
+@@||web.goodnotes.com^$ehide
+@@||feedback.goodnotes.com^$ehide
+@@||evernote.com^$generichide
+@@||notion.so^$ehide
+@@||obsidian.md^$ehide
+@@||scrintal.com^$generichide
+!---tech companies ---
+@@||samsung.com^$generichide
+@@||apple.com^$ehide
+@@||intel.com^$generichide
+@@||amd.com^$generichide
+@@||nvidia.com^$generichide
+@@||qualcomm.com^$generichide
+@@||sony.co.th^$generichide
+@@||web.sony-asia.com^$generichide
+!---code coding ---
+@@||autohotkey.com^$generichide
+@@||stackoverflow.com^$generichide
+@@||sourceforge.net^$generichide
+@@||regextutorial.org^$generichide
+@@||superuser.com^$generichide
+@@||tutorialstonight.com^$generichide
+@@||freecodecamp.org^$generichide
+@@||linuxhint.com^$generichide
+@@||gitfront.io^$generichide
+@@||blender.stackexchange.com^$generichide
+@@||w3schools.com^$generichide
+@@||geeksforgeeks.org^$generichide
+@@||thepythoncode.com^$generichide
+@@||codeberg.org^$generichide
+@@||askubuntu.com^$generichide
+!---web builder ---
+!---web engine web browser ---
+@@||mozilla.org^$generichide
+!---web monitor ---
+@@||distill.io^$generichide
+@@||floccus.org^$generichide
+@@||modheader.com^$generichide
+@@||similarweb.com^$generichide
+@@||visualping.io^$ehide
+!---trust checker web ---
+@@||mywot.com^$generichide
+@@||trustpilot.com^$generichide
+@@||downforeveryoneorjustme.com^$generichide
+@@||isitdownrightnow.com^$generichide
+@@||hybrid-analysis.com^$ehide
+@@||who.is^$generichide
+@@||ssltrust.com.au^$ehide
+@@||urlscan.io^$generichide
+!---password manager ---
+@@||1password.com^$generichide
+@@||bitwarden.com^$ehide
+@@||dashlane.com^$generichide
+@@||keepersecurity.com^$generichide
+!---payment ---
+@@||paypal.com^$document
+!---virus checker security privacy ---
+@@||virustotal.com^$ehide
+@@||iknowwhatyoudownload.com^$generichide
+!---redirect ---
+@@||adf.ly^$generichide
+@@||adfoc.us^$generichide
+!---alternative ---
+@@||alternativeto.net^$generichide
+!---app builder ---
+@@||pwabuilder.com^$generichide
+@@||appypie.com^$generichide
+!---bookmark manager ---
+@@||getpocket.com^$generichide
+@@||app.raindrop.io^$generichide
+!---automatic ---
+@@||ifttt.com^$generichide
+@@||zapier.com^$generichide
+!---multipurpose ---
+
+!---apps programs ---
+@@||raycast.com^$generichide
+@@||packal.org^$generichide
+@@||obsproject.com^$generichide
+!---printer ---
+@@||brother.co.th^$generichide
+!---med hospital ---
+
+!---pc ---
+
+!---subcription ---
+@@||patreon.com^$generichide
+!---shipment ---
+@@||www.sf-international.com^$generichide
+!---life sytle ---
+@@||trueid.net^$generichide
+!---music illegitimate ---
+!---manga legitimate ---
+@@||shueisha.co.jp^$generichide
+!---tech illegitimate ---
+@@||mawtoload.com^$generichide
+@@||axeload.com^$generichide
+!---Manga Foreign illegitimate ---
+@@||mangadex.org^$generichide
+@@||manhwazmove.com^$generichide
+!---novel ---
+@@||www.novelupdates.com^$generichide
+!---novel illegitimate ---
+@@||novel-lucky.com^$generichide
+@@||aileen-novel.online^$generichide
+@@||novelpdf.xyz^$generichide
+@@||cat2auto.com^$generichide
+@@||xn--72c5afc3e6a4acd3tpa.com^$generichide
+@@||xn--q3cmiag1gmn.com^$generichide
+!---movie illegitimate ---
+@@||i-moviehd.com^$generichide
+@@||037hdmovie.com^$generichide
+@@||1112hd.com^$generichide
+@@||doonungonline.com^$generichide
+@@||www.xn--72czp5e5a8b.tv^$generichide
+!---movie legitimate ---
+@@||netflix.com^$generichide
+@@||disneyplus.com^$generichide
+@@||hotstar.com^$generichide
+!---weather ---
+@@||windy.com^$ehide
+@@||www.iqair.com^$generichide
+@@||aqicn.org^$generichide
+!--- chat ---
+@@||static.zdassets.com^$ehide
+!--- browser extension ---
+@@||||www.automa.site^$ehide
+!--- git ---
+@@||gitlab.com^$generichide
+@@||gitea.angry.im^$generichide
+!--- others ---
+@@||www.whatismybrowser.com^$generichide
+@@||whoscall.com^$generichide
+@@||smilearm.com^$generichide
+!--- unknow ---
+
+
+!!!------------Performance --------------END
+!----------------------------------------END
+!----------------------------------------END
+
+!----------------Unbreak-----------------START
+!----------------------------------------START
+!----------------------------------------START
+!unbreak Bilibili cc AdGuard Extension
+@@||bstarstatic.com^$stealth
+!computerworld.com
+@@||d2zv5rkii46miq.cloudfront.net^$domain=computerworld.com
+!from easylist
+/web-vitals.$badfilter #break aws.amazon.com
+/web-vitals.$domain=~aws.amazon.com
+!break google recapha ในหน้าจ่ายเงิน เช่น https://shoponline.ondemand.in.th/checkout/#payment 20240123150114 หน้าเว็บมันช้า ไม่ยืนยันว่าปัญหาเกิดจาก rule ด้านล่างไหม
+!----------------Unbreak-----------------END
+!----------------------------------------END
+!----------------------------------------END
+!!!---------Performance Thai ------------START
+!----------------------------------------START
+!----------------------------------------START
+!---thai news ---
+@@||thairath.co.th^$generichide
+@@||kapook.com^$generichide
+@@||matichon.co.th^$generichide
+@@||ch3plus.com^$generichide
+@@||ch7.com^$generichide
+@@||brighttv.co.th^$generichide
+@@||beartai.com^$generichide
+@@||tnews.co.th^$generichide
+@@||sanook.com^$generichide
+@@||thansettakij.com^$generichide
+@@||catdumb.com^$generichide
+@@||thestandard.co^$generichide
+@@||mgronline.com^$generichide
+@@||workpointtoday.com^$generichide
+@@||workpointnews.com^$generichide
+@@||thaipbs.or.th^$generichide
+@@||pptvhd36.com^$generichide
+@@||dailynews.co.th^$generichide
+@@||khaosod.co.th^$generichide
+@@||thematter.co^$generichide
+@@||voicetv.co.th^$generichide
+@@||nationtv.tv^$generichide
+@@||mangozero.com^$generichide
+@@||kaijeaw.com^$generichide
+@@||thaihitz.com^$generichide
+@@||kaazip.com^$generichide
+@@||springnews.co.th^$generichide
+@@||themomentum.co^$generichide
+@@||www.ejan.co^$generichide
+@@||www.komchadluek.net^$generichide
+!!การเลือกตั้ง 2566
+@@||ectreport.com^$generichide
+@@||ectreport66.ect.go.th^$generichide
+@@||vote62.com^$generichide
+!---thai blog ---
+@@||nuuneoi.com^$generichide
+@@||kafaak.blog^$generichide
+!---education ---
+@@||ibooking.ondemand.in.th^$ehide
+@@||ondemand.in.th^$generichide
+@@||sangfans.com^$generichide
+@@||tcaster.net^$generichide
+@@||camphub.in.th^$generichide
+@@||dek-d.com^$generichide
+@@||opendurian.com^$generichide
+@@||mytcas.com^$generichide
+@@||www.mycourseville.com^$generichide
+@@||www.biobeamcenter.com^$generichide
+!---social platform ---
+@@||pantip.com^$generichide
+@@||ctrlg.gg^$generichide
+@@||www.blockdit.com^$generichide
+!---game news ---
+@@||mustplay.in.th^$generichide
+@@||thisisgamethailand.com^$generichide
+@@||gamefever.co^$generichide
+@@||www.gamingdose.com^$generichide
+@@||playulti.com^$generichide
+!---foods food serices ---
+@@||wongnai.com^$generichide
+@@||snp1344.com*$generichide
+!---watchlist review movie anime tv show ---
+@@||hareshi.net^$ehide
+!---ebook e book e-book publisher thai ---
+@@||phoenixnext.com^$generichide
+@@||mebmarket.com^$generichide
+@@||bookwalker.*$generichide
+@@||www.nekopost.net^$generichide
+@@||kuro.nekopost.net^$generichide
+!---tech news ---
+@@||siamphone.com^$generichide
+@@||techmoblog.com^$generichide
+@@||blognone.com^$generichide
+@@||droidsans.com^$generichide
+@@||notebookspec.com^$generichide
+@@||flashfly.net^$generichide
+@@||thaimobilecenter.com^$generichide
+@@||siamblockchain.com^$generichide
+@@||iphone-droid.net^$generichide
+@@||overclockzone.com^$generichide
+@@||extremeit.com^$generichide
+@@||worldittoday.com^$generichide
+@@||thaiware.com^$generichide
+@@||www.iphonemod.net^$generichide
+@@||www.it24hrs.com^$generichide
+@@||specphone.com^$generichide
+!--- science news ---
+@@||www.mitrearth.org^$generichide
+!---multipurpose ---
+@@||longdo.com^$generichide
+@@||true.th^$generichide
+!---med hospital ---
+@@||pharmacy.mahidol.ac.th^$generichide
+@@||siphhospital.com^$generichide
+@@||www.theptarin.com^$generichide
+!---pc ---
+@@||advice.co.th^$generichide
+@@||jib.co.th^$generichide
+@@||ihavecpu.com^$generichide
+!--- thai government ---
+@@||www.thaigov.go.th^$generichide
+!---manga thai illegitimate ---
+@@||mangauptocats.com^$generichide
+@@||niceoppai.net^$generichide
+@@||rh2plusmanga.com^$generichide
+@@||manga-uptocats.com^$generichide
+@@||mangadeemak.com^$generichide
+@@||garasumanga.com^$generichide
+@@||tanuki-manga.com^$generichide
+@@||doodmanga.com^$generichide
+@@||tamamanga.com^$generichide
+@@||manga168.com^$generichide
+@@||moodtoon.com^$generichide
+@@||loli-manga.com^$generichide
+@@||chocomanga.com^$generichide
+@@||thaimanga.net^$generichide
+@@||oremanga.net^$generichide
+@@||www.mangaisekaithai.com^$generichide
+@@||kingsmanga.net^$generichide
+@@||nekopost.org^$generichide
+@@||mangafins.net^$generichide
+@@||box-manga.com^$generichide
+@@||manga-sugoi.com^$generichide
+@@||mangathai.com^$generichide
+@@||dokimori.com^$generichide
+@@||murim-manga.com^$generichide
+@@||ped-manga.com^$generichide
+@@||kuro-manga.com^$generichide
+@@||manhuakey.com^$generichide
+@@||manhuabug.com^$generichide
+@@||manga-za.net^$generichide
+@@||www.manhwabreakup.com^$generichide
+@@||mangapdf-online.com^$ehide
+@@||tpnoodle.com^$generichide
+@@||makimaaaaa.com^$generichide
+@@||skoiiz-manga.com^$generichide
+@@||romance-manga.com^$generichide
+@@||germa-66.com^$generichide
+@@||hippomanga.com^$generichide
+@@||catzaa.com^$generichide
+@@||manga-moons.net^$generichide
+@@||mangathailand.com^$generichide
+@@||www.manga191.com^$generichide
+@@||popsmanga.com^$generichide
+@@||toomtam-manga.com^$generichide
+@@||manga-post.com^$generichide
+@@||manga-lc.net^$generichide
+@@||www.mangakimi.com^$generichide
+@@||mangastep.com^$generichide
+@@||mynovel.com^$generichide
+!---anime legitimate ---  
+@@||bilibili.tv^$generichide
+@@||anitrendz.com^$generichide
+@@||wiki.anime-os.com^$ehide
+!---anime illegitimate ---
+@@||anime-sugoi.com^$generichide
+@@||anime-masters.com^$generichide
+@@||animekimi.com^$generichide
+@@||anime-suba.com^$generichide
+@@||sub-thai.com^$generichide
+@@||anifume.com^$generichide
+@@||animesubthaiz.com^$generichide
+@@||do-anime.com^$generichide
+@@||gg-anime.com^$generichide
+@@||lnwanime.com^$generichide
+@@||animezeed.net^$generichide
+@@||anime-nico.com^$generichide
+@@||animehayai.net^$generichide
+@@||anime-kimuchi.com^$generichide
+@@||neko-miku.com^$generichide
+@@||shibaanime.com^$generichide
+@@||www.animerem.com^$generichide
+@@||www.kurokami.me^$generichide
+@@||animelizm.com^$generichide
+@@||animeshiro.com^$generichide
+!!เจอได้จาก animeshiro.com
+@@||stream.anislime.com^$generichide
+@@||overlay.miku-box.com^$generichide
+!
+@@||allinone-th.blogspot.com^$generichide
+@@||allinone-th-view.blogspot.com^$generichide
+
+!!!---------Performance Thai ------------END
+!----------------------------------------END
+!----------------------------------------END
+
+!----------------Unbreak-----------------START
+!----------------------------------------START
+!----------------------------------------START
+!nekopost.net load picture AdGuard Extension
+@@||osemocphoto.com^$stealth
+!----------------Unbreak-----------------END
+!----------------------------------------END
+!----------------------------------------END
 !!!--------------Cookie -----------------START
 !----------------------------------------START
 !----------------------------------------START
@@ -2660,11 +3874,6 @@ mahidol.ac.th##^#cc_div
 mahidol.ac.th$$#cc_div
 !#endif
 mahidol.ac.th###cc_div
-!#if cap_html_filtering
-superuser.com##^div.js-consent-banner
-superuser.com$$div.js-consent-banner
-!#endif
-superuser.com##div.js-consent-banner
 !#if cap_html_filtering
 apkmirror.com##^#bottom-slider
 apkmirror.com$$#bottom-slider
@@ -3074,6 +4283,9 @@ smilearm.com##.policy-position
 /pdpa.js$script
 !!พบได้ เช่น ejan.co
 /glow-cookies.min.js$script
+!!จาก thaipbs.or.th 
+!https://app.themis-technology.com/cdn/pdpa-cookieconsent.js
+/pdpa-cookieconsent.js$script
 !
 !
 !
@@ -3083,6 +4295,9 @@ smilearm.com##.policy-position
 !cookiewow api
 !!พบได้ใน theptarin.com
 ||cookiecdn.com^$3p,script
+!!พบได้ใน เช่น superuser.com
+||cdn.cookielaw.org^$3p
+||geolocation.onetrust.com^$3p
 !
 !----------------Cookie -----------------END
 !----------------------------------------END
