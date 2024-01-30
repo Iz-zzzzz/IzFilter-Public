@@ -5,7 +5,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 # Iz's Addon Filter Public Version
 
 - การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
-- จุดประสงค์ของ filter list นี้ คือ 
+- จุดประสงค์ของ filter list นี้ คือ
+  - แทนที่ EasyList Thailand ได้ 100% และจะครอบคลุมกว่า
   - บล็อกโฆษณาทุกชนิด [^3][^6]
     - script โฆษณา
     - โฆษณาประจำเว็บ (specific) (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
@@ -22,6 +23,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
   - บล็อกสื่งต่างๆ ที่น่ารำคาญ หรือดึงดูดความสนใจ [^3][^6]
     - paywall ที่ไม่สมเหตุสมผล [^4]
     - cookie consent
+      - cosmetics rule
+      - network request rule
     - ป้องกันคลิกขวา
     - ป้องกันลากคลุมข้อความ
   - ความเป็นส่วนตัว [^3][^6]
@@ -47,6 +50,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 > - Easy Privacy 
 >
 > เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
+> --แต่ไม่ควรใส่ EasyList Thailand-- เพราะ EasyList Thailand ไม่ได้มีการ maintenance มากนัก และจะทำให้ filter list ทับซ้อนกัน
 
 >ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
@@ -78,10 +82,10 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 กรุณารายงานปัญหา[ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/issues) 
 โดยให้รายละเอียดดังนี้ :
 - URL ของไซต์ที่พบปัญหา(ขอแบบเป๊ะ)
-- (ไม่จำเป็น) Screenshot พร้อมวงจุดที่คิดว่าผิดพลาดให้ชัดเจน
-- Filter list อื่นๆ ที่ใช้งาน ขณะพบปัญหา
-- Extension/Application AdBlock ที่ใช้งาน
-- (ถ้าใช้ AdGuard) Stealth mode options ที่ใช้
+- (ควรจะมี) Screenshot พร้อมวงจุดที่คิดว่าผิดพลาดให้ชัดเจน
+- Filter list อื่นๆ ที่ใช้งานด้วยกัน ขณะพบปัญหา
+- Extension/Application AdBlock ที่ใช้งาน ขณะพบปัญหา
+- (ถ้าใช้ AdGuard) ระบุ Stealth mode options ที่ใช้
 - ปัญหาที่พบ
 
 ### หากรู้วิธีแก้ไขปัญหาเอง
