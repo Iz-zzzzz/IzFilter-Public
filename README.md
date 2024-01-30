@@ -50,7 +50,9 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 > - Easy Privacy 
 >
 > เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
-> --แต่ไม่ควรใส่ EasyList Thailand-- เพราะ EasyList Thailand ไม่ได้มีการ maintenance มากนัก และจะทำให้ filter list ทับซ้อนกัน
+
+> [!IMPORTANT]
+>  ไม่ควรใส่ EasyList Thailand เพราะ EasyList Thailand ไม่ได้มีการ maintenance มากนัก และ filter list นี้ครอบคลุมกว่ามาก
 
 >ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
