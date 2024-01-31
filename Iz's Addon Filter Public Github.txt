@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240130225252
+! Version: 20240131143004
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -177,7 +177,7 @@ https://sexygame*.com^$all
 https://www.ufa*.$all
 https://ufa*.$all
 https://*ssgame*/$all
-https://*casino*.$all
+https://*casino*.*/$all
 
 !block both link and ads video
 /brazil$media
@@ -335,6 +335,7 @@ https://*casino*.$all
 /xgbet369.gif$image
 /baccarat$image
 /ufa77$image
+/bet-casino-banner$image
 !
 /*728x*.gif$image
 /*728x*.webp$image
@@ -555,6 +556,12 @@ https://shorturl.asia/gjxW1$all
 https://168pretty.com^$all
 https://www.gxy888.vip^$all
 https://siampoker.com^$all
+https://prettygaming168.com^$all
+https://pretty168.net^$all
+https://www.boss45.co^$all
+https://play3.huaylike.online^$all
+https://lionth.co^$all
+https://www.sexycasino.site^$all
 
 !---------- fake game ----------!
 !*เกมเถื่อน
@@ -661,7 +668,9 @@ terabox.com##.drainage
 !imgbox.com mobile 20240128204852
 !#if cap_html_filtering
 imgbox.com##^._ln-floater:upward(1)
+!#if adguard
 imgbox.com$$._ln-floater:upward(1)
+!#endif
 !#endif
 imgbox.com##._ln-floater:upward(1)
 
@@ -678,29 +687,39 @@ imgbox.com##._ln-floater:upward(1)
 !collider.com 20231212003313
 !#if cap_html_filtering
 collider.com##^div.ad-zone
+!#if adguard
 collider.com$$div.ad-zone
+!#endif
 !#endif
 collider.com##div.ad-zone
 
 !www.newsweek.com 20240123185621
 !#if cap_html_filtering
 www.newsweek.com##^#topad
+!#if adguard
 www.newsweek.com$$#topad
+!#endif
 !#endif
 www.newsweek.com###topad
 !#if cap_html_filtering
 www.newsweek.com##^#right1ad
+!#if adguard
 www.newsweek.com$$#right1ad
+!#endif
 !#endif
 www.newsweek.com###right1ad
 !#if cap_html_filtering
 www.newsweek.com##^div[id^="dfp-ad-inarticle"]
+!#if adguard
 www.newsweek.com$$div[id^="dfp-ad-inarticle"]
+!#endif
 !#endif
 www.newsweek.com##div[id^="dfp-ad-inarticle"]
 !#if cap_html_filtering
 www.newsweek.com##^.block-fusion-ads
+!#if adguard
 www.newsweek.com$$.block-fusion-ads
+!#endif
 !#endif
 www.newsweek.com##.block-fusion-ads
 !
@@ -709,25 +728,33 @@ www.newsweek.com##.block-fusion-ads
 !clearnotebooks.com
 !#if cap_html_filtering
 clearnotebooks.com##^div[class$="-notebook-page-banners"]
+!#if adguard
 clearnotebooks.com$$div[class$="-notebook-page-banners"]
+!#endif
 !#endif
 clearnotebooks.com##div[class$="-notebook-page-banners"]
 ||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
 !ptable.com 
 !#if cap_html_filtering
 ptable.com##^#Notice
+!#if adguard
 ptable.com$$#Notice
+!#endif
 !#endif
 ptable.com###Notice
 !#if cap_html_filtering
 ptable.com##^ins.adsbygoogle
+!#if adguard
 ptable.com$$ins.adsbygoogle
+!#endif
 !#endif
 ptable.com##ins.adsbygoogle
 !ieltsbuddy.com 
 !#if cap_html_filtering
 ieltsbuddy.com##^div[class="modal_block modal_ ss-ui-bootstrap"]
+!#if adguard
 ieltsbuddy.com$$div[class="modal_block modal_ ss-ui-bootstrap"]
+!#endif
 !#endif
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 
@@ -737,7 +764,9 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !me-qr.com
 !#if cap_html_filtering
 me-qr.com##^div[class="bg-success"]
+!#if adguard
 me-qr.com$$div[class="bg-success"]
+!#endif
 !#endif
 me-qr.com##div[class="bg-success"]
 !
@@ -756,29 +785,39 @@ me-qr.com##div[class="bg-success"]
 !fandom.com 
 !#if cap_html_filtering
 fandom.com##^.top-ads-container
+!#if adguard
 fandom.com$$.top-ads-container
+!#endif
 !#endif
 fandom.com##.top-ads-container
 !#if cap_html_filtering
 fandom.com##^.ad-slot-placeholder
+!#if adguard
 fandom.com$$.ad-slot-placeholder
+!#endif
 !#endif
 fandom.com##.ad-slot-placeholder
 !wikihow.com
 !#if cap_html_filtering
 wikihow.com##^.wh_ad_inner
+!#if adguard
 wikihow.com$$.wh_ad_inner
+!#endif
 !#endif
 wikihow.com##.wh_ad_inner
 !#if cap_html_filtering
 wikihow.com##^#intro_ad_1
+!#if adguard
 wikihow.com$$#intro_ad_1
+!#endif
 !#endif
 wikihow.com###intro_ad_1
 !wikiwand
 !#if cap_html_filtering
 wikiwand.com##^div[class^="footer_donation_"]
+!#if adguard
 wikiwand.com$$div[class^="footer_donation_"]
+!#endif
 !#endif
 wikiwand.com##div[class^="footer_donation_"]
 !
@@ -787,13 +826,17 @@ wikiwand.com##div[class^="footer_donation_"]
 !Apkcombo
 !#if cap_html_filtering
 apkcombo.com##^[data-m-ad-id]
+!#if adguard
 apkcombo.com$$[data-m-ad-id]
+!#endif
 !#endif
 apkcombo.com##[data-m-ad-id]
 !apkmoddone.com
 !#if cap_html_filtering
 apkmoddone.com##^div#addons-widget
+!#if adguard
 apkmoddone.com$$div#addons-widget
+!#endif
 !#endif
 apkmoddone.com##div#addons-widget
 !
@@ -802,53 +845,71 @@ apkmoddone.com##div#addons-widget
 !wordreference.com 
 !#if cap_html_filtering
 wordreference.com##^body #ad1
+!#if adguard
 wordreference.com$$body #ad1
+!#endif
 !#endif
 wordreference.com##body #ad1
 !oxfordlearnersdictionaries.com 
 !#if cap_html_filtering
 oxfordlearnersdictionaries.com##^#ad_btmslot
+!#if adguard
 oxfordlearnersdictionaries.com$$#ad_btmslot
+!#endif
 !#endif
 oxfordlearnersdictionaries.com###ad_btmslot
 !#if cap_html_filtering
 oxfordlearnersdictionaries.com##^#ad_topslot
+!#if adguard
 oxfordlearnersdictionaries.com$$#ad_topslot
+!#endif
 !#endif
 oxfordlearnersdictionaries.com###ad_topslot
 !Dictionary.com 
 !#if cap_html_filtering
 dictionary.com##^.TeixwVbjB8cchva8bDlg
+!#if adguard
 dictionary.com$$.TeixwVbjB8cchva8bDlg
+!#endif
 !#endif
 dictionary.com##.TeixwVbjB8cchva8bDlg
 !#if cap_html_filtering
 dictionary.com##^#dcomHomeTop-728x90
+!#if adguard
 dictionary.com$$#dcomHomeTop-728x90
+!#endif
 !#endif
 dictionary.com###dcomHomeTop-728x90
 !www.etymonline.com 
 !#if cap_html_filtering
 etymonline.com##^div[class="adContainer--6CVz1 horizontal"]
+!#if adguard
 etymonline.com$$div[class="adContainer--6CVz1 horizontal"]
+!#endif
 !#endif
 etymonline.com##div[class="adContainer--6CVz1 horizontal"]
 !collinsdictionary.com 
 !#if cap_html_filtering
 collinsdictionary.com##^#ad_topslot
+!#if adguard
 collinsdictionary.com$$#ad_topslot
+!#endif
 !#endif
 collinsdictionary.com###ad_topslot
 !thefreedictionary.com freethesaurus.com
 !#if cap_html_filtering
 freethesaurus.com,thefreedictionary.com##^ins.adsbygoogle
+!#if adguard
 freethesaurus.com,thefreedictionary.com$$ins.adsbygoogle
+!#endif
 !#endif
 freethesaurus.com,thefreedictionary.com##ins.adsbygoogle
 !macmillandictionary.com macmillanthesaurus.com 
 !#if cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com##^#topslot_container
+!#if adguard
 macmillandictionary.com,macmillanthesaurus.com$$#topslot_container
+!#endif
 !#endif
 macmillandictionary.com,macmillanthesaurus.com###topslot_container
 !
@@ -861,25 +922,33 @@ macmillandictionary.com,macmillanthesaurus.com###topslot_container
 !tower-of-fantasy-map.appsample.com
 !#if cap_html_filtering
 tower-of-fantasy-map.appsample.com##^#pc-br-300x250-tof
+!#if adguard
 tower-of-fantasy-map.appsample.com$$#pc-br-300x250-tof
+!#endif
 !#endif
 tower-of-fantasy-map.appsample.com###pc-br-300x250-tof
 !lineupsvalorant.com
 !#if cap_html_filtering
 lineupsvalorant.com##^ins.adsbygoogles
+!#if adguard
 lineupsvalorant.com$$ins.adsbygoogles
+!#endif
 !#endif
 lineupsvalorant.com##ins.adsbygoogles
 !blitz.gg
 !https://blitz.gg/valorant/lineups right ads widget
 !#if cap_html_filtering
 blitz.gg##^div[style="--content-start: 115px; --sticky-header-height: 59px;"]
+!#if adguard
 blitz.gg$$div[style="--content-start: 115px; --sticky-header-height: 59px;"]
+!#endif
 !#endif
 blitz.gg##div[style="--content-start: 115px; --sticky-header-height: 59px;"]
 !#if cap_html_filtering
 blitz.gg##^.aside-content-column
+!#if adguard
 blitz.gg$$.aside-content-column
+!#endif
 !#endif
 blitz.gg##.aside-content-column
 
@@ -902,7 +971,9 @@ blitz.gg##.aside-content-column
 !pubhtml5.com
 !#if cap_html_filtering
 pubhtml5.com##^.adsbygoogle
+!#if adguard
 pubhtml5.com$$.adsbygoogle
+!#endif
 !#endif
 pubhtml5.com##.adsbygoogle
 !
@@ -911,7 +982,9 @@ pubhtml5.com##.adsbygoogle
 !comic-walker.com
 !#if cap_html_filtering
 comic-walker.com##^#right_top_banner
+!#if adguard
 comic-walker.com$$#right_top_banner
+!#endif
 !#endif
 comic-walker.com###right_top_banner
 !
@@ -924,12 +997,16 @@ comic-walker.com###right_top_banner
 !keyboard-test.space
 !#if cap_html_filtering
 keyboard-test.space##^#tgroup_40
+!#if adguard
 keyboard-test.space$$#tgroup_40
+!#endif
 !#endif
 keyboard-test.space###tgroup_40
 !#if cap_html_filtering
 keyboard-test.space##^ins.adsbygoogle
+!#if adguard
 keyboard-test.space$$ins.adsbygoogle
+!#endif
 !#endif
 keyboard-test.space##ins.adsbygoogle
 !
@@ -938,13 +1015,17 @@ keyboard-test.space##ins.adsbygoogle
 !pixeldrain.com 
 !#if cap_html_filtering
 pixeldrain.com##^.skyscraper
+!#if adguard
 pixeldrain.com$$.skyscraper
+!#endif
 !#endif
 pixeldrain.com##.skyscraper
 !uploadmx.com
 !#if cap_html_filtering
 uploadmx.com##^.adsbygoogle
+!#if adguard
 uploadmx.com$$.adsbygoogle
+!#endif
 !#endif
 uploadmx.com##.adsbygoogle
 !
@@ -953,355 +1034,487 @@ uploadmx.com##.adsbygoogle
 !gsmarena.com
 !#if cap_html_filtering
 gsmarena.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 gsmarena.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 gsmarena.com##^.adv
+!#if adguard
 gsmarena.com$$.adv
+!#endif
 !#endif
 gsmarena.com##.adv
 !#if cap_html_filtering
 gsmarena.com##^#topAdv
+!#if adguard
 gsmarena.com$$#topAdv
+!#endif
 !#endif
 gsmarena.com###topAdv
 !extremeit.com 
 !#if cap_html_filtering
 extremeit.com##^table[border="0"]
+!#if adguard
 extremeit.com$$table[border="0"]
+!#endif
 !#endif
 extremeit.com##table[border="0"]
 !#if cap_html_filtering
 extremeit.com##^#tdi_73
+!#if adguard
 extremeit.com$$#tdi_73
+!#endif
 !#endif
 extremeit.com###tdi_73
 !computerworld.com
 !#if cap_html_filtering
 computerworld.com##^.ad
+!#if adguard
 computerworld.com$$.ad
+!#endif
 !#endif
 computerworld.com##.ad
 !#if cap_html_filtering
 computerworld.com##^.ad-header
+!#if adguard
 computerworld.com$$.ad-header
+!#endif
 !#endif
 computerworld.com##.ad-header
 !#if cap_html_filtering
 computerworld.com##^.ad-placement
+!#if adguard
 computerworld.com$$.ad-placement
+!#endif
 !#endif
 computerworld.com##.ad-placement
 !androidauthority.com
 !#if cap_html_filtering
 androidauthority.com##^.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
+!#if adguard
 androidauthority.com$$.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
+!#endif
 !#endif
 androidauthority.com##.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner):not(:empty)
 !#if cap_html_filtering
 androidauthority.com##^.ad-banner
+!#if adguard
 androidauthority.com$$.ad-banner
+!#endif
 !#endif
 androidauthority.com##.ad-banner
 !#if cap_html_filtering
 androidauthority.com##^.__Af
+!#if adguard
 androidauthority.com$$.__Af
+!#endif
 !#endif
 androidauthority.com##.__Af
 ||androidauth.wpengine.com/wp-json/api/advanced_placement$script,domain=androidauthority.com
 !gizchina.com
 !#if cap_html_filtering
 gizchina.com##^.mrf-adv__wrapper
+!#if adguard
 gizchina.com$$.mrf-adv__wrapper
+!#endif
 !#endif
 gizchina.com##.mrf-adv__wrapper
 !makeuseof.com
 !#if cap_html_filtering
 makeuseof.com##^div.adsninja-ad-zone
+!#if adguard
 makeuseof.com$$div.adsninja-ad-zone
+!#endif
 !#endif
 makeuseof.com##div.adsninja-ad-zone
 !sammobile.com
 !#if cap_html_filtering
 sammobile.com##^.in-content-ad-container
+!#if adguard
 sammobile.com$$.in-content-ad-container
+!#endif
 !#endif
 sammobile.com##.in-content-ad-container
 !#if cap_html_filtering
 sammobile.com##^ins.adsbygoogle
+!#if adguard
 sammobile.com$$ins.adsbygoogle
+!#endif
 !#endif
 sammobile.com##ins.adsbygoogle
 !techpp.com
 !#if cap_html_filtering
 techpp.com##^#tppAdsID
+!#if adguard
 techpp.com$$#tppAdsID
+!#endif
 !#endif
 techpp.com###tppAdsID
 !#if cap_html_filtering
 techpp.com##^#brxe-djelsv
+!#if adguard
 techpp.com$$#brxe-djelsv
+!#endif
 !#endif
 techpp.com###brxe-djelsv
 !raymond.cc
 !#if cap_html_filtering
 raymond.cc##^ins.adsbygoogle
+!#if adguard
 raymond.cc$$ins.adsbygoogle
+!#endif
 !#endif
 raymond.cc##ins.adsbygoogle
 !#if cap_html_filtering
 raymond.cc##^.adsbygoogle
+!#if adguard
 raymond.cc$$.adsbygoogle
+!#endif
 !#endif
 raymond.cc##.adsbygoogle
 !howtogeek.com
 !#if cap_html_filtering
 howtogeek.com##^.widget-area
+!#if adguard
 howtogeek.com$$.widget-area
+!#endif
 !#endif
 howtogeek.com##.widget-area
 !#if cap_html_filtering
 howtogeek.com##^.adslot970
+!#if adguard
 howtogeek.com$$.adslot970
+!#endif
 !#endif
 howtogeek.com##.adslot970
 !#if cap_html_filtering
 howtogeek.com##^.adsninja-ad-zone
+!#if adguard
 howtogeek.com$$.adsninja-ad-zone
+!#endif
 !#endif
 howtogeek.com##.adsninja-ad-zone
 !androidpolice.com
 !#if cap_html_filtering
 androidpolice.com##^.adsninja-ad-zone
+!#if adguard
 androidpolice.com$$.adsninja-ad-zone
+!#endif
 !#endif
 androidpolice.com##.adsninja-ad-zone
 !trustedreviews.com
 !#if cap_html_filtering
 trustedreviews.com##^.ipc-advert
+!#if adguard
 trustedreviews.com$$.ipc-advert
+!#endif
 !#endif
 trustedreviews.com##.ipc-advert
 !#if cap_html_filtering
 trustedreviews.com##^.ad-holder
+!#if adguard
 trustedreviews.com$$.ad-holder
+!#endif
 !#endif
 trustedreviews.com##.ad-holder
 !#if cap_html_filtering
 trustedreviews.com##^.post_detail_right_advert
+!#if adguard
 trustedreviews.com$$.post_detail_right_advert
+!#endif
 !#endif
 trustedreviews.com##.post_detail_right_advert
 !#if cap_html_filtering
 trustedreviews.com##^.top-advert
+!#if adguard
 trustedreviews.com$$.top-advert
+!#endif
 !#endif
 trustedreviews.com##.top-advert
 !#if cap_html_filtering
 trustedreviews.com##^.squirrel_widget
+!#if adguard
 trustedreviews.com$$.squirrel_widget
+!#endif
 !#endif
 trustedreviews.com##.squirrel_widget
 !androidcentral.com
 !#if cap_html_filtering
 androidcentral.com##^div.dfp-leaderboard-container
+!#if adguard
 androidcentral.com$$div.dfp-leaderboard-container
+!#endif
 !#endif
 androidcentral.com##div.dfp-leaderboard-container
 !#if cap_html_filtering
 androidcentral.com##^div[id="widgetArea17"]
+!#if adguard
 androidcentral.com$$div[id="widgetArea17"]
+!#endif
 !#endif
 androidcentral.com##div[id="widgetArea17"]
 !#if cap_html_filtering
 androidcentral.com##^div.related-articles-block
+!#if adguard
 androidcentral.com$$div.related-articles-block
+!#endif
 !#endif
 androidcentral.com##div.related-articles-block
 !#if cap_html_filtering
 androidcentral.com##^div.van_taboola
+!#if adguard
 androidcentral.com$$div.van_taboola
+!#endif
 !#endif
 androidcentral.com##div.van_taboola
 !#if cap_html_filtering
 androidcentral.com##^div[class="van_vid_carousel vid-present"]
+!#if adguard
 androidcentral.com$$div[class="van_vid_carousel vid-present"]
+!#endif
 !#endif
 androidcentral.com##div[class="van_vid_carousel vid-present"]
 !#if cap_html_filtering
 androidcentral.com##^div[class="in-article ad-unit"]
+!#if adguard
 androidcentral.com$$div[class="in-article ad-unit"]
+!#endif
 !#endif
 androidcentral.com##div[class="in-article ad-unit"]
 !#if cap_html_filtering
 androidcentral.com##^div[id="top-leaderboard"]
+!#if adguard
 androidcentral.com$$div[id="top-leaderboard"]
+!#endif
 !#endif
 androidcentral.com##div[id="top-leaderboard"]
 !#if cap_html_filtering
 androidcentral.com##^div[class="ad-unit"]
+!#if adguard
 androidcentral.com$$div[class="ad-unit"]
+!#endif
 !#endif
 androidcentral.com##div[class="ad-unit"]
 !pcgamer.com
 !#if cap_html_filtering
 pcgamer.com##^.ad-placement
+!#if adguard
 pcgamer.com$$.ad-placement
+!#endif
 !#endif
 pcgamer.com##.ad-placement
 !#if cap_html_filtering
 pcgamer.com##^.sponsored-post
+!#if adguard
 pcgamer.com$$.sponsored-post
+!#endif
 !#endif
 pcgamer.com##.sponsored-post
 !#if cap_html_filtering
 pcgamer.com##^#hawkMagWidget
+!#if adguard
 pcgamer.com$$#hawkMagWidget
+!#endif
 !#endif
 pcgamer.com###hawkMagWidget
 !#if cap_html_filtering
 pcgamer.com##^.dfp-leaderboard-container
+!#if adguard
 pcgamer.com$$.dfp-leaderboard-container
+!#endif
 !#endif
 pcgamer.com##.dfp-leaderboard-container
 !whathifi.com
 !#if cap_html_filtering
 whathifi.com##^.sponsored-post
+!#if adguard
 whathifi.com$$.sponsored-post
+!#endif
 !#endif
 whathifi.com##.sponsored-post
 !#if cap_html_filtering
 whathifi.com##^.ad-unit
+!#if adguard
 whathifi.com$$.ad-unit
+!#endif
 !#endif
 whathifi.com##.ad-unit
 !#if cap_html_filtering
 whathifi.com##^.dfp-leaderboard-container
+!#if adguard
 whathifi.com$$.dfp-leaderboard-container
+!#endif
 !#endif
 whathifi.com##.dfp-leaderboard-container
 !#if cap_html_filtering
 whathifi.com##^.newsletter-inbodyContent-slice
+!#if adguard
 whathifi.com$$.newsletter-inbodyContent-slice
+!#endif
 !#endif
 whathifi.com##.newsletter-inbodyContent-slice
 !#if cap_html_filtering
 whathifi.com##^#hawkMagWidget
+!#if adguard
 whathifi.com$$#hawkMagWidget
+!#endif
 !#endif
 whathifi.com###hawkMagWidget
 !tomsguide.com 20230430152716
 !#if cap_html_filtering
 tomsguide.com##^.sponsored-post
+!#if adguard
 tomsguide.com$$.sponsored-post
+!#endif
 !#endif
 tomsguide.com##.sponsored-post
 !#if cap_html_filtering
 tomsguide.com##^#taboola-below-article-thumbnails
+!#if adguard
 tomsguide.com$$#taboola-below-article-thumbnails
+!#endif
 !#endif
 tomsguide.com###taboola-below-article-thumbnails
 !#if cap_html_filtering
 tomsguide.com##^.vid-present > .van_vid_carousel__padding
+!#if adguard
 tomsguide.com$$.vid-present > .van_vid_carousel__padding
+!#endif
 !#endif
 tomsguide.com##.vid-present > .van_vid_carousel__padding
 !#if cap_html_filtering
 tomsguide.com##^.dfp-leaderboard-container
+!#if adguard
 tomsguide.com$$.dfp-leaderboard-container
+!#endif
 !#endif
 tomsguide.com##.dfp-leaderboard-container
 !#if cap_html_filtering
 tomsguide.com##^.sponsored-post
+!#if adguard
 tomsguide.com$$.sponsored-post
+!#endif
 !#endif
 tomsguide.com##.sponsored-post
 !xda-developers.com 20240114015836
 !#if cap_html_filtering
 xda-developers.com##^div[id^="adsninja"]
+!#if adguard
 xda-developers.com$$div[id^="adsninja"]
+!#endif
 !#endif
 xda-developers.com##div[id^="adsninja"]
 !alphr.com
 !#if cap_html_filtering
 alphr.com##^[data-freestar-ad]
+!#if adguard
 alphr.com$$[data-freestar-ad]
+!#endif
 !#endif
 alphr.com##[data-freestar-ad]
 !#if cap_html_filtering
 alphr.com##^.sticky-ads-container
+!#if adguard
 alphr.com$$.sticky-ads-container
+!#endif
 !#endif
 alphr.com##.sticky-ads-container
 !#if cap_html_filtering
 alphr.com##^.sticky-ads
+!#if adguard
 alphr.com$$.sticky-ads
+!#endif
 !#endif
 alphr.com##.sticky-ads
 !sammyfans.com
 !#if cap_html_filtering
 sammyfans.com##^ins.adsbygoogle
+!#if adguard
 sammyfans.com$$ins.adsbygoogle
+!#endif
 !#endif
 sammyfans.com##ins.adsbygoogle
 !bleepingcomputer.com
 !#if cap_html_filtering
 bleepingcomputer.com##^section[class="cz-oa-wrapp"]
+!#if adguard
 bleepingcomputer.com$$section[class="cz-oa-wrapp"]
+!#endif
 !#endif
 bleepingcomputer.com##section[class="cz-oa-wrapp"]
 !#if cap_html_filtering
 bleepingcomputer.com##^section[class="cz-boa-wrapp"]
+!#if adguard
 bleepingcomputer.com$$section[class="cz-boa-wrapp"]
+!#endif
 !#endif
 bleepingcomputer.com##section[class="cz-boa-wrapp"]
 !#if cap_html_filtering
 bleepingcomputer.com##^.fs-dynamic
+!#if adguard
 bleepingcomputer.com$$.fs-dynamic
+!#endif
 !#endif
 bleepingcomputer.com##.fs-dynamic
 !#if cap_html_filtering
 bleepingcomputer.com##^.asa
+!#if adguard
 bleepingcomputer.com$$.asa
+!#endif
 !#endif
 bleepingcomputer.com##.asa
 !#if cap_html_filtering
 bleepingcomputer.com##^ins.adsbygoogle
+!#if adguard
 bleepingcomputer.com$$ins.adsbygoogle
+!#endif
 !#endif
 bleepingcomputer.com##ins.adsbygoogle
 !pcworld.com
 !#if cap_html_filtering
 pcworld.com##^div.wp-block-column:nth-of-type(2)
+!#if adguard
 pcworld.com$$div.wp-block-column:nth-of-type(2)
+!#endif
 !#endif
 pcworld.com##div.wp-block-column:nth-of-type(2)
 !#if cap_html_filtering
 pcworld.com##^div[data-ad-template="banner"]
+!#if adguard
 pcworld.com$$div[data-ad-template="banner"]
+!#endif
 !#endif
 pcworld.com##div[data-ad-template="banner"]
 !neowin.net 20240124130101
 !#if cap_html_filtering
 neowin.net##^.header-banner-ads
+!#if adguard
 neowin.net$$.header-banner-ads
+!#endif
 !#endif
 neowin.net##.header-banner-ads
 !#if cap_html_filtering
 neowin.net##^div[data-freestar-ad]
+!#if adguard
 neowin.net$$div[data-freestar-ad]
+!#endif
 !#endif
 neowin.net##div[data-freestar-ad]
 !#if cap_html_filtering
 neowin.net##^.widget-ad
+!#if adguard
 neowin.net$$.widget-ad
+!#endif
 !#endif
 neowin.net##.widget-ad
 !tomshardware.com 20240114140930
 !#if cap_html_filtering
 tomshardware.com##^.dfp-leaderboard-container
+!#if adguard
 tomshardware.com$$.dfp-leaderboard-container
+!#endif
 !#endif
 tomshardware.com##.dfp-leaderboard-container
 !
@@ -1310,116 +1523,160 @@ tomshardware.com##.dfp-leaderboard-container
 !sourceforge.net
 !#if cap_html_filtering
 sourceforge.net##^[id^="google_ads_iframe"]
+!#if adguard
 sourceforge.net$$[id^="google_ads_iframe"]
+!#endif
 !#endif
 sourceforge.net##[id^="google_ads_iframe"]
 !#if cap_html_filtering
 sourceforge.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 sourceforge.net$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !tutorialstonight.com
 !#if cap_html_filtering
 tutorialstonight.com##^span[class^="ezoic-"]
+!#if adguard
 tutorialstonight.com$$span[class^="ezoic-"]
+!#endif
 !#endif
 tutorialstonight.com##span[class^="ezoic-"]
 !#if cap_html_filtering
 tutorialstonight.com##^div[id^="ez-sidebar"]
+!#if adguard
 tutorialstonight.com$$div[id^="ez-sidebar"]
+!#endif
 !#endif
 tutorialstonight.com##div[id^="ez-sidebar"]
 !#if cap_html_filtering
 tutorialstonight.com##^[id^="google_ads_iframe"]
+!#if adguard
 tutorialstonight.com$$[id^="google_ads_iframe"]
+!#endif
 !#endif
 tutorialstonight.com##[id^="google_ads_iframe"]
 !#if cap_html_filtering
 tutorialstonight.com##^.banner_ads
+!#if adguard
 tutorialstonight.com$$.banner_ads
+!#endif
 !#endif
 tutorialstonight.com##.banner_ads
 !#if cap_html_filtering
 tutorialstonight.com##^[data-ez-name]
+!#if adguard
 tutorialstonight.com$$[data-ez-name]
+!#endif
 !#endif
 tutorialstonight.com##[data-ez-name]
 !#if cap_html_filtering
 tutorialstonight.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 tutorialstonight.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 tutorialstonight.com##^#ezmobfooter
+!#if adguard
 tutorialstonight.com$$#ezmobfooter
+!#endif
 !#endif
 tutorialstonight.com###ezmobfooter
 !freecodecamp.org 20230430155258
 !#if cap_html_filtering
 freecodecamp.org##^.sidebar
+!#if adguard
 freecodecamp.org$$.sidebar
+!#endif
 !#endif
 freecodecamp.org##.sidebar
 !linuxhint.com 20230503020240
 !#if cap_html_filtering
 linuxhint.com##^.adthrive
+!#if adguard
 linuxhint.com$$.adthrive
+!#endif
 !#endif
 linuxhint.com##.adthrive
 !#if cap_html_filtering
 linuxhint.com##^.adthrive-content
+!#if adguard
 linuxhint.com$$.adthrive-content
+!#endif
 !#endif
 linuxhint.com##.adthrive-content
 !#if cap_html_filtering
 linuxhint.com##^.adthrive-ad
+!#if adguard
 linuxhint.com$$.adthrive-ad
+!#endif
 !#endif
 linuxhint.com##.adthrive-ad
 !#if cap_html_filtering
 linuxhint.com##^.adthrive-header
+!#if adguard
 linuxhint.com$$.adthrive-header
+!#endif
 !#endif
 linuxhint.com##.adthrive-header
 !thepythoncode.com
 !#if cap_html_filtering
 thepythoncode.com##^span[id^="ezoic-pub-ad-placeholder-"]
+!#if adguard
 thepythoncode.com$$span[id^="ezoic-pub-ad-placeholder-"]
+!#endif
 !#endif
 thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
 !#if cap_html_filtering
 thepythoncode.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 thepythoncode.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 thepythoncode.com##^[data-ez-name]
+!#if adguard
 thepythoncode.com$$[data-ez-name]
+!#endif
 !#endif
 thepythoncode.com##[data-ez-name]
 !#if cap_html_filtering
 thepythoncode.com##^.ezoic-floating-bottom
+!#if adguard
 thepythoncode.com$$.ezoic-floating-bottom
+!#endif
 !#endif
 thepythoncode.com##.ezoic-floating-bottom
 !#if cap_html_filtering
 thepythoncode.com##^.ezoic-ad-adaptive
+!#if adguard
 thepythoncode.com$$.ezoic-ad-adaptive
+!#endif
 !#endif
 thepythoncode.com##.ezoic-ad-adaptive
 !#if cap_html_filtering
 thepythoncode.com##^.ezoic-ad
+!#if adguard
 thepythoncode.com$$.ezoic-ad
+!#endif
 !#endif
 thepythoncode.com##.ezoic-ad
 !#if cap_html_filtering
 thepythoncode.com##^.ezmob-footer-desktop
+!#if adguard
 thepythoncode.com$$.ezmob-footer-desktop
+!#endif
 !#endif
 thepythoncode.com##.ezmob-footer-desktop
 !#if cap_html_filtering
 thepythoncode.com##^.ezmob-footer
+!#if adguard
 thepythoncode.com$$.ezmob-footer
+!#endif
 !#endif
 thepythoncode.com##.ezmob-footer
 !
@@ -1432,7 +1689,9 @@ thepythoncode.com##.ezmob-footer
 !adfoc.us 
 !#if cap_html_filtering
 adfoc.us##^.content > iframe
+!#if adguard
 adfoc.us$$.content > iframe
+!#endif
 !#endif
 adfoc.us##.content > iframe
 !
@@ -1444,14 +1703,18 @@ adfoc.us##.content > iframe
 !alternativeto.net 
 !#if cap_html_filtering
 alternativeto.net##^ins.adsbygoogle
+!#if adguard
 alternativeto.net$$ins.adsbygoogle
+!#endif
 !#endif
 alternativeto.net##ins.adsbygoogle
 !---apps programs ---
 !obsproject.com
 !#if cap_html_filtering
 obsproject.com##^.notice--cookie:not(body):not(html)
+!#if adguard
 obsproject.com$$.notice--cookie:not(body):not(html)
+!#endif
 !#endif
 obsproject.com##.notice--cookie:not(body):not(html)
 !
@@ -1466,12 +1729,16 @@ obsproject.com##.notice--cookie:not(body):not(html)
 !www.novelupdates.com
 !#if cap_html_filtering
 www.novelupdates.com##^.ad_336
+!#if adguard
 www.novelupdates.com$$.ad_336
+!#endif
 !#endif
 www.novelupdates.com##.ad_336
 !#if cap_html_filtering
 www.novelupdates.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 www.novelupdates.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 www.novelupdates.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !------------Specific Ads Rules----------END
@@ -1487,7 +1754,9 @@ www.novelupdates.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px
 !camphub.in.th
 !#if cap_html_filtering
 camphub.in.th##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 camphub.in.th$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !
@@ -1496,13 +1765,17 @@ camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posit
 !pantip.com
 !#if cap_html_filtering
 pantip.com##^div.ads-leaderboard
+!#if adguard
 pantip.com$$div.ads-leaderboard
+!#endif
 !#else
 pantip.com##div.ads-leaderboard
 !#endif
 !#if cap_html_filtering
 pantip.com##^div.ads-topbillboard
+!#if adguard
 pantip.com$$div.ads-topbillboard
+!#endif
 !#else
 pantip.com##div.ads-topbillboard
 !#endif
@@ -1512,7 +1785,9 @@ pantip.com##div.ads-topbillboard
 !siam.wiki
 !#if cap_html_filtering
 siam.wiki##^.chat-popup
+!#if adguard
 siam.wiki$$.chat-popup
+!#endif
 !#endif
 siam.wiki##.chat-popup
 !
@@ -1521,7 +1796,9 @@ siam.wiki##.chat-popup
 !dict.longdo.com เอาแทบโฆษณาออก
 !#if cap_html_filtering
 dict.longdo.com##^#sidebar
+!#if adguard
 dict.longdo.com$$#sidebar
+!#endif
 !#endif
 dict.longdo.com###sidebar
 !
@@ -1534,654 +1811,924 @@ dict.longdo.com###sidebar
 !kapook.com 20231212003311
 !#if cap_html_filtering
 kapook.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 kapook.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 kapook.com##^div.ads728
+!#if adguard
 kapook.com$$div.ads728
+!#endif
 !#endif
 kapook.com##div.ads728
 !#if cap_html_filtering
 kapook.com##^#container > div.fullbanner
+!#if adguard
 kapook.com$$#container > div.fullbanner
+!#endif
 !#endif
 kapook.com###container > div.fullbanner
 !#if cap_html_filtering
 kapook.com##^#aside_article
+!#if adguard
 kapook.com$$#aside_article
+!#endif
 !#endif
 kapook.com###aside_article
 !#if cap_html_filtering
 kapook.com##^div.taboola-x2-widget:last-child
+!#if adguard
 kapook.com$$div.taboola-x2-widget:last-child
+!#endif
 !#endif
 kapook.com##div.taboola-x2-widget:last-child
 !#if cap_html_filtering
 kapook.com##^#google_esf
+!#if adguard
 kapook.com$$#google_esf
+!#endif
 !#endif
 kapook.com###google_esf
 !thairath.co.th
 !!หน้าข่าว pc 20231212003942
 !#if cap_html_filtering
 thairath.co.th##^div#slot-billboard:upward(3)
+!#if adguard
 thairath.co.th$$div#slot-billboard:upward(3)
+!#endif
 !#endif
 thairath.co.th##div#slot-billboard:upward(3)
 !#if cap_html_filtering
 thairath.co.th##^div#slot-tower:upward(3)
+!#if adguard
 thairath.co.th$$div#slot-tower:upward(3)
+!#endif
 !#endif
 thairath.co.th##div#slot-tower:upward(3)
 thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
 !#if cap_html_filtering
 thairath.co.th##^div[style="height:300px"]
+!#if adguard
 thairath.co.th$$div[style="height:300px"]
+!#endif
 !#endif
 thairath.co.th##div[style="height:300px"]
 !#if cap_html_filtering
 thairath.co.th##^div#slot-right_rail:upward(2)
+!#if adguard
 thairath.co.th$$div#slot-right_rail:upward(2)
+!#endif
 !#endif
 thairath.co.th##div#slot-right_rail:upward(2)
 !#if cap_html_filtering
 thairath.co.th##^div[style="text-align: center; opacity: 1;"]
+!#if adguard
 thairath.co.th$$div[style="text-align: center; opacity: 1;"]
+!#endif
 !#endif
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
 !#if cap_html_filtering
 thairath.co.th##^div[class^="ads-slot-"]:upward(1)
+!#if adguard
 thairath.co.th$$div[class^="ads-slot-"]:upward(1)
+!#endif
 !#endif
 thairath.co.th##div[class^="ads-slot-"]:upward(1)
 !!หน้าหลัก pc 20231212004228
 !#if cap_html_filtering
 thairath.co.th##^div#homepage-top:upward(3)
+!#if adguard
 thairath.co.th$$div#homepage-top:upward(3)
+!#endif
 !#endif
 thairath.co.th##div#homepage-top:upward(3)
 !#if cap_html_filtering
 thairath.co.th##^div#homepage-rectangle:upward(2)
+!#if adguard
 thairath.co.th$$div#homepage-rectangle:upward(2)
+!#endif
 !#endif
 thairath.co.th##div#homepage-rectangle:upward(2)
 !!หน้าข่าว mobile 20231212005218
 !#if cap_html_filtering
 thairath.co.th##^div#slot-headline:upward(2)
+!#if adguard
 thairath.co.th$$div#slot-headline:upward(2)
+!#endif
 !#endif
 thairath.co.th##div#slot-headline:upward(2)
 !#if cap_html_filtering
 thairath.co.th##^div#slot-postarticle:upward(3)
+!#if adguard
 thairath.co.th$$div#slot-postarticle:upward(3)
+!#endif
 !#endif
 thairath.co.th##div#slot-postarticle:upward(3)
 !!thairath.co.th/sport
 !#if cap_html_filtering
 thairath.co.th##^div[data-container-id="ivs-player"]
+!#if adguard
 thairath.co.th$$div[data-container-id="ivs-player"]
+!#endif
 !#endif
 thairath.co.th##div[data-container-id="ivs-player"]
 !!thairath.co.th/money 20231222211603
 !!!หน้าหลัก
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-top-desktop:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-top-desktop:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-top-desktop:upward(1)
 !!!หน้าข่าว
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-billboard:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-billboard:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-billboard:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-rigth-rail-desktop:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-rigth-rail-desktop:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-rigth-rail-desktop:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div[id^="slot-money-inarticle"]:upward(1)
+!#if adguard
 thairath.co.th$$div[id^="slot-money-inarticle"]:upward(1)
+!#endif
 !#endif
 thairath.co.th##div[id^="slot-money-inarticle"]:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-middle-postarticle-desktop:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-middle-postarticle-desktop:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div.btn--close:upward(1)
+!#if adguard
 thairath.co.th$$div.btn--close:upward(1)
+!#endif
 !#endif
 thairath.co.th##div.btn--close:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
+!#if adguard
 thairath.co.th$$div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
 !!!mobile
 !!!หน้าหลัก
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-top-mobile:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-top-mobile:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-top-mobile:upward(1)
 !!!หน้าข่าว
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-headline:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-headline:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-headline:upward(1)
 !#if cap_html_filtering
 thairath.co.th##^div#slot-money-middle-postarticle-mobile:upward(1)
+!#if adguard
 thairath.co.th$$div#slot-money-middle-postarticle-mobile:upward(1)
+!#endif
 !#endif
 thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 !ch3plus.com 20231212005721
 !#if cap_html_filtering
 ch3plus.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 ch3plus.com$$[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 ch3plus.com##^.sp-banner
+!#if adguard
 ch3plus.com$$.sp-banner
+!#endif
 !#endif
 ch3plus.com##.sp-banner
 !matichon.co.th 20231216214133
 !#if cap_html_filtering
 matichon.co.th##^.td-a-rec
+!#if adguard
 matichon.co.th$$.td-a-rec
+!#endif
 !#endif
 matichon.co.th##.td-a-rec
 !brighttv.co.th
 !#if cap_html_filtering
 brighttv.co.th##^.b-banner
+!#if adguard
 brighttv.co.th$$.b-banner
+!#endif
 !#endif
 brighttv.co.th##.b-banner
 !beartai.com
 !#if cap_html_filtering
 beartai.com##^#ai_widget-2
+!#if adguard
 beartai.com$$#ai_widget-2
+!#endif
 !#endif
 beartai.com###ai_widget-2
 !tnews.co.th 
 !#if cap_html_filtering
 tnews.co.th##^.default-sticky
+!#if adguard
 tnews.co.th$$.default-sticky
+!#endif
 !#endif
 tnews.co.th##.default-sticky
 !#if cap_html_filtering
 tnews.co.th##^div.mobile
+!#if adguard
 tnews.co.th$$div.mobile
+!#endif
 !#endif
 tnews.co.th##div.mobile
 !#if cap_html_filtering
 tnews.co.th##^div.desktop
+!#if adguard
 tnews.co.th$$div.desktop
+!#endif
 !#endif
 tnews.co.th##div.desktop
 !thansettakij.com 
 !#if cap_html_filtering
 thansettakij.com##^.ads-billboard
+!#if adguard
 thansettakij.com$$.ads-billboard
+!#endif
 !#endif
 thansettakij.com##.ads-billboard
 !#if cap_html_filtering
 thansettakij.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 thansettakij.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !thestandard.co
 !#if cap_html_filtering
 thestandard.co##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 thestandard.co$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 thestandard.co##^.adsbyadop
+!#if adguard
 thestandard.co$$.adsbyadop
+!#endif
 !#endif
 thestandard.co##.adsbyadop
 !#if cap_html_filtering
 thestandard.co##^div[class="banner-box hidden-xs"]
+!#if adguard
 thestandard.co$$div[class="banner-box hidden-xs"]
+!#endif
 !#endif
 thestandard.co##div[class="banner-box hidden-xs"]
 !#if cap_html_filtering
 thestandard.co##^.mySlidesMasthead
+!#if adguard
 thestandard.co$$.mySlidesMasthead
+!#endif
 !#endif
 thestandard.co##.mySlidesMasthead
 !workpointtoday.com
 !#if cap_html_filtering
 workpointtoday.com##^.insert_ads
+!#if adguard
 workpointtoday.com$$.insert_ads
+!#endif
 !#endif
 workpointtoday.com##.insert_ads
 !men.kapook.com 20231212005902
 !#if cap_html_filtering
 men.kapook.com##^.taboola-x2-widget
+!#if adguard
 men.kapook.com$$.taboola-x2-widget
+!#endif
 !#endif
 men.kapook.com##.taboola-x2-widget
 !#if cap_html_filtering
 men.kapook.com##^div[id^="div-gpt-ad"][class="skin_vdo"]
+!#if adguard
 men.kapook.com$$div[id^="div-gpt-ad"][class="skin_vdo"]
+!#endif
 !#endif
 men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
 !#if cap_html_filtering
 men.kapook.com##^div[class="ads728 h90"]
+!#if adguard
 men.kapook.com$$div[class="ads728 h90"]
+!#endif
 !#endif
 men.kapook.com##div[class="ads728 h90"]
 !#if cap_html_filtering
 men.kapook.com##^div.aside_article
+!#if adguard
 men.kapook.com$$div.aside_article
+!#endif
 !#endif
 men.kapook.com##div.aside_article
 !#if cap_html_filtering
 men.kapook.com##^ins[class="adsbygoogle adsbygoogle-noablate"]
+!#if adguard
 men.kapook.com$$ins[class="adsbygoogle adsbygoogle-noablate"]
+!#endif
 !#endif
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
 !#if cap_html_filtering
 men.kapook.com##^div[data-item-syndicated="true"]
+!#if adguard
 men.kapook.com$$div[data-item-syndicated="true"]
+!#endif
 !#endif
 men.kapook.com##div[data-item-syndicated="true"]
 !pptvhd36.com
 !#if cap_html_filtering
 pptvhd36.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 pptvhd36.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 pptvhd36.com##^[id^="google_ads_iframe"]
+!#if adguard
 pptvhd36.com$$[id^="google_ads_iframe"]
+!#endif
 !#endif
 pptvhd36.com##[id^="google_ads_iframe"]
 !#if cap_html_filtering
 pptvhd36.com##^.ads-wrapper
+!#if adguard
 pptvhd36.com$$.ads-wrapper
+!#endif
 !#endif
 pptvhd36.com##.ads-wrapper
 !#if cap_html_filtering
 pptvhd36.com##^#taboola-below-article-thumbnails
+!#if adguard
 pptvhd36.com$$#taboola-below-article-thumbnails
+!#endif
 !#endif
 pptvhd36.com###taboola-below-article-thumbnails
 !#if cap_html_filtering
 pptvhd36.com##^.ads-ppn
+!#if adguard
 pptvhd36.com$$.ads-ppn
+!#endif
 !#endif
 pptvhd36.com##.ads-ppn
 !#if cap_html_filtering
 pptvhd36.com##^.special-gateway__img
+!#if adguard
 pptvhd36.com$$.special-gateway__img
+!#endif
 !#endif
 pptvhd36.com##.special-gateway__img
 !dailynews.co.th
 !#if cap_html_filtering
 dailynews.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 dailynews.co.th$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 dailynews.co.th##^#taboola-below-article-thumbnails
+!#if adguard
 dailynews.co.th$$#taboola-below-article-thumbnails
+!#endif
 !#endif
 dailynews.co.th###taboola-below-article-thumbnails
 !#if cap_html_filtering
 dailynews.co.th##^div[id^="elementor-popup-modal-"]
+!#if adguard
 dailynews.co.th$$div[id^="elementor-popup-modal-"]
+!#endif
 !#endif
 dailynews.co.th##div[id^="elementor-popup-modal-"]
 !#if cap_html_filtering
 dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(1)
+!#if adguard
 dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(1)
+!#endif
 !#endif
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
 !#if cap_html_filtering
 dailynews.co.th##^div[data-elementor-type="single-post"] > section:nth-of-type(7)
+!#if adguard
 dailynews.co.th$$div[data-elementor-type="single-post"] > section:nth-of-type(7)
+!#endif
 !#endif
 dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
 !#if cap_html_filtering
 dailynews.co.th##^div[style="height: 600px; margin: 20px auto;"]
+!#if adguard
 dailynews.co.th$$div[style="height: 600px; margin: 20px auto;"]
+!#endif
 !#endif
 dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
 !khaosod.co.th
 !#if cap_html_filtering
 khaosod.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 khaosod.co.th$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 khaosod.co.th##^div[id*="ScriptRoot"]
+!#if adguard
 khaosod.co.th$$div[id*="ScriptRoot"]
+!#endif
 !#endif
 khaosod.co.th##div[id*="ScriptRoot"]
 !khaosodenglish.com 20240130222122
 !#if cap_html_filtering
 khaosodenglish.com##^span.td-adspot-title:upward(1)
+!#if adguard
 khaosodenglish.com$$span.td-adspot-title:upward(1)
+!#endif
 !#endif
 khaosodenglish.com##span.td-adspot-title:upward(1)
 !nationtv.tv
 !#if cap_html_filtering
 nationtv.tv##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 nationtv.tv$$div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 nationtv.tv##^[id^="google_ads_iframe"]
+!#if adguard
 nationtv.tv$$[id^="google_ads_iframe"]
+!#endif
 !#endif
 nationtv.tv##[id^="google_ads_iframe"]
 !#if cap_html_filtering
 nationtv.tv##^.ads-billboard
+!#if adguard
 nationtv.tv$$.ads-billboard
+!#endif
 !#endif
 nationtv.tv##.ads-billboard
 !#if cap_html_filtering
 nationtv.tv##^.ads-postarticle
+!#if adguard
 nationtv.tv$$.ads-postarticle
+!#endif
 !#endif
 nationtv.tv##.ads-postarticle
 !#if cap_html_filtering
 nationtv.tv##^div[class^="ads-sticky-"]
+!#if adguard
 nationtv.tv$$div[class^="ads-sticky-"]
+!#endif
 !#endif
 nationtv.tv##div[class^="ads-sticky-"]
 !#if cap_html_filtering
 nationtv.tv##^div[class^="ads-inarticle-"]
+!#if adguard
 nationtv.tv$$div[class^="ads-inarticle-"]
+!#endif
 !#endif
 nationtv.tv##div[class^="ads-inarticle-"]
 !voicetv.co.th
 !#if cap_html_filtering
 voicetv.co.th##^.article-ad
+!#if adguard
 voicetv.co.th$$.article-ad
+!#endif
 !#endif
 voicetv.co.th##.article-ad
 !#if cap_html_filtering
 voicetv.co.th##^#taboola-below-article-thumbnails
+!#if adguard
 voicetv.co.th$$#taboola-below-article-thumbnails
+!#endif
 !#endif
 voicetv.co.th###taboola-below-article-thumbnails
 !mangozero.com
 !#if cap_html_filtering
 mangozero.com##^.banner-ads
+!#if adguard
 mangozero.com$$.banner-ads
+!#endif
 !#endif
 mangozero.com##.banner-ads
 !kaijeaw.com
 !#if cap_html_filtering
 kaijeaw.com##^small
+!#if adguard
 kaijeaw.com$$small
+!#endif
 !#endif
 kaijeaw.com##small
 !#if cap_html_filtering
 kaijeaw.com##^ins.adsbygoogle
+!#if adguard
 kaijeaw.com$$ins.adsbygoogle
+!#endif
 !#endif
 kaijeaw.com##ins.adsbygoogle
 !#if cap_html_filtering
 kaijeaw.com##^div[data-google-query-id]
+!#if adguard
 kaijeaw.com$$div[data-google-query-id]
+!#endif
 !#endif
 kaijeaw.com##div[data-google-query-id]
 !#if cap_html_filtering
 kaijeaw.com##^a[href^="https://adclick.g.doubleclick.net/"]
+!#if adguard
 kaijeaw.com$$a[href^="https://adclick.g.doubleclick.net/"]
+!#endif
 !#endif
 kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
 !thaihitz.com
 !#if cap_html_filtering
 thaihitz.com##^.code-block 
+!#if adguard
 thaihitz.com$$.code-block 
+!#endif
 !#endif
 thaihitz.com##.code-block 
 !kaazip.com
 !#if cap_html_filtering
 kaazip.com##^.adsense
+!#if adguard
 kaazip.com$$.adsense
+!#endif
 !#endif
 kaazip.com##.adsense
 !#if cap_html_filtering
 kaazip.com##^ins.adsbygoogle
+!#if adguard
 kaazip.com$$ins.adsbygoogle
+!#endif
 !#endif
 kaazip.com##ins.adsbygoogle
 !springnews.co.th
 !#if cap_html_filtering
 springnews.co.th##^.mobile
+!#if adguard
 springnews.co.th$$.mobile
+!#endif
 !#endif
 springnews.co.th##.mobile
 !#if cap_html_filtering
 springnews.co.th##^.desktop
+!#if adguard
 springnews.co.th$$.desktop
+!#endif
 !#endif
 springnews.co.th##.desktop
 !ejan.co
 !#if cap_html_filtering
 ejan.co##^#taboola-below-article-thumbnails
+!#if adguard
 ejan.co$$#taboola-below-article-thumbnails
+!#endif
 !#endif
 ejan.co###taboola-below-article-thumbnails
 !komchadluek.net 20240110144745
 !#if cap_html_filtering
 komchadluek.net##^div[class^="dynamic-ads__"]
+!#if adguard
 komchadluek.net$$div[class^="dynamic-ads__"]
 !#endif
+!#endif
 komchadluek.net##div[class^="dynamic-ads__"]
-!petmaya.com
+!petmaya.com 20240131014209
 !#if cap_html_filtering
 petmaya.com##^ins.adsbygoogle
+!#if adguard
 petmaya.com$$ins.adsbygoogle
 !#endif
+!#endif
 petmaya.com##ins.adsbygoogle
+!aseannow.com 20240131014208
+!#if cap_html_filtering
+aseannow.com##^[data-role="sidebarAd"]
+!#if adguard
+aseannow.com$$[data-role="sidebarAd"]
+!#endif
+!#endif
+aseannow.com##[data-role="sidebarAd"]
+!#if cap_html_filtering
+aseannow.com##^ins.adsbygoogle
+!#if adguard
+aseannow.com$$ins.adsbygoogle
+!#endif
+!#endif
+aseannow.com##ins.adsbygoogle
+!#if cap_html_filtering
+aseannow.com##^#taboola-right-rail-thumbnails-1
+!#if adguard
+aseannow.com$$#taboola-right-rail-thumbnails-1
+!#endif
+!#endif
+aseannow.com###taboola-right-rail-thumbnails-1
+!today.line.me 20240131014430
 !
 !---tech news ---
 !
 !droidsans.com 20240114125602
 !#if cap_html_filtering
 droidsans.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 droidsans.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 droidsans.com##^aside.sidebar-mobile
+!#if adguard
 droidsans.com$$aside.sidebar-mobile
+!#endif
 !#endif
 droidsans.com##aside.sidebar-mobile
 !siamblockchain.com
 !#if cap_html_filtering
 siamblockchain.com##^.header-banner
+!#if adguard
 siamblockchain.com$$.header-banner
+!#endif
 !#endif
 siamblockchain.com##.header-banner
 !#if cap_html_filtering
 siamblockchain.com##^#block-3
+!#if adguard
 siamblockchain.com$$#block-3
+!#endif
 !#endif
 siamblockchain.com###block-3
 !#if cap_html_filtering
 siamblockchain.com##^#block-6
+!#if adguard
 siamblockchain.com$$#block-6
+!#endif
 !#endif
 siamblockchain.com###block-6
 !#if cap_html_filtering
 siamblockchain.com##^div#topheader-desktop-banner
+!#if adguard
 siamblockchain.com$$div#topheader-desktop-banner
+!#endif
 !#endif
 siamblockchain.com##div#topheader-desktop-banner
 !iphone-droid.net 
 !#if cap_html_filtering
 iphone-droid.net##^.widget_text
+!#if adguard
 iphone-droid.net$$.widget_text
+!#endif
 !#endif
 iphone-droid.net##.widget_text
 !#if cap_html_filtering
 iphone-droid.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 iphone-droid.net$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#if cap_html_filtering
 iphone-droid.net##^div[class^="dpdpa--popup"]
+!#if adguard
 iphone-droid.net$$div[class^="dpdpa--popup"]
+!#endif
 !#endif
 iphone-droid.net##div[class^="dpdpa--popup"]
 !worldittoday.com 
 !#if cap_html_filtering
 worldittoday.com##^ins.adsbygoogle
+!#if adguard
 worldittoday.com$$ins.adsbygoogle
+!#endif
 !#endif
 worldittoday.com##ins.adsbygoogle
 !Notebookspec 20240113203926
 !#if cap_html_filtering
 notebookspec.com##^.zox-widget-ad
+!#if adguard
 notebookspec.com$$.zox-widget-ad
+!#endif
 !#endif
 notebookspec.com##.zox-widget-ad
 !#if cap_html_filtering
 notebookspec.com##^.zox_ad_widget
+!#if adguard
 notebookspec.com$$.zox_ad_widget
+!#endif
 !#endif
 notebookspec.com##.zox_ad_widget
 !#if cap_html_filtering
 notebookspec.com##^#zox-lead-bot
+!#if adguard
 notebookspec.com$$#zox-lead-bot
+!#endif
 !#endif
 notebookspec.com###zox-lead-bot
 !thaimobilecenter.com
 !#if cap_html_filtering
-thaimobilecenter.com##^.container.hidden-xs div[class^="col-"][align="right"]
-thaimobilecenter.com$$.container.hidden-xs div[class^="col-"][align="right"]
+thaimobilecenter.com##^div[class="container box-big-banner-top"]
+!#if adguard
+thaimobilecenter.com$$div[class="container box-big-banner-top"]
 !#endif
-thaimobilecenter.com##.container.hidden-xs div[class^="col-"][align="right"]
+!#endif
+thaimobilecenter.com##div[class="container box-big-banner-top"]
+!#if cap_html_filtering
+thaimobilecenter.com##^div[class="col-md-9 hidden-sm hidden-xs"]
+!#if adguard
+thaimobilecenter.com$$div[class="col-md-9 hidden-sm hidden-xs"]
+!#endif
+!#endif
+thaimobilecenter.com##div[class="col-md-9 hidden-sm hidden-xs"]
 !#if cap_html_filtering
 thaimobilecenter.com##^ins.adsbygoogle
+!#if adguard
 thaimobilecenter.com$$ins.adsbygoogle
+!#endif
 !#endif
 thaimobilecenter.com##ins.adsbygoogle
 ||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
 !techtalkthai.com
 !#if cap_html_filtering
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
+!#if adguard
 techtalkthai.com$$#wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
+!#endif
 !#endif
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
 !#if cap_html_filtering
 techtalkthai.com##^#wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
+!#if adguard
 techtalkthai.com$$#wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
+!#endif
 !#endif
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
 !#if cap_html_filtering
 techtalkthai.com##^#text-9
+!#if adguard
 techtalkthai.com$$#text-9
+!#endif
 !#endif
 techtalkthai.com###text-9
 !#if cap_html_filtering
 techtalkthai.com##^#text-18
+!#if adguard
 techtalkthai.com$$#text-18
+!#endif
 !#endif
 techtalkthai.com###text-18
 !blognone.com
 !#if cap_html_filtering
 blognone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if adguard
 blognone.com$$div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 !#endif
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !flashfly.net
 !#if cap_html_filtering
 flashfly.net##^iframe[width="500"][height="190"]
+!#if adguard
 flashfly.net$$iframe[width="500"][height="190"]
+!#endif
 !#endif
 flashfly.net##iframe[width="500"][height="190"]
 !#if cap_html_filtering
 flashfly.net##^ins.adsbygoogle
+!#if adguard
 flashfly.net$$ins.adsbygoogle
+!#endif
 !#endif
 flashfly.net##ins.adsbygoogle
 !#if cap_html_filtering
 flashfly.net##^div.jeg_ad
+!#if adguard
 flashfly.net$$div.jeg_ad
+!#endif
 !#endif
 flashfly.net##div.jeg_ad
 !#if cap_html_filtering
 flashfly.net##^div[align="center"]:upward(1)
+!#if adguard
 flashfly.net$$div[align="center"]:upward(1)
+!#endif
 !#endif
 flashfly.net##div[align="center"]:upward(1)
 !it24hrs.com
 !#if cap_html_filtering
 it24hrs.com##^ins.adsbygoogle
+!#if adguard
 it24hrs.com$$ins.adsbygoogle
+!#endif
 !#endif
 it24hrs.com##ins.adsbygoogle
 !#if cap_html_filtering
 it24hrs.com##^.bottom-ads
+!#if adguard
 it24hrs.com$$.bottom-ads
+!#endif
 !#endif
 it24hrs.com##.bottom-ads
 !#if cap_html_filtering
 it24hrs.com##^.adrotate_widgets
+!#if adguard
 it24hrs.com$$.adrotate_widgets
+!#endif
 !#endif
 it24hrs.com##.adrotate_widgets
 ||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
 !iphonemod.net
 !#if cap_html_filtering
 iphonemod.net##^center
+!#if adguard
 iphonemod.net$$center
+!#endif
 !#endif
 iphonemod.net##center
 !#if cap_html_filtering
 iphonemod.net##^#quads-ad4
+!#if adguard
 iphonemod.net$$#quads-ad4
+!#endif
 !#endif
 iphonemod.net###quads-ad4
 !specphone.com
 !#if cap_html_filtering
 specphone.com##^div#custom_html-2
+!#if adguard
 specphone.com$$div#custom_html-2
+!#endif
 !#endif
 specphone.com##div#custom_html-2
 !#if cap_html_filtering
 specphone.com##^div#custom_html-4
+!#if adguard
 specphone.com$$div#custom_html-4
+!#endif
 !#endif
 specphone.com##div#custom_html-4
 !#if cap_html_filtering
 specphone.com##^div#sp_top_phone_widget-2
+!#if adguard
 specphone.com$$div#sp_top_phone_widget-2
+!#endif
 !#endif
 specphone.com##div#sp_top_phone_widget-2
 !#if cap_html_filtering
 specphone.com##^div.ads-desktop
+!#if adguard
 specphone.com$$div.ads-desktop
+!#endif
 !#endif
 specphone.com##div.ads-desktop
 !#if cap_html_filtering
 specphone.com##^div.ads-mobile
+!#if adguard
 specphone.com$$div.ads-mobile
+!#endif
 !#endif
 specphone.com##div.ads-mobile
 !#if cap_html_filtering
 specphone.com##^div#footer-ads
+!#if adguard
 specphone.com$$div#footer-ads
+!#endif
 !#endif
 specphone.com##div#footer-ads
 !#if cap_html_filtering
 specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
+!#if adguard
 specphone.com$$div[style="width:300px; height: 250px; margin:30px auto;"]
+!#endif
 !#endif
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 !
@@ -2190,92 +2737,126 @@ specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 !mustplay.in.th 20240112003329
 !#if cap_html_filtering
 mustplay.in.th##^a[href^="/banner/id/"]
+!#if adguard
 mustplay.in.th$$a[href^="/banner/id/"]
+!#endif
 !#endif
 mustplay.in.th##a[href^="/banner/id/"]
 !#if cap_html_filtering
 mustplay.in.th##^div[class*="promote"]
+!#if adguard
 mustplay.in.th$$div[class*="promote"]
+!#endif
 !#endif
 mustplay.in.th##div[class*="promote"]
 !#if cap_html_filtering
 mustplay.in.th##^.cover_preload
+!#if adguard
 mustplay.in.th$$.cover_preload
+!#endif
 !#endif
 mustplay.in.th##.cover_preload
 !#if cap_html_filtering
 mustplay.in.th##^.preloader
+!#if adguard
 mustplay.in.th$$.preloader
+!#endif
 !#endif
 mustplay.in.th##.preloader
 ||www.mustplay.in.th/data/setting/banner/
 !thisisgamethailand.com 20240103182550
 !#if cap_html_filtering
 thisisgamethailand.com##^#bg_banner_left
+!#if adguard
 thisisgamethailand.com$$#bg_banner_left
+!#endif
 !#endif
 thisisgamethailand.com###bg_banner_left
 !#if cap_html_filtering
 thisisgamethailand.com##^#bg_banner_right
+!#if adguard
 thisisgamethailand.com$$#bg_banner_right
+!#endif
 !#endif
 thisisgamethailand.com###bg_banner_right
 !#if cap_html_filtering
 thisisgamethailand.com##^div[class="mod_banner_Rectangle"]
+!#if adguard
 thisisgamethailand.com$$div[class="mod_banner_Rectangle"]
+!#endif
 !#endif
 thisisgamethailand.com##div[class="mod_banner_Rectangle"]
 !#if cap_html_filtering
 thisisgamethailand.com##^div.position1
+!#if adguard
 thisisgamethailand.com$$div.position1
+!#endif
 !#endif
 thisisgamethailand.com##div.position1
 !gamefever.co 
 !#if cap_html_filtering
 gamefever.co##^[id^="ads"]
+!#if adguard
 gamefever.co$$[id^="ads"]
+!#endif
 !#endif
 gamefever.co##[id^="ads"]
 !#if cap_html_filtering
 gamefever.co##^div[style="width:100vw;height:89px"]
+!#if adguard
 gamefever.co$$div[style="width:100vw;height:89px"]
+!#endif
 !#endif
 gamefever.co##div[style="width:100vw;height:89px"]
 gamefever.co##.d-none:style(padding-top: 0px !important)
 !gamingdose.com
 !#if cap_html_filtering
 gamingdose.com##^section.ads_header
+!#if adguard
 gamingdose.com$$section.ads_header
+!#endif
 !#endif
 gamingdose.com##section.ads_header
 !#if cap_html_filtering
 gamingdose.com##^div.ads_side
+!#if adguard
 gamingdose.com$$div.ads_side
+!#endif
 !#endif
 gamingdose.com##div.ads_side
 !#if cap_html_filtering
 gamingdose.com##^div.banner_side
+!#if adguard
 gamingdose.com$$div.banner_side
+!#endif
 !#endif
 gamingdose.com##div.banner_side
 !#if cap_html_filtering
 gamingdose.com##^div.gamin-sticky
+!#if adguard
 gamingdose.com$$div.gamin-sticky
+!#endif
 !#endif
 gamingdose.com##div.gamin-sticky
 !#if cap_html_filtering
 gamingdose.com##^div.gamin-popup-desktop
+!#if adguard
 gamingdose.com$$div.gamin-popup-desktop
+!#endif
 !#endif
 gamingdose.com##div.gamin-popup-desktop
 !#if cap_html_filtering
 gamingdose.com##^div.gamin-popup-mobile
+!#if adguard
 gamingdose.com$$div.gamin-popup-mobile
+!#endif
 !#endif
 gamingdose.com##div.gamin-popup-mobile
 !#if cap_html_filtering
 gamingdose.com##^div.advads-background
+!#if adguard
 gamingdose.com$$div.advads-background
+!#endif
 !#endif
 gamingdose.com##div.advads-background
 !playulti.com
@@ -2284,13 +2865,17 @@ playulti.com##.sidebar:style(top: 80px !important)
 playulti.com##.uk-width-expand:style(margin-top: -10px !important)
 !#if cap_html_filtering
 playulti.com##^.space_side
+!#if adguard
 playulti.com$$.space_side
+!#endif
 !#endif
 playulti.com##.space_side
 !compgamer.com 20240130223724
 !#if cap_html_filtering
 compgamer.com##^#alert_popup_dialog
+!#if adguard
 compgamer.com$$#alert_popup_dialog
+!#endif
 !#endif
 compgamer.com###alert_popup_dialog
 compgamer.com##body:style(overflow: auto !important;)
@@ -2300,7 +2885,9 @@ compgamer.com##body:style(overflow: auto !important;)
 !jokergameth.com 20240130224346
 !#if cap_html_filtering
 jokergameth.com##^div[align="center"]
+!#if adguard
 jokergameth.com$$div[align="center"]
+!#endif
 !#endif
 jokergameth.com##div[align="center"]
 !
@@ -2309,12 +2896,16 @@ jokergameth.com##div[align="center"]
 !trueid.net
 !#if cap_html_filtering
 trueid.net##^section[class^="style__BannerSticky-sc-"]
+!#if adguard
 trueid.net$$section[class^="style__BannerSticky-sc-"]
+!#endif
 !#endif
 trueid.net##section[class^="style__BannerSticky-sc-"]
 !#if cap_html_filtering
 trueid.net##^div[class^="style__AdsStyle-sc-"]
+!#if adguard
 trueid.net$$div[class^="style__AdsStyle-sc-"]
+!#endif
 !#endif
 trueid.net##div[class^="style__AdsStyle-sc-"]
 !
@@ -2323,17 +2914,23 @@ trueid.net##div[class^="style__AdsStyle-sc-"]
 !mawtoload.com
 !#if cap_html_filtering
 mawtoload.com##^#sticky-banner
+!#if adguard
 mawtoload.com$$#sticky-banner
+!#endif
 !#endif
 mawtoload.com###sticky-banner
 !#if cap_html_filtering
 mawtoload.com##^a[rel="dofollow noopener"]
+!#if adguard
 mawtoload.com$$a[rel="dofollow noopener"]
+!#endif
 !#endif
 mawtoload.com##a[rel="dofollow noopener"]
 !#if cap_html_filtering
 mawtoload.com##^#banner-post
+!#if adguard
 mawtoload.com$$#banner-post
+!#endif
 !#endif
 mawtoload.com###banner-post
 !
@@ -2347,7 +2944,9 @@ www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400
 !animeranku.com 20240130221146
 !#if cap_html_filtering
 animeranku.com##^ins.adsbygoogle
+!#if adguard
 animeranku.com$$ins.adsbygoogle
+!#endif
 !#endif
 animeranku.com##ins.adsbygoogle
 
@@ -2360,37 +2959,49 @@ animeranku.com##ins.adsbygoogle
 !manga168.com
 !#if cap_html_filtering
 manga168.com##^.dessert-frame > center
+!#if adguard
 manga168.com$$.dessert-frame > center
+!#endif
 !#else
 manga168.com##.dessert-frame > center
 !#endif
 !#if cap_html_filtering
 manga168.com##^#ads_fox_bottom
+!#if adguard
 manga168.com$$#ads_fox_bottom
+!#endif
 !#else
 manga168.com###ads_fox_bottom
 !#endif
 !#if cap_html_filtering
 manga168.com##^.slider-ads
+!#if adguard
 manga168.com$$.slider-ads
+!#endif
 !#else
 manga168.com##.slider-ads
 !#endif
 !#if cap_html_filtering
 manga168.com##^.ads-info
+!#if adguard
 manga168.com$$.ads-info
+!#endif
 !#else
 manga168.com##.ads-info
 !#endif
 !#if cap_html_filtering
 manga168.com##^#colophon > div:nth-of-type(3)
+!#if adguard
 manga168.com$$#colophon > div:nth-of-type(3)
+!#endif
 !#else
 manga168.com###colophon > div:nth-of-type(3)
 !#endif
 !#if cap_html_filtering
 manga168.com##^.kln
+!#if adguard
 manga168.com$$.kln
+!#endif
 !#else
 manga168.com##.kln
 !#endif
@@ -2403,77 +3014,102 @@ manga168.com##.kln
 !tanuki-manga.com
 !#if cap_html_filtering
 tanuki-manga.com##^.ads
+!#if adguard
 tanuki-manga.com$$.ads
+!#endif
 !#else
 tanuki-manga.com##.ads
 !#endif
 !manga-sugoi.com
 !#if cap_html_filtering
 manga-sugoi.com##^.blox, .mlb, .kln
+!#if adguard
 manga-sugoi.com$$.blox, .mlb, .kln
+!#endif
 !#else
 manga-sugoi.com##.blox, .mlb, .kln
 !#endif
 !moodtoon.com
 !#if cap_html_filtering
 moodtoon.com##^div.ads-info
+!#if adguard
 moodtoon.com$$div.ads-info
+!#endif
 !#else
 moodtoon.com##div.ads-info
 !#endif
 !#if cap_html_filtering
 moodtoon.com##^div.mt-ad
+!#if adguard
 moodtoon.com$$div.mt-ad
+!#endif
 !#else
 moodtoon.com##div.mt-ad
 !#endif
 !#if cap_html_filtering
 moodtoon.com##^li#menu-item-595198
+!#if adguard
 moodtoon.com$$li#menu-item-595198
+!#endif
 !#else
 moodtoon.com##li#menu-item-595198
 !#endif
 !#if cap_html_filtering
 moodtoon.com##^div[id^="ads_"]
+!#if adguard
 moodtoon.com$$div[id^="ads_"]
+!#endif
 !#else
 moodtoon.com##div[id^="ads_"]
 !#endif
 !niceoppai.net
+/^https:\/\/(www\.|)((?!facebook\.com|twitter\.com).)*$/$frame,domain=niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
+!#if adguard
 www.niceoppai.net$$div[class="top_page widget_text"]
+!#endif
 !#else
 www.niceoppai.net##div[class="top_page widget_text"]
 !#endif
 !#if cap_html_filtering
 www.niceoppai.net##^li[class="wid widget_text"][id="text-6"]
+!#if adguard
 www.niceoppai.net$$li[class="wid widget_text"][id="text-6"]
+!#endif
 !#else
 www.niceoppai.net##li[class="wid widget_text"][id="text-6"]
 !#endif
 !#if cap_html_filtering
 www.niceoppai.net##^li[class="wid widget_text"][id="text-9"]
+!#if adguard
 www.niceoppai.net$$li[class="wid widget_text"][id="text-9"]
+!#endif
 !#else
 www.niceoppai.net##li[class="wid widget_text"][id="text-9"]
 !#endif
 !!หน้าอ่าน
 !#if cap_html_filtering
 www.niceoppai.net##^div[id="sct_top_banner"]
+!#if adguard
 www.niceoppai.net$$div[id="sct_top_banner"]
+!#endif
 !#else
 www.niceoppai.net##div[id="sct_top_banner"]
 !#endif
 !#if cap_html_filtering
 www.niceoppai.net##^div[id="sct_footer_banner"]
+!#if adguard
 www.niceoppai.net$$div[id="sct_footer_banner"]
+!#endif
 !#else
 www.niceoppai.net##div[id="sct_footer_banner"]
 !#endif
 !#if cap_html_filtering
 www.niceoppai.net##^.mng_rdr.wpm_pag > center
+!#if adguard
 www.niceoppai.net$$.mng_rdr.wpm_pag > center
+!#endif
 !#else
 www.niceoppai.net##.mng_rdr.wpm_pag > center
 !#endif
@@ -2494,99 +3130,129 @@ www.niceoppai.net##.mng_rdr.wpm_pag > center
 !mangadeemak.com
 !#if cap_html_filtering
 mangadeemak.com##^div[id^="ads"]
+!#if adguard
 mangadeemak.com$$div[id^="ads"]
+!#endif
 !#else
 mangadeemak.com##div[id^="ads"]
 !#endif
 !#if cap_html_filtering
 mangadeemak.com##^.wp-manga.c-top-sidebar.c-sidebar
+!#if adguard
 mangadeemak.com$$.wp-manga.c-top-sidebar.c-sidebar
+!#endif
 !#else
 mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
 !#endif
 !kingsmanga.net
 !#if cap_html_filtering
 kingsmanga.net##^#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
+!#if adguard
 kingsmanga.net$$#wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
+!#endif
 !#else
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
 !#endif
 !kuro-manga.com
 !#if cap_html_filtering
 kuro-manga.com##^div[class="c-sidebar"]
+!#if adguard
 kuro-manga.com$$div[class="c-sidebar"]
+!#endif
 !#else
 kuro-manga.com##div[class="c-sidebar"]
 !#endif
 !#if cap_html_filtering
 kuro-manga.com##^div.widget_text
+!#if adguard
 kuro-manga.com$$div.widget_text
+!#endif
 !#else
 kuro-manga.com##div.widget_text
 !#endif
 !rh2plusmanga.com
 !#if cap_html_filtering
 rh2plusmanga.com##^.ads
+!#if adguard
 rh2plusmanga.com$$.ads
+!#endif
 !#else
 rh2plusmanga.com##.ads
 !#endif
 !#if cap_html_filtering
 rh2plusmanga.com##^.ads-float
+!#if adguard
 rh2plusmanga.com$$.ads-float
+!#endif
 !#else
 rh2plusmanga.com##.ads-float
 !#endif
 !loli-manga.com
 !#if cap_html_filtering
 loli-manga.com##^div[class*="ads"]
+!#if adguard
 loli-manga.com$$div[class*="ads"]
+!#endif
 !#else
 loli-manga.com##div[class*="ads"]
 !#endif
 !#if cap_html_filtering
 loli-manga.com##^.popup-wrap
+!#if adguard
 loli-manga.com$$.popup-wrap
+!#endif
 !#else
 loli-manga.com##.popup-wrap
 !#endif
 !thaimanga.net
 !#if cap_html_filtering
 thaimanga.net##^.ads
+!#if adguard
 thaimanga.net$$.ads
+!#endif
 !#else
 thaimanga.net##.ads
 !#endif
 !mangaisekaithai.com
 !#if cap_html_filtering
 mangaisekaithai.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#if adguard
 mangaisekaithai.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !#else
 mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 !mangafins.net
 !#if cap_html_filtering
 mangafins.net##^.c-top-sidebar
+!#if adguard
 mangafins.net$$.c-top-sidebar
+!#endif
 !#else
 mangafins.net##.c-top-sidebar
 !#endif
 !murim-manga.com 20231225133557
 !#if cap_html_filtering
 murim-manga.com##^.dessert-frame
+!#if adguard
 murim-manga.com$$.dessert-frame
+!#endif
 !#else
 murim-manga.com##.dessert-frame
 !#endif
 !#if cap_html_filtering
 murim-manga.com##^.slider-ads
+!#if adguard
 murim-manga.com$$.slider-ads
+!#endif
 !#else
 murim-manga.com##.slider-ads
 !#endif
 !#if cap_html_filtering
 murim-manga.com##^#ads_fox_bottom
+!#if adguard
 murim-manga.com$$#ads_fox_bottom
+!#endif
 !#else
 murim-manga.com###ads_fox_bottom
 !#endif
@@ -2597,65 +3263,85 @@ murim-manga.com###ads_fox_bottom
 !ped-manga.com
 !#if cap_html_filtering
 ped-manga.com##^.dessert-frame
+!#if adguard
 ped-manga.com$$.dessert-frame
+!#endif
 !#else
 ped-manga.com##.dessert-frame
 !#endif
 !#if cap_html_filtering
 ped-manga.com##^#wbnn
+!#if adguard
 ped-manga.com$$#wbnn
+!#endif
 !#else
 ped-manga.com###wbnn
 !#endif
 !dokimori.com
 !#if cap_html_filtering
 dokimori.com##^.col-md-12
+!#if adguard
 dokimori.com$$.col-md-12
+!#endif
 !#else
 dokimori.com##.col-md-12
 !#endif
 !manhwabreakup.com
 !#if cap_html_filtering
 manhwabreakup.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#if adguard
 manhwabreakup.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !#else
 manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 !#if cap_html_filtering
 manhwabreakup.com##^div[class="ads-float"]
+!#if adguard
 manhwabreakup.com$$div[class="ads-float"]
+!#endif
 !#else
 manhwabreakup.com##div[class="ads-float"]
 !#endif
 !tpnoodle.com
 !#if cap_html_filtering
 tpnoodle.com##^div[class="row mt-3"]:nth-of-type(1)
+!#if adguard
 tpnoodle.com$$div[class="row mt-3"]:nth-of-type(1)
+!#endif
 !#else
 tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
 !#endif
 !#if cap_html_filtering
 tpnoodle.com##^div[class="col-3 mt-2"]
+!#if adguard
 tpnoodle.com$$div[class="col-3 mt-2"]
+!#endif
 !#else
 tpnoodle.com##div[class="col-3 mt-2"]
 !#endif
 !makimaaaaa.com
 !#if cap_html_filtering
 makimaaaaa.com##^div[class="blox mlb kln"]
+!#if adguard
 makimaaaaa.com$$div[class="blox mlb kln"]
+!#endif
 !#else
 makimaaaaa.com##div[class="blox mlb kln"]
 !#endif
 !#if cap_html_filtering
 makimaaaaa.com##^div[id="wbnn"]
+!#if adguard
 makimaaaaa.com$$div[id="wbnn"]
+!#endif
 !#else
 makimaaaaa.com##div[id="wbnn"]
 !#endif
 !#if cap_html_filtering
 makimaaaaa.com##^div[class="kln"]
+!#if adguard
 makimaaaaa.com$$div[class="kln"]
+!#endif
 !#else
 makimaaaaa.com##div[class="kln"]
 !#endif
@@ -2664,72 +3350,94 @@ makimaaaaa.com##div[class="kln"]
 !romance-manga.com
 !#if cap_html_filtering
 romance-manga.com##^div.rm-ads
+!#if adguard
 romance-manga.com$$div.rm-ads
+!#endif
 !#else
 romance-manga.com##div.rm-ads
 !#endif
 !#if cap_html_filtering
 romance-manga.com##^div.ads-info
+!#if adguard
 romance-manga.com$$div.ads-info
+!#endif
 !#else
 romance-manga.com##div.ads-info
 !#endif
 !germa-66.com
 !#if cap_html_filtering
 germa-66.com##^div[class="blox mlb kln"]
+!#if adguard
 germa-66.com$$div[class="blox mlb kln"]
+!#endif
 !#else
 germa-66.com##div[class="blox mlb kln"]
 !#endif
 !#if cap_html_filtering
 germa-66.com##^div[id="wbnn"]
+!#if adguard
 germa-66.com$$div[id="wbnn"]
+!#endif
 !#else
 germa-66.com##div[id="wbnn"]
 !#endif
 !manhuakey.com
 !#if cap_html_filtering
 manhuakey.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#if adguard
 manhuakey.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !#else
 manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 !manhuabug.com
 !#if cap_html_filtering
 manhuabug.com##^div[class="header-ads-section"]
+!#if adguard
 manhuabug.com$$div[class="header-ads-section"]
+!#endif
 !#else
 manhuabug.com##div[class="header-ads-section"]
 !#endif
 !mangathailand.com
 !#if cap_html_filtering
 mangathailand.com##^div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
+!#if adguard
 mangathailand.com$$div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
+!#endif
 !#else
 mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
 !#endif
 !#if cap_html_filtering
 mangathailand.com##^div[data-id="43c9931"]
+!#if adguard
 mangathailand.com$$div[data-id="43c9931"]
+!#endif
 !#else
 mangathailand.com##div[data-id="43c9931"]
 !#endif
 !popsmanga.com
 !#if cap_html_filtering
 popsmanga.com##^div.dessert-frame
+!#if adguard
 popsmanga.com$$div.dessert-frame
+!#endif
 !#else
 popsmanga.com##div.dessert-frame
 !#endif
 !#if cap_html_filtering
 popsmanga.com##^div#wbnn
+!#if adguard
 popsmanga.com$$div#wbnn
+!#endif
 !#else
 popsmanga.com##div#wbnn
 !#endif
 !#if cap_html_filtering
 popsmanga.com##^div.kln
+!#if adguard
 popsmanga.com$$div.kln
+!#endif
 !#else
 popsmanga.com##div.kln
 !#endif
@@ -2737,26 +3445,34 @@ wss://$domain=popsmanga.com
 !toomtam-manga.com
 !#if cap_html_filtering
 toomtam-manga.com##^div#wbnn
+!#if adguard
 toomtam-manga.com$$div#wbnn
+!#endif
 !#else
 toomtam-manga.com##div#wbnn
 !#endif
 !#if cap_html_filtering
 toomtam-manga.com##^div.dessert-frame
+!#if adguard
 toomtam-manga.com$$div.dessert-frame
+!#endif
 !#else
 toomtam-manga.com##div.dessert-frame
 !#endif
 !#if cap_html_filtering
 toomtam-manga.com##^div.kln
+!#if adguard
 toomtam-manga.com$$div.kln
+!#endif
 !#else
 toomtam-manga.com##div.kln
 !#endif
 !manga-za.net
 !#if cap_html_filtering
 manga-za.net##^div[class="mt-ad text-center"]
+!#if adguard
 manga-za.net$$div[class="mt-ad text-center"]
+!#endif
 !#else
 manga-za.net##div[class="mt-ad text-center"]
 !#endif
@@ -2767,28 +3483,36 @@ manga-za.net##div[class="mt-ad text-center"]
 !manga-lc.net
 !#if cap_html_filtering
 manga-lc.net##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#if adguard
 manga-lc.net$$div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !#else
 manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
 !chocomanga.com
 !#if cap_html_filtering
 chocomanga.com##^div[class="ads"]
+!#if adguard
 chocomanga.com$$div[class="ads"]
+!#endif
 !#else
 chocomanga.com##div[class="ads"]
 !#endif
 !doodmanga.com
 !#if cap_html_filtering
 doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#if adguard
 doodmanga.com$$div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
 !#else
 doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 !manga-post.com 20231217005704
 !#if cap_html_filtering
 manga-post.com##^center > a:upward(1)
+!#if adguard
 manga-post.com$$center > a:upward(1)
+!#endif
 !#else
 manga-post.com##center > a:upward(1)
 !#endif
@@ -2796,32 +3520,42 @@ manga-post.com##center > a:upward(1)
 *$script,third-party,domain=mafia-manga.com
 !#if cap_html_filtering
 mafia-manga.com##^div.dessert-frame
+!#if adguard
 mafia-manga.com$$div.dessert-frame
+!#endif
 !#else
 mafia-manga.com##div.dessert-frame
 !#endif
 !#if cap_html_filtering
 mafia-manga.com##^.allc
+!#if adguard
 mafia-manga.com$$.allc
+!#endif
 !#else
 mafia-manga.com##.allc
 !#endif
 !#if cap_html_filtering
 mafia-manga.com##^a[href="https://ufabet24auto.com/"]:upward(1)
+!#if adguard
 mafia-manga.com$$a[href="https://ufabet24auto.com/"]:upward(1)
+!#endif
 !#else
 mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
 !#endif
 !cats-translator.com 20240102001320
 !#if cap_html_filtering
 cats-translator.com##^div[id^="ads_"]
+!#if adguard
 cats-translator.com$$div[id^="ads_"]
+!#endif
 !#else
 cats-translator.com##div[id^="ads_"]
 !#endif
 !#if cap_html_filtering
 cats-translator.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#if adguard
 cats-translator.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !#else
 cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
@@ -2833,34 +3567,44 @@ cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !!เอา box ที่เขียนว่า โฆษณา ออก
 !#if cap_html_filtering
 anime-sugoi.com##^div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!#if adguard
 anime-sugoi.com$$div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!#endif
 !#else
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 !#endif
 !!เอาdiv โฆษณาอันแรกออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > .col-md-8
+!#if adguard
 anime-sugoi.com$$.container > .row > .col-md-8
+!#endif
 !#else
 anime-sugoi.com##.container > .row > .col-md-8
 !#endif
 !!เอาdiv โฆษณาอัน2ออก
 !#if cap_html_filtering
 anime-sugoi.com##^.container > .row > center
+!#if adguard
 anime-sugoi.com$$.container > .row > center
+!#endif
 !#else
 anime-sugoi.com##.container > .row > center
 !#endif
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
 !#if cap_html_filtering
 anime-sugoi.com##^.panel-body > center > a
+!#if adguard
 anime-sugoi.com$$.panel-body > center > a
+!#endif
 !#else
 anime-sugoi.com##.panel-body > center > a
 !#endif
 !#if cap_html_filtering
 anime-sugoi.com##^#bt-ads
+!#if adguard
 anime-sugoi.com$$#bt-ads
+!#endif
 !#else
 anime-sugoi.com###bt-ads
 !#endif
@@ -2868,25 +3612,33 @@ anime-sugoi.com###bt-ads
 !anime-masters.com
 !#if cap_html_filtering
 anime-masters.com##^div.container > .row > .center_lnwphp
+!#if adguard
 anime-masters.com$$div.container > .row > .center_lnwphp
+!#endif
 !#else
 anime-masters.com##div.container > .row > .center_lnwphp
 !#endif
 !#if cap_html_filtering
 anime-masters.com##^center:nth-of-type(2)
+!#if adguard
 anime-masters.com$$center:nth-of-type(2)
+!#endif
 !#else
 anime-masters.com##center:nth-of-type(2)
 !#endif
 !#if cap_html_filtering
 anime-masters.com##^center:nth-of-type(4)
+!#if adguard
 anime-masters.com$$center:nth-of-type(4)
+!#endif
 !#else
 anime-masters.com##center:nth-of-type(4)
 !#endif
 !#if cap_html_filtering
 anime-masters.com##^.col-md-9 > span
+!#if adguard
 anime-masters.com$$.col-md-9 > span
+!#endif
 !#else
 anime-masters.com##.col-md-9 > span
 !#endif
@@ -2894,26 +3646,34 @@ anime-masters.com##.col-md-9 > span
 !animekimi.com
 !#if cap_html_filtering
 animekimi.com##^.module_home_x
+!#if adguard
 animekimi.com$$.module_home_x
+!#endif
 !#else
 animekimi.com##.module_home_x
 !#endif
 !anifume.com 20240121222714
 !#if cap_html_filtering
 anifume.com##^div[id^="display-"]
+!#if adguard
 anifume.com$$div[id^="display-"]
+!#endif
 !#else
 anifume.com##div[id^="display-"]
 !#endif
 !#if cap_html_filtering
 anifume.com##^div.F4uDjm45n
+!#if adguard
 anifume.com$$div.F4uDjm45n
+!#endif
 !#else
 anifume.com##div.F4uDjm45n
 !#endif
 !#if cap_html_filtering
 anifume.com##^div.topml
+!#if adguard
 anifume.com$$div.topml
+!#endif
 !#else
 anifume.com##div.topml
 !#endif
@@ -2926,7 +3686,9 @@ anime-suba.com##+js(nowoif)
 !!!invisible popup overlay video
 !#if cap_html_filtering
 anime-suba.com##^.overlay-0
+!#if adguard
 anime-suba.com$$.overlay-0
+!#endif
 !#else
 anime-suba.com##.overlay-0
 !#endif
@@ -2934,71 +3696,93 @@ anime-suba.com##+js(nano-sib, , *)
 !animehayai.net
 !#if cap_html_filtering
 animehayai.net##^.col-12
+!#if adguard
 animehayai.net$$.col-12
+!#endif
 !#else
 animehayai.net##.col-12
 !#endif
 !#if cap_html_filtering
 animehayai.net##^.ads-banner
+!#if adguard
 animehayai.net$$.ads-banner
+!#endif
 !#else
 animehayai.net##.ads-banner
 !#endif
 !#if cap_html_filtering
 animehayai.net##^.banner-close
+!#if adguard
 animehayai.net$$.banner-close
+!#endif
 !#else
 animehayai.net##.banner-close
 !#endif
 !#if cap_html_filtering
 animehayai.net##^div[class="text-center bottom-2x"]
+!#if adguard
 animehayai.net$$div[class="text-center bottom-2x"]
+!#endif
 !#else
 animehayai.net##div[class="text-center bottom-2x"]
 !#endif
 !anime-kimuchi.com
 !#if cap_html_filtering
 anime-kimuchi.com##^#scrollUp
+!#if adguard
 anime-kimuchi.com$$#scrollUp
+!#endif
 !#else
 anime-kimuchi.com###scrollUp
 !#endif
 !#if cap_html_filtering
 anime-kimuchi.com##^#slider-r
+!#if adguard
 anime-kimuchi.com$$#slider-r
+!#endif
 !#else
 anime-kimuchi.com###slider-r
 !#endif
 !neko-miku.com
 !#if cap_html_filtering
 neko-miku.com##^#footer > .container p
+!#if adguard
 neko-miku.com$$#footer > .container p
+!#endif
 !#else
 neko-miku.com###footer > .container p
 !#endif
 !fairyanime.net
 !#if cap_html_filtering
 fairyanime.net##^#kosana
+!#if adguard
 fairyanime.net$$#kosana
+!#endif
 !#else
 fairyanime.net###kosana
 !#endif
 !#if cap_html_filtering
 fairyanime.net##^#main-content > div.concise.animated.bounce:nth-child(5)
+!#if adguard
 fairyanime.net$$#main-content > div.concise.animated.bounce:nth-child(5)
+!#endif
 !#else
 fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
 !#endif
 !shibaanime.com
 !#if cap_html_filtering
 shibaanime.com##^a[rel$="sponsored"]
+!#if adguard
 shibaanime.com$$a[rel$="sponsored"]
+!#endif
 !#else
 shibaanime.com##a[rel$="sponsored"]
 !#endif
 !#if cap_html_filtering
 shibaanime.com##^div.hero.common-hero:nth-child(2)
+!#if adguard
 shibaanime.com$$div.hero.common-hero:nth-child(2)
+!#endif
 !#else
 shibaanime.com##div.hero.common-hero:nth-child(2)
 !#endif
@@ -3006,45 +3790,59 @@ shibaanime.com##div.hero.common-hero:nth-child(2)
 !animetako.net
 !#if cap_html_filtering
 animetako.net##^div[id^="animekimiads"]
+!#if adguard
 animetako.net$$div[id^="animekimiads"]
+!#endif
 !#else
 animetako.net##div[id^="animekimiads"]
 !#endif
 !https://www.kurokami.me
 !#if cap_html_filtering
 kurokami.me##^div[class="col-6 banner728x200-div"]
+!#if adguard
 kurokami.me$$div[class="col-6 banner728x200-div"]
+!#endif
 !#else
 kurokami.me##div[class="col-6 banner728x200-div"]
 !#endif
 !#if cap_html_filtering
 kurokami.me##^div[id^="ads_0"]
+!#if adguard
 kurokami.me$$div[id^="ads_0"]
+!#endif
 !#else
 kurokami.me##div[id^="ads_0"]
 !#endif
 !#if cap_html_filtering
 kurokami.me##^p
+!#if adguard
 kurokami.me$$p
+!#endif
 !#else
 kurokami.me##p
 !#endif
 !https://animelizm.com/
 !#if cap_html_filtering
 animelizm.com##^.dessert-frame
+!#if adguard
 animelizm.com$$.dessert-frame
+!#endif
 !#else
 animelizm.com##.dessert-frame
 !#endif
 !#if cap_html_filtering
 animelizm.com##^div.al-ads
+!#if adguard
 animelizm.com$$div.al-ads
+!#endif
 !#else
 animelizm.com##div.al-ads
 !#endif
 !#if cap_html_filtering
 animelizm.com##^section[id="custom_html-60"]
+!#if adguard
 animelizm.com$$section[id="custom_html-60"]
+!#endif
 !#else
 animelizm.com##section[id="custom_html-60"]
 !#endif
@@ -3052,21 +3850,27 @@ animelizm.com##section[id="custom_html-60"]
 https://blogger.googleusercontent.com/*.gif$image,domain=animeshiro.com
 !#if cap_html_filtering
 animeshiro.com##^div.banner-wrapper
+!#if adguard
 animeshiro.com$$div.banner-wrapper
+!#endif
 !#else
 animeshiro.com##div.banner-wrapper
 !#endif
 !anime-ox.com 20240130220905
 !#if cap_html_filtering
 anime-ox.com##^#contenedor > div[align="center"]
+!#if adguard
 anime-ox.com$$#contenedor > div[align="center"]
+!#endif
 !#else
 anime-ox.com###contenedor > div[align="center"]
 !#endif
 !anime-subthai.net 20240130221830
 !#if cap_html_filtering
 anime-subthai.net##^#main_content > div > div.b-ads
+!#if adguard
 anime-subthai.net$$#main_content > div > div.b-ads
+!#endif
 !#else
 anime-subthai.net###main_content > div > div.b-ads
 !#endif
@@ -3077,25 +3881,33 @@ anime-subthai.net###main_content > div > div.b-ads
 !novel-lucky.com
 !#if cap_html_filtering
 novel-lucky.com##^.advanced_floating_content 
+!#if adguard
 novel-lucky.com$$.advanced_floating_content 
+!#endif
 !#else
 novel-lucky.com##.advanced_floating_content 
 !#endif
 !#if cap_html_filtering
 novel-lucky.com##^.container-fluid
+!#if adguard
 novel-lucky.com$$.container-fluid
+!#endif
 !#else
 novel-lucky.com##.container-fluid
 !#endif
 !#if cap_html_filtering
 novel-lucky.com##^.c-sidebar
+!#if adguard
 novel-lucky.com$$.c-sidebar
+!#endif
 !#else
 novel-lucky.com##.c-sidebar
 !#endif
 !#if cap_html_filtering
 novel-lucky.com##^#bottom_center_ads_1
+!#if adguard
 novel-lucky.com$$#bottom_center_ads_1
+!#endif
 !#else
 novel-lucky.com###bottom_center_ads_1
 !#endif
@@ -3110,40 +3922,60 @@ novelpdf.xyz##+js(nowoif)
 !cat2auto.com
 !#if cap_html_filtering
 cat2auto.com##^div.widget_text
+!#if adguard
 cat2auto.com$$div.widget_text
+!#endif
 !#else
 cat2auto.com##div.widget_text
 !#endif
 !#if cap_html_filtering
 cat2auto.com##^div[id*="ads_"]
+!#if adguard
 cat2auto.com$$div[id*="ads_"]
+!#endif
 !#else
 cat2auto.com##div[id*="ads_"]
 !#endif
 !#if cap_html_filtering
 cat2auto.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#if adguard
 cat2auto.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
 !#else
 cat2auto.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
 !อ่านทั้งวัน.com
 !#if cap_html_filtering
 xn--72c5afc3e6a4acd3tpa.com##^div.section-sponser
+!#if adguard
 xn--72c5afc3e6a4acd3tpa.com$$div.section-sponser
+!#endif
 !#else
 xn--72c5afc3e6a4acd3tpa.com##div.section-sponser
 !#endif
 !นิยายฟรี.com
 !#if cap_html_filtering
 xn--q3cmiag1gmn.com##^div.header-ads-section
+!#if adguard
 xn--q3cmiag1gmn.com$$div.header-ads-section
+!#endif
 !#else
 xn--q3cmiag1gmn.com##div.header-ads-section
+!#endif
+!thaiboyslove.com
+!#if cap_html_filtering
+thaiboyslove.com##^td[align="center"] > a:upward(1)
+!#if adguard
+thaiboyslove.com$$td[align="center"] > a:upward(1)
+!#endif
+!#else
+thaiboyslove.com##td[align="center"] > a:upward(1)
 !#endif
 !
 !---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|subthai.tv|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com
+.webp$image,domain=uc2hd.com
 !
 /series-indy$image
 /928hd$image
@@ -3152,44 +3984,113 @@ xn--q3cmiag1gmn.com##div.header-ads-section
 ||nungdeedee.com/externallink*$all,domain=nungdeedee.com
 !#if cap_html_filtering
 nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
+!#if adguard
 nungdeedee.com$$a[href^="https://nungdeedee.com/externallink"]
+!#endif
 !#else
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 !#endif
-!24-hd.com
+!24-hd.com 20240131013449
 !#if cap_html_filtering
 24-hd.com##^.ad
+!#if adguard
 24-hd.com$$.ad
 !#endif
+!#endif
 24-hd.com##.ad
-!doonungsub.com
+!doonungsub.com 20240131013447
 !#if cap_html_filtering
 doonungsub.com##^.banner
+!#if adguard
 doonungsub.com$$.banner
+!#endif
 !#endif
 doonungsub.com##.banner
 !#if cap_html_filtering
 doonungsub.com##^.popup
+!#if adguard
 doonungsub.com$$.popup
 !#endif
+!#endif
 doonungsub.com##.popup
-!1112hd.com
+!1112hd.com 20240131013445
 !#if cap_html_filtering
 1112hd.com##^.tt_banner_above_vdo_player
+!#if adguard
 1112hd.com$$.tt_banner_above_vdo_player
+!#endif
 !#endif
 1112hd.com##.tt_banner_above_vdo_player
 !ดูหนังใหม่ชนโรง.com
+
 !dooseries.com
+
 !ดูหนัง.tv
 !#if cap_html_filtering
 ดูหนัง.tv##^.row
+!#if adguard
 ดูหนัง.tv$$.row
+!#endif
 !#endif
 ดูหนัง.tv##.row
 *$script,third-party,domain=xn--72czp5e5a8b.tv
 !serie-master.com
-||serie-master.com$popup
+
+!c2movie.com 20240131013442
+!#if cap_html_filtering
+c2movie.com##^.ad-box-widget
+!#if adguard
+c2movie.com$$.ad-box-widget
+!#endif
+!#endif
+c2movie.com##.ad-box-widget
+!
+!uc2hd.com 20240131013440
+!#if cap_html_filtering
+uc2hd.com##^div[class="row2"][align="center"][style="margin-top:1em;"]
+!#if adguard
+uc2hd.com$$div[class="row2"][align="center"][style="margin-top:1em;"]
+!#endif
+!#endif
+uc2hd.com##div[class="row2"][align="center"][style="margin-top:1em;"]
+!
+!movie2uhd.com 20240131013439
+!#if cap_html_filtering
+movie2uhd.com##^.adb
+!#if adguard
+movie2uhd.com$$.adb
+!#endif
+!#endif
+movie2uhd.com##.adb
+!newseries-hd.com 20240131015252
+!#if cap_html_filtering
+newseries-hd.com##^.adcen
+!#if adguard
+newseries-hd.com$$.adcen
+!#endif
+!#endif
+newseries-hd.com##.adcen
+!#if cap_html_filtering
+newseries-hd.com##^.admid
+!#if adguard
+newseries-hd.com$$.admid
+!#endif
+!#endif
+newseries-hd.com##.admid
+!#if cap_html_filtering
+newseries-hd.com##^.adcen
+!#if adguard
+newseries-hd.com$$.adcen
+!#endif
+!#endif
+newseries-hd.com##.adcen
+https://newseries-hd.com/wp-content/uploads/2021/01/A*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/D*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/b*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/c*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2023/09/banner-player-*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/E*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newseries-hd.com
 !
 ||movie-free.org/ads$popup
 ||bit.ly/hdmovie$popup
@@ -3693,6 +4594,7 @@ google.co.th#@##bottomads
 @@||gitea.angry.im^$generichide
 !--- anime mange novel legal
 @@||animeranku.com^$generichide
+@@||webtoons.com^$generichide
 !--- others ---
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
@@ -3754,6 +4656,9 @@ google.co.th#@##bottomads
 @@||www.ejan.co^$generichide
 @@||www.komchadluek.net^$generichide
 @@||petmaya.com^$generichide
+@@||marketingoops.com^$generichide
+@@||aseannow.com^$generichide
+@@||today.line.me^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -3816,6 +4721,7 @@ google.co.th#@##bottomads
 @@||www.it24hrs.com^$generichide
 @@||specphone.com^$generichide
 @@||itnews24hrs.com^$generichide
+@@||techtalkthai.com^$generichide
 !--- science news ---
 @@||www.mitrearth.org^$generichide
 !---multipurpose ---
@@ -3912,6 +4818,14 @@ google.co.th#@##bottomads
 !
 @@||allinone-th.blogspot.com^$generichide
 @@||allinone-th-view.blogspot.com^$generichide
+!---Novel ---
+@@||novel-lucky.com^$generichide
+@@||aileen-novel.online^$generichide
+@@||novelpdf.xyz^$generichide
+@@||cat2auto.com^$generichide
+@@||xn--72c5afc3e6a4acd3tpa.com^$generichide
+@@||xn--q3cmiag1gmn.com^$generichide
+@@||thaiboyslove.com^$generichide
 !--- movie illegitimate ---
 @@||movie007hd.com^$generichide
 @@||037hdmovie.com^$generichide
@@ -3937,6 +4851,7 @@ google.co.th#@##bottomads
 @@||seriethai.co^$generichide
 @@||ดูหนังใหม่ชนโรง.com^$generichide
 @@||serie-master.com^$generichide
+@@||newseries-hd.com^$generichide
 !--- Torrent
 @@||dedbit.com^$generichide
 !--- Others
@@ -3950,7 +4865,9 @@ google.co.th#@##bottomads
 !----------------------------------------START
 !----------------------------------------START
 !nekopost.net load picture AdGuard Extension
+!#if adguard
 @@||osemocphoto.com^$stealth
+!#endif
 !----------------Unbreak-----------------END
 !----------------------------------------END
 !----------------------------------------END
@@ -3959,417 +4876,579 @@ google.co.th#@##bottomads
 !----------------------------------------START
 !#if cap_html_filtering
 phoenixnext.com##^div[class="cwc-sdk-container"]
+!#if adguard
 phoenixnext.com$$div[class="cwc-sdk-container"]
+!#endif
 !#endif
 phoenixnext.com##div[class="cwc-sdk-container"]
 !#if cap_html_filtering
 wongnai.com##^#cc_div
+!#if adguard
 wongnai.com$$#cc_div
+!#endif
 !#endif
 wongnai.com###cc_div
 !#if cap_html_filtering
 mahidol.ac.th##^#cc_div
+!#if adguard
 mahidol.ac.th$$#cc_div
+!#endif
 !#endif
 mahidol.ac.th###cc_div
 !#if cap_html_filtering
 apkmirror.com##^#bottom-slider
+!#if adguard
 apkmirror.com$$#bottom-slider
+!#endif
 !#endif
 apkmirror.com###bottom-slider
 !#if cap_html_filtering
 riotgames.com##^.dialog
+!#if adguard
 riotgames.com$$.dialog
+!#endif
 !#endif
 riotgames.com##.dialog
 !theguardian.com
 !#if cap_html_filtering
 theguardian.com##^div[id="sp_message_container_752142"]
+!#if adguard
 theguardian.com$$div[id="sp_message_container_752142"]
+!#endif
 !#endif
 theguardian.com##div[id="sp_message_container_752142"]
 !#if cap_html_filtering
 theguardian.com##^div[class="dcr-8xye2h"]
+!#if adguard
 theguardian.com$$div[class="dcr-8xye2h"]
+!#endif
 !#endif
 theguardian.com##div[class="dcr-8xye2h"]
 !economist.com
 !#if cap_html_filtering
 economist.com##^div[class="message-container teg-container"]
+!#if adguard
 economist.com$$div[class="message-container teg-container"]
+!#endif
 !#endif
 economist.com##div[class="message-container teg-container"]
 ||consent.economist.com$domain=economist.com
 !
 !#if cap_html_filtering
 ondemand.in.th##^.cwc-sdk-container
+!#if adguard
 ondemand.in.th$$.cwc-sdk-container
+!#endif
 !#endif
 ondemand.in.th##.cwc-sdk-container
 !#if cap_html_filtering
 tcaster.net##^.cwc-sdk-container
+!#if adguard
 tcaster.net$$.cwc-sdk-container
+!#endif
 !#endif
 tcaster.net##.cwc-sdk-container
 !#if cap_html_filtering
 425degree.com##^.amgdprcookie-bar-template
+!#if adguard
 425degree.com$$.amgdprcookie-bar-template
+!#endif
 !#endif
 425degree.com##.amgdprcookie-bar-template
 !#if cap_html_filtering
 samsung.com##^.cookie-bar
+!#if adguard
 samsung.com$$.cookie-bar
+!#endif
 !#endif
 samsung.com##.cookie-bar
 !#if cap_html_filtering
 droidsans.com##^div[class="dpdpa--popup active"]
+!#if adguard
 droidsans.com$$div[class="dpdpa--popup active"]
+!#endif
 !#endif
 droidsans.com##div[class="dpdpa--popup active"]
 !#if cap_html_filtering
 thaimobilecenter.com##^#cookiePopup
+!#if adguard
 thaimobilecenter.com$$#cookiePopup
+!#endif
 !#endif
 thaimobilecenter.com###cookiePopup
 !#if cap_html_filtering
 matichon.co.th##^.matichon-pdpa-wrapper
+!#if adguard
 matichon.co.th$$.matichon-pdpa-wrapper
+!#endif
 !#endif
 matichon.co.th##.matichon-pdpa-wrapper
 !#if cap_html_filtering
 thairath.co.th##^.cookiewrap
+!#if adguard
 thairath.co.th$$.cookiewrap
+!#endif
 !#endif
 thairath.co.th##.cookiewrap
 !thairath.co.th/money
 !#if cap_html_filtering
 thairath.co.th##^.__money_cookies
+!#if adguard
 thairath.co.th$$.__money_cookies
+!#endif
 !#endif
 thairath.co.th##.__money_cookies
 !
 !#if cap_html_filtering
 plus.thairath.co.th##^.__TRPlus_Policy_Box
+!#if adguard
 plus.thairath.co.th$$.__TRPlus_Policy_Box
+!#endif
 !#endif
 plus.thairath.co.th##.__TRPlus_Policy_Box
 !#if cap_html_filtering
 brighttv.co.th##^.dpdpa--popup
+!#if adguard
 brighttv.co.th$$.dpdpa--popup
+!#endif
 !#endif
 brighttv.co.th##.dpdpa--popup
 !#if cap_html_filtering
 sanook.com##^.ConsentBanner
+!#if adguard
 sanook.com$$.ConsentBanner
+!#endif
 !#endif
 sanook.com##.ConsentBanner
 !#if cap_html_filtering
 ch3plus.com##^#cookie_policy
+!#if adguard
 ch3plus.com$$#cookie_policy
+!#endif
 !#endif
 ch3plus.com###cookie_policy
 !#if cap_html_filtering
 ch7.com##^.cookies-settings-pop
+!#if adguard
 ch7.com$$.cookies-settings-pop
+!#endif
 !#endif
 ch7.com##.cookies-settings-pop
 !#if cap_html_filtering
 toyota.co.th##^.popup__pdpa
+!#if adguard
 toyota.co.th$$.popup__pdpa
+!#endif
 !#endif
 toyota.co.th##.popup__pdpa
 !#if cap_html_filtering
 similarweb.com##^.cookies-notification
+!#if adguard
 similarweb.com$$.cookies-notification
+!#endif
 !#endif
 similarweb.com##.cookies-notification
 !#if cap_html_filtering
 joox.com##^.pdpa
+!#if adguard
 joox.com$$.pdpa
+!#endif
 !#endif
 joox.com##.pdpa
 !#if cap_html_filtering
 longdo.com##^#pdpa-longdocom-div
+!#if adguard
 longdo.com$$#pdpa-longdocom-div
+!#endif
 !#endif
 longdo.com###pdpa-longdocom-div
 !#if cap_html_filtering
 oxfordlearnersdictionaries.com##^#onetrust-consent-sdk
+!#if adguard
 oxfordlearnersdictionaries.com$$#onetrust-consent-sdk
+!#endif
 !#endif
 oxfordlearnersdictionaries.com###onetrust-consent-sdk
 !#if cap_html_filtering
 collinsdictionary.com##^#onetrust-consent-sdk
+!#if adguard
 collinsdictionary.com$$#onetrust-consent-sdk
+!#endif
 !#endif
 collinsdictionary.com###onetrust-consent-sdk
 !#if cap_html_filtering
 macmillandictionary.com,macmillanthesaurus.com##^#onetrust-consent-sdk
+!#if adguard
 macmillandictionary.com,macmillanthesaurus.com$$#onetrust-consent-sdk
+!#endif
 !#endif
 macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk
 !#if cap_html_filtering
 thansettakij.com##^.ot-sdk-container
+!#if adguard
 thansettakij.com$$.ot-sdk-container
+!#endif
 !#endif
 thansettakij.com##.ot-sdk-container
 !#if cap_html_filtering
 g2.com##^div[role="dialog"]
+!#if adguard
 g2.com$$div[role="dialog"]
+!#endif
 !#endif
 g2.com##div[role="dialog"]
 !#if cap_html_filtering
 mediafire.com##^#cookie-accept-footer
+!#if adguard
 mediafire.com$$#cookie-accept-footer
+!#endif
 !#endif
 mediafire.com###cookie-accept-footer
 !#if cap_html_filtering
 www.techmoblog.com##^#cookiePopup
+!#if adguard
 www.techmoblog.com$$#cookiePopup
+!#endif
 !#endif
 www.techmoblog.com###cookiePopup
 !#if cap_html_filtering
 pantip.com##^.pt-snackbar
+!#if adguard
 pantip.com$$.pt-snackbar
+!#endif
 !#endif
 pantip.com##.pt-snackbar
 pantip.com#@#.pt-snackbar__surface
 !#if cap_html_filtering
 thisisgamethailand.com##^#true
+!#if adguard
 thisisgamethailand.com$$#true
+!#endif
 !#endif
 thisisgamethailand.com###true
 !#if cap_html_filtering
 stackoverflow.com##^.js-consent-banner
+!#if adguard
 stackoverflow.com$$.js-consent-banner
+!#endif
 !#endif
 stackoverflow.com##.js-consent-banner
 !#if cap_html_filtering
 goshujin.tk##^#banner
+!#if adguard
 goshujin.tk$$#banner
+!#endif
 !#endif
 goshujin.tk###banner
 !#if cap_html_filtering
 blender.stackexchange.com##^.js-consent-banner
+!#if adguard
 blender.stackexchange.com$$.js-consent-banner
+!#endif
 !#endif
 blender.stackexchange.com##.js-consent-banner
 !#if cap_html_filtering
 geeksforgeeks.org##^.cookie-consent:not(body):not(html)
+!#if adguard
 geeksforgeeks.org$$.cookie-consent:not(body):not(html)
+!#endif
 !#endif
 geeksforgeeks.org##.cookie-consent:not(body):not(html)
 !#if cap_html_filtering
 apkdone.com##^#acceptCookie
+!#if adguard
 apkdone.com$$#acceptCookie
+!#endif
 !#endif
 apkdone.com###acceptCookie
 !#if cap_html_filtering
 apkdone.com##^#cookie-law-info-bar
+!#if adguard
 apkdone.com$$#cookie-law-info-bar
+!#endif
 !#endif
 apkdone.com###cookie-law-info-bar
 !#if cap_html_filtering
 true.th##^#floater-bnr-box
+!#if adguard
 true.th$$#floater-bnr-box
+!#endif
 !#endif
 true.th###floater-bnr-box
 !#if cap_html_filtering
 pptvhd36.com##^.consent-popup
+!#if adguard
 pptvhd36.com$$.consent-popup
+!#endif
 !#endif
 pptvhd36.com##.consent-popup
 !#if cap_html_filtering
 khaosod.co.th##^#pdpa-wrapper
+!#if adguard
 khaosod.co.th$$#pdpa-wrapper
+!#endif
 !#endif
 khaosod.co.th###pdpa-wrapper
 !#if cap_html_filtering
 brother.co.th##^#CookieAcceptionArea
+!#if adguard
 brother.co.th$$#CookieAcceptionArea
+!#endif
 !#endif
 brother.co.th###CookieAcceptionArea
 !thestandard.co
 !#if cap_html_filtering
 election2566.thestandard.co##^.ant-drawer-bottom
+!#if adguard
 election2566.thestandard.co$$.ant-drawer-bottom
+!#endif
 !#endif
 election2566.thestandard.co##.ant-drawer-bottom
 !#if cap_html_filtering
 thestandard.co##^.cwc-sdk-container
+!#if adguard
 thestandard.co$$.cwc-sdk-container
+!#endif
 !#endif
 thestandard.co##.cwc-sdk-container
 !
 !#if cap_html_filtering
 thematter.co##^#cookie-law-info-bar:not(body):not(html):not(article)
+!#if adguard
 thematter.co$$#cookie-law-info-bar:not(body):not(html):not(article)
+!#endif
 !#endif
 thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
 !#if cap_html_filtering
 voicetv.co.th##^#cookie-notification
+!#if adguard
 voicetv.co.th$$#cookie-notification
+!#endif
 !#endif
 voicetv.co.th###cookie-notification
 !#if cap_html_filtering
 workpointtoday.com##^div[class^="dpdpa--popup"]
+!#if adguard
 workpointtoday.com$$div[class^="dpdpa--popup"]
+!#endif
 !#endif
 workpointtoday.com##div[class^="dpdpa--popup"]
 !#if cap_html_filtering
 notebookspec.com##^.dpdpa--popup 
+!#if adguard
 notebookspec.com$$.dpdpa--popup 
+!#endif
 !#endif
 notebookspec.com##.dpdpa--popup 
 !#if cap_html_filtering
 mangozero.com##^.dpdpa--popup
+!#if adguard
 mangozero.com$$.dpdpa--popup
+!#endif
 !#endif
 mangozero.com##.dpdpa--popup
 !#if cap_html_filtering
 techcommunity.microsoft.com##^#cookie-banner
+!#if adguard
 techcommunity.microsoft.com$$#cookie-banner
+!#endif
 !#endif
 techcommunity.microsoft.com###cookie-banner
 !#if cap_html_filtering
 mustplay.in.th##^.cookiealert
+!#if adguard
 mustplay.in.th$$.cookiealert
+!#endif
 !#endif
 mustplay.in.th##.cookiealert
 !#if cap_html_filtering
 pharmacy.mahidol.ac.th##^#endzoommain
+!#if adguard
 pharmacy.mahidol.ac.th$$#endzoommain
+!#endif
 !#endif
 pharmacy.mahidol.ac.th###endzoommain
 !#if cap_html_filtering
 siphhospital.com##^#cookit
+!#if adguard
 siphhospital.com$$#cookit
+!#endif
 !#endif
 siphhospital.com###cookit
 !#if cap_html_filtering
 advice.co.th##^.foot-cookie
+!#if adguard
 advice.co.th$$.foot-cookie
+!#endif
 !#endif
 advice.co.th##.foot-cookie
 !#if cap_html_filtering
 ihavecpu.com##^#cookie-banner
+!#if adguard
 ihavecpu.com$$#cookie-banner
+!#endif
 !#endif
 ihavecpu.com###cookie-banner
 !#if cap_html_filtering
 thaiware.com##^div#pdpa_setting
+!#if adguard
 thaiware.com$$div#pdpa_setting
+!#endif
 !#endif
 thaiware.com##div#pdpa_setting
 patreon.com##body:style(overflow: auto !important;)
 !#if cap_html_filtering
 mercular.com##^div[class="MuiBox-root css-1gw67gw"]
+!#if adguard
 mercular.com$$div[class="MuiBox-root css-1gw67gw"]
+!#endif
 !#endif
 mercular.com##div[class="MuiBox-root css-1gw67gw"]
 !#if cap_html_filtering
 wordpress.com##^.ads-active.hide-on-button
+!#if adguard
 wordpress.com$$.ads-active.hide-on-button
+!#endif
 !#endif
 wordpress.com##.ads-active.hide-on-button
 !#if cap_html_filtering
 panyasociety.com##^#consentTrackAndCookieBar
+!#if adguard
 panyasociety.com$$#consentTrackAndCookieBar
+!#endif
 !#endif
 panyasociety.com###consentTrackAndCookieBar
 !#if cap_html_filtering
 mycourseville.com##^#cvcookie-notice
+!#if adguard
 mycourseville.com$$#cvcookie-notice
+!#endif
 !#endif
 mycourseville.com###cvcookie-notice
 !#if cap_html_filtering
 goodnotes.com##^.fscc
+!#if adguard
 goodnotes.com$$.fscc
+!#endif
 !#endif
 goodnotes.com##.fscc
 !#if cap_html_filtering
 askubuntu.com##^div.js-consent-banner
+!#if adguard
 askubuntu.com$$div.js-consent-banner
+!#endif
 !#endif
 askubuntu.com##div.js-consent-banner
 !#if cap_html_filtering
 sf-international.com##^.cookie-terms
+!#if adguard
 sf-international.com$$.cookie-terms
+!#endif
 !#endif
 sf-international.com##.cookie-terms
 !#if cap_html_filtering
 sony-asia.com##^#__tealiumGDPRecModal
+!#if adguard
 sony-asia.com$$#__tealiumGDPRecModal
+!#endif
 !#endif
 sony-asia.com###__tealiumGDPRecModal
 !#if cap_html_filtering
 playulti.com##^.cookiealert
+!#if adguard
 playulti.com$$.cookiealert
+!#endif
 !#endif
 playulti.com##.cookiealert
 !#if cap_html_filtering
 xbox.com##^div#cookie-banner
+!#if adguard
 xbox.com$$div#cookie-banner
+!#endif
 !#endif
 xbox.com##div#cookie-banner
 !#if cap_html_filtering
 mega.io##^div.cookie-banner
+!#if adguard
 mega.io$$div.cookie-banner
+!#endif
 !#endif
 mega.io##div.cookie-banner
 !#if cap_html_filtering
 ctrlg.gg##^div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+!#if adguard
 ctrlg.gg$$div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+!#endif
 !#endif
 ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
 !#if cap_html_filtering
 scrintal.com##^div.c-elDcAj
+!#if adguard
 scrintal.com$$div.c-elDcAj
+!#endif
 !#endif
 scrintal.com##div.c-elDcAj
 !#if cap_html_filtering
 sec.or.th##^#bodyCookie
+!#if adguard
 sec.or.th$$#bodyCookie
+!#endif
 !#endif
 sec.or.th###bodyCookie
 !#if cap_html_filtering
 sec.or.th##^#overlay
+!#if adguard
 sec.or.th$$#overlay
+!#endif
 !#endif
 sec.or.th###overlay
 !#if cap_html_filtering
 ejan.co##^#glowCookies-banner
+!#if adguard
 ejan.co$$#glowCookies-banner
+!#endif
 !#endif
 ejan.co###glowCookies-banner
 !#if cap_html_filtering
 snp1344.com##^.cookie-consent
+!#if adguard
 snp1344.com$$.cookie-consent
+!#endif
 !#endif
 snp1344.com##.cookie-consent
 !#if cap_html_filtering
 biobeamcenter.com##^.cwc-sdk-container
+!#if adguard
 biobeamcenter.com$$.cwc-sdk-container
+!#endif
 !#endif
 biobeamcenter.com##.cwc-sdk-container
 !#if cap_html_filtering
 urlscan.io##^.grecaptcha-badge
+!#if adguard
 urlscan.io$$.grecaptcha-badge
+!#endif
 !#endif
 urlscan.io##.grecaptcha-badge
 !#if cap_html_filtering
 theptarin.com##^.cwc-cookie-banner-ui-sdk
+!#if adguard
 theptarin.com$$.cwc-cookie-banner-ui-sdk
+!#endif
 !#endif
 theptarin.com##.cwc-cookie-banner-ui-sdk
 !#if cap_html_filtering
 smilearm.com##^.policy-position
+!#if adguard
 smilearm.com$$.policy-position
+!#endif
 !#endif
 smilearm.com##.policy-position
 !#if cap_html_filtering
 mthai.com##^div.pdpa_cookies
+!#if adguard
 mthai.com$$div.pdpa_cookies
+!#endif
 !#endif
 mthai.com##div.pdpa_cookies
 !
@@ -4401,6 +5480,8 @@ mthai.com##div.pdpa_cookies
 /designil-pdpa$script,image,xhr
 !!พบได้ เช่น online-station.net เป็นส่วนหนึ่งของ /wp-content
 /cookie-law-info$script,image,xhr
+!!พบได้ เช่น marketingoops.com
+/cookie-notice$script,css
 !
 !
 !
