@@ -58,8 +58,6 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 > ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
-> Filter list นี้เป็นส่วนหนึ่งของ Iz's Addon Filter Full ที่บล็อกได้ครอบคลุมและอัพเดตบ่อยกว่า แต่อันนั้นไม่ได้เปิดเป็นสาธารณะเพราะมันมีข้อผิดพลาดเยอะมาก
-
 ## วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
 
 - AdGuard extension
