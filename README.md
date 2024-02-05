@@ -6,7 +6,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 - การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
 - จุดประสงค์ของ filter list นี้ คือ
-  - แทนที่ EasyList Thailand ได้ 100% และจะครอบคลุมกว่า
+  - ใช้แทนที่ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ได้ 100% และ filter นี้ครอบคลุมกว่ามาก
   - บล็อกโฆษณาทุกชนิด [^3][^6][^4]
     - script โฆษณา
     - โฆษณาประจำเว็บ (specific) (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
@@ -20,6 +20,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - popunder advertisement
     - notification advertisement
     - anti-adblock [^4]
+    - โฆษณาประเภท frame
   - บล็อกสื่งต่างๆ ที่น่ารำคาญ หรือดึงดูดความสนใจ [^3][^6]
     - paywall ที่ไม่สมเหตุสมผล [^4]
     - cookie consent
@@ -33,6 +34,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - network request parameter ที่ไม่จำเป็น
     - script หรือ element ไม่จำเป็น (ไม่รวม back to top button)
   - บล็อกเว็บอันตราย เช่น spam ใน Facebook(เมื่อกดคลิกลิงก์ไปจะมีข้อความเตือน), ลิงก์ Phishing [^6]
+    - เว็บอันตรายประเภท frame ที่แฝงภายในเว็บ
   - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter [^6]
   - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
   - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
