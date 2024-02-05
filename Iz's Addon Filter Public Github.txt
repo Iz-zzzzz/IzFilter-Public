@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240131143004
+! Version: 20240205134116
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -127,6 +127,9 @@
 ||lv5vip.com^$all
 ||iba888.com^$all
 ||kng.wtf^$all
+||rv-th.com^$all
+||es-th.com^$all
+||so-th.com^$all
 !Try to download PUA from Bitdefender
 ||virus-removal-guide.net^$all
 !Spam in Facebook.com from self gathering CONFIRM 
@@ -203,42 +206,40 @@ https://*casino*.*/$all
 /sexygame*.gif$image
 /sexygame*.webp$image
 !/hydra888
-/*hydra*.gif$image
-/*Hydra*.gif$image
-/*Hydra*.webp$image
+/hydra8$image
 !/brazil999
-/*brazil*.gif$image
-/*brazil*.webp$image
+/*brazil9*.gif$image
+/*brazil9*.webp$image
 !/lockdown168
-/lockdown*.gif$image
+/lockdown1*.gif$image
 !/london168
-/*london*.gif$image
-/*london*.webp$image
+/*london1*.gif$image
+/*london1*.webp$image
 /ld168.gif$image
 !/ufa และ /ufazeed
 !/ufanance*.gif ซ้ำ
 !/kingdom66
-/*kingdom*.gif$image
-/*kingdom*.webp$image
+/*kingdom6*.gif$image
+/*kingdom6*.webp$image
 !/ufazeed ซ้ำ
 !/ufa ซ้ำ
 !/lotto4321
-/*lotto*.gif$image
-/*lotto*.webp$image
+/*lotto4*.gif$image
+/*lotto4*.webp$image
 !/hotgraph88
-/*hotgraph*.gif$image
-/*hotgraph*.webp$image
+/*hotgraph8*.gif$image
+/*hotgraph8*.webp$image
 !/mahagame88
 /*mahagame*.gif$image
 /*mahagame*.webp$image
 !/ssgame666
-/*ssgam*.gif$image
+/*ssgame*.gif$image
 /ssgame*.webp$image
 !/vip168sa
 /*vip168*.gif$image
 /*vip168*.webp$image
 !/sagame350v3
-/*sagam*.gif$image
+/*sagame*.gif$image
 !/8xbetv2
 /8xbet*.gif$image
 !/huc99728x90
@@ -247,15 +248,12 @@ https://*casino*.*/$all
 /luca99*.gif$image
 !/baccarat99th
 /baccarat*.gif$image
-!/slot1234 และ slotnexobet
-/*slot*.gif$image
-/*slot*.webp$image
 !/newyork888 และ !/newyork168.gif
 /*newyork*.gif$image
 /*newyork*.webp$image
 !/bufac4 /Bufazeed
-/*ufa*.gif$image
-/*ufa*.webp$image
+/bufa*.gif$image
+/bufa*.webp$image
 !/ss666
 /*ss666*.gif$image
 !/betflixcasino /betflixslot /betflix2k
@@ -287,6 +285,12 @@ https://*casino*.*/$all
 /Sagame*.webp$image
 /*GCLUB*.jpg$image
 /fhm*.gif$image
+/slot1234$image
+/slotnexobet$image
+-ufafat.gif$image
+-ufazeed.gif$image
+/lalika168.gif$image
+/UFAC4$image
 !
 /999bet$image
 /qq101$image
@@ -531,8 +535,6 @@ https://scrt888.com^$all
 https://www.millenniumvillages.org^$all
 https://www.hapilabs.com^$all
 https://e15initiative.org^$all
-https://e15initiative.org^$all
-https://e15initiative.org^$all
 https://ohiovaxamillion.com^$all
 https://pg888t.com^$all
 https://lcbet88.com^$all
@@ -543,12 +545,10 @@ https://pgs88asia.com^$all
 https://pg999st.com^$all
 https://lcbet24hr.com^$all
 https://whanmhoo569.com^$all
-https://e15initiative.org^$all
 https://gclub321.com^$all
 https://www.siriusretail.com^$all
 https://paragon-usa.com^$all
 https://nashvillelgbtchamber.org^$all
-https://hydra888z.com^$all
 https://www.phelpsgov.org^$all
 https://lionth.com^$all
 https://sexycasino.co^$all
@@ -562,6 +562,14 @@ https://www.boss45.co^$all
 https://play3.huaylike.online^$all
 https://lionth.co^$all
 https://www.sexycasino.site^$all
+https://lalikabet168.co^$all
+https://ufac4z.com^$all
+https://www.longtablebangkok.com^$all
+https://www.cheneyforwyoming.com^$all
+https://ufa222.live^$all
+https://bit.ly/3Qr5Ifd^$all
+https://www.tcsoinfo.com^$all
+https://brazil999.plus^$all
 
 !---------- fake game ----------!
 !*เกมเถื่อน
@@ -639,6 +647,10 @@ https://wowrapidly.com^$all
 ||adsmediabox.com^$all
 !พบใน เช่น compgamer.com
 ||to0s.biz^$all
+!จาก playermeow.com uBlock Ads, EasyList block ไม่ครบทุกประเภท เช่นใน anime-sugoi.com
+||aitsatho.com^$all
+!จาก playermeow.com เช่นใน anime-sugoi.com
+https://cdn.apicdn*.one^$xhr
 !
 ||exness.com^$all,domain=~exness.com
 !from siamblockchain.com
@@ -1726,6 +1738,22 @@ obsproject.com##.notice--cookie:not(body):not(html)
 !
 
 !---Manga Foreign---
+!#if cap_html_filtering
+mangakakalot.tv##^div[style="float: left;width: 100%;text-align: center;"]
+!#if adguard
+mangakakalot.tv$$div[style="float: left;width: 100%;text-align: center;"]
+!#endif
+!#endif
+mangakakalot.tv##div[style="float: left;width: 100%;text-align: center;"]
+!#if cap_html_filtering
+mangakakalot.tv##^div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
+!#if adguard
+mangakakalot.tv$$div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
+!#endif
+!#endif
+mangakakalot.tv##div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
+
+!---Novel Foreign---
 !www.novelupdates.com
 !#if cap_html_filtering
 www.novelupdates.com##^.ad_336
@@ -2953,7 +2981,7 @@ animeranku.com##ins.adsbygoogle
 !
 !---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com
+.gif$image,domain=mangauptocats.net|rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.com|manga168.com|cats-translator.com|reapertrans.com
 .mp4$media,domain=manga-sugoi.com
 .webp$image,domain=mangauptocats.net|mangauptocats.com
 !manga168.com
@@ -3559,6 +3587,23 @@ cats-translator.com$$div[class="c-sidebar c-top-sidebar wp-manga"]
 !#else
 cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
+!reapertrans.com 20240202223023
+!#if cap_html_filtering
+reapertrans.com##^div.sort-ban.text-center
+!#if adguard
+reapertrans.com$$div.sort-ban.text-center
+!#endif
+!#else
+reapertrans.com##div.sort-ban.text-center
+!#endif
+!#if cap_html_filtering
+reapertrans.com##^div.ads-info
+!#if adguard
+reapertrans.com$$div.ads-info
+!#endif
+!#else
+reapertrans.com##div.ads-info
+!#endif
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
@@ -3609,6 +3654,7 @@ anime-sugoi.com$$#bt-ads
 anime-sugoi.com###bt-ads
 !#endif
 ||anime-sugoi.com/pic/$image,domain=anime-sugoi.com
+wss://$domain=anime-sugoi.com
 !anime-masters.com
 !#if cap_html_filtering
 anime-masters.com##^div.container > .row > .center_lnwphp
@@ -4562,6 +4608,10 @@ google.co.th#@##bottomads
 !---Manga Foreign illegitimate ---
 @@||mangadex.org^$generichide
 @@||manhwazmove.com^$generichide
+@@||mangakakalot.com^$generichide
+@@||manganato.com^$generichide
+@@||manganelo.tv^$generichide
+@@||manganelo.com^$generichide
 !---novel ---
 @@||www.novelupdates.com^$generichide
 !---novel illegitimate ---
@@ -4572,11 +4622,7 @@ google.co.th#@##bottomads
 @@||xn--72c5afc3e6a4acd3tpa.com^$generichide
 @@||xn--q3cmiag1gmn.com^$generichide
 !---movie illegitimate ---
-@@||i-moviehd.com^$generichide
-@@||037hdmovie.com^$generichide
-@@||1112hd.com^$generichide
-@@||doonungonline.com^$generichide
-@@||www.xn--72czp5e5a8b.tv^$generichide
+
 !---movie legitimate ---
 @@||netflix.com^$generichide
 @@||disneyplus.com^$generichide
@@ -4703,6 +4749,7 @@ google.co.th#@##bottomads
 !---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 @@||www.nekopost.net^$generichide
 @@||kuro.nekopost.net^$generichide
+@@||mynovel.com^$generichide
 !---tech news ---
 @@||siamphone.com^$generichide
 @@||techmoblog.com^$generichide
@@ -4785,7 +4832,7 @@ google.co.th#@##bottomads
 @@||manga-lc.net^$generichide
 @@||www.mangakimi.com^$generichide
 @@||mangastep.com^$generichide
-@@||mynovel.com^$generichide
+@@||reapertrans.com^$generichide
 !---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4852,6 +4899,8 @@ google.co.th#@##bottomads
 @@||ดูหนังใหม่ชนโรง.com^$generichide
 @@||serie-master.com^$generichide
 @@||newseries-hd.com^$generichide
+@@||1112hd.com^$generichide
+@@||www.xn--72czp5e5a8b.tv^$generichide
 !--- Torrent
 @@||dedbit.com^$generichide
 !--- Others
