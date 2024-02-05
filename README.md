@@ -41,7 +41,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
 
 > [!IMPORTANT]
-> Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ filter
+> Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ filter ดังนี้
 > - AdGuard Filter
 > - AdGuard – Cookie Notices
 > - AdGuard Tracking Protection
@@ -54,7 +54,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 > เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
 
 > [!IMPORTANT]
->  ไม่ควรใส่ EasyList Thailand เพราะ EasyList Thailand ไม่ได้มีการ maintenance มากนัก และ filter list นี้ครอบคลุมกว่ามาก
+>  ไม่ควรใช้ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) เพราะ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ไม่ได้มีการ maintenance มากนัก ทำให้ filter ส่วนใหญ่ใช้ไม่ได้แล้ว และ filter list นี้ครอบคลุมกว่ามาก
 
 > ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
