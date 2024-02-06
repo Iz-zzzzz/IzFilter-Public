@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240205134116
+! Version: 20240206130127
 ! Expires: 7 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -130,6 +130,7 @@
 ||rv-th.com^$all
 ||es-th.com^$all
 ||so-th.com^$all
+||www.pea.do-th.com^$all
 !Try to download PUA from Bitdefender
 ||virus-removal-guide.net^$all
 !Spam in Facebook.com from self gathering CONFIRM 
@@ -2694,7 +2695,7 @@ it24hrs.com$$.adrotate_widgets
 !#endif
 it24hrs.com##.adrotate_widgets
 ||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
-!iphonemod.net
+!iphonemod.net 20240205142713
 !#if cap_html_filtering
 iphonemod.net##^center
 !#if adguard
@@ -2709,6 +2710,27 @@ iphonemod.net$$#quads-ad4
 !#endif
 !#endif
 iphonemod.net###quads-ad4
+!#if cap_html_filtering
+iphonemod.net##^#text-2
+!#if adguard
+iphonemod.net$$#text-2
+!#endif
+!#endif
+iphonemod.net###text-2
+!#if cap_html_filtering
+iphonemod.net##^#text-11
+!#if adguard
+iphonemod.net$$#text-11
+!#endif
+!#endif
+iphonemod.net###text-11
+!#if cap_html_filtering
+iphonemod.net##^.g1-advertisement
+!#if adguard
+iphonemod.net$$.g1-advertisement
+!#endif
+!#endif
+iphonemod.net##.g1-advertisement
 !specphone.com
 !#if cap_html_filtering
 specphone.com##^div#custom_html-2
@@ -2936,6 +2958,18 @@ trueid.net$$div[class^="style__AdsStyle-sc-"]
 !#endif
 !#endif
 trueid.net##div[class^="style__AdsStyle-sc-"]
+!
+!---shopping online sale---
+!
+!mercular.com
+!#if cap_html_filtering
+mercular.com##^div.ads-wrapper
+!#if adguard
+mercular.com$$div.ads-wrapper
+!#endif
+!#endif
+mercular.com##div.ads-wrapper
+
 !
 !---tech illegitimate ---
 !
@@ -4372,13 +4406,8 @@ google.co.th#@##bottomads
 !---shopping online sale---
 @@||shopee.co.th^$ehide
 @@||lazada.co.th^$generichide
-@@||425degree.com^$generichide
-@@||mercular.com^$generichide
-@@||bnn.in.th^$generichide
-@@||advice.co.th^$generichide
 @@||stacksocial.com^$generichide
 @@||amazon.com^$generichide
-@@||remobie.com^$generichide
 !---dns ---
 @@||adguard-dns.io^$ehide
 @@||nextdns.io^$ehide
@@ -4784,6 +4813,13 @@ google.co.th#@##bottomads
 @@||ihavecpu.com^$generichide
 !--- thai government ---
 @@||www.thaigov.go.th^$generichide
+!---shopping online sale---
+@@||425degree.com^$generichide
+@@||mercular.com^$generichide
+@@||bnn.in.th^$generichide
+@@||advice.co.th^$generichide
+@@||remobie.com^$generichide
+@@||munkongonline.com^$generichide
 !---manga thai illegitimate ---
 @@||mangauptocats.com^$generichide
 @@||niceoppai.net^$generichide
@@ -5347,12 +5383,12 @@ thaiware.com$$div#pdpa_setting
 thaiware.com##div#pdpa_setting
 patreon.com##body:style(overflow: auto !important;)
 !#if cap_html_filtering
-mercular.com##^div[class="MuiBox-root css-1gw67gw"]
+mercular.com##^#__next > div:nth-child(8)
 !#if adguard
-mercular.com$$div[class="MuiBox-root css-1gw67gw"]
+mercular.com$$#__next > div:nth-child(8)
 !#endif
 !#endif
-mercular.com##div[class="MuiBox-root css-1gw67gw"]
+mercular.com###__next > div:nth-child(8)
 !#if cap_html_filtering
 wordpress.com##^.ads-active.hide-on-button
 !#if adguard
@@ -5438,19 +5474,12 @@ scrintal.com$$div.c-elDcAj
 !#endif
 scrintal.com##div.c-elDcAj
 !#if cap_html_filtering
-sec.or.th##^#bodyCookie
+sec.or.th##^#bodyCookie, #overlay
 !#if adguard
-sec.or.th$$#bodyCookie
+sec.or.th$$#bodyCookie, #overlay
 !#endif
 !#endif
-sec.or.th###bodyCookie
-!#if cap_html_filtering
-sec.or.th##^#overlay
-!#if adguard
-sec.or.th$$#overlay
-!#endif
-!#endif
-sec.or.th###overlay
+sec.or.th###bodyCookie, #overlay
 !#if cap_html_filtering
 ejan.co##^#glowCookies-banner
 !#if adguard
@@ -5500,6 +5529,13 @@ mthai.com$$div.pdpa_cookies
 !#endif
 !#endif
 mthai.com##div.pdpa_cookies
+!#if cap_html_filtering
+munkongonline.com##^.cookie-overlay:not(html):not(body)
+!#if adguard
+munkongonline.com$$.cookie-overlay:not(html):not(body)
+!#endif
+!#endif
+munkongonline.com##.cookie-overlay:not(html):not(body)
 !
 !
 !
