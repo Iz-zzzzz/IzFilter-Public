@@ -38,7 +38,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
   - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter [^6]
   - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
   - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
-  - สามารถใช้ร่วมกับ extension [Dark Reader](https://github.com/darkreader/darkreader) ได้
+  - สามารถใช้ร่วมกับ extension [Dark Reader](https://github.com/darkreader/darkreader) ได้ และช่วยแก้บาง element ที่ทำให้เป็น dark mode ไม่สำเร็จด้วย
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
 
 > [!IMPORTANT]
