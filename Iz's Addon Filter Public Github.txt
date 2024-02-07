@@ -1,8 +1,8 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240206130127
-! Expires: 7 days
+! Version: 20240207194349
+! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
 !
@@ -78,6 +78,8 @@
 ||toonzaa.com^$all
 !Dangerous web DATA from Bitdefender
 ||doonungsub.com^$all
+!Suspectious DATA from Bitdefender
+||cadmus.script.ac^$all
 !Malware DATA from self gathering CONFIRM 
 ||excelgraduate.com^$all
 !Phishing DATA from self gathering CONFIRM 
@@ -571,6 +573,7 @@ https://ufa222.live^$all
 https://bit.ly/3Qr5Ifd^$all
 https://www.tcsoinfo.com^$all
 https://brazil999.plus^$all
+https://www.pgm1688.com^$all
 
 !---------- fake game ----------!
 !*เกมเถื่อน
@@ -4369,6 +4372,7 @@ google.co.th#@##bottomads
 @@||pixiv.net^$generichide
 @@||i.pximg.net^$generichide
 @@||feedly.com^$generichide
+@@||bsky.app^$generichide
 !---adblock ---
 @@||adguard.com^$ehide
 @@||local.adguard.org^
@@ -4667,6 +4671,8 @@ google.co.th#@##bottomads
 !--- git ---
 @@||gitlab.com^$generichide
 @@||gitea.angry.im^$generichide
+!--- delivery ---
+@@||dhl.com^$generichide
 !--- anime mange novel legal
 @@||animeranku.com^$generichide
 @@||webtoons.com^$generichide
@@ -5460,12 +5466,12 @@ mega.io$$div.cookie-banner
 !#endif
 mega.io##div.cookie-banner
 !#if cap_html_filtering
-ctrlg.gg##^div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+ctrlg.gg##^body > div:nth-child(4)
 !#if adguard
-ctrlg.gg$$div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+ctrlg.gg$$body > div:nth-child(4)
 !#endif
 !#endif
-ctrlg.gg##div[style*="background-color:rgba(0, 0, 0, 0.4)"]
+ctrlg.gg##body > div:nth-child(4)
 !#if cap_html_filtering
 scrintal.com##^div.c-elDcAj
 !#if adguard
