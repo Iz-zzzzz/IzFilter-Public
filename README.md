@@ -112,4 +112,4 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 [^5]:  HTML filtering ทำงานใน uBO and AdGuard extension ใน Gecko based browser และ stand alone AdGuard app เท่านั้น. กรุณาดูข้อมูลเพิ่มเติมที่ [uBO wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) หรือ [AdGuard wiki](https://adguard.com/kb/general/ad-filtering/create-own-filters/#html-filtering-rules)
 
-[^6]: ครอบคลุมและมีความผิดพลาดน้อยสุดเท่าที่ผมจะทำได้ (ผมไม่รับประกันว่าจะครอบคลุมทุกกรณี เนื่องด้วยทรัพยากรที่จำกัด)
+[^6]: ครอบคลุมและมีความผิดพลาดน้อยสุดเท่าที่ผมจะทำได้ (ผมไม่รับประกันและไม่รับผิดชอบถึงความเสียหายที่เกิดขึ้นจากผู้ใช้งานเองทุกกรณี เนื่องด้วยทรัพยากรที่จำกัด)
