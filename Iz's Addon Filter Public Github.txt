@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240207194349
+! Version: 20240208171908
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
@@ -133,6 +133,7 @@
 ||es-th.com^$all
 ||so-th.com^$all
 ||www.pea.do-th.com^$all
+||1th.me^$all
 !Try to download PUA from Bitdefender
 ||virus-removal-guide.net^$all
 !Spam in Facebook.com from self gathering CONFIRM 
@@ -343,9 +344,10 @@ https://*casino*.*/$all
 /baccarat$image
 /ufa77$image
 /bet-casino-banner$image
+/ufawins.gif$image
 !
-/*728x*.gif$image
-/*728x*.webp$image
+/*728x200*.gif$image
+/*728x200*.webp$image
 /750x375*.gif$image
 /676x140*.gif$image
 /r800x300$image
@@ -5466,12 +5468,12 @@ mega.io$$div.cookie-banner
 !#endif
 mega.io##div.cookie-banner
 !#if cap_html_filtering
-ctrlg.gg##^body > div:nth-child(4)
+ctrlg.gg##^body > div[style^="position:"]:nth-child(4)
 !#if adguard
-ctrlg.gg$$body > div:nth-child(4)
+ctrlg.gg$$body > div[style^="position:"]:nth-child(4)
 !#endif
 !#endif
-ctrlg.gg##body > div:nth-child(4)
+ctrlg.gg##body > div[style^="position:"]:nth-child(4)
 !#if cap_html_filtering
 scrintal.com##^div.c-elDcAj
 !#if adguard
