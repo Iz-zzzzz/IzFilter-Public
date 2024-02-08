@@ -37,8 +37,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
     - เว็บอันตรายประเภท frame ที่แฝงภายในเว็บ
   - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter [^6]
   - unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ ทำให้ performance ดีขึ้น เช่น facebook.com, twitter.com, instagram.com, youtube.com เป็นต้น [^1] [^3]
-  - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5]
-  - สามารถใช้ร่วมกับ extension [Dark Reader](https://github.com/darkreader/darkreader) ได้ และช่วยแก้บาง element ที่ทำให้เป็น dark mode ไม่สำเร็จด้วย
+  - พยายามใช้ HTML Filtering เมื่อใช้ได้ [^5] [^6]
+  - สามารถใช้ร่วมกับ extension [Dark Reader](https://github.com/darkreader/darkreader) ได้ และช่วยแก้บาง element ที่ทำให้เป็น dark mode ไม่สำเร็จด้วย [^6]
 - หากเป็นชาวต่างชาติ(ไม่เข้าเว็บภาษาไทย) แล้วใช้ filter list นี้ จะได้ประโยชน์จากการ rule ที่เพิ่มเติมในเว็บ international และ unblock rules ที่ไม่จำเป็นของ filter list อื่นๆ
 
 > [!IMPORTANT]
@@ -112,4 +112,4 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 [^5]:  HTML filtering ทำงานใน uBO and AdGuard extension ใน Gecko based browser และ stand alone AdGuard app เท่านั้น. กรุณาดูข้อมูลเพิ่มเติมที่ [uBO wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) หรือ [AdGuard wiki](https://adguard.com/kb/general/ad-filtering/create-own-filters/#html-filtering-rules)
 
-[^6]: ครอบคลุมเท่าที่ผมจะได้
+[^6]: ครอบคลุมและมีความผิดพลาดน้อยสุดเท่าที่ผมจะทำได้ (ผมไม่รับประกันว่าจะครอบคลุมทุกกรณี เนื่องด้วยทรัพยากรที่จำกัด)
