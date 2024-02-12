@@ -1,6 +1,6 @@
 English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilter-Public/blob/main/README_Eng.md)
 
-$${\color{red} โปรดทราบ \space ขณะนี้ \space Repository \space นี้อยู่ในสถานะพักการอัพเดตชั่วคราว \space และจะกลับมาอัพเดตต่อภายใน \space 2 \space เดือน \space ครับ}$$
+$${\color{red} โปรดทราบ \space ขณะนี้ \space Repository \space นี้อยู่ในสถานะลดความถี่การอัพเดตชั่วคราว \space และจะกลับมาอัพเดตต่อเนื่องภายใน \space 2 \space เดือน \space ครับ}$$
 
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Iz-zzzzz/IzFilter-Public"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Iz-zzzzz/IzFilter-Public">
 
