@@ -8,7 +8,7 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 
 - การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
 - จุดประสงค์ของ filter list นี้ คือ
-  - ใช้แทนที่ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ที่ไม่ได้รับการ maintenance มากนัก
+  - ใช้แทนที่ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ที่ไม่ได้รับการ maintenance มากนัก และมี extended syntax
   - บล็อกโฆษณาทุกชนิด [^3][^6][^4]
     - script โฆษณา
     - โฆษณาประจำเว็บ (specific) (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
@@ -57,7 +57,7 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 > เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
 
 > [!IMPORTANT]
->  ไม่ควรใช้ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) เพราะ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ไม่ได้มีการ maintenance มากนัก ทำให้ filter ส่วนใหญ่ใช้ไม่ได้แล้ว จึงทำให้ filter list ที่คุณอ่านอยู่นี้สามารถแทนที่ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ได้
+>  ไม่ควรใช้ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) เพราะ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ไม่ได้มีการ maintenance มากนัก ทำให้ filter ส่วนใหญ่ใช้ไม่ได้แล้ว (และจุดประสงค์ที่ filter รองรับต่าง platform กัน) จึงทำให้ filter list ที่คุณอ่านอยู่นี้สามารถแทนที่ [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand) ได้
 
 > ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
 
