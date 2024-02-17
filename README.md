@@ -76,11 +76,15 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 > ทั้งหมดนี้อย่าลืมเปิดให้ AdBlock ทำงานด้วย ทั้งส่วนแยกของแต่ละเว็บ, Whilelist และ Allow list ทั้งหลาย
 
 #### ควรใช้ใน
-  - Browser Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
+  - Chrome / Firefox Extension: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg) [^1]
   - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [^1], [Android app](https://adguard.com/en/adguard-android/overview.html) [^1], [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [^1], [Mac](https://adguard.com/en/adguard-mac/overview.html) [^1].
   - Brave built-in AdBlock: [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [^2]
 
-  **program อื่นๆ อาจจะสามารถใช้ได้ แต่แค่ยังไม่ได้ลอง
+  **อื่นๆ ก็อาจจะสามารถใช้ได้ แต่แค่ผมยังไม่ได้ลอง
+  
+  **ไม่แนะนำให้ใช้ด้วย AdBlock extension ของ Safari เพราะ Safari API limit มาก AdBlock ไม่สามารถทำงานได้อย่างที่ควรจะเป็นแบบใน platfrom อื่นๆ
+  
+  **Chromium กำลังจะปิด Manifest V2 (API หลักของ AdBlock) ในอนาคต แนะนำให้หลีกเลี่ยง Chromium-based browser อื่นๆ ไปใช้ Brave, Firefox หรือ AdGuard Application แทน [^7]
 
 ## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
 ### รายงานปัญหาให้แก้ไข
@@ -115,3 +119,4 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 [^5]:  HTML filtering ทำงานใน uBO and AdGuard extension ใน Gecko based browser และ stand alone AdGuard app เท่านั้น. กรุณาดูข้อมูลเพิ่มเติมที่ [uBO wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#html-filters) หรือ [AdGuard wiki](https://adguard.com/kb/general/ad-filtering/create-own-filters/#html-filtering-rules)
 
 [^6]: ครอบคลุมและมีความผิดพลาดน้อยสุดเท่าที่ผมจะทำได้ (ผมไม่รับประกันและไม่รับผิดชอบถึงความเสียหายที่เกิดขึ้นจากผู้ใช้งานเองทุกกรณี เนื่องด้วยทรัพยากรที่จำกัด)
+[^7]: https://chrome-stats.com/manifest-v3-migration
