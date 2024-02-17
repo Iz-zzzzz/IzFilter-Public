@@ -11,7 +11,7 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 
   - บล็อกโฆษณาทุกชนิด [^3][^6][^4]
     - script โฆษณา
-    - โฆษณาประจำเว็บ (specific) (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
+    - โฆษณาประจำเว็บ (ไม่รวมถึงโฆษณาประจำเว็บที่ไม่ได้การสนับสนุนจากภายนอก)
     - โฆษณาประเภทรูป
     - โฆษณาประเภทข้อความ
     - โฆษณาประเภท video  (video ad)
@@ -27,14 +27,16 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
     - paywall ที่ไม่สมเหตุสมผล [^4]
     - cookie consent
       - cosmetics rule
-      - network request rule
-    - ป้องกันคลิกขวา
+      - cookie network request rule
+    - ป้องกันการคลิกขวา
     - ป้องกันลากคลุมข้อความ
+    - เว็บมี css บัค
   - ความเป็นส่วนตัว [^3][^6]
     - analytics
     - telemetry
     - network request parameter ที่ไม่จำเป็น
     - script หรือ element ไม่จำเป็น (ไม่รวม back to top button)
+    - parameter
   - บล็อกเว็บอันตราย เช่น spam ใน Facebook(เมื่อกดคลิกลิงก์ไปจะมีข้อความเตือน), ลิงก์ Phishing [^6]
     - เว็บอันตรายประเภท frame ที่แฝงภายในเว็บ
   - พยายามให้สามารถทำงานได้ดีที่สุด แม้ไม่ได้เปิดใช้งาน cosmetic filter [^6]
