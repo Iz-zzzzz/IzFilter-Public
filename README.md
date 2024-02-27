@@ -68,10 +68,8 @@ $${\color{red} โปรดทราบ \space ขณะนี้ \space Reposit
 > 2. จุดประสงค์หลักที่ต่างกันของ filter และทำเพื่อ platform ที่ต่างกัน (filter list นี้เน้นรองรับ uBO, AdGuard, Brave เป็นหลัก) จึงอาจทำให้ filter บางส่วนขัดแย้งกันหรือใช้ได้ไม่เต็มประสิทธิภาพ
 > 3. filter list นี้ทำมาครอบคลุมกว่า [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand)
 
-<details><summary>
-  
-  ### วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
-  </summary>
+<details><summary>วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
+</summary>
 
 - [AdGuard extension](https://adguard.com/en/adguard-browser-extension/overview.html) [^1]
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
