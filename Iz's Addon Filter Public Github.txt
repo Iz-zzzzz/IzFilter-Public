@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240310130504
+! Version: 20240311001322
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -171,10 +171,11 @@
 ||ln.run^$all
 ||cbsmedia.shop^$all
 ||brhonka.com^$all
-||l.facebook.com/l.php?u=http://tinyurl.com^$all
+||l.facebook.com/l.php?u=https://tinyurl.com^$all
 ||l.facebook.com/l.php?u=https://shorter.me^$all
-||l.facebook.com/l.php?u=http://ln.run^$all
-||l.facebook.com/l.php?u=http://u.to^$all
+||l.facebook.com/l.php?u=https://ln.run^$all
+||l.facebook.com/l.php?u=https://u.to^$all
+||l.facebook.com/l.php?u=https://sprl.in^$all
 ||ilang.in^$all
 ||mzen-gasskeunnn.mom^$all
 ||accesscam.org^$all
@@ -182,8 +183,12 @@
 !web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##div[class="xdj266r x11i5rnm xat24cr x1mh8g0r x1vvkbs"] > div[dir="auto"][style="text-align: start;"] > a[class][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]:has-text(/uich\.cc|sshon\.info|uejdi\.icu|thaimedia\.shop|shorten\.is|thaitubtv\.shop|2no\.co|rrhonka\.com|neverforget\.mom|mediahotstar\.shop|thaicreations\.shop|uejdi\.icu|kipokans\.buzz|dazedarticulate\.com|dazedarticulate\.com|dailycoverage\.asia/):upward(12)
 !
 !!Spam/Phising in Facebook.com messenger DATA from self gathering CONFIRM
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
 ||facbook-supp.pages.dev.br^$all
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
+||home-business-helper.com^$all
 !
 !Discord spam DATA from self gathering CONFIRM
 http://7link.ru^$all
@@ -2204,9 +2209,10 @@ mawtoload.com###banner-post
 !
 !---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 !
-!www.nekopost.net,2nd.nekopost.net
+!www.nekopost.net,2nd.nekopost.net 20240310181925
 www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
 www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
+www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !
 !---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 !animeranku.com 20240130221146
