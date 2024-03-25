@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240319130018
+! Version: 20240325140358
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -205,12 +205,12 @@ https://u.to^$doc
 
 !----------URL general Rules ----------
 https://*.bet^$all
-https://*bet.$all
+!https://*bet.$all
 https://sexygame*.com^$all
 https://www.ufa*.$all
 https://ufa*.$all
-https://*ssgame*/$all
-https://*casino*.*/$all
+!https://*ssgame*/$all
+!https://*casino*.*/$all
 
 !block both link and ads video
 /brazil$media
@@ -372,6 +372,14 @@ https://*casino*.*/$all
 /dafabetaff.gif$image
 /lalikabet168.gif$image
 /bosotn777.gif$image
+/ufajaz*.webp$image
+/betflikcute.webp$image
+/ufa14k$image
+/PGK44.webp$image
+/joker123*.webp$image
+/JN-edit-*.gif$image
+/sexybaccarat*.webp$image
+
 !
 !----------URL specific Rules ----------
 http://bit.ly/3GRDdCh$all
@@ -596,6 +604,9 @@ https://www.tcsoinfo.com^$all
 https://brazil999.plus^$all
 https://www.pgm1688.com^$all
 https://boston777s.com^$all
+https://register.gamegame.asia^$all
+https://popslot.vip^$all
+https://baccarat88-th.com^$all
 !Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
 https://pgf-asw0zz.co^$all
 
@@ -700,6 +711,9 @@ https://cdn.apicdn*.one^$xhr
 
 ! จาก https://cats-translator.com และ HaGeZi's Pro DNS Blocklist 20240318211729
 ||cdend.com^
+
+! โฆษณาที่ขอบรูปใน https://www.khaosod.co.th 20240325140322
+||thapi.aedi.ai^$3p
 !--------------Ad Server/Links-----------END
 !----------------------------------------END
 !----------------------------------------END
@@ -802,6 +816,14 @@ me-qr.com##div[class="bg-success"]
 !
 !---social platform ---
 !
+
+!Facebook.com 20240325005206
+!#if !env_mobile
+!#if cap_html_filtering
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##^a[class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
+!#endif
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
+!#endif
 
 !Twitter 20240227140203
 ||ads-api.twitter.com^$xhr
@@ -1667,11 +1689,8 @@ thestandard.co##div[class="banner-box hidden-xs"]
 thestandard.co##^.mySlidesMasthead
 !#endif
 thestandard.co##.mySlidesMasthead
-!workpointtoday.com
-!#if cap_html_filtering
-workpointtoday.com##^.insert_ads
-!#endif
-workpointtoday.com##.insert_ads
+!workpointtoday.com 20240322022230
+
 !men.kapook.com 20231212005902
 !#if cap_html_filtering
 men.kapook.com##^.taboola-x2-widget
@@ -2624,7 +2643,7 @@ reapertrans.com##div.ads-info
 !
 !---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-kimuchi.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net
+.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-subth.net|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net
 !Anime Sugoi 20231225134824
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
@@ -2698,7 +2717,7 @@ anifume.com##div.topml
 ||anifume.com/a4Eof1D0f/close-x.png$domain=anifume.com
 ||anifume.com/a4Eof1D0f/loadgame-float.jpg$domain=anifume.com
 anifume.com##+js(nowoif)
-!anime-suba.com 20240103193717
+!anime-suba.com 20240324015402
 ||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,domain=anime-suba.com
 anime-suba.com##+js(nowoif)
 !!!invisible popup overlay video
@@ -2708,6 +2727,7 @@ anime-suba.com##^.overlay-0
 anime-suba.com##.overlay-0
 !#endif
 anime-suba.com##+js(nano-sib, , *)
+https://www.anime-suba.com/imges/close.png$domain=anime-suba.com
 !animehayai.net 20240308222408
 !#if cap_html_filtering
 animehayai.net##^.col-12
@@ -2734,22 +2754,32 @@ animehayai.net##^div.column > a
 !#else
 animehayai.net##div.column > a
 !#endif
-!anime-kimuchi.com
+!anime-kimuchi.net 20240324020049
 !#if cap_html_filtering
-anime-kimuchi.com##^#scrollUp
+anime-kimuchi.net##^.ads-banner
 !#else
-anime-kimuchi.com###scrollUp
+anime-kimuchi.net##.ads-banner
 !#endif
 !#if cap_html_filtering
-anime-kimuchi.com##^#slider-r
+anime-kimuchi.net##^.b-ads
 !#else
-anime-kimuchi.com###slider-r
+anime-kimuchi.net##.b-ads
 !#endif
-!neko-miku.com
+!neko-miku.com 20240324021054
 !#if cap_html_filtering
 neko-miku.com##^#footer > .container p
 !#else
 neko-miku.com###footer > .container p
+!#endif
+!#if cap_html_filtering
+neko-miku.com##^.ads-290-100
+!#else
+neko-miku.com##.ads-290-100
+!#endif
+!#if cap_html_filtering
+neko-miku.com##^.ads-825-100
+!#else
+neko-miku.com##.ads-825-100
 !#endif
 !fairyanime.net
 !#if cap_html_filtering
@@ -2775,7 +2805,7 @@ animetako.net##^div[id^="animekimiads"]
 !#else
 animetako.net##div[id^="animekimiads"]
 !#endif
-!https://www.kurokami.me
+!https://www.kurokami.me 20240319150900
 !#if cap_html_filtering
 kurokami.me##^div[class="col-6 banner728x200-div"]
 !#else
@@ -2791,21 +2821,21 @@ kurokami.me##^p
 !#else
 kurokami.me##p
 !#endif
-!https://animelizm.com/
+!https://animelizm.com/ 20240319140129
 !#if cap_html_filtering
 animelizm.com##^.dessert-frame
 !#else
 animelizm.com##.dessert-frame
 !#endif
 !#if cap_html_filtering
-animelizm.com##^div.al-ads
+animelizm.com##^#custom_html-3
 !#else
-animelizm.com##div.al-ads
+animelizm.com###custom_html-3
 !#endif
 !#if cap_html_filtering
-animelizm.com##^section[id="custom_html-60"]
+animelizm.com##^#custom_html-47
 !#else
-animelizm.com##section[id="custom_html-60"]
+animelizm.com###custom_html-47
 !#endif
 !animeshiro.com
 https://blogger.googleusercontent.com/*.gif$image,domain=animeshiro.com
@@ -2825,6 +2855,12 @@ anime-ox.com###contenedor > div[align="center"]
 anime-subthai.net##^#main_content > div > div.b-ads
 !#else
 anime-subthai.net###main_content > div > div.b-ads
+!#endif
+!www.anime-kawaii.com 20240324021213
+!#if cap_html_filtering
+www.anime-kawaii.com##^p[class="center_lnwphp"]
+!#else
+www.anime-kawaii.com##p[class="center_lnwphp"]
 !#endif
 !
 !---Novel ---
@@ -2979,6 +3015,7 @@ https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newserie
 !
 !--- Others
 !
+
 !!!--------General Cosmetic Rules--------START
 !----------------------------------------START
 !----------------------------------------START
@@ -2994,6 +3031,7 @@ https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newserie
 !!!-------------General Rules------------START
 !----------------------------------------START
 !----------------------------------------START
+
 
 /*728x200*.gif$image
 /*728x200*.webp$image
@@ -3012,6 +3050,9 @@ https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newserie
 ||media.discordapp.net/attachments^$image,domain=~discordapp.net|~discord.com
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
+
+!หลายเว็บผิดกฏหมายชอบใช้ 20240324022000
+##img.img-ads
 !---------------General Rules------------END
 !----------------------------------------END
 !----------------------------------------END
@@ -3164,6 +3205,9 @@ google.co.th#@##bottomads
 @@||discord.com^$ehide
 @@||line.me^$generichide
 @@||facebook.com^$generichide
+@@https://www.facebook.com^$generichide
+@@https://m.facebook.com^$generichide
+@@https://web.facebook.com^$generichide
 @@||instagram.com^$generichide
 @@||twitter.com^$generichide
 @@||twitch.tv^$generichide
@@ -3704,7 +3748,7 @@ google.co.th#@##bottomads
 @@||animezeed.net^$generichide
 @@||anime-nico.com^$generichide
 @@||animehayai.net^$generichide
-@@||anime-kimuchi.com^$generichide
+@@||anime-kimuchi.net^$generichide
 @@||neko-miku.com^$generichide
 @@||shibaanime.com^$generichide
 @@||www.animerem.com^$generichide
@@ -3979,8 +4023,9 @@ voicetv.co.th##^#cookie-notification
 voicetv.co.th###cookie-notification
 !#if cap_html_filtering
 workpointtoday.com##^div[class^="dpdpa--popup"]
-!#endif
+!#else
 workpointtoday.com##div[class^="dpdpa--popup"]
+!#endif
 !#if cap_html_filtering
 notebookspec.com##^.dpdpa--popup 
 !#endif
@@ -4165,7 +4210,6 @@ monkeyeveryday.com##img[alt="cookies"]:upward(6)
 mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
-studio7thailand.com##+js(trusted-set-cookie,FUNCTIONAL,false)
 !----------------Cookie -----------------END
 !----------------------------------------END
 !----------------------------------------END
