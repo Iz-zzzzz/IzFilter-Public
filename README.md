@@ -105,7 +105,16 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 ## อื่นๆ
 
 - This filter list may contain other filter lists. I already commented the sources.
-- The reason why I have not pull request to EasyList Thailand repository is EasyList contains only basic syntax. But this filter list contains a lot of extended syntax.
+
+#### Documents ที่เป็นประโยชน์
+- [uBlock Origin filter wiki](https://github.com/gorhill/uBlock/wiki/Static-filter-syntax)
+- [Adguard filter syntax](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters)
+- [Adguard's compatibility-table](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/compatibility-table.md)
+- [W3 School DOM Event object](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+#### Filter list นี้สานต่อจาก
+- [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand)
+- [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
 
 ## หมายเหตุ
 
