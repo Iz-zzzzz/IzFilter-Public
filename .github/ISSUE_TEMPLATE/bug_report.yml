@@ -12,7 +12,7 @@ body:
       label: แบบสอบถาม
       description: |
         เพื่อป้องกันการรายงานผิดพลาด กรุณาตรวจสอบ และยืนยันตามรายการด้านล่าง
-        options:
+      options:
         - label: Iz's Addon Filter ที่พบปัญหาได้ทำการ update เป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
         - label: AdBlock Extension หรือ Application ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
@@ -108,8 +108,11 @@ body:
 
   - type: textarea
     attributes:
+      label: กรุณาใส่ ชื่อของ filter อื่นๆ ที่ใช้งาน ขณะพบปัญหา
       value: |
-        กรุณาใส่ ชื่อของ filter อื่นๆ ที่ใช้งาน ขณะพบปัญหา
+        1. 
+        2. 
+        
 
   - type: markdown
     attributes:
