@@ -2,7 +2,7 @@ name: รายงานปัญหา
 description: ใช้สำหรับเมื่อพบว่า Iz's Addon Filter มีข้อผิดพลาด
 labels: ["Unsorted"]
 body:
-  - type: textarea
+  - type: markdown
     attributes:
       value: |
         Credit AdguardFilters github bug report templateะพบปัญ
