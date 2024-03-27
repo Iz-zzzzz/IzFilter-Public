@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Credit AdguardFilters github bug report templateะพบปัญ
+        Credit https://github.com/AdguardTeam/AdguardFilters/blob/master/.github/ISSUE_TEMPLATE/bug_report.yml
     
   - type: checkboxes
     attributes:
@@ -15,7 +15,7 @@ body:
       options:
         - label: Iz's Addon Filter ที่พบปัญหาได้ทำการ update เป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
-        - label: AdBlock Extension หรือ Application ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
+        - label: ad blocker Extension หรือ Application ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
         - label: Browser ที่ใช้งานและพบปัญหาเป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
@@ -26,7 +26,7 @@ body:
           
   - type: dropdown
     attributes:
-      label: ใช้ Iz's Addon Filter บน AdBlock Extension หรือ Application อะไร
+      label: ใช้ Iz's Addon Filter บน ad blocker Extension หรือ Application อะไร
       multiple: true
       options:
         - AdGuard Browser Extension
@@ -36,15 +36,15 @@ body:
         - AdGuard for Safari
         - uBlock Origin Browser Extension
         - uBlock Lite Browser Extension
-        - Brave Browser built-in adblock
-        - Other ad blocker
+        - Brave Browser built-in ad blocker
+        - ad blocker อื่นๆ 
     validations:
       required: true
 
   - type: input
     attributes:
-      label: AdBlock Extension หรือ Application version อะไร
-      description: AdBlock Extension หรือ Application version ที่พบอาการเป็น version อะไร
+      label: Ad blocker Extension หรือ Application version อะไร
+      description: Ad blocker Extension หรือ Application version ที่พบอาการเป็น version อะไร
       placeholder: ตัวอย่างเช่น 1.56.1
     validations:
       required: true
@@ -57,11 +57,11 @@ body:
       multiple: true
       options:
         - โฆษณาหรืออื่นๆ ไม่ครบถ้วน
-        - website ทำงานไม่ปกติ
-        - AdBlock ถูกตรวจจับได้โดย website
-        - analytics or tracker ที่ไม่ได้ block
-        - website อันตราย
-        - block ไม่ตรงตาม จุดประสงค์ (ที่หน้า readme ใต้หัวข้อแรก)
+        - Website ทำงานไม่ปกติ
+        - Ad blocker ถูกตรวจจับได้โดย website
+        - Analytics or tracker ที่ไม่ได้ block
+        - Website อันตราย
+        - Block ไม่ตรงตาม จุดประสงค์ (ที่หน้า readme ใต้หัวข้อแรก)
     validations:
       required: true
 
