@@ -37,7 +37,7 @@ body:
         - uBlock Origin Browser Extension
         - uBlock Lite Browser Extension
         - Brave Browser built-in ad blocker
-        - ad blocker อื่นๆ 
+        - ad blocker อื่นๆ (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
     validations:
       required: true
 
@@ -75,8 +75,8 @@ body:
         - Safari
         - Microsoft Edge
         - Opera
-        - other (specify in comment below)
         - AdGuard Application
+        - other (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
     validations:
       required: true
 
@@ -143,12 +143,12 @@ body:
     attributes:
       label: ใส่หมายเหตุ และ screenshot
       description: |
-        1. ใส่ screenshot ขณะพบปัญหา พร้อมวงจุดที่เกิดปัญหาให้เรียบร้อย ()
+        1. ใส่ screenshot ขณะพบปัญหา พร้อมวงจุดที่เกิดปัญหาให้เรียบร้อย
           ใช้ `<details> </details>` ครอบเนื้อหาที่ต้องการซ่อนใต้ spoilter
         2. อธิบายอย่างละเอียด ให้เข้าใจได้ว่าปัญหาคืออะไร
-        3. กล่าวถึง ปัจจัยอื่นๆ ที่ developer ควรทราบ
+        3. กล่าวถึง ข้อมูลหรือปัจจัยอื่นๆ ที่ผู้ดูแลควรทราบ
 
-        เตือน!! กรุณา blur ข้อมูลส่วนตัว หรือ "เนื้อหา NSFW"
+        เตือน!! กรุณา blur ข้อมูลส่วนตัว และซ่อน "เนื้อหา NSFW" ใต้ spoiler
       value: |
           1. <หมายเหตุ>
 
@@ -169,5 +169,5 @@ body:
       options:
         - label: คุณได้ตรวจสอบว่า ไม่มีข้อมูลส่วนตัวของคุณใน issue นี้
           required: true
-        - label: คุณได้ซ่อน screenshot ภายใต้ spoiler เรียบร้อย และกดดู preview เพื่อตรวจสอบแล้ว
+        - label: คุณได้ซ่อน screenshot ภายใต้ spoiler เรียบร้อย และกดดู Preview เพื่อตรวจสอบแล้ว
           required: true
