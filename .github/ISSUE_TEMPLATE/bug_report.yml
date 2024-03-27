@@ -165,7 +165,6 @@ body:
   - type: checkboxes
     attributes:
       label: ความเป็นส่วนตัว
-      description: คุณได้แน่ใจแล้วว่า ไดเ้ตรวจสอบว่า ไม่มีข้อมูลส่วนตัวของคุณใน issue นี้
       options:
         - label: คุณได้ตรวจสอบว่า ไม่มีข้อมูลส่วนตัวของคุณใน issue นี้
           required: true
