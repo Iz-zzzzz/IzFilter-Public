@@ -21,7 +21,7 @@ body:
           required: true
         - label: ถ้าปิดการใช้งาน Iz's Addon Filter จะไม่พบปัญหาที่เกิดขึ้น ใช่หรือไม่?
           required: true
-        - label: มีเนื้อหา NSFW ใช่หรือไม่? เตือน!! กรุณาซ่อน screenshot ที่จะใส่ในช่องด้านล่างใต้ spoiler
+        - label: มีเนื้อหา NSFW ใช่หรือไม่?
           required: false
           
   - type: dropdown
