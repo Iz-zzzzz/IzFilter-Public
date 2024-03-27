@@ -1,10 +1,11 @@
 name: รายงานปัญหา
-description: ใช้สำหรับเมื่อพบว่า "filter list นี้" block ผิดพลาด
+description: ใช้สำหรับเมื่อพบว่า Iz's Addon Filter มีข้อผิดพลาด
 labels: ["Unsorted"]
 body:
   - type: markdown
     attributes:
-      value: "credit https://github.com/AdguardTeam/AdguardFilters/blob/master/.github/ISSUE_TEMPLATE/bug_report.yml"
+      value: |
+      credit https://github.com/AdguardTeam/AdguardFilters/blob/master/.github/ISSUE_TEMPLATE/bug_report.yml
     
   - type: checkboxes
     attributes:
