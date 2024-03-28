@@ -75,10 +75,11 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
 - [uBlock Origin extension](https://github.com/gorhill/uBlock)
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Subscribe ที่มุมขวาบน
+  - ถ้าเป็นไปได้ เพิ่ม `https://raw.githubusercontent.com/Iz-zzzzz` ลงใน trustedListPrefixes ด้วย [รายละเอียดเพิ่มเติม](https://github.com/gorhill/uBlock/wiki/Advanced-settings#trustedlistprefixes)
 - Brave Browser (built-in AdBlock) [Windows, iOS, iPadOS, macOS, Android, Linux](https://brave.com/) [^2]
   - ไปที่การตั้งค่าของ Brave browser > Shields > Content filtering > ตรงหมวด Add custom filter lists > ให้ใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > กด Add
 - AdGuard Application: [Windows](https://adguard.com/en/adguard-windows/overview.html) [^1], [Android app](https://adguard.com/en/adguard-android/overview.html) [^1], [iOS, iPadOS](https://apps.apple.com/us/app/adguard-adblock-privacy/id1047223162) [^1], [Mac](https://adguard.com/en/adguard-mac/overview.html) [^1]
-  - ให้หาในหมวด Custom filter แล้วใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
+  - ให้หาในหมวด Custom filter แล้วใส่ Url นี้ `https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt` > ติ๊กถูก Trusted > กด Subscribe
 - อื่นๆ
   - ให้หา menu ที่บอกถึง custom filter lists แล้วนำลิงก์ไปใส่ด้วยตัวเอง
 > ทั้งนี้ filter นี้ทำมาเพื่อรองรับ platform ด้านบนเป็นหลัก
