@@ -92,13 +92,6 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 ## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
 ### รายงานปัญหาให้แก้ไข
 กรุณารายงานปัญหา[ที่นี้](https://github.com/Iz-zzzzz/IzFilter-Public/issues) 
-โดยให้รายละเอียดดังนี้ :
-- URL ของไซต์ที่พบปัญหา(ขอแบบตรง 100%)
-- (ควรมี) Screenshot พร้อมวงจุดที่คิดว่าผิดพลาดให้ชัดเจน
-- Filter list อื่นๆ ที่ใช้งานด้วยกัน ขณะพบปัญหา
-- Extension/Application AdBlock ที่ใช้งาน ขณะพบปัญหา
-- (ถ้าใช้ AdGuard) ระบุ Stealth mode options ที่ใช้
-- ปัญหาที่พบ
 
 ### หากรู้วิธีแก้ไขปัญหาเอง
 
