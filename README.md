@@ -4,7 +4,9 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 # Iz's Addon Filter Public Version
 
-- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด, เจาะจงมากที่สุด และที่จำเป็นเท่านั้น เพื่อทำให้ performance drop น้อยที่สุด
+- การสร้าง rules ใน filter list นี้จะเน้นไปที่การบล็อกให้ครอบคลุมมากที่สุด
+- เจาะจงมากที่สุด และที่จำเป็นเท่านั้น
+- มีผลกระทบต่อ performance น้อยที่สุด
 - <details><summary>จุดประสงค์ของ filter list นี้ คือ</summary>
 
   - บล็อกโฆษณาทุกชนิด [^3][^6][^4]
