@@ -1,0 +1,4588 @@
+! Title: Iz's Addon Filter Public Version (mini version)
+! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
+! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
+! Version: 20240622022348
+! Expires: 1 days
+! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
+! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
+
+!!!**************************************************************************************
+!* 
+!* Dangerous web
+!* 
+!****************************************************************************************
+
+
+!!!**************************************************************************************
+!MARK:from Malwarebyte
+!****************************************************************************************
+
+||dugothitachan.com^$all
+||image.baan-series.com^$all
+||nessainy.net^$all
+||agacelebir.com^$all
+||eu.dspultra.com^$all
+||operatehighlyadvancedtheproduct.vip^$all
+||eu.messenger-notify.digital^$all
+||adspredictiv.com^$all
+||inrhyhorntor.com^$all
+||certaintysurroundingcab.com^$all
+||remparleyfaining.icu^$all
+||hime-anime.com^$all
+||snipertopanime.net^$all
+||nice-anime.com^$all
+||animedd.xyz^$all
+||proposedpartly.com^$all
+||imodtoy.com^$all
+||th.nex-software.com^$all
+||vinegarfactorelevator.com^$all
+||restoro.com^$all
+||glugherg.net^$all
+||limitationvolleyballdejected.com^$all
+||obituaryfuneral.com^$all
+||skipdearbeautify.com^$all
+||perryvolleyball.com^$all
+||orchestraanticipation.com^$all
+||pgmall.my^$all
+||xm.com^$all
+||speechfountaindigestion.com^$all
+||thaudray.com^$all
+||ninebartv2.xyz^$all
+||app.hilobet.cc^$all
+||slaves6.com^$all
+||mukohphetra.com^$all
+||waisheph.com^$all
+||mosaic.unite.com^$all
+||shibaanime.com^$all
+
+!!!**************************************************************************************
+!MARK:self gathering
+!****************************************************************************************
+
+||syndication.realsrv.com^$all
+||invaderannihilationperky.com^$all
+||sicknessfestivity.com^$all
+||creepingbrings.com^$all
+||takepalpablenuisance.com^$all
+||addresseepaper.com^$all
+||haglance.com^$all
+||dwightadjoining.com^$all
+||f.el7ref.com^$all
+||hentaiplaytime.com^$all
+||pc-kf.plusfuns.com^$all
+||reasonablelandmark.com^$all
+||forgerylimit.com^$all
+||strakerecombs.website^$all
+||lockfireshimself.com^$all
+||outlookabsorb.com^$all
+||kinhincauking.website^$all
+||notifyoutspoken.com^$all
+||adblockstreaming.com^$all
+||live.pushub.net^$all
+||ccy122.com^$all
+||tcaadwa.com^$all
+||myfindr.com^$all
+||s.akamaicdn.cloud^$all
+||toonzaa.com^$all
+
+!!!**************************************************************************************
+!MARK:Bitdefender
+!****************************************************************************************
+
+||doonungsub.com^$all
+
+!!!**************************************************************************************
+!MARK:Suspectious from Bitdefender
+!****************************************************************************************
+
+||cadmus.script.ac^$all
+
+!!!**************************************************************************************
+!MARK:Malware self gathering
+!****************************************************************************************
+
+||excelgraduate.com^$all
+
+!!!**************************************************************************************
+!MARK:Phishing self gathering
+!****************************************************************************************
+
+||software.technotipspedia.com^$all
+||healthlands.org^$all
+||exness.com^$all
+!หลอกได้รางวัล self gathering CONFIRM 
+||88lg.com^$all
+||naggingirresponsible.com^$all
+!หลอกให้โหลดแอปจากเว็บที่คล้าย Play Store แล้วแอบโอนเงิน self gathering CONFIRM 
+||cc2.lol^$all
+||allorigins.win^$all
+||dps-th.com^$all
+||f5kea.cc^$all
+!หลอกให้กรอกข้อมูล ธนาคาร self gathering CONFIRM 
+||kasikorn.go-line.cc^$all
+||ksecrity.the-line.cc^$all
+||ksecurity.ta-th.cc^$all
+
+!!!**************************************************************************************
+!MARK:Mal Bad redirect self gathering
+!****************************************************************************************
+
+||lliinks.com^$all
+||coinw.com^$all
+||xn--16-ftitt.com^$all
+||findprizeshere.life^$all
+||audiencegarret.com^$all
+
+!!!**************************************************************************************
+!MARK:Mal-advertising self gathering
+!****************************************************************************************
+
+||blacknesskeepplan.com^$all
+||adblock-pro-download.com^$all
+||gracelessbrief.com^$all
+||yournicejournal.com^$all
+||rekadvert.com^$all
+||hotcoin.com^$all
+||hoaxbasesalad.com^$all
+! https://www.facebook.com/groups/thaidev/permalink/1284929762306551/ 20240608160120
+||amazon2.co^$all
+
+!!!**************************************************************************************
+!MARK:Mal Captcha self gathering
+!****************************************************************************************
+
+||vantsolutions.com^$all
+
+!!!**************************************************************************************
+!MARK:Scam self gathering
+!****************************************************************************************
+
+||survey-smiles.com^$all
+||dooflixtv.com^$all
+
+!!!**************************************************************************************
+!MARK:Mal self gathering
+!****************************************************************************************
+
+||happylukebet.com^$all
+||silkspan.com^$all
+||thai-iphone.com^$all
+
+!!!**************************************************************************************
+!MARK:Fraud self gathering
+!****************************************************************************************
+
+||phognekrsurvey.space^$all
+
+!!!**************************************************************************************
+!MARK:Mal search engine self gathering
+!****************************************************************************************
+
+!มี mal extension redirect ไป search engine นี้
+||bestsearch.ai^$all
+
+!!!**************************************************************************************
+!MARK:Mal sites from Thai SMS self gathering
+!****************************************************************************************
+
+||ipi.in^$all
+||xpay168.vip^$all
+||lv5vip.com^$all
+||iba888.com^$all
+||kng.wtf^$all
+||rv-th.com^$all
+||es-th.com^$all
+||so-th.com^$all
+||www.pea.do-th.com^$all
+||1th.me^$all
+||88lg.cc^$all
+||pea.to-go.cc^$all
+||pea.cxth.cc^$all
+!หลอกเป็น flash ว่าส่งของไม่สำเร็จ แล้วประเด็นคือ วันที่ได้ SMS ส่งของจริงๆ ในวันนั้นด้วย แต่คนที่ส่งจริงวันนั้นไม่ได้บอกว่าเจ้าไหน
+||www.flash.or-go.com^$all
+!หลอกเป็น ais แลก point แถมเนียนตัวมากับ SMS แท้ด้วย 20240407211253 https://www.facebook.com/groups/9arm.community/posts/3736511873304163/
+||ais-th.rest^$all
+||cutt.ly/neon24^$all
+||whatsApp-ws.tv^$all
+||whatsopp.cc^$all
+||7dooi.com^$all
+
+!!!**************************************************************************************
+!MARK:Spam through Browser Notification API self gathering
+!****************************************************************************************
+
+||nextbigthing.pro^$all
+
+!!!**************************************************************************************
+!MARK:Try to download PUA Bitdefender
+!****************************************************************************************
+
+||virus-removal-guide.net^$all
+
+!!!**************************************************************************************
+!MARK:Spam in Facebook.com comment self gathering
+!****************************************************************************************
+
+||uich.cc^$all
+||sshon.info^$all
+||thaimedia.shop^$all
+||shorten.is^$all
+||thaitubtv.shop^$all
+||2no.co^$all
+||rrhonka.com^$all
+||neverforget.mom^$all
+||uejdi.icu^$all
+||kipokans.buzz^$all
+||dazedarticulate.com^$all
+||dailycoverage.asia^$all
+||ezstat.ru^$all
+||iplogger.com^$all
+||iyp.my.id^$all
+||go-via.cc^$all
+||abre.ai^$all
+||iplog.co^$all
+||twentyseven.ltd^$all
+||qptr.ru^$all
+||mediahotstar.shop^$all
+||boscurtiespedia.pics^$all
+||ny-x.cc^$all
+||citly.me^$all
+||telegra.ph^$all
+||ln.run^$all
+||cbsmedia.shop^$all
+||brhonka.com^$all
+||hdjr.wiki^$all
+! short link ที่มิจฉาชีพชอบใช้
+||l.facebook.com/l.php?u=https://tinyurl.com^$doc
+||l.facebook.com/l.php?u=https://shorter.me^$doc
+||l.facebook.com/l.php?u=https://ln.run^$doc
+||l.facebook.com/l.php?u=https://u.to^$doc
+||l.facebook.com/l.php?u=https://lnnk.in^$doc
+||l.facebook.com/l.php?u=https://short.com.vn^$doc
+||l.facebook.com/l.php?u=https://*ljo.my.id^$doc
+||l.facebook.com/l.php?u=https://sprl.in^$all
+||ilang.in^$all
+||mzen-gasskeunnn.mom^$all
+||accesscam.org^$all
+||munboom.com^$all
+||pqb5xvc2ng.my.id^$all
+||adenmeledak.lol^$all
+||darbossmile.shop^$all
+||ikiwngabrettt.motorcycles^$all
+!||gsd.biz.id^$all
+!||ehx.biz.id^$all
+||biz.id^$all
+||nextpart.co.uk^$all
+||redr.me^$all
+||todayline.fun^$all
+||www.centralworld-tha.online^$all
+||l.facebook.com/l.php?u=http://ln.run^$all
+||thairathmedia.shop^$all
+||thaicreations.shop^$all
+||dfj.my.id^$all
+! Spam/Phising in Facebook.com messenger self gathering CONFIRM
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
+||rx-help-center.xyz^$all
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
+||facbook-supp.pages.dev.br^$all
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
+||home-business-helper.com^$all
+
+!!!**************************************************************************************
+!MARK:Discord spam self gathering
+!****************************************************************************************
+
+||7link.ru^$all
+||u.to^$doc
+
+!!!**************************************************************************************
+!MARK:Twitter (x.com) spam self gathering
+!****************************************************************************************
+
+!20240327200636
+||jey48.xyz^$all
+
+!!!**************************************************************************************
+!* 
+!* Thai illegal sites
+!* 
+!****************************************************************************************
+
+!MARK: ---------- URL general Rules ----------
+https://*.bet^$all
+!https://*bet.$all
+https://sexygame*.com^$all
+https://www.ufa*.$all
+https://ufa*.$all
+!https://*ssgame*/$all
+!https://*casino*.*/$all
+
+!block both link and ads video
+/brazil$media
+/lotto$media
+/ufanance$media
+/okcasino$media
+/nexobet$media
+/Lcd168$media
+/Ufac4$media
+/teenoi168$media
+!/heng99.jpg
+/heng99$image
+!/juad8881 และ /juad8882
+/juad*.gif$image
+/juad*.webp$image
+!/ufobet728x90
+/ufobet*.gif$image
+!/riches888all และ /riches888pg
+/riches.gif$image
+!/singha678
+/singha*.gif$image
+!/sexygame992 และ /sexybaccarat
+/sexygame*.gif$image
+/sexygame*.webp$image
+!/hydra888
+/hydra8$image
+!/brazil999
+/*brazil9*.gif$image
+/*brazil9*.webp$image
+!/lockdown168
+/lockdown1*.gif$image
+!/london168
+/*london1*.gif$image
+/*london1*.webp$image
+/ld168.gif$image
+!/ufa และ /ufazeed
+!/ufanance*.gif ซ้ำ
+!/kingdom66
+/*kingdom6*.gif$image
+/*kingdom6*.webp$image
+!/ufazeed ซ้ำ
+!/ufa ซ้ำ
+!/lotto4321
+/*lotto4*.gif$image
+/*lotto4*.webp$image
+!/hotgraph88
+/*hotgraph8*.gif$image
+/*hotgraph8*.webp$image
+!/mahagame88
+/*mahagame*.gif$image
+/*mahagame*.webp$image
+!/ssgame666
+/*ssgame*.gif$image
+/ssgame*.webp$image
+!/vip168sa
+/*vip168*.gif$image
+/*vip168*.webp$image
+!/sagame350v3
+/*sagame*.gif$image
+!/8xbetv2
+/8xbet*.gif$image
+!/huc99728x90
+/huc99*.gif$image
+!/luca99th
+/luca99*.gif$image
+!/baccarat99th
+/baccarat*.gif$image
+!/newyork888 และ !/newyork168.gif
+/*newyork*.gif$image
+/*newyork*.webp$image
+!/bufac4 /Bufazeed
+/bufa*.gif$image
+/bufa*.webp$image
+!/ss666
+/*ss666*.gif$image
+!/betflixcasino /betflixslot /betflix2k
+/betflix*.gif$image
+/BETFLIX*.webp$image
+/*Lockdown*.gif$image
+/*Lockdown*.webp$image
+/panama*.gif$image
+/*panama*.webp$image
+/ALL*.webp$image
+/*bacara*$image
+/*Lcd168.gif$image
+/*nance*.gif$image
+/*casino*.gif$image
+/meyou*.gif$image
+/SA-lucky*.gif$image
+/lucky135*.gif$image
+/jinda8*.gif$image
+/bcr99*.gif$image
+/ekings*.gif$image
+/qq288*.gif$image
+/THAISBET*.webp$image
+/*vj*soccer*.gif$image
+/*jbet*.gif$image
+/gclub*.jpg$image
+/Sagame*.webp$image
+/*GCLUB*.jpg$image
+/fhm*.gif$image
+/slot1234$image
+/slotnexobet$image
+-ufafat.gif$image
+-ufazeed.gif$image
+/lalika168.gif$image
+/UFAC4$image
+/999bet$image
+/qq101$image
+/rb88asia$image
+/qq288we$image
+/FUN88$image
+/betway$image
+/newvegas168$image
+/wmbet444$image
+/sbfplay99$image
+/dafabet$image
+/Empire777$image
+/huc33$image
+/188bet$image
+/365kub$image
+/pgwin88$image
+/1688ufabet$image
+/sbfplay$image
+/play69$image
+/AD1108$image
+/baccarat2gold$image
+/sa-gaming$image
+/spinix188$image
+/ligaz77king$image
+/r9betting$image
+/wmpro444$image
+/way88$image
+/red168$image
+/DATAbet88$image
+/pgjoker$image
+/bet777th$image
+/pcgotham$image
+/amb2win$image
+/newyoke168.gif$image
+/punpro7772.gif$image
+/QQ724.gif$image
+/8xbet.webp$image
+/pay69.webp$image
+/fafa*.webp$image
+/aoxx69.gif$image
+/116lotto.png$image
+/pgslo999.webp$image
+/pay69.gif$image
+/teenoi168.gif$image
+/Evolution.gif$image
+/xgbet369.gif$image
+/baccarat$image
+/ufa77$image
+/bet-casino-banner$image
+/ufawins.gif$image
+/dafabetaff.gif$image
+/lalikabet168.gif$image
+/bosotn777.gif$image
+/ufajaz*.webp$image
+/betflikcute.webp$image
+/ufa14k$image
+/PGK44.webp$image
+/joker123*.webp$image
+/JN-edit-*.gif$image
+/sexybaccarat*.webp$image
+/bacara888.gif$image
+/pgslot99.gif$image
+/lotto24.gif$image
+/PGK44.gif$image
+/jackpot.gif$image
+/slotxo24hr$image
+/avsubthai$image
+/Telegram18021.gif$image
+/ดูบอลฟรี-ชาช่า.gif$image
+/betangry$image
+/euro69-banner.gif$image
+/euro69-banner.gif$image
+
+!MARK: ---------- URL specific Rules ----------
+http://bit.ly/3GRDdCh$all
+http://bit.ly/3hC5suJ$all
+http://bit.ly/3HM8wNR$all
+http://bit.ly/3jfrZOW$all
+http://bit.ly/3K5kZiw$all
+http://bit.ly/3PAUBhl$all
+http://bit.ly/3VrYSWw$all
+http://daws-api.tv-asahi.co.jp^$all
+http://london1681.com^$all
+https://168*sagame.com^$all
+https://168pretty.*$all
+https://188th.co^$all
+https://789steps.com^$all
+https://8xbet-vip.*$all
+https://8xbet0.com^$all
+https://928hd.com^$all
+https://99tded.com^$all
+https://9slotgame.net^$all
+https://aff.123-boss.app^$all
+https://aff.123aff.in^$all
+https://aff.camelv1.com^$all
+https://aff.easy365.cc^$all
+https://aff.kingkong-89.cc^$all
+https://aff.lion-123.app^$all
+https://affhy88.com^$all
+https://ambbeth.com^$all
+https://anime-hit.com^$all
+https://app.shark-center.cc^$all
+https://app.xgbet369.com^$all
+https://baccarat888.com^$all
+https://bcr99th.com^$all
+https://bet777th.com^$all
+https://betflix*.com^$all
+https://bit.ly/38y9PSG$all
+https://bit.ly/39SJ38y$all
+https://bit.ly/3BOp05j$all
+https://bit.ly/3Dc6chd$all
+https://bit.ly/3EDlr4R$all
+https://bit.ly/3EL7eQz$all
+https://bit.ly/3eQUrEn$all
+https://bit.ly/3fgsjL7$all
+https://bit.ly/3Ii9guh$all
+https://bit.ly/3IImjFH$all
+https://bit.ly/3J1akmo$all
+https://bit.ly/3JXckyF$all
+https://bit.ly/3kGMAJM$all
+https://bit.ly/3KLcYg4$all
+https://bit.ly/3KPWg0l$all
+https://bit.ly/3LvnJX0$all
+https://bit.ly/3LwYxy7$all
+https://bit.ly/3mjB6iE$all
+https://bit.ly/3MOkx6w$all
+https://bit.ly/3NqDek8$all
+https://bit.ly/3pg77slbn1$all
+https://bit.ly/3PN1nzk$all
+https://bit.ly/3qEXOAJ$all
+https://bit.ly/3Qup284$all
+https://bit.ly/3Qwqzff$all
+https://bit.ly/3QzKPv2$all
+https://bit.ly/3RY5Ocz$all
+https://bit.ly/3sHnA99$all
+https://bit.ly/3UYH9Fa$all
+https://bit.ly/3W61vgX$all
+https://bit.ly/3xkgtGt$all
+https://bit.ly/3XO14cv$all
+https://bit.ly/3Ylg2FW$all
+https://bit.ly/3zVLFg9$all
+https://bit.ly/41BuuMq$all
+https://bit.ly/992-sexygame-sagame-pgslot-joker123$all
+https://bit.ly/anime-sugoii$all
+https://bit.ly/newvegas168-l*$all
+https://bit.ly/pgjoker69-*$all
+https://bit.ly/Pgjoker69-*$all
+https://bit.ly/pgslot-pg-sagaming-newvegas168$all
+https://bit.ly/sbobet-neevegas168-pgslot-fifa55$all
+https://bit.ly/sexygame-*$all
+https://bit.ly/ufabet*$all
+https://bmjverification-qa.bma.org.uk^$all
+https://brazil999.*$all
+https://cat999.com^$all
+https://click.a-ads.com^$all
+https://clsapitest.fdot.gov^$all
+https://d99d99.click^$all
+https://dev.pwm.basf.com^$all
+https://df011.com^$all
+https://dhorball.com^$all
+https://fx8.s3.ap-southeast-1.amazonaws.com^$all
+https://ggband.gg^$all
+https://hengjing168.win^$all
+https://heylink.me/fox888.vip$all
+https://hotgraph88.co^$all
+https://hotgraph883.com^$all
+https://hydra88*.co^$all
+https://jinda888.vip^$all
+https://joker123th.com^$all
+https://juad888*.com^$all
+https://k9wyyl.com^$all
+https://kingdom6*.com^$all
+https://lcbet168.com^$all
+https://ligaz77king.com^$all
+https://lin.ee/1ALiEXl$all
+https://line.me/R/ti/p/%40214gglya$all
+https://line.me/ti/p/lETR15cN-P$all
+https://lion123.asia^$all
+https://lkk135.com^$all
+https://lockdown168*$all
+https://london168*$all
+https://lotto*.co*$all
+https://luca99th.com^$all
+https://lucabet168.com^$all
+https://lucky135.com^$all
+https://lucky269.com^$all
+https://lucky629.com^$all
+https://mahagame88*.com^$all
+https://mayalounge.net^$all
+https://member.365kub.com^$all
+https://meyou147.com^$all
+https://mhandee88.com^$all
+https://nazavip.com^$all
+https://newyork888s.co*$all
+https://panama888*$all
+https://pg-gameslot.com^$all
+https://pigpg.com^$all
+https://pok10.com^$all
+https://r9betting.com^$all
+https://rebrand.ly^$all
+https://record.mytopaff.com^$all
+https://red168.com^$all
+https://sagame6*.co*$all
+https://shorturl.asia/IYvTC$all
+https://shorturl.asia/uUy3t$all
+https://shorturl.at/DEG56$all
+https://singha678.com^$all
+https://site.luckyniki88.com^$all
+https://slotheng.com^$all
+https://slotpgthai.net^$all
+https://smhotelingapicloud.deloitte.com^$all
+https://spinix188.com^$all
+https://tangtem168.com^$all
+https://thais4.com^$all
+https://thais7.com^$all
+https://tinyurl.com/2g58f3kv^$all
+https://tinyurl.com/2jrg2axo^$all
+https://track.cdnyz.com^$all
+https://vip168sa*$all
+https://wcmdevaks01.fairfaxcounty.gov^$all
+https://wmbet444.com^$all
+https://wvd.simon.com^$all
+https://www.188league.com^$all
+https://www.512xiaojin.com^$all
+https://www.azure.csuci.edu^$all
+https://www.betflix991.com^$all
+https://www.betg11.com^$all
+https://www.fun888asia.com^$all
+https://www.huc33.com^$all
+https://www.jinda888.vip^$all
+https://www.juad888*$all
+https://www.newyork888s.co^$all
+https://www.pg133.com^$all
+https://www.pgslot9999.co^$all
+https://www.sbfplay*$all
+https://www.scb9.net^$all
+https://www.sexy168.vip^$all
+https://www.slot1234.com^$all
+https://www.slotxo24hr.co^$all
+https://www.ufa*.*$all
+https://www.usa567.cc^$all
+https://www.xn--m3cd7amyt0n2a.com^$all
+https://wy88bets.com^$all
+https://xn--72c1abpacq3blf5b5e1c2kjb5d7bzabg4g.net^$all
+https://xn--b3cw4apb2b3e1a1gxc.com^$all
+mailto:kingsmanga@protonmail.com^$all
+https://grand-prize.xyz^$all
+https://www.royalprojectthailand.com^$all
+https://sbobet888.win^$all
+https://siammillion.com^$all
+https://www.allslot.bio^$all
+https://csbet88.com^$all
+https://goatbet88.com^$all
+https://goatbet888.com^$all
+https://psth888.com^$all
+https://scrt888.com^$all
+https://www.millenniumvillages.org^$all
+https://www.hapilabs.com^$all
+https://e15initiative.org^$all
+https://ohiovaxamillion.com^$all
+https://pg888t.com^$all
+https://lcbet88.com^$all
+https://spnx888.com^$all
+https://betplay569.com^$all
+https://lcbetasia.com^$all
+https://pgs88asia.com^$all
+https://pg999st.com^$all
+https://lcbet24hr.com^$all
+https://whanmhoo569.com^$all
+https://gclub321.com^$all
+https://www.siriusretail.com^$all
+https://paragon-usa.com^$all
+https://nashvillelgbtchamber.org^$all
+https://www.phelpsgov.org^$all
+https://lionth.com^$all
+https://sexycasino.co^$all
+https://shorturl.asia/gjxW1$all
+https://168pretty.com^$all
+https://www.gxy888.vip^$all
+https://siampoker.com^$all
+https://prettygaming168.com^$all
+https://pretty168.net^$all
+https://www.boss45.co^$all
+https://play3.huaylike.online^$all
+https://lionth.co^$all
+https://www.sexycasino.site^$all
+https://lalikabet168.co^$all
+https://ufac4z.com^$all
+https://www.longtablebangkok.com^$all
+https://www.cheneyforwyoming.com^$all
+https://ufa222.live^$all
+https://bit.ly/3Qr5Ifd^$all
+https://www.tcsoinfo.com^$all
+https://brazil999.plus^$all
+https://www.pgm1688.com^$all
+https://boston777s.com^$all
+https://register.gamegame.asia^$all
+https://popslot.vip^$all
+https://baccarat88-th.com^$all
+!Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
+https://pgf-asw0zz.co^$all
+!เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
+||vikkiromano.com^$all
+https://ufakick.io^$all
+https://www.meehay569st.co^$all
+https://baccarat888th.com^$all
+
+!MARK: ----------  fake game ----------!
+!*เกมเถื่อน
+||qq288.com$all
+
+!!!**************************************************************************************
+!* 
+!* General Ad Links/Servers
+!* 
+!****************************************************************************************
+
+!https://droidsans.com/former-samsung-employee-tipped-s22-series-all-come-with-snapdragon-chip/ 20240210230146
+/assets/js/google-adsense$script
+!MadeByMe Popup / Redirect / Ads Script
+||prawnsimply.com^$all
+||interesteddeterminedeurope.com^$all
+||oblongseller.com^$all
+||specialityharmoniousgypsy.com^$all
+||seatsrehearseinitial.com^$all
+||agabreloomr.com^$all
+||ptaimpeerte.com^$all
+||breedwaste.com^$all
+||exness.com/?campaign*$all
+||exness.com/?utm_source*$all
+||hethisisath.xyz^$all
+||s.optnx.com^$all
+||redclo.net^$all
+||xml.serving-passthrough.com^$all
+||nifty-transportation.com^$all
+||profitredirect.com^$all
+||ausoafab.net^$all
+||api.xtremepush.com^$all
+||advdomlab.com^$all
+||visors-airminal.com^$all
+||one.exness.link^$all
+||clicks.pipaffiliates.com^$all
+||tkictet.com^$all
+||for-j.com^$all
+||ak.roudoduor.com^$all
+||jaavnacsdw.com^$all
+||nhatubo.com^$all
+||ginpithed.live^$all
+||innocenceexpeditionsensation.com^$all
+||pre4sentre8dhf.com^$all
+||bestmatchproduce.com^$all
+||thaibetsite.com^$all
+||dspmega.com^$all
+||glersakr.com^$all
+||ilokhkvijq.com^$all
+||digitalgiftshopping.com^$all
+||a-ads.com^$all
+||realsrv.com^$all
+||blockadsnot.com^$all
+||come-get-s0me.net^$all
+||displayvertising.com^$all
+||betteradsystem.com^$all
+||d3mzokty951c5w.cloudfront.net^$all
+||qvorcqfon.com^$all
+!จาก mangapdf-online.com
+||impartialpath.com^$all
+||alarming-rule.com^$all
+!จาก aileen-novel.online
+https://www.yprdfnihszoaq.com^$all
+https://www.gqdhsmwzpc.com^$all
+!จาก mangapdf-online.com
+https://www.xwojiijs.com^$all
+https://www.okx.com^$all
+https://www.zpigericvlz.com^$all
+https://www.fogtweybq.com^$all
+https://www.sxirpkuxm.com^$all
+https://www.laeiwbkt.com^$all
+https://www.lgqffscxfqv.com.com^$all
+https://cdn.laulme.info^$all
+!จาก toon-read.blogspot.com 20240217213119
+||diqkldlh.com^$all
+||vrqsvrnjrhdmek.com^$all
+!จาก manhwazmove.com
+https://wowrapidly.com^$all
+!จาก novelpdf.xyz
+||ticket.leaforfree.com^$all
+!จาก imgbox.com
+!https://cdn52969391.ahacdn.me^$all
+||ahacdn.me^$all
+||adsmediabox.com^$all
+!พบใน เช่น compgamer.com
+||to0s.biz^$all
+!จาก playermeow.com uBlock Ads, EasyList block ไม่ครบทุกประเภท เช่นใน anime-sugoi.com
+||aitsatho.com^$all
+!จาก playermeow.com เช่นใน anime-sugoi.com
+https://cdn.apicdn*.one^$xhr
+!จาก kingsmanga.net 20240217181701
+||judosllyn.com^$script,3p
+||exness.com^$all,domain=~exness.com
+!from siamblockchain.com
+||cryptojimmy.care^$all
+! จาก https://www.khaosod.co.th/special-stories/news_8115706 20240228164753
+||bidsxplayer.com/api/adserver/$3p
+!official popup blocker test
+||rrc.texas.gov^$popup
+! จาก stream.animeorder.com ที่อยู่ใน anime-sugoi.com และ animeyuzu.com 20240308221538
+||amung.us^$all
+! จาก https://cats-translator.com และ HaGeZi's Pro DNS Blocklist 20240318211729
+||cdend.com^
+! โฆษณาที่ขอบรูปใน https://www.khaosod.co.th 20240325140322
+||thapi.aedi.ai^$3p
+! จาก https://www.lifewire.com/fix-error-0x80070643-4691724 20240326191222
+||d30qdagvt44524.cloudfront.net^$3p
+
+!https://github.com/easylist-thailand/easylist-thailand/issues/81
+!! `||app.appsflyer.com^` from AdGuard Tracking Protection breaks Shopee affiliated link. can be skipped by `➗ Actually Legitimate URL Shortener Tool` filter below
+*$removeparam=/^\??utm_/i,from=~allegro.pl|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~sendgb.com|~tix.axs.com|~tradedoubler.com|~transfernow.*
+
+playermeow.com##+js(nowoif)
+!!ลิงก์ที่เปิด คือ
+||jl63v3fp1.com^$all
+||bestadsforyou.com^$all
+!!!**************************************************************************************
+!* 
+!* Specific Ads Rules (No Thai sites)
+!* 
+!****************************************************************************************
+
+!MARK: ---Google ---
+
+!MARK: ---clouds cloud ---
+!terabox.com 20231224182134
+terabox.com##.seo-banner-box
+terabox.com##.drainage
+!MARK: ---picture image or host---
+
+!imgbox.com mobile 20240128204852
+!#if cap_html_filtering
+imgbox.com##^._ln-floater:upward(1)
+!#endif
+imgbox.com##._ln-floater:upward(1)
+
+!www.photopea.com 20240609192756
+https://www.photopea.com/img/mog/moon_w.jpg$from=www.photopea.com
+https://www.photopea.com/img/mog/din2_w.jpg$from=www.photopea.com
+https://www.photopea.com/img/mog/cola_w.jpg$from=www.photopea.com
+https://www.photopea.com/img/mog/conn_w.jpg$from=www.photopea.com
+https://www.photopea.com/img/mog/tiny_w.jpg$from=www.photopea.com
+https://www.photopea.com/img/mog/loud_w.jpg$from=www.photopea.com
+
+!MARK: ---video streaming---
+!streamable.com 20231212003316
+||socket.streamable.com^
+!client.iamtheme.com 20231212003315
+||client.iamtheme.com/images/banners/$media,redirect-rule=noopmp3-0.1s
+!MARK: ---international news ---
+!collider.com 20231212003313
+!#if cap_html_filtering
+collider.com##^div.ad-zone
+!#endif
+collider.com##div.ad-zone
+
+!www.newsweek.com 20240123185621
+!#if cap_html_filtering
+www.newsweek.com##^#topad
+!#endif
+www.newsweek.com###topad
+!#if cap_html_filtering
+www.newsweek.com##^#right1ad
+!#endif
+www.newsweek.com###right1ad
+!#if cap_html_filtering
+www.newsweek.com##^div[id^="dfp-ad-inarticle"]
+!#endif
+www.newsweek.com##div[id^="dfp-ad-inarticle"]
+!#if cap_html_filtering
+www.newsweek.com##^.block-fusion-ads
+!#endif
+www.newsweek.com##.block-fusion-ads
+
+!www.bloomberg.com 20240402210932
+www.bloomberg.com##div[class^="media-ui-Placeholder_placeholderParagraphWrapper-"]
+www.bloomberg.com##div[class="adWrapper"]
+
+!indiatimes.com 20240409021051
+indiatimes.com##.sticky_minitv
+indiatimes.com##div[id^="custom_ad_wrapper_"]
+
+!MARK: ---education ---
+!clearnotebooks.com
+!#if cap_html_filtering
+clearnotebooks.com##^div[class$="-notebook-page-banners"]
+!#endif
+clearnotebooks.com##div[class$="-notebook-page-banners"]
+||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
+!ptable.com 20240527165809
+!#if cap_html_filtering
+ptable.com##^#Notice
+!#endif
+ptable.com###Notice
+!#if cap_html_filtering
+ptable.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+ptable.com##ins.adsbygoogle[data-ad-slot]
+!ieltsbuddy.com 
+!#if cap_html_filtering
+ieltsbuddy.com##^div[class="modal_block modal_ ss-ui-bootstrap"]
+!#endif
+ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
+
+!MARK: ---redirect qr code ---
+!me-qr.com
+!#if cap_html_filtering
+me-qr.com##^div[class="bg-success"]
+!#endif
+me-qr.com##div[class="bg-success"]
+!MARK: ---music ---
+
+!MARK: ---social platform ---
+
+!facebook.com 20240325005206
+!#if !env_mobile
+web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
+!#endif
+
+!twitter.com (x.com) 20240619004654
+||ads-api.twitter.com^$xhr
+
+!MARK: ---wiki ---
+!fandom.com 
+!#if cap_html_filtering
+fandom.com##^.top-ads-container
+!#endif
+fandom.com##.top-ads-container
+!#if cap_html_filtering
+fandom.com##^.ad-slot-placeholder
+!#endif
+fandom.com##.ad-slot-placeholder
+!MARK: ---Apk ---
+
+!apkcombo.com 20240619004113
+!#if cap_html_filtering
+apkcombo.com##^[data-m-ad-id]
+!#endif
+apkcombo.com##[data-m-ad-id]
+!#if cap_html_filtering
+apkcombo.com##^[data-d-ad-id]
+!#endif
+apkcombo.com##[data-d-ad-id]
+
+!apkmoddone.com 20240619004033
+!#if cap_html_filtering
+apkmoddone.com##^.blogAd
+!#endif
+apkmoddone.com##.blogAd
+!#if cap_html_filtering
+apkmoddone.com##^#adTop
+!#endif
+apkmoddone.com###adTop
+
+!MARK: ---dictionary ---
+
+!oxfordlearnersdictionaries.com 20240619003331
+!#if cap_html_filtering
+oxfordlearnersdictionaries.com##^#topslot_container
+!#endif
+oxfordlearnersdictionaries.com###topslot_container
+!#if cap_html_filtering
+oxfordlearnersdictionaries.com##^#ot-sdk-btn:not(button)
+!#endif
+oxfordlearnersdictionaries.com###ot-sdk-btn:not(button)
+!collinsdictionary.com 20240619003511
+!#if cap_html_filtering
+collinsdictionary.com##^.topslot_container
+!#endif
+collinsdictionary.com##.topslot_container
+!#if cap_html_filtering
+collinsdictionary.com##^#ot-sdk-btn:not(button)
+!#endif
+collinsdictionary.com###ot-sdk-btn:not(button)
+!freethesaurus.com,thefreedictionary.com 20240619003003
+!#if cap_html_filtering
+freethesaurus.com,thefreedictionary.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+freethesaurus.com,thefreedictionary.com##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+thefreedictionary.com##^div[class="vx"][id="vx1"]
+!#endif
+thefreedictionary.com##div[class="vx"][id="vx1"]
+
+!MARK: ---shopping online ---
+
+!MARK: ---game ---
+
+!MARK: ---game news ---
+
+!MARK: ---foods food serices ---
+
+!MARK: ---watchlist review movie anime tv show ---
+
+!www.livechart.me 20240619005154
+!#if cap_html_filtering
+www.livechart.me##^.ad-unit:not(.text-ad):not(.textads)
+!#endif
+www.livechart.me##.ad-unit:not(.text-ad):not(.textads)
+
+!MARK: ---ebook e book e-book publisher ---
+
+!MARK: ---ebook e book e-book publisher japan japanese ---
+
+!MARK: ---benmarck speedtest web ---
+
+!MARK: --- test ---
+
+!keyboard-test.space 20240527165821
+!#if cap_html_filtering
+keyboard-test.space##^#tgroup_40
+!#endif
+keyboard-test.space###tgroup_40
+!#if cap_html_filtering
+keyboard-test.space##^ins.adsbygoogle[data-ad-slot]
+!#endif
+keyboard-test.space##ins.adsbygoogle[data-ad-slot]
+
+!MARK: ---file transfer ---
+
+!MARK: ---tech news ---
+!gsmarena.com
+!#if cap_html_filtering
+gsmarena.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+gsmarena.com##^.adv
+!#endif
+gsmarena.com##.adv
+!#if cap_html_filtering
+gsmarena.com##^#topAdv
+!#endif
+gsmarena.com###topAdv
+!extremeit.com 
+!#if cap_html_filtering
+extremeit.com##^table[border="0"]
+!#endif
+extremeit.com##table[border="0"]
+!#if cap_html_filtering
+extremeit.com##^#tdi_73
+!#endif
+extremeit.com###tdi_73
+!computerworld.com
+!#if cap_html_filtering
+computerworld.com##^.ad
+!#endif
+computerworld.com##.ad
+!#if cap_html_filtering
+computerworld.com##^.ad-header
+!#endif
+computerworld.com##.ad-header
+!#if cap_html_filtering
+computerworld.com##^.ad-placement
+!#endif
+computerworld.com##.ad-placement
+!androidauthority.com 20240325160327
+!gizchina.com
+!#if cap_html_filtering
+gizchina.com##^.mrf-adv__wrapper
+!#endif
+gizchina.com##.mrf-adv__wrapper
+!makeuseof.com
+!#if cap_html_filtering
+makeuseof.com##^div.adsninja-ad-zone
+!#endif
+makeuseof.com##div.adsninja-ad-zone
+!sammobile.com 20240527165824
+!#if cap_html_filtering
+sammobile.com##^.in-content-ad-container
+!#endif
+sammobile.com##.in-content-ad-container
+!#if cap_html_filtering
+sammobile.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+sammobile.com##ins.adsbygoogle[data-ad-slot]
+!techpp.com
+!#if cap_html_filtering
+techpp.com##^#tppAdsID
+!#endif
+techpp.com###tppAdsID
+!#if cap_html_filtering
+techpp.com##^#brxe-djelsv
+!#endif
+techpp.com###brxe-djelsv
+!raymond.cc 20240527165827
+!#if cap_html_filtering
+raymond.cc##^ins.adsbygoogle[data-ad-slot]
+!#endif
+raymond.cc##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+raymond.cc##^.adsbygoogle
+!#endif
+raymond.cc##.adsbygoogle
+!howtogeek.com
+!#if cap_html_filtering
+howtogeek.com##^.widget-area
+!#endif
+howtogeek.com##.widget-area
+!#if cap_html_filtering
+howtogeek.com##^.adslot970
+!#endif
+howtogeek.com##.adslot970
+!#if cap_html_filtering
+howtogeek.com##^.adsninja-ad-zone
+!#endif
+howtogeek.com##.adsninja-ad-zone
+!androidpolice.com
+!#if cap_html_filtering
+androidpolice.com##^.adsninja-ad-zone
+!#endif
+androidpolice.com##.adsninja-ad-zone
+!trustedreviews.com
+!#if cap_html_filtering
+trustedreviews.com##^.ipc-advert
+!#endif
+trustedreviews.com##.ipc-advert
+!#if cap_html_filtering
+trustedreviews.com##^.ad-holder
+!#endif
+trustedreviews.com##.ad-holder
+!#if cap_html_filtering
+trustedreviews.com##^.post_detail_right_advert
+!#endif
+trustedreviews.com##.post_detail_right_advert
+!#if cap_html_filtering
+trustedreviews.com##^.top-advert
+!#endif
+trustedreviews.com##.top-advert
+!#if cap_html_filtering
+trustedreviews.com##^.squirrel_widget
+!#endif
+trustedreviews.com##.squirrel_widget
+!androidcentral.com
+!#if cap_html_filtering
+androidcentral.com##^div.dfp-leaderboard-container
+!#endif
+androidcentral.com##div.dfp-leaderboard-container
+!#if cap_html_filtering
+androidcentral.com##^div[id="widgetArea17"]
+!#endif
+androidcentral.com##div[id="widgetArea17"]
+!#if cap_html_filtering
+androidcentral.com##^div.related-articles-block
+!#endif
+androidcentral.com##div.related-articles-block
+!#if cap_html_filtering
+androidcentral.com##^div.van_taboola
+!#endif
+androidcentral.com##div.van_taboola
+!#if cap_html_filtering
+androidcentral.com##^div[class="van_vid_carousel vid-present"]
+!#endif
+androidcentral.com##div[class="van_vid_carousel vid-present"]
+!#if cap_html_filtering
+androidcentral.com##^div[class="in-article ad-unit"]
+!#endif
+androidcentral.com##div[class="in-article ad-unit"]
+!#if cap_html_filtering
+androidcentral.com##^div[id="top-leaderboard"]
+!#endif
+androidcentral.com##div[id="top-leaderboard"]
+!#if cap_html_filtering
+androidcentral.com##^div[class="ad-unit"]
+!#endif
+androidcentral.com##div[class="ad-unit"]
+!pcgamer.com
+!#if cap_html_filtering
+pcgamer.com##^.ad-placement
+!#endif
+pcgamer.com##.ad-placement
+!#if cap_html_filtering
+pcgamer.com##^.sponsored-post
+!#endif
+pcgamer.com##.sponsored-post
+!#if cap_html_filtering
+pcgamer.com##^#hawkMagWidget
+!#endif
+pcgamer.com###hawkMagWidget
+!#if cap_html_filtering
+pcgamer.com##^.dfp-leaderboard-container
+!#endif
+pcgamer.com##.dfp-leaderboard-container
+!whathifi.com
+!#if cap_html_filtering
+whathifi.com##^.sponsored-post
+!#endif
+whathifi.com##.sponsored-post
+!#if cap_html_filtering
+whathifi.com##^.ad-unit
+!#endif
+whathifi.com##.ad-unit
+!#if cap_html_filtering
+whathifi.com##^.dfp-leaderboard-container
+!#endif
+whathifi.com##.dfp-leaderboard-container
+!#if cap_html_filtering
+whathifi.com##^.newsletter-inbodyContent-slice
+!#endif
+whathifi.com##.newsletter-inbodyContent-slice
+!#if cap_html_filtering
+whathifi.com##^#hawkMagWidget
+!#endif
+whathifi.com###hawkMagWidget
+!tomsguide.com 20230430152716
+!#if cap_html_filtering
+tomsguide.com##^.sponsored-post
+!#endif
+tomsguide.com##.sponsored-post
+!#if cap_html_filtering
+tomsguide.com##^#taboola-below-article-thumbnails
+!#endif
+tomsguide.com###taboola-below-article-thumbnails
+!#if cap_html_filtering
+tomsguide.com##^.vid-present > .van_vid_carousel__padding
+!#endif
+tomsguide.com##.vid-present > .van_vid_carousel__padding
+!#if cap_html_filtering
+tomsguide.com##^.dfp-leaderboard-container
+!#endif
+tomsguide.com##.dfp-leaderboard-container
+!xda-developers.com 20240114015836
+!#if cap_html_filtering
+xda-developers.com##^div[id^="adsninja"]
+!#endif
+xda-developers.com##div[id^="adsninja"]
+!alphr.com
+!#if cap_html_filtering
+alphr.com##^[data-freestar-ad]
+!#endif
+alphr.com##[data-freestar-ad]
+!#if cap_html_filtering
+alphr.com##^.sticky-ads-container
+!#endif
+alphr.com##.sticky-ads-container
+!#if cap_html_filtering
+alphr.com##^.sticky-ads
+!#endif
+alphr.com##.sticky-ads
+!sammyfans.com 20240527165830
+!#if cap_html_filtering
+sammyfans.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+sammyfans.com##ins.adsbygoogle[data-ad-slot]
+!bleepingcomputer.com 20240527165832
+!#if cap_html_filtering
+bleepingcomputer.com##^section[class="cz-oa-wrapp"]
+!#endif
+bleepingcomputer.com##section[class="cz-oa-wrapp"]
+!#if cap_html_filtering
+bleepingcomputer.com##^section[class="cz-boa-wrapp"]
+!#endif
+bleepingcomputer.com##section[class="cz-boa-wrapp"]
+!#if cap_html_filtering
+bleepingcomputer.com##^.fs-dynamic
+!#endif
+bleepingcomputer.com##.fs-dynamic
+!#if cap_html_filtering
+bleepingcomputer.com##^.asa
+!#endif
+bleepingcomputer.com##.asa
+!#if cap_html_filtering
+bleepingcomputer.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+bleepingcomputer.com##ins.adsbygoogle[data-ad-slot]
+!pcworld.com
+pcworld.com##div.wp-block-column:nth-of-type(2)
+!#if cap_html_filtering
+pcworld.com##^div[data-ad-template="banner"]
+!#endif
+pcworld.com##div[data-ad-template="banner"]
+!neowin.net 20240124130101
+!#if cap_html_filtering
+neowin.net##^.header-banner-ads
+!#endif
+neowin.net##.header-banner-ads
+!#if cap_html_filtering
+neowin.net##^div[data-freestar-ad]
+!#endif
+neowin.net##div[data-freestar-ad]
+!#if cap_html_filtering
+neowin.net##^.widget-ad
+!#endif
+neowin.net##.widget-ad
+!tomshardware.com 20240114140930
+!#if cap_html_filtering
+tomshardware.com##^.dfp-leaderboard-container
+!#endif
+tomshardware.com##.dfp-leaderboard-container
+!topcpu.net 20240607191040
+!#if cap_html_filtering
+topcpu.net##^div[class="w-full globalsun-c"]
+!#endif
+topcpu.net##div[class="w-full globalsun-c"]
+!userbenchmark.com 20240608155616
+!#if cap_html_filtering
+userbenchmark.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+userbenchmark.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!MARK: ---tech ---
+!cyanogenmods.org 20240615193040
+!#if cap_html_filtering
+cyanogenmods.org##^div#cyan-ad-slot
+!#endif
+cyanogenmods.org##div#cyan-ad-slot
+!MARK: ---code coding ---
+!sourceforge.net
+!#if cap_html_filtering
+sourceforge.net##^[id^="google_ads_iframe"]
+!#endif
+sourceforge.net##[id^="google_ads_iframe"]
+!#if cap_html_filtering
+sourceforge.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!tutorialstonight.com
+!#if cap_html_filtering
+tutorialstonight.com##^span[class^="ezoic-"]
+!#endif
+tutorialstonight.com##span[class^="ezoic-"]
+!#if cap_html_filtering
+tutorialstonight.com##^div[id^="ez-sidebar"]
+!#endif
+tutorialstonight.com##div[id^="ez-sidebar"]
+!#if cap_html_filtering
+tutorialstonight.com##^[id^="google_ads_iframe"]
+!#endif
+tutorialstonight.com##[id^="google_ads_iframe"]
+!#if cap_html_filtering
+tutorialstonight.com##^.banner_ads
+!#endif
+tutorialstonight.com##.banner_ads
+!#if cap_html_filtering
+tutorialstonight.com##^[data-ez-name]
+!#endif
+tutorialstonight.com##[data-ez-name]
+!#if cap_html_filtering
+tutorialstonight.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+tutorialstonight.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+tutorialstonight.com##^#ezmobfooter
+!#endif
+tutorialstonight.com###ezmobfooter
+!freecodecamp.org 20230430155258
+!#if cap_html_filtering
+freecodecamp.org##^.sidebar
+!#endif
+freecodecamp.org##.sidebar
+!linuxhint.com 20230503020240
+!#if cap_html_filtering
+linuxhint.com##^.adthrive
+!#endif
+linuxhint.com##.adthrive
+!#if cap_html_filtering
+linuxhint.com##^.adthrive-content
+!#endif
+linuxhint.com##.adthrive-content
+!#if cap_html_filtering
+linuxhint.com##^.adthrive-ad
+!#endif
+linuxhint.com##.adthrive-ad
+!#if cap_html_filtering
+linuxhint.com##^.adthrive-header
+!#endif
+linuxhint.com##.adthrive-header
+!thepythoncode.com
+!#if cap_html_filtering
+thepythoncode.com##^span[id^="ezoic-pub-ad-placeholder-"]
+!#endif
+thepythoncode.com##span[id^="ezoic-pub-ad-placeholder-"]
+!#if cap_html_filtering
+thepythoncode.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+thepythoncode.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+thepythoncode.com##^[data-ez-name]
+!#endif
+thepythoncode.com##[data-ez-name]
+!#if cap_html_filtering
+thepythoncode.com##^.ezoic-floating-bottom
+!#endif
+thepythoncode.com##.ezoic-floating-bottom
+!#if cap_html_filtering
+thepythoncode.com##^.ezoic-ad-adaptive
+!#endif
+thepythoncode.com##.ezoic-ad-adaptive
+!#if cap_html_filtering
+thepythoncode.com##^.ezoic-ad
+!#endif
+thepythoncode.com##.ezoic-ad
+!#if cap_html_filtering
+thepythoncode.com##^.ezmob-footer-desktop
+!#endif
+thepythoncode.com##.ezmob-footer-desktop
+!#if cap_html_filtering
+thepythoncode.com##^.ezmob-footer
+!#endif
+thepythoncode.com##.ezmob-footer
+!MARK: ---web builder ---
+
+!MARK: ---redirect ---
+!adfoc.us 
+!#if cap_html_filtering
+adfoc.us##^.content > iframe
+!#endif
+adfoc.us##.content > iframe
+!MARK: ---automatic ---
+!MARK: ---alternative ---
+
+!alternativeto.net 20240527165841
+!#if cap_html_filtering
+alternativeto.net##^ins.adsbygoogle[data-ad-slot]
+!#endif
+alternativeto.net##ins.adsbygoogle[data-ad-slot]
+
+!MARK: ---apps programs ---
+
+!MARK: ---movie legitimate ---
+
+!flixerapp.com 20240410190153
+!#if cap_html_filtering
+flixerapp.com##^.ads-container
+!#endif
+flixerapp.com##.ads-container
+
+!MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
+
+!animeranku.com 20240527165845
+!#if cap_html_filtering
+animeranku.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+animeranku.com##ins.adsbygoogle[data-ad-slot]
+
+!MARK: ---music illegitimate ---
+
+!MARK: ---tech illegitimate ---
+
+!MARK: ---Manga Foreign---
+
+!mangakakalot.tv
+!#if cap_html_filtering
+mangakakalot.tv##^div[style="float: left;width: 100%;text-align: center;"]
+!#endif
+mangakakalot.tv##div[style="float: left;width: 100%;text-align: center;"]
+!#if cap_html_filtering
+mangakakalot.tv##^div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
+!#endif
+mangakakalot.tv##div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
+
+!manhwatop.to 20240224215854
+!#if cap_html_filtering
+manhwatop.to##^iframe[src^="//ad.a-ads.com/"]
+!#endif
+manhwatop.to##iframe[src^="//ad.a-ads.com/"]
+
+!MARK: ---Novel Foreign---
+
+!www.novelupdates.com
+!#if cap_html_filtering
+www.novelupdates.com##^.ad_336
+!#endif
+www.novelupdates.com##.ad_336
+!#if cap_html_filtering
+www.novelupdates.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+www.novelupdates.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+
+!!!**************************************************************************************
+!* 
+!* Specific Ads Rules (Thai sites)
+!* 
+!****************************************************************************************
+
+!MARK: ---thai government
+
+!MARK: ---education ---
+
+!camphub.in.th
+!#if cap_html_filtering
+camphub.in.th##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+camphub.in.th##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+
+!dek-d.com 20240427012407
+!!โฆษณาที่วางด้านขวาของหน้าบทความ
+!#if cap_html_filtering
+dek-d.com##^div[id="big-box"]
+!#else
+dek-d.com##div[id="big-box"]
+!#endif
+
+!ngthai.com 20240514145231
+!#if cap_html_filtering
+ngthai.com##^div[class="bg-popup"]
+!#else
+ngthai.com##div[class="bg-popup"]
+!#endif
+
+!MARK: ---social platform ---
+
+!pantip.com 20240622015108
+pantip.com##div[id^="frukt:script:"]:upward(div[id^="pantip:script"])
+
+!MARK: ---wiki ---
+
+!siam.wiki
+!#if cap_html_filtering
+siam.wiki##^.chat-popup
+!#endif
+siam.wiki##.chat-popup
+
+!MARK: ---dictionary ---
+
+!dict.longdo.com เอาแทบโฆษณาออก 20240302195411
+!#if cap_html_filtering
+dict.longdo.com##^#sidebar
+!#endif
+dict.longdo.com###sidebar
+
+!MARK: ---ebook e book e-book publisher thai ---
+
+!MARK: ---thai news ข่าว---
+
+!kapook.com 20231212003311
+!#if cap_html_filtering
+kapook.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+kapook.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+kapook.com##^div.ads728
+!#endif
+kapook.com##div.ads728
+!#if cap_html_filtering
+kapook.com##^#container > div.fullbanner
+!#endif
+kapook.com###container > div.fullbanner
+!#if cap_html_filtering
+kapook.com##^#aside_article
+!#endif
+kapook.com###aside_article
+!#if cap_html_filtering
+kapook.com##^div.taboola-x2-widget:last-child
+!#endif
+kapook.com##div.taboola-x2-widget:last-child
+!#if cap_html_filtering
+kapook.com##^#google_esf
+!#endif
+kapook.com###google_esf
+
+!thairath.co.th
+!!หน้าข่าว pc 20231212003942
+!#if cap_html_filtering
+thairath.co.th##^div#slot-billboard:upward(3)
+!#endif
+thairath.co.th##div#slot-billboard:upward(3)
+!#if cap_html_filtering
+thairath.co.th##^div#slot-tower:upward(3)
+!#endif
+thairath.co.th##div#slot-tower:upward(3)
+thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
+!#if cap_html_filtering
+thairath.co.th##^div[style="height:300px"]
+!#endif
+thairath.co.th##div[style="height:300px"]
+!#if cap_html_filtering
+thairath.co.th##^div#slot-right_rail:upward(2)
+!#endif
+thairath.co.th##div#slot-right_rail:upward(2)
+!#if cap_html_filtering
+thairath.co.th##^div[style="text-align: center; opacity: 1;"]
+!#endif
+thairath.co.th##div[style="text-align: center; opacity: 1;"]
+!#if cap_html_filtering
+thairath.co.th##^div[class^="ads-slot-"]:upward(1)
+!#endif
+thairath.co.th##div[class^="ads-slot-"]:upward(1)
+!!หน้าหลัก pc 20231212004228
+!#if cap_html_filtering
+thairath.co.th##^div#homepage-top:upward(3)
+!#endif
+thairath.co.th##div#homepage-top:upward(3)
+!#if cap_html_filtering
+thairath.co.th##^div#homepage-rectangle:upward(2)
+!#endif
+thairath.co.th##div#homepage-rectangle:upward(2)
+!!หน้าข่าว mobile 20231212005218
+!#if cap_html_filtering
+thairath.co.th##^div#slot-headline:upward(2)
+!#endif
+thairath.co.th##div#slot-headline:upward(2)
+!#if cap_html_filtering
+thairath.co.th##^div#slot-postarticle:upward(3)
+!#endif
+thairath.co.th##div#slot-postarticle:upward(3)
+!!thairath.co.th/sport
+!#if cap_html_filtering
+thairath.co.th##^div[data-container-id="ivs-player"]
+!#endif
+thairath.co.th##div[data-container-id="ivs-player"]
+!!thairath.co.th/money 20231222211603
+!!!หน้าหลัก
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-top-desktop:upward(1)
+!#endif
+thairath.co.th##div#slot-money-top-desktop:upward(1)
+!!!หน้าข่าว
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-billboard:upward(1)
+!#endif
+thairath.co.th##div#slot-money-billboard:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-rigth-rail-desktop:upward(1)
+!#endif
+thairath.co.th##div#slot-money-rigth-rail-desktop:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div[id^="slot-money-inarticle"]:upward(1)
+!#endif
+thairath.co.th##div[id^="slot-money-inarticle"]:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-middle-postarticle-desktop:upward(1)
+!#endif
+thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div.btn--close:upward(1)
+!#endif
+thairath.co.th##div.btn--close:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
+!#endif
+thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
+!!!mobile
+!!!หน้าหลัก
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-top-mobile:upward(1)
+!#endif
+thairath.co.th##div#slot-money-top-mobile:upward(1)
+!!!หน้าข่าว
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-headline:upward(1)
+!#endif
+thairath.co.th##div#slot-money-headline:upward(1)
+!#if cap_html_filtering
+thairath.co.th##^div#slot-money-middle-postarticle-mobile:upward(1)
+!#endif
+thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
+
+!ch3plus.com 20240220140536
+!#if cap_html_filtering
+ch3plus.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#else
+ch3plus.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+!#if cap_html_filtering
+ch3plus.com##^.sp-banner
+!#else
+ch3plus.com##.sp-banner
+!#endif
+
+!matichon.co.th 20231216214133
+!#if cap_html_filtering
+matichon.co.th##^.td-a-rec
+!#endif
+matichon.co.th##.td-a-rec
+
+!brighttv.co.th
+!#if cap_html_filtering
+brighttv.co.th##^.b-banner
+!#endif
+brighttv.co.th##.b-banner
+
+!beartai.com 20240302191325
+
+!tnews.co.th 
+!#if cap_html_filtering
+tnews.co.th##^.default-sticky
+!#endif
+tnews.co.th##.default-sticky
+!#if cap_html_filtering
+tnews.co.th##^div.mobile
+!#endif
+tnews.co.th##div.mobile
+!#if cap_html_filtering
+tnews.co.th##^div.desktop
+!#endif
+tnews.co.th##div.desktop
+
+!thansettakij.com 
+!#if cap_html_filtering
+thansettakij.com##^.ads-billboard
+!#endif
+thansettakij.com##.ads-billboard
+!#if cap_html_filtering
+thansettakij.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+
+!thestandard.co
+!#if cap_html_filtering
+thestandard.co##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+thestandard.co##^.adsbyadop
+!#endif
+thestandard.co##.adsbyadop
+!#if cap_html_filtering
+thestandard.co##^div[class="banner-box hidden-xs"]
+!#endif
+thestandard.co##div[class="banner-box hidden-xs"]
+!#if cap_html_filtering
+thestandard.co##^.mySlidesMasthead
+!#endif
+thestandard.co##.mySlidesMasthead
+
+!workpointtoday.com 20240322022230
+
+!men.kapook.com 20240608013432
+!#if cap_html_filtering
+men.kapook.com##^.taboola-x2-widget
+!#endif
+men.kapook.com##.taboola-x2-widget
+!#if cap_html_filtering
+men.kapook.com##^div[id^="div-gpt-ad"][class="skin_vdo"]
+!#endif
+men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
+!#if cap_html_filtering
+men.kapook.com##^div[class="ads728 h90"]
+!#endif
+men.kapook.com##div[class="ads728 h90"]
+!#if cap_html_filtering
+men.kapook.com##^div.aside_article
+!#endif
+men.kapook.com##div.aside_article
+!#if cap_html_filtering
+men.kapook.com##^ins[class="adsbygoogle adsbygoogle-noablate"]
+!#endif
+men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
+
+!pptvhd36.com
+!#if cap_html_filtering
+pptvhd36.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+pptvhd36.com##^[id^="google_ads_iframe"]
+!#endif
+pptvhd36.com##[id^="google_ads_iframe"]
+!#if cap_html_filtering
+pptvhd36.com##^.ads-wrapper
+!#endif
+pptvhd36.com##.ads-wrapper
+!#if cap_html_filtering
+pptvhd36.com##^#taboola-below-article-thumbnails
+!#endif
+pptvhd36.com###taboola-below-article-thumbnails
+!#if cap_html_filtering
+pptvhd36.com##^.ads-ppn
+!#endif
+pptvhd36.com##.ads-ppn
+!#if cap_html_filtering
+pptvhd36.com##^.special-gateway__img
+!#endif
+pptvhd36.com##.special-gateway__img
+
+!dailynews.co.th
+!#if cap_html_filtering
+dailynews.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+dailynews.co.th##^#taboola-below-article-thumbnails
+!#endif
+dailynews.co.th###taboola-below-article-thumbnails
+!#if cap_html_filtering
+dailynews.co.th##^div[id^="elementor-popup-modal-"]
+!#endif
+dailynews.co.th##div[id^="elementor-popup-modal-"]
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
+dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
+!#if cap_html_filtering
+dailynews.co.th##^div[style="height: 600px; margin: 20px auto;"]
+!#endif
+dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
+
+!khaosod.co.th 20240516191924
+!#if cap_html_filtering
+khaosod.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#else
+khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+!#if cap_html_filtering
+khaosod.co.th##^div[id*="ScriptRoot"]
+!#else
+khaosod.co.th##div[id*="ScriptRoot"]
+!#endif
+
+!khaosodenglish.com 20240130222122
+!#if cap_html_filtering
+khaosodenglish.com##^span.td-adspot-title:upward(1)
+!#endif
+khaosodenglish.com##span.td-adspot-title:upward(1)
+
+!nationtv.tv
+!#if cap_html_filtering
+nationtv.tv##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+nationtv.tv##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+nationtv.tv##^[id^="google_ads_iframe"]
+!#endif
+nationtv.tv##[id^="google_ads_iframe"]
+!#if cap_html_filtering
+nationtv.tv##^.ads-billboard
+!#endif
+nationtv.tv##.ads-billboard
+!#if cap_html_filtering
+nationtv.tv##^.ads-postarticle
+!#endif
+nationtv.tv##.ads-postarticle
+!#if cap_html_filtering
+nationtv.tv##^div[class^="ads-sticky-"]
+!#endif
+nationtv.tv##div[class^="ads-sticky-"]
+!#if cap_html_filtering
+nationtv.tv##^div[class^="ads-inarticle-"]
+!#endif
+nationtv.tv##div[class^="ads-inarticle-"]
+
+!voicetv.co.th
+!#if cap_html_filtering
+voicetv.co.th##^.article-ad
+!#endif
+voicetv.co.th##.article-ad
+!#if cap_html_filtering
+voicetv.co.th##^#taboola-below-article-thumbnails
+!#endif
+voicetv.co.th###taboola-below-article-thumbnails
+
+!mangozero.com
+!#if cap_html_filtering
+mangozero.com##^.banner-ads
+!#endif
+mangozero.com##.banner-ads
+
+!kaijeaw.com 20240527165851
+!#if cap_html_filtering
+kaijeaw.com##^small
+!#endif
+kaijeaw.com##small
+!#if cap_html_filtering
+kaijeaw.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+kaijeaw.com##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+kaijeaw.com##^div[data-google-query-id]
+!#endif
+kaijeaw.com##div[data-google-query-id]
+!#if cap_html_filtering
+kaijeaw.com##^a[href^="https://adclick.g.doubleclick.net/"]
+!#endif
+kaijeaw.com##a[href^="https://adclick.g.doubleclick.net/"]
+
+!thaihitz.com
+!#if cap_html_filtering
+thaihitz.com##^.code-block 
+!#endif
+thaihitz.com##.code-block 
+
+!kaazip.com 20240527165854
+!#if cap_html_filtering
+kaazip.com##^.adsense
+!#endif
+kaazip.com##.adsense
+!#if cap_html_filtering
+kaazip.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+kaazip.com##ins.adsbygoogle[data-ad-slot]
+
+!springnews.co.th
+!#if cap_html_filtering
+springnews.co.th##^.mobile
+!#endif
+springnews.co.th##.mobile
+!#if cap_html_filtering
+springnews.co.th##^.desktop
+!#endif
+springnews.co.th##.desktop
+
+!ejan.co 20240402180742
+!#if cap_html_filtering
+ejan.co##^#taboola-below-article-thumbnails
+!#else
+ejan.co###taboola-below-article-thumbnails
+!#endif
+!#if cap_html_filtering
+ejan.co##^ins.adsbyadop:upward(1)
+!#endif
+ejan.co##ins.adsbyadop:upward(1)
+
+!komchadluek.net 20240110144745
+!#if cap_html_filtering
+komchadluek.net##^div[class^="dynamic-ads__"]
+!#endif
+komchadluek.net##div[class^="dynamic-ads__"]
+
+!petmaya.com 20240527165857
+!#if cap_html_filtering
+petmaya.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+petmaya.com##ins.adsbygoogle[data-ad-slot]
+
+!aseannow.com 20240527165901
+!#if cap_html_filtering
+aseannow.com##^[data-role="sidebarAd"]
+!#endif
+aseannow.com##[data-role="sidebarAd"]
+!#if cap_html_filtering
+aseannow.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+aseannow.com##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+aseannow.com##^#taboola-right-rail-thumbnails-1
+!#endif
+aseannow.com###taboola-right-rail-thumbnails-1
+
+!thethaiger.com 20240527165905
+!#if cap_html_filtering
+thethaiger.com##^ins.adsbygoogle[data-ad-slot]
+!#else
+thethaiger.com##ins.adsbygoogle[data-ad-slot]
+!#endif
+
+!sportingnews.com 20240329143159
+!#if cap_html_filtering
+sportingnews.com##^.header-advertising
+!#endif
+sportingnews.com##.header-advertising
+!#if cap_html_filtering
+sportingnews.com##^.article-ads
+!#endif
+sportingnews.com##.article-ads
+!#if cap_html_filtering
+sportingnews.com##^.top-mpu-container
+!#endif
+sportingnews.com##.top-mpu-container
+
+!www.amarintv.com 20240402210456
+www.amarintv.com##div.ads-container
+www.amarintv.com##div.ads-recommend:upward(1)
+
+!thainewsonline.co 20240515020807
+thainewsonline.co##div[class*="ads-billboard"]
+thainewsonline.co##div[class^="ads-"]
+
+!MARK: ---tech news ---
+
+!droidsans.com 20240114125602
+!#if cap_html_filtering
+droidsans.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#else
+droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+!#if cap_html_filtering
+droidsans.com##^aside.sidebar-mobile
+!#else
+droidsans.com##aside.sidebar-mobile
+!#endif
+
+!siamblockchain.com
+!#if cap_html_filtering
+siamblockchain.com##^.header-banner
+!#endif
+siamblockchain.com##.header-banner
+!#if cap_html_filtering
+siamblockchain.com##^#block-3
+!#endif
+siamblockchain.com###block-3
+!#if cap_html_filtering
+siamblockchain.com##^#block-6
+!#endif
+siamblockchain.com###block-6
+!#if cap_html_filtering
+siamblockchain.com##^div#topheader-desktop-banner
+!#endif
+siamblockchain.com##div#topheader-desktop-banner
+
+!iphone-droid.net 
+!#if cap_html_filtering
+iphone-droid.net##^.widget_text
+!#endif
+iphone-droid.net##.widget_text
+!#if cap_html_filtering
+iphone-droid.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+iphone-droid.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+iphone-droid.net##^div[class^="dpdpa--popup"]
+!#endif
+iphone-droid.net##div[class^="dpdpa--popup"]
+
+!worldittoday.com 20240527165908
+!#if cap_html_filtering
+worldittoday.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+worldittoday.com##ins.adsbygoogle[data-ad-slot]
+
+!notebookspec.com 20240113203926
+!#if cap_html_filtering
+notebookspec.com##^.zox-widget-ad
+!#endif
+notebookspec.com##.zox-widget-ad
+!#if cap_html_filtering
+notebookspec.com##^.zox_ad_widget
+!#endif
+notebookspec.com##.zox_ad_widget
+!#if cap_html_filtering
+notebookspec.com##^#zox-lead-bot
+!#endif
+notebookspec.com###zox-lead-bot
+
+!thaimobilecenter.com 20240527165912
+thaimobilecenter.com##div[class="container box-big-banner-top"]
+thaimobilecenter.com##div[class="col-md-9 hidden-sm hidden-xs"]
+thaimobilecenter.com##ins.adsbygoogle[data-ad-slot]
+||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
+
+!techtalkthai.com 20240217174032
+techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
+techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
+!#if cap_html_filtering
+techtalkthai.com##^div[class="e3lan e3lan-post"]
+!#else
+techtalkthai.com##div[class="e3lan e3lan-post"]
+!#endif
+techtalkthai.com##body:style(background-image: unset !important;)
+!#if cap_html_filtering
+techtalkthai.com##^h4:has-text(SPONSORS):upward(2)
+!#else
+techtalkthai.com##h4:has-text(SPONSORS):upward(2)
+!#endif
+.gif$image,domain=techtalkthai.com
+
+!blognone.com 20240406154312
+!#if cap_html_filtering
+blognone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#else
+blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+blognone.com##.advertorial,.sponsored:style(opacity: 0.4 !important;)
+
+!flashfly.net 20240527165914
+!#if cap_html_filtering
+flashfly.net##^iframe[width="500"][height="190"]
+!#endif
+flashfly.net##iframe[width="500"][height="190"]
+!#if cap_html_filtering
+flashfly.net##^ins.adsbygoogle[data-ad-slot]
+!#endif
+flashfly.net##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+flashfly.net##^div.jeg_ad
+!#endif
+flashfly.net##div.jeg_ad
+!#if cap_html_filtering
+flashfly.net##^div[align="center"]:upward(1)
+!#endif
+flashfly.net##div[align="center"]:upward(1)
+
+!it24hrs.com 20240527165917
+!#if cap_html_filtering
+it24hrs.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+it24hrs.com##ins.adsbygoogle[data-ad-slot]
+!#if cap_html_filtering
+it24hrs.com##^.bottom-ads
+!#endif
+it24hrs.com##.bottom-ads
+!#if cap_html_filtering
+it24hrs.com##^.adrotate_widgets
+!#endif
+it24hrs.com##.adrotate_widgets
+||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
+
+!iphonemod.net 20240205142713
+!#if cap_html_filtering
+iphonemod.net##^center
+!#endif
+iphonemod.net##center
+!#if cap_html_filtering
+iphonemod.net##^#quads-ad4
+!#endif
+iphonemod.net###quads-ad4
+!#if cap_html_filtering
+iphonemod.net##^#text-2
+!#endif
+iphonemod.net###text-2
+!#if cap_html_filtering
+iphonemod.net##^#text-11
+!#endif
+iphonemod.net###text-11
+!#if cap_html_filtering
+iphonemod.net##^.g1-advertisement
+!#endif
+iphonemod.net##.g1-advertisement
+
+!specphone.com
+!#if cap_html_filtering
+specphone.com##^div#custom_html-2
+!#endif
+specphone.com##div#custom_html-2
+!#if cap_html_filtering
+specphone.com##^div#custom_html-4
+!#endif
+specphone.com##div#custom_html-4
+!#if cap_html_filtering
+specphone.com##^div#sp_top_phone_widget-2
+!#endif
+specphone.com##div#sp_top_phone_widget-2
+!#if cap_html_filtering
+specphone.com##^div.ads-desktop
+!#endif
+specphone.com##div.ads-desktop
+!#if cap_html_filtering
+specphone.com##^div.ads-mobile
+!#endif
+specphone.com##div.ads-mobile
+!#if cap_html_filtering
+specphone.com##^div#footer-ads
+!#endif
+specphone.com##div#footer-ads
+!#if cap_html_filtering
+specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
+!#endif
+specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
+
+!MARK: ---tech ---
+
+!lcdtvthailand.com 20240616234447
+!#if cap_html_filtering
+lcdtvthailand.com##^.banner
+!#endif
+lcdtvthailand.com##.banner
+!#if cap_html_filtering
+lcdtvthailand.com##^.lcd-center-ads
+!#endif
+lcdtvthailand.com##.lcd-center-ads
+
+!MARK: ---game news ---
+
+!mustplay.in.th 20240329220731
+!#if cap_html_filtering
+mustplay.in.th##^a[href^="/banner/id/"]
+!#else
+mustplay.in.th##a[href^="/banner/id/"]
+!#endif
+!#if cap_html_filtering
+mustplay.in.th##^div[class*="promote"]
+!#else
+mustplay.in.th##div[class*="promote"]
+!#endif
+!#if cap_html_filtering
+mustplay.in.th##^.cover_preload
+!#else
+mustplay.in.th##.cover_preload
+!#endif
+!#if cap_html_filtering
+mustplay.in.th##^.preloader
+!#else
+mustplay.in.th##.preloader
+!#endif
+!#if cap_html_filtering
+mustplay.in.th##^div[class="banner card hidden-xs"]
+!#else
+mustplay.in.th##div[class="banner card hidden-xs"]
+!#endif
+||www.mustplay.in.th/data/setting/banner/
+
+!thisisgamethailand.com 20240213163842
+!#if cap_html_filtering
+thisisgamethailand.com##^.tigth-ads
+!#endif
+thisisgamethailand.com##.tigth-ads
+thisisgamethailand.com##.tie-container:style(top: 0px !important;)
+/*600x900.jpg$image,domain=thisisgamethailand.com
+/*600x900.jpeg$image,domain=thisisgamethailand.com
+/*_banner.jpg$image,domain=thisisgamethailand.com
+/*W1_desktop_1800x1000*-1.jpg$image,domain=thisisgamethailand.com
+
+!gamefever.co
+!#if cap_html_filtering
+gamefever.co##^[id^="ads"]
+!#endif
+gamefever.co##[id^="ads"]
+!#if cap_html_filtering
+gamefever.co##^div[style="width:100vw;height:89px"]
+!#endif
+gamefever.co##div[style="width:100vw;height:89px"]
+gamefever.co##.d-none:style(padding-top: 0px !important)
+
+!gamingdose.com
+!#if cap_html_filtering
+gamingdose.com##^section.ads_header
+!#endif
+gamingdose.com##section.ads_header
+!#if cap_html_filtering
+gamingdose.com##^div.ads_side
+!#endif
+gamingdose.com##div.ads_side
+!#if cap_html_filtering
+gamingdose.com##^div.banner_side
+!#endif
+gamingdose.com##div.banner_side
+!#if cap_html_filtering
+gamingdose.com##^div.gamin-sticky
+!#endif
+gamingdose.com##div.gamin-sticky
+!#if cap_html_filtering
+gamingdose.com##^div.gamin-popup-desktop
+!#endif
+gamingdose.com##div.gamin-popup-desktop
+!#if cap_html_filtering
+gamingdose.com##^div.gamin-popup-mobile
+!#endif
+gamingdose.com##div.gamin-popup-mobile
+!#if cap_html_filtering
+gamingdose.com##^div.advads-background
+!#endif
+gamingdose.com##div.advads-background
+
+!playulti.com
+playulti.com##.space_content:style(padding-top: 60px !important)
+playulti.com##.sidebar:style(top: 80px !important)
+playulti.com##.uk-width-expand:style(margin-top: -10px !important)
+!#if cap_html_filtering
+playulti.com##^.space_side
+!#endif
+playulti.com##.space_side
+
+!compgamer.com 20240130223724
+!#if cap_html_filtering
+compgamer.com##^#alert_popup_dialog
+!#endif
+compgamer.com###alert_popup_dialog
+compgamer.com##body:style(overflow: auto !important;)
+
+!siamphone.com 20240521013640
+!#if cap_html_filtering
+siamphone.com##^#ads_adop
+!#endif
+siamphone.com###ads_adop
+!#if cap_html_filtering
+siamphone.com##^#wrapper-ads
+!#endif
+siamphone.com###wrapper-ads
+!#if cap_html_filtering
+siamphone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+siamphone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+
+!MARK: ---game ---
+
+!jokergameth.com 20240130224346
+!#if cap_html_filtering
+jokergameth.com##^div[align="center"]
+!#endif
+jokergameth.com##div[align="center"]
+
+!MARK: ---life sytle ---
+
+!trueid.net
+!#if cap_html_filtering
+trueid.net##^section[class^="style__BannerSticky-sc-"]
+!#endif
+trueid.net##section[class^="style__BannerSticky-sc-"]
+!#if cap_html_filtering
+trueid.net##^div[class^="style__AdsStyle-sc-"]
+!#endif
+trueid.net##div[class^="style__AdsStyle-sc-"]
+
+!MARK: ---shopping online sale---
+
+!mercular.com
+!#if cap_html_filtering
+mercular.com##^div.ads-wrapper
+!#endif
+mercular.com##div.ads-wrapper
+
+!MARK: ---multipurpose ---
+
+!longdo.com 20240527165921
+!#if cap_html_filtering
+longdo.com##^a[href="https://dict-blog.longdo.com/about-ads/"]
+!#endif
+longdo.com##a[href="https://dict-blog.longdo.com/about-ads/"]
+!#if cap_html_filtering
+longdo.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+longdo.com##ins.adsbygoogle[data-ad-slot]
+
+!MARK: ---tech illegitimate ---
+
+!mawtoload.com 20240622000203
+mawtoload.com##+js(nano-sib, , *, 0.02)
+!แสดงปุ่มกด download
+mawtoload.com##div#delayedText:style(visibility: visible !important;)
+
+!i-loadzone.com 20240621232153
+blog.i-loadzone.com##+js(nano-sib, , *, 0.02)
+
+!MARK: ---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
+
+!www.nekopost.net,2nd.nekopost.net 20240310181925
+www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
+www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
+www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
+
+!MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
+
+!MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
+.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|manga168.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com
+.mp4$media,domain=manga-sugoi.com
+@@/wp-content/themes/madara/images/new.gif$image
+!.webp$image,domain=
+
+!manga168.com
+!#if cap_html_filtering
+manga168.com##^.dessert-frame > center
+!#else
+manga168.com##.dessert-frame > center
+!#endif
+!#if cap_html_filtering
+manga168.com##^#ads_fox_bottom
+!#else
+manga168.com###ads_fox_bottom
+!#endif
+!#if cap_html_filtering
+manga168.com##^.slider-ads
+!#else
+manga168.com##.slider-ads
+!#endif
+!#if cap_html_filtering
+manga168.com##^.ads-info
+!#else
+manga168.com##.ads-info
+!#endif
+manga168.com###colophon > div:nth-of-type(3)
+!#if cap_html_filtering
+manga168.com##^.kln
+!#else
+manga168.com##.kln
+!#endif
+!!duplicate rule from AdGuard - Ads
+/*.gif$from=manga168.com,badfilter
+!!some specific banner
+||go.xn--16-ftitt.com/inw2.jpg$image,domain=manga168.com
+!!close button
+||amz-cdn3.manga168.com/images/e511b3bd897d86f3db0a9449aa18faf9.png$image,domain=manga168.com
+
+!tanuki-manga.com
+!#if cap_html_filtering
+tanuki-manga.com##^.ads
+!#else
+tanuki-manga.com##.ads
+!#endif
+
+!manga-sugoi.com
+!#if cap_html_filtering
+manga-sugoi.com##^.blox, .mlb, .kln
+!#else
+manga-sugoi.com##.blox, .mlb, .kln
+!#endif
+
+!moodtoon.net 20240617220450
+!#if cap_html_filtering
+moodtoon.net##^div.ads-info
+!#else
+moodtoon.net##div.ads-info
+!#endif
+!#if cap_html_filtering
+moodtoon.net##^div.mt-ad
+!#else
+moodtoon.net##div.mt-ad
+!#endif
+!#if cap_html_filtering
+moodtoon.net##^li#menu-item-595198
+!#else
+moodtoon.net##li#menu-item-595198
+!#endif
+!#if cap_html_filtering
+moodtoon.net##^div[id^="ads_"]
+!#else
+moodtoon.net##div[id^="ads_"]
+!#endif
+
+!niceoppai.net 20240309121202
+/^https?:\/\/(www\.)?(?!(?:facebook\.com|twitter\.com|facebook\.net)).*$/$frame,domain=niceoppai.net
+!#if cap_html_filtering
+www.niceoppai.net##^div[class="top_page widget_text"]
+!#else
+www.niceoppai.net##div[class="top_page widget_text"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^li[class="wid widget_text"][id="text-6"]
+!#else
+www.niceoppai.net##li[class="wid widget_text"][id="text-6"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^li[class="wid widget_text"][id="text-9"]
+!#else
+www.niceoppai.net##li[class="wid widget_text"][id="text-9"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^a[href="https://www.bsc.news/post/top-10-best-slot-888"]
+!#else
+www.niceoppai.net##a[href="https://www.bsc.news/post/top-10-best-slot-888"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^div[id="sct_credit"]
+!#else
+www.niceoppai.net##div[id="sct_credit"]
+!#endif
+!!หน้าอ่าน
+!#if cap_html_filtering
+www.niceoppai.net##^div[id="sct_top_banner"]
+!#else
+www.niceoppai.net##div[id="sct_top_banner"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^div[id="sct_footer_banner"]
+!#else
+www.niceoppai.net##div[id="sct_footer_banner"]
+!#endif
+!#if cap_html_filtering
+www.niceoppai.net##^.mng_rdr.wpm_pag > center
+!#else
+www.niceoppai.net##.mng_rdr.wpm_pag > center
+!#endif
+!!ads banner image
+||image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+||blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
+||i.imgur.com*.gif$image,domain=www.niceoppai.net
+||i0.wp.com/niceoppai.net/wp-content$image,domain=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,domain=www.niceoppai.net
+||blogger.googleusercontent.com/img/b^$image,domain=www.niceoppai.net
+@@https://1.bp.blogspot.com/-f3womMHJyE8/XQ5nUqKCmCI/AAAAAAAAAlk/q7kkrSsjpY88TMYFtpKo4R1ZidfYDLjBgCLcBGAs/s0/return-top.png$image,domain=www.niceoppai.net
+
+!mangadeemak.com
+!#if cap_html_filtering
+mangadeemak.com##^div[id^="ads"]
+!#else
+mangadeemak.com##div[id^="ads"]
+!#endif
+!#if cap_html_filtering
+mangadeemak.com##^.wp-manga.c-top-sidebar.c-sidebar
+!#else
+mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
+!#endif
+
+!kingsmanga.net
+kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
+
+!kuro-manga.com
+!#if cap_html_filtering
+kuro-manga.com##^div[class="c-sidebar"]
+!#else
+kuro-manga.com##div[class="c-sidebar"]
+!#endif
+!#if cap_html_filtering
+kuro-manga.com##^div.widget_text
+!#else
+kuro-manga.com##div.widget_text
+!#endif
+
+!rh2plusmanga.com
+!#if cap_html_filtering
+rh2plusmanga.com##^.ads
+!#else
+rh2plusmanga.com##.ads
+!#endif
+!#if cap_html_filtering
+rh2plusmanga.com##^.ads-float
+!#else
+rh2plusmanga.com##.ads-float
+!#endif
+
+!loli-manga.com
+!#if cap_html_filtering
+loli-manga.com##^div[class*="ads"]
+!#else
+loli-manga.com##div[class*="ads"]
+!#endif
+!#if cap_html_filtering
+loli-manga.com##^.popup-wrap
+!#else
+loli-manga.com##.popup-wrap
+!#endif
+
+!thaimanga.net
+!#if cap_html_filtering
+thaimanga.net##^.ads
+!#else
+thaimanga.net##.ads
+!#endif
+
+!mangaisekaithai.com
+!#if cap_html_filtering
+mangaisekaithai.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#else
+mangaisekaithai.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
+
+!mangafins.net
+!#if cap_html_filtering
+mangafins.net##^.c-top-sidebar
+!#else
+mangafins.net##.c-top-sidebar
+!#endif
+
+!murim-manga.com 20231225133557
+!#if cap_html_filtering
+murim-manga.com##^.dessert-frame
+!#else
+murim-manga.com##.dessert-frame
+!#endif
+!#if cap_html_filtering
+murim-manga.com##^.slider-ads
+!#else
+murim-manga.com##.slider-ads
+!#endif
+!#if cap_html_filtering
+murim-manga.com##^#ads_fox_bottom
+!#else
+murim-manga.com###ads_fox_bottom
+!#endif
+||murim-manga.com/images/*.gif$image,domain=murim-manga.com
+||murim-manga.com/img/*.gif$image,domain=murim-manga.com
+||murim-manga.com/images/*.webp$image,domain=murim-manga.com
+||murim-manga.com/img/*.webp$image,domain=murim-manga.com
+
+!ped-manga.com
+!#if cap_html_filtering
+ped-manga.com##^.dessert-frame
+!#else
+ped-manga.com##.dessert-frame
+!#endif
+!#if cap_html_filtering
+ped-manga.com##^#wbnn
+!#else
+ped-manga.com###wbnn
+!#endif
+
+!dokimori.com
+!#if cap_html_filtering
+dokimori.com##^.col-md-12
+!#else
+dokimori.com##.col-md-12
+!#endif
+
+!manhwabreakup.com
+!#if cap_html_filtering
+manhwabreakup.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#else
+manhwabreakup.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
+!#if cap_html_filtering
+manhwabreakup.com##^div[class="ads-float"]
+!#else
+manhwabreakup.com##div[class="ads-float"]
+!#endif
+
+!tpnoodle.com 20240228200600
+tpnoodle.com##div[class="row mt-3"]:nth-of-type(1)
+tpnoodle.com##div[class="col-3 mt-2"]
+!!ลบ ads ออกไปแล้วปรับ css ให้เต็มพื้นที่
+tpnoodle.com##div[class="col-9 mt-2"]:style(width: 100% !important;)
+
+!makimaaaaa.com
+!#if cap_html_filtering
+makimaaaaa.com##^div[class="blox mlb kln"]
+!#else
+makimaaaaa.com##div[class="blox mlb kln"]
+!#endif
+!#if cap_html_filtering
+makimaaaaa.com##^div[id="wbnn"]
+!#else
+makimaaaaa.com##div[id="wbnn"]
+!#endif
+!#if cap_html_filtering
+makimaaaaa.com##^div[class="kln"]
+!#else
+makimaaaaa.com##div[class="kln"]
+!#endif
+||makimaaaaa.com/images/*.gif$image,domain=makimaaaaa.com
+||makimaaaaa.com/img/*.gif$image,domain=makimaaaaa.com
+
+!romance-manga.com
+!#if cap_html_filtering
+romance-manga.com##^div.rm-ads
+!#else
+romance-manga.com##div.rm-ads
+!#endif
+!#if cap_html_filtering
+romance-manga.com##^div.ads-info
+!#else
+romance-manga.com##div.ads-info
+!#endif
+
+!germa-66.com
+!#if cap_html_filtering
+germa-66.com##^div[class="blox mlb kln"]
+!#else
+germa-66.com##div[class="blox mlb kln"]
+!#endif
+!#if cap_html_filtering
+germa-66.com##^div[id="wbnn"]
+!#else
+germa-66.com##div[id="wbnn"]
+!#endif
+
+!manhuakey.com
+!#if cap_html_filtering
+manhuakey.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#else
+manhuakey.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
+
+!manhuabug.com
+!#if cap_html_filtering
+manhuabug.com##^div[class="header-ads-section"]
+!#else
+manhuabug.com##div[class="header-ads-section"]
+!#endif
+
+!mangathailand.com
+!#if cap_html_filtering
+mangathailand.com##^div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
+!#else
+mangathailand.com##div[class="elementor-element elementor-element-ad250fa e-flex e-con-boxed e-con e-parent"]
+!#endif
+!#if cap_html_filtering
+mangathailand.com##^div[data-id="43c9931"]
+!#else
+mangathailand.com##div[data-id="43c9931"]
+!#endif
+
+!popsmanga.com
+!#if cap_html_filtering
+popsmanga.com##^div.dessert-frame
+!#else
+popsmanga.com##div.dessert-frame
+!#endif
+!#if cap_html_filtering
+popsmanga.com##^div#wbnn
+!#else
+popsmanga.com##div#wbnn
+!#endif
+!#if cap_html_filtering
+popsmanga.com##^div.kln
+!#else
+popsmanga.com##div.kln
+!#endif
+!popsmanga.com##.postbody.full:style(padding-top: 20px !important)
+!popsmanga.com###content:style(padding-bottom: 0px !important)
+wss://$domain=popsmanga.com
+
+!toomtam-manga.com
+!#if cap_html_filtering
+toomtam-manga.com##^div#wbnn
+!#else
+toomtam-manga.com##div#wbnn
+!#endif
+!#if cap_html_filtering
+toomtam-manga.com##^div.dessert-frame
+!#else
+toomtam-manga.com##div.dessert-frame
+!#endif
+!#if cap_html_filtering
+toomtam-manga.com##^div.kln
+!#else
+toomtam-manga.com##div.kln
+!#endif
+
+!manga-za.net
+!#if cap_html_filtering
+manga-za.net##^div[class="mt-ad text-center"]
+!#else
+manga-za.net##div[class="mt-ad text-center"]
+!#endif
+
+!mangapdf-online.com 20240217215617
+/^https?:\/\/(www\.)?(?!(?:facebook\.com|twitter\.com|facebook\.net)).*$/$script,third-party,domain=mangapdf-online.com
+
+!oremanga.net 20240330170900
+!#if cap_html_filtering
+oremanga.net##^.header-ads-section
+!#else
+oremanga.net##.header-ads-section
+!#endif
+
+!manga-lc.net
+!#if cap_html_filtering
+manga-lc.net##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+manga-lc.net##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+
+!chocomanga.com
+!#if cap_html_filtering
+chocomanga.com##^div[class="ads"]
+!#else
+chocomanga.com##div[class="ads"]
+!#endif
+
+!doodmanga.com
+!#if cap_html_filtering
+doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#else
+doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
+!#endif
+
+!manga-post.com 20240217012317
+!#if cap_html_filtering
+manga-post.com##^center > a:upward(1)
+!#else
+manga-post.com##center > a:upward(1)
+!#endif
+
+!mafia-manga.com 20231217005325
+*$script,third-party,domain=mafia-manga.com
+!#if cap_html_filtering
+mafia-manga.com##^div.dessert-frame
+!#else
+mafia-manga.com##div.dessert-frame
+!#endif
+!#if cap_html_filtering
+mafia-manga.com##^.allc
+!#else
+mafia-manga.com##.allc
+!#endif
+!#if cap_html_filtering
+mafia-manga.com##^a[href="https://ufabet24auto.com/"]:upward(1)
+!#else
+mafia-manga.com##a[href="https://ufabet24auto.com/"]:upward(1)
+!#endif
+
+!cats-translator.com 20240102001320
+!#if cap_html_filtering
+cats-translator.com##^div[id^="ads_"]
+!#else
+cats-translator.com##div[id^="ads_"]
+!#endif
+!#if cap_html_filtering
+cats-translator.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+cats-translator.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+
+!reapertrans.com 20240202223023
+!#if cap_html_filtering
+reapertrans.com##^div.sort-ban.text-center
+!#else
+reapertrans.com##div.sort-ban.text-center
+!#endif
+!#if cap_html_filtering
+reapertrans.com##^div.ads-info
+!#else
+reapertrans.com##div.ads-info
+!#endif
+
+!rose-manga.com 20240517125831
+!#if cap_html_filtering
+rose-manga.com##^div[class="dessert-frame"]
+!#else
+rose-manga.com##div[class="dessert-frame"]
+!#endif
+
+!mangaza.net 20240615213407
+!#if cap_html_filtering
+mangaza.net##^div[class="mt-ad text-center"]
+!#else
+mangaza.net##div[class="mt-ad text-center"]
+!#endif
+!#if cap_html_filtering
+mangaza.net##^div[id^="ads_"]
+!#else
+mangaza.net##div[id^="ads_"]
+!#endif
+
+!MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
+.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
+
+!anime-sugoi.com 20231225134824
+!!เอา box ที่เขียนว่า โฆษณา ออก
+anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!!เอาdiv โฆษณาอันแรกออก
+!#if cap_html_filtering
+anime-sugoi.com##^.container > .row > .col-md-8
+!#else
+anime-sugoi.com##.container > .row > .col-md-8
+!#endif
+!!เอาdiv โฆษณาอัน2ออก
+!#if cap_html_filtering
+anime-sugoi.com##^.container > .row > center
+!#else
+anime-sugoi.com##.container > .row > center
+!#endif
+!!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
+!#if cap_html_filtering
+anime-sugoi.com##^.panel-body > center > a
+!#else
+anime-sugoi.com##.panel-body > center > a
+!#endif
+!#if cap_html_filtering
+anime-sugoi.com##^#bt-ads
+!#else
+anime-sugoi.com###bt-ads
+!#endif
+||anime-sugoi.com/pic/$image,domain=anime-sugoi.com
+wss://$domain=anime-sugoi.com
+!!เอา tag ออก
+!#if cap_html_filtering
+anime-sugoi.com##^.panel-body > center > p
+!#else
+anime-sugoi.com##.panel-body > center > p
+!#endif
+
+!anime-masters.com 20240327194347
+!! use more performance rule
+anime-masters.com#@#p[class^="center_"] > a[target="_blank"] > img
+!#if cap_html_filtering
+anime-masters.com##^div.container > .row > .center_lnwphp
+!#else
+anime-masters.com##div.container > .row > .center_lnwphp
+!#endif
+anime-masters.com##center:nth-of-type(2)
+anime-masters.com##center:nth-of-type(4)
+!#if cap_html_filtering
+anime-masters.com##^.col-md-9 > span
+!#else
+anime-masters.com##.col-md-9 > span
+!#endif
+||www.anime-masters.com/image/X11-icon.png*$image,domain=anime-masters.com
+
+!animekimi.com, animeyuzu.com 20240210161421
+!#if cap_html_filtering
+animekimi.com,animeyuzu.com##^.module_home_x
+!#else
+animekimi.com,animeyuzu.com##.module_home_x
+!#endif
+
+!anifume.com 20240121222714
+!#if cap_html_filtering
+anifume.com##^div[id^="display-"]
+!#else
+anifume.com##div[id^="display-"]
+!#endif
+!#if cap_html_filtering
+anifume.com##^div.F4uDjm45n
+!#else
+anifume.com##div.F4uDjm45n
+!#endif
+!#if cap_html_filtering
+anifume.com##^div.topml
+!#else
+anifume.com##div.topml
+!#endif
+||anifume.com/a4Eof1D0f/close-x.png$domain=anifume.com
+||anifume.com/a4Eof1D0f/loadgame-float.jpg$domain=anifume.com
+anifume.com##+js(nowoif)
+
+!anime-suba.com 20240324015402
+||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,domain=anime-suba.com
+anime-suba.com##+js(nowoif)
+!!!invisible popup overlay video
+!#if cap_html_filtering
+anime-suba.com##^.overlay-0
+!#else
+anime-suba.com##.overlay-0
+!#endif
+anime-suba.com##+js(nano-sib, , *, 0.02)
+https://www.anime-suba.com/imges/close.png$domain=anime-suba.com
+
+!animehayai.net 20240308222408
+!#if cap_html_filtering
+animehayai.net##^.col-12
+!#else
+animehayai.net##.col-12
+!#endif
+!#if cap_html_filtering
+animehayai.net##^.ads-banner
+!#else
+animehayai.net##.ads-banner
+!#endif
+!#if cap_html_filtering
+animehayai.net##^.banner-close
+!#else
+animehayai.net##.banner-close
+!#endif
+!#if cap_html_filtering
+animehayai.net##^div[class="text-center bottom-2x"]
+!#else
+animehayai.net##div[class="text-center bottom-2x"]
+!#endif
+!#if cap_html_filtering
+animehayai.net##^div.column > a
+!#else
+animehayai.net##div.column > a
+!#endif
+
+!anime-kimuchi.net 20240324020049
+!#if cap_html_filtering
+anime-kimuchi.net##^.ads-banner
+!#else
+anime-kimuchi.net##.ads-banner
+!#endif
+!#if cap_html_filtering
+anime-kimuchi.net##^.b-ads
+!#else
+anime-kimuchi.net##.b-ads
+!#endif
+
+!neko-miku.com 20240324021054
+!#if cap_html_filtering
+neko-miku.com##^#footer > .container p
+!#else
+neko-miku.com###footer > .container p
+!#endif
+!#if cap_html_filtering
+neko-miku.com##^.ads-290-100
+!#else
+neko-miku.com##.ads-290-100
+!#endif
+!#if cap_html_filtering
+neko-miku.com##^.ads-825-100
+!#else
+neko-miku.com##.ads-825-100
+!#endif
+
+!fairyanime.net
+!#if cap_html_filtering
+fairyanime.net##^#kosana
+!#else
+fairyanime.net###kosana
+!#endif
+fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
+
+!shibaanime.com
+!#if cap_html_filtering
+shibaanime.com##^a[rel$="sponsored"]
+!#else
+shibaanime.com##a[rel$="sponsored"]
+!#endif
+shibaanime.com##div.hero.common-hero:nth-child(2)
+
+!anime-hit.com
+!||anime-hit.com^$popup,domain=~anime-hit.com
+!#if cap_html_filtering
+!##^a[hreaf^="https://anime-hit.com"]
+!#else
+!##a[hreaf^="https://anime-hit.com"]
+!#endif
+!anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
+
+!animetako.net
+!#if cap_html_filtering
+animetako.net##^div[id^="animekimiads"]
+!#else
+animetako.net##div[id^="animekimiads"]
+!#endif
+
+!https://www.kurokami.me 20240604013411
+!#if cap_html_filtering
+kurokami.me##^div[class="col-6 banner728x200-div"]
+!#else
+kurokami.me##div[class="col-6 banner728x200-div"]
+!#endif
+!#if cap_html_filtering
+kurokami.me##^div[id^="ads_0"]
+!#else
+kurokami.me##div[id^="ads_0"]
+!#endif
+!#if cap_html_filtering
+kurokami.me##^p
+!#else
+kurokami.me##p
+!#endif
+!#if cap_html_filtering
+kurokami.me##^a[href="https://www.sbfplay.pro"]
+!#else
+kurokami.me##a[href="https://www.sbfplay.pro"]
+!#endif
+!#if cap_html_filtering
+kurokami.me##^a[rel="nofollow noopener sponsored"]
+!#else
+kurokami.me##a[rel="nofollow noopener sponsored"]
+!#endif
+!#if cap_html_filtering
+kurokami.me##^a[href="https://ufakick.io"]
+!#else
+kurokami.me##a[href="https://ufakick.io"]
+!#endif
+!#if cap_html_filtering
+kurokami.me##^a[href="https://www.meehay569st.co/"]
+!#else
+kurokami.me##a[href="https://www.meehay569st.co/"]
+!#endif
+
+!https://animelizm.com/ 20240319140129
+!#if cap_html_filtering
+animelizm.com##^.dessert-frame
+!#else
+animelizm.com##.dessert-frame
+!#endif
+!#if cap_html_filtering
+animelizm.com##^#custom_html-3
+!#else
+animelizm.com###custom_html-3
+!#endif
+!#if cap_html_filtering
+animelizm.com##^#custom_html-47
+!#else
+animelizm.com###custom_html-47
+!#endif
+
+!animeshiro.com
+https://blogger.googleusercontent.com/*.gif$image,domain=animeshiro.com
+!#if cap_html_filtering
+animeshiro.com##^div.banner-wrapper
+!#else
+animeshiro.com##div.banner-wrapper
+!#endif
+
+!anime-ox.com 20240130220905
+!#if cap_html_filtering
+anime-ox.com##^#contenedor > div[align="center"]
+!#else
+anime-ox.com###contenedor > div[align="center"]
+!#endif
+
+!anime-subthai.net 20240130221830
+!#if cap_html_filtering
+anime-subthai.net##^#main_content > div > div.b-ads
+!#else
+anime-subthai.net###main_content > div > div.b-ads
+!#endif
+
+!www.anime-kawaii.com 20240324021213
+!#if cap_html_filtering
+www.anime-kawaii.com##^p[class="center_lnwphp"]
+!#else
+www.anime-kawaii.com##p[class="center_lnwphp"]
+!#endif
+
+!animeriku.com 20240418163703
+||googleusercontent.com/img^$image,domain=animeriku.com
+https://i.imgur.com^$image,domain=animeriku.com
+!#if cap_html_filtering
+animeriku.com##^div[id="banner"]
+!#else
+animeriku.com##div[id="banner"]
+!#endif
+
+!www.mio-anime.net 20240419161021
+https://i.imgur.com^$image,domain=www.mio-anime.net
+||googleusercontent.com^$image,domain=www.mio-anime.net
+!#if cap_html_filtering
+www.mio-anime.net##^div[class="row"] > div[class="col-lg-12"]
+!#else
+www.mio-anime.net##div[class="row"] > div[class="col-lg-12"]
+!#endif
+||hanime4u.com^$frame
+||www.anime-sm.com^$frame
+||www.rizu-anime.com^$frame
+https://www.mio-anime.net/tracker*$frame
+!maybe local tracker
+wss://$domain=mio-anime.doodee-player.com
+!#if cap_html_filtering
+www.mio-anime.net##^body > footer > div.container > div > div.col-md-9
+!#else
+www.mio-anime.net##body > footer > div.container > div > div.col-md-9
+!#endif
+https://www.mio-anime.net/banner*$image,domain=www.mio-anime.net
+
+!anime-subth.net 20240604013700
+!#if cap_html_filtering
+anime-subth.net##^img[class="img-ads"]
+!#else
+anime-subth.net##img[class="img-ads"]
+!#endif
+!#if cap_html_filtering
+anime-subth.net##^div[class="ads-banner"]
+!#else
+anime-subth.net##div[class="ads-banner"]
+!#endif
+
+!MARK: ---Novel ---
+
+.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
+
+!novel-lucky.com
+!#if cap_html_filtering
+novel-lucky.com##^.advanced_floating_content 
+!#else
+novel-lucky.com##.advanced_floating_content 
+!#endif
+!#if cap_html_filtering
+novel-lucky.com##^.container-fluid
+!#else
+novel-lucky.com##.container-fluid
+!#endif
+!#if cap_html_filtering
+novel-lucky.com##^.c-sidebar
+!#else
+novel-lucky.com##.c-sidebar
+!#endif
+!#if cap_html_filtering
+novel-lucky.com##^#bottom_center_ads_1
+!#else
+novel-lucky.com###bottom_center_ads_1
+!#endif
+
+!aileen-novel.online
+aileen-novel.online##+js(nowoif)
+*$script,third-party,domain=aileen-novel.online
+
+!novelpdf.xyz
+novelpdf.xyz##+js(nowoif)
+*$script,third-party,domain=novelpdf.xyz
+
+!cat2auto.com
+!#if cap_html_filtering
+cat2auto.com##^div.widget_text
+!#else
+cat2auto.com##div.widget_text
+!#endif
+!#if cap_html_filtering
+cat2auto.com##^div[id*="ads_"]
+!#else
+cat2auto.com##div[id*="ads_"]
+!#endif
+!#if cap_html_filtering
+cat2auto.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+cat2auto.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+
+!อ่านทั้งวัน.com
+!#if cap_html_filtering
+xn--72c5afc3e6a4acd3tpa.com##^div.section-sponser
+!#else
+xn--72c5afc3e6a4acd3tpa.com##div.section-sponser
+!#endif
+
+!นิยายฟรี.com
+!#if cap_html_filtering
+xn--q3cmiag1gmn.com##^div.header-ads-section
+!#else
+xn--q3cmiag1gmn.com##div.header-ads-section
+!#endif
+
+!thaiboyslove.com
+!#if cap_html_filtering
+thaiboyslove.com##^td[align="center"] > a:upward(1)
+!#else
+thaiboyslove.com##td[align="center"] > a:upward(1)
+!#endif
+!MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com
+.webp$image,domain=uc2hd.com
+/series-indy$image
+/928hd$image
+/series168*$image
+
+!nungdeedee.com 20240430215951
+||nungdeedee.com/externallink*$all,domain=nungdeedee.com
+!#if cap_html_filtering
+nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
+!#endif
+nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
+
+!24-hd.com 20240131013449
+!#if cap_html_filtering
+24-hd.com##^.ad
+!#else
+24-hd.com##.ad
+!#endif
+
+!doonungsub.com 20240131013447
+!#if cap_html_filtering
+doonungsub.com##^.banner
+!#else
+doonungsub.com##.banner
+!#endif
+!#if cap_html_filtering
+doonungsub.com##^.popup
+!#else
+doonungsub.com##.popup
+!#endif
+
+!1112hd.com 20240131013445
+!#if cap_html_filtering
+1112hd.com##^.tt_banner_above_vdo_player
+!#else
+1112hd.com##.tt_banner_above_vdo_player
+!#endif
+
+!ดูหนังใหม่ชนโรง.com
+
+!dooseries.com
+
+!ดูหนัง.tv
+!#if cap_html_filtering
+ดูหนัง.tv##^.row
+!#else
+ดูหนัง.tv##.row
+!#endif
+*$script,third-party,domain=xn--72czp5e5a8b.tv
+
+!serie-master.com
+
+!c2movie.com 20240131013442
+!#if cap_html_filtering
+c2movie.com##^.ad-box-widget
+!#else
+c2movie.com##.ad-box-widget
+!#endif
+
+!uc2hd.com 20240131013440
+!#if cap_html_filtering
+uc2hd.com##^div[class="row2"][align="center"][style="margin-top:1em;"]
+!#else
+uc2hd.com##div[class="row2"][align="center"][style="margin-top:1em;"]
+!#endif
+
+!movie2uhd.com 20240131013439
+!#if cap_html_filtering
+movie2uhd.com##^.adb
+!#else
+movie2uhd.com##.adb
+!#endif
+
+!newseries-hd.com 20240131015252
+!#if cap_html_filtering
+newseries-hd.com##^.adcen
+!#else
+newseries-hd.com##.adcen
+!#endif
+!#if cap_html_filtering
+newseries-hd.com##^.admid
+!#else
+newseries-hd.com##.admid
+!#endif
+https://newseries-hd.com/wp-content/uploads/2021/01/A*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/D*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/b*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/c*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2023/09/banner-player-*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/E*.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newseries-hd.com
+||movie-free.org/ads$popup
+||bit.ly/hdmovie$popup
+
+!serie-day.com 20240430215614
+!#if cap_html_filtering
+serie-day.com##^.adcen
+!#else
+serie-day.com##.adcen
+!#endif
+!#if cap_html_filtering
+serie-day.com##^.adhl
+!#else
+serie-day.com##.adhl
+!#endif
+!#if cap_html_filtering
+serie-day.com##^.adl
+!#else
+serie-day.com##.adl
+!#endif
+!#if cap_html_filtering
+serie-day.com##^.adrg
+!#else
+serie-day.com##.adrg
+!#endif
+!#if cap_html_filtering
+serie-day.com##^.adt
+!#else
+serie-day.com##.adt
+!#endif
+
+!imovieth.com 20240430221107
+!#if cap_html_filtering
+imovieth.com##^a[class="ads-click"]:upward(2)
+!#else
+imovieth.com##a[class="ads-click"]:upward(2)
+!#endif
+
+!subthai.tv 20240501214414
+!#if cap_html_filtering
+subthai.tv##^#ads_
+!#else
+subthai.tv###ads_
+!#endif
+!#if cap_html_filtering
+subthai.tv##^#b1
+!#else
+subthai.tv###b1
+!#endif
+!#if cap_html_filtering
+subthai.tv##^.announce
+!#else
+subthai.tv##.announce
+!#endif
+subthai.tv##+js(nano-sib, , *, 0.02)
+
+!MARK: --- Others
+
+!sanook.com 20240514144944
+!!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
+sanook.com##+js(trusted-click-element,button[class*="close-btn"])
+
+!!!**************************************************************************************
+!* 
+!* General Cosmetic Rules
+!* 
+!****************************************************************************************
+
+
+
+
+
+!!!**************************************************************************************
+!* 
+!* General Rules
+!* 
+!****************************************************************************************
+
+
+/*728x200*.gif$image
+/*728x200*.webp$image
+/750x375*.gif$image
+/676x140*.gif$image
+/r800x300*.gif$image
+/300x100*.gif$image
+/140x250*.gif$image
+
+/image/ads/*
+
+/_xa/ads_batch?ads=$xmlhttprequest,script
+
+!redirect to ads domain when click backward (popunder pop-under)
+/popunder*.js$script
+
+!mal usage ส่วนใหญ่ชอบใช้ ผิดวัตถุประสงค์ เช่น การโฆษณา
+||media.discordapp.net/attachments^$image,domain=~discordapp.net|~discord.com
+
+!freespin ad พบได้ใน cats-translator.com
+/freespin-ts.gif$image
+
+!หลายเว็บผิดกฏหมายชอบใช้ 20240324022000
+##img.img-ads
+
+!!!**************************************************************************************
+!* 
+!* Anti ad block detect
+!* 
+!****************************************************************************************
+
+!Google ads 20240309143302
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+@@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
+! google contributor anti adblock
+#@#.div-gpt-ad
+#@#.ad_unit
+#@#div[class^="div-gpt-ad"]
+#@#[class^="div-gpt-ad"]
+#@#[id^="div-gpt-ad"]
+#@#div[id^="div-gpt-"]
+#@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+google.*#@##bottomads
+
+
+!https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-mobile.txt
+#@#.ad-slot
+!EasyList
+#@#.ad-link
+##.ad-link:not(.adsbox)
+##.ad-slot:not(.adsbox):not(.adsbygoogle)
+
+!!!**************************************************************************************
+!* 
+!* Performance (No Thai sites)
+!* 
+!****************************************************************************************
+
+!MARK: ---Google ---
+@@||www.google.*$generichide
+@@||meet.google.com^$generichide
+@@||classroom.google.com^$generichide
+@@||cloud.google.com^$generichide
+@@||docs.google.com^$ehide
+@@||drive.google.com^$ehide
+@@||mail.google.com^$ehide
+@@||play.google.com^$ehide
+@@||news.google.com^$generichide
+@@||translate.google.com^$ehide
+@@||myaccount.google.com^$ehide
+@@||photos.google.com^$ehide
+@@||www.youtube.com^$generichide
+@@||www.youtube-nocookie.com^$generichide
+@@||m.youtube.com^$generichide
+@@||i.ytimg.com^$generichide
+@@||studio.youtube.com^$generichide
+@@||music.youtube.com^$generichide
+@@||earth.google.com^$ehide
+@@||bard.google.com^$ehide
+@@||accounts.google.com^$ehide
+@@||googlesource.com^$ehide
+@@||apis.google.com^$ehide
+@@||developers.google.com^$ehide
+!MARK: ---Microsoft ---
+@@||account.live.com^$generichide
+@@||github.com^$generichide
+@@||github.blog^$generichide
+@@||www.githubstatus.com^$generichide
+@@||raw.githubusercontent.com^$generichide
+@@||onedrive.live.com^$ehide
+@@||outlook.live.com^$generichide
+@@||login.microsoftonline.com^$generichide
+@@||www.msn.com^$generichide
+@@||visualstudio.microsoft.com^$generichide
+@@||www.office.com^$ehide
+@@||devblogs.microsoft.com^$generichide
+@@||learn.microsoft.com^$generichide
+@@||*.swiftkey.com^$generichide
+@@||techcommunity.microsoft.com^$generichide
+@@||account.microsoft.com^$ehide
+@@||support.microsoft.com^$ehide
+!MARK: ---clouds cloud ---
+@@||mega.nz^$ehide
+@@||mega.io^$generichide
+@@||terabox.com^$generichide
+@@||dropbox.com^$generichide
+@@||pcloud.com^$generichide
+@@||icedrive.net^$generichide
+@@||koofr.eu^$generichide
+@@||mediafire.com^$generichide
+@@||storj.io^$ehide
+@@||icloud.com^$ehide
+@@||cloudflare.com^$ehide
+@@||www.cloudflarestatus.com^$generichide
+!MARK: ---picture image or host---
+@@||imgur.*$generichide
+@@||imgbb.com^$generichide
+@@||imgbox.com^$generichide
+!cosmetics rules breaks some features
+@@||photopea.com^$ehide
+!MARK: ---video ---
+@@||streamable.com^$generichide
+@@||jwplayer.com^$generichide
+@@||client.iamtheme.com^$generichide
+!MARK: ---ai ---
+@@||openai.com^$generichide
+!MARK: ---desgin ---
+@@||canva.com^$generichide
+!MARK: ---work ---
+@@||workona.com^$generichide
+@@||hive.com^$generichide
+@@||jaggaer.com^$generichide
+!MARK: ---international news ---
+@@||bbc.$generichide
+!@@||cnn.$generichide
+@@||economist.com^$generichide
+@@||forbes.com^$generichide
+@@||forbesthailand.com^$generichide
+@@||businessinsider.com^$generichide
+@@||collider.com^$generichide
+@@||www.ign.com^$generichide
+@@||www.rd.com^$generichide
+@@||indiatoday.in^$generichide
+@@||www.newsweek.com^$generichide
+@@||www.bloomberg.com^$generichide
+@@||indiatimes.com^$generichide
+!MARK: ---conference ---
+@@||slack.com^$ehide
+@@||teams.microsoft.com^$generichide
+@@||telegram.org^$generichide
+@@||whatsapp.com^$generichide
+!MARK: ---music ---
+@@||open.spotify.com^$ehide
+@@||developer.spotify.com^$ehide
+@@||tidal.com^$generichide
+@@||joox.com^$generichide
+@@||www.last.fm^$generichide
+@@||www.deezer.com^$generichide
+@@||soundcloud.com^$generichide
+!MARK: ---education ---
+@@||clearnotebooks.com^$generichide
+@@||imtranslator.net^$generichide
+@@||ptable.com^$generichide
+@@||ieltsbuddy.com^$generichide
+@@||ludwig.guru^$generichide
+@@||wolframalpha.com^$generichide
+@@||desmos.com^$generichide
+@@||geogebra.org^$generichide
+@@||grammarly.com^$ehide
+@@||panyasociety.com^$generichide
+@@||khanacademy.org^$ehide
+!MARK: ---free web host ---
+@@||000webhost.com^$generichide
+@@||infinityfreeapp.com^$generichide
+@@||filemanager.ai^$generichide
+!MARK: ---redirect qr code ---
+@@||qrbridge.me^$generichide
+!MARK: ---social platform ---
+@@||discord.com^$ehide
+@@||line.me^$generichide
+@@||facebook.com*$generichide
+@@||instagram.com^$generichide
+@@||twitter.com^$generichide
+@@||x.com^$generichide
+@@||twitch.tv^$generichide
+@@||disqus.com^$generichide
+@@||tiktok.com^$generichide
+@@||www.reddit.com^$generichide
+@@||quora.com^$generichide
+@@||pixiv.net^$generichide
+@@||i.pximg.net^$generichide
+@@||feedly.com^$generichide
+@@||bsky.app^$generichide
+!MARK: ---adblock ---
+@@||adguard.com^$generichide
+@@||local.adguard.org^
+!MARK: ---wiki ---
+@@||wikibooks.org^$generichide
+@@||wikidata.org^$generichide
+@@||wikinews.org^$generichide
+@@||wikipedia.org^$generichide
+@@||wikiquote.org^$generichide
+@@||wikiversity.org^$generichide
+@@||wiktionary.org^$generichide
+@@||fandom.com^$generichide
+!MARK: ---Apk ---
+@@||apkmirror.com^$generichide
+@@||apkpure.com^$generichide
+@@||apkcombo.com^$generichide
+@@||apkmody.io^$generichide
+@@||download-new.apkmody.fun^$generichide
+@@||modyolo.com^$generichide
+@@||apkdone.com^$generichide
+!MARK: ---dictionary ---
+@@||wordreference.com^$generichide
+@@||oxfordlearnersdictionaries.com^$generichide
+@@||dictionary.com^$generichide
+@@||etymonline.com^$generichide
+@@||collinsdictionary.com^$generichide
+@@||thefreedictionary.com^$generichide
+@@||freethesaurus.com^$generichide
+@@||quillbot.com^$generichide
+@@||www.ldoceonline.com^$generichide
+!MARK: ---other search engines ---
+@@||bing.com^$generichide
+@@||duckduckgo.com^$generichide
+@@||yandex.com^$generichide
+@@||perplexity.ai^$generichide
+!MARK: ---shopping online sale---
+@@||shopee.co.th^$ehide
+@@||lazada.co.th^$generichide
+@@||stacksocial.com^$generichide
+@@||amazon.com^$generichide
+!MARK: ---dns ---
+@@||adguard-dns.io^$generichide
+@@||nextdns.io^$generichide
+!MARK: ---game ---
+@@||epicgames.com^$ehide
+@@||steampowered.com^$ehide
+@@||mihoyo.com^$generichide
+@@||hoyoverse.com^$generichide
+@@||hoyo.link^$generichide
+@@||hoyolab.com^$generichide
+@@||minecraft.net^$generichide
+@@||mojang.com^$generichide
+@@||xbox.com^$generichide
+@@||riotgames.com^$generichide
+@@||ubisoft.asia^$generichide
+@@||ubisoft.com^$generichide
+@@||ubisoftconnect.com^$ehide
+@@||accounts.krafton.com^$generichide
+@@||pubg.com^$generichide
+@@||modrinth.com^$generichide
+@@||chunkbase.com^$generichide
+@@||curseforge.com^$generichide
+@@||lineupsvalorant.com^$generichide
+@@||tracker.gg^$generichide
+@@||blitz.gg^$generichide
+@@||genshin.gg^$generichide
+@@||xenon.club^$generichide
+!MARK: ---game news ---
+@@||pcgamesn.com^$generichide
+!@@||gamesradar.com^$generichide
+!MARK: ---foods food serices ---
+@@||www.kfc.*$ehide
+@@||www.grab.com^$generichide
+@@||www.foodpanda.*$generichide
+!MARK: ---watchlist review movie anime tv show ---
+@@||myanimelist.net^$generichide
+@@||rottentomatoes.com^$generichide
+@@||imdb.com^$generichide
+@@||anilist.co^$generichide
+@@||simkl.com^$generichide
+@@||letterboxd.com^$generichide
+@@||www.livechart.me^$generichide
+!MARK: ---ebook e book e-book publisher ---
+@@||pubhtml5.com^$generichide
+!MARK: ---ebook e book e-book publisher japan japanese ---
+@@||comic-boost.com^$generichide
+@@||urasunday.com^$generichide
+@@||bookwalker.jp^$generichide
+@@||nijigencospa.com^$generichide
+@@||web-ace.jp^$generichide
+@@||zerosumonline.com^$generichide
+@@||kadokawa.*$generichide
+@@||kakuyomu.jp^$generichide
+@@||gs-ch.com^$generichide
+@@||comic-walker.com^$generichide
+@@||www.ganganonline.com^$generichide
+@@||syosetu.com^$generichide
+!MARK: ---benmarck speedtest web ---
+@@||speedtest.net^$generichide
+@@||basemark.com^$ehide
+@@||browserbench.org^$ehide
+@@||www.principledtechnologies.com^$ehide
+!MARK: --- test ---
+@@||keyboard-test.space^$generichide
+!MARK: ---auto web ---
+@@||toyota.co.th^$generichide
+!MARK: ---file transfer ---
+@@||wetransfer.com^$generichide
+@@||send-anywhere.com^$generichide
+@@||snapdrop.net^$ehide
+@@||pairdrop.net^$ehide
+@@||sharedrop.io^$generichide
+@@||send.cm^$generichide
+@@||uploadmx.com^$generichide
+@@||pastebin.com^$generichide
+@@||fromsmash.com^$generichide
+@@||pixeldrain.com^$generichide
+@@||resilio.com^$generichide
+!MARK: ---tech news ---
+@@||dxomark.com^$generichide
+@@||gsmarena.com^$generichide
+@@||nanoreview.net^$generichide
+@@||tomshardware.com^$generichide
+@@||gizmochina.com^$generichide
+@@||makeuseof.com^$generichide
+@@||sammobile.com^$generichide
+@@||lifehacker.com^$generichide
+@@||g2.com^$generichide
+@@||cloudwards.net^$generichide
+@@||androidauthority.com^$generichide
+@@||iphoneiosthailand.com^$generichide
+@@||neowin.net^$generichide
+@@||raymond.cc^$generichide
+@@||theverge.com^$generichide
+@@||pcmag.com^$generichide
+@@||phonearena.com^$generichide
+@@||thinkbroadband.com^$generichide
+@@||howtogeek.com^$generichide
+@@||androidpolice.com^$generichide
+@@||convergeddevices.net^$generichide
+@@||trustedreviews.com^$generichide
+@@||androidcentral.com^$generichide
+@@||pcgmaer.com^$generichide
+@@||whathifi.com^$generichide
+@@||tomsguide.com^$generichide
+@@||xda-developers.com^$generichide
+@@||interestingengineering.com^$generichide
+@@||computerworld.com^$generichide
+@@||alphr.com^$generichide
+@@||towardsdatascience.com^$generichide
+@@||sammyfans.com^$generichide
+@@||www.bleepingcomputer.com^$generichide
+@@||www.pcworld.com^$generichide
+@@||www.macrumors.com^$generichide
+@@||thehackernews.com^$generichide
+@@||bgr.com^$generichide
+@@||arstechnica.com^$generichide
+@@||9to5mac.com^$generichide
+@@||9to5google.com^$generichide
+@@||9to5toys.com^$generichide
+@@||electrek.co^$generichide
+@@||dronedj.com^$generichide
+@@||spaceexplored.com^$generichide
+@@||www.techspot.com^$generichide
+@@||itsfoss.com^$generichide
+@@||topcpu.net^$generichide
+@@||userbenchmark.com^$generichide
+!MARK: --- tech ---
+@@||cyanogenmods.org^$generichide
+!MARK: --- science news ---
+
+!MARK: ---note ---
+@@||goodnotes.com^$generichide
+@@||web.goodnotes.com^$ehide
+@@||feedback.goodnotes.com^$generichide
+@@||evernote.com^$generichide
+@@||notion.so^$ehide
+@@||todoist.com^$ehide
+@@||obsidian.md^$generichide
+@@||scrintal.com^$generichide
+!MARK: ---tech companies ---
+@@||samsung.com^$generichide
+@@||apple.com^$generichide
+@@||intel.com^$generichide
+@@||amd.com^$generichide
+@@||nvidia.com^$generichide
+@@||qualcomm.com^$generichide
+@@||sony.co.th^$generichide
+@@||web.sony-asia.com^$generichide
+!MARK: ---code coding ---
+@@||autohotkey.com^$generichide
+@@||stackoverflow.com^$generichide
+@@||sourceforge.net^$generichide
+@@||regextutorial.org^$generichide
+@@||superuser.com^$generichide
+@@||tutorialstonight.com^$generichide
+@@||freecodecamp.org^$generichide
+@@||linuxhint.com^$generichide
+@@||gitfront.io^$generichide
+@@||blender.stackexchange.com^$generichide
+@@||w3schools.com^$generichide
+@@||geeksforgeeks.org^$generichide
+@@||thepythoncode.com^$generichide
+@@||codeberg.org^$generichide
+@@||askubuntu.com^$generichide
+!MARK: ---web builder ---
+!MARK: ---web engine web browser ---
+@@||mozilla.org^$generichide
+!MARK: ---web monitor ---
+@@||distill.io^$generichide
+@@||floccus.org^$generichide
+@@||modheader.com^$generichide
+@@||similarweb.com^$generichide
+@@||visualping.io^$ehide
+!MARK: ---trust checker web ---
+@@||mywot.com^$generichide
+@@||trustpilot.com^$generichide
+@@||downforeveryoneorjustme.com^$generichide
+@@||isitdownrightnow.com^$generichide
+@@||hybrid-analysis.com^$ehide
+@@||who.is^$generichide
+@@||ssltrust.com.au^$ehide
+@@||urlscan.io^$generichide
+!MARK: ---password manager ---
+@@||1password.com^$generichide
+@@||bitwarden.com^$ehide
+@@||dashlane.com^$generichide
+@@||keepersecurity.com^$generichide
+!MARK: ---payment ---
+@@||paypal.com^$document
+!MARK: ---virus checker security privacy ---
+@@||virustotal.com^$generichide
+@@||iknowwhatyoudownload.com^$generichide
+!MARK: ---redirect ---
+@@||adf.ly^$generichide
+@@||adfoc.us^$generichide
+!MARK: ---alternative ---
+@@||alternativeto.net^$generichide
+!MARK: ---app builder ---
+@@||pwabuilder.com^$generichide
+@@||appypie.com^$generichide
+!MARK: ---bookmark manager ---
+@@||getpocket.com^$generichide
+@@||app.raindrop.io^$generichide
+!MARK: ---automatic ---
+@@||ifttt.com^$generichide
+@@||zapier.com^$generichide
+!MARK: ---multipurpose ---
+
+!MARK: ---apps programs ---
+@@||raycast.com^$generichide
+@@||packal.org^$generichide
+@@||obsproject.com^$generichide
+!MARK: ---printer ---
+@@||brother.co.th^$generichide
+!MARK: ---med hospital ---
+
+!MARK: ---pc ---
+
+!MARK: ---review compare ---
+@@||versus.com^$generichide
+!MARK: ---subcription ---
+@@||patreon.com^$generichide
+!MARK: ---shipment ---
+@@||www.sf-international.com^$generichide
+!MARK: ---life sytle ---
+@@||trueid.net^$generichide
+!MARK: ---music illegitimate ---
+!MARK: ---manga legitimate ---
+@@||shueisha.co.jp^$generichide
+!MARK: ---tech illegitimate ---
+
+!MARK: ---Manga Foreign illegitimate ---
+@@||mangadex.org^$generichide
+@@||manhwazmove.com^$generichide
+@@||mangakakalot.com^$generichide
+@@||manganato.com^$generichide
+@@||manganelo.tv^$generichide
+@@||manganelo.com^$generichide
+@@||manhwatop.to^$generichide
+@@||manhwatimez.com^$generichide
+@@||rawkuma.com^$generichide
+@@||mgeko.com^$generichide
+!MARK: ---novel ---
+@@||www.novelupdates.com^$generichide
+!MARK: ---novel illegitimate ---
+
+!MARK: ---movie illegitimate ---
+
+!MARK: ---movie legitimate ---
+@@||netflix.com^$generichide
+@@||disneyplus.com^$generichide
+@@||hotstar.com^$generichide
+@@||flixerapp.com^$generichide
+!MARK: ---weather ---
+@@||windy.com^$ehide
+@@||www.iqair.com^$generichide
+@@||aqicn.org^$generichide
+!MARK: --- chat ---
+@@||static.zdassets.com^$ehide
+!MARK: --- browser extension ---
+@@||||www.automa.site^$ehide
+!MARK: --- git ---
+@@||gitlab.com^$generichide
+@@||gitea.angry.im^$generichide
+!MARK: --- delivery ---
+@@||dhl.com^$generichide
+!MARK: --- anime mange novel legal
+@@||animeranku.com^$generichide
+@@||webtoons.com^$generichide
+@@||otakukart.com^$generichide
+@@https://animeflix*$generichide
+!MARK: --- others ---
+@@||www.whatismybrowser.com^$generichide
+@@||whoscall.com^$generichide
+@@||smilearm.com^$generichide
+!MARK: --- unknow ---
+
+!!!**************************************************************************************
+!* 
+!* Unbreak (Not Thai sites)
+!* 
+!****************************************************************************************
+
+!unbreak Bilibili cc AdGuard Extension
+!#if adguard
+@@||bstarstatic.com^$stealth
+!#endif
+
+!computerworld.com
+@@||d2zv5rkii46miq.cloudfront.net^$domain=computerworld.com
+
+!from easylist
+!!break aws.amazon.com
+/web-vitals.$badfilter
+/web-vitals.$domain=~aws.amazon.com
+!!!**************************************************************************************
+!* 
+!* Performance (Thai sites)
+!* 
+!****************************************************************************************
+
+!MARK: ---thai news ---
+@@||thairath.co.th^$generichide
+@@||kapook.com^$generichide
+@@||matichon.co.th^$generichide
+@@||ch3plus.com^$generichide
+@@||ch7.com^$generichide
+@@||brighttv.co.th^$generichide
+@@||beartai.com^$generichide
+@@||tnews.co.th^$generichide
+@@||thansettakij.com^$generichide
+@@||catdumb.com^$generichide
+@@||thestandard.co^$generichide
+@@||mgronline.com^$generichide
+@@||workpointtoday.com^$generichide
+@@||workpointnews.com^$generichide
+@@||thaipbs.or.th^$generichide
+@@||pptvhd36.com^$generichide
+@@||dailynews.co.th^$generichide
+@@||khaosod.co.th^$generichide
+@@||khaosodenglish.com^$generichide
+@@||thematter.co^$generichide
+@@||voicetv.co.th^$generichide
+@@||nationtv.tv^$generichide
+@@||mangozero.com^$generichide
+@@||kaijeaw.com^$generichide
+@@||thaihitz.com^$generichide
+@@||kaazip.com^$generichide
+@@||springnews.co.th^$generichide
+@@||themomentum.co^$generichide
+@@||www.ejan.co^$generichide
+@@||www.komchadluek.net^$generichide
+@@||petmaya.com^$generichide
+@@||marketingoops.com^$generichide
+@@||aseannow.com^$generichide
+@@||today.line.me^$generichide
+@@||thaipublica.org^$generichide
+@@||thethaiger.com^$generichide
+@@||sportingnews.com^$generichide
+@@||www.amarintv.com^$generichide
+@@||thainewsonline.co^$generichide
+!!การเลือกตั้ง 2566
+@@||ectreport.com^$generichide
+@@||ectreport66.ect.go.th^$generichide
+@@||vote62.com^$generichide
+!MARK: ---thai blog ---
+@@||nuuneoi.com^$generichide
+@@||kafaak.blog^$generichide
+@@||mthai.com^$generichide
+!MARK: ---education ---
+@@||ibooking.ondemand.in.th^$generichide
+@@||ondemand.in.th^$generichide
+@@||sangfans.com^$generichide
+@@||tcaster.net^$generichide
+@@||camphub.in.th^$generichide
+@@||dek-d.com^$generichide
+@@||opendurian.com^$generichide
+@@||mytcas.com^$generichide
+@@||www.mycourseville.com^$generichide
+@@||www.biobeamcenter.com^$generichide
+@@||cututoronline.com^$generichide
+!MARK: ---social platform ---
+@@||pantip.com^$generichide
+@@||ctrlg.gg^$generichide
+@@||www.blockdit.com^$generichide
+!MARK: ---game ---
+@@||jokergameth.com^$generichide
+@@||garena.in.th^$generichide
+!MARK: ---game news ---
+@@||mustplay.in.th^$generichide
+@@||thisisgamethailand.com^$generichide
+@@||gamefever.co^$generichide
+@@||www.gamingdose.com^$generichide
+@@||playulti.com^$generichide
+@@||compgamer.com^$generichide
+@@||oneesports.co.th^$generichide
+!MARK: ---foods food serices ---
+@@||wongnai.com^$generichide
+@@||snp1344.com*$generichide
+!MARK: ---watchlist review movie anime tv show ---
+@@||hareshi.net^$ehide
+!MARK: ---ebook e book e-book publisher thai ---
+@@||phoenixnext.com^$generichide
+@@||mebmarket.com^$generichide
+@@||bookwalker.$generichide
+@@||firstpagepro.com*$generichide
+!MARK: ---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
+@@||www.nekopost.net^$generichide
+@@||kuro.nekopost.net^$generichide
+@@||mynovel.com^$generichide
+!MARK: ---tech news ---
+@@||siamphone.com^$generichide
+@@||techmoblog.com^$generichide
+@@||blognone.com^$generichide
+@@||droidsans.com^$generichide
+@@||notebookspec.com^$generichide
+@@||flashfly.net^$generichide
+@@||thaimobilecenter.com^$generichide
+@@||siamblockchain.com^$generichide
+@@||iphone-droid.net^$generichide
+@@||overclockzone.com^$generichide
+@@||extremeit.com^$generichide
+@@||worldittoday.com^$generichide
+@@||thaiware.com^$generichide
+@@||www.iphonemod.net^$generichide
+@@||www.it24hrs.com^$generichide
+@@||specphone.com^$generichide
+@@||itnews24hrs.com^$generichide
+@@||techtalkthai.com^$generichide
+!MARK: ---tech ---
+@@||lcdtvthailand.com^$generichide
+!MARK: --- science news ---
+@@||www.mitrearth.org^$generichide
+!MARK: ---multipurpose ---
+@@||longdo.com^$generichide
+@@||true.th^$generichide
+@@||ais.co.th^$generichide
+!MARK: ---med hospital ---
+@@||pharmacy.mahidol.ac.th^$generichide
+@@||siphhospital.com^$generichide
+@@||www.theptarin.com^$generichide
+!MARK: ---pc ---
+@@||advice.co.th^$generichide
+@@||jib.co.th^$generichide
+@@||ihavecpu.com^$generichide
+!MARK: --- thai government ---
+@@||www.thaigov.go.th^$generichide
+!MARK: ---shopping online sale---
+@@||425degree.com^$generichide
+@@||mercular.com^$generichide
+@@||bnn.in.th^$generichide
+@@||remobie.com^$generichide
+@@||munkongonline.com^$generichide
+!MARK: ---manga thai illegitimate ---
+@@https://www.niceoppai.net^$generichide
+@@https://www.rh2plusmanga.com^$generichide
+@@https://manga-uptocats.com^$generichide
+@@https://mangadeemak.com^$generichide
+@@||garasumanga.com^$generichide
+@@||tanuki-manga.com^$generichide
+@@||doodmanga.com^$generichide
+@@||tamamanga.com^$generichide
+@@||manga168.com^$generichide
+@@||moodtoon.net^$generichide
+@@||loli-manga.com^$generichide
+@@||chocomanga.com^$generichide
+@@||thaimanga.net^$generichide
+@@||oremanga.net^$generichide
+@@||www.mangaisekaithai.com^$generichide
+@@||kingsmanga.net^$generichide
+@@||nekopost.org^$generichide
+@@||mangafins.net^$generichide
+@@||box-manga.com^$generichide
+@@||manga-sugoi.com^$generichide
+@@||mangathai.com^$generichide
+@@||dokimori.com^$generichide
+@@||murim-manga.com^$generichide
+@@||ped-manga.com^$generichide
+@@||kuro-manga.com^$generichide
+@@||manhuakey.com^$generichide
+@@||manhuabug.com^$generichide
+@@||manga-za.net^$generichide
+@@||www.manhwabreakup.com^$generichide
+@@||mangapdf-online.com^$generichide
+@@||toon-read.blogspot.com^$generichide
+@@||jagobnovel.wordpress.com^$generichide
+@@||tpnoodle.com^$generichide
+@@||makimaaaaa.com^$generichide
+@@||skoiiz-manga.com^$generichide
+@@||romance-manga.com^$generichide
+@@||germa-66.com^$generichide
+@@||hippomanga.com^$generichide
+@@||catzaa.com^$generichide
+@@||mangathailand.com^$generichide
+@@||www.manga191.com^$generichide
+@@||popsmanga.com^$generichide
+@@||toomtam-manga.com^$generichide
+@@||manga-post.com^$generichide
+@@||manga-lc.net^$generichide
+@@||www.mangakimi.com^$generichide
+@@||mangastep.com^$generichide
+@@||reapertrans.com^$generichide
+@@||mangatherapies.com^$generichide
+@@||kaichan.co^$generichide
+@@||xn--72cas2cj6a4hf4b5a8oc.com^$generichide
+@@||rose-manga.com^$generichide
+@@||mafia-manga.com^$generichide
+@@||mangaza.net^$generichide
+!MARK: ---anime legitimate ---  
+@@||bilibili.tv^$generichide
+@@||anitrendz.com^$generichide
+@@||wiki.anime-os.com^$ehide
+@@||akibatan.com^$ehide
+!MARK: ---anime illegitimate ---
+@@||www.anime-sugoi.com^$generichide
+@@||anime-masters.com^$generichide
+@@||animekimi.com^$generichide
+@@||animeyuzu.com^$generichide
+@@||anime-suba.com^$generichide
+@@||sub-thai.com^$generichide
+@@||anifume.com^$generichide
+@@||animesubthaiz.com^$generichide
+@@||do-anime.com^$generichide
+@@||gg-anime.com^$generichide
+@@||lnwanime.com^$generichide
+@@||animezeed.net^$generichide
+@@||anime-nico.com^$generichide
+@@||animehayai.net^$generichide
+@@||anime-kimuchi.net^$generichide
+@@||neko-miku.com^$generichide
+@@||shibaanime.com^$generichide
+@@||www.animerem.com^$generichide
+@@||www.kurokami.me^$generichide
+@@||animelizm.com^$generichide
+@@||animeshiro.com^$generichide
+@@||animeriku.com^$generichide
+@@||www.mio-anime.net^$generichide
+@@||anime-subth.net^$generichide
+!!เจอได้จาก animeshiro.com
+@@||stream.anislime.com^$generichide
+@@||overlay.miku-box.com^$generichide
+@@||allinone-th.blogspot.com^$generichide
+@@||allinone-th-view.blogspot.com^$generichide
+!MARK: ---Novel ---
+@@||novel-lucky.com^$generichide
+@@||aileen-novel.online^$generichide
+@@||novelpdf.xyz^$generichide
+@@||cat2auto.com^$generichide
+@@||xn--72c5afc3e6a4acd3tpa.com^$generichide
+@@||xn--q3cmiag1gmn.com^$generichide
+@@||thaiboyslove.com^$generichide
+!MARK: --- movie illegitimate ---
+@@||movie007hd.com^$generichide
+@@||037hdmovie.com^$generichide
+@@||movies-d.com^$generichide
+@@||dooseries4k.com^$generichide
+@@||9nunghd.com^$generichide
+@@||nung2movies.com^$generichide
+@@||nung2hdd.com^$generichide
+@@||zeanmoviehd.com^$generichide
+@@||nungdeedee.com^$generichide
+@@||doofree365.com^$generichide
+@@||movie44.com^$generichide
+@@||doomovie-hd.com^$generichide
+@@||kingmovie88.com^$generichide
+@@||i-moviehd.com^$generichide
+@@||subthai.tv^$generichide
+@@||moviehdfree.net^$generichide
+@@||movie678.com^$generichide
+@@||doonungonline.com^$generichide
+@@||24-hd.com^$generichide
+@@||1412hd.com^$generichide
+@@||doonungsub.com^$generichide
+@@||seriethai.co^$generichide
+@@||serie-master.com^$generichide
+@@||newseries-hd.com^$generichide
+@@||1112hd.com^$generichide
+@@||www.xn--72czp5e5a8b.tv^$generichide
+@@||123-hd.com^$generichide
+@@||www.serie-day.com^$generichide
+@@||imovieth.com^$generichide
+@@||subthai.tv^$generichide
+!MARK: ---tech illegitimate ---
+@@||mawtoload.com^$generichide
+@@||axeload.com^$generichide
+!MARK: --- Torrent
+@@||dedbit.com^$generichide
+!MARK: --- Others
+@@||online-station.net^$generichide
+@@||sanook.com^$generichide
+
+!!!**************************************************************************************
+!* 
+!* Unbreak (Thai sites)
+!* 
+!****************************************************************************************
+
+!nekopost.net load picture AdGuard Extension
+!#if adguard
+@@||osemocphoto.com^$stealth
+!#endif
+
+!!!**************************************************************************************
+!* 
+!* Cookie
+!* 
+!****************************************************************************************
+
+!MARK: --- cookie specific ---
+
+!#if cap_html_filtering
+phoenixnext.com##^div[class="cwc-sdk-container"]
+!#endif
+phoenixnext.com##div[class="cwc-sdk-container"]
+!#if cap_html_filtering
+wongnai.com##^#cc_div
+!#endif
+wongnai.com###cc_div
+!#if cap_html_filtering
+mahidol.ac.th##^#cc_div
+!#endif
+mahidol.ac.th###cc_div
+!#if cap_html_filtering
+apkmirror.com##^#bottom-slider
+!#endif
+apkmirror.com###bottom-slider
+!#if cap_html_filtering
+riotgames.com##^.dialog
+!#endif
+riotgames.com##.dialog
+!theguardian.com
+!#if cap_html_filtering
+theguardian.com##^div[id="sp_message_container_752142"]
+!#endif
+theguardian.com##div[id="sp_message_container_752142"]
+!#if cap_html_filtering
+theguardian.com##^div[class="dcr-8xye2h"]
+!#endif
+theguardian.com##div[class="dcr-8xye2h"]
+!economist.com
+!#if cap_html_filtering
+economist.com##^div[class="message-container teg-container"]
+!#endif
+economist.com##div[class="message-container teg-container"]
+||consent.economist.com$domain=economist.com
+!#if cap_html_filtering
+ondemand.in.th##^.cwc-sdk-container
+!#endif
+ondemand.in.th##.cwc-sdk-container
+!#if cap_html_filtering
+425degree.com##^.amgdprcookie-bar-template
+!#endif
+425degree.com##.amgdprcookie-bar-template
+!#if cap_html_filtering
+samsung.com##^.cookie-bar
+!#endif
+samsung.com##.cookie-bar
+!#if cap_html_filtering
+droidsans.com##^div[class="dpdpa--popup active"]
+!#endif
+droidsans.com##div[class="dpdpa--popup active"]
+!#if cap_html_filtering
+thaimobilecenter.com##^#cookiePopup
+!#endif
+thaimobilecenter.com###cookiePopup
+!#if cap_html_filtering
+matichon.co.th##^.matichon-pdpa-wrapper
+!#endif
+matichon.co.th##.matichon-pdpa-wrapper
+!#if cap_html_filtering
+thairath.co.th##^.cookiewrap
+!#endif
+thairath.co.th##.cookiewrap
+!thairath.co.th/money
+!#if cap_html_filtering
+thairath.co.th##^.__money_cookies
+!#endif
+thairath.co.th##.__money_cookies
+!#if cap_html_filtering
+plus.thairath.co.th##^.__TRPlus_Policy_Box
+!#endif
+plus.thairath.co.th##.__TRPlus_Policy_Box
+!#if cap_html_filtering
+brighttv.co.th##^.dpdpa--popup
+!#endif
+brighttv.co.th##.dpdpa--popup
+!#if cap_html_filtering
+sanook.com##^.ConsentBanner
+!#endif
+sanook.com##.ConsentBanner
+!#if cap_html_filtering
+ch3plus.com##^#cookie_policy
+!#endif
+ch3plus.com###cookie_policy
+!#if cap_html_filtering
+ch7.com##^.cookies-settings-pop
+!#endif
+ch7.com##.cookies-settings-pop
+!#if cap_html_filtering
+toyota.co.th##^.popup__pdpa
+!#endif
+toyota.co.th##.popup__pdpa
+!#if cap_html_filtering
+similarweb.com##^.cookies-notification
+!#endif
+similarweb.com##.cookies-notification
+!#if cap_html_filtering
+joox.com##^.pdpa
+!#endif
+joox.com##.pdpa
+dict.longdo.com#@#.consent-div
+longdo.com###pdpa-longdocom-div
+!#if cap_html_filtering
+oxfordlearnersdictionaries.com##^#onetrust-consent-sdk
+!#endif
+oxfordlearnersdictionaries.com###onetrust-consent-sdk
+!#if cap_html_filtering
+collinsdictionary.com##^#onetrust-consent-sdk
+!#endif
+collinsdictionary.com###onetrust-consent-sdk
+!#if cap_html_filtering
+macmillandictionary.com,macmillanthesaurus.com##^#onetrust-consent-sdk
+!#endif
+macmillandictionary.com,macmillanthesaurus.com###onetrust-consent-sdk
+!#if cap_html_filtering
+thansettakij.com##^.ot-sdk-container
+!#endif
+thansettakij.com##.ot-sdk-container
+!#if cap_html_filtering
+g2.com##^div[role="dialog"]
+!#endif
+g2.com##div[role="dialog"]
+!#if cap_html_filtering
+mediafire.com##^#cookie-accept-footer
+!#endif
+mediafire.com###cookie-accept-footer
+!#if cap_html_filtering
+www.techmoblog.com##^#cookiePopup
+!#endif
+www.techmoblog.com###cookiePopup
+!#if cap_html_filtering
+pantip.com##^.pt-snackbar
+!#endif
+pantip.com##.pt-snackbar
+pantip.com#@#.pt-snackbar__surface
+!#if cap_html_filtering
+thisisgamethailand.com##^#true
+!#endif
+thisisgamethailand.com###true
+!#if cap_html_filtering
+goshujin.tk##^#banner
+!#endif
+goshujin.tk###banner
+!#if cap_html_filtering
+blender.stackexchange.com##^.js-consent-banner
+!#endif
+blender.stackexchange.com##.js-consent-banner
+!#if cap_html_filtering
+geeksforgeeks.org##^.cookie-consent:not(body):not(html)
+!#endif
+geeksforgeeks.org##.cookie-consent:not(body):not(html)
+!#if cap_html_filtering
+apkdone.com##^#acceptCookie
+!#endif
+apkdone.com###acceptCookie
+!#if cap_html_filtering
+apkdone.com##^#cookie-law-info-bar
+!#endif
+apkdone.com###cookie-law-info-bar
+!#if cap_html_filtering
+true.th##^#floater-bnr-box
+!#endif
+true.th###floater-bnr-box
+!#if cap_html_filtering
+pptvhd36.com##^.consent-popup
+!#endif
+pptvhd36.com##.consent-popup
+!#if cap_html_filtering
+khaosod.co.th##^#pdpa-wrapper
+!#endif
+khaosod.co.th###pdpa-wrapper
+!#if cap_html_filtering
+brother.co.th##^#CookieAcceptionArea
+!#endif
+brother.co.th###CookieAcceptionArea
+!thestandard.co
+!#if cap_html_filtering
+election2566.thestandard.co##^.ant-drawer-bottom
+!#endif
+election2566.thestandard.co##.ant-drawer-bottom
+!#if cap_html_filtering
+thestandard.co##^.cwc-sdk-container
+!#endif
+thestandard.co##.cwc-sdk-container
+!#if cap_html_filtering
+thematter.co##^#cookie-law-info-bar:not(body):not(html):not(article)
+!#endif
+thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
+!#if cap_html_filtering
+voicetv.co.th##^#cookie-notification
+!#endif
+voicetv.co.th###cookie-notification
+!#if cap_html_filtering
+workpointtoday.com##^div[class^="dpdpa--popup"]
+!#else
+workpointtoday.com##div[class^="dpdpa--popup"]
+!#endif
+!#if cap_html_filtering
+notebookspec.com##^.dpdpa--popup 
+!#endif
+notebookspec.com##.dpdpa--popup 
+!#if cap_html_filtering
+mangozero.com##^.dpdpa--popup
+!#endif
+mangozero.com##.dpdpa--popup
+!#if cap_html_filtering
+techcommunity.microsoft.com##^#cookie-banner
+!#endif
+techcommunity.microsoft.com###cookie-banner
+!#if cap_html_filtering
+mustplay.in.th##^.cookiealert
+!#endif
+mustplay.in.th##.cookiealert
+!#if cap_html_filtering
+pharmacy.mahidol.ac.th##^#endzoommain
+!#endif
+pharmacy.mahidol.ac.th###endzoommain
+!#if cap_html_filtering
+siphhospital.com##^#cookit
+!#endif
+siphhospital.com###cookit
+!#if cap_html_filtering
+advice.co.th##^.foot-cookie
+!#endif
+advice.co.th##.foot-cookie
+!#if cap_html_filtering
+ihavecpu.com##^#cookie-banner
+!#endif
+ihavecpu.com###cookie-banner
+!#if cap_html_filtering
+thaiware.com##^div#pdpa_setting
+!#endif
+thaiware.com##div#pdpa_setting
+patreon.com##body:style(overflow: auto !important;)
+!#if cap_html_filtering
+wordpress.com##^.ads-active.hide-on-button
+!#endif
+wordpress.com##.ads-active.hide-on-button
+!#if cap_html_filtering
+panyasociety.com##^#consentTrackAndCookieBar
+!#endif
+panyasociety.com###consentTrackAndCookieBar
+!#if cap_html_filtering
+mycourseville.com##^#cvcookie-notice
+!#endif
+mycourseville.com###cvcookie-notice
+!#if cap_html_filtering
+goodnotes.com##^.fscc
+!#endif
+goodnotes.com##.fscc
+!#if cap_html_filtering
+askubuntu.com##^div.js-consent-banner
+!#endif
+askubuntu.com##div.js-consent-banner
+!#if cap_html_filtering
+sf-international.com##^.cookie-terms
+!#endif
+sf-international.com##.cookie-terms
+!#if cap_html_filtering
+sony-asia.com##^#__tealiumGDPRecModal
+!#endif
+sony-asia.com###__tealiumGDPRecModal
+!#if cap_html_filtering
+playulti.com##^.cookiealert
+!#endif
+playulti.com##.cookiealert
+!#if cap_html_filtering
+xbox.com##^div#cookie-banner
+!#endif
+xbox.com##div#cookie-banner
+!#if cap_html_filtering
+mega.io##^dialog.cookie-banner
+!#endif
+mega.io##dialog.cookie-banner
+ctrlg.gg##body > div[style^="position:"]:nth-child(4)
+!#if cap_html_filtering
+scrintal.com##^div.c-elDcAj
+!#endif
+scrintal.com##div.c-elDcAj
+!#if cap_html_filtering
+sec.or.th##^#bodyCookie, #overlay
+!#endif
+sec.or.th###bodyCookie, #overlay
+!#if cap_html_filtering
+ejan.co##^#glowCookies-banner
+!#endif
+ejan.co###glowCookies-banner
+!#if cap_html_filtering
+snp1344.com##^.cookie-consent
+!#endif
+snp1344.com##.cookie-consent
+!#if cap_html_filtering
+biobeamcenter.com##^.cwc-sdk-container
+!#endif
+biobeamcenter.com##.cwc-sdk-container
+!#if cap_html_filtering
+urlscan.io##^.grecaptcha-badge
+!#endif
+urlscan.io##.grecaptcha-badge
+!#if cap_html_filtering
+theptarin.com##^.cwc-cookie-banner-ui-sdk
+!#endif
+theptarin.com##.cwc-cookie-banner-ui-sdk
+!#if cap_html_filtering
+smilearm.com##^.policy-position
+!#endif
+smilearm.com##.policy-position
+!#if cap_html_filtering
+mthai.com##^div.pdpa_cookies
+!#endif
+mthai.com##div.pdpa_cookies
+!#if cap_html_filtering
+munkongonline.com##^.cookie-overlay:not(html):not(body)
+!#endif
+munkongonline.com##.cookie-overlay:not(html):not(body)
+!#if cap_html_filtering
+cututoronline.com##^.cookie-consent
+!#endif
+cututoronline.com##.cookie-consent
+https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$domain=opendurian.com
+forbesthailand.com###__next > main:nth-child(1) > div:nth-child(2) > div:nth-child(2)
+!mobile
+!#if cap_html_filtering
+extremeit.com##^.dpdpa--popup
+!#endif
+extremeit.com##.dpdpa--popup
+!#if cap_html_filtering
+connect.mozilla.org##^.lia-component-gdprcookiebanner-widget-cookie-banner-alert.lia-cookie-banner-alert
+!#endif
+connect.mozilla.org##.lia-component-gdprcookiebanner-widget-cookie-banner-alert.lia-cookie-banner-alert
+!#if cap_html_filtering
+promeai.com##^img[src="https://d38b044pevnwc9.cloudfront.net/promeai-web/v2.0.56/img/fail.d902a47.png"]:upward(1)
+!#endif
+promeai.com##img[src="https://d38b044pevnwc9.cloudfront.net/promeai-web/v2.0.56/img/fail.d902a47.png"]:upward(1)
+!#if cap_html_filtering
+monkeyeveryday.com##^img[alt="cookies"]:upward(6)
+!#endif
+monkeyeveryday.com##img[alt="cookies"]:upward(6)
+!#if cap_html_filtering
+whoscall.com##^#cookie-alert
+!#endif
+whoscall.com###cookie-alert
+resilio.com###cookie-consent-block
+!#if cap_html_filtering
+cdkeys.com##^#cookie-bar-container
+!#endif
+cdkeys.com###cookie-bar-container
+!#if cap_html_filtering
+obsproject.com##^.notice--cookie:not(body):not(html)
+!#endif
+obsproject.com##.notice--cookie:not(body):not(html)
+!#if cap_html_filtering
+uploadmx.com##^div[class="cookies show"]
+!#endif
+uploadmx.com##div[class="cookies show"]
+
+!trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
+mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
+studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
+studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
+supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
+
+!MARK: --- cookie general ---
+
+!cookiewow api
+||cookiecdn.com^$3p,script
+||cdn.cookielaw.org^$3p
+||geolocation.onetrust.com^$3p
+/pdpa.js$script
+/glow-cookies.min.js$script
+!https://app.themis-technology.com/cdn/pdpa-cookieconsent.js
+/pdpa-cookieconsent.js$script
+/designil-pdpa$script,image,xhr
+/cookie-law-info$script,image,xhr
+/cookie-notice$script,css
+!!พบได้ thisisgamethailand.com 20240213165025
+/gdpr-compliance-cookie-consent$script,css
+/gdpr-option.js$script
+/jquery.cookie.min.js$script
+/jquery.cookie.js$script
+!MadeByMe Cosmestic rules
+##.eupopup-body
+##.eupopup-head
+###pdpa-wrapper
+##.pdpa
+###consentTrackAndCookieBar
+###js-consent-banner
+

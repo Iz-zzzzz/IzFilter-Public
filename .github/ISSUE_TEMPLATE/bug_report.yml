@@ -1,0 +1,171 @@
+name: รายงานปัญหา
+description: ใช้สำหรับเมื่อพบว่า Iz's Addon Filter มีข้อผิดพลาด
+labels: ["Unsorted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Credit bug report template: https://github.com/AdguardTeam/AdguardFilters/blob/master/.github/ISSUE_TEMPLATE/bug_report.yml
+    
+  - type: checkboxes
+    attributes:
+      label: แบบสอบถาม
+      description: |
+        เพื่อป้องกันการรายงานผิดพลาด กรุณาตรวจสอบ และยืนยันตามรายการด้านล่าง
+      options:
+        - label: Iz's Addon Filter ที่พบปัญหาได้ทำการ update เป็น version ล่าสุดแล้ว ใช่หรือไม่?
+          required: true
+        - label: ad blocker Extension หรือ Application ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
+          required: true
+        - label: Browser ที่ใช้งานและพบปัญหาเป็น version ล่าสุดแล้ว ใช่หรือไม่?
+          required: true
+        - label: ถ้าปิดการใช้งาน Iz's Addon Filter จะไม่พบปัญหาที่เกิดขึ้น ใช่หรือไม่?
+          required: true
+        - label: มีเนื้อหา NSFW ใช่หรือไม่?
+          required: false
+          
+  - type: dropdown
+    attributes:
+      label: ใช้ Iz's Addon Filter บน Extension หรือ Application ใด?
+      multiple: true
+      options:
+        - AdGuard Browser Extension
+        - AdGuard Content Blocker (Android addon สำหรับ Samsung Nrowser หรือ Yandex Browser)
+        - AdGuard for Android
+        - AdGuard for Mac หรือ Windows
+        - AdGuard for Safari
+        - uBlock Origin Browser Extension
+        - uBlock Lite Browser Extension
+        - Brave Browser built-in ad blocker
+        - Ad blocker อื่นๆ (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Ad blocker Extension หรือ Application ที่พบข้อผิดพลาดเป็น version อะไร
+      description: กรุณาระบุด้านล่าง โดยส่วนใหญ่มักจะหา version ได้จาก หน้า about ของ software ที่คุณใช้
+      placeholder: ตัวอย่างเช่น 1.56.1
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: พบข้อผิดพลาดประเภทใด?
+      multiple: true
+      options:
+        - โฆษณาหรืออื่นๆ ไม่ครบถ้วน
+        - Website ทำงานไม่ปกติ
+        - Ad blocker ถูกตรวจจับได้โดย website
+        - Analytics or tracker ที่ไม่ได้ block
+        - Website อันตราย
+        - Block ไม่ตรงตาม จุดประสงค์ (ที่หน้า readme ใต้หัวข้อแรก)
+        - อื่นๆ (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Browser ที่ใช้งาน และพบข้อผิดพลาด คือ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+        - AdGuard Application
+        - อื่นๆ (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: ชนิดของอุปกรณ์ที่พบปัญหา
+      multiple: false
+      options:
+        - Desktop (Windows PC, MacOS, Linux Desktop, Chrome OS)
+        - Mobile (Smartphone, Tablet)
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: URL ของ website ที่พบปัญหา
+      description: กรุณาใส่ URL ให้ครบถ้วน
+      placeholder: ตัวอย่างเช่น https://example.com/specific/url/here.png
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ‎‎‎‎‎‎‎‎
+  - type: markdown
+    attributes:
+      value: "### Filter list อื่นๆ ที่ใช้งานด้วยกัน ขณะพบปัญหา"
+
+  - type: textarea
+    attributes:
+      label: กรุณาใส่ ชื่อของ filter อื่นๆ ที่ใช้งาน ขณะพบปัญหา
+      value: |
+        1. 
+        2. 
+        
+
+  - type: markdown
+    attributes:
+      value: |
+        ‎‎‎‎‎‎‎‎
+  - type: dropdown
+    attributes:
+      label: Stealth Mode ที่ใช้งานขณะพบปัญหา (เฉพาะ AdGuard)
+      description: กรุณาเลือก option ของ Stealth mode ขณะพบปัญหา
+      multiple: true
+      options:
+        - Hide your search queries
+        - Send Do-Not-Track signals
+        - Self-destruction of third-party cookies
+        - Self-destruction of first-party cookies
+        - Disable cache for third-party requests
+        - Block third-party Authorization header
+        - Block WebRTC
+        - Block Push API
+        - Block Location API
+        - Hide Referrer from third-parties (specify in comment below, if used custom value)
+        - Hide your User-Agent (specify in comment below, if used custom value)
+        - Mask your IP address (specify in comment below, if used custom value)
+        - Remove X-Client-Data header from HTTP requests
+        - Protect from DPI
+
+  - type: textarea
+    attributes:
+      label: ใส่หมายเหตุ และ screenshot
+      description: |
+        1. ใส่ screenshot ขณะพบปัญหา พร้อมวงจุดที่เกิดปัญหาให้เรียบร้อย
+          ใช้ `<details> </details>` ครอบ screenshot ด้วย
+        2. อธิบายอย่างละเอียด ให้เข้าใจได้ว่า ข้อผิดพลาดคืออะไร
+        3. กล่าวถึง ข้อมูลหรือปัจจัยอื่นๆ ที่ผู้ดูแลควรทราบ
+
+        เตือน!! กรุณา blur ข้อมูลส่วนตัว และซ่อน "เนื้อหา NSFW" ใต้ spoiler เสมอ
+      value: |
+          1. <หมายเหตุ>
+
+          2. Screenshots
+          <details><summary>Screenshot 1:</summary>
+
+          <!-- วาง screenshot ที่นี้ -->
+
+          </details>
+
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: ความเป็นส่วนตัว
+      options:
+        - label: คุณได้ตรวจสอบว่า ไม่มีข้อมูลส่วนตัวของคุณใน issue นี้
+          required: true
+        - label: คุณได้ซ่อน screenshot ภายใต้ spoiler เรียบร้อย และได้กดดู Preview ตรวจสอบแล้ว
+          required: true
