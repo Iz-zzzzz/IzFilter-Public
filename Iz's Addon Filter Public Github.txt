@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240622024611
+! Version: 20240626165150
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -946,8 +946,8 @@ me-qr.com##div[class="bg-success"]
 web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
 !#endif
 
-!twitter.com (x.com) 20240619004654
-||ads-api.twitter.com^$xhr
+!twitter.com (x.com) 20240626141354
+||ads-api.x.com^$xhr
 
 !MARK: ---wiki ---
 !fandom.com 
@@ -2162,6 +2162,18 @@ specphone.com##div#footer-ads
 specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
+
+!entechreview.com 20240626165114
+!#if cap_html_filtering
+entechreview.com##^div[aria-label^="Sponser"]:upward(1)
+!#else
+entechreview.com##div[aria-label^="Sponser"]:upward(1)
+!#endif
+!#if cap_html_filtering
+entechreview.com##^div.promotion-section
+!#else
+entechreview.com##div.promotion-section
+!#endif
 
 !MARK: ---tech ---
 
@@ -3401,9 +3413,10 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 !* 
 !****************************************************************************************
 
-!Google ads 20240309143302
+!Google ads 20240624123556
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 @@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+!@@||static.doubleclick.net/instream/ad_status.js$domain=
 ! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
 ! google contributor anti adblock
 #@#.div-gpt-ad
@@ -4016,6 +4029,7 @@ google.*#@##bottomads
 @@||specphone.com^$generichide
 @@||itnews24hrs.com^$generichide
 @@||techtalkthai.com^$generichide
+@@||entechreview.com^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
 !MARK: --- science news ---
