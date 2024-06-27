@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240626165150
+! Version: 20240627205820
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -314,7 +314,7 @@ https://*.bet^$all
 https://sexygame*.com^$all
 https://www.ufa*.$all
 https://ufa*.$all
-!https://*ssgame*/$all
+https://ssgame*$all
 !https://*casino*.*/$all
 
 !block both link and ads video
@@ -727,6 +727,7 @@ https://pgf-asw0zz.co^$all
 https://ufakick.io^$all
 https://www.meehay569st.co^$all
 https://baccarat888th.com^$all
+https://huaylike.life^$all
 
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
@@ -2766,11 +2767,11 @@ doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 
-!manga-post.com 20240217012317
+!manga-post.com 20240627205819
 !#if cap_html_filtering
-manga-post.com##^center > a:upward(1)
+manga-post.com##^div[id^="FloatingLayer"]
 !#else
-manga-post.com##center > a:upward(1)
+manga-post.com##div[id^="FloatingLayer"]
 !#endif
 
 !mafia-manga.com 20231217005325
@@ -2832,6 +2833,13 @@ mangaza.net##div[class="mt-ad text-center"]
 mangaza.net##^div[id^="ads_"]
 !#else
 mangaza.net##div[id^="ads_"]
+!#endif
+
+!xn--l3c0azab5a2gta.com (สดใสเมะ.com) 20240627204611
+!#if cap_html_filtering
+xn--l3c0azab5a2gta.com##^div.ads
+!#else
+xn--l3c0azab5a2gta.com##div.ads
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
@@ -3985,6 +3993,8 @@ google.*#@##bottomads
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
 @@||www.blockdit.com^$generichide
+!MARK: ---dictionary ---
+@@||thaifastdict.com^$ehide
 !MARK: ---game ---
 @@||jokergameth.com^$generichide
 @@||garena.in.th^$generichide
@@ -4109,6 +4119,7 @@ google.*#@##bottomads
 @@||rose-manga.com^$generichide
 @@||mafia-manga.com^$generichide
 @@||mangaza.net^$generichide
+@@||xn--l3c0azab5a2gta.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
