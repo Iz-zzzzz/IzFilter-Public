@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240627205820
+! Version: 20240703113555
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -84,6 +84,8 @@
 ||myfindr.com^$all
 ||s.akamaicdn.cloud^$all
 ||toonzaa.com^$all
+!ขาย Airpod 3 ปลอม 20240703113539
+||hotsale247.site^$all
 
 !!!**************************************************************************************
 !MARK:Bitdefender
@@ -933,11 +935,13 @@ ieltsbuddy.com##^div[class="modal_block modal_ ss-ui-bootstrap"]
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 
 !MARK: ---redirect qr code ---
-!me-qr.com
-!#if cap_html_filtering
-me-qr.com##^div[class="bg-success"]
-!#endif
-me-qr.com##div[class="bg-success"]
+
+!qr.me-qr.com 20240701140223
+!!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
+qr.me-qr.com##+js(trusted-click-element,a[data-action="click->ticket-app--page#increaseSkipAd"])
+
+
+
 !MARK: ---music ---
 
 !MARK: ---social platform ---
@@ -1478,11 +1482,11 @@ mangakakalot.tv##^div[style="max-width: 100%; width: 300px; height: 250px; margi
 !#endif
 mangakakalot.tv##div[style="max-width: 100%; width: 300px; height: 250px; margin: 0px auto; overflow: hidden;"]
 
-!manhwatop.to 20240224215854
+!mangatop.to 20240627215513
 !#if cap_html_filtering
-manhwatop.to##^iframe[src^="//ad.a-ads.com/"]
+mangatop.to##^iframe[src^="//ad.a-ads.com/"]
 !#endif
-manhwatop.to##iframe[src^="//ad.a-ads.com/"]
+mangatop.to##iframe[src^="//ad.a-ads.com/"]
 
 !MARK: ---Novel Foreign---
 
@@ -3860,13 +3864,13 @@ google.*#@##bottomads
 !MARK: ---tech illegitimate ---
 
 !MARK: ---Manga Foreign illegitimate ---
-@@||mangadex.org^$generichide
+@@||mangadex.org^$ehide
 @@||manhwazmove.com^$generichide
 @@||mangakakalot.com^$generichide
 @@||manganato.com^$generichide
 @@||manganelo.tv^$generichide
 @@||manganelo.com^$generichide
-@@||manhwatop.to^$generichide
+@@||mangatop.to^$generichide
 @@||manhwatimez.com^$generichide
 @@||rawkuma.com^$generichide
 @@||mgeko.com^$generichide
