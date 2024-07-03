@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240703113555
+! Version: 20240703184250
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -305,20 +305,20 @@
 ||jey48.xyz^$all
 
 !!!**************************************************************************************
-!* 
+!* 1
 !* Thai illegal sites
-!* 
+!* 2
 !****************************************************************************************
 
 !MARK: ---------- URL general Rules ----------
 https://*.bet^$all
 !https://*bet.$all
 https://sexygame*.com^$all
+https://sexygaming*.com^$all
 https://www.ufa*.$all
 https://ufa*.$all
 https://ssgame*$all
 !https://*casino*.*/$all
-
 !block both link and ads video
 /brazil$media
 /lotto$media
@@ -396,6 +396,7 @@ https://ssgame*$all
 !/betflixcasino /betflixslot /betflix2k
 /betflix*.gif$image
 /BETFLIX*.webp$image
+!1
 /*Lockdown*.gif$image
 /*Lockdown*.webp$image
 /panama*.gif$image
@@ -425,6 +426,7 @@ https://ssgame*$all
 -ufazeed.gif$image
 /lalika168.gif$image
 /UFAC4$image
+! 1
 /999bet$image
 /qq101$image
 /rb88asia$image
@@ -495,7 +497,6 @@ https://ssgame*$all
 /ดูบอลฟรี-ชาช่า.gif$image
 /betangry$image
 /euro69-banner.gif$image
-
 !MARK: ---------- URL specific Rules ----------
 http://bit.ly/3GRDdCh$all
 http://bit.ly/3hC5suJ$all
@@ -726,15 +727,131 @@ https://baccarat88-th.com^$all
 https://pgf-asw0zz.co^$all
 !เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
 ||vikkiromano.com^$all
+! 2
 https://ufakick.io^$all
 https://www.meehay569st.co^$all
 https://baccarat888th.com^$all
 https://huaylike.life^$all
-
+https://www.thunder95.com^$all
+https://www.godzilla88.co^$all
+https://cobra88.live^$all
+https://betfrenzy88.com^$all
+https://rocket45.net^$all
+https://lionth.asia^$all
+http://www.jsp.com.mk^$all
+http://www.mathedu.ru.ac.th^$all
+https://betplay569t.com^$all
+https://bsc.news^$all
+https://cmrsl.com^$all
+https://dclub77.world^$all
+https://electrotherm.com^$all
+https://flowerpowerpackages.com^$all
+https://harmonyvineyardchurch.com^$all
+https://hswaynepets.org^$all
+https://hydra888f.com^$all
+https://internalaudit.cmru.ac.th^$all
+https://maryclairecruz.com^$all
+https://medium.com^$all
+https://ministeroffice.moph.go.th^$all
+https://mooc.buu.ac.th^$all
+https://myuvn.com^$all
+https://newniki888.com^$all
+https://oncolife.com.ua^$all
+https://orijendesign.com^$all
+https://palette-sf.com^$all
+https://re.tbs.tu.ac.th^$all
+https://scr888t.co^$all
+https://search.app.goo.gl^$all
+https://starlingtalk.com^$all
+https://superslotmax.vip^$all
+https://uninta.edu.br^$all
+https://www.completesports.com^$all
+https://www.fideg.org^$all
+https://www.huc99.casino^$all
+https://www.jinda888.co^$all
+https://www.juad888d.com^$all
+https://www.kachilodge.co^$all
+https://www.outlookindia.com^$all
+https://www.panda555.org^$all
+https://www.pulseorlandoclub.com^$all
+https://www.pwice.com^$all
+https://www.santeedriveintheatre.com^$all
+https://www.thenorthface.com^$all
+https://www.wacra.org^$all
+https://www.yak888.win^$all
+https://xn--makro2563-zi2aqikc0ea6ldb36c.kpho.go.th^$all
+https://zoospassion.com^$all
+https://fanlnk.to^$all
+http://home.basis.ac.th^$all
+http://utoservice.moph.go.th^$all
+https://brookfieldedc.org^$all
+https://browbooks.com^$all
+https://couplescandy.com^$all
+https://ctbio.fiocruz.br^$all
+https://fitpersian.com^$all
+https://hanpho.go.th^$all
+https://indysb.org^$all
+https://jts.sarawak.gov.my^$all
+https://meeting.president.lru.ac.th^$all
+https://mikrokredit.selangor.gov.my^$all
+https://moleculenet.ai^$all
+https://nonthaburi.web.cpd.go.th^$all
+https://penniesforpeace.org^$all
+https://register.doa.go.th^$all
+https://sbanatomia.org.br^$all
+https://southernbeautyguide.com^$all
+https://soxlaw.com^$all
+https://ue.edu.pk^$all
+https://www.ancona-airport.com^$all
+https://www.auvimer.com^$all
+https://www.commentry.fr^$all
+https://www.cybercity-online.net^$all
+https://www.dillington.com^$all
+https://www.fishsafe.info^$all
+https://www.fresh-voices.com^$all
+https://www.freshfilmfest.net^$all
+https://www.immigrantfundca.org^$all
+https://www.immigrationworksusa.org^$all
+https://www.popinns.com^$all
+https://www.sesaoskt.go.th^$all
+https://www.therapeutique-dermatologique.org^$all
+https://www.usms.ac.ma^$all
+https://www.whitby-photography.com^$all
+http://internalaudit.crru.ac.th^$all
+http://istitutocomprensivo4oristano.edu.it^$all
+https://av-toiture.com^$all
+https://chonburiarea3.go.th^$all
+https://dashboard.myplacements.catholic.edu^$all
+https://dralvinchapman.com^$all
+https://e-manage.rmutto.ac.th^$all
+https://e-salary.nb2.go.th^$all
+https://icrash2023.lincoln.edu.my^$all
+https://liewayhuntclub.net^$all
+https://medinfo.psu.ac.th^$all
+https://milienature.com^$all
+https://pavetheway.cc^$all
+https://slatearts.com^$all
+https://treecareandwellness.com^$all
+https://ukedchat.com^$all
+https://www.ditp.go.th^$all
+https://www.hcore.ge^$all
+https://www.ufa350s.world^$all
+||meehay569st.bet^$all
+||pg999ts.com^$all
+!sagaming135.com ซ้ำ
+||99tdedth.com^$all
+https://wk888pluss.com^$all
+https://www.tangtem168.bet^$all
+https://smart.nb2.go.th^$all
+https://42quilts.com^$all
+http://gmtamfj.bunharnpoly.ac.th^$all
+https://www.naka.go.th^$all
+https://agrokam-czesci.pl^$all
+https://expslot.com^$all
+https://spreadgit.com^$all
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
 ||qq288.com$all
-
 !!!**************************************************************************************
 !* 
 !* General Ad Links/Servers
@@ -831,8 +948,8 @@ https://cdn.apicdn*.one^$xhr
 ||rrc.texas.gov^$popup
 ! จาก stream.animeorder.com ที่อยู่ใน anime-sugoi.com และ animeyuzu.com 20240308221538
 ||amung.us^$all
-! จาก https://cats-translator.com และ HaGeZi's Pro DNS Blocklist 20240318211729
-||cdend.com^
+! จาก https://cats-translator.com และ HaGeZi's Pro DNS Blocklist  และ niceoppai.net 20240703171555
+||cdend.com^$3p
 ! โฆษณาที่ขอบรูปใน https://www.khaosod.co.th 20240325140322
 ||thapi.aedi.ai^$3p
 ! จาก https://www.lifewire.com/fix-error-0x80070643-4691724 20240326191222
@@ -2440,7 +2557,8 @@ moodtoon.net##div[id^="ads_"]
 !#endif
 
 !niceoppai.net 20240309121202
-/^https?:\/\/(www\.)?(?!(?:facebook\.com|twitter\.com|facebook\.net)).*$/$frame,domain=niceoppai.net
+!! มีทั้ง frame และ other เชื่อมต่อไปเว็บนอก
+/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$domain=niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
 !#else
