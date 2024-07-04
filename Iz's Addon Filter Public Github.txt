@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240703184250
+! Version: 20240705004321
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -311,14 +311,20 @@
 !****************************************************************************************
 
 !MARK: ---------- URL general Rules ----------
-https://*.bet^$all
-!https://*bet.$all
-https://sexygame*.com^$all
-https://sexygaming*.com^$all
-https://www.ufa*.$all
-https://ufa*.$all
-https://ssgame*$all
-!https://*casino*.*/$all
+https://bet*$all
+https://hotgraph*$all
+https://lucky*$all
+/^https?:\/\/([a-zA-Z0-9.-]*ufa[a-zA-Z0-9.-]*)\/?/$all
+/^https?:\/\/([a-zA-Z0-9.-]*ssgam[a-zA-Z0-9.-]*)\/?/$all
+/^https?:\/\/([a-zA-Z0-9.-]*casino[a-zA-Z0-9.-]*)\/?/$all
+/^https?:\/\/([a-zA-Z0-9.-]*168[a-zA-Z0-9.-]*)\/?/$all
+@@||manga168.com^
+/^https?:\/\/([a-zA-Z0-9.-]*88[a-zA-Z0-9.-]*)\/?/$all
+@@||kingmovie88.com^
+/\b^https?://([a-zA-Z0-9.-]+\.)?football\b/$all
+/\b^https?://([a-zA-Z0-9.-]+\.)?bet\b/$all
+/^https?://[^\s/]*bet\d{1,3}\.[^\s/]+/$all
+
 !block both link and ads video
 /brazil$media
 /lotto$media
@@ -498,6 +504,9 @@ https://ssgame*$all
 /betangry$image
 /euro69-banner.gif$image
 !MARK: ---------- URL specific Rules ----------
+||99tdedth.com^$all
+||meehay569st.bet^$all
+||pg999ts.com^$all
 http://bit.ly/3GRDdCh$all
 http://bit.ly/3hC5suJ$all
 http://bit.ly/3HM8wNR$all
@@ -506,13 +515,22 @@ http://bit.ly/3K5kZiw$all
 http://bit.ly/3PAUBhl$all
 http://bit.ly/3VrYSWw$all
 http://daws-api.tv-asahi.co.jp^$all
-http://london1681.com^$all
+http://gmtamfj.bunharnpoly.ac.th^$all
+http://home.basis.ac.th^$all
+http://internalaudit.crru.ac.th^$all
+http://istitutocomprensivo4oristano.edu.it^$all
+!http://london1681.com^$all
+http://utoservice.moph.go.th^$all
+http://www.jsp.com.mk^$all
+http://www.mathedu.ru.ac.th^$all
 https://168*sagame.com^$all
 https://168pretty.*$all
-https://188th.co^$all
+!https://168pretty.com^$all
+!https://188th.co^$all
+https://42quilts.com^$all
 https://789steps.com^$all
 https://8xbet-vip.*$all
-https://8xbet0.com^$all
+!https://8xbet0.com^$all
 https://928hd.com^$all
 https://99tded.com^$all
 https://9slotgame.net^$all
@@ -522,15 +540,22 @@ https://aff.camelv1.com^$all
 https://aff.easy365.cc^$all
 https://aff.kingkong-89.cc^$all
 https://aff.lion-123.app^$all
-https://affhy88.com^$all
+!https://affhy88.com^$all
+https://agrokam-czesci.pl^$all
 https://ambbeth.com^$all
 https://anime-hit.com^$all
 https://app.shark-center.cc^$all
-https://app.xgbet369.com^$all
-https://baccarat888.com^$all
+!https://app.xgbet369.com^$all
+https://av-toiture.com^$all
+!https://baccarat88-th.com^$all
+!https://baccarat888.com^$all
+!https://baccarat888th.com^$all
 https://bcr99th.com^$all
-https://bet777th.com^$all
-https://betflix*.com^$all
+!https://bet777th.com^$all
+!https://betflix*.com^$all
+!https://betfrenzy88.com^$all
+!https://betplay569.com^$all
+!https://betplay569t.com^$all
 https://bit.ly/38y9PSG$all
 https://bit.ly/39SJ38y$all
 https://bit.ly/3BOp05j$all
@@ -554,6 +579,7 @@ https://bit.ly/3NqDek8$all
 https://bit.ly/3pg77slbn1$all
 https://bit.ly/3PN1nzk$all
 https://bit.ly/3qEXOAJ$all
+https://bit.ly/3Qr5Ifd^$all
 https://bit.ly/3Qup284$all
 https://bit.ly/3Qwqzff$all
 https://bit.ly/3QzKPv2$all
@@ -576,279 +602,259 @@ https://bit.ly/sbobet-neevegas168-pgslot-fifa55$all
 https://bit.ly/sexygame-*$all
 https://bit.ly/ufabet*$all
 https://bmjverification-qa.bma.org.uk^$all
+https://boston777s.com^$all
 https://brazil999.*$all
+!https://brazil999.plus^$all
+https://brookfieldedc.org^$all
+https://browbooks.com^$all
+https://bsc.news^$all
 https://cat999.com^$all
+https://chonburiarea3.go.th^$all
 https://click.a-ads.com^$all
 https://clsapitest.fdot.gov^$all
+https://cmrsl.com^$all
+!https://cobra88.live^$all
+https://couplescandy.com^$all
+!https://csbet88.com^$all
+https://ctbio.fiocruz.br^$all
 https://d99d99.click^$all
+https://dashboard.myplacements.catholic.edu^$all
+https://dclub77.world^$all
 https://dev.pwm.basf.com^$all
 https://df011.com^$all
 https://dhorball.com^$all
+https://dralvinchapman.com^$all
+https://e-manage.rmutto.ac.th^$all
+https://e-salary.nb2.go.th^$all
+https://e15initiative.org^$all
+https://electrotherm.com^$all
+https://expslot.com^$all
+https://fanlnk.to^$all
+https://fitpersian.com^$all
+https://flowerpowerpackages.com^$all
 https://fx8.s3.ap-southeast-1.amazonaws.com^$all
+https://gclub321.com^$all
 https://ggband.gg^$all
-https://hengjing168.win^$all
+!https://goatbet88.com^$all
+!https://goatbet888.com^$all
+https://grand-prize.xyz^$all
+https://hanpho.go.th^$all
+https://harmonyvineyardchurch.com^$all
+!https://hengjing168.win^$all
 https://heylink.me/fox888.vip$all
-https://hotgraph88.co^$all
-https://hotgraph883.com^$all
-https://hydra88*.co^$all
-https://jinda888.vip^$all
+!https://hotgraph88.co^$all
+!https://hotgraph883.com^$all
+https://hswaynepets.org^$all
+https://huaylike.life^$all
+!https://hydra88*.co^$all
+!https://hydra888f.com^$all
+https://icrash2023.lincoln.edu.my^$all
+https://indysb.org^$all
+https://internalaudit.cmru.ac.th^$all
+!https://jinda888.vip^$all
 https://joker123th.com^$all
-https://juad888*.com^$all
+https://jts.sarawak.gov.my^$all
+!https://juad888*.com^$all
 https://k9wyyl.com^$all
 https://kingdom6*.com^$all
-https://lcbet168.com^$all
+!https://lalikabet168.co^$all
+!https://lcbet168.com^$all
+!https://lcbet24hr.com^$all
+!https://lcbet88.com^$all
+https://lcbetasia.com^$all
+https://liewayhuntclub.net^$all
 https://ligaz77king.com^$all
 https://lin.ee/1ALiEXl$all
 https://line.me/R/ti/p/%40214gglya$all
 https://line.me/ti/p/lETR15cN-P$all
 https://lion123.asia^$all
+!https://lionth.asia^$all
+!https://lionth.co^$all
+!https://lionth.com^$all
+https://lionth*$all
 https://lkk135.com^$all
 https://lockdown168*$all
 https://london168*$all
 https://lotto*.co*$all
 https://luca99th.com^$all
-https://lucabet168.com^$all
+!https://lucabet168.com^$all
 https://lucky135.com^$all
 https://lucky269.com^$all
 https://lucky629.com^$all
-https://mahagame88*.com^$all
+!https://mahagame88*.com^$all
+https://maryclairecruz.com^$all
 https://mayalounge.net^$all
+https://medinfo.psu.ac.th^$all
+https://medium.com^$all
+https://meeting.president.lru.ac.th^$all
 https://member.365kub.com^$all
 https://meyou147.com^$all
-https://mhandee88.com^$all
+!https://mhandee88.com^$all
+https://mikrokredit.selangor.gov.my^$all
+https://milienature.com^$all
+https://ministeroffice.moph.go.th^$all
+https://moleculenet.ai^$all
+https://mooc.buu.ac.th^$all
+https://myuvn.com^$all
+https://nashvillelgbtchamber.org^$all
 https://nazavip.com^$all
-https://newyork888s.co*$all
-https://panama888*$all
+!https://newniki888.com^$all
+!https://newyork888s.co*$all
+https://nonthaburi.web.cpd.go.th^$all
+https://ohiovaxamillion.com^$all
+https://oncolife.com.ua^$all
+https://orijendesign.com^$all
+https://palette-sf.com^$all
+!https://panama888*$all
+https://paragon-usa.com^$all
+https://pavetheway.cc^$all
+https://penniesforpeace.org^$all
 https://pg-gameslot.com^$all
+!https://pg888t.com^$all
+https://pg999st.com^$all
+!https://pgs88asia.com^$all
 https://pigpg.com^$all
+https://play3.huaylike.online^$all
 https://pok10.com^$all
+https://popslot.vip^$all
+!https://pretty168.net^$all
+!https://prettygaming168.com^$all
+!https://psth888.com^$all
 https://r9betting.com^$all
+https://re.tbs.tu.ac.th^$all
 https://rebrand.ly^$all
 https://record.mytopaff.com^$all
-https://red168.com^$all
+!https://red168.com^$all
+https://register.doa.go.th^$all
+https://register.gamegame.asia^$all
+https://rocket45.net^$all
 https://sagame6*.co*$all
+https://sbanatomia.org.br^$all
+!https://sbobet888.win^$all
+!https://scr888t.co^$all
+!https://scrt888.com^$all
+https://search.app.goo.gl^$all
+https://sexycasino.co^$all
+https://shorturl.asia/gjxW1$all
 https://shorturl.asia/IYvTC$all
 https://shorturl.asia/uUy3t$all
 https://shorturl.at/DEG56$all
+https://siammillion.com^$all
+https://siampoker.com^$all
 https://singha678.com^$all
-https://site.luckyniki88.com^$all
+!https://site.luckyniki88.com^$all
+https://slatearts.com^$all
 https://slotheng.com^$all
 https://slotpgthai.net^$all
+https://smart.nb2.go.th^$all
 https://smhotelingapicloud.deloitte.com^$all
-https://spinix188.com^$all
-https://tangtem168.com^$all
+https://southernbeautyguide.com^$all
+https://soxlaw.com^$all
+!https://spinix188.com^$all
+!https://spnx888.com^$all
+https://spreadgit.com^$all
+https://starlingtalk.com^$all
+https://superslotmax.vip^$all
+!https://tangtem168.com^$all
 https://thais4.com^$all
 https://thais7.com^$all
 https://tinyurl.com/2g58f3kv^$all
 https://tinyurl.com/2jrg2axo^$all
 https://track.cdnyz.com^$all
+https://treecareandwellness.com^$all
+https://ue.edu.pk^$all
+!https://ufa222.live^$all
+!https://ufac4z.com^$all
+!https://ufakick.io^$all
+https://ukedchat.com^$all
+https://uninta.edu.br^$all
 https://vip168sa*$all
 https://wcmdevaks01.fairfaxcounty.gov^$all
-https://wmbet444.com^$all
+https://whanmhoo569.com^$all
+!https://wk888pluss.com^$all
+!https://wmbet444.com^$all
 https://wvd.simon.com^$all
-https://www.188league.com^$all
+!https://www.188league.com^$all
 https://www.512xiaojin.com^$all
+https://www.allslot.bio^$all
+https://www.ancona-airport.com^$all
+https://www.auvimer.com^$all
 https://www.azure.csuci.edu^$all
 https://www.betflix991.com^$all
 https://www.betg11.com^$all
-https://www.fun888asia.com^$all
+https://www.boss45.co^$all
+https://www.cheneyforwyoming.com^$all
+https://www.commentry.fr^$all
+https://www.completesports.com^$all
+https://www.cybercity-online.net^$all
+https://www.dillington.com^$all
+https://www.ditp.go.th^$all
+https://www.fideg.org^$all
+https://www.fishsafe.info^$all
+https://www.fresh-voices.com^$all
+https://www.freshfilmfest.net^$all
+!https://www.fun888asia.com^$all
+!https://www.godzilla88.co^$all
+!https://www.gxy888.vip^$all
+https://www.hapilabs.com^$all
+https://www.hcore.ge^$all
 https://www.huc33.com^$all
-https://www.jinda888.vip^$all
-https://www.juad888*$all
-https://www.newyork888s.co^$all
+https://www.huc99.casino^$all
+https://www.immigrantfundca.org^$all
+https://www.immigrationworksusa.org^$all
+!https://www.jinda888.co^$all
+!https://www.jinda888.vip^$all
+!https://www.juad888*$all
+!https://www.juad888d.com^$all
+https://www.kachilodge.co^$all
+https://www.longtablebangkok.com^$all
+https://www.meehay569st.co^$all
+https://www.millenniumvillages.org^$all
+https://www.naka.go.th^$all
+!https://www.newyork888s.co^$all
+https://www.outlookindia.com^$all
+https://www.panda555.org^$all
 https://www.pg133.com^$all
+!https://www.pgm1688.com^$all
 https://www.pgslot9999.co^$all
+https://www.phelpsgov.org^$all
+https://www.popinns.com^$all
+https://www.pulseorlandoclub.com^$all
+https://www.pwice.com^$all
+https://www.royalprojectthailand.com^$all
+https://www.santeedriveintheatre.com^$all
 https://www.sbfplay*$all
 https://www.scb9.net^$all
-https://www.sexy168.vip^$all
+https://www.sesaoskt.go.th^$all
+!https://www.sexy168.vip^$all
+https://www.sexycasino.site^$all
+https://www.siriusretail.com^$all
 https://www.slot1234.com^$all
 https://www.slotxo24hr.co^$all
-https://www.ufa*.*$all
+!https://www.tangtem168.bet^$all
+https://www.tcsoinfo.com^$all
+https://www.thenorthface.com^$all
+https://www.therapeutique-dermatologique.org^$all
+https://www.thunder95.com^$all
+!https://www.ufa*.*$all
+!https://www.ufa350s.world^$all
 https://www.usa567.cc^$all
+https://www.usms.ac.ma^$all
+https://www.wacra.org^$all
+https://www.whitby-photography.com^$all
 https://www.xn--m3cd7amyt0n2a.com^$all
-https://wy88bets.com^$all
+!https://www.yak888.win^$all
+!https://wy88bets.com^$all
 https://xn--72c1abpacq3blf5b5e1c2kjb5d7bzabg4g.net^$all
 https://xn--b3cw4apb2b3e1a1gxc.com^$all
+https://xn--makro2563-zi2aqikc0ea6ldb36c.kpho.go.th^$all
+https://zoospassion.com^$all
 mailto:kingsmanga@protonmail.com^$all
-https://grand-prize.xyz^$all
-https://www.royalprojectthailand.com^$all
-https://sbobet888.win^$all
-https://siammillion.com^$all
-https://www.allslot.bio^$all
-https://csbet88.com^$all
-https://goatbet88.com^$all
-https://goatbet888.com^$all
-https://psth888.com^$all
-https://scrt888.com^$all
-https://www.millenniumvillages.org^$all
-https://www.hapilabs.com^$all
-https://e15initiative.org^$all
-https://ohiovaxamillion.com^$all
-https://pg888t.com^$all
-https://lcbet88.com^$all
-https://spnx888.com^$all
-https://betplay569.com^$all
-https://lcbetasia.com^$all
-https://pgs88asia.com^$all
-https://pg999st.com^$all
-https://lcbet24hr.com^$all
-https://whanmhoo569.com^$all
-https://gclub321.com^$all
-https://www.siriusretail.com^$all
-https://paragon-usa.com^$all
-https://nashvillelgbtchamber.org^$all
-https://www.phelpsgov.org^$all
-https://lionth.com^$all
-https://sexycasino.co^$all
-https://shorturl.asia/gjxW1$all
-https://168pretty.com^$all
-https://www.gxy888.vip^$all
-https://siampoker.com^$all
-https://prettygaming168.com^$all
-https://pretty168.net^$all
-https://www.boss45.co^$all
-https://play3.huaylike.online^$all
-https://lionth.co^$all
-https://www.sexycasino.site^$all
-https://lalikabet168.co^$all
-https://ufac4z.com^$all
-https://www.longtablebangkok.com^$all
-https://www.cheneyforwyoming.com^$all
-https://ufa222.live^$all
-https://bit.ly/3Qr5Ifd^$all
-https://www.tcsoinfo.com^$all
-https://brazil999.plus^$all
-https://www.pgm1688.com^$all
-https://boston777s.com^$all
-https://register.gamegame.asia^$all
-https://popslot.vip^$all
-https://baccarat88-th.com^$all
 !Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
 https://pgf-asw0zz.co^$all
 !เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
 ||vikkiromano.com^$all
-! 2
-https://ufakick.io^$all
-https://www.meehay569st.co^$all
-https://baccarat888th.com^$all
-https://huaylike.life^$all
-https://www.thunder95.com^$all
-https://www.godzilla88.co^$all
-https://cobra88.live^$all
-https://betfrenzy88.com^$all
-https://rocket45.net^$all
-https://lionth.asia^$all
-http://www.jsp.com.mk^$all
-http://www.mathedu.ru.ac.th^$all
-https://betplay569t.com^$all
-https://bsc.news^$all
-https://cmrsl.com^$all
-https://dclub77.world^$all
-https://electrotherm.com^$all
-https://flowerpowerpackages.com^$all
-https://harmonyvineyardchurch.com^$all
-https://hswaynepets.org^$all
-https://hydra888f.com^$all
-https://internalaudit.cmru.ac.th^$all
-https://maryclairecruz.com^$all
-https://medium.com^$all
-https://ministeroffice.moph.go.th^$all
-https://mooc.buu.ac.th^$all
-https://myuvn.com^$all
-https://newniki888.com^$all
-https://oncolife.com.ua^$all
-https://orijendesign.com^$all
-https://palette-sf.com^$all
-https://re.tbs.tu.ac.th^$all
-https://scr888t.co^$all
-https://search.app.goo.gl^$all
-https://starlingtalk.com^$all
-https://superslotmax.vip^$all
-https://uninta.edu.br^$all
-https://www.completesports.com^$all
-https://www.fideg.org^$all
-https://www.huc99.casino^$all
-https://www.jinda888.co^$all
-https://www.juad888d.com^$all
-https://www.kachilodge.co^$all
-https://www.outlookindia.com^$all
-https://www.panda555.org^$all
-https://www.pulseorlandoclub.com^$all
-https://www.pwice.com^$all
-https://www.santeedriveintheatre.com^$all
-https://www.thenorthface.com^$all
-https://www.wacra.org^$all
-https://www.yak888.win^$all
-https://xn--makro2563-zi2aqikc0ea6ldb36c.kpho.go.th^$all
-https://zoospassion.com^$all
-https://fanlnk.to^$all
-http://home.basis.ac.th^$all
-http://utoservice.moph.go.th^$all
-https://brookfieldedc.org^$all
-https://browbooks.com^$all
-https://couplescandy.com^$all
-https://ctbio.fiocruz.br^$all
-https://fitpersian.com^$all
-https://hanpho.go.th^$all
-https://indysb.org^$all
-https://jts.sarawak.gov.my^$all
-https://meeting.president.lru.ac.th^$all
-https://mikrokredit.selangor.gov.my^$all
-https://moleculenet.ai^$all
-https://nonthaburi.web.cpd.go.th^$all
-https://penniesforpeace.org^$all
-https://register.doa.go.th^$all
-https://sbanatomia.org.br^$all
-https://southernbeautyguide.com^$all
-https://soxlaw.com^$all
-https://ue.edu.pk^$all
-https://www.ancona-airport.com^$all
-https://www.auvimer.com^$all
-https://www.commentry.fr^$all
-https://www.cybercity-online.net^$all
-https://www.dillington.com^$all
-https://www.fishsafe.info^$all
-https://www.fresh-voices.com^$all
-https://www.freshfilmfest.net^$all
-https://www.immigrantfundca.org^$all
-https://www.immigrationworksusa.org^$all
-https://www.popinns.com^$all
-https://www.sesaoskt.go.th^$all
-https://www.therapeutique-dermatologique.org^$all
-https://www.usms.ac.ma^$all
-https://www.whitby-photography.com^$all
-http://internalaudit.crru.ac.th^$all
-http://istitutocomprensivo4oristano.edu.it^$all
-https://av-toiture.com^$all
-https://chonburiarea3.go.th^$all
-https://dashboard.myplacements.catholic.edu^$all
-https://dralvinchapman.com^$all
-https://e-manage.rmutto.ac.th^$all
-https://e-salary.nb2.go.th^$all
-https://icrash2023.lincoln.edu.my^$all
-https://liewayhuntclub.net^$all
-https://medinfo.psu.ac.th^$all
-https://milienature.com^$all
-https://pavetheway.cc^$all
-https://slatearts.com^$all
-https://treecareandwellness.com^$all
-https://ukedchat.com^$all
-https://www.ditp.go.th^$all
-https://www.hcore.ge^$all
-https://www.ufa350s.world^$all
-||meehay569st.bet^$all
-||pg999ts.com^$all
 !sagaming135.com ซ้ำ
-||99tdedth.com^$all
-https://wk888pluss.com^$all
-https://www.tangtem168.bet^$all
-https://smart.nb2.go.th^$all
-https://42quilts.com^$all
-http://gmtamfj.bunharnpoly.ac.th^$all
-https://www.naka.go.th^$all
-https://agrokam-czesci.pl^$all
-https://expslot.com^$all
-https://spreadgit.com^$all
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
 ||qq288.com$all
@@ -963,6 +969,8 @@ playermeow.com##+js(nowoif)
 !!ลิงก์ที่เปิด คือ
 ||jl63v3fp1.com^$all
 ||bestadsforyou.com^$all
+
+||google.com/generate_204
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1056,8 +1064,6 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !qr.me-qr.com 20240701140223
 !!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
 qr.me-qr.com##+js(trusted-click-element,a[data-action="click->ticket-app--page#increaseSkipAd"])
-
-
 
 !MARK: ---music ---
 
@@ -1699,101 +1705,38 @@ kapook.com##^#google_esf
 !#endif
 kapook.com###google_esf
 
-!thairath.co.th
+!thairath.co.th 20240704182422
 !!หน้าข่าว pc 20231212003942
-!#if cap_html_filtering
-thairath.co.th##^div#slot-billboard:upward(3)
-!#endif
 thairath.co.th##div#slot-billboard:upward(3)
-!#if cap_html_filtering
-thairath.co.th##^div#slot-tower:upward(3)
-!#endif
 thairath.co.th##div#slot-tower:upward(3)
 thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
-!#if cap_html_filtering
-thairath.co.th##^div[style="height:300px"]
-!#endif
 thairath.co.th##div[style="height:300px"]
-!#if cap_html_filtering
-thairath.co.th##^div#slot-right_rail:upward(2)
-!#endif
 thairath.co.th##div#slot-right_rail:upward(2)
-!#if cap_html_filtering
-thairath.co.th##^div[style="text-align: center; opacity: 1;"]
-!#endif
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
-!#if cap_html_filtering
-thairath.co.th##^div[class^="ads-slot-"]:upward(1)
-!#endif
 thairath.co.th##div[class^="ads-slot-"]:upward(1)
 !!หน้าหลัก pc 20231212004228
-!#if cap_html_filtering
-thairath.co.th##^div#homepage-top:upward(3)
-!#endif
 thairath.co.th##div#homepage-top:upward(3)
-!#if cap_html_filtering
-thairath.co.th##^div#homepage-rectangle:upward(2)
-!#endif
 thairath.co.th##div#homepage-rectangle:upward(2)
 !!หน้าข่าว mobile 20231212005218
-!#if cap_html_filtering
-thairath.co.th##^div#slot-headline:upward(2)
-!#endif
 thairath.co.th##div#slot-headline:upward(2)
-!#if cap_html_filtering
-thairath.co.th##^div#slot-postarticle:upward(3)
-!#endif
 thairath.co.th##div#slot-postarticle:upward(3)
 !!thairath.co.th/sport
-!#if cap_html_filtering
-thairath.co.th##^div[data-container-id="ivs-player"]
-!#endif
 thairath.co.th##div[data-container-id="ivs-player"]
 !!thairath.co.th/money 20231222211603
 !!!หน้าหลัก
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-top-desktop:upward(1)
-!#endif
 thairath.co.th##div#slot-money-top-desktop:upward(1)
 !!!หน้าข่าว
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-billboard:upward(1)
-!#endif
 thairath.co.th##div#slot-money-billboard:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-rigth-rail-desktop:upward(1)
-!#endif
 thairath.co.th##div#slot-money-rigth-rail-desktop:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div[id^="slot-money-inarticle"]:upward(1)
-!#endif
 thairath.co.th##div[id^="slot-money-inarticle"]:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-middle-postarticle-desktop:upward(1)
-!#endif
 thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div.btn--close:upward(1)
-!#endif
 thairath.co.th##div.btn--close:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
-!#endif
 thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
 !!!mobile
 !!!หน้าหลัก
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-top-mobile:upward(1)
-!#endif
 thairath.co.th##div#slot-money-top-mobile:upward(1)
 !!!หน้าข่าว
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-headline:upward(1)
-!#endif
 thairath.co.th##div#slot-money-headline:upward(1)
-!#if cap_html_filtering
-thairath.co.th##^div#slot-money-middle-postarticle-mobile:upward(1)
-!#endif
 thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 
 !ch3plus.com 20240220140536
@@ -2309,6 +2252,18 @@ lcdtvthailand.com##^.lcd-center-ads
 !#endif
 lcdtvthailand.com##.lcd-center-ads
 
+!techsauce.co 20240704182718
+!#if cap_html_filtering
+techsauce.co##^#banner-link-c
+!#else
+techsauce.co###banner-link-c
+!#endif
+!#if cap_html_filtering
+techsauce.co##^.ads-banner
+!#else
+techsauce.co##.ads-banner
+!#endif
+
 !MARK: ---game news ---
 
 !mustplay.in.th 20240329220731
@@ -2556,9 +2511,9 @@ moodtoon.net##^div[id^="ads_"]
 moodtoon.net##div[id^="ads_"]
 !#endif
 
-!niceoppai.net 20240309121202
+!niceoppai.net 20240704190923
 !! มีทั้ง frame และ other เชื่อมต่อไปเว็บนอก
-/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$domain=niceoppai.net
+/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$all,third-party,domain=niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
 !#else
@@ -2858,8 +2813,8 @@ manga-za.net##^div[class="mt-ad text-center"]
 manga-za.net##div[class="mt-ad text-center"]
 !#endif
 
-!mangapdf-online.com 20240217215617
-/^https?:\/\/(www\.)?(?!(?:facebook\.com|twitter\.com|facebook\.net)).*$/$script,third-party,domain=mangapdf-online.com
+!mangapdf-online.com 20240704190839
+/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com)\b).+$/$script,third-party,domain=mangapdf-online.com
 
 !oremanga.net 20240330170900
 !#if cap_html_filtering
@@ -4164,6 +4119,7 @@ google.*#@##bottomads
 @@||entechreview.com^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
+@@||techsauce.co^$generichide
 !MARK: --- science news ---
 @@||www.mitrearth.org^$generichide
 !MARK: ---multipurpose ---
