@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240705004321
+! Version: 20240711151627
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -53,7 +53,6 @@
 ||mukohphetra.com^$all
 ||waisheph.com^$all
 ||mosaic.unite.com^$all
-||shibaanime.com^$all
 
 !!!**************************************************************************************
 !MARK:self gathering
@@ -104,6 +103,8 @@
 !****************************************************************************************
 
 ||excelgraduate.com^$all
+||iamnotice.club^$all
+||smartadblock.net^$all
 
 !!!**************************************************************************************
 !MARK:Phishing self gathering
@@ -169,6 +170,8 @@
 ||happylukebet.com^$all
 ||silkspan.com^$all
 ||thai-iphone.com^$all
+! จาก เว็บไซต์กว่าแสนแห่งถูกแฮกผ่าน JavaScript Library - Polyfill ทาง Goolgle เตือน เลิกใช้ Polyfill.io โดยทันที ! https://news.thaiware.com/21199.html 20240705160255
+||cdn.polyfill.io^$all
 
 !!!**************************************************************************************
 !MARK:Fraud self gathering
@@ -182,6 +185,8 @@
 
 !มี mal extension redirect ไป search engine นี้
 ||bestsearch.ai^$all
+!มี malware บน Windows ติดตั้งแล้ว บังคับเปลี่ยน seach engine เป็นอันนี้ 20240707230002
+||buddyfnd.com^$all
 
 !!!**************************************************************************************
 !MARK:Mal sites from Thai SMS self gathering
@@ -289,6 +294,8 @@
 ||facbook-supp.pages.dev.br^$all
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
 ||home-business-helper.com^$all
+||topan12.my.id^$all
+||bnbc.uno^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -314,12 +321,15 @@
 https://bet*$all
 https://hotgraph*$all
 https://lucky*$all
+/^https?:\/\/([a-zA-Z0-9.-]*vvv\.[a-zA-Z0-9.-]*)\/?/$all
 /^https?:\/\/([a-zA-Z0-9.-]*ufa[a-zA-Z0-9.-]*)\/?/$all
 /^https?:\/\/([a-zA-Z0-9.-]*ssgam[a-zA-Z0-9.-]*)\/?/$all
 /^https?:\/\/([a-zA-Z0-9.-]*casino[a-zA-Z0-9.-]*)\/?/$all
-/^https?:\/\/([a-zA-Z0-9.-]*168[a-zA-Z0-9.-]*)\/?/$all
+!! /^https?:\/\/([a-zA-Z0-9.-]*168[a-zA-Z0-9.-]*)\/?/$all
+/^https?://(www\.|)(([a-zA-Z0-9-]*168[a-zA-Z0-9-]*)\.[a-zA-Z]{2,})/$all
 @@||manga168.com^
-/^https?:\/\/([a-zA-Z0-9.-]*88[a-zA-Z0-9.-]*)\/?/$all
+!! /^https?:\/\/([a-zA-Z0-9.-]*88[a-zA-Z0-9.-]*)\/?/$all
+/^https?://(www\.|)(([a-zA-Z0-9-]*88[a-zA-Z0-9-]*)\.[a-zA-Z]{2,})/$all
 @@||kingmovie88.com^
 /\b^https?://([a-zA-Z0-9.-]+\.)?football\b/$all
 /\b^https?://([a-zA-Z0-9.-]+\.)?bet\b/$all
@@ -503,6 +513,8 @@ https://lucky*$all
 /ดูบอลฟรี-ชาช่า.gif$image
 /betangry$image
 /euro69-banner.gif$image
+/slot.gif$image
+/gifba8xbet.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -523,8 +535,8 @@ http://istitutocomprensivo4oristano.edu.it^$all
 http://utoservice.moph.go.th^$all
 http://www.jsp.com.mk^$all
 http://www.mathedu.ru.ac.th^$all
-https://168*sagame.com^$all
-https://168pretty.*$all
+!https://168*sagame.com^$all
+!https://168pretty.*$all
 !https://168pretty.com^$all
 !https://188th.co^$all
 https://42quilts.com^$all
@@ -734,7 +746,7 @@ https://sbanatomia.org.br^$all
 !https://scr888t.co^$all
 !https://scrt888.com^$all
 https://search.app.goo.gl^$all
-https://sexycasino.co^$all
+!https://sexycasino.co^$all
 https://shorturl.asia/gjxW1$all
 https://shorturl.asia/IYvTC$all
 https://shorturl.asia/uUy3t$all
@@ -742,7 +754,7 @@ https://shorturl.at/DEG56$all
 https://siammillion.com^$all
 https://siampoker.com^$all
 https://singha678.com^$all
-!https://site.luckyniki88.com^$all
+https://site.luckyniki88.com^$all
 https://slatearts.com^$all
 https://slotheng.com^$all
 https://slotpgthai.net^$all
@@ -799,7 +811,7 @@ https://www.freshfilmfest.net^$all
 https://www.hapilabs.com^$all
 https://www.hcore.ge^$all
 https://www.huc33.com^$all
-https://www.huc99.casino^$all
+!https://www.huc99.casino^$all
 https://www.immigrantfundca.org^$all
 https://www.immigrationworksusa.org^$all
 !https://www.jinda888.co^$all
@@ -827,7 +839,7 @@ https://www.sbfplay*$all
 https://www.scb9.net^$all
 https://www.sesaoskt.go.th^$all
 !https://www.sexy168.vip^$all
-https://www.sexycasino.site^$all
+!https://www.sexycasino.site^$all
 https://www.siriusretail.com^$all
 https://www.slot1234.com^$all
 https://www.slotxo24hr.co^$all
@@ -850,6 +862,13 @@ https://xn--b3cw4apb2b3e1a1gxc.com^$all
 https://xn--makro2563-zi2aqikc0ea6ldb36c.kpho.go.th^$all
 https://zoospassion.com^$all
 mailto:kingsmanga@protonmail.com^$all
+https://www.easy45.net^$all
+!https://www.ufa345.tv^$all
+!https://ufa800.live^$all
+!https://ufa365.football^$all
+!https://www.ufabull88.com^$all
+!https://glory88.bet^$all
+!vvv.xn--s3cx7a.com^$all
 !Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
 https://pgf-asw0zz.co^$all
 !เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
@@ -971,6 +990,8 @@ playermeow.com##+js(nowoif)
 ||bestadsforyou.com^$all
 
 ||google.com/generate_204
+
+||overcrowdsillyturret.com^$all
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1176,19 +1197,22 @@ keyboard-test.space##ins.adsbygoogle[data-ad-slot]
 !MARK: ---file transfer ---
 
 !MARK: ---tech news ---
-!gsmarena.com
+!gsmarena.com 20240709222657
 !#if cap_html_filtering
 gsmarena.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
+!#else
 gsmarena.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-gsmarena.com##^.adv
 !#endif
-gsmarena.com##.adv
 !#if cap_html_filtering
-gsmarena.com##^#topAdv
+gsmarena.com##^div.top-adv, div.adv-mid
+!#else
+gsmarena.com##div.top-adv, div.adv-mid
 !#endif
-gsmarena.com###topAdv
+!#if cap_html_filtering
+gsmarena.com##^span.ad-c-label:upward(1)
+!#else
+gsmarena.com##span.ad-c-label:upward(1)
+!#endif
 !extremeit.com 
 !#if cap_html_filtering
 extremeit.com##^table[border="0"]
@@ -2047,18 +2071,17 @@ www.amarintv.com##div.ads-recommend:upward(1)
 thainewsonline.co##div[class*="ads-billboard"]
 thainewsonline.co##div[class^="ads-"]
 
+!posttoday.com 20240709221124
+posttoday.com##+js(trusted-click-element,div.light-box)
+posttoday.com##div[class^="dynamic-ads"]
+
 !MARK: ---tech news ---
 
-!droidsans.com 20240114125602
+!droidsans.com 20240708193331
 !#if cap_html_filtering
 droidsans.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#else
 droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-!#if cap_html_filtering
-droidsans.com##^aside.sidebar-mobile
-!#else
-droidsans.com##aside.sidebar-mobile
 !#endif
 
 !siamblockchain.com
@@ -2240,6 +2263,18 @@ entechreview.com##^div.promotion-section
 entechreview.com##div.promotion-section
 !#endif
 
+!thaiware.com 20240705155726
+!#if cap_html_filtering
+thaiware.com##^ins[data-revive-zoneid]:upward(1)
+!#else
+thaiware.com##ins[data-revive-zoneid]:upward(1)
+!#endif
+!#if cap_html_filtering
+thaiware.com##^div[class="headerBottom"]
+!#else
+thaiware.com##div[class="headerBottom"]
+!#endif
+
 !MARK: ---tech ---
 
 !lcdtvthailand.com 20240616234447
@@ -2384,6 +2419,11 @@ jokergameth.com##^div[align="center"]
 !#endif
 jokergameth.com##div[align="center"]
 
+!MARK: ---watchlist review movie anime tv show ---
+
+!hareshi.net 20240710171814
+hareshi.net##div[class="card-video shadow"]
+
 !MARK: ---life sytle ---
 
 !trueid.net
@@ -2436,9 +2476,10 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|manga168.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com
+.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|manga168.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
+@@/loadingAnimation.gif$image
 !.webp$image,domain=
 
 !manga168.com
@@ -2919,34 +2960,46 @@ xn--l3c0azab5a2gta.com##^div.ads
 xn--l3c0azab5a2gta.com##div.ads
 !#endif
 
+!hippomanga.com 20240710155328
+!#if cap_html_filtering
+hippomanga.com##^#ads_fox_bottom
+!#else
+hippomanga.com###ads_fox_bottom
+!#endif
+!#if cap_html_filtering
+hippomanga.com##^div[class="dessert-frame"]
+!#else
+hippomanga.com##div[class="dessert-frame"]
+!#endif
+
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
-!anime-sugoi.com 20231225134824
+!anime-sugoi.com 20240709014326
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 !!เอาdiv โฆษณาอันแรกออก
 !#if cap_html_filtering
-anime-sugoi.com##^.container > .row > .col-md-8
+!anime-sugoi.com##^.container > .row > .col-md-8
 !#else
-anime-sugoi.com##.container > .row > .col-md-8
+!anime-sugoi.com##.container > .row > .col-md-8
 !#endif
 !!เอาdiv โฆษณาอัน2ออก
 !#if cap_html_filtering
-anime-sugoi.com##^.container > .row > center
+!anime-sugoi.com##^.container > .row > center
 !#else
-anime-sugoi.com##.container > .row > center
+!anime-sugoi.com##.container > .row > center
 !#endif
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
 !#if cap_html_filtering
-anime-sugoi.com##^.panel-body > center > a
+!anime-sugoi.com##^.panel-body > center > a
 !#else
-anime-sugoi.com##.panel-body > center > a
+!anime-sugoi.com##.panel-body > center > a
 !#endif
 !#if cap_html_filtering
-anime-sugoi.com##^#bt-ads
+!anime-sugoi.com##^#bt-ads
 !#else
-anime-sugoi.com###bt-ads
+!anime-sugoi.com###bt-ads
 !#endif
 ||anime-sugoi.com/pic/$image,domain=anime-sugoi.com
 wss://$domain=anime-sugoi.com
@@ -2957,21 +3010,13 @@ anime-sugoi.com##^.panel-body > center > p
 anime-sugoi.com##.panel-body > center > p
 !#endif
 
-!anime-masters.com 20240327194347
+!anime-masters.com 20240709014043
 !! use more performance rule
 anime-masters.com#@#p[class^="center_"] > a[target="_blank"] > img
-!#if cap_html_filtering
-anime-masters.com##^div.container > .row > .center_lnwphp
-!#else
 anime-masters.com##div.container > .row > .center_lnwphp
-!#endif
 anime-masters.com##center:nth-of-type(2)
 anime-masters.com##center:nth-of-type(4)
-!#if cap_html_filtering
-anime-masters.com##^.col-md-9 > span
-!#else
 anime-masters.com##.col-md-9 > span
-!#endif
 ||www.anime-masters.com/image/X11-icon.png*$image,domain=anime-masters.com
 
 !animekimi.com, animeyuzu.com 20240210161421
@@ -3077,13 +3122,17 @@ fairyanime.net###kosana
 !#endif
 fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
 
-!shibaanime.com
+!shibaanime.com 20240710221151
 !#if cap_html_filtering
 shibaanime.com##^a[rel$="sponsored"]
 !#else
 shibaanime.com##a[rel$="sponsored"]
 !#endif
-shibaanime.com##div.hero.common-hero:nth-child(2)
+!#if cap_html_filtering
+shibaanime.com##^div[class="hero common-hero"]
+!#else
+shibaanime.com##div[class="hero common-hero"]
+!#endif
 
 !anime-hit.com
 !||anime-hit.com^$popup,domain=~anime-hit.com
@@ -3489,8 +3538,9 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
 
-!หลายเว็บผิดกฏหมายชอบใช้ 20240324022000
+!หลายเว็บผิดกฏหมายชอบใช้ 20240710155146
 ##img.img-ads
+##div[class="dessert-frame"]
 
 !!!**************************************************************************************
 !* 
@@ -4046,6 +4096,7 @@ google.*#@##bottomads
 @@||sportingnews.com^$generichide
 @@||www.amarintv.com^$generichide
 @@||thainewsonline.co^$generichide
+@@||posttoday.com^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -4087,7 +4138,7 @@ google.*#@##bottomads
 @@||wongnai.com^$generichide
 @@||snp1344.com*$generichide
 !MARK: ---watchlist review movie anime tv show ---
-@@||hareshi.net^$ehide
+@@||hareshi.net^$generichide
 !MARK: ---ebook e book e-book publisher thai ---
 @@||phoenixnext.com^$generichide
 @@||mebmarket.com^$generichide
@@ -4198,6 +4249,8 @@ google.*#@##bottomads
 @@||mafia-manga.com^$generichide
 @@||mangaza.net^$generichide
 @@||xn--l3c0azab5a2gta.com^$generichide
+@@||readrealm.co^$generichide
+@@||hippomanga.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4348,9 +4401,10 @@ samsung.com##^.cookie-bar
 !#endif
 samsung.com##.cookie-bar
 !#if cap_html_filtering
-droidsans.com##^div[class="dpdpa--popup active"]
+droidsans.com##^aside#moove_gdpr_cookie_info_bar
+!#else
+droidsans.com##aside#moove_gdpr_cookie_info_bar
 !#endif
-droidsans.com##div[class="dpdpa--popup active"]
 !#if cap_html_filtering
 thaimobilecenter.com##^#cookiePopup
 !#endif
@@ -4655,9 +4709,10 @@ obsproject.com##.notice--cookie:not(body):not(html)
 uploadmx.com##^div[class="cookies show"]
 !#endif
 uploadmx.com##div[class="cookies show"]
+! ใช้การ remove element แทน mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
+mercular.com##div[class="MuiBox-root css-5cawxe"]
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
-mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
 supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
