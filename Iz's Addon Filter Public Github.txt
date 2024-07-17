@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240711151627
+! Version: 20240717154455
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -170,7 +170,7 @@
 ||happylukebet.com^$all
 ||silkspan.com^$all
 ||thai-iphone.com^$all
-! จาก เว็บไซต์กว่าแสนแห่งถูกแฮกผ่าน JavaScript Library - Polyfill ทาง Goolgle เตือน เลิกใช้ Polyfill.io โดยทันที ! https://news.thaiware.com/21199.html 20240705160255
+! จาก เว็บไซต์กว่าแสนแห่งถูกแฮกผ่าน ||polyfill.io ที่มีผู้ไม่ประสงค์ดีนำ url ไปใช้ใส่ mal ต่อหลัง polyfill(official) หยุด support แล้ว https://news.thaiware.com/21199.html 20240705160255
 ||cdn.polyfill.io^$all
 
 !!!**************************************************************************************
@@ -296,6 +296,7 @@
 ||home-business-helper.com^$all
 ||topan12.my.id^$all
 ||bnbc.uno^$all
+||getsalenow.com^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -321,19 +322,27 @@
 https://bet*$all
 https://hotgraph*$all
 https://lucky*$all
-/^https?:\/\/([a-zA-Z0-9.-]*vvv\.[a-zA-Z0-9.-]*)\/?/$all
-/^https?:\/\/([a-zA-Z0-9.-]*ufa[a-zA-Z0-9.-]*)\/?/$all
-/^https?:\/\/([a-zA-Z0-9.-]*ssgam[a-zA-Z0-9.-]*)\/?/$all
-/^https?:\/\/([a-zA-Z0-9.-]*casino[a-zA-Z0-9.-]*)\/?/$all
-!! /^https?:\/\/([a-zA-Z0-9.-]*168[a-zA-Z0-9.-]*)\/?/$all
-/^https?://(www\.|)(([a-zA-Z0-9-]*168[a-zA-Z0-9-]*)\.[a-zA-Z]{2,})/$all
+/^https?:\/\/vvv\./$all
+
+/^https?:\/\/(?:www\.)?[^\/]*ufa[^\/]*\.[^\/]+/$all
+
+/^https?:\/\/(?:www\.)?[^\/]*ssgam[^\/]*\.[^\/]+/$all
+
+/^https?:\/\/(?:www\.)?[^\/]*casino[^\/]*\.[^\/]+/$all
+
+/^https?:\/\/(?:www\.)?[^\/]*168[^\/]*\.[^\/]+/$all
 @@||manga168.com^
-!! /^https?:\/\/([a-zA-Z0-9.-]*88[a-zA-Z0-9.-]*)\/?/$all
-/^https?://(www\.|)(([a-zA-Z0-9-]*88[a-zA-Z0-9-]*)\.[a-zA-Z]{2,})/$all
+
+/^https?:\/\/(?:www\.)?[^\/]*88[^\/]*\.[^\/]+/$all
 @@||kingmovie88.com^
+
 /\b^https?://([a-zA-Z0-9.-]+\.)?football\b/$all
+
 /\b^https?://([a-zA-Z0-9.-]+\.)?bet\b/$all
+
 /^https?://[^\s/]*bet\d{1,3}\.[^\s/]+/$all
+
+/^https?://[^\s/]*lucky\d{1,3}\.[^\s/]+/$all
 
 !block both link and ads video
 /brazil$media
@@ -690,9 +699,9 @@ https://london168*$all
 https://lotto*.co*$all
 https://luca99th.com^$all
 !https://lucabet168.com^$all
-https://lucky135.com^$all
-https://lucky269.com^$all
-https://lucky629.com^$all
+!https://lucky135.com^$all
+!https://lucky269.com^$all
+!https://lucky629.com^$all
 !https://mahagame88*.com^$all
 https://maryclairecruz.com^$all
 https://mayalounge.net^$all
@@ -873,6 +882,7 @@ https://www.easy45.net^$all
 https://pgf-asw0zz.co^$all
 !เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
 ||vikkiromano.com^$all
+||69pgslot.com^$all
 !sagaming135.com ซ้ำ
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
@@ -2075,6 +2085,9 @@ thainewsonline.co##div[class^="ads-"]
 posttoday.com##+js(trusted-click-element,div.light-box)
 posttoday.com##div[class^="dynamic-ads"]
 
+!honekrasae.com 20240717143216
+||a.run.app^$3p,domain=honekrasae.com
+
 !MARK: ---tech news ---
 
 !droidsans.com 20240708193331
@@ -2669,7 +2682,7 @@ thaimanga.net##^.ads
 thaimanga.net##.ads
 !#endif
 
-!mangaisekaithai.com
+!mangaisekaithai.com 20240712192405
 !#if cap_html_filtering
 mangaisekaithai.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#else
@@ -4097,6 +4110,7 @@ google.*#@##bottomads
 @@||www.amarintv.com^$generichide
 @@||thainewsonline.co^$generichide
 @@||posttoday.com^$generichide
+@@||honekrasae.com^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -4117,6 +4131,97 @@ google.*#@##bottomads
 @@||www.mycourseville.com^$generichide
 @@||www.biobeamcenter.com^$generichide
 @@||cututoronline.com^$generichide
+@@||ait.ac.th^$ehide
+@@||aru.ac.th^$ehide
+@@||au.edu^$ehide
+@@||bkkthon.ac.th^$ehide
+@@||bru.ac.th^$ehide
+@@||bsru.ac.th^$ehide
+@@||bu.ac.th^$ehide
+@@||buu.ac.th^$ehide
+@@||chandra.ac.th^$ehide
+@@||chula.ac.th^$ehide
+@@||cmru.ac.th^$ehide
+@@||cmu.ac.th^$ehide
+@@||cpru.ac.th^$ehide
+@@||cri.or.th^$ehide
+@@||crru.ac.th^$ehide
+@@||dpu.ac.th^$ehide
+@@||dru.ac.th^$ehide
+@@||eau.ac.th^$ehide
+@@||engtest.net^$ehide
+@@||hcu.ac.th^$ehide
+@@||kbu.ac.th^$ehide
+@@||kku.ac.th^$ehide
+@@||kmitl.ac.th^$ehide
+@@||kmutnb.ac.th^$ehide
+@@||kmutt.ac.th^$ehide
+@@||kpru.ac.th^$ehide
+@@||krirk.ac.th^$ehide
+@@||kru.ac.th^$ehide
+@@||ku.ac.th^$ehide
+@@||lpru.ac.th^$ehide
+@@||lru.ac.th^$ehide
+@@||mahidol.ac.th^$ehide
+@@||mcru.ac.th^$ehide
+@@||mju.ac.th^$ehide
+@@||msu.ac.th^$ehide
+@@||mut.ac.th^$ehide
+@@||nida.ac.th^$ehide
+@@||npru.ac.th^$ehide
+@@||nrru.ac.th^$ehide
+@@||nsru.ac.th^$ehide
+@@||nstru.ac.th^$ehide
+@@||nu.ac.th^$ehide
+@@||payap.ac.th^$ehide
+@@||pbru.ac.th^$ehide
+@@||pcru.ac.th^$ehide
+@@||pkru.ac.th^$ehide
+@@||pnru.ac.th^$ehide
+@@||psru.ac.th^$ehide
+@@||psu.ac.th^$ehide
+@@||ptu.ac.th^$ehide
+@@||rajapark.ac.th^$ehide
+@@||rbru.ac.th^$ehide
+@@||reru.ac.th^$ehide
+@@||riska.ac.th^$ehide
+@@||rmu.ac.th^$ehide
+@@||rmuti.ac.th^$ehide
+@@||rmutk.ac.th^$ehide
+@@||rmutl.ac.th^$ehide
+@@||rmutp.ac.th^$ehide
+@@||rmutr.ac.th^$ehide
+@@||rmutsb.ac.th^$ehide
+@@||rmutsv.ac.th^$ehide
+@@||rmutt.ac.th^$ehide
+@@||rmutto.ac.th^$ehide
+@@||rsu.ac.th^$ehide
+@@||ru.ac.th^$ehide
+@@||sau.ac.th^$ehide
+@@||siamu.ac.th^$ehide
+@@||siu.ac.th^$ehide
+@@||snru.ac.th^$ehide
+@@||spu.ac.th^$ehide
+@@||srru.ac.th^$ehide
+@@||sru.ac.th^$ehide
+@@||sskru.ac.th^$ehide
+@@||ssru.ac.th^$ehide
+@@||stjohn.ac.th^$ehide
+@@||stou.ac.th^$ehide
+@@||su.ac.th^$ehide
+@@||sut.ac.th^$ehide
+@@||swu.ac.th^$ehide
+@@||tru.ac.th^$ehide
+@@||tsu.ac.th^$ehide
+@@||tu.ac.th^$ehide
+@@||ubru.ac.th^$ehide
+@@||ubu.ac.th^$ehide
+@@||udru.ac.th^$ehide
+@@||uru.ac.th^$ehide
+@@||utcc.ac.th^$ehide
+@@||vru.ac.th^$ehide
+@@||wu.ac.th^$ehide
+@@||yru.ac.th^$ehide
 !MARK: ---social platform ---
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
@@ -4194,10 +4299,10 @@ google.*#@##bottomads
 @@||remobie.com^$generichide
 @@||munkongonline.com^$generichide
 !MARK: ---manga thai illegitimate ---
-@@https://www.niceoppai.net^$generichide
-@@https://www.rh2plusmanga.com^$generichide
-@@https://manga-uptocats.com^$generichide
-@@https://mangadeemak.com^$generichide
+@@||www.niceoppai.net^$generichide
+@@||www.rh2plusmanga.com^$generichide
+@@||manga-uptocats.com^$generichide
+@@||mangadeemak.com^$generichide
 @@||garasumanga.com^$generichide
 @@||tanuki-manga.com^$generichide
 @@||doodmanga.com^$generichide
@@ -4711,6 +4816,7 @@ uploadmx.com##^div[class="cookies show"]
 uploadmx.com##div[class="cookies show"]
 ! ใช้การ remove element แทน mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 mercular.com##div[class="MuiBox-root css-5cawxe"]
+honekrasae.com##div[class^="accept_cookie_wrapper"]
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
