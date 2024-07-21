@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240717154455
+! Version: 20240721145215
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -330,11 +330,9 @@ https://lucky*$all
 
 /^https?:\/\/(?:www\.)?[^\/]*casino[^\/]*\.[^\/]+/$all
 
-/^https?:\/\/(?:www\.)?[^\/]*168[^\/]*\.[^\/]+/$all
-@@||manga168.com^
 
 /^https?:\/\/(?:www\.)?[^\/]*88[^\/]*\.[^\/]+/$all
-@@||kingmovie88.com^
+@@||kingmovie88.com^$all
 
 /\b^https?://([a-zA-Z0-9.-]+\.)?football\b/$all
 
@@ -524,6 +522,18 @@ https://lucky*$all
 /euro69-banner.gif$image
 /slot.gif$image
 /gifba8xbet.gif$image
+/sym05.gif$image
+-boston777.gif$image
+-sexygame992.gif$image
+-pgjoker69.gif$image
+/ufa350s.webp$image
+-panama888.gif$image
+-Hydra888.gif$image
+-sexygame168*.gif$image
+-SA168*.gif$image
+-UFA191.gif$image
+-Lockdown168.gif$image
+-ufanance.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -540,19 +550,18 @@ http://gmtamfj.bunharnpoly.ac.th^$all
 http://home.basis.ac.th^$all
 http://internalaudit.crru.ac.th^$all
 http://istitutocomprensivo4oristano.edu.it^$all
-!http://london1681.com^$all
+http://london1681.com^$all
 http://utoservice.moph.go.th^$all
 http://www.jsp.com.mk^$all
 http://www.mathedu.ru.ac.th^$all
-!https://168*sagame.com^$all
-!https://168pretty.*$all
+https://168*sagame.com^$all
+https://168pretty.*$all
 !https://168pretty.com^$all
 !https://188th.co^$all
 https://42quilts.com^$all
 https://789steps.com^$all
 https://8xbet-vip.*$all
 !https://8xbet0.com^$all
-https://928hd.com^$all
 https://99tded.com^$all
 https://9slotgame.net^$all
 https://aff.123-boss.app^$all
@@ -661,7 +670,7 @@ https://ggband.gg^$all
 https://grand-prize.xyz^$all
 https://hanpho.go.th^$all
 https://harmonyvineyardchurch.com^$all
-!https://hengjing168.win^$all
+https://hengjing168.win^$all
 https://heylink.me/fox888.vip$all
 !https://hotgraph88.co^$all
 !https://hotgraph883.com^$all
@@ -678,8 +687,8 @@ https://jts.sarawak.gov.my^$all
 !https://juad888*.com^$all
 https://k9wyyl.com^$all
 https://kingdom6*.com^$all
-!https://lalikabet168.co^$all
-!https://lcbet168.com^$all
+https://lalikabet168.co^$all
+https://lcbet168.com^$all
 !https://lcbet24hr.com^$all
 !https://lcbet88.com^$all
 https://lcbetasia.com^$all
@@ -698,7 +707,7 @@ https://lockdown168*$all
 https://london168*$all
 https://lotto*.co*$all
 https://luca99th.com^$all
-!https://lucabet168.com^$all
+https://lucabet168.com^$all
 !https://lucky135.com^$all
 !https://lucky269.com^$all
 !https://lucky629.com^$all
@@ -738,14 +747,14 @@ https://pigpg.com^$all
 https://play3.huaylike.online^$all
 https://pok10.com^$all
 https://popslot.vip^$all
-!https://pretty168.net^$all
-!https://prettygaming168.com^$all
+https://pretty168.net^$all
+https://prettygaming168.com^$all
 !https://psth888.com^$all
 https://r9betting.com^$all
 https://re.tbs.tu.ac.th^$all
 https://rebrand.ly^$all
 https://record.mytopaff.com^$all
-!https://red168.com^$all
+https://red168.com^$all
 https://register.doa.go.th^$all
 https://register.gamegame.asia^$all
 https://rocket45.net^$all
@@ -776,7 +785,7 @@ https://soxlaw.com^$all
 https://spreadgit.com^$all
 https://starlingtalk.com^$all
 https://superslotmax.vip^$all
-!https://tangtem168.com^$all
+https://tangtem168.com^$all
 https://thais4.com^$all
 https://thais7.com^$all
 https://tinyurl.com/2g58f3kv^$all
@@ -837,6 +846,7 @@ https://www.outlookindia.com^$all
 https://www.panda555.org^$all
 https://www.pg133.com^$all
 !https://www.pgm1688.com^$all
+https://www.pgm168*$all
 https://www.pgslot9999.co^$all
 https://www.phelpsgov.org^$all
 https://www.popinns.com^$all
@@ -847,12 +857,12 @@ https://www.santeedriveintheatre.com^$all
 https://www.sbfplay*$all
 https://www.scb9.net^$all
 https://www.sesaoskt.go.th^$all
-!https://www.sexy168.vip^$all
+https://www.sexy168.vip^$all
 !https://www.sexycasino.site^$all
 https://www.siriusretail.com^$all
 https://www.slot1234.com^$all
 https://www.slotxo24hr.co^$all
-!https://www.tangtem168.bet^$all
+https://www.tangtem168.bet^$all
 https://www.tcsoinfo.com^$all
 https://www.thenorthface.com^$all
 https://www.therapeutique-dermatologique.org^$all
@@ -1002,6 +1012,9 @@ playermeow.com##+js(nowoif)
 ||google.com/generate_204
 
 ||overcrowdsillyturret.com^$all
+
+!xn--s3cx7a.com (วาป.com) 20240717162525
+||xn--s3cx7a.com^$3p
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1100,16 +1113,11 @@ qr.me-qr.com##+js(trusted-click-element,a[data-action="click->ticket-app--page#i
 
 !MARK: ---social platform ---
 
-!facebook.com 20240325005206
-!#if !env_mobile
-web.facebook.com,www.facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1n2onr6 x87ps6o x1lku1pv x1a2a7pz x1lliihq"][href][rel="nofollow noreferrer"][role="link"][tabindex="0"][target="_blank"]
-!#endif
-
 !twitter.com (x.com) 20240626141354
 ||ads-api.x.com^$xhr
 
 !MARK: ---wiki ---
-!fandom.com 
+!fandom.com
 !#if cap_html_filtering
 fandom.com##^.top-ads-container
 !#endif
@@ -2090,11 +2098,16 @@ posttoday.com##div[class^="dynamic-ads"]
 
 !MARK: ---tech news ---
 
-!droidsans.com 20240708193331
+!droidsans.com 20240718005420
 !#if cap_html_filtering
 droidsans.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#else
 droidsans.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+!#if cap_html_filtering
+droidsans.com##^div[id^="gpt-slot-droidsans-block"]
+!#else
+droidsans.com##div[id^="gpt-slot-droidsans-block"]
 !#endif
 
 !siamblockchain.com
@@ -2489,17 +2502,17 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|manga168.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com
+.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
 !.webp$image,domain=
 
-!manga168.com
+!manga168.com 20240717162413
 !#if cap_html_filtering
-manga168.com##^.dessert-frame > center
+manga168.com##^.dessert-frame
 !#else
-manga168.com##.dessert-frame > center
+manga168.com##.dessert-frame
 !#endif
 !#if cap_html_filtering
 manga168.com##^#ads_fox_bottom
@@ -2524,10 +2537,7 @@ manga168.com##.kln
 !#endif
 !!duplicate rule from AdGuard - Ads
 /*.gif$from=manga168.com,badfilter
-!!some specific banner
-||go.xn--16-ftitt.com/inw2.jpg$image,domain=manga168.com
-!!close button
-||amz-cdn3.manga168.com/images/e511b3bd897d86f3db0a9449aa18faf9.png$image,domain=manga168.com
+||amz-cdn*.manga168.com*.gif$image,domain=manga168.com
 
 !tanuki-manga.com
 !#if cap_html_filtering
@@ -2898,11 +2908,16 @@ doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 
-!manga-post.com 20240627205819
+!manga-post.com 20240721142822
 !#if cap_html_filtering
 manga-post.com##^div[id^="FloatingLayer"]
 !#else
 manga-post.com##div[id^="FloatingLayer"]
+!#endif
+!#if cap_html_filtering
+manga-post.com##^a:has(center>img)
+!#else
+manga-post.com##a:has(center>img)
 !#endif
 
 !mafia-manga.com 20231217005325
@@ -2983,6 +2998,13 @@ hippomanga.com###ads_fox_bottom
 hippomanga.com##^div[class="dessert-frame"]
 !#else
 hippomanga.com##div[class="dessert-frame"]
+!#endif
+
+!ranker-manga.com 20240717162213
+!#if cap_html_filtering
+ranker-manga.com##^div.header-ads-section
+!#else
+ranker-manga.com##div.header-ads-section
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
@@ -3360,7 +3382,7 @@ thaiboyslove.com##^td[align="center"] > a:upward(1)
 thaiboyslove.com##td[align="center"] > a:upward(1)
 !#endif
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv
 .webp$image,domain=uc2hd.com
 /series-indy$image
 /928hd$image
@@ -3507,6 +3529,28 @@ subthai.tv##.announce
 !#endif
 subthai.tv##+js(nano-sib, , *, 0.02)
 
+!nungkai.com 20240717161625
+!#if cap_html_filtering
+nungkai.com##^aside[class="ad"]
+!#else
+nungkai.com##aside[class="ad"]
+!#endif
+!#if cap_html_filtering
+nungkai.com##^div.adcen
+!#else
+nungkai.com##div.adcen
+!#endif
+!#if cap_html_filtering
+nungkai.com##^div.adhl
+!#else
+nungkai.com##div.adhl
+!#endif
+!#if cap_html_filtering
+nungkai.com##^div.adbr
+!#else
+nungkai.com##div.adbr
+!#endif
+
 !MARK: --- Others
 
 !sanook.com 20240514144944
@@ -3532,11 +3576,12 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 
 /*728x200*.gif$image
 /*728x200*.webp$image
-/750x375*.gif$image
-/676x140*.gif$image
-/r800x300*.gif$image
-/300x100*.gif$image
-/140x250*.gif$image
+/*750x375*.gif$image
+/*676x140*.gif$image
+/*800x300*.gif$image
+/*300x100*.gif$image
+/*140x250*.gif$image
+/*728x90*.gif$image
 
 /image/ads/*
 
@@ -4119,6 +4164,7 @@ google.*#@##bottomads
 @@||nuuneoi.com^$generichide
 @@||kafaak.blog^$generichide
 @@||mthai.com^$generichide
+@@||wrikka.com^$generichide
 !MARK: ---education ---
 @@||ibooking.ondemand.in.th^$generichide
 @@||ondemand.in.th^$generichide
@@ -4249,10 +4295,11 @@ google.*#@##bottomads
 @@||mebmarket.com^$generichide
 @@||bookwalker.$generichide
 @@||firstpagepro.com*$generichide
-!MARK: ---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
+!MARK: ---Manga มังงะ Novel นิยาย Thai ไทย---
 @@||www.nekopost.net^$generichide
 @@||kuro.nekopost.net^$generichide
 @@||mynovel.com^$generichide
+@@||lionmanga.com^$generichide
 !MARK: ---tech news ---
 @@||siamphone.com^$generichide
 @@||techmoblog.com^$generichide
@@ -4356,6 +4403,7 @@ google.*#@##bottomads
 @@||xn--l3c0azab5a2gta.com^$generichide
 @@||readrealm.co^$generichide
 @@||hippomanga.com^$generichide
+@@||ranker-manga.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4430,6 +4478,7 @@ google.*#@##bottomads
 @@||www.serie-day.com^$generichide
 @@||imovieth.com^$generichide
 @@||subthai.tv^$generichide
+@@||nungde.com^$generichide
 !MARK: ---tech illegitimate ---
 @@||mawtoload.com^$generichide
 @@||axeload.com^$generichide
