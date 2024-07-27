@@ -46,19 +46,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 </details>
 
 > [!IMPORTANT]
-> <details><summary>👇Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ filter ข้างล่างนี้ เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด</summary>
->
-> - AdGuard Filter
-> - AdGuard – Cookie Notices
-> - AdGuard Tracking Protection
-> - AdGuard URL Tracking Protection
-> - AdGuard – Mobile Ads
-> - EasyList
-> - Easylist Cookie List
-> - Easy Privacy 
->
-> ถ้าใช้ uBlock Origin ก็ควรเปิด uBlock filters – Ads, uBlock filters – Privacy และ uBlock filters – Annoyances ด้วย
-</details>
+> Filter list นี้เป็นเพียงแค่ Add-On ดังนั้น "ควร"ใช้งานร่วมกับ base filter ตามที่แต่ละ platform แนะนำ เพื่อให้สามารถบล็อกได้ครอบคลุมมากที่สุด
 
 > [!IMPORTANT]
 > <details><summary>👇ไม่ควรใช้ร่วมกับ EasyList Thailand เพราะ </summary>
@@ -70,8 +58,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 <details><summary>👇วิธีเพิ่ม Filter List ลง AdBlock ของคุณ
 </summary>
 
-- ~~[AdGuard extension](https://adguard.com/en/adguard-browser-extension/overview.html)~~ [^1]
-  - ~~กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe~~
+- [AdGuard extension](https://adguard.com/en/adguard-browser-extension/overview.html) [^1]
+  - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
 รอแก้บัค https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2690, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2259, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2646
 - [uBlock Origin extension](https://github.com/gorhill/uBlock)
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Subscribe ที่มุมขวาบน
