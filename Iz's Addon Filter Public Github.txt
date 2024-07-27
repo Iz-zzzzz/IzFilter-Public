@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240725145206
+! Version: 20240727162404
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -320,9 +320,7 @@
 !****************************************************************************************
 
 !MARK: ---------- URL general Rules ----------
-https://bet*$all
 https://hotgraph*$all
-https://lucky*$all
 /^https?:\/\/vvv\./$all
 
 /^https?:\/\/(?:www\.)?[^\/]*ufa[^\/]*\.[^\/]+/$all
@@ -340,6 +338,8 @@ https://lucky*$all
 /^https?://[^\s/]*bet\d{1,3}\.[^\s/]+/$all
 
 /^https?://[^\s/]*lucky\d{1,3}\.[^\s/]+/$all
+
+/^https?:\/\/(www\.)?bet\.\w+/$all
 
 !block both link and ads video
 /brazil$media
@@ -581,7 +581,7 @@ https://baccarat888th.com^$all
 https://bcr99th.com^$all
 !https://bet777th.com^$all
 !https://betflix*.com^$all
-https://betfrenzy88.com^$all
+!https://betfrenzy88.com^$all
 !https://betplay569.com^$all
 !https://betplay569t.com^$all
 https://bit.ly/38y9PSG$all
@@ -4096,20 +4096,20 @@ google.*#@##bottomads
 !! https://github.com/uBlockOrigin/uAssets/issues/3367#issuecomment-2248425715
 
 !! uBO Ads
-!#if ext_ublock
-||facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^"]+"\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?MarketplaceSearchFeedStoriesEdge")\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/{}/,domain=web.facebook.com|www.facebook.com,badfilter
+!!#if ext_ublock
+!||facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^"]+"\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
+!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
+!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?MarketplaceSearchFeedStoriesEdge")\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
+!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/{}/,domain=web.facebook.com|www.facebook.com,badfilter
 
-web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, '/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^}]+\}/g', {}, /api/graphql)
-web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/g, {}, /api/graphql)
-web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?MarketplaceSearchFeedStoriesEdge")\}/g, {}, /api/graphql)
-web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/, {}, /api/graphql)
+!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, '/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^}]+\}/g', {}, /api/graphql)
+!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/g, {}, /api/graphql)
+!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?!MarketplaceSearchFeedStoriesEdge")\}/g, {}, /api/graphql)
+!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/, {}, /api/graphql)
 
 !! uBO Annoyances
-||www.facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/{}/g,badfilter
-www.facebook.com##+js(trusted-replace-xhr-response, /\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/g, {}, /api/graphql)
+!||www.facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/{}/g,badfilter
+!www.facebook.com##+js(trusted-replace-xhr-response, /\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/g, {}, /api/graphql)
 !#endif
 
 !!!**************************************************************************************
@@ -4169,6 +4169,7 @@ www.facebook.com##+js(trusted-replace-xhr-response, /\{"brs_content_label":[^\n]
 @@||kafaak.blog^$generichide
 @@||mthai.com^$generichide
 @@||wrikka.com^$generichide
+@@||somkiat.cc^$generichide
 !MARK: ---education ---
 @@||ibooking.ondemand.in.th^$generichide
 @@||ondemand.in.th^$generichide
@@ -4884,16 +4885,16 @@ supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
 ||geolocation.onetrust.com^$3p
 /pdpa.js$script
 /glow-cookies.min.js$script
-!https://app.themis-technology.com/cdn/pdpa-cookieconsent.js
 /pdpa-cookieconsent.js$script
 /designil-pdpa$script,image,xhr
 /cookie-law-info$script,image,xhr
 /cookie-notice$script,css
-!!พบได้ thisisgamethailand.com 20240213165025
 /gdpr-compliance-cookie-consent$script,css
 /gdpr-option.js$script
 /jquery.cookie.min.js$script
 /jquery.cookie.js$script
+/get-pdpa$xhr,script
+
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
