@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240727173054
+! Version: 20240802011005
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -298,6 +298,7 @@
 ||bnbc.uno^$all
 ||getsalenow.com^$all
 ||ehx.my.id^$all
+||faeccbook.com^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -998,6 +999,8 @@ playermeow.com##+js(nowoif)
 
 !xn--s3cx7a.com (วาป.com) 20240717162525
 ||xn--s3cx7a.com^$3p
+
+cdn.innity.net/admanager.js
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -2558,9 +2561,9 @@ moodtoon.net##^div[id^="ads_"]
 moodtoon.net##div[id^="ads_"]
 !#endif
 
-!niceoppai.net 20240704190923
+!niceoppai.net 20240727193321
 !! มีทั้ง frame และ other เชื่อมต่อไปเว็บนอก
-/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$all,third-party,domain=niceoppai.net
+/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$frame,script,third-party,domain=niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
 !#else
@@ -4344,6 +4347,7 @@ google.*#@##bottomads
 @@||ihavecpu.com^$generichide
 !MARK: --- thai government ---
 @@||www.thaigov.go.th^$generichide
+@@||antifakenewscenter.com^$generichide
 !MARK: ---shopping online sale---
 @@||425degree.com^$generichide
 @@||mercular.com^$generichide
@@ -4518,9 +4522,9 @@ phoenixnext.com##^div[class="cwc-sdk-container"]
 !#endif
 phoenixnext.com##div[class="cwc-sdk-container"]
 !#if cap_html_filtering
-wongnai.com##^#cc_div
+wongnai.com##^div#cc--main
 !#endif
-wongnai.com###cc_div
+wongnai.com##div#cc--main
 !#if cap_html_filtering
 mahidol.ac.th##^#cc_div
 !#endif
@@ -4547,7 +4551,7 @@ theguardian.com##div[class="dcr-8xye2h"]
 economist.com##^div[class="message-container teg-container"]
 !#endif
 economist.com##div[class="message-container teg-container"]
-||consent.economist.com$domain=economist.com
+||consent.economist.com^$domain=economist.com
 !#if cap_html_filtering
 ondemand.in.th##^.cwc-sdk-container
 !#endif
@@ -4871,6 +4875,10 @@ uploadmx.com##div[class="cookies show"]
 ! ใช้การ remove element แทน mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 mercular.com##div[class="MuiBox-root css-5cawxe"]
 honekrasae.com##div[class^="accept_cookie_wrapper"]
+!#if cap_html_filtering
+antifakenewscenter.com##^.cky-overlay
+!#endif
+antifakenewscenter.com##.cky-overlay
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
