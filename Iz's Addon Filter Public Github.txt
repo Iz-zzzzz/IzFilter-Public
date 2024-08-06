@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240802011005
+! Version: 20240806211927
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -287,6 +287,14 @@
 ||thairathmedia.shop^$all
 ||thaicreations.shop^$all
 ||dfj.my.id^$all
+||topan12.my.id^$all
+||bnbc.uno^$all
+||getsalenow.com^$all
+||ehx.my.id^$all
+||faeccbook.com^$all
+||99tube.shop^$all
+||digitalsocialize.icu^$all
+||url1.io^$all
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
@@ -294,11 +302,8 @@
 ||facbook-supp.pages.dev.br^$all
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
 ||home-business-helper.com^$all
-||topan12.my.id^$all
-||bnbc.uno^$all
-||getsalenow.com^$all
-||ehx.my.id^$all
-||faeccbook.com^$all
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
+||f-help-case-file-form.glitch.me^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -534,6 +539,11 @@ https://hotgraph*$all
 -UFA191.gif$image
 -Lockdown168.gif$image
 -ufanance.gif$image
+/jedi.gif$image
+/ALD_Banner.gif$image
+/bn-pokeplay.gif$image
+/XO89_Banner.gif$image
+/p9_long.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -1000,7 +1010,9 @@ playermeow.com##+js(nowoif)
 !xn--s3cx7a.com (วาป.com) 20240717162525
 ||xn--s3cx7a.com^$3p
 
-cdn.innity.net/admanager.js
+||cdn.innity.net/admanager.js
+
+||pemsrv.com^
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1684,8 +1696,9 @@ ngthai.com##div[class="bg-popup"]
 
 !MARK: ---social platform ---
 
-!pantip.com 20240622015108
+!pantip.com 20240806211641
 pantip.com##div[id^="frukt:script:"]:upward(div[id^="pantip:script"])
+pantip.com##ins.adsbyadop
 
 !MARK: ---wiki ---
 
@@ -2993,6 +3006,13 @@ ranker-manga.com##^div.header-ads-section
 ranker-manga.com##div.header-ads-section
 !#endif
 
+!toon168.com 20240805213613
+!#if cap_html_filtering
+toon168.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+toon168.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
@@ -3553,6 +3573,22 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 
 
 
+!#if cap_html_filtering
+##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+!#if cap_html_filtering
+##^img.img-ads
+!#else
+##img.img-ads
+!#endif
+!#if cap_html_filtering
+##^div[class="dessert-frame"]
+!#else
+##div[class="dessert-frame"]
+!#endif
+
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -3582,10 +3618,6 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
 
-!หลายเว็บผิดกฏหมายชอบใช้ 20240710155146
-##img.img-ads
-##div[class="dessert-frame"]
-
 !!!**************************************************************************************
 !* 
 !* Anti ad block detect
@@ -3605,7 +3637,13 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 #@#[id^="div-gpt-ad"]
 #@#div[id^="div-gpt-"]
 #@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+##^[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#if cap_html_filtering
+##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 google.*#@##bottomads
 
@@ -3614,7 +3652,13 @@ google.*#@##bottomads
 #@#.ad-slot
 !EasyList
 #@#.ad-link
+!#if cap_html_filtering
+##^.ad-link:not(.adsbox)
+!#endif
 ##.ad-link:not(.adsbox)
+!#if cap_html_filtering
+##^.ad-slot:not(.adsbox):not(.adsbygoogle)
+!#endif
 ##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
 !!!**************************************************************************************
@@ -4413,6 +4457,7 @@ google.*#@##bottomads
 @@||readrealm.co^$generichide
 @@||hippomanga.com^$generichide
 @@||ranker-manga.com^$generichide
+@@||toon168.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4904,10 +4949,32 @@ supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
 /get-pdpa$xhr,script
 
 !MadeByMe Cosmestic rules
+!#if cap_html_filtering
+##^.eupopup-body
+!#endif
 ##.eupopup-body
+!#if cap_html_filtering
+##^.eupopup-head
+!#endif
 ##.eupopup-head
+!#if cap_html_filtering
+##^#pdpa-wrapper
+!#endif
 ###pdpa-wrapper
+!#if cap_html_filtering
+##^.pdpa
+!#endif
 ##.pdpa
+!#if cap_html_filtering
+##^#consentTrackAndCookieBar
+!#endif
 ###consentTrackAndCookieBar
+!#if cap_html_filtering
+##^#js-consent-banner
+!#endif
 ###js-consent-banner
+!#if cap_html_filtering
+##^.pdpa_cookies
+!#endif
+##.pdpa_cookies
 
