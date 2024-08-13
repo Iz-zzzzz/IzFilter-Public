@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240806211927
+! Version: 20240813101141
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -1696,9 +1696,10 @@ ngthai.com##div[class="bg-popup"]
 
 !MARK: ---social platform ---
 
-!pantip.com 20240806211641
+!pantip.com 20240808184152
 pantip.com##div[id^="frukt:script:"]:upward(div[id^="pantip:script"])
 pantip.com##ins.adsbyadop
+pantip.com##div.frukt-related
 
 !MARK: ---wiki ---
 
@@ -1746,7 +1747,7 @@ kapook.com##^#google_esf
 !#endif
 kapook.com###google_esf
 
-!thairath.co.th 20240704182422
+!thairath.co.th 20240812132444
 !!หน้าข่าว pc 20231212003942
 thairath.co.th##div#slot-billboard:upward(3)
 thairath.co.th##div#slot-tower:upward(3)
@@ -1754,13 +1755,11 @@ thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
 thairath.co.th##div[style="height:300px"]
 thairath.co.th##div#slot-right_rail:upward(2)
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
-thairath.co.th##div[class^="ads-slot-"]:upward(1)
-!!หน้าหลัก pc 20231212004228
+!!หน้าหลัก pc 20240812132434
 thairath.co.th##div#homepage-top:upward(3)
 thairath.co.th##div#homepage-rectangle:upward(2)
-!!หน้าข่าว mobile 20231212005218
-thairath.co.th##div#slot-headline:upward(2)
-thairath.co.th##div#slot-postarticle:upward(3)
+!!หน้าข่าว mobile & pc 20240812132223
+thairath.co.th##.adsbox-style
 !!thairath.co.th/sport
 thairath.co.th##div[data-container-id="ivs-player"]
 !!thairath.co.th/money 20231222211603
@@ -2183,12 +2182,8 @@ techtalkthai.com##h4:has-text(SPONSORS):upward(2)
 !#endif
 .gif$image,domain=techtalkthai.com
 
-!blognone.com 20240406154312
-!#if cap_html_filtering
-blognone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#else
+!blognone.com 20240806212413
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 blognone.com##.advertorial,.sponsored:style(opacity: 0.4 !important;)
 
 !flashfly.net 20240527165914
@@ -2276,7 +2271,7 @@ specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 
-!entechreview.com 20240626165114
+!entechreview.com 20240813101140
 !#if cap_html_filtering
 entechreview.com##^div[aria-label^="Sponser"]:upward(1)
 !#else
@@ -2286,6 +2281,11 @@ entechreview.com##div[aria-label^="Sponser"]:upward(1)
 entechreview.com##^div.promotion-section
 !#else
 entechreview.com##div.promotion-section
+!#endif
+!#if cap_html_filtering
+entechreview.com##^div.em-posts-promotions
+!#else
+entechreview.com##div.em-posts-promotions
 !#endif
 
 !thaiware.com 20240705155726
@@ -3569,25 +3569,10 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 !* 
 !****************************************************************************************
 
-
-
-
-
-!#if cap_html_filtering
-##^div[class="c-sidebar c-top-sidebar wp-manga"]
-!#else
 ##div[class="c-sidebar c-top-sidebar wp-manga"]
-!#endif
-!#if cap_html_filtering
-##^img.img-ads
-!#else
 ##img.img-ads
-!#endif
-!#if cap_html_filtering
-##^div[class="dessert-frame"]
-!#else
 ##div[class="dessert-frame"]
-!#endif
+##div.b-ads
 
 !!!**************************************************************************************
 !* 
@@ -3637,13 +3622,7 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 #@#[id^="div-gpt-ad"]
 #@#div[id^="div-gpt-"]
 #@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-##^[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 ##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 google.*#@##bottomads
 
@@ -3652,13 +3631,7 @@ google.*#@##bottomads
 #@#.ad-slot
 !EasyList
 #@#.ad-link
-!#if cap_html_filtering
-##^.ad-link:not(.adsbox)
-!#endif
 ##.ad-link:not(.adsbox)
-!#if cap_html_filtering
-##^.ad-slot:not(.adsbox):not(.adsbygoogle)
-!#endif
 ##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
 !!!**************************************************************************************
@@ -4949,32 +4922,11 @@ supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
 /get-pdpa$xhr,script
 
 !MadeByMe Cosmestic rules
-!#if cap_html_filtering
-##^.eupopup-body
-!#endif
 ##.eupopup-body
-!#if cap_html_filtering
-##^.eupopup-head
-!#endif
 ##.eupopup-head
-!#if cap_html_filtering
-##^#pdpa-wrapper
-!#endif
 ###pdpa-wrapper
-!#if cap_html_filtering
-##^.pdpa
-!#endif
 ##.pdpa
-!#if cap_html_filtering
-##^#consentTrackAndCookieBar
-!#endif
 ###consentTrackAndCookieBar
-!#if cap_html_filtering
-##^#js-consent-banner
-!#endif
 ###js-consent-banner
-!#if cap_html_filtering
-##^.pdpa_cookies
-!#endif
 ##.pdpa_cookies
 
