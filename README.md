@@ -73,7 +73,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 > filter นี้ทำมาเพื่อรองรับ platform ด้านบนเป็นหลัก
 
-> Chromium กำลังจะปิด Manifest V2 (API หลักของ AdBlock) ในอนาคต แนะนำให้หลีกเลี่ยง Chromium-based browser ไปใช้ Brave, Firefox หรือ AdGuard Application แทน [^7]
+> Chromium กำลังจะปิด Manifest V2 (API ที่ AdBlock ใช้) ในอนาคต แนะนำให้หลีกเลี่ยง Chromium-based adblock ไปใช้ [Brave](https://x.com/brave/status/1725622768262128006), Firefox, [Thorium](https://github.com/Alex313031/thorium/releases/tag/M126.0.6478.231) หรือ AdGuard Application แทน [^7]
 </details>
 
 ## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
@@ -90,7 +90,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 - [Adguard's compatibility-table](https://github.com/AdguardTeam/Scriptlets/blob/master/wiki/compatibility-table.md)
 - [W3 School DOM Event object](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
-#### Filter list ได้รับอิทธิพลจาก
+#### Filter list นี้ได้รับอิทธิพลจาก
 - [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand)
 - [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
 
@@ -98,7 +98,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 <div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=55347&s=4' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
 
 #### หมายเหตุ (Footnote)
-Iz's Addon Filter Public Version ดึงมาจากส่วนหนึ่งของ filter list ที่ผมใช้เองส่วนตัว ดังนั้นอาจมีข้อผิดพลาดเกิดขึ้นได้
+- Iz's Addon Filter Public Version ดึงมาจากส่วนหนึ่งของ filter list ที่ผมใช้เองส่วนตัว ดังนั้นอาจมีข้อผิดพลาดเกิดขึ้นได้
 - This filter list may contain other filter lists. I already commented the sources.
 
 [^1]: Filter list นี้ทำให้ uBlock Origin เป็นหลัก ดังนั้น rules ที่ถูกปรับแต่งให้ทำงานไวขึ้นทั้งหมด(มีไม่กี่ rules เช่น ใน facebook.com, instagram.com, twitter.com)จะใช้ไม่ได้ใน AdGuard และ Brave แต่ AdGuard ก็มี rules ของตัวเองที่ดีอยู่แล้ว
