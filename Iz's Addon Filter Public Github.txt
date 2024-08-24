@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240816144408
+! Version: 20240825005709
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -1696,10 +1696,10 @@ ngthai.com##div[class="bg-popup"]
 
 !MARK: ---social platform ---
 
-!pantip.com 20240808184152
+!pantip.com 20240825005708
 pantip.com##div[id^="frukt:script:"]:upward(div[id^="pantip:script"])
 pantip.com##ins.adsbyadop
-pantip.com##div.frukt-related
+||frukt.pantip.com^$frame,domain=pantip.com
 
 !MARK: ---wiki ---
 
@@ -1747,14 +1747,15 @@ kapook.com##^#google_esf
 !#endif
 kapook.com###google_esf
 
-!thairath.co.th 20240812132444
-!!หน้าข่าว pc 20231212003942
+!thairath.co.th 20240822022123
+!!หน้าข่าว pc 20240822022121
 thairath.co.th##div#slot-billboard:upward(3)
 thairath.co.th##div#slot-tower:upward(3)
 thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
 thairath.co.th##div[style="height:300px"]
 thairath.co.th##div#slot-right_rail:upward(2)
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
+thairath.co.th##div[id^="ad_article_desktop"]:upward(1)
 !!หน้าหลัก pc 20240812132434
 thairath.co.th##div#homepage-top:upward(3)
 thairath.co.th##div#homepage-rectangle:upward(2)
