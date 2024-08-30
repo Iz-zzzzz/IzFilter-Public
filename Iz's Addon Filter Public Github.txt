@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240825005709
+! Version: 20240831014208
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -888,6 +888,8 @@ https://pgf-asw0zz.co^$all
 ||vikkiromano.com^$all
 ||69pgslot.com^$all
 !sagaming135.com ซ้ำ
+||maslot168.net^$all
+||m-culture.in.th^$all
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
 ||qq288.com$all
@@ -3389,7 +3391,7 @@ thaiboyslove.com##^td[align="center"] > a:upward(1)
 thaiboyslove.com##td[align="center"] > a:upward(1)
 !#endif
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv
 .webp$image,domain=uc2hd.com
 /series-indy$image
 /928hd$image
@@ -3556,6 +3558,28 @@ nungkai.com##div.adhl
 nungkai.com##^div.adbr
 !#else
 nungkai.com##div.adbr
+!#endif
+
+!24-hd.tv 20240831013640
+!#if cap_html_filtering
+24-hd.tv##^div.banner-fast
+!#else
+24-hd.tv##div.banner-fast
+!#endif
+!#if cap_html_filtering
+24-hd.tv##^div.banner-fix
+!#else
+24-hd.tv##div.banner-fix
+!#endif
+!#if cap_html_filtering
+24-hd.tv##^div.ad-section-player
+!#else
+24-hd.tv##div.ad-section-player
+!#endif
+!#if cap_html_filtering
+24-hd.tv##^img.banner_large:upward(a[href])
+!#else
+24-hd.tv##img.banner_large:upward(a[href])
 !#endif
 
 !MARK: --- Others
@@ -4763,9 +4787,9 @@ advice.co.th##^.foot-cookie
 !#endif
 advice.co.th##.foot-cookie
 !#if cap_html_filtering
-ihavecpu.com##^#cookie-banner
+ihavecpu.com##^div[class^="cookieNotice_cookieCard"]
 !#endif
-ihavecpu.com###cookie-banner
+ihavecpu.com##div[class^="cookieNotice_cookieCard"]
 !#if cap_html_filtering
 thaiware.com##^div#pdpa_setting
 !#endif
@@ -4898,6 +4922,14 @@ honekrasae.com##div[class^="accept_cookie_wrapper"]
 antifakenewscenter.com##^.cky-overlay
 !#endif
 antifakenewscenter.com##.cky-overlay
+!#if cap_html_filtering
+flashexpress.*##^div.learn-more-wrapper
+!#endif
+flashexpress.*##div.learn-more-wrapper
+!#if cap_html_filtering
+monomax.me##^div.form-cookie
+!#endif
+monomax.me##div.form-cookie
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
