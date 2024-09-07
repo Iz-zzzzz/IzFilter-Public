@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240831014208
+! Version: 20240907023046
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -295,6 +295,7 @@
 ||99tube.shop^$all
 ||digitalsocialize.icu^$all
 ||url1.io^$all
+||nqm.asia^$all
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
@@ -344,6 +345,8 @@ https://hotgraph*$all
 /^https?://[^\s/]*bet\d{1,3}\.[^\s/]+/$all
 
 /^https?://[^\s/]*lucky\d{1,3}\.[^\s/]+/$all
+
+/^https?://[^\s/]*lotto\d{1,3}\.[^\s/]+/$all
 
 /^https?:\/\/(www\.)?bet\.\w+/$all
 
@@ -544,6 +547,7 @@ https://hotgraph*$all
 /bn-pokeplay.gif$image
 /XO89_Banner.gif$image
 /p9_long.gif$image
+/NEON24H*.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -710,7 +714,6 @@ https://lionth*$all
 https://lkk135.com^$all
 https://lockdown168*$all
 https://london168*$all
-https://lotto*.co*$all
 https://luca99th.com^$all
 https://lucabet168.com^$all
 !https://lucky135.com^$all
@@ -890,6 +893,7 @@ https://pgf-asw0zz.co^$all
 !sagaming135.com ซ้ำ
 ||maslot168.net^$all
 ||m-culture.in.th^$all
+https://neon24h1.com^$all
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
 ||qq288.com$all
@@ -1015,6 +1019,8 @@ playermeow.com##+js(nowoif)
 ||cdn.innity.net/admanager.js
 
 ||pemsrv.com^
+
+||vicious-advance.com^$all
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1698,10 +1704,10 @@ ngthai.com##div[class="bg-popup"]
 
 !MARK: ---social platform ---
 
-!pantip.com 20240825005708
-pantip.com##div[id^="frukt:script:"]:upward(div[id^="pantip:script"])
+!pantip.com 20240907022424
+pantip.com##div[class="frukt-related"]
 pantip.com##ins.adsbyadop
-||frukt.pantip.com^$frame,domain=pantip.com
+||frukt.pantip.com^$domain=pantip.com,redirect=noopjs
 
 !MARK: ---wiki ---
 
@@ -2447,6 +2453,20 @@ jokergameth.com##^div[align="center"]
 !#endif
 jokergameth.com##div[align="center"]
 
+!game.storysiam.com 20240903004418
+!#if cap_html_filtering
+game.storysiam.com##^img[src^="https://game.storysiam.com/img/"][width="300"][height="300"]:upward(a)
+!#endif
+game.storysiam.com##img[src^="https://game.storysiam.com/img/"][width="300"][height="300"]:upward(a)
+!#if cap_html_filtering
+game.storysiam.com##^ins.adsbygoogle[data-ad-client]
+!#endif
+game.storysiam.com##ins.adsbygoogle[data-ad-client]
+!#if cap_html_filtering
+game.storysiam.com##^ins.adsbygoogle[data-ad-slot]
+!#endif
+game.storysiam.com##ins.adsbygoogle[data-ad-slot]
+
 !MARK: ---watchlist review movie anime tv show ---
 
 !hareshi.net 20240710171814
@@ -2504,7 +2524,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com
+.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -3016,6 +3036,13 @@ toon168.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
 toon168.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 !#endif
 
+!mangastep.com 20240907021140
+!#if cap_html_filtering
+mangastep.com##^div[class="wrapper"] > a:has(img)
+!#else
+mangastep.com##div[class="wrapper"] > a:has(img)
+!#endif
+
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
@@ -3391,7 +3418,7 @@ thaiboyslove.com##^td[align="center"] > a:upward(1)
 thaiboyslove.com##td[align="center"] > a:upward(1)
 !#endif
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv
+.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com
 .webp$image,domain=uc2hd.com
 /series-indy$image
 /928hd$image
@@ -3580,6 +3607,50 @@ nungkai.com##div.adbr
 24-hd.tv##^img.banner_large:upward(a[href])
 !#else
 24-hd.tv##img.banner_large:upward(a[href])
+!#endif
+
+!xn--72cf9bd9fk5a.com 20240831231556
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.bottom-center
+!#else
+xn--72cf9bd9fk5a.com##.bottom-center
+!#endif
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.ad_cen
+!#else
+xn--72cf9bd9fk5a.com##.ad_cen
+!#endif
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.ad_left
+!#else
+xn--72cf9bd9fk5a.com##.ad_left
+!#endif
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.ad_right
+!#else
+xn--72cf9bd9fk5a.com##.ad_right
+!#endif
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.banner-player
+!#else
+xn--72cf9bd9fk5a.com##.banner-player
+!#endif
+!#if cap_html_filtering
+xn--72cf9bd9fk5a.com##^.banner-top
+!#else
+xn--72cf9bd9fk5a.com##.banner-top
+!#endif
+
+!v8-hd.com 20240831234716
+!#if cap_html_filtering
+v8-hd.com##^.row-kodsana-container
+!#else
+v8-hd.com##.row-kodsana-container
+!#endif
+!#if cap_html_filtering
+v8-hd.com##^.row-kodsana
+!#else
+v8-hd.com##.row-kodsana
 !#endif
 
 !MARK: --- Others
@@ -4227,97 +4298,97 @@ google.*#@##bottomads
 @@||www.mycourseville.com^$generichide
 @@||www.biobeamcenter.com^$generichide
 @@||cututoronline.com^$generichide
-@@||ait.ac.th^$ehide
-@@||aru.ac.th^$ehide
-@@||au.edu^$ehide
-@@||bkkthon.ac.th^$ehide
-@@||bru.ac.th^$ehide
-@@||bsru.ac.th^$ehide
-@@||bu.ac.th^$ehide
-@@||buu.ac.th^$ehide
-@@||chandra.ac.th^$ehide
-@@||chula.ac.th^$ehide
-@@||cmru.ac.th^$ehide
-@@||cmu.ac.th^$ehide
-@@||cpru.ac.th^$ehide
-@@||cri.or.th^$ehide
-@@||crru.ac.th^$ehide
-@@||dpu.ac.th^$ehide
-@@||dru.ac.th^$ehide
-@@||eau.ac.th^$ehide
-@@||engtest.net^$ehide
-@@||hcu.ac.th^$ehide
-@@||kbu.ac.th^$ehide
-@@||kku.ac.th^$ehide
-@@||kmitl.ac.th^$ehide
-@@||kmutnb.ac.th^$ehide
-@@||kmutt.ac.th^$ehide
-@@||kpru.ac.th^$ehide
-@@||krirk.ac.th^$ehide
-@@||kru.ac.th^$ehide
-@@||ku.ac.th^$ehide
-@@||lpru.ac.th^$ehide
-@@||lru.ac.th^$ehide
-@@||mahidol.ac.th^$ehide
-@@||mcru.ac.th^$ehide
-@@||mju.ac.th^$ehide
-@@||msu.ac.th^$ehide
-@@||mut.ac.th^$ehide
-@@||nida.ac.th^$ehide
-@@||npru.ac.th^$ehide
-@@||nrru.ac.th^$ehide
-@@||nsru.ac.th^$ehide
-@@||nstru.ac.th^$ehide
-@@||nu.ac.th^$ehide
-@@||payap.ac.th^$ehide
-@@||pbru.ac.th^$ehide
-@@||pcru.ac.th^$ehide
-@@||pkru.ac.th^$ehide
-@@||pnru.ac.th^$ehide
-@@||psru.ac.th^$ehide
-@@||psu.ac.th^$ehide
-@@||ptu.ac.th^$ehide
-@@||rajapark.ac.th^$ehide
-@@||rbru.ac.th^$ehide
-@@||reru.ac.th^$ehide
-@@||riska.ac.th^$ehide
-@@||rmu.ac.th^$ehide
-@@||rmuti.ac.th^$ehide
-@@||rmutk.ac.th^$ehide
-@@||rmutl.ac.th^$ehide
-@@||rmutp.ac.th^$ehide
-@@||rmutr.ac.th^$ehide
-@@||rmutsb.ac.th^$ehide
-@@||rmutsv.ac.th^$ehide
-@@||rmutt.ac.th^$ehide
-@@||rmutto.ac.th^$ehide
-@@||rsu.ac.th^$ehide
-@@||ru.ac.th^$ehide
-@@||sau.ac.th^$ehide
-@@||siamu.ac.th^$ehide
-@@||siu.ac.th^$ehide
-@@||snru.ac.th^$ehide
-@@||spu.ac.th^$ehide
-@@||srru.ac.th^$ehide
-@@||sru.ac.th^$ehide
-@@||sskru.ac.th^$ehide
-@@||ssru.ac.th^$ehide
-@@||stjohn.ac.th^$ehide
-@@||stou.ac.th^$ehide
-@@||su.ac.th^$ehide
-@@||sut.ac.th^$ehide
-@@||swu.ac.th^$ehide
-@@||tru.ac.th^$ehide
-@@||tsu.ac.th^$ehide
-@@||tu.ac.th^$ehide
-@@||ubru.ac.th^$ehide
-@@||ubu.ac.th^$ehide
-@@||udru.ac.th^$ehide
-@@||uru.ac.th^$ehide
-@@||utcc.ac.th^$ehide
-@@||vru.ac.th^$ehide
-@@||wu.ac.th^$ehide
-@@||yru.ac.th^$ehide
+@@||ait.ac.th^$generichide
+@@||aru.ac.th^$generichide
+@@||au.edu^$generichide
+@@||bkkthon.ac.th^$generichide
+@@||bru.ac.th^$generichide
+@@||bsru.ac.th^$generichide
+@@||bu.ac.th^$generichide
+@@||buu.ac.th^$generichide
+@@||chandra.ac.th^$generichide
+@@||chula.ac.th^$generichide
+@@||cmru.ac.th^$generichide
+@@||cmu.ac.th^$generichide
+@@||cpru.ac.th^$generichide
+@@||cri.or.th^$generichide
+@@||crru.ac.th^$generichide
+@@||dpu.ac.th^$generichide
+@@||dru.ac.th^$generichide
+@@||eau.ac.th^$generichide
+@@||engtest.net^$generichide
+@@||hcu.ac.th^$generichide
+@@||kbu.ac.th^$generichide
+@@||kku.ac.th^$generichide
+@@||kmitl.ac.th^$generichide
+@@||kmutnb.ac.th^$generichide
+@@||kmutt.ac.th^$generichide
+@@||kpru.ac.th^$generichide
+@@||krirk.ac.th^$generichide
+@@||kru.ac.th^$generichide
+@@||ku.ac.th^$generichide
+@@||lpru.ac.th^$generichide
+@@||lru.ac.th^$generichide
+@@||mahidol.ac.th^$generichide
+@@||mcru.ac.th^$generichide
+@@||mju.ac.th^$generichide
+@@||msu.ac.th^$generichide
+@@||mut.ac.th^$generichide
+@@||nida.ac.th^$generichide
+@@||npru.ac.th^$generichide
+@@||nrru.ac.th^$generichide
+@@||nsru.ac.th^$generichide
+@@||nstru.ac.th^$generichide
+@@||nu.ac.th^$generichide
+@@||payap.ac.th^$generichide
+@@||pbru.ac.th^$generichide
+@@||pcru.ac.th^$generichide
+@@||pkru.ac.th^$generichide
+@@||pnru.ac.th^$generichide
+@@||psru.ac.th^$generichide
+@@||psu.ac.th^$generichide
+@@||ptu.ac.th^$generichide
+@@||rajapark.ac.th^$generichide
+@@||rbru.ac.th^$generichide
+@@||reru.ac.th^$generichide
+@@||riska.ac.th^$generichide
+@@||rmu.ac.th^$generichide
+@@||rmuti.ac.th^$generichide
+@@||rmutk.ac.th^$generichide
+@@||rmutl.ac.th^$generichide
+@@||rmutp.ac.th^$generichide
+@@||rmutr.ac.th^$generichide
+@@||rmutsb.ac.th^$generichide
+@@||rmutsv.ac.th^$generichide
+@@||rmutt.ac.th^$generichide
+@@||rmutto.ac.th^$generichide
+@@||rsu.ac.th^$generichide
+@@||ru.ac.th^$generichide
+@@||sau.ac.th^$generichide
+@@||siamu.ac.th^$generichide
+@@||siu.ac.th^$generichide
+@@||snru.ac.th^$generichide
+@@||spu.ac.th^$generichide
+@@||srru.ac.th^$generichide
+@@||sru.ac.th^$generichide
+@@||sskru.ac.th^$generichide
+@@||ssru.ac.th^$generichide
+@@||stjohn.ac.th^$generichide
+@@||stou.ac.th^$generichide
+@@||su.ac.th^$generichide
+@@||sut.ac.th^$generichide
+@@||swu.ac.th^$generichide
+@@||tru.ac.th^$generichide
+@@||tsu.ac.th^$generichide
+@@||tu.ac.th^$generichide
+@@||ubru.ac.th^$generichide
+@@||ubu.ac.th^$generichide
+@@||udru.ac.th^$generichide
+@@||uru.ac.th^$generichide
+@@||utcc.ac.th^$generichide
+@@||vru.ac.th^$generichide
+@@||wu.ac.th^$generichide
+@@||yru.ac.th^$generichide
 !MARK: ---social platform ---
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
@@ -4532,6 +4603,8 @@ google.*#@##bottomads
 @@||subthai.tv^$generichide
 @@||nungde.com^$generichide
 @@||nungkai.com^$generichide
+@@||xn--72cf9bd9fk5a.com^$generichide
+@@||v8-hd.com^$generichide
 !MARK: ---tech illegitimate ---
 @@||mawtoload.com^$generichide
 @@||axeload.com^$generichide
