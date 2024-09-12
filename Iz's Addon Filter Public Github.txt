@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240907023046
+! Version: 20240912120904
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -305,6 +305,7 @@
 ||home-business-helper.com^$all
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
 ||f-help-case-file-form.glitch.me^$all
+||khaosod.cloud^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -317,7 +318,6 @@
 !MARK:Twitter (x.com) spam self gathering
 !****************************************************************************************
 
-!20240327200636
 ||jey48.xyz^$all
 
 !!!**************************************************************************************
@@ -894,6 +894,7 @@ https://pgf-asw0zz.co^$all
 ||maslot168.net^$all
 ||m-culture.in.th^$all
 https://neon24h1.com^$all
+/uri69online^$all
 !MARK: ----------  fake game ----------!
 !*เกมเถื่อน
 ||qq288.com$all
@@ -1704,10 +1705,10 @@ ngthai.com##div[class="bg-popup"]
 
 !MARK: ---social platform ---
 
-!pantip.com 20240907022424
+!pantip.com 20240910000654
 pantip.com##div[class="frukt-related"]
 pantip.com##ins.adsbyadop
-||frukt.pantip.com^$domain=pantip.com,redirect=noopjs
+pantip.com##iframe[class="ads_box_iframe"][src^="https://frukt.pantip.com"]:upward(div[id^="pantip:script:mbk:"])
 
 !MARK: ---wiki ---
 
@@ -3044,7 +3045,7 @@ mangastep.com##div[class="wrapper"] > a:has(img)
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|anime-hit.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
+.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
 !anime-sugoi.com 20240709014326
 !!เอา box ที่เขียนว่า โฆษณา ออก
@@ -3204,15 +3205,6 @@ shibaanime.com##^div[class="hero common-hero"]
 !#else
 shibaanime.com##div[class="hero common-hero"]
 !#endif
-
-!anime-hit.com
-!||anime-hit.com^$popup,domain=~anime-hit.com
-!#if cap_html_filtering
-!##^a[hreaf^="https://anime-hit.com"]
-!#else
-!##a[hreaf^="https://anime-hit.com"]
-!#endif
-!anime-hit.com#@#a[hreaf^="https://anime-hit.com"]
 
 !animetako.net
 !#if cap_html_filtering
