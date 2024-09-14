@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240912120904
+! Version: 20240914165736
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -170,7 +170,6 @@
 ||happylukebet.com^$all
 ||silkspan.com^$all
 ||thai-iphone.com^$all
-! จาก เว็บไซต์กว่าแสนแห่งถูกแฮกผ่าน ||polyfill.io ที่มีผู้ไม่ประสงค์ดีนำ url ไปใช้ใส่ mal ต่อหลัง polyfill(official) หยุด support แล้ว https://news.thaiware.com/21199.html 20240705160255
 ||cdn.polyfill.io^$all
 
 !!!**************************************************************************************
@@ -276,8 +275,6 @@
 ||adenmeledak.lol^$all
 ||darbossmile.shop^$all
 ||ikiwngabrettt.motorcycles^$all
-!||gsd.biz.id^$all
-!||ehx.biz.id^$all
 ||biz.id^$all
 ||nextpart.co.uk^$all
 ||redr.me^$all
@@ -1002,7 +999,6 @@ https://cdn.apicdn*.one^$xhr
 ||d30qdagvt44524.cloudfront.net^$3p
 
 !https://github.com/easylist-thailand/easylist-thailand/issues/81
-!! `||app.appsflyer.com^` from AdGuard Tracking Protection breaks Shopee affiliated link. can be skipped by `➗ Actually Legitimate URL Shortener Tool` filter below
 *$removeparam=/^\??utm_/i,from=~allegro.pl|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~sendgb.com|~tix.axs.com|~tradedoubler.com|~transfernow.*
 
 playermeow.com##+js(nowoif)
@@ -1907,25 +1903,27 @@ pptvhd36.com##^.special-gateway__img
 !#endif
 pptvhd36.com##.special-gateway__img
 
-!dailynews.co.th
-!#if cap_html_filtering
-dailynews.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-dailynews.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!dailynews.co.th 20240912173626
 !#if cap_html_filtering
 dailynews.co.th##^#taboola-below-article-thumbnails
-!#endif
+!#else
 dailynews.co.th###taboola-below-article-thumbnails
-!#if cap_html_filtering
-dailynews.co.th##^div[id^="elementor-popup-modal-"]
 !#endif
-dailynews.co.th##div[id^="elementor-popup-modal-"]
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(1)
-dailynews.co.th##div[data-elementor-type="single-post"] > section:nth-of-type(7)
 !#if cap_html_filtering
-dailynews.co.th##^div[style="height: 600px; margin: 20px auto;"]
+dailynews.co.th##^#div-ads-leaderboard:upward(6)
+!#else
+dailynews.co.th###div-ads-leaderboard:upward(6)
 !#endif
-dailynews.co.th##div[style="height: 600px; margin: 20px auto;"]
+!#if cap_html_filtering
+dailynews.co.th##^#div-ads-sticky:upward(3)
+!#else
+dailynews.co.th###div-ads-sticky:upward(3)
+!#endif
+!#if cap_html_filtering
+dailynews.co.th##^#div-ads-postarticle:upward(4)
+!#else
+dailynews.co.th###div-ads-postarticle:upward(4)
+!#endif
 
 !khaosod.co.th 20240516191924
 !#if cap_html_filtering
@@ -2872,8 +2870,6 @@ popsmanga.com##^div.kln
 !#else
 popsmanga.com##div.kln
 !#endif
-!popsmanga.com##.postbody.full:style(padding-top: 20px !important)
-!popsmanga.com###content:style(padding-bottom: 0px !important)
 wss://$domain=popsmanga.com
 
 !toomtam-manga.com
@@ -3051,28 +3047,8 @@ mangastep.com##div[class="wrapper"] > a:has(img)
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 !!เอาdiv โฆษณาอันแรกออก
-!#if cap_html_filtering
-!anime-sugoi.com##^.container > .row > .col-md-8
-!#else
-!anime-sugoi.com##.container > .row > .col-md-8
-!#endif
 !!เอาdiv โฆษณาอัน2ออก
-!#if cap_html_filtering
-!anime-sugoi.com##^.container > .row > center
-!#else
-!anime-sugoi.com##.container > .row > center
-!#endif
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
-!#if cap_html_filtering
-!anime-sugoi.com##^.panel-body > center > a
-!#else
-!anime-sugoi.com##.panel-body > center > a
-!#endif
-!#if cap_html_filtering
-!anime-sugoi.com##^#bt-ads
-!#else
-!anime-sugoi.com###bt-ads
-!#endif
 ||anime-sugoi.com/pic/$image,domain=anime-sugoi.com
 wss://$domain=anime-sugoi.com
 !!เอา tag ออก
@@ -3700,7 +3676,6 @@ sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 !Google ads 20240624123556
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 @@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
-!@@||static.doubleclick.net/instream/ad_status.js$domain=
 ! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
 ! google contributor anti adblock
 #@#.div-gpt-ad
@@ -3804,7 +3779,6 @@ google.*#@##bottomads
 @@||jaggaer.com^$generichide
 !MARK: ---international news ---
 @@||bbc.$generichide
-!@@||cnn.$generichide
 @@||economist.com^$generichide
 @@||forbes.com^$generichide
 @@||forbesthailand.com^$generichide
@@ -3932,7 +3906,6 @@ google.*#@##bottomads
 @@||xenon.club^$generichide
 !MARK: ---game news ---
 @@||pcgamesn.com^$generichide
-!@@||gamesradar.com^$generichide
 !MARK: ---foods food serices ---
 @@||www.kfc.*$ehide
 @@||www.grab.com^$generichide
@@ -4205,19 +4178,9 @@ google.*#@##bottomads
 
 !! uBO Ads
 !!#if ext_ublock
-!||facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^"]+"\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?MarketplaceSearchFeedStoriesEdge")\}/{}/g,domain=web.facebook.com|www.facebook.com,badfilter
-!||facebook.com/api/graphql/$xhr,replace=/\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/{}/,domain=web.facebook.com|www.facebook.com,badfilter
 
-!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, '/\{"brs_content_label":[^,]+,"[^"]*category":"SPONSORED"[^\n]+"cursor":"[^}]+\}/g', {}, /api/graphql)
-!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"role":"SEARCH_ADS"[^\n]+?cursor":[^}]+\}/g, {}, /api/graphql)
-!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"MarketplaceFeedAdStory"[^\n]+?"cursor":(?:null|"\{[^\n]+?\}"|[^\n]+?!MarketplaceSearchFeedStoriesEdge")\}/g, {}, /api/graphql)
-!web.facebook.com,www.facebook.com##+js(trusted-replace-xhr-response, /\{"node":\{"__typename":"VideoHomeFeedUnitSectionComponent"[^\n]+?"sponsored_data":\{"ad_id"[^\n]+?"cursor":null\}/, {}, /api/graphql)
 
 !! uBO Annoyances
-!||www.facebook.com/api/graphql/$xhr,replace=/\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/{}/g,badfilter
-!www.facebook.com##+js(trusted-replace-xhr-response, /\{"brs_content_label":[^\n]+?"category":"ENGAGEMENT[^\n]+?"cursor":"[^"]+"\}/g, {}, /api/graphql)
 !!#endif
 
 !!!**************************************************************************************
@@ -4385,6 +4348,7 @@ google.*#@##bottomads
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
 @@||www.blockdit.com^$generichide
+@@||sooplive.com^$generichide
 !MARK: ---dictionary ---
 @@||thaifastdict.com^$ehide
 !MARK: ---game ---
@@ -4980,7 +4944,6 @@ obsproject.com##.notice--cookie:not(body):not(html)
 uploadmx.com##^div[class="cookies show"]
 !#endif
 uploadmx.com##div[class="cookies show"]
-! ใช้การ remove element แทน mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 mercular.com##div[class="MuiBox-root css-5cawxe"]
 honekrasae.com##div[class^="accept_cookie_wrapper"]
 !#if cap_html_filtering
@@ -4995,6 +4958,7 @@ flashexpress.*##div.learn-more-wrapper
 monomax.me##^div.form-cookie
 !#endif
 monomax.me##div.form-cookie
+/^moodle\./##div[class="eupopup-container eupopup-container-bottom eupopup-color-default"]
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
