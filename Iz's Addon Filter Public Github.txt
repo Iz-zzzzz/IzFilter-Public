@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240914165736
+! Version: 20240915005318
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -3837,6 +3837,7 @@ google.*#@##bottomads
 @@||i.pximg.net^$generichide
 @@||feedly.com^$generichide
 @@||bsky.app^$generichide
+@@||threads.net^$generichide
 !MARK: ---adblock ---
 @@||adguard.com^$generichide
 @@||local.adguard.org^
@@ -4944,6 +4945,7 @@ obsproject.com##.notice--cookie:not(body):not(html)
 uploadmx.com##^div[class="cookies show"]
 !#endif
 uploadmx.com##div[class="cookies show"]
+mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 mercular.com##div[class="MuiBox-root css-5cawxe"]
 honekrasae.com##div[class^="accept_cookie_wrapper"]
 !#if cap_html_filtering
