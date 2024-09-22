@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240915005318
+! Version: 20240922181447
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -83,8 +83,9 @@
 ||myfindr.com^$all
 ||s.akamaicdn.cloud^$all
 ||toonzaa.com^$all
-!ขาย Airpod 3 ปลอม 20240703113539
+! ขาย Airpod 3 ปลอม 20240703113539
 ||hotsale247.site^$all
+||www.mp3fromlink.com^$all
 
 !!!**************************************************************************************
 !MARK:Bitdefender
@@ -212,6 +213,7 @@
 ||whatsApp-ws.tv^$all
 ||whatsopp.cc^$all
 ||7dooi.com^$all
+||www.apple-th.online^$all
 
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
@@ -243,7 +245,6 @@
 ||dailycoverage.asia^$all
 ||ezstat.ru^$all
 ||iplogger.com^$all
-||iyp.my.id^$all
 ||go-via.cc^$all
 ||abre.ai^$all
 ||iplog.co^$all
@@ -265,13 +266,11 @@
 ||l.facebook.com/l.php?u=https://u.to^$doc
 ||l.facebook.com/l.php?u=https://lnnk.in^$doc
 ||l.facebook.com/l.php?u=https://short.com.vn^$doc
-||l.facebook.com/l.php?u=https://*ljo.my.id^$doc
 ||l.facebook.com/l.php?u=https://sprl.in^$all
 ||ilang.in^$all
 ||mzen-gasskeunnn.mom^$all
 ||accesscam.org^$all
 ||munboom.com^$all
-||pqb5xvc2ng.my.id^$all
 ||adenmeledak.lol^$all
 ||darbossmile.shop^$all
 ||ikiwngabrettt.motorcycles^$all
@@ -283,11 +282,8 @@
 ||l.facebook.com/l.php?u=http://ln.run^$all
 ||thairathmedia.shop^$all
 ||thaicreations.shop^$all
-||dfj.my.id^$all
-||topan12.my.id^$all
 ||bnbc.uno^$all
 ||getsalenow.com^$all
-||ehx.my.id^$all
 ||faeccbook.com^$all
 ||99tube.shop^$all
 ||digitalsocialize.icu^$all
@@ -303,6 +299,7 @@
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
 ||f-help-case-file-form.glitch.me^$all
 ||khaosod.cloud^$all
+||my.id^$doc
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -2102,6 +2099,10 @@ posttoday.com##div[class^="dynamic-ads"]
 !honekrasae.com 20240717143216
 ||a.run.app^$3p,domain=honekrasae.com
 
+!bangkokbiznews.com 20240917184546
+bangkokbiznews.com##div[class="desktop"]
+bangkokbiznews.com##div[class="mobile"]
+
 !MARK: ---tech news ---
 
 !droidsans.com 20240718005420
@@ -2523,7 +2524,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|mangadeemak.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com
+.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -2654,18 +2655,6 @@ www.niceoppai.net##.mng_rdr.wpm_pag > center
 ||www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,domain=www.niceoppai.net
 ||blogger.googleusercontent.com/img/b^$image,domain=www.niceoppai.net
 @@https://1.bp.blogspot.com/-f3womMHJyE8/XQ5nUqKCmCI/AAAAAAAAAlk/q7kkrSsjpY88TMYFtpKo4R1ZidfYDLjBgCLcBGAs/s0/return-top.png$image,domain=www.niceoppai.net
-
-!mangadeemak.com
-!#if cap_html_filtering
-mangadeemak.com##^div[id^="ads"]
-!#else
-mangadeemak.com##div[id^="ads"]
-!#endif
-!#if cap_html_filtering
-mangadeemak.com##^.wp-manga.c-top-sidebar.c-sidebar
-!#else
-mangadeemak.com##.wp-manga.c-top-sidebar.c-sidebar
-!#endif
 
 !kingsmanga.net
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
@@ -4232,6 +4221,7 @@ google.*#@##bottomads
 @@||thainewsonline.co^$generichide
 @@||posttoday.com^$generichide
 @@||honekrasae.com^$generichide
+@@||bangkokbiznews.com^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -4428,7 +4418,6 @@ google.*#@##bottomads
 @@||www.niceoppai.net^$generichide
 @@||www.rh2plusmanga.com^$generichide
 @@||manga-uptocats.com^$generichide
-@@||mangadeemak.com^$generichide
 @@||garasumanga.com^$generichide
 @@||tanuki-manga.com^$generichide
 @@||doodmanga.com^$generichide
@@ -4570,6 +4559,7 @@ google.*#@##bottomads
 !MARK: --- Others
 @@||online-station.net^$generichide
 @@||sanook.com^$generichide
+@@||zoodio.live^$generichide
 
 !!!**************************************************************************************
 !* 
@@ -4961,6 +4951,12 @@ monomax.me##^div.form-cookie
 !#endif
 monomax.me##div.form-cookie
 /^moodle\./##div[class="eupopup-container eupopup-container-bottom eupopup-color-default"]
+!#if cap_html_filtering
+zoodio.live##^img[src*="cookie-banner"]:upward(1)
+!#else
+zoodio.live##img[src*="cookie-banner"]:upward(1)
+!#endif
+https://www.zoodio.live/_next/image?url=%2Fassets%2Fimages%2Fcookie-banner%2Fbg-surface.png*$image,domain=zoodio.live
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
