@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240922181447
+! Version: 20240926184714
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -300,6 +300,9 @@
 ||f-help-case-file-form.glitch.me^$all
 ||khaosod.cloud^$all
 ||my.id^$doc
+||rb.gy^$all
+||abcnews.cyou^$all
+||pageorama.com^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -1749,23 +1752,26 @@ kapook.com##^#google_esf
 !#endif
 kapook.com###google_esf
 
-!thairath.co.th 20240822022123
-!!หน้าข่าว pc 20240822022121
+!thairath.co.th 20240926184713
+thairath.co.th#@#div[class^="ads-slot-"]
+thairath.co.th#@##headerWraper ~ div:matches-css(min-height: 280px)
+thairath.co.th#@##headerWraper ~ div[class]:has(> div:only-child > div[style]:only-child > #slot-billboard:only-child)
+thairath.co.th#@#footer ~ div[style="text-align: center; opacity: 1;"]
+!!หน้าข่าว pc 20240923150922
 thairath.co.th##div#slot-billboard:upward(3)
 thairath.co.th##div#slot-tower:upward(3)
-thairath.co.th#@##headerWraper ~ div:matches-css(height: 280px)
 thairath.co.th##div[style="height:300px"]
 thairath.co.th##div#slot-right_rail:upward(2)
 thairath.co.th##div[style="text-align: center; opacity: 1;"]
-thairath.co.th##div[id^="ad_article_desktop"]:upward(1)
-!!หน้าหลัก pc 20240812132434
+thairath.co.th##div[class^="__TRPlus_Article_Letest"] > div:nth-of-type(1):has(div[id^="ad_article_desktop"])
+!!หน้าหลัก pc 20240923150212
 thairath.co.th##div#homepage-top:upward(3)
-thairath.co.th##div#homepage-rectangle:upward(2)
+thairath.co.th##div#homepage-rectangle:upward(div[class^="__item_tv_home_adbox"])
 !!หน้าข่าว mobile & pc 20240812132223
 thairath.co.th##.adsbox-style
 !!thairath.co.th/sport
 thairath.co.th##div[data-container-id="ivs-player"]
-!!thairath.co.th/money 20231222211603
+!!thairath.co.th/money 20240926184709
 !!!หน้าหลัก
 thairath.co.th##div#slot-money-top-desktop:upward(1)
 !!!หน้าข่าว
@@ -1775,12 +1781,16 @@ thairath.co.th##div[id^="slot-money-inarticle"]:upward(1)
 thairath.co.th##div#slot-money-middle-postarticle-desktop:upward(1)
 thairath.co.th##div.btn--close:upward(1)
 thairath.co.th##div#taboola-thairath-money-below-article-thumbnails-desktop:upward(1)
+thairath.co.th##div#slot-money-tower-desktop:upward(3)
 !!!mobile
 !!!หน้าหลัก
 thairath.co.th##div#slot-money-top-mobile:upward(1)
 !!!หน้าข่าว
 thairath.co.th##div#slot-money-headline:upward(1)
 thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
+!!thairath.co.th/futureperfect 20240923140247
+thairath.co.th##div.container-ads:upward(1)
+thairath.co.th##div#article_billboard:upward(1)
 
 !ch3plus.com 20240220140536
 !#if cap_html_filtering
@@ -3616,6 +3626,10 @@ v8-hd.com##.row-kodsana
 !!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
 sanook.com##+js(trusted-click-element,button[class*="close-btn"])
 
+!online-station.net 20240926181156
+online-station.net##div.ads
+online-station.net##.ads-space:style(margin-top: unset !important;)
+
 !!!**************************************************************************************
 !* 
 !* General Cosmetic Rules
@@ -4637,21 +4651,12 @@ thaimobilecenter.com##^#cookiePopup
 !#endif
 thaimobilecenter.com###cookiePopup
 !#if cap_html_filtering
-matichon.co.th##^.matichon-pdpa-wrapper
+matichon.co.th##^.matichon-pdpa-
 !#endif
-matichon.co.th##.matichon-pdpa-wrapper
-!#if cap_html_filtering
-thairath.co.th##^.cookiewrap
-!#endif
+matichon.co.th##.matichon-pdpa-
 thairath.co.th##.cookiewrap
 !thairath.co.th/money
-!#if cap_html_filtering
-thairath.co.th##^.__money_cookies
-!#endif
 thairath.co.th##.__money_cookies
-!#if cap_html_filtering
-plus.thairath.co.th##^.__TRPlus_Policy_Box
-!#endif
 plus.thairath.co.th##.__TRPlus_Policy_Box
 !#if cap_html_filtering
 brighttv.co.th##^.dpdpa--popup
