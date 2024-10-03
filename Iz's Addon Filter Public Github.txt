@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20240926184714
+! Version: 20241004013856
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -214,6 +214,8 @@
 ||whatsopp.cc^$all
 ||7dooi.com^$all
 ||www.apple-th.online^$all
+||casiogshockthailand.website^$all
+||shuna.one^$all
 
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
@@ -303,6 +305,7 @@
 ||rb.gy^$all
 ||abcnews.cyou^$all
 ||pageorama.com^$all
+||honekrasae.cloud^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -520,7 +523,6 @@ https://hotgraph*$all
 /PGK44.gif$image
 /jackpot.gif$image
 /slotxo24hr$image
-/avsubthai$image
 /Telegram18021.gif$image
 /ดูบอลฟรี-ชาช่า.gif$image
 /betangry$image
@@ -1726,7 +1728,7 @@ dict.longdo.com###sidebar
 
 !MARK: ---thai news ข่าว---
 
-!kapook.com 20231212003311
+!kapook.com 20241003012849
 !#if cap_html_filtering
 kapook.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
@@ -1751,6 +1753,10 @@ kapook.com##div.taboola-x2-widget:last-child
 kapook.com##^#google_esf
 !#endif
 kapook.com###google_esf
+!#if cap_html_filtering
+kapook.com##^div[class="ad-f-right"]
+!#endif
+kapook.com##div[class="ad-f-right"]
 
 !thairath.co.th 20240926184713
 thairath.co.th#@#div[class^="ads-slot-"]
@@ -2373,10 +2379,7 @@ mustplay.in.th##div[class="banner card hidden-xs"]
 !#endif
 ||www.mustplay.in.th/data/setting/banner/
 
-!thisisgamethailand.com 20240213163842
-!#if cap_html_filtering
-thisisgamethailand.com##^.tigth-ads
-!#endif
+!thisisgamethailand.com 20241002151030
 thisisgamethailand.com##.tigth-ads
 thisisgamethailand.com##.tie-container:style(top: 0px !important;)
 /*600x900.jpg$image,domain=thisisgamethailand.com
@@ -3398,11 +3401,26 @@ nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
 !#endif
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 
-!24-hd.com 20240131013449
+!24-hd.com 20241004013716
 !#if cap_html_filtering
-24-hd.com##^.ad
+24-hd.com##^div.adhl
 !#else
-24-hd.com##.ad
+24-hd.com##div.adhl
+!#endif
+!#if cap_html_filtering
+24-hd.com##^div.adl
+!#else
+24-hd.com##div.adl
+!#endif
+!#if cap_html_filtering
+24-hd.com##^div.adcen
+!#else
+24-hd.com##div.adcen
+!#endif
+!#if cap_html_filtering
+24-hd.com##^aside.ad
+!#else
+24-hd.com##aside.ad
 !#endif
 
 !doonungsub.com 20240131013447
@@ -4004,7 +4022,6 @@ google.*#@##bottomads
 @@||dronedj.com^$generichide
 @@||spaceexplored.com^$generichide
 @@||www.techspot.com^$generichide
-@@||itsfoss.com^$generichide
 @@||topcpu.net^$generichide
 @@||userbenchmark.com^$generichide
 !MARK: --- tech ---
@@ -4651,9 +4668,9 @@ thaimobilecenter.com##^#cookiePopup
 !#endif
 thaimobilecenter.com###cookiePopup
 !#if cap_html_filtering
-matichon.co.th##^.matichon-pdpa-
+matichon.co.th##^.matichon-pdpa-wrapper
 !#endif
-matichon.co.th##.matichon-pdpa-
+matichon.co.th##.matichon-pdpa-wrapper
 thairath.co.th##.cookiewrap
 !thairath.co.th/money
 thairath.co.th##.__money_cookies
