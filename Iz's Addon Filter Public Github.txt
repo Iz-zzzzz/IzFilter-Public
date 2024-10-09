@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241004013856
+! Version: 20241009231908
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -172,6 +172,12 @@
 ||silkspan.com^$all
 ||thai-iphone.com^$all
 ||cdn.polyfill.io^$all
+! https://www.facebook.com/groups/MacUserThailand/posts/3462896210680685/
+||alaskariver.top^$all
+! https://www.facebook.com/groups/9arm.community/posts/3878294205792595
+||clickupenterprise.net^$all
+||otrxio.com^$all
+||thexpoose.com^$all
 
 !!!**************************************************************************************
 !MARK:Fraud self gathering
@@ -1004,7 +1010,6 @@ https://cdn.apicdn*.one^$xhr
 *$removeparam=/^\??utm_/i,from=~allegro.pl|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~sendgb.com|~tix.axs.com|~tradedoubler.com|~transfernow.*
 
 playermeow.com##+js(nowoif)
-!!ลิงก์ที่เปิด คือ
 ||jl63v3fp1.com^$all
 ||bestadsforyou.com^$all
 
@@ -1020,6 +1025,9 @@ playermeow.com##+js(nowoif)
 ||pemsrv.com^
 
 ||vicious-advance.com^$all
+
+||oqprjunocooluy.com^
+||xslieoibb.com^
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1670,6 +1678,14 @@ www.novelupdates.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1p
 !#endif
 www.novelupdates.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 
+!MARK: ---others---
+
+!saucenao.com 20241009011317
+!#if cap_html_filtering
+saucenao.com##^div#message
+!#else
+saucenao.com##div#message
+!#endif
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (Thai sites)
@@ -3793,7 +3809,8 @@ google.*#@##bottomads
 !MARK: ---ai ---
 @@||openai.com^$generichide
 !MARK: ---desgin ---
-@@||canva.com^$generichide
+@@||canva.com^$ehide
+@@||figma.com^$ehide
 !MARK: ---work ---
 @@||workona.com^$generichide
 @@||hive.com^$generichide
@@ -4062,6 +4079,7 @@ google.*#@##bottomads
 @@||thepythoncode.com^$generichide
 @@||codeberg.org^$generichide
 @@||askubuntu.com^$generichide
+@@||thunkable.com^$ehide
 !MARK: ---web builder ---
 !MARK: ---web engine web browser ---
 @@||mozilla.org^$generichide
@@ -4118,6 +4136,7 @@ google.*#@##bottomads
 
 !MARK: ---review compare ---
 @@||versus.com^$generichide
+@@||rtings.com^$generichide
 !MARK: ---subcription ---
 @@||patreon.com^$generichide
 !MARK: ---shipment ---
@@ -4173,6 +4192,7 @@ google.*#@##bottomads
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
 @@||smilearm.com^$generichide
+@@||saucenao.com^$generichide
 !MARK: --- unknow ---
 
 !!!**************************************************************************************
@@ -4432,6 +4452,7 @@ google.*#@##bottomads
 @@||pharmacy.mahidol.ac.th^$generichide
 @@||siphhospital.com^$generichide
 @@||www.theptarin.com^$generichide
+@@||ram-hosp.co.th^$generichide
 !MARK: ---pc ---
 @@||advice.co.th^$generichide
 @@||jib.co.th^$generichide
@@ -4973,12 +4994,24 @@ monomax.me##^div.form-cookie
 !#endif
 monomax.me##div.form-cookie
 /^moodle\./##div[class="eupopup-container eupopup-container-bottom eupopup-color-default"]
-!#if cap_html_filtering
-zoodio.live##^img[src*="cookie-banner"]:upward(1)
-!#else
 zoodio.live##img[src*="cookie-banner"]:upward(1)
-!#endif
 https://www.zoodio.live/_next/image?url=%2Fassets%2Fimages%2Fcookie-banner%2Fbg-surface.png*$image,domain=zoodio.live
+!#if cap_html_filtering
+isuper.co.th##^div[class="policy-position"]
+!#else
+isuper.co.th##div[class="policy-position"]
+!#endif
+!#if cap_html_filtering
+ram-hosp.co.th##^.modal-backdrop
+!#else
+ram-hosp.co.th##.modal-backdrop
+!#endif
+!#if cap_html_filtering
+ram-hosp.co.th##^#cookieModal
+!#else
+ram-hosp.co.th###cookieModal
+!#endif
+ram-hosp.co.th##.modal-open:style(overflow: auto !important;)
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
