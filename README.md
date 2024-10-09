@@ -73,7 +73,7 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 > filter นี้ทำมาเพื่อรองรับ platform ด้านบนเป็นหลัก
 
-> Chromium กำลังจะปิด Manifest V2 (API ที่ AdBlock ใช้) ในอนาคต แนะนำให้หลีกเลี่ยง Chromium-based adblock ไปใช้ [Brave](https://x.com/brave/status/1725622768262128006), Firefox, [Thorium](https://github.com/Alex313031/thorium/releases/tag/M126.0.6478.231) หรือ AdGuard Application แทน [^7]
+> Chromium กำลังจะปิด Manifest V2 (API ที่ AdBlock ใช้) ในอนาคต แนะนำให้หลีกเลี่ยง Chromium-based adblock ไปใช้ [Brave](https://x.com/brave/status/1725622768262128006), [Firefox](https://addons.mozilla.org/th/firefox/addon/ublock-origin/) หรือ AdGuard Application แทน [^7]
 </details>
 
 ## Iz's Filter Public Version ผิดพลาด หรือบล็อกไม่ครบ
