@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241009231908
+! Version: 20241014225346
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -12,6 +12,8 @@
 !* 
 !****************************************************************************************
 
+/^https?:\/\/vvv\./$all
+/^https?:\/\/vvw\./$all
 
 !!!**************************************************************************************
 !MARK:from Malwarebyte
@@ -334,8 +336,6 @@
 
 !MARK: ---------- URL general Rules ----------
 https://hotgraph*$all
-/^https?:\/\/vvv\./$all
-
 /^https?:\/\/(?:www\.)?[^\/]*ufa[^\/]*\.[^\/]+/$all
 
 /^https?:\/\/(?:www\.)?[^\/]*ssgam[^\/]*\.[^\/]+/$all
@@ -2201,10 +2201,15 @@ notebookspec.com##^#zox-lead-bot
 !#endif
 notebookspec.com###zox-lead-bot
 
-!thaimobilecenter.com 20240527165912
+!thaimobilecenter.com 20241013182459
+thaimobilecenter.com##ins.adsbygoogle[data-ad-slot]
+!!desktop
 thaimobilecenter.com##div[class="container box-big-banner-top"]
 thaimobilecenter.com##div[class="col-md-9 hidden-sm hidden-xs"]
-thaimobilecenter.com##ins.adsbygoogle[data-ad-slot]
+!!mobile
+thaimobilecenter.com##div[class="col-sm-12 hidden-lg hidden-md"]
+thaimobilecenter.com###myDIV
+thaimobilecenter.com##div[class="container bn-a2"]
 ||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
 
 !techtalkthai.com 20240217174032
@@ -3037,11 +3042,11 @@ hippomanga.com##^div[class="dessert-frame"]
 hippomanga.com##div[class="dessert-frame"]
 !#endif
 
-!ranker-manga.com 20240717162213
+!ranker-manga.com 20241014225345
 !#if cap_html_filtering
-ranker-manga.com##^div.header-ads-section
+ranker-manga.com##^div.header-ads-section > a[target="_blank"]
 !#else
-ranker-manga.com##div.header-ads-section
+ranker-manga.com##div.header-ads-section > a[target="_blank"]
 !#endif
 
 !toon168.com 20240805213613
