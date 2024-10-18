@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241014225346
+! Version: 20241018135321
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -299,6 +299,8 @@
 ||digitalsocialize.icu^$all
 ||url1.io^$all
 ||nqm.asia^$all
+||livestreamiing.com^$all
+||ibbox.id^$all
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
@@ -890,6 +892,7 @@ https://www.easy45.net^$all
 !https://www.ufabull88.com^$all
 https://glory88.bet^$all
 !vvv.xn--s3cx7a.com^$all
+www.m88-th.net^$all
 !Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
 https://pgf-asw0zz.co^$all
 !เว็บพนันปลอมตัวเป็นเว็บทั่วไปใน Google Search จาก https://www.facebook.com/groups/Nexups/posts/3682387108665871/ 20240514143158
@@ -1317,11 +1320,6 @@ howtogeek.com##.adslot970
 howtogeek.com##^.adsninja-ad-zone
 !#endif
 howtogeek.com##.adsninja-ad-zone
-!androidpolice.com
-!#if cap_html_filtering
-androidpolice.com##^.adsninja-ad-zone
-!#endif
-androidpolice.com##.adsninja-ad-zone
 !trustedreviews.com
 !#if cap_html_filtering
 trustedreviews.com##^.ipc-advert
@@ -2102,19 +2100,27 @@ thethaiger.com##^ins.adsbygoogle[data-ad-slot]
 thethaiger.com##ins.adsbygoogle[data-ad-slot]
 !#endif
 
-!sportingnews.com 20240329143159
+!sportingnews.com 20241017142650
 !#if cap_html_filtering
 sportingnews.com##^.header-advertising
-!#endif
+!#else
 sportingnews.com##.header-advertising
+!#endif
 !#if cap_html_filtering
 sportingnews.com##^.article-ads
-!#endif
+!#else
 sportingnews.com##.article-ads
+!#endif
 !#if cap_html_filtering
 sportingnews.com##^.top-mpu-container
-!#endif
+!#else
 sportingnews.com##.top-mpu-container
+!#endif
+!#if cap_html_filtering
+sportingnews.com##^ad a[target="_blank"]
+!#else
+sportingnews.com##ad a[target="_blank"]
+!#endif
 
 !www.amarintv.com 20240402210456
 www.amarintv.com##div.ads-container
@@ -2134,6 +2140,11 @@ posttoday.com##div[class^="dynamic-ads"]
 !bangkokbiznews.com 20240917184546
 bangkokbiznews.com##div[class="desktop"]
 bangkokbiznews.com##div[class="mobile"]
+
+!thansettakij.com 20241017142527
+thansettakij.com##div[class="desktop"]:upward(1)
+thansettakij.com##div[class="mobile"]:upward(1)
+thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 
 !MARK: ---tech news ---
 
@@ -2564,36 +2575,34 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 @@/loadingAnimation.gif$image
 !.webp$image,domain=
 
-!manga168.com 20240717162413
+!manga168.net 20240717162413
 !#if cap_html_filtering
-manga168.com##^.dessert-frame
+manga168.net##^.dessert-frame
 !#else
-manga168.com##.dessert-frame
+manga168.net##.dessert-frame
 !#endif
 !#if cap_html_filtering
-manga168.com##^#ads_fox_bottom
+manga168.net##^#ads_fox_bottom
 !#else
-manga168.com###ads_fox_bottom
+manga168.net###ads_fox_bottom
 !#endif
 !#if cap_html_filtering
-manga168.com##^.slider-ads
+manga168.net##^.slider-ads
 !#else
-manga168.com##.slider-ads
+manga168.net##.slider-ads
 !#endif
 !#if cap_html_filtering
-manga168.com##^.ads-info
+manga168.net##^.ads-info
 !#else
-manga168.com##.ads-info
+manga168.net##.ads-info
 !#endif
-manga168.com###colophon > div:nth-of-type(3)
+manga168.net###colophon > div:nth-of-type(3)
 !#if cap_html_filtering
-manga168.com##^.kln
+manga168.net##^.kln
 !#else
-manga168.com##.kln
+manga168.net##.kln
 !#endif
-!!duplicate rule from AdGuard - Ads
-/*.gif$from=manga168.com,badfilter
-||amz-cdn*.manga168.com*.gif$image,domain=manga168.com
+||amz-cdn*.manga168.net*.gif$image,domain=manga168.net
 
 !tanuki-manga.com
 !#if cap_html_filtering
@@ -3659,6 +3668,14 @@ v8-hd.com##^.row-kodsana
 v8-hd.com##.row-kodsana
 !#endif
 
+!nungde.com 20241014231517
+!#if cap_html_filtering
+nungde.com##^div[class="code-block code-block-4"] > a[target="_blank"]
+!#else
+nungde.com##div[class="code-block code-block-4"] > a[target="_blank"]
+!#endif
+https://nungde.com/wp-content/uploads/2024/10/bn-dee.png$domain=nungde.com
+
 !MARK: --- Others
 
 !sanook.com 20240514144944
@@ -4018,7 +4035,6 @@ google.*#@##bottomads
 @@||phonearena.com^$generichide
 @@||thinkbroadband.com^$generichide
 @@||howtogeek.com^$generichide
-@@||androidpolice.com^$generichide
 @@||convergeddevices.net^$generichide
 @@||trustedreviews.com^$generichide
 @@||androidcentral.com^$generichide
@@ -4278,6 +4294,7 @@ google.*#@##bottomads
 @@||posttoday.com^$generichide
 @@||honekrasae.com^$generichide
 @@||bangkokbiznews.com^$generichide
+@@||thansettakij.com^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -4479,7 +4496,7 @@ google.*#@##bottomads
 @@||tanuki-manga.com^$generichide
 @@||doodmanga.com^$generichide
 @@||tamamanga.com^$generichide
-@@||manga168.com^$generichide
+@@||manga168.net^$generichide
 @@||moodtoon.net^$generichide
 @@||loli-manga.com^$generichide
 @@||chocomanga.com^$generichide
@@ -4608,6 +4625,7 @@ google.*#@##bottomads
 @@||nungkai.com^$generichide
 @@||xn--72cf9bd9fk5a.com^$generichide
 @@||v8-hd.com^$generichide
+@@||nungde.com^$generichide
 !MARK: ---tech illegitimate ---
 @@||mawtoload.com^$generichide
 @@||axeload.com^$generichide
