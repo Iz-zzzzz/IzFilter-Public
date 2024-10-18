@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241018135321
+! Version: 20241018140924
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -3051,11 +3051,11 @@ hippomanga.com##^div[class="dessert-frame"]
 hippomanga.com##div[class="dessert-frame"]
 !#endif
 
-!ranker-manga.com 20241014225345
+!ranker-manga.com 20241018140923
 !#if cap_html_filtering
-ranker-manga.com##^div.header-ads-section > a[target="_blank"]
+ranker-manga.com##^div.header-ads-section > a[href][target="_blank"]
 !#else
-ranker-manga.com##div.header-ads-section > a[target="_blank"]
+ranker-manga.com##div.header-ads-section > a[href][target="_blank"]
 !#endif
 
 !toon168.com 20240805213613
