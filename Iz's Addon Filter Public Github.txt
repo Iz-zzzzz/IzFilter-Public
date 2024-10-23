@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241018140924
+! Version: 20241023192103
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -16,7 +16,7 @@
 /^https?:\/\/vvw\./$all
 
 !!!**************************************************************************************
-!MARK:from Malwarebyte
+!MARK: Specific
 !****************************************************************************************
 
 ||dugothitachan.com^$all
@@ -52,13 +52,8 @@
 ||ninebartv2.xyz^$all
 ||app.hilobet.cc^$all
 ||slaves6.com^$all
-||mukohphetra.com^$all
 ||waisheph.com^$all
 ||mosaic.unite.com^$all
-
-!!!**************************************************************************************
-!MARK:self gathering
-!****************************************************************************************
 
 ||syndication.realsrv.com^$all
 ||invaderannihilationperky.com^$all
@@ -88,23 +83,6 @@
 ! ขาย Airpod 3 ปลอม 20240703113539
 ||hotsale247.site^$all
 ||www.mp3fromlink.com^$all
-
-!!!**************************************************************************************
-!MARK:Bitdefender
-!****************************************************************************************
-
-||doonungsub.com^$all
-
-!!!**************************************************************************************
-!MARK:Suspectious from Bitdefender
-!****************************************************************************************
-
-||cadmus.script.ac^$all
-
-!!!**************************************************************************************
-!MARK:Malware self gathering
-!****************************************************************************************
-
 ||excelgraduate.com^$all
 ||iamnotice.club^$all
 ||smartadblock.net^$all
@@ -165,6 +143,8 @@
 
 ||survey-smiles.com^$all
 ||dooflixtv.com^$all
+||phognekrsurvey.space^$all
+||edgeupgrade.com^$all
 
 !!!**************************************************************************************
 !MARK:Mal self gathering
@@ -180,12 +160,6 @@
 ||clickupenterprise.net^$all
 ||otrxio.com^$all
 ||thexpoose.com^$all
-
-!!!**************************************************************************************
-!MARK:Fraud self gathering
-!****************************************************************************************
-
-||phognekrsurvey.space^$all
 
 !!!**************************************************************************************
 !MARK:Mal search engine self gathering
@@ -904,17 +878,31 @@ https://pgf-asw0zz.co^$all
 https://neon24h1.com^$all
 /uri69online^$all
 !MARK: ----------  fake game ----------!
-!*เกมเถื่อน
 ||qq288.com$all
+
 !!!**************************************************************************************
 !* 
-!* General Ad Links/Servers
+!* General common Ad Links/Servers/Javascipt
 !* 
 !****************************************************************************************
 
-!https://droidsans.com/former-samsung-employee-tipped-s22-series-all-come-with-snapdragon-chip/ 20240210230146
+! For URL shorteners or simple sites with frequently changed ad servers.
+! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
+! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/d66254726f8aec58a95ae748ea8e2c7c2dd13335/BaseFilter/sections/specific.txt#L368
+/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,domain=aileen-novel.online|mangapdf-online.com|niceoppai.net
+
+! Popular Javascript
+! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/general_extensions.txt
+
+! Google Adsense in WP plugin
 /assets/js/google-adsense$script
-!MadeByMe Popup / Redirect / Ads Script
+
+!!!**************************************************************************************
+!* 
+!* Specific URL for Ad Links/Servers/Javascipt
+!* 
+!****************************************************************************************
+
 ||prawnsimply.com^$all
 ||interesteddeterminedeurope.com^$all
 ||oblongseller.com^$all
@@ -959,13 +947,10 @@ https://neon24h1.com^$all
 ||betteradsystem.com^$all
 ||d3mzokty951c5w.cloudfront.net^$all
 ||qvorcqfon.com^$all
-!จาก mangapdf-online.com
 ||impartialpath.com^$all
 ||alarming-rule.com^$all
-!จาก aileen-novel.online
 https://www.yprdfnihszoaq.com^$all
 https://www.gqdhsmwzpc.com^$all
-!จาก mangapdf-online.com
 https://www.xwojiijs.com^$all
 https://www.okx.com^$all
 https://www.zpigericvlz.com^$all
@@ -974,39 +959,24 @@ https://www.sxirpkuxm.com^$all
 https://www.laeiwbkt.com^$all
 https://www.lgqffscxfqv.com.com^$all
 https://cdn.laulme.info^$all
-!จาก toon-read.blogspot.com 20240217213119
 ||diqkldlh.com^$all
 ||vrqsvrnjrhdmek.com^$all
-!จาก manhwazmove.com
 https://wowrapidly.com^$all
-!จาก novelpdf.xyz
 ||ticket.leaforfree.com^$all
-!จาก imgbox.com
-!https://cdn52969391.ahacdn.me^$all
 ||ahacdn.me^$all
 ||adsmediabox.com^$all
 !พบใน เช่น compgamer.com
 ||to0s.biz^$all
-!จาก playermeow.com uBlock Ads, EasyList block ไม่ครบทุกประเภท เช่นใน anime-sugoi.com
 ||aitsatho.com^$all
-!จาก playermeow.com เช่นใน anime-sugoi.com
 https://cdn.apicdn*.one^$xhr
-!จาก kingsmanga.net 20240217181701
 ||judosllyn.com^$script,3p
 ||exness.com^$all,domain=~exness.com
-!from siamblockchain.com
 ||cryptojimmy.care^$all
-! จาก https://www.khaosod.co.th/special-stories/news_8115706 20240228164753
 ||bidsxplayer.com/api/adserver/$3p
-!official popup blocker test
 ||rrc.texas.gov^$popup
-! จาก stream.animeorder.com ที่อยู่ใน anime-sugoi.com และ animeyuzu.com 20240308221538
 ||amung.us^$all
-! จาก https://cats-translator.com และ HaGeZi's Pro DNS Blocklist  และ niceoppai.net 20240703171555
 ||cdend.com^$3p
-! โฆษณาที่ขอบรูปใน https://www.khaosod.co.th 20240325140322
 ||thapi.aedi.ai^$3p
-! จาก https://www.lifewire.com/fix-error-0x80070643-4691724 20240326191222
 ||d30qdagvt44524.cloudfront.net^$3p
 
 !https://github.com/easylist-thailand/easylist-thailand/issues/81
@@ -1031,6 +1001,8 @@ playermeow.com##+js(nowoif)
 
 ||oqprjunocooluy.com^
 ||xslieoibb.com^
+||guizhhaa.com^
+||nlcjkgdqrdn.com^
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1684,6 +1656,15 @@ saucenao.com##^div#message
 !#else
 saucenao.com##div#message
 !#endif
+
+!conomi.co 20241020205613
+!#if cap_html_filtering
+conomi.co##^a[class^="ads--"]
+!#else
+conomi.co##a[class^="ads--"]
+!#endif
+
+
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (Thai sites)
@@ -2146,6 +2127,14 @@ thansettakij.com##div[class="desktop"]:upward(1)
 thansettakij.com##div[class="mobile"]:upward(1)
 thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 
+!marketthink.co 20241019133329
+marketthink.co##div[class="mb-4"][style="height:250px"]
+
+!thaipost.net 20241021000525
+thaipost.net##section[id="block-7"]
+thaipost.net##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
+thaipost.net###taboola-right-rail-thumbnails
+
 !MARK: ---tech news ---
 
 !droidsans.com 20240718005420
@@ -2552,12 +2541,13 @@ longdo.com##ins.adsbygoogle[data-ad-slot]
 !MARK: ---tech illegitimate ---
 
 !mawtoload.com 20240622000203
-mawtoload.com##+js(nano-sib, , *, 0.02)
 !แสดงปุ่มกด download
 mawtoload.com##div#delayedText:style(visibility: visible !important;)
 
 !i-loadzone.com 20240621232153
 blog.i-loadzone.com##+js(nano-sib, , *, 0.02)
+
+!axeload.com 20241023154604
 
 !MARK: ---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 
@@ -2642,7 +2632,6 @@ moodtoon.net##div[id^="ads_"]
 
 !niceoppai.net 20240727193321
 !! มีทั้ง frame และ other เชื่อมต่อไปเว็บนอก
-/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com|niceoppai\.net)\b).+$/$frame,script,third-party,domain=niceoppai.net
 !#if cap_html_filtering
 www.niceoppai.net##^div[class="top_page widget_text"]
 !#else
@@ -2929,13 +2918,12 @@ manga-za.net##div[class="mt-ad text-center"]
 !#endif
 
 !mangapdf-online.com 20240704190839
-/^(?!.*\b(?:facebook\.com|facebook\.net|twitter\.com)\b).+$/$script,third-party,domain=mangapdf-online.com
 
-!oremanga.net 20240330170900
+!oremanga.net 20241021014434
 !#if cap_html_filtering
-oremanga.net##^.header-ads-section
+oremanga.net##^div[class="header-ads-section"]
 !#else
-oremanga.net##.header-ads-section
+oremanga.net##div[class="header-ads-section"]
 !#endif
 
 !manga-lc.net
@@ -3735,18 +3723,15 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 !Google ads 20240624123556
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 @@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
-! https://github.com/orgs/uBlockOrigin/teams/ublock-filters-volunteers/discussions/289
+
 ! google contributor anti adblock
-#@#.div-gpt-ad
-#@#.ad_unit
 #@#div[class^="div-gpt-ad"]
 #@#[class^="div-gpt-ad"]
 #@#[id^="div-gpt-ad"]
 #@#div[id^="div-gpt-"]
-#@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+#@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
 ##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-google.*#@##bottomads
+##[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
 
 
 !https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-mobile.txt
@@ -3756,6 +3741,9 @@ google.*#@##bottomads
 ##.ad-link:not(.adsbox)
 ##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
+colabtutorials.com,mukohphetra.com##+js(set, detectAdBlock, noopFunc)
+colabtutorials.com,mukohphetra.com###wpsafe-generate:style(display: block !important;)
+colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important;)
 !!!**************************************************************************************
 !* 
 !* Performance (No Thai sites)
@@ -4295,6 +4283,8 @@ google.*#@##bottomads
 @@||honekrasae.com^$generichide
 @@||bangkokbiznews.com^$generichide
 @@||thansettakij.com^$generichide
+@@||marketthink.co^$generichide
+@@||thaipost.net^$generichide
 !!การเลือกตั้ง 2566
 @@||ectreport.com^$generichide
 @@||ectreport66.ect.go.th^$generichide
@@ -5035,6 +5025,12 @@ ram-hosp.co.th##^#cookieModal
 ram-hosp.co.th###cookieModal
 !#endif
 ram-hosp.co.th##.modal-open:style(overflow: auto !important;)
+marketthink.co##div[class="z-[9999] fixed bottom-0 left-0 w-full"]
+!#if cap_html_filtering
+thaipost.net##^#cookie-notice
+!#else
+thaipost.net###cookie-notice
+!#endif
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
