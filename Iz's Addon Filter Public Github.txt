@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241023192103
+! Version: 20241026210003
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -965,7 +965,6 @@ https://wowrapidly.com^$all
 ||ticket.leaforfree.com^$all
 ||ahacdn.me^$all
 ||adsmediabox.com^$all
-!พบใน เช่น compgamer.com
 ||to0s.biz^$all
 ||aitsatho.com^$all
 https://cdn.apicdn*.one^$xhr
@@ -979,7 +978,6 @@ https://cdn.apicdn*.one^$xhr
 ||thapi.aedi.ai^$3p
 ||d30qdagvt44524.cloudfront.net^$3p
 
-!https://github.com/easylist-thailand/easylist-thailand/issues/81
 *$removeparam=/^\??utm_/i,from=~allegro.pl|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~sendgb.com|~tix.axs.com|~tradedoubler.com|~transfernow.*
 
 playermeow.com##+js(nowoif)
@@ -1003,6 +1001,8 @@ playermeow.com##+js(nowoif)
 ||xslieoibb.com^
 ||guizhhaa.com^
 ||nlcjkgdqrdn.com^
+
+||videos.cdnstorage*.top/*$media
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -2546,6 +2546,11 @@ mawtoload.com##div#delayedText:style(visibility: visible !important;)
 
 !i-loadzone.com 20240621232153
 blog.i-loadzone.com##+js(nano-sib, , *, 0.02)
+!#if cap_html_filtering
+i-loadzone.com##^div[class^="gads"]
+!#else
+i-loadzone.com##div[class^="gads"]
+!#endif
 
 !axeload.com 20241023154604
 
@@ -2559,7 +2564,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com
+.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -3058,6 +3063,18 @@ toon168.com##div[class="c-sidebar c-top-sidebar wp-manga"]
 mangastep.com##^div[class="wrapper"] > a:has(img)
 !#else
 mangastep.com##div[class="wrapper"] > a:has(img)
+!#endif
+
+!mangasuper.com 20241026205627
+!#if cap_html_filtering
+mangasuper.com##^div[class="c-sidebar c-top-sidebar wp-manga"]
+!#else
+mangasuper.com##div[class="c-sidebar c-top-sidebar wp-manga"]
+!#endif
+!#if cap_html_filtering
+mangasuper.com##^div[id^="sticky-ads-bottom"]
+!#else
+mangasuper.com##div[id^="sticky-ads-bottom"]
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
@@ -4223,7 +4240,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 /web-vitals.$badfilter
 /web-vitals.$domain=~aws.amazon.com
 
-!fix slow load on facebook.com | Firefox ใช้ rule อีกอันเพราะรองรับ HTML Filtering แต่กลายว่ามันช้ากว่าปกติ
+!fix slow load on facebook.com | Firefox ใช้ rule อีกอันเพราะรองรับ HTML Filtering
 !! https://github.com/uBlockOrigin/uAssets/issues/3367#issuecomment-2248425715
 
 !! uBO Ads
