@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241026210003
+! Version: 20241027121936
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -2952,7 +2952,7 @@ doodmanga.com##^div[class="ads col-md-12 text-center mt-2 mb-2"]
 doodmanga.com##div[class="ads col-md-12 text-center mt-2 mb-2"]
 !#endif
 
-!manga-post.com 20240721142822
+!manga-post.com 20241027120601
 !#if cap_html_filtering
 manga-post.com##^div[id^="FloatingLayer"]
 !#else
@@ -2963,6 +2963,16 @@ manga-post.com##^a:has(center>img)
 !#else
 manga-post.com##a:has(center>img)
 !#endif
+!!click to popup
+manga-post.com##+js(remove-attr, onclick, body)
+!#if cap_html_filtering
+manga-post.com##^script:has-text(Popupse)
+manga-post.com##^script:has-text(advanced_ads)
+!#else
+manga-post.com##+js(rmnt, script, /^(Popupse|advanced_ads)$/)
+!#endif
+!! For site frequently change popup script 20241027120834
+/^(?!.*(manga-post.com|facebook.com)).*$/$popup,domain=manga-post.com
 
 !mafia-manga.com 20231217005325
 *$script,third-party,domain=mafia-manga.com
@@ -4239,17 +4249,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !!break aws.amazon.com
 /web-vitals.$badfilter
 /web-vitals.$domain=~aws.amazon.com
-
-!fix slow load on facebook.com | Firefox ใช้ rule อีกอันเพราะรองรับ HTML Filtering
-!! https://github.com/uBlockOrigin/uAssets/issues/3367#issuecomment-2248425715
-
-!! uBO Ads
-!!#if ext_ublock
-
-
-!! uBO Annoyances
-!!#endif
-
 !!!**************************************************************************************
 !* 
 !* Performance (Thai sites)
@@ -4554,6 +4553,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||hippomanga.com^$generichide
 @@||ranker-manga.com^$generichide
 @@||toon168.com^$generichide
+@@||mangasuper.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
