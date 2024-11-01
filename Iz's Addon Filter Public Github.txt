@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241027121936
+! Version: 20241101143831
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -275,6 +275,7 @@
 ||nqm.asia^$all
 ||livestreamiing.com^$all
 ||ibbox.id^$all
+||iterabox.id^$all
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
@@ -2265,7 +2266,7 @@ it24hrs.com##^.adrotate_widgets
 it24hrs.com##.adrotate_widgets
 ||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
 
-!iphonemod.net 20240205142713
+!iphonemod.net 20241028214550
 !#if cap_html_filtering
 iphonemod.net##^center
 !#endif
@@ -2286,6 +2287,10 @@ iphonemod.net###text-11
 iphonemod.net##^.g1-advertisement
 !#endif
 iphonemod.net##.g1-advertisement
+!#if cap_html_filtering
+iphonemod.net##^[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
+!#endif
+iphonemod.net##[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
 
 !specphone.com
 !#if cap_html_filtering
@@ -2345,6 +2350,21 @@ thaiware.com##^div[class="headerBottom"]
 !#else
 thaiware.com##div[class="headerBottom"]
 !#endif
+
+!enterpriseitpro.net 20241101143609
+enterpriseitpro.net##body:style(background-image: unset !important;)
+!#if cap_html_filtering
+enterpriseitpro.net##^.td-ad-m
+!#else
+enterpriseitpro.net##.td-ad-m
+!#endif
+!#if cap_html_filtering
+enterpriseitpro.net##^.td-a-rec
+!#else
+enterpriseitpro.net##.td-a-rec
+!#endif
+enterpriseitpro.net##+js(set-constant, td_ad_background_click_link, "")
+enterpriseitpro.net##+js(rc, td-ad-background-link, body)
 
 !MARK: ---tech ---
 
@@ -4467,6 +4487,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||itnews24hrs.com^$generichide
 @@||techtalkthai.com^$generichide
 @@||entechreview.com^$generichide
+@@||enterpriseitpro.net^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
 @@||techsauce.co^$generichide
@@ -5053,6 +5074,10 @@ thaipost.net###cookie-notice
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
 supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
+browserleaks.com##+js(trusted-set-cookie,bl_attr,1)
+browserleaks.com##+js(trusted-set-cookie,bl_gaq,1)
+browserleaks.com##+js(trusted-set-cookie,bl_geo,1)
+browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 
 !MARK: --- cookie general ---
 
@@ -5064,12 +5089,12 @@ supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
 /glow-cookies.min.js$script
 /pdpa-cookieconsent.js$script
 /designil-pdpa$script,image,xhr
-/cookie-law-info$script,image,xhr
+/wp-content/plugins/cookie-law-info$script,image,xhr
 /cookie-notice$script,css
 /gdpr-compliance-cookie-consent$script,css
 /gdpr-option.js$script
 /jquery.cookie.min.js$script
-/jquery.cookie.js$script
+/jquery.cookie.js$script,domain=~order.sukishidelivery.com
 /get-pdpa$xhr,script
 
 !MadeByMe Cosmestic rules
