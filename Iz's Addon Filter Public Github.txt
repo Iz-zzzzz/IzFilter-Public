@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241101143831
+! Version: 20241112201600
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -305,6 +305,11 @@
 
 ||jey48.xyz^$all
 
+!!!**************************************************************************************
+!MARK:Telegram spam
+!****************************************************************************************
+
+||oec-br.fit^$all
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -878,6 +883,7 @@ https://pgf-asw0zz.co^$all
 ||m-culture.in.th^$all
 https://neon24h1.com^$all
 /uri69online^$all
+||betcenter.asia^$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 
@@ -1002,6 +1008,8 @@ playermeow.com##+js(nowoif)
 ||xslieoibb.com^
 ||guizhhaa.com^
 ||nlcjkgdqrdn.com^
+||wxreiapum.com^
+||iswpkpzuzgoeai.com^
 
 ||videos.cdnstorage*.top/*$media
 !!!**************************************************************************************
@@ -1097,6 +1105,10 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !qr.me-qr.com 20240701140223
 !!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
 qr.me-qr.com##+js(trusted-click-element,a[data-action="click->ticket-app--page#increaseSkipAd"])
+
+!get-qr.com 20241107225035
+!!! Due to uBO and AdGuard limitation, this filter can click element on page only once. See more at https://github.com/uBlockOrigin/uBlock-issues/issues/2917
+get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 
 !MARK: ---music ---
 
@@ -3788,7 +3800,11 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##.ad-link:not(.adsbox)
 ##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
-colabtutorials.com,mukohphetra.com##+js(set, detectAdBlock, noopFunc)
+colabtutorials.com,mukohphetra.com##+js(rmnt, script, detectAdBlock)
+!#if cap_html_filtering
+colabtutorials.com,mukohphetra.com##^#adb
+!#endif
+colabtutorials.com,mukohphetra.com###adb
 colabtutorials.com,mukohphetra.com###wpsafe-generate:style(display: block !important;)
 colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important;)
 !!!**************************************************************************************
@@ -4205,7 +4221,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---tech illegitimate ---
 
 !MARK: ---Manga Foreign illegitimate ---
-@@||mangadex.org^$ehide
+@@||mangadex.org^$generichide
 @@||manhwazmove.com^$generichide
 @@||mangakakalot.com^$generichide
 @@||manganato.com^$generichide
@@ -5069,6 +5085,9 @@ thaipost.net##^#cookie-notice
 !#else
 thaipost.net###cookie-notice
 !#endif
+sistacafe.com##div[class^="policy_policy_"]
+||sistacafe.com/rules/cookies$domain=sistacafe.com
+digifast-inc.com###PrivacyPolicy
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
@@ -5096,6 +5115,11 @@ browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 /jquery.cookie.min.js$script
 /jquery.cookie.js$script,domain=~order.sukishidelivery.com
 /get-pdpa$xhr,script
+/glowCookies.min.js$script
+
+
+
+
 
 !MadeByMe Cosmestic rules
 ##.eupopup-body
@@ -5105,4 +5129,5 @@ browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 ###consentTrackAndCookieBar
 ###js-consent-banner
 ##.pdpa_cookies
+###pdpa
 
