@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241112201600
+! Version: 20241123193145
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -276,6 +276,8 @@
 ||livestreamiing.com^$all
 ||ibbox.id^$all
 ||iterabox.id^$all
+||ohbulan.sbs^$all
+||smialex.id^$all
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
 ||rx-help-center.xyz^$all
@@ -884,6 +886,8 @@ https://pgf-asw0zz.co^$all
 https://neon24h1.com^$all
 /uri69online^$all
 ||betcenter.asia^$all
+!! โดนฝัง script redirect ไปเว็บไม่ดี
+https://admin.sc.chula.ac.th/content/video/?video=*$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 
@@ -1805,6 +1809,8 @@ thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 !!thairath.co.th/futureperfect 20240923140247
 thairath.co.th##div.container-ads:upward(1)
 thairath.co.th##div#article_billboard:upward(1)
+thairath.co.th##div[style="text-align: center;"]:upward(1)
+thairath.co.th##div[style="text-align:center"]:upward(1)
 
 !ch3plus.com 20240220140536
 !#if cap_html_filtering
@@ -2116,9 +2122,9 @@ sportingnews.com##^ad a[target="_blank"]
 sportingnews.com##ad a[target="_blank"]
 !#endif
 
-!www.amarintv.com 20240402210456
-www.amarintv.com##div.ads-container
-www.amarintv.com##div.ads-recommend:upward(1)
+!www.amarintv.com 20241123132325
+amarintv.com##div[class="ads-box"]
+amarintv.com##body.show-cookie:style(padding-top: unset !important;)
 
 !thainewsonline.co 20240515020807
 thainewsonline.co##div[class*="ads-billboard"]
@@ -2334,7 +2340,7 @@ specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 
-!entechreview.com 20240813101140
+!entechreview.com 20241120163008
 !#if cap_html_filtering
 entechreview.com##^div[aria-label^="Sponser"]:upward(1)
 !#else
@@ -2349,6 +2355,11 @@ entechreview.com##div.promotion-section
 entechreview.com##^div.em-posts-promotions
 !#else
 entechreview.com##div.em-posts-promotions
+!#endif
+!#if cap_html_filtering
+entechreview.com##^div[id^="metaslider_widget-"]
+!#else
+entechreview.com##div[id^="metaslider_widget-"]
 !#endif
 
 !thaiware.com 20240705155726
@@ -3801,9 +3812,6 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
 colabtutorials.com,mukohphetra.com##+js(rmnt, script, detectAdBlock)
-!#if cap_html_filtering
-colabtutorials.com,mukohphetra.com##^#adb
-!#endif
 colabtutorials.com,mukohphetra.com###adb
 colabtutorials.com,mukohphetra.com###wpsafe-generate:style(display: block !important;)
 colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important;)
@@ -4259,7 +4267,10 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||animeranku.com^$generichide
 @@||webtoons.com^$generichide
 @@||otakukart.com^$generichide
-@@https://animeflix*$generichide
+!MARK: --- travel hotel ---
+@@||trip.com^$generichide
+@@||traveloka.com^$generichide
+@@||agoda.com^$generichide
 !MARK: --- others ---
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
@@ -4675,6 +4686,11 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||axeload.com^$generichide
 !MARK: --- Torrent
 @@||dedbit.com^$generichide
+!MARK: --- travel hotel ---
+@@||airasia.com^$generichide
+@@||thaiairways.com^$generichide
+@@||bangkokair.com^$generichide
+@@||nokair.com^$generichide
 !MARK: --- Others
 @@||online-station.net^$generichide
 @@||sanook.com^$generichide
@@ -4699,52 +4715,19 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 
 !MARK: --- cookie specific ---
 
-!#if cap_html_filtering
-phoenixnext.com##^div[class="cwc-sdk-container"]
-!#endif
 phoenixnext.com##div[class="cwc-sdk-container"]
-!#if cap_html_filtering
-wongnai.com##^div#cc--main
-!#endif
 wongnai.com##div#cc--main
-!#if cap_html_filtering
-mahidol.ac.th##^#cc_div
-!#endif
 mahidol.ac.th###cc_div
-!#if cap_html_filtering
-apkmirror.com##^#bottom-slider
-!#endif
 apkmirror.com###bottom-slider
-!#if cap_html_filtering
-riotgames.com##^.dialog
-!#endif
 riotgames.com##.dialog
 !theguardian.com
-!#if cap_html_filtering
-theguardian.com##^div[id="sp_message_container_752142"]
-!#endif
 theguardian.com##div[id="sp_message_container_752142"]
-!#if cap_html_filtering
-theguardian.com##^div[class="dcr-8xye2h"]
-!#endif
 theguardian.com##div[class="dcr-8xye2h"]
 !economist.com
-!#if cap_html_filtering
-economist.com##^div[class="message-container teg-container"]
-!#endif
 economist.com##div[class="message-container teg-container"]
 ||consent.economist.com^$domain=economist.com
-!#if cap_html_filtering
-ondemand.in.th##^.cwc-sdk-container
-!#endif
 ondemand.in.th##.cwc-sdk-container
-!#if cap_html_filtering
-425degree.com##^.amgdprcookie-bar-template
-!#endif
 425degree.com##.amgdprcookie-bar-template
-!#if cap_html_filtering
-samsung.com##^.cookie-bar
-!#endif
 samsung.com##.cookie-bar
 !#if cap_html_filtering
 droidsans.com##^aside#moove_gdpr_cookie_info_bar
@@ -5088,6 +5071,23 @@ thaipost.net###cookie-notice
 sistacafe.com##div[class^="policy_policy_"]
 ||sistacafe.com/rules/cookies$domain=sistacafe.com
 digifast-inc.com###PrivacyPolicy
+!#if cap_html_filtering
+thaihealth.or.th##^div[class^="dpdpa--"]
+!#else
+thaihealth.or.th##div[class^="dpdpa--"]
+!#endif
+nokair.com##div[class="v-snack__content"]:upward(1)
+yellowpages.co.th##div[id="yp-cookie-wrapper"]
+!#if cap_html_filtering
+s-white.net##^div[class="policy-position"]
+!#else
+s-white.net##div[class="policy-position"]
+!#endif
+!#if cap_html_filtering
+konvy.com##^div[id="btm-tips"]
+!#else
+konvy.com##div[id="btm-tips"]
+!#endif
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
@@ -5116,6 +5116,7 @@ browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 /jquery.cookie.js$script,domain=~order.sukishidelivery.com
 /get-pdpa$xhr,script
 /glowCookies.min.js$script
+/jquery-cookie.min.js$script
 
 
 
