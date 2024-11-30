@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241123193145
+! Version: 20241130134009
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -2340,7 +2340,7 @@ specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
 !#endif
 specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
 
-!entechreview.com 20241120163008
+!entechreview.com 20241125173603
 !#if cap_html_filtering
 entechreview.com##^div[aria-label^="Sponser"]:upward(1)
 !#else
@@ -2360,6 +2360,11 @@ entechreview.com##div.em-posts-promotions
 entechreview.com##^div[id^="metaslider_widget-"]
 !#else
 entechreview.com##div[id^="metaslider_widget-"]
+!#endif
+!#if cap_html_filtering
+entechreview.com##^div[aria-label="Header Banner"]
+!#else
+entechreview.com##div[aria-label="Header Banner"]
 !#endif
 
 !thaiware.com 20240705155726
@@ -2967,12 +2972,14 @@ manga-za.net##div[class="mt-ad text-center"]
 
 !mangapdf-online.com 20240704190839
 
-!oremanga.net 20241021014434
+!oremanga.net 20241128192312
 !#if cap_html_filtering
 oremanga.net##^div[class="header-ads-section"]
 !#else
 oremanga.net##div[class="header-ads-section"]
 !#endif
+||oremanga.net/wp-content/uploads/*.gif$badfilter
+||oremanga.net/wp-content/uploads/*.gif$domain=oremanga.net
 
 !manga-lc.net
 !#if cap_html_filtering
@@ -3129,6 +3136,19 @@ mangasuper.com##^div[id^="sticky-ads-bottom"]
 !#else
 mangasuper.com##div[id^="sticky-ads-bottom"]
 !#endif
+
+!xn--72cas2cj6a4hf4b5a8oc.com มังงะญี่ปุ่น.com 20241127150653
+!#if cap_html_filtering
+xn--72cas2cj6a4hf4b5a8oc.com##^div[class="th-ban text-center"]
+!#else
+xn--72cas2cj6a4hf4b5a8oc.com##div[class="th-ban text-center"]
+!#endif
+!#if cap_html_filtering
+xn--72cas2cj6a4hf4b5a8oc.com##^div[class="ads-info"]
+!#else
+xn--72cas2cj6a4hf4b5a8oc.com##div[class="ads-info"]
+!#endif
+||two.xn--72cas2cj6a4hf4b5a8oc.com/img/*.gif$image,domain=xn--72cas2cj6a4hf4b5a8oc.com
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
@@ -4271,6 +4291,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||trip.com^$generichide
 @@||traveloka.com^$generichide
 @@||agoda.com^$generichide
+@@||airbnb.com^$generichide
 !MARK: --- others ---
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
@@ -4296,6 +4317,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !!break aws.amazon.com
 /web-vitals.$badfilter
 /web-vitals.$domain=~aws.amazon.com
+
+youtube.com#@#+js(set-constant, google_ad_status, 1)
 !!!**************************************************************************************
 !* 
 !* Performance (Thai sites)
@@ -4533,6 +4556,9 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||advice.co.th^$generichide
 @@||jib.co.th^$generichide
 @@||ihavecpu.com^$generichide
+@@||headdaddy.com^$generichide
+@@||bnn.in.th^$generichide
+@@||itcity.in.th^$generichide
 !MARK: --- thai government ---
 @@||www.thaigov.go.th^$generichide
 @@||antifakenewscenter.com^$generichide
@@ -4993,7 +5019,6 @@ munkongonline.com##.cookie-overlay:not(html):not(body)
 cututoronline.com##^.cookie-consent
 !#endif
 cututoronline.com##.cookie-consent
-https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$domain=opendurian.com
 forbesthailand.com###__next > main:nth-child(1) > div:nth-child(2) > div:nth-child(2)
 !#if cap_html_filtering
 extremeit.com##^div[class^="dpdpa--"]
@@ -5088,6 +5113,11 @@ konvy.com##^div[id="btm-tips"]
 !#else
 konvy.com##div[id="btm-tips"]
 !#endif
+headdaddy.com##div[class="foot-cookie"]
+https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$domain=opendurian.com
+opendurian.com##div.v-dialog__content
+opendurian.com##div.v-overlay--active
+
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
@@ -5097,6 +5127,7 @@ browserleaks.com##+js(trusted-set-cookie,bl_attr,1)
 browserleaks.com##+js(trusted-set-cookie,bl_gaq,1)
 browserleaks.com##+js(trusted-set-cookie,bl_geo,1)
 browserleaks.com##+js(trusted-set-cookie,bl_map,1)
+itcity.in.th##+js(trusted-set-cookie,allowed_cookies,C0001)
 
 !MARK: --- cookie general ---
 
