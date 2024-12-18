@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241130134009
+! Version: 20241218163542
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -160,6 +160,8 @@
 ||clickupenterprise.net^$all
 ||otrxio.com^$all
 ||thexpoose.com^$all
+||9minecraft.net^$all
+||9minecraft.com^$all
 
 !!!**************************************************************************************
 !MARK:Mal search engine self gathering
@@ -198,6 +200,8 @@
 ||www.apple-th.online^$all
 ||casiogshockthailand.website^$all
 ||shuna.one^$all
+||m9s.in^$all
+||i9i.in^$all
 
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
@@ -293,6 +297,7 @@
 ||abcnews.cyou^$all
 ||pageorama.com^$all
 ||honekrasae.cloud^$all
+||nbaoutletstore.us.kg^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -537,6 +542,8 @@ https://hotgraph*$all
 /XO89_Banner.gif$image
 /p9_long.gif$image
 /NEON24H*.gif$image
+/catcatbet.gif$image
+/lionth.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -888,6 +895,37 @@ https://neon24h1.com^$all
 ||betcenter.asia^$all
 !! โดนฝัง script redirect ไปเว็บไม่ดี
 https://admin.sc.chula.ac.th/content/video/?video=*$all
+||topantivirussoftware.org^$all
+||lionth.io^$all
+||ppslot44.com^$all
+||askmeslot.bio^$all
+||ambslot.pro^$all
+||gizmodo.uol.com.br^$all
+||qhboguang.com^$all
+||yzyinfo.com^$all
+||lukwin88u.com^$all
+||tczwr.com^$all
+||dayujishu.com^$all
+||bf789.online^$all
+||ufasa1.com^$all
+||whlifei.com^$all
+||sztkit.com^$all
+||sexy24hr.com^$all
+||kodpun88.com^$all
+||sanheonline.com^$all
+||tysendi.com^$all
+||qdheding.com^$all
+||whqianyijin.com^$all
+||zhaodingtea.com^$all
+||51pyouyou.com^$all
+||shangjishop.com^$all
+||zzyrjq.com^$all
+||lzxledu.com^$all
+||myriadfavor.com^$all
+||ufa888club.net^$all
+||vegus24s.com^$all
+||bonus24hr.com^$all
+||betflik168.tv^$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 
@@ -989,7 +1027,6 @@ https://cdn.apicdn*.one^$xhr
 ||thapi.aedi.ai^$3p
 ||d30qdagvt44524.cloudfront.net^$3p
 
-*$removeparam=/^\??utm_/i,from=~allegro.pl|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~sendgb.com|~tix.axs.com|~tradedoubler.com|~transfernow.*
 
 playermeow.com##+js(nowoif)
 ||jl63v3fp1.com^$all
@@ -1016,6 +1053,8 @@ playermeow.com##+js(nowoif)
 ||iswpkpzuzgoeai.com^
 
 ||videos.cdnstorage*.top/*$media
+
+||clip2thai.com^$image,3p
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -2612,7 +2651,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moodtoon.net|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com
+.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -2661,26 +2700,21 @@ manga-sugoi.com##^.blox, .mlb, .kln
 manga-sugoi.com##.blox, .mlb, .kln
 !#endif
 
-!moodtoon.net 20240617220450
+!moon-toon.com 20240617220450
 !#if cap_html_filtering
-moodtoon.net##^div.ads-info
+moon-toon.com##^div.ads-info
 !#else
-moodtoon.net##div.ads-info
+moon-toon.com##div.ads-info
 !#endif
 !#if cap_html_filtering
-moodtoon.net##^div.mt-ad
+moon-toon.com##^div.mt-ad
 !#else
-moodtoon.net##div.mt-ad
+moon-toon.com##div.mt-ad
 !#endif
 !#if cap_html_filtering
-moodtoon.net##^li#menu-item-595198
+moon-toon.com##^div[id^="ads_"]
 !#else
-moodtoon.net##li#menu-item-595198
-!#endif
-!#if cap_html_filtering
-moodtoon.net##^div[id^="ads_"]
-!#else
-moodtoon.net##div[id^="ads_"]
+moon-toon.com##div[id^="ads_"]
 !#endif
 
 !niceoppai.net 20240727193321
@@ -3770,10 +3804,40 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 !* 
 !****************************************************************************************
 
+
 ##div[class="c-sidebar c-top-sidebar wp-manga"]
 ##img.img-ads
 ##div[class="dessert-frame"]
 ##div.b-ads
+##img[alt*="สล็อต"]
+##img[alt*="บาคาร่า"]
+##img[alt="pragmaticplay"]
+##img[alt="Netoru"]
+##img[alt="Panama888"]
+##img[alt="Hydra888"]
+##img[alt="Kingdom66"]
+##img[alt*="UFA"]
+##img[alt="askmeslot"]
+##img[alt*="ufa888"]
+##img[alt="LALIKABET168"]
+##img[alt="LALIKABET88"]
+##img[alt="Huayhit168"]
+##img[alt="BONUS24H"]
+##img[alt="VGCS"]
+##img[alt*="BET365"]
+##img[alt="แทงบอล"]
+##img[alt="KP88"]
+##img[alt="SEXY24HR"]
+##img[alt*="ufabet"]
+##img[alt*="ufasa"]
+##img[alt="bf789"]
+##img[alt="sbobet888"]
+##img[alt="sbobetone"]
+##img[alt="mlotto"]
+##img[alt="NEON24H"]
+##img[alt="LUKWIN88"]
+##img[alt*="baccarat"]
+##img[alt="บาคาร่า"]
 
 !!!**************************************************************************************
 !* 
@@ -4277,7 +4341,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: --- chat ---
 @@||static.zdassets.com^$ehide
 !MARK: --- browser extension ---
-@@||||www.automa.site^$ehide
+@@||www.automa.site^$ehide
 !MARK: --- git ---
 @@||gitlab.com^$generichide
 @@||gitea.angry.im^$generichide
@@ -4292,12 +4356,14 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||traveloka.com^$generichide
 @@||agoda.com^$generichide
 @@||airbnb.com^$generichide
+@@||tourismthailand.org^$generichide
+@@||www.booking.com^$generichide
 !MARK: --- others ---
 @@||www.whatismybrowser.com^$generichide
 @@||whoscall.com^$generichide
 @@||smilearm.com^$generichide
 @@||saucenao.com^$generichide
-!MARK: --- unknow ---
+!MARK: --- unknown ---
 
 !!!**************************************************************************************
 !* 
@@ -4577,7 +4643,7 @@ youtube.com#@#+js(set-constant, google_ad_status, 1)
 @@||doodmanga.com^$generichide
 @@||tamamanga.com^$generichide
 @@||manga168.net^$generichide
-@@||moodtoon.net^$generichide
+@@||moon-toon.com^$generichide
 @@||loli-manga.com^$generichide
 @@||chocomanga.com^$generichide
 @@||thaimanga.net^$generichide
@@ -5128,6 +5194,8 @@ browserleaks.com##+js(trusted-set-cookie,bl_gaq,1)
 browserleaks.com##+js(trusted-set-cookie,bl_geo,1)
 browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 itcity.in.th##+js(trusted-set-cookie,allowed_cookies,C0001)
+smartscience.co.th##+js(trusted-set-cookie,_acepata,1)
+smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 
 !MARK: --- cookie general ---
 
