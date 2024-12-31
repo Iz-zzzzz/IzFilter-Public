@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241223221518
+! Version: 20241231203915
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -2655,7 +2655,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net
+.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com
 .mp4$media,domain=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -3052,7 +3052,11 @@ manga-post.com##^a:has(center>img)
 manga-post.com##a:has(center>img)
 !#endif
 !!click to popup
-manga-post.com##+js(remove-attr, onclick, body)
+!#if cap_html_filtering
+manga-post.com##^body:remove-attr(onclick)
+!#else
+manga-post.com##body:remove-attr(onclick)
+!#endif
 !#if cap_html_filtering
 manga-post.com##^script:has-text(Popupse)
 manga-post.com##^script:has-text(advanced_ads)
@@ -3187,6 +3191,13 @@ xn--72cas2cj6a4hf4b5a8oc.com##^div[class="ads-info"]
 xn--72cas2cj6a4hf4b5a8oc.com##div[class="ads-info"]
 !#endif
 ||two.xn--72cas2cj6a4hf4b5a8oc.com/img/*.gif$image,domain=xn--72cas2cj6a4hf4b5a8oc.com
+
+!mangakimi.com 20241227022533
+!#if cap_html_filtering
+mangakimi.com##^div[class="header-ads-section"]
+!#else
+mangakimi.com##div[class="header-ads-section"]
+!#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
@@ -3789,6 +3800,20 @@ nungde.com##^div[class="code-block code-block-4"] > a[target="_blank"]
 nungde.com##div[class="code-block code-block-4"] > a[target="_blank"]
 !#endif
 https://nungde.com/wp-content/uploads/2024/10/bn-dee.png$domain=nungde.com
+!MARK: --- Others
+
+chillpainai.com##div[id="subscribe"]
+chillpainai.com##body:style(overflow: unset !important;)
+!#if cap_html_filtering
+chillpainai.com##^img[alt="shopee"]
+!#else
+chillpainai.com##img[alt="shopee"]
+!#endif
+!#if cap_html_filtering
+chillpainai.com##^img[alt="Lazada"]
+!#else
+chillpainai.com##img[alt="Lazada"]
+!#endif
 
 !MARK: --- Others
 
@@ -3811,6 +3836,9 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img.img-ads
 ##div[class="dessert-frame"]
 ##div.b-ads
+##img[alt="shopee"]
+##img[alt="Lazada"]
+
 ##img[alt*="สล็อต"]
 ##img[alt*="บาคาร่า"]
 ##img[alt="pragmaticplay"]
