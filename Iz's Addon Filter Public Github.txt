@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20241231203915
+! Version: 20250112194719
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -14,6 +14,8 @@
 
 /^https?:\/\/vvv\./$all
 /^https?:\/\/vvw\./$all
+/^https?:\/\/vww\./$all
+/^https?:\/\/vwv\./$all
 
 !!!**************************************************************************************
 !MARK: Specific
@@ -298,6 +300,9 @@
 ||pageorama.com^$all
 ||honekrasae.cloud^$all
 ||nbaoutletstore.us.kg^$all
+||e.vg^$all
+||doodfile.com^$all
+||fecabokk.com^$all
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -317,6 +322,13 @@
 !****************************************************************************************
 
 ||oec-br.fit^$all
+
+!!!**************************************************************************************
+!MARK: Weird behaviour
+!****************************************************************************************
+
+! เว็บมังงะที่แปลทุกคำผ่าน AI ทั้งหมด ซึ่งมันแปลกๆ เหมือนคนทำเป็นต่างชาติแล้วทำเว็บไทย
+||pengi.co^$all
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -934,6 +946,8 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 ||pgf-asw0zzz.com^$all
 ||eurowine8.com^$all
 ||22onlinegames.com^$all
+||pgslot99.world^$all
+||camel88.io^$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 
@@ -1197,34 +1211,6 @@ apkmoddone.com##^#adTop
 apkmoddone.com###adTop
 
 !MARK: ---dictionary ---
-
-!oxfordlearnersdictionaries.com 20240619003331
-!#if cap_html_filtering
-oxfordlearnersdictionaries.com##^#topslot_container
-!#endif
-oxfordlearnersdictionaries.com###topslot_container
-!#if cap_html_filtering
-oxfordlearnersdictionaries.com##^#ot-sdk-btn:not(button)
-!#endif
-oxfordlearnersdictionaries.com###ot-sdk-btn:not(button)
-!collinsdictionary.com 20240619003511
-!#if cap_html_filtering
-collinsdictionary.com##^.topslot_container
-!#endif
-collinsdictionary.com##.topslot_container
-!#if cap_html_filtering
-collinsdictionary.com##^#ot-sdk-btn:not(button)
-!#endif
-collinsdictionary.com###ot-sdk-btn:not(button)
-!freethesaurus.com,thefreedictionary.com 20240619003003
-!#if cap_html_filtering
-freethesaurus.com,thefreedictionary.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
-freethesaurus.com,thefreedictionary.com##ins.adsbygoogle[data-ad-slot]
-!#if cap_html_filtering
-thefreedictionary.com##^div[class="vx"][id="vx1"]
-!#endif
-thefreedictionary.com##div[class="vx"][id="vx1"]
 
 !MARK: ---shopping online ---
 
@@ -1756,12 +1742,20 @@ ngthai.com##^div[class="bg-popup"]
 ngthai.com##div[class="bg-popup"]
 !#endif
 
+!longtunman.com 20250105002448
+longtunman.com##div[id^="ad-"]:upward(div[style="height: 250px;"])
+longtunman.com##div[id^="ad-"]:upward(div[style="height: 250px;"][class="mb-4"])
+longtunman.com##div[data-testid="feed/FeedItemAd"]
+longtunman.com##div[data-testid="feed/Feed/ad"]
+
 !MARK: ---social platform ---
 
-!pantip.com 20240910000654
+!pantip.com 20250109140920
 pantip.com##div[class="frukt-related"]
+pantip.com##div[id^="mpantip:script:"]
 pantip.com##ins.adsbyadop
 pantip.com##iframe[class="ads_box_iframe"][src^="https://frukt.pantip.com"]:upward(div[id^="pantip:script:mbk:"])
+pantip.com##li[id="pantip:home:home:1003"]
 
 !MARK: ---wiki ---
 
@@ -1852,8 +1846,6 @@ thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 !!thairath.co.th/futureperfect 20240923140247
 thairath.co.th##div.container-ads:upward(1)
 thairath.co.th##div#article_billboard:upward(1)
-thairath.co.th##div[style="text-align: center;"]:upward(1)
-thairath.co.th##div[style="text-align:center"]:upward(1)
 
 !ch3plus.com 20240220140536
 !#if cap_html_filtering
@@ -2274,7 +2266,7 @@ thaimobilecenter.com###myDIV
 thaimobilecenter.com##div[class="container bn-a2"]
 ||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
 
-!techtalkthai.com 20240217174032
+!techtalkthai.com 20250105011017
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-bottom:nth-child(4)
 !#if cap_html_filtering
@@ -2288,7 +2280,13 @@ techtalkthai.com##^h4:has-text(SPONSORS):upward(2)
 !#else
 techtalkthai.com##h4:has-text(SPONSORS):upward(2)
 !#endif
+!#if cap_html_filtering
+techtalkthai.com##^div[class="e3lan e3lan-top"]
+!#else
+techtalkthai.com##div[class="e3lan e3lan-top"]
+!#endif
 .gif$image,domain=techtalkthai.com
+*Sponsors.png$image,domain=techtalkthai.com
 
 !blognone.com 20240806212413
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -2771,6 +2769,8 @@ www.niceoppai.net##.mng_rdr.wpm_pag > center
 ||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
 ||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
 ||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+https://image7.niceoppai.net/97/f5/Upload-1213212412-HT9AM-By-Niceoppai.jpg$image,domain=www.niceoppai.net
+https://image7.niceoppai.net/f9/0a/Upload-3232323232-V9ZT5-By-Niceoppai.jpg$image,domain=www.niceoppai.net
 ||blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
 ||www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
 ||i.imgur.com*.gif$image,domain=www.niceoppai.net
@@ -3197,6 +3197,13 @@ xn--72cas2cj6a4hf4b5a8oc.com##div[class="ads-info"]
 mangakimi.com##^div[class="header-ads-section"]
 !#else
 mangakimi.com##div[class="header-ads-section"]
+!#endif
+
+!inu-manga.com 20250101211617
+!#if cap_html_filtering
+inu-manga.com##^div[class="header-ads-section"]
+!#else
+inu-manga.com##div[class="header-ads-section"]
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
@@ -3868,6 +3875,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="LUKWIN88"]
 ##img[alt*="baccarat"]
 ##img[alt="บาคาร่า"]
+##img[alt^="pgslot"]
 
 !!!**************************************************************************************
 !* 
@@ -4581,6 +4589,7 @@ youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, fals
 @@||vru.ac.th^$generichide
 @@||wu.ac.th^$generichide
 @@||yru.ac.th^$generichide
+@@||longtunman.com^$generichide
 !MARK: ---social platform ---
 @@||pantip.com^$generichide
 @@||ctrlg.gg^$generichide
@@ -4725,6 +4734,7 @@ youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, fals
 @@||ranker-manga.com^$generichide
 @@||toon168.com^$generichide
 @@||mangasuper.com^$generichide
+@@||inu-manga.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -5214,6 +5224,12 @@ headdaddy.com##div[class="foot-cookie"]
 https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$domain=opendurian.com
 opendurian.com##div.v-dialog__content
 opendurian.com##div.v-overlay--active
+longtunman.com##div[class="fixed bottom-0 left-0 right-0 z-[9999]"]
+!#if cap_html_filtering
+ivethospital.com##^div[class="policy-position"]
+!#else
+ivethospital.com##div[class="policy-position"]
+!#endif
 
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
