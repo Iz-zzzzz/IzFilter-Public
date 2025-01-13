@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250112194719
+! Version: 20250113182039
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -2435,6 +2435,36 @@ enterpriseitpro.net##.td-a-rec
 enterpriseitpro.net##+js(set-constant, td_ad_background_click_link, "")
 enterpriseitpro.net##+js(rc, td-ad-background-link, body)
 
+!appdisqus.com 20250112232030
+!#if cap_html_filtering
+appdisqus.com##^ins.adsbygoogle[data-ad-client]
+!#endif
+appdisqus.com##ins.adsbygoogle[data-ad-client]
+!#if cap_html_filtering
+appdisqus.com##^div#cookie-law-info-bar
+!#endif
+appdisqus.com##div#cookie-law-info-bar
+!#if cap_html_filtering
+appdisqus.com##^div#cookie-law-info-again
+!#endif
+appdisqus.com##div#cookie-law-info-again
+!#if cap_html_filtering
+appdisqus.com##^div#cliSettingsPopup
+!#endif
+appdisqus.com##div#cliSettingsPopup
+!#if cap_html_filtering
+appdisqus.com##^div.cli-popupbar-overlay
+!#endif
+appdisqus.com##div.cli-popupbar-overlay
+!#if cap_html_filtering
+appdisqus.com##^center
+!#endif
+appdisqus.com##center
+!#if cap_html_filtering
+appdisqus.com##^div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
+!#endif
+appdisqus.com##div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
+
 !MARK: ---tech ---
 
 !lcdtvthailand.com 20240616234447
@@ -3948,46 +3978,46 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||meet.google.com^$generichide
 @@||classroom.google.com^$generichide
 @@||cloud.google.com^$generichide
-@@||docs.google.com^$ehide
+@@||docs.google.com^$generichide
 @@||drive.google.com^$generichide
-@@||mail.google.com^$ehide
-@@||play.google.com^$ehide
+@@||mail.google.com^$generichide
+@@||play.google.com^$generichide
 @@||news.google.com^$generichide
-@@||translate.google.com^$ehide
-@@||myaccount.google.com^$ehide
-@@||photos.google.com^$ehide
+@@||translate.google.com^$generichide
+@@||myaccount.google.com^$generichide
+@@||photos.google.com^$generichide
 @@||www.youtube.com^$generichide
 @@||www.youtube-nocookie.com^$generichide
 @@||m.youtube.com^$generichide
 @@||i.ytimg.com^$generichide
 @@||studio.youtube.com^$generichide
 @@||music.youtube.com^$generichide
-@@||earth.google.com^$ehide
-@@||bard.google.com^$ehide
-@@||accounts.google.com^$ehide
-@@||googlesource.com^$ehide
-@@||apis.google.com^$ehide
-@@||developers.google.com^$ehide
+@@||earth.google.com^$generichide
+@@||bard.google.com^$generichide
+@@||accounts.google.com^$generichide
+@@||googlesource.com^$generichide
+@@||apis.google.com^$generichide
+@@||developers.google.com^$generichide
 !MARK: ---Microsoft ---
 @@||account.live.com^$generichide
 @@||github.com^$generichide
 @@||github.blog^$generichide
 @@||www.githubstatus.com^$generichide
 @@||raw.githubusercontent.com^$generichide
-@@||onedrive.live.com^$ehide
+@@||onedrive.live.com^$generichide
 @@||outlook.live.com^$generichide
 @@||login.microsoftonline.com^$generichide
 @@||www.msn.com^$generichide
 @@||visualstudio.microsoft.com^$generichide
-@@||www.office.com^$ehide
+@@||www.office.com^$generichide
 @@||devblogs.microsoft.com^$generichide
 @@||learn.microsoft.com^$generichide
 @@||*.swiftkey.com^$generichide
 @@||techcommunity.microsoft.com^$generichide
-@@||account.microsoft.com^$ehide
-@@||support.microsoft.com^$ehide
+@@||account.microsoft.com^$generichide
+@@||support.microsoft.com^$generichide
 !MARK: ---clouds cloud ---
-@@||mega.nz^$ehide
+@@||mega.nz^$generichide
 @@||mega.io^$generichide
 @@||terabox.com^$generichide
 @@||dropbox.com^$generichide
@@ -3995,16 +4025,16 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||icedrive.net^$generichide
 @@||koofr.eu^$generichide
 @@||mediafire.com^$generichide
-@@||storj.io^$ehide
-@@||icloud.com^$ehide
-@@||cloudflare.com^$ehide
+@@||storj.io^$generichide
+@@||icloud.com^$generichide
+@@||cloudflare.com^$generichide
 @@||www.cloudflarestatus.com^$generichide
 !MARK: ---picture image or host---
 @@||imgur.*$generichide
 @@||imgbb.com^$generichide
 @@||imgbox.com^$generichide
 !cosmetics rules breaks some features
-@@||photopea.com^$ehide
+@@||photopea.com^$generichide
 !MARK: ---video ---
 @@||streamable.com^$generichide
 @@||jwplayer.com^$generichide
@@ -4012,8 +4042,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---ai ---
 @@||openai.com^$generichide
 !MARK: ---desgin ---
-@@||canva.com^$ehide
-@@||figma.com^$ehide
+@@||canva.com^$generichide
+@@||figma.com^$generichide
 !MARK: ---work ---
 @@||workona.com^$generichide
 @@||hive.com^$generichide
@@ -4032,13 +4062,13 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||www.bloomberg.com^$generichide
 @@||indiatimes.com^$generichide
 !MARK: ---conference ---
-@@||slack.com^$ehide
+@@||slack.com^$generichide
 @@||teams.microsoft.com^$generichide
 @@||telegram.org^$generichide
 @@||whatsapp.com^$generichide
 !MARK: ---music ---
-@@||open.spotify.com^$ehide
-@@||developer.spotify.com^$ehide
+@@||open.spotify.com^$generichide
+@@||developer.spotify.com^$generichide
 @@||tidal.com^$generichide
 @@||joox.com^$generichide
 @@||www.last.fm^$generichide
@@ -4053,9 +4083,9 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||wolframalpha.com^$generichide
 @@||desmos.com^$generichide
 @@||geogebra.org^$generichide
-@@||grammarly.com^$ehide
+@@||grammarly.com^$generichide
 @@||panyasociety.com^$generichide
-@@||khanacademy.org^$ehide
+@@||khanacademy.org^$generichide
 !MARK: ---free web host ---
 @@||000webhost.com^$generichide
 @@||infinityfreeapp.com^$generichide
@@ -4063,7 +4093,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---redirect qr code ---
 @@||qrbridge.me^$generichide
 !MARK: ---social platform ---
-@@||discord.com^$ehide
+@@||discord.com^$generichide
 @@||line.me^$generichide
 @@||facebook.com*$generichide
 @@||instagram.com^$generichide
@@ -4115,7 +4145,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||yandex.com^$generichide
 @@||perplexity.ai^$generichide
 !MARK: ---shopping online sale---
-@@||shopee.co.th^$ehide
+@@||shopee.co.th^$generichide
 @@||lazada.co.th^$generichide
 @@||stacksocial.com^$generichide
 @@||amazon.com^$generichide
@@ -4123,8 +4153,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||adguard-dns.io^$generichide
 @@||nextdns.io^$generichide
 !MARK: ---game ---
-@@||epicgames.com^$ehide
-@@||steampowered.com^$ehide
+@@||epicgames.com^$generichide
+@@||steampowered.com^$generichide
 @@||mihoyo.com^$generichide
 @@||hoyoverse.com^$generichide
 @@||hoyo.link^$generichide
@@ -4135,7 +4165,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||riotgames.com^$generichide
 @@||ubisoft.asia^$generichide
 @@||ubisoft.com^$generichide
-@@||ubisoftconnect.com^$ehide
+@@||ubisoftconnect.com^$generichide
 @@||accounts.krafton.com^$generichide
 @@||pubg.com^$generichide
 @@||modrinth.com^$generichide
@@ -4149,7 +4179,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---game news ---
 @@||pcgamesn.com^$generichide
 !MARK: ---foods food serices ---
-@@||www.kfc.*$ehide
+@@||www.kfc.*$generichide
 @@||www.grab.com^$generichide
 @@||www.foodpanda.*$generichide
 !MARK: ---watchlist review movie anime tv show ---
@@ -4177,9 +4207,9 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||syosetu.com^$generichide
 !MARK: ---benmarck speedtest web ---
 @@||speedtest.net^$generichide
-@@||basemark.com^$ehide
-@@||browserbench.org^$ehide
-@@||www.principledtechnologies.com^$ehide
+@@||basemark.com^$generichide
+@@||browserbench.org^$generichide
+@@||www.principledtechnologies.com^$generichide
 !MARK: --- test ---
 @@||keyboard-test.space^$generichide
 !MARK: ---auto web ---
@@ -4187,8 +4217,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---file transfer ---
 @@||wetransfer.com^$generichide
 @@||send-anywhere.com^$generichide
-@@||snapdrop.net^$ehide
-@@||pairdrop.net^$ehide
+@@||snapdrop.net^$generichide
+@@||pairdrop.net^$generichide
 @@||sharedrop.io^$generichide
 @@||send.cm^$generichide
 @@||uploadmx.com^$generichide
@@ -4249,11 +4279,11 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 
 !MARK: ---note ---
 @@||goodnotes.com^$generichide
-@@||web.goodnotes.com^$ehide
+@@||web.goodnotes.com^$generichide
 @@||feedback.goodnotes.com^$generichide
 @@||evernote.com^$generichide
-@@||notion.so^$ehide
-@@||todoist.com^$ehide
+@@||notion.so^$generichide
+@@||todoist.com^$generichide
 @@||obsidian.md^$generichide
 @@||scrintal.com^$generichide
 !MARK: ---tech companies ---
@@ -4281,7 +4311,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||thepythoncode.com^$generichide
 @@||codeberg.org^$generichide
 @@||askubuntu.com^$generichide
-@@||thunkable.com^$ehide
+@@||thunkable.com^$generichide
 !MARK: ---web builder ---
 !MARK: ---web engine web browser ---
 @@||mozilla.org^$generichide
@@ -4290,19 +4320,19 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||floccus.org^$generichide
 @@||modheader.com^$generichide
 @@||similarweb.com^$generichide
-@@||visualping.io^$ehide
+@@||visualping.io^$generichide
 !MARK: ---trust checker web ---
 @@||mywot.com^$generichide
 @@||trustpilot.com^$generichide
 @@||downforeveryoneorjustme.com^$generichide
 @@||isitdownrightnow.com^$generichide
-@@||hybrid-analysis.com^$ehide
+@@||hybrid-analysis.com^$generichide
 @@||who.is^$generichide
-@@||ssltrust.com.au^$ehide
+@@||ssltrust.com.au^$generichide
 @@||urlscan.io^$generichide
 !MARK: ---password manager ---
 @@||1password.com^$generichide
-@@||bitwarden.com^$ehide
+@@||bitwarden.com^$generichide
 @@||dashlane.com^$generichide
 @@||keepersecurity.com^$generichide
 !MARK: ---payment ---
@@ -4373,13 +4403,13 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||hotstar.com^$generichide
 @@||flixerapp.com^$generichide
 !MARK: ---weather ---
-@@||windy.com^$ehide
+@@||windy.com^$generichide
 @@||www.iqair.com^$generichide
 @@||aqicn.org^$generichide
 !MARK: --- chat ---
-@@||static.zdassets.com^$ehide
+@@||static.zdassets.com^$generichide
 !MARK: --- browser extension ---
-@@||www.automa.site^$ehide
+@@||www.automa.site^$generichide
 !MARK: --- git ---
 @@||gitlab.com^$generichide
 @@||gitea.angry.im^$generichide
@@ -4596,7 +4626,7 @@ youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, fals
 @@||www.blockdit.com^$generichide
 @@||sooplive.com^$generichide
 !MARK: ---dictionary ---
-@@||thaifastdict.com^$ehide
+@@||thaifastdict.com^$generichide
 !MARK: ---game ---
 @@||jokergameth.com^$generichide
 @@||garena.in.th^$generichide
@@ -4644,6 +4674,7 @@ youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, fals
 @@||techtalkthai.com^$generichide
 @@||entechreview.com^$generichide
 @@||enterpriseitpro.net^$generichide
+@@||appdisqus.com^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
 @@||techsauce.co^$generichide
@@ -4738,8 +4769,8 @@ youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, fals
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
-@@||wiki.anime-os.com^$ehide
-@@||akibatan.com^$ehide
+@@||wiki.anime-os.com^$generichide
+@@||akibatan.com^$generichide
 !MARK: ---anime illegitimate ---
 @@||www.anime-sugoi.com^$generichide
 @@||anime-masters.com^$generichide
