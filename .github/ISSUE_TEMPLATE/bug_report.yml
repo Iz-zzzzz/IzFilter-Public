@@ -54,12 +54,13 @@ body:
       label: พบข้อผิดพลาดประเภทใด?
       multiple: true
       options:
-        - โฆษณาหรืออื่นๆ ไม่ครบถ้วน
+        - Block โฆษณาหรืออื่นๆ ไม่ครบถ้วน
         - Website ทำงานไม่ปกติ
         - Ad blocker ถูกตรวจจับได้โดย website
         - Analytics or tracker ที่ไม่ได้ block
         - Website อันตราย
         - Block ไม่ตรงตาม จุดประสงค์ (ที่หน้า readme ใต้หัวข้อแรก)
+        - เกิดปัญหากับ filter อื่นๆ
         - อื่นๆ (กรุณาระบุที่ช่อง หมายเหตุด้านล่าง)
     validations:
       required: true
@@ -69,7 +70,7 @@ body:
       label: Browser ที่ใช้งาน และพบข้อผิดพลาด คือ?
       multiple: true
       options:
-        - Firefox
+        - Firefox (รวมถึง Firefox fork เช่น LibreWolf, Floorp)
         - Chrome
         - Safari
         - Microsoft Edge
@@ -143,7 +144,7 @@ body:
       label: ใส่หมายเหตุ และ screenshot
       description: |
         1. ใส่ screenshot ขณะพบปัญหา พร้อมวงจุดที่เกิดปัญหาให้เรียบร้อย
-          ใช้ `<details> </details>` ครอบ screenshot ด้วย
+          เช่น `<details><summary>Screenshot 1:</summary> <!-- วาง screenshot ที่นี้ --> </details>`
         2. อธิบายอย่างละเอียด ให้เข้าใจได้ว่า ข้อผิดพลาดคืออะไร
         3. กล่าวถึง ข้อมูลหรือปัจจัยอื่นๆ ที่ผู้ดูแลควรทราบ
 
@@ -153,9 +154,7 @@ body:
 
           2. Screenshots
           <details><summary>Screenshot 1:</summary>
-
           <!-- วาง screenshot ที่นี้ -->
-
           </details>
 
     validations:
