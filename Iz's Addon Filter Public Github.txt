@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250113182039
+! Version: 20250115183928
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -12,10 +12,10 @@
 !* 
 !****************************************************************************************
 
-/^https?:\/\/vvv\./$all
-/^https?:\/\/vvw\./$all
-/^https?:\/\/vww\./$all
-/^https?:\/\/vwv\./$all
+||vvv.$all
+||vvw.$all
+||vww.$all
+||vwv.$all
 
 !!!**************************************************************************************
 !MARK: Specific
@@ -162,173 +162,165 @@
 ||clickupenterprise.net^$all
 ||otrxio.com^$all
 ||thexpoose.com^$all
-||9minecraft.net^$all
-||9minecraft.com^$all
+||9minecraft.net^$all,domain=~illegal-minecraft-content-plz-use-dev-site-directly
+
+||9minecraft.com^$all,domain=~illegal-minecraft-content-plz-use-dev-site-directly
 
 !!!**************************************************************************************
 !MARK:Mal search engine self gathering
 !****************************************************************************************
 
 !มี mal extension redirect ไป search engine นี้
-||bestsearch.ai^$all
+||bestsearch.ai^$all,domain=~mal-search-engine
 !มี malware บน Windows ติดตั้งแล้ว บังคับเปลี่ยน seach engine เป็นอันนี้ 20240707230002
-||buddyfnd.com^$all
+||buddyfnd.com^$all,domain=~mal-search-engine
 
 !!!**************************************************************************************
 !MARK:Mal sites from Thai SMS self gathering
 !****************************************************************************************
 
-||ipi.in^$all
-||xpay168.vip^$all
-||lv5vip.com^$all
-||iba888.com^$all
-||kng.wtf^$all
-||rv-th.com^$all
-||es-th.com^$all
-||so-th.com^$all
-||www.pea.do-th.com^$all
-||1th.me^$all
-||88lg.cc^$all
-||pea.to-go.cc^$all
-||pea.cxth.cc^$all
+||ipi.in^$all,domain=~thai-sms-spam
+||xpay168.vip^$all,domain=~thai-sms-spam
+||lv5vip.com^$all,domain=~thai-sms-spam
+||iba888.com^$all,domain=~thai-sms-spam
+||kng.wtf^$all,domain=~thai-sms-spam
+||rv-th.com^$all,domain=~thai-sms-spam
+||es-th.com^$all,domain=~thai-sms-spam
+||so-th.com^$all,domain=~thai-sms-spam
+||www.pea.do-th.com^$all,domain=~thai-sms-spam
+||1th.me^$all,domain=~thai-sms-spam
+||88lg.cc^$all,domain=~thai-sms-spam
+||pea.to-go.cc^$all,domain=~thai-sms-spam
+||pea.cxth.cc^$all,domain=~thai-sms-spam
 !หลอกเป็น flash ว่าส่งของไม่สำเร็จ แล้วประเด็นคือ วันที่ได้ SMS ส่งของจริงๆ ในวันนั้นด้วย แต่คนที่ส่งจริงวันนั้นไม่ได้บอกว่าเจ้าไหน
-||www.flash.or-go.com^$all
+||www.flash.or-go.com^$all,domain=~thai-sms-spam
 !หลอกเป็น ais แลก point แถมเนียนตัวมากับ SMS แท้ด้วย 20240407211253 https://www.facebook.com/groups/9arm.community/posts/3736511873304163/
-||ais-th.rest^$all
-||cutt.ly/neon24^$all
-||whatsApp-ws.tv^$all
-||whatsopp.cc^$all
-||7dooi.com^$all
-||www.apple-th.online^$all
-||casiogshockthailand.website^$all
-||shuna.one^$all
-||m9s.in^$all
-||i9i.in^$all
+||ais-th.rest^$all,domain=~thai-sms-spam
+||cutt.ly/neon24^$all,domain=~thai-sms-spam
+||whatsApp-ws.tv^$all,domain=~thai-sms-spam
+||whatsopp.cc^$all,domain=~thai-sms-spam
+||7dooi.com^$all,domain=~thai-sms-spam
+||www.apple-th.online^$all,domain=~thai-sms-spam
+||casiogshockthailand.website^$all,domain=~thai-sms-spam
+||shuna.one^$all,domain=~thai-sms-spam
+||m9s.in^$all,domain=~thai-sms-spam
+||i9i.in^$all,domain=~thai-sms-spam
 
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
 !****************************************************************************************
 
-||nextbigthing.pro^$all
+||nextbigthing.pro^$all,domain=~spam-via-browser-noti-api
 
 !!!**************************************************************************************
 !MARK:Try to download PUA Bitdefender
 !****************************************************************************************
 
-||virus-removal-guide.net^$all
+||virus-removal-guide.net^$all,domain=~try-to-download-pua
 
 !!!**************************************************************************************
 !MARK:Spam in Facebook.com comment self gathering
 !****************************************************************************************
 
-||uich.cc^$all
-||sshon.info^$all
-||thaimedia.shop^$all
-||shorten.is^$all
-||thaitubtv.shop^$all
-||2no.co^$all
-||rrhonka.com^$all
-||neverforget.mom^$all
-||uejdi.icu^$all
-||kipokans.buzz^$all
-||dazedarticulate.com^$all
-||dailycoverage.asia^$all
-||ezstat.ru^$all
-||iplogger.com^$all
-||go-via.cc^$all
-||abre.ai^$all
-||iplog.co^$all
-||twentyseven.ltd^$all
-||qptr.ru^$all
-||mediahotstar.shop^$all
-||boscurtiespedia.pics^$all
-||ny-x.cc^$all
-||citly.me^$all
-||telegra.ph^$all
-||ln.run^$all
-||cbsmedia.shop^$all
-||brhonka.com^$all
-||hdjr.wiki^$all
-! short link ที่มิจฉาชีพชอบใช้
-||l.facebook.com/l.php?u=https://tinyurl.com^$doc
-||l.facebook.com/l.php?u=https://shorter.me^$doc
-||l.facebook.com/l.php?u=https://ln.run^$doc
-||l.facebook.com/l.php?u=https://u.to^$doc
-||l.facebook.com/l.php?u=https://lnnk.in^$doc
-||l.facebook.com/l.php?u=https://short.com.vn^$doc
-||l.facebook.com/l.php?u=https://sprl.in^$all
-||ilang.in^$all
-||mzen-gasskeunnn.mom^$all
-||accesscam.org^$all
-||munboom.com^$all
-||adenmeledak.lol^$all
-||darbossmile.shop^$all
-||ikiwngabrettt.motorcycles^$all
-||biz.id^$all
-||nextpart.co.uk^$all
-||redr.me^$all
-||todayline.fun^$all
-||www.centralworld-tha.online^$all
-||l.facebook.com/l.php?u=http://ln.run^$all
-||thairathmedia.shop^$all
-||thaicreations.shop^$all
-||bnbc.uno^$all
-||getsalenow.com^$all
-||faeccbook.com^$all
-||99tube.shop^$all
-||digitalsocialize.icu^$all
-||url1.io^$all
-||nqm.asia^$all
-||livestreamiing.com^$all
-||ibbox.id^$all
-||iterabox.id^$all
-||ohbulan.sbs^$all
-||smialex.id^$all
+||uich.cc^$all,domain=~facebook-spam
+||sshon.info^$all,domain=~facebook-spam
+||thaimedia.shop^$all,domain=~facebook-spam
+||shorten.is^$all,domain=~facebook-spam
+||thaitubtv.shop^$all,domain=~facebook-spam
+||2no.co^$all,domain=~facebook-spam
+||rrhonka.com^$all,domain=~facebook-spam
+||neverforget.mom^$all,domain=~facebook-spam
+||uejdi.icu^$all,domain=~facebook-spam
+||kipokans.buzz^$all,domain=~facebook-spam
+||dazedarticulate.com^$all,domain=~facebook-spam
+||dailycoverage.asia^$all,domain=~facebook-spam
+||ezstat.ru^$all,domain=~facebook-spam
+||iplogger.com^$all,domain=~facebook-spam
+||go-via.cc^$all,domain=~facebook-spam
+||abre.ai^$all,domain=~facebook-spam
+||iplog.co^$all,domain=~facebook-spam
+||twentyseven.ltd^$all,domain=~facebook-spam
+||qptr.ru^$all,domain=~facebook-spam
+||mediahotstar.shop^$all,domain=~facebook-spam
+||boscurtiespedia.pics^$all,domain=~facebook-spam
+||ny-x.cc^$all,domain=~facebook-spam
+||citly.me^$all,domain=~facebook-spam
+||telegra.ph^$all,domain=~facebook-spam
+||ln.run^$all,domain=~facebook-spam
+||cbsmedia.shop^$all,domain=~facebook-spam
+||brhonka.com^$all,domain=~facebook-spam
+||hdjr.wiki^$all,domain=~facebook-spam
+||ilang.in^$all,domain=~facebook-spam
+||mzen-gasskeunnn.mom^$all,domain=~facebook-spam
+||accesscam.org^$all,domain=~facebook-spam
+||munboom.com^$all,domain=~facebook-spam
+||adenmeledak.lol^$all,domain=~facebook-spam
+||darbossmile.shop^$all,domain=~facebook-spam
+||ikiwngabrettt.motorcycles^$all,domain=~facebook-spam
+||biz.id^$all,domain=~facebook-spam
+||nextpart.co.uk^$all,domain=~facebook-spam
+||redr.me^$all,domain=~facebook-spam
+||todayline.fun^$all,domain=~facebook-spam
+||www.centralworld-tha.online^$all,domain=~facebook-spam
+||thairathmedia.shop^$all,domain=~facebook-spam
+||thaicreations.shop^$all,domain=~facebook-spam
+||bnbc.uno^$all,domain=~facebook-spam
+||getsalenow.com^$all,domain=~facebook-spam
+||faeccbook.com^$all,domain=~facebook-spam
+||99tube.shop^$all,domain=~facebook-spam
+||digitalsocialize.icu^$all,domain=~facebook-spam
+||url1.io^$all,domain=~facebook-spam
+||nqm.asia^$all,domain=~facebook-spam
+||livestreamiing.com^$all,domain=~facebook-spam
+||ibbox.id^$all,domain=~facebook-spam
+||iterabox.id^$all,domain=~facebook-spam
+||ohbulan.sbs^$all,domain=~facebook-spam
+||smialex.id^$all,domain=~facebook-spam
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
-||rx-help-center.xyz^$all
+||rx-help-center.xyz^$all,domain=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
-||facbook-supp.pages.dev.br^$all
+||facbook-supp.pages.dev.br^$all,domain=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
-||home-business-helper.com^$all
+||home-business-helper.com^$all,domain=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
-||f-help-case-file-form.glitch.me^$all
-||khaosod.cloud^$all
-||my.id^$doc
-||rb.gy^$all
-||abcnews.cyou^$all
-||pageorama.com^$all
-||honekrasae.cloud^$all
-||nbaoutletstore.us.kg^$all
-||e.vg^$all
-||doodfile.com^$all
-||fecabokk.com^$all
+||f-help-case-file-form.glitch.me^$all,domain=~facebook-spam
+||khaosod.cloud^$all,domain=~facebook-spam
+||my.id^$doc,domain=~facebook-spam
+||rb.gy^$all,domain=~facebook-spam
+||abcnews.cyou^$all,domain=~facebook-spam
+||pageorama.com^$all,domain=~facebook-spam
+||honekrasae.cloud^$all,domain=~facebook-spam
+||nbaoutletstore.us.kg^$all,domain=~facebook-spam
+||e.vg^$all,domain=~facebook-spam
+||doodfile.com^$all,domain=~facebook-spam
+||fecabokk.com^$all,domain=~facebook-spam
+||facelboolk.com^$all,domain=~facebook-spam
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
 !****************************************************************************************
 
-||7link.ru^$all
-||u.to^$doc
+||7link.ru^$all,domain=~discord-spam
 
 !!!**************************************************************************************
 !MARK:Twitter (x.com) spam self gathering
 !****************************************************************************************
 
-||jey48.xyz^$all
+||jey48.xyz^$all,domain=~x.com-spam
 
 !!!**************************************************************************************
 !MARK:Telegram spam
 !****************************************************************************************
 
-||oec-br.fit^$all
+||oec-br.fit^$all,domain=~telegram-spam
 
 !!!**************************************************************************************
 !MARK: Weird behaviour
 !****************************************************************************************
 
 ! เว็บมังงะที่แปลทุกคำผ่าน AI ทั้งหมด ซึ่งมันแปลกๆ เหมือนคนทำเป็นต่างชาติแล้วทำเว็บไทย
-||pengi.co^$all
+||pengi.co^$doc,domain=~site-has-weird-acitivities-and-has-a-lot-of-ai-gen-content
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -2108,31 +2100,55 @@ komchadluek.net##^div[class^="dynamic-ads__"]
 !#endif
 komchadluek.net##div[class^="dynamic-ads__"]
 
-!petmaya.com 20240527165857
+!petmaya.com 20250115171052
 !#if cap_html_filtering
 petmaya.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
+!#else
 petmaya.com##ins.adsbygoogle[data-ad-slot]
+!#endif
 
-!aseannow.com 20240527165901
+!aseannow.com 20250115170953
 !#if cap_html_filtering
 aseannow.com##^[data-role="sidebarAd"]
-!#endif
+!#else
 aseannow.com##[data-role="sidebarAd"]
+!#endif
 !#if cap_html_filtering
 aseannow.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
+!#else
 aseannow.com##ins.adsbygoogle[data-ad-slot]
+!#endif
 !#if cap_html_filtering
 aseannow.com##^#taboola-right-rail-thumbnails-1
-!#endif
+!#else
 aseannow.com###taboola-right-rail-thumbnails-1
+!#endif
+!#if cap_html_filtering
+aseannow.com##^div[class="ipsResponsive leaderboard"]
+!#else
+aseannow.com##div[class="ipsResponsive leaderboard"]
+!#endif
+!#if cap_html_filtering
+aseannow.com##^script:has-text(div-gpt-ad)
+!#else
+aseannow.com##+js(rmnt, script, div-gpt-ad)
+!#endif
 
-!thethaiger.com 20240527165905
+!thethaiger.com 20250115132639
 !#if cap_html_filtering
 thethaiger.com##^ins.adsbygoogle[data-ad-slot]
 !#else
 thethaiger.com##ins.adsbygoogle[data-ad-slot]
+!#endif
+!#if cap_html_filtering
+thethaiger.com##^.code-block
+!#else
+thethaiger.com##.code-block
+!#endif
+!#if cap_html_filtering
+thethaiger.com##^.widget_media_image
+!#else
+thethaiger.com##.widget_media_image
 !#endif
 
 !sportingnews.com 20241017142650
@@ -2184,10 +2200,26 @@ thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 !marketthink.co 20241019133329
 marketthink.co##div[class="mb-4"][style="height:250px"]
 
-!thaipost.net 20241021000525
+!thaipost.net 20250115170628
+!#if cap_html_filtering
+thaipost.net##^section[id="block-7"]
+!#else
 thaipost.net##section[id="block-7"]
+!#endif
+!#if cap_html_filtering
+thaipost.net##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
+!#else
 thaipost.net##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
+!#endif
+!#if cap_html_filtering
+thaipost.net##^#taboola-right-rail-thumbnails
+!#else
 thaipost.net###taboola-right-rail-thumbnails
+!#endif
+
+!today.line.me 20250115170630
+today.line.me##div[id^="ad-module-article"]:upward(1)
+today.line.me##div[id^="ad-module-mid"]
 
 !MARK: ---tech news ---
 
@@ -3906,7 +3938,6 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt*="baccarat"]
 ##img[alt="บาคาร่า"]
 ##img[alt^="pgslot"]
-
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -3993,7 +4024,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||studio.youtube.com^$generichide
 @@||music.youtube.com^$generichide
 @@||earth.google.com^$generichide
-@@||bard.google.com^$generichide
+@@||gemini.google.com^$generichide
 @@||accounts.google.com^$generichide
 @@||googlesource.com^$generichide
 @@||apis.google.com^$generichide
@@ -4096,6 +4127,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||discord.com^$generichide
 @@||line.me^$generichide
 @@||facebook.com*$generichide
+@@||facebook.net*$generichide
 @@||instagram.com^$generichide
 @@||twitter.com^$generichide
 @@||x.com^$generichide
