@@ -15,7 +15,7 @@ body:
       options:
         - label: Iz's Addon Filter ที่พบปัญหาได้ทำการ update เป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
-        - label: ad blocker Extension หรือ Application ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
+        - label: Ad blocker ที่ใช้เป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
         - label: Browser ที่ใช้งานและพบปัญหาเป็น version ล่าสุดแล้ว ใช่หรือไม่?
           required: true
@@ -43,7 +43,7 @@ body:
 
   - type: input
     attributes:
-      label: Ad blocker Extension หรือ Application ที่พบข้อผิดพลาดเป็น version อะไร
+      label: Ad blocker ที่ใช้ แล้วพบข้อผิดพลาดเป็น version อะไร
       description: กรุณาระบุด้านล่าง โดยส่วนใหญ่มักจะหา version ได้จาก หน้า about ของ software ที่คุณใช้
       placeholder: ตัวอย่างเช่น 1.56.1
     validations:
@@ -83,7 +83,7 @@ body:
   - type: dropdown
     attributes:
       label: ชนิดของอุปกรณ์ที่พบปัญหา
-      multiple: false
+      multiple: true
       options:
         - Desktop (Windows PC, MacOS, Linux Desktop, Chrome OS)
         - Mobile (Smartphone, Tablet)
@@ -133,9 +133,9 @@ body:
         - Block WebRTC
         - Block Push API
         - Block Location API
-        - Hide Referrer from third-parties (specify in comment below, if used custom value)
-        - Hide your User-Agent (specify in comment below, if used custom value)
-        - Mask your IP address (specify in comment below, if used custom value)
+        - Hide Referrer from third-parties (ถ้าใช้ค่า custom กรุณาบอกในช่องหมายเหตุด้านล่าง)
+        - Hide your User-Agent (ถ้าใช้ค่า custom กรุณาบอกในช่องหมายเหตุด้านล่าง)
+        - Mask your IP address (ถ้าใช้ค่า custom กรุณาบอกในช่องหมายเหตุด้านล่าง)
         - Remove X-Client-Data header from HTTP requests
         - Protect from DPI
 
