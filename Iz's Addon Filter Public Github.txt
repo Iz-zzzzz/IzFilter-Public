@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250115183928
+! Version: 20250118232026
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -276,15 +276,7 @@
 ||iterabox.id^$all,domain=~facebook-spam
 ||ohbulan.sbs^$all,domain=~facebook-spam
 ||smialex.id^$all,domain=~facebook-spam
-! Spam/Phising in Facebook.com messenger self gathering CONFIRM
-! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
-||rx-help-center.xyz^$all,domain=~facebook-spam
-! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
-||facbook-supp.pages.dev.br^$all,domain=~facebook-spam
-! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
-||home-business-helper.com^$all,domain=~facebook-spam
-! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
-||f-help-case-file-form.glitch.me^$all,domain=~facebook-spam
+||faecabook.com^$all,domain=~facebook-spam
 ||khaosod.cloud^$all,domain=~facebook-spam
 ||my.id^$doc,domain=~facebook-spam
 ||rb.gy^$all,domain=~facebook-spam
@@ -294,8 +286,21 @@
 ||nbaoutletstore.us.kg^$all,domain=~facebook-spam
 ||e.vg^$all,domain=~facebook-spam
 ||doodfile.com^$all,domain=~facebook-spam
-||fecabokk.com^$all,domain=~facebook-spam
+||fecabokk.com^$all,domain=~facebook-spam-to-aff-link
 ||facelboolk.com^$all,domain=~facebook-spam
+||ffecabook.com^$all,domain=~facebook-spam-to-aff-link
+||sharklucidlyunauthorized.com^$all,domain=~facebook-spam
+||collshp.com^$all,domain=~facebook-spam
+
+! Spam/Phising in Facebook.com messenger self gathering CONFIRM
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
+||rx-help-center.xyz^$all,domain=~facebook-spam
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
+||facbook-supp.pages.dev.br^$all,domain=~facebook-spam
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
+||home-business-helper.com^$all,domain=~facebook-spam
+! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
+||f-help-case-file-form.glitch.me^$all,domain=~facebook-spam
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
@@ -1065,6 +1070,10 @@ https://cdn.apicdn*.one^$xhr
 ||videos.cdnstorage*.top/*$media
 
 ||clip2thai.com^$image,3p
+
+||adsok.co^$3p
+
+||ads.global.ssl.fastly.net^$3p
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -4000,7 +4009,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-generate:style(display: block !impor
 colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important;)
 !!!**************************************************************************************
 !* 
-!* Performance (No Thai sites)
+!* Filtering Performance (No Thai sites)
 !* 
 !****************************************************************************************
 
@@ -4484,11 +4493,20 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 /web-vitals.$badfilter
 /web-vitals.$domain=~aws.amazon.com
 
-youtube.com#@#+js(set-constant, google_ad_status, 1)
-youtube.com#@#+js(set-constant, yt.config_.EXPERIMENT_FLAGS.web_bind_fetch, false)
 !!!**************************************************************************************
 !* 
-!* Performance (Thai sites)
+!* Browser Performance
+!* 
+!****************************************************************************************
+
+! 20250118200634
+!#if env_firefox
+! https://bugzilla.mozilla.org/show_bug.cgi?id=1795469
+||api.altmetric.com^$3p,script
+!#endif
+!!!**************************************************************************************
+!* 
+!* Filtering Performance (Thai sites)
 !* 
 !****************************************************************************************
 
