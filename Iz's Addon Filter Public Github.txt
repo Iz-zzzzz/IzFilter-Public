@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250118232026
+! Version: 20250121190412
 ! Expires: 1 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -162,170 +162,175 @@
 ||clickupenterprise.net^$all
 ||otrxio.com^$all
 ||thexpoose.com^$all
-||9minecraft.net^$all,domain=~illegal-minecraft-content-plz-use-dev-site-directly
+||9minecraft.net^$all,from=~illegal-minecraft-content-plz-use-dev-site-directly
 
-||9minecraft.com^$all,domain=~illegal-minecraft-content-plz-use-dev-site-directly
+||9minecraft.com^$all,from=~illegal-minecraft-content-plz-use-dev-site-directly
 
 !!!**************************************************************************************
 !MARK:Mal search engine self gathering
 !****************************************************************************************
 
 !มี mal extension redirect ไป search engine นี้
-||bestsearch.ai^$all,domain=~mal-search-engine
+||bestsearch.ai^$all,from=~mal-search-engine
 !มี malware บน Windows ติดตั้งแล้ว บังคับเปลี่ยน seach engine เป็นอันนี้ 20240707230002
-||buddyfnd.com^$all,domain=~mal-search-engine
+||buddyfnd.com^$all,from=~mal-search-engine
 
 !!!**************************************************************************************
 !MARK:Mal sites from Thai SMS self gathering
 !****************************************************************************************
 
-||ipi.in^$all,domain=~thai-sms-spam
-||xpay168.vip^$all,domain=~thai-sms-spam
-||lv5vip.com^$all,domain=~thai-sms-spam
-||iba888.com^$all,domain=~thai-sms-spam
-||kng.wtf^$all,domain=~thai-sms-spam
-||rv-th.com^$all,domain=~thai-sms-spam
-||es-th.com^$all,domain=~thai-sms-spam
-||so-th.com^$all,domain=~thai-sms-spam
-||www.pea.do-th.com^$all,domain=~thai-sms-spam
-||1th.me^$all,domain=~thai-sms-spam
-||88lg.cc^$all,domain=~thai-sms-spam
-||pea.to-go.cc^$all,domain=~thai-sms-spam
-||pea.cxth.cc^$all,domain=~thai-sms-spam
+||ipi.in^$all,from=~thai-sms-spam
+||xpay168.vip^$all,from=~thai-sms-spam
+||lv5vip.com^$all,from=~thai-sms-spam
+||iba888.com^$all,from=~thai-sms-spam
+||kng.wtf^$all,from=~thai-sms-spam
+||rv-th.com^$all,from=~thai-sms-spam
+||es-th.com^$all,from=~thai-sms-spam
+||so-th.com^$all,from=~thai-sms-spam
+||www.pea.do-th.com^$all,from=~thai-sms-spam
+||1th.me^$all,from=~thai-sms-spam
+||88lg.cc^$all,from=~thai-sms-spam
+||pea.to-go.cc^$all,from=~thai-sms-spam
+||pea.cxth.cc^$all,from=~thai-sms-spam
 !หลอกเป็น flash ว่าส่งของไม่สำเร็จ แล้วประเด็นคือ วันที่ได้ SMS ส่งของจริงๆ ในวันนั้นด้วย แต่คนที่ส่งจริงวันนั้นไม่ได้บอกว่าเจ้าไหน
-||www.flash.or-go.com^$all,domain=~thai-sms-spam
+||www.flash.or-go.com^$all,from=~thai-sms-spam
 !หลอกเป็น ais แลก point แถมเนียนตัวมากับ SMS แท้ด้วย 20240407211253 https://www.facebook.com/groups/9arm.community/posts/3736511873304163/
-||ais-th.rest^$all,domain=~thai-sms-spam
-||cutt.ly/neon24^$all,domain=~thai-sms-spam
-||whatsApp-ws.tv^$all,domain=~thai-sms-spam
-||whatsopp.cc^$all,domain=~thai-sms-spam
-||7dooi.com^$all,domain=~thai-sms-spam
-||www.apple-th.online^$all,domain=~thai-sms-spam
-||casiogshockthailand.website^$all,domain=~thai-sms-spam
-||shuna.one^$all,domain=~thai-sms-spam
-||m9s.in^$all,domain=~thai-sms-spam
-||i9i.in^$all,domain=~thai-sms-spam
+||ais-th.rest^$all,from=~thai-sms-spam
+||cutt.ly/neon24^$all,from=~thai-sms-spam
+||whatsApp-ws.tv^$all,from=~thai-sms-spam
+||whatsopp.cc^$all,from=~thai-sms-spam
+||7dooi.com^$all,from=~thai-sms-spam
+||www.apple-th.online^$all,from=~thai-sms-spam
+||casiogshockthailand.website^$all,from=~thai-sms-spam
+||shuna.one^$all,from=~thai-sms-spam
+||m9s.in^$all,from=~thai-sms-spam
+||i9i.in^$all,from=~thai-sms-spam
 
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
 !****************************************************************************************
 
-||nextbigthing.pro^$all,domain=~spam-via-browser-noti-api
+||nextbigthing.pro^$all,from=~spam-via-browser-noti-api
 
 !!!**************************************************************************************
 !MARK:Try to download PUA Bitdefender
 !****************************************************************************************
 
-||virus-removal-guide.net^$all,domain=~try-to-download-pua
+||virus-removal-guide.net^$all,from=~try-to-download-pua
 
 !!!**************************************************************************************
 !MARK:Spam in Facebook.com comment self gathering
 !****************************************************************************************
 
-||uich.cc^$all,domain=~facebook-spam
-||sshon.info^$all,domain=~facebook-spam
-||thaimedia.shop^$all,domain=~facebook-spam
-||shorten.is^$all,domain=~facebook-spam
-||thaitubtv.shop^$all,domain=~facebook-spam
-||2no.co^$all,domain=~facebook-spam
-||rrhonka.com^$all,domain=~facebook-spam
-||neverforget.mom^$all,domain=~facebook-spam
-||uejdi.icu^$all,domain=~facebook-spam
-||kipokans.buzz^$all,domain=~facebook-spam
-||dazedarticulate.com^$all,domain=~facebook-spam
-||dailycoverage.asia^$all,domain=~facebook-spam
-||ezstat.ru^$all,domain=~facebook-spam
-||iplogger.com^$all,domain=~facebook-spam
-||go-via.cc^$all,domain=~facebook-spam
-||abre.ai^$all,domain=~facebook-spam
-||iplog.co^$all,domain=~facebook-spam
-||twentyseven.ltd^$all,domain=~facebook-spam
-||qptr.ru^$all,domain=~facebook-spam
-||mediahotstar.shop^$all,domain=~facebook-spam
-||boscurtiespedia.pics^$all,domain=~facebook-spam
-||ny-x.cc^$all,domain=~facebook-spam
-||citly.me^$all,domain=~facebook-spam
-||telegra.ph^$all,domain=~facebook-spam
-||ln.run^$all,domain=~facebook-spam
-||cbsmedia.shop^$all,domain=~facebook-spam
-||brhonka.com^$all,domain=~facebook-spam
-||hdjr.wiki^$all,domain=~facebook-spam
-||ilang.in^$all,domain=~facebook-spam
-||mzen-gasskeunnn.mom^$all,domain=~facebook-spam
-||accesscam.org^$all,domain=~facebook-spam
-||munboom.com^$all,domain=~facebook-spam
-||adenmeledak.lol^$all,domain=~facebook-spam
-||darbossmile.shop^$all,domain=~facebook-spam
-||ikiwngabrettt.motorcycles^$all,domain=~facebook-spam
-||biz.id^$all,domain=~facebook-spam
-||nextpart.co.uk^$all,domain=~facebook-spam
-||redr.me^$all,domain=~facebook-spam
-||todayline.fun^$all,domain=~facebook-spam
-||www.centralworld-tha.online^$all,domain=~facebook-spam
-||thairathmedia.shop^$all,domain=~facebook-spam
-||thaicreations.shop^$all,domain=~facebook-spam
-||bnbc.uno^$all,domain=~facebook-spam
-||getsalenow.com^$all,domain=~facebook-spam
-||faeccbook.com^$all,domain=~facebook-spam
-||99tube.shop^$all,domain=~facebook-spam
-||digitalsocialize.icu^$all,domain=~facebook-spam
-||url1.io^$all,domain=~facebook-spam
-||nqm.asia^$all,domain=~facebook-spam
-||livestreamiing.com^$all,domain=~facebook-spam
-||ibbox.id^$all,domain=~facebook-spam
-||iterabox.id^$all,domain=~facebook-spam
-||ohbulan.sbs^$all,domain=~facebook-spam
-||smialex.id^$all,domain=~facebook-spam
-||faecabook.com^$all,domain=~facebook-spam
-||khaosod.cloud^$all,domain=~facebook-spam
-||my.id^$doc,domain=~facebook-spam
-||rb.gy^$all,domain=~facebook-spam
-||abcnews.cyou^$all,domain=~facebook-spam
-||pageorama.com^$all,domain=~facebook-spam
-||honekrasae.cloud^$all,domain=~facebook-spam
-||nbaoutletstore.us.kg^$all,domain=~facebook-spam
-||e.vg^$all,domain=~facebook-spam
-||doodfile.com^$all,domain=~facebook-spam
-||fecabokk.com^$all,domain=~facebook-spam-to-aff-link
-||facelboolk.com^$all,domain=~facebook-spam
-||ffecabook.com^$all,domain=~facebook-spam-to-aff-link
-||sharklucidlyunauthorized.com^$all,domain=~facebook-spam
-||collshp.com^$all,domain=~facebook-spam
+||uich.cc^$all,from=~facebook-spam
+||sshon.info^$all,from=~facebook-spam
+||thaimedia.shop^$all,from=~facebook-spam
+||shorten.is^$all,from=~facebook-spam
+||thaitubtv.shop^$all,from=~facebook-spam
+||2no.co^$all,from=~facebook-spam
+||rrhonka.com^$all,from=~facebook-spam
+||neverforget.mom^$all,from=~facebook-spam
+||uejdi.icu^$all,from=~facebook-spam
+||kipokans.buzz^$all,from=~facebook-spam
+||dazedarticulate.com^$all,from=~facebook-spam
+||dailycoverage.asia^$all,from=~facebook-spam
+||ezstat.ru^$all,from=~facebook-spam
+||iplogger.com^$all,from=~facebook-spam
+||go-via.cc^$all,from=~facebook-spam
+||abre.ai^$all,from=~facebook-spam
+||iplog.co^$all,from=~facebook-spam
+||twentyseven.ltd^$all,from=~facebook-spam
+||qptr.ru^$all,from=~facebook-spam
+||mediahotstar.shop^$all,from=~facebook-spam
+||boscurtiespedia.pics^$all,from=~facebook-spam
+||ny-x.cc^$all,from=~facebook-spam
+||citly.me^$all,from=~facebook-spam
+||telegra.ph^$all,from=~facebook-spam
+||ln.run^$all,from=~facebook-spam
+||cbsmedia.shop^$all,from=~facebook-spam
+||brhonka.com^$all,from=~facebook-spam
+||hdjr.wiki^$all,from=~facebook-spam
+||ilang.in^$all,from=~facebook-spam
+||mzen-gasskeunnn.mom^$all,from=~facebook-spam
+||accesscam.org^$all,from=~facebook-spam
+||munboom.com^$all,from=~facebook-spam
+||adenmeledak.lol^$all,from=~facebook-spam
+||darbossmile.shop^$all,from=~facebook-spam
+||ikiwngabrettt.motorcycles^$all,from=~facebook-spam
+||biz.id^$all,from=~facebook-spam
+||nextpart.co.uk^$all,from=~facebook-spam
+||redr.me^$all,from=~facebook-spam
+||todayline.fun^$all,from=~facebook-spam
+||www.centralworld-tha.online^$all,from=~facebook-spam
+||thairathmedia.shop^$all,from=~facebook-spam
+||thaicreations.shop^$all,from=~facebook-spam
+||bnbc.uno^$all,from=~facebook-spam
+||getsalenow.com^$all,from=~facebook-spam
+||faeccbook.com^$all,from=~facebook-spam
+||99tube.shop^$all,from=~facebook-spam
+||digitalsocialize.icu^$all,from=~facebook-spam
+||url1.io^$all,from=~facebook-spam
+||nqm.asia^$all,from=~facebook-spam
+||livestreamiing.com^$all,from=~facebook-spam
+||ibbox.id^$all,from=~facebook-spam
+||iterabox.id^$all,from=~facebook-spam
+||ohbulan.sbs^$all,from=~facebook-spam
+||smialex.id^$all,from=~facebook-spam
+||faecabook.com^$all,from=~facebook-spam
+||khaosod.cloud^$all,from=~facebook-spam
+||my.id^$doc,from=~facebook-spam
+||rb.gy^$all,from=~facebook-spam
+||abcnews.cyou^$all,from=~facebook-spam
+||pageorama.com^$all,from=~facebook-spam
+||honekrasae.cloud^$all,from=~facebook-spam
+||nbaoutletstore.us.kg^$all,from=~facebook-spam
+||e.vg^$all,from=~facebook-spam
+||doodfile.com^$all,from=~facebook-spam
+||fecabokk.com^$all,from=~facebook-spam-to-aff-link
+||facelboolk.com^$all,from=~facebook-spam
+||ffecabook.com^$all,from=~facebook-spam-to-aff-link
+||sharklucidlyunauthorized.com^$all,from=~facebook-spam
+||collshp.com^$all,from=~facebook-spam
+||donds.pro^$all,from=~facebook-spam
+||www.bettingfowl.com^$all,from=~facebook-spam
+||videyco.id^$all,from=~facebook-spam
+||jblstrz.shop^$all,from=~facebook-spam
+||vid96.cam^$all,from=~facebook-spam
+||singcalager.wiki^$all,from=~facebook-spam
+||dailytrendstopic.online^$all,from=~facebook-spam
 
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
-||rx-help-center.xyz^$all,domain=~facebook-spam
+||rx-help-center.xyz^$all,from=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/nekopost/posts/pfbid0B7tPBobtzym97y7Fg2vndDMABatT4jFmxf54ehSj7gYpvRGionB27eWW5KQf5jn4l 20240311001321
-||facbook-supp.pages.dev.br^$all,domain=~facebook-spam
+||facbook-supp.pages.dev.br^$all,from=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/groups/Nexups/posts/3637624106475505/ 20240311001313
-||home-business-helper.com^$all,domain=~facebook-spam
+||home-business-helper.com^$all,from=~facebook-spam
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/100043936848589/posts/1025199328954619/ 20240806211854
-||f-help-case-file-form.glitch.me^$all,domain=~facebook-spam
+||f-help-case-file-form.glitch.me^$all,from=~facebook-spam
 
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
 !****************************************************************************************
 
-||7link.ru^$all,domain=~discord-spam
+||7link.ru^$all,from=~discord-spam
 
 !!!**************************************************************************************
 !MARK:Twitter (x.com) spam self gathering
 !****************************************************************************************
 
-||jey48.xyz^$all,domain=~x.com-spam
+||jey48.xyz^$all,from=~x.com-spam
 
 !!!**************************************************************************************
 !MARK:Telegram spam
 !****************************************************************************************
 
-||oec-br.fit^$all,domain=~telegram-spam
+||oec-br.fit^$all,from=~telegram-spam
 
 !!!**************************************************************************************
 !MARK: Weird behaviour
 !****************************************************************************************
 
-! เว็บมังงะที่แปลทุกคำผ่าน AI ทั้งหมด ซึ่งมันแปลกๆ เหมือนคนทำเป็นต่างชาติแล้วทำเว็บไทย
-||pengi.co^$doc,domain=~site-has-weird-acitivities-and-has-a-lot-of-ai-gen-content
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -957,7 +962,7 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
 ! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/d66254726f8aec58a95ae748ea8e2c7c2dd13335/BaseFilter/sections/specific.txt#L368
-/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,domain=aileen-novel.online|mangapdf-online.com|niceoppai.net
+/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|niceoppai.net
 
 ! Popular Javascript
 ! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/general_extensions.txt
@@ -1037,7 +1042,7 @@ https://wowrapidly.com^$all
 ||aitsatho.com^$all
 https://cdn.apicdn*.one^$xhr
 ||judosllyn.com^$script,3p
-||exness.com^$all,domain=~exness.com
+||exness.com^$all,from=~exness.com
 ||cryptojimmy.care^$all
 ||bidsxplayer.com/api/adserver/$3p
 ||rrc.texas.gov^$popup
@@ -1146,7 +1151,7 @@ indiatimes.com##div[id^="custom_ad_wrapper_"]
 clearnotebooks.com##^div[class$="-notebook-page-banners"]
 !#endif
 clearnotebooks.com##div[class$="-notebook-page-banners"]
-||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$domain=clearnotebooks.com
+||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$from=clearnotebooks.com
 !ptable.com 20240527165809
 !#if cap_html_filtering
 ptable.com##^#Notice
@@ -2195,7 +2200,7 @@ posttoday.com##+js(trusted-click-element,div.light-box)
 posttoday.com##div[class^="dynamic-ads"]
 
 !honekrasae.com 20240717143216
-||a.run.app^$3p,domain=honekrasae.com
+||a.run.app^$3p,from=honekrasae.com
 
 !bangkokbiznews.com 20240917184546
 bangkokbiznews.com##div[class="desktop"]
@@ -2305,7 +2310,7 @@ thaimobilecenter.com##div[class="col-md-9 hidden-sm hidden-xs"]
 thaimobilecenter.com##div[class="col-sm-12 hidden-lg hidden-md"]
 thaimobilecenter.com###myDIV
 thaimobilecenter.com##div[class="container bn-a2"]
-||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,domain=thaimobilecenter.com
+||www.thaimobilecenter.com/stat/inc_ad_stat_pageviews.asp$frame,from=thaimobilecenter.com
 
 !techtalkthai.com 20250105011017
 techtalkthai.com###wrapper > div.inner-wrapper > div.e3lan.e3lan-below_header:nth-child(2)
@@ -2326,8 +2331,8 @@ techtalkthai.com##^div[class="e3lan e3lan-top"]
 !#else
 techtalkthai.com##div[class="e3lan e3lan-top"]
 !#endif
-.gif$image,domain=techtalkthai.com
-*Sponsors.png$image,domain=techtalkthai.com
+.gif$image,from=techtalkthai.com
+*Sponsors.png$image,from=techtalkthai.com
 
 !blognone.com 20240806212413
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -2364,7 +2369,7 @@ it24hrs.com##.bottom-ads
 it24hrs.com##^.adrotate_widgets
 !#endif
 it24hrs.com##.adrotate_widgets
-||s.vidpulse.com/all/vp.js$script,domain=it24hrs.com
+||s.vidpulse.com/all/vp.js$script,from=it24hrs.com
 
 !iphonemod.net 20241028214550
 !#if cap_html_filtering
@@ -2563,10 +2568,10 @@ mustplay.in.th##div[class="banner card hidden-xs"]
 !thisisgamethailand.com 20241002151030
 thisisgamethailand.com##.tigth-ads
 thisisgamethailand.com##.tie-container:style(top: 0px !important;)
-/*600x900.jpg$image,domain=thisisgamethailand.com
-/*600x900.jpeg$image,domain=thisisgamethailand.com
-/*_banner.jpg$image,domain=thisisgamethailand.com
-/*W1_desktop_1800x1000*-1.jpg$image,domain=thisisgamethailand.com
+/*600x900.jpg$image,from=thisisgamethailand.com
+/*600x900.jpeg$image,from=thisisgamethailand.com
+/*_banner.jpg$image,from=thisisgamethailand.com
+/*W1_desktop_1800x1000*-1.jpg$image,from=thisisgamethailand.com
 
 !gamefever.co
 !#if cap_html_filtering
@@ -2724,11 +2729,11 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com
-.mp4$media,domain=manga-sugoi.com
+.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com
+.mp4$media,from=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
-!.webp$image,domain=
+!.webp$image,from=
 
 !manga168.net 20240717162413
 !#if cap_html_filtering
@@ -2757,7 +2762,7 @@ manga168.net##^.kln
 !#else
 manga168.net##.kln
 !#endif
-||amz-cdn*.manga168.net*.gif$image,domain=manga168.net
+||amz-cdn*.manga168.net*.gif$image,from=manga168.net
 
 !tanuki-manga.com
 !#if cap_html_filtering
@@ -2834,21 +2839,21 @@ www.niceoppai.net##^.mng_rdr.wpm_pag > center
 www.niceoppai.net##.mng_rdr.wpm_pag > center
 !#endif
 !!ads banner image
-||image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image7.niceoppai.net/97/f5/Upload-1213212412-HT9AM-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-https://image7.niceoppai.net/f9/0a/Upload-3232323232-V9ZT5-By-Niceoppai.jpg$image,domain=www.niceoppai.net
-||blogger.googleusercontent.com/img/b*.gif$image,domain=www.niceoppai.net
-||www.niceoppai.net/wp-content/uploads*.gif$image,domain=www.niceoppai.net
-||i.imgur.com*.gif$image,domain=www.niceoppai.net
-||i0.wp.com/niceoppai.net/wp-content$image,domain=www.niceoppai.net
-||www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,domain=www.niceoppai.net
-||blogger.googleusercontent.com/img/b^$image,domain=www.niceoppai.net
-@@https://1.bp.blogspot.com/-f3womMHJyE8/XQ5nUqKCmCI/AAAAAAAAAlk/q7kkrSsjpY88TMYFtpKo4R1ZidfYDLjBgCLcBGAs/s0/return-top.png$image,domain=www.niceoppai.net
+||image5.niceoppai.net/d8/db/Upload-setto2-LZ6PI-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||image5.niceoppai.net/8d/c8/Upload-3232323232-D7VON-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||image5.niceoppai.net/a7/af/Upload-t-CZGIA-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||image5.niceoppai.net/7a/8d/Upload-16565956532-9HF7E-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||image5.niceoppai.net/d4/6b/Upload-setto2-EYO5V-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||image5.niceoppai.net/6c/8e/Upload-16262995-IG48D-By-Niceoppai.jpg$image,from=www.niceoppai.net
+https://image7.niceoppai.net/97/f5/Upload-1213212412-HT9AM-By-Niceoppai.jpg$image,from=www.niceoppai.net
+https://image7.niceoppai.net/f9/0a/Upload-3232323232-V9ZT5-By-Niceoppai.jpg$image,from=www.niceoppai.net
+||blogger.googleusercontent.com/img/b*.gif$image,from=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads*.gif$image,from=www.niceoppai.net
+||i.imgur.com*.gif$image,from=www.niceoppai.net
+||i0.wp.com/niceoppai.net/wp-content$image,from=www.niceoppai.net
+||www.niceoppai.net/wp-content/uploads/2022/05/92032932.webp$image,from=www.niceoppai.net
+||blogger.googleusercontent.com/img/b^$image,from=www.niceoppai.net
+@@https://1.bp.blogspot.com/-f3womMHJyE8/XQ5nUqKCmCI/AAAAAAAAAlk/q7kkrSsjpY88TMYFtpKo4R1ZidfYDLjBgCLcBGAs/s0/return-top.png$image,from=www.niceoppai.net
 
 !kingsmanga.net
 kingsmanga.net###wrapper > div.new-kingsmanga-section:nth-child(2) > div.col-md-12.text-center.padding-top-15.new-widget-width
@@ -2926,10 +2931,10 @@ murim-manga.com##^#ads_fox_bottom
 !#else
 murim-manga.com###ads_fox_bottom
 !#endif
-||murim-manga.com/images/*.gif$image,domain=murim-manga.com
-||murim-manga.com/img/*.gif$image,domain=murim-manga.com
-||murim-manga.com/images/*.webp$image,domain=murim-manga.com
-||murim-manga.com/img/*.webp$image,domain=murim-manga.com
+||murim-manga.com/images/*.gif$image,from=murim-manga.com
+||murim-manga.com/img/*.gif$image,from=murim-manga.com
+||murim-manga.com/images/*.webp$image,from=murim-manga.com
+||murim-manga.com/img/*.webp$image,from=murim-manga.com
 
 !ped-manga.com
 !#if cap_html_filtering
@@ -2984,8 +2989,8 @@ makimaaaaa.com##^div[class="kln"]
 !#else
 makimaaaaa.com##div[class="kln"]
 !#endif
-||makimaaaaa.com/images/*.gif$image,domain=makimaaaaa.com
-||makimaaaaa.com/img/*.gif$image,domain=makimaaaaa.com
+||makimaaaaa.com/images/*.gif$image,from=makimaaaaa.com
+||makimaaaaa.com/img/*.gif$image,from=makimaaaaa.com
 
 !romance-manga.com
 !#if cap_html_filtering
@@ -3053,7 +3058,7 @@ popsmanga.com##^div.kln
 !#else
 popsmanga.com##div.kln
 !#endif
-wss://$domain=popsmanga.com
+wss://$from=popsmanga.com
 
 !toomtam-manga.com
 !#if cap_html_filtering
@@ -3088,7 +3093,7 @@ oremanga.net##^div[class="header-ads-section"]
 oremanga.net##div[class="header-ads-section"]
 !#endif
 ||oremanga.net/wp-content/uploads/*.gif$badfilter
-||oremanga.net/wp-content/uploads/*.gif$domain=oremanga.net
+||oremanga.net/wp-content/uploads/*.gif$from=oremanga.net
 
 !manga-lc.net
 !#if cap_html_filtering
@@ -3135,10 +3140,10 @@ manga-post.com##^script:has-text(advanced_ads)
 manga-post.com##+js(rmnt, script, /^(Popupse|advanced_ads)$/)
 !#endif
 !! For site frequently change popup script 20241027120834
-/^(?!.*(manga-post.com|facebook.com)).*$/$popup,domain=manga-post.com
+/^(?!.*(manga-post.com|facebook.com)).*$/$popup,from=manga-post.com
 
 !mafia-manga.com 20231217005325
-*$script,third-party,domain=mafia-manga.com
+*$script,third-party,from=mafia-manga.com
 !#if cap_html_filtering
 mafia-manga.com##^div.dessert-frame
 !#else
@@ -3261,7 +3266,7 @@ xn--72cas2cj6a4hf4b5a8oc.com##^div[class="ads-info"]
 !#else
 xn--72cas2cj6a4hf4b5a8oc.com##div[class="ads-info"]
 !#endif
-||two.xn--72cas2cj6a4hf4b5a8oc.com/img/*.gif$image,domain=xn--72cas2cj6a4hf4b5a8oc.com
+||two.xn--72cas2cj6a4hf4b5a8oc.com/img/*.gif$image,from=xn--72cas2cj6a4hf4b5a8oc.com
 
 !mangakimi.com 20241227022533
 !#if cap_html_filtering
@@ -3278,7 +3283,7 @@ inu-manga.com##div[class="header-ads-section"]
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
+.gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
 !anime-sugoi.com 20240709014326
 !!เอา box ที่เขียนว่า โฆษณา ออก
@@ -3286,8 +3291,8 @@ anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child 
 !!เอาdiv โฆษณาอันแรกออก
 !!เอาdiv โฆษณาอัน2ออก
 !!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
-||anime-sugoi.com/pic/$image,domain=anime-sugoi.com
-wss://$domain=anime-sugoi.com
+||anime-sugoi.com/pic/$image,from=anime-sugoi.com
+wss://$from=anime-sugoi.com
 !!เอา tag ออก
 !#if cap_html_filtering
 anime-sugoi.com##^.panel-body > center > p
@@ -3300,7 +3305,7 @@ anime-sugoi.com##.panel-body > center > p
 anime-masters.com#@#p[class^="center_"] > a[target="_blank"] > img
 anime-masters.com##div.container > .row > .center_lnwphp
 anime-masters.com##.col-md-9 > span
-||www.anime-masters.com/image/X11-icon.png*$image,domain=anime-masters.com
+||www.anime-masters.com/image/X11-icon.png*$image,from=anime-masters.com
 
 !animekimi.com, animeyuzu.com 20240210161421
 !#if cap_html_filtering
@@ -3325,12 +3330,12 @@ anifume.com##^div.topml
 !#else
 anifume.com##div.topml
 !#endif
-||anifume.com/a4Eof1D0f/close-x.png$domain=anifume.com
-||anifume.com/a4Eof1D0f/loadgame-float.jpg$domain=anifume.com
+||anifume.com/a4Eof1D0f/close-x.png$from=anifume.com
+||anifume.com/a4Eof1D0f/loadgame-float.jpg$from=anifume.com
 anifume.com##+js(nowoif)
 
 !anime-suba.com 20240324015402
-||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,domain=anime-suba.com
+||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,from=anime-suba.com
 anime-suba.com##+js(nowoif)
 !!!invisible popup overlay video
 !#if cap_html_filtering
@@ -3339,7 +3344,7 @@ anime-suba.com##^.overlay-0
 anime-suba.com##.overlay-0
 !#endif
 anime-suba.com##+js(nano-sib, , *, 0.02)
-https://www.anime-suba.com/imges/close.png$domain=anime-suba.com
+https://www.anime-suba.com/imges/close.png$from=anime-suba.com
 
 !animehayai.net 20240308222408
 !#if cap_html_filtering
@@ -3479,7 +3484,7 @@ animelizm.com###custom_html-47
 !#endif
 
 !animeshiro.com
-https://blogger.googleusercontent.com/*.gif$image,domain=animeshiro.com
+https://blogger.googleusercontent.com/*.gif$image,from=animeshiro.com
 !#if cap_html_filtering
 animeshiro.com##^div.banner-wrapper
 !#else
@@ -3508,8 +3513,8 @@ www.anime-kawaii.com##p[class="center_lnwphp"]
 !#endif
 
 !animeriku.com 20240418163703
-||googleusercontent.com/img^$image,domain=animeriku.com
-https://i.imgur.com^$image,domain=animeriku.com
+||googleusercontent.com/img^$image,from=animeriku.com
+https://i.imgur.com^$image,from=animeriku.com
 !#if cap_html_filtering
 animeriku.com##^div[id="banner"]
 !#else
@@ -3517,8 +3522,8 @@ animeriku.com##div[id="banner"]
 !#endif
 
 !www.mio-anime.net 20240419161021
-https://i.imgur.com^$image,domain=www.mio-anime.net
-||googleusercontent.com^$image,domain=www.mio-anime.net
+https://i.imgur.com^$image,from=www.mio-anime.net
+||googleusercontent.com^$image,from=www.mio-anime.net
 !#if cap_html_filtering
 www.mio-anime.net##^div[class="row"] > div[class="col-lg-12"]
 !#else
@@ -3529,13 +3534,13 @@ www.mio-anime.net##div[class="row"] > div[class="col-lg-12"]
 ||www.rizu-anime.com^$frame
 https://www.mio-anime.net/tracker*$frame
 !maybe local tracker
-wss://$domain=mio-anime.doodee-player.com
+wss://$from=mio-anime.doodee-player.com
 !#if cap_html_filtering
 www.mio-anime.net##^body > footer > div.container > div > div.col-md-9
 !#else
 www.mio-anime.net##body > footer > div.container > div > div.col-md-9
 !#endif
-https://www.mio-anime.net/banner*$image,domain=www.mio-anime.net
+https://www.mio-anime.net/banner*$image,from=www.mio-anime.net
 
 !anime-subth.net 20240604013700
 !#if cap_html_filtering
@@ -3551,7 +3556,7 @@ anime-subth.net##div[class="ads-banner"]
 
 !MARK: ---Novel ---
 
-.gif$image,domain=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
+.gif$image,from=novel-lucky.com|xn--72c5afc3e6a4acd3tpa.com|xn--q3cmiag1gmn.com
 
 !novel-lucky.com
 !#if cap_html_filtering
@@ -3577,11 +3582,11 @@ novel-lucky.com###bottom_center_ads_1
 
 !aileen-novel.online
 aileen-novel.online##+js(nowoif)
-*$script,third-party,domain=aileen-novel.online
+*$script,third-party,from=aileen-novel.online
 
 !novelpdf.xyz
 novelpdf.xyz##+js(nowoif)
-*$script,third-party,domain=novelpdf.xyz
+*$script,third-party,from=novelpdf.xyz
 
 !cat2auto.com
 !#if cap_html_filtering
@@ -3621,14 +3626,14 @@ thaiboyslove.com##^td[align="center"] > a:upward(1)
 thaiboyslove.com##td[align="center"] > a:upward(1)
 !#endif
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,domain=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com
-.webp$image,domain=uc2hd.com
+.gif$image,from=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com
+.webp$image,from=uc2hd.com
 /series-indy$image
 /928hd$image
 /series168*$image
 
 !nungdeedee.com 20240430215951
-||nungdeedee.com/externallink*$all,domain=nungdeedee.com
+||nungdeedee.com/externallink*$all,from=nungdeedee.com
 !#if cap_html_filtering
 nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
 !#endif
@@ -3685,7 +3690,7 @@ doonungsub.com##.popup
 !#else
 ดูหนัง.tv##.row
 !#endif
-*$script,third-party,domain=xn--72czp5e5a8b.tv
+*$script,third-party,from=xn--72czp5e5a8b.tv
 
 !serie-master.com
 
@@ -3721,13 +3726,13 @@ newseries-hd.com##^.admid
 !#else
 newseries-hd.com##.admid
 !#endif
-https://newseries-hd.com/wp-content/uploads/2021/01/A*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2021/01/D*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2021/01/b*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2021/01/c*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2023/09/banner-player-*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2021/01/E*.jpg$image,domain=newseries-hd.com
-https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,domain=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/A*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/D*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/b*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/c*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2023/09/banner-player-*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2021/01/E*.jpg$image,from=newseries-hd.com
+https://newseries-hd.com/wp-content/uploads/2022/05/E1.jpg$image,from=newseries-hd.com
 ||movie-free.org/ads$popup
 ||bit.ly/hdmovie$popup
 
@@ -3877,7 +3882,7 @@ nungde.com##^div[class="code-block code-block-4"] > a[target="_blank"]
 !#else
 nungde.com##div[class="code-block code-block-4"] > a[target="_blank"]
 !#endif
-https://nungde.com/wp-content/uploads/2024/10/bn-dee.png$domain=nungde.com
+https://nungde.com/wp-content/uploads/2024/10/bn-dee.png$from=nungde.com
 !MARK: --- Others
 
 chillpainai.com##div[id="subscribe"]
@@ -3971,7 +3976,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 /popunder*.js$script
 
 !mal usage ส่วนใหญ่ชอบใช้ ผิดวัตถุประสงค์ เช่น การโฆษณา
-||media.discordapp.net/attachments^$image,domain=~discordapp.net|~discord.com
+||media.discordapp.net/attachments^$image,from=~discordapp.net|~discord.com
 
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
@@ -3983,8 +3988,8 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 !****************************************************************************************
 
 !Google ads 20240624123556
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
-@@||googleads.g.doubleclick.net/pagead/id$domain=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$from=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
+@@||googleads.g.doubleclick.net/pagead/id$from=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 
 ! google contributor anti adblock
 #@#div[class^="div-gpt-ad"]
@@ -4485,13 +4490,10 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||bstarstatic.com^$stealth
 !#endif
 
-!computerworld.com
-@@||d2zv5rkii46miq.cloudfront.net^$domain=computerworld.com
-
 !from easylist
 !!break aws.amazon.com
 /web-vitals.$badfilter
-/web-vitals.$domain=~aws.amazon.com
+/web-vitals.$from=~aws.amazon.com
 
 !!!**************************************************************************************
 !* 
@@ -4939,7 +4941,7 @@ theguardian.com##div[id="sp_message_container_752142"]
 theguardian.com##div[class="dcr-8xye2h"]
 !economist.com
 economist.com##div[class="message-container teg-container"]
-||consent.economist.com^$domain=economist.com
+||consent.economist.com^$from=economist.com
 ondemand.in.th##.cwc-sdk-container
 425degree.com##.amgdprcookie-bar-template
 samsung.com##.cookie-bar
@@ -5258,7 +5260,7 @@ monomax.me##^div.form-cookie
 monomax.me##div.form-cookie
 /^moodle\./##div[class="eupopup-container eupopup-container-bottom eupopup-color-default"]
 zoodio.live##img[src*="cookie-banner"]:upward(1)
-https://www.zoodio.live/_next/image?url=%2Fassets%2Fimages%2Fcookie-banner%2Fbg-surface.png*$image,domain=zoodio.live
+https://www.zoodio.live/_next/image?url=%2Fassets%2Fimages%2Fcookie-banner%2Fbg-surface.png*$image,from=zoodio.live
 !#if cap_html_filtering
 isuper.co.th##^div[class="policy-position"]
 !#else
@@ -5282,7 +5284,7 @@ thaipost.net##^#cookie-notice
 thaipost.net###cookie-notice
 !#endif
 sistacafe.com##div[class^="policy_policy_"]
-||sistacafe.com/rules/cookies$domain=sistacafe.com
+||sistacafe.com/rules/cookies$from=sistacafe.com
 digifast-inc.com###PrivacyPolicy
 !#if cap_html_filtering
 thaihealth.or.th##^div[class^="dpdpa--"]
@@ -5302,7 +5304,7 @@ konvy.com##^div[id="btm-tips"]
 konvy.com##div[id="btm-tips"]
 !#endif
 headdaddy.com##div[class="foot-cookie"]
-https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$domain=opendurian.com
+https://admin.opendurian.com/api/v3/durian_policy/use/cookie_policy/$from=opendurian.com
 opendurian.com##div.v-dialog__content
 opendurian.com##div.v-overlay--active
 longtunman.com##div[class="fixed bottom-0 left-0 right-0 z-[9999]"]
@@ -5340,7 +5342,7 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 /gdpr-compliance-cookie-consent$script,css
 /gdpr-option.js$script
 /jquery.cookie.min.js$script
-/jquery.cookie.js$script,domain=~order.sukishidelivery.com
+/jquery.cookie.js$script,from=~order.sukishidelivery.com
 /get-pdpa$xhr,script
 /glowCookies.min.js$script
 /jquery-cookie.min.js$script
