@@ -1,8 +1,8 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250121190412
-! Expires: 1 days
+! Version: 20250124004744
+! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
 
@@ -284,7 +284,6 @@
 ||pageorama.com^$all,from=~facebook-spam
 ||honekrasae.cloud^$all,from=~facebook-spam
 ||nbaoutletstore.us.kg^$all,from=~facebook-spam
-||e.vg^$all,from=~facebook-spam
 ||doodfile.com^$all,from=~facebook-spam
 ||fecabokk.com^$all,from=~facebook-spam-to-aff-link
 ||facelboolk.com^$all,from=~facebook-spam
@@ -298,6 +297,7 @@
 ||vid96.cam^$all,from=~facebook-spam
 ||singcalager.wiki^$all,from=~facebook-spam
 ||dailytrendstopic.online^$all,from=~facebook-spam
+||dailytopic.blog^$all,from=~facebook-spam
 
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
