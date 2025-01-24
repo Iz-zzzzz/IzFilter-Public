@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250124004744
+! Version: 20250124202437
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -3285,13 +3285,21 @@ inu-manga.com##div[class="header-ads-section"]
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
 
-!anime-sugoi.com 20240709014326
+!anime-sugoi.com 20250124010430
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
-!!เอาdiv โฆษณาอันแรกออก
-!!เอาdiv โฆษณาอัน2ออก
-!!เอาdiv ทั้งบน/ล่างplayerออก หรือที่แทรกระหว่างชื่อเรื่องกับเรื่องย่อ
-||anime-sugoi.com/pic/$image,from=anime-sugoi.com
+!! โฆษณาหลัก
+!#if cap_html_filtering
+anime-sugoi.com##^p[class="center_lnwphp"]
+!#else
+anime-sugoi.com##p[class="center_lnwphp"]
+!#endif
+!#if cap_html_filtering
+anime-sugoi.com##^center > a[href^="https://t.ly/"]
+!#else
+anime-sugoi.com##center > a[href^="https://t.ly/"]
+!#endif
+||animeyuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|animeyuzu.com
 wss://$from=anime-sugoi.com
 !!เอา tag ออก
 !#if cap_html_filtering
@@ -3300,19 +3308,29 @@ anime-sugoi.com##^.panel-body > center > p
 anime-sugoi.com##.panel-body > center > p
 !#endif
 
+!animeyuzu.com 20250124202026
+!#if cap_html_filtering
+animeyuzu.com##^.module_home_x
+!#else
+animeyuzu.com##.module_home_x
+!#endif
+!#if cap_html_filtering
+animeyuzu.com##^div[id^="animekimiads"]
+!#else
+animeyuzu.com##div[id^="animekimiads"]
+!#endif
+!#if cap_html_filtering
+animeyuzu.com##^a[href^="https://t.ly/"]
+!#else
+animeyuzu.com##a[href^="https://t.ly/"]
+!#endif
+
 !anime-masters.com 20240709014043
 !! use more performance rule
 anime-masters.com#@#p[class^="center_"] > a[target="_blank"] > img
 anime-masters.com##div.container > .row > .center_lnwphp
 anime-masters.com##.col-md-9 > span
 ||www.anime-masters.com/image/X11-icon.png*$image,from=anime-masters.com
-
-!animekimi.com, animeyuzu.com 20240210161421
-!#if cap_html_filtering
-animekimi.com,animeyuzu.com##^.module_home_x
-!#else
-animekimi.com,animeyuzu.com##.module_home_x
-!#endif
 
 !anifume.com 20240121222714
 !#if cap_html_filtering
@@ -3429,7 +3447,7 @@ animetako.net##^div[id^="animekimiads"]
 animetako.net##div[id^="animekimiads"]
 !#endif
 
-!https://www.kurokami.me 20240604013411
+!www.kurokami.me 20240604013411
 !#if cap_html_filtering
 kurokami.me##^div[class="col-6 banner728x200-div"]
 !#else
@@ -3952,6 +3970,9 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt*="baccarat"]
 ##img[alt="บาคาร่า"]
 ##img[alt^="pgslot"]
+
+##a[href^="https://t.ly/]
+##img[alt="Advertisement"]
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -4727,6 +4748,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||entechreview.com^$generichide
 @@||enterpriseitpro.net^$generichide
 @@||appdisqus.com^$generichide
+@@||www.guzap.ai^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
 @@||techsauce.co^$generichide
@@ -4826,7 +4848,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---anime illegitimate ---
 @@||www.anime-sugoi.com^$generichide
 @@||anime-masters.com^$generichide
-@@||animekimi.com^$generichide
 @@||animeyuzu.com^$generichide
 @@||anime-suba.com^$generichide
 @@||sub-thai.com^$generichide
@@ -5313,6 +5334,7 @@ ivethospital.com##^div[class="policy-position"]
 !#else
 ivethospital.com##div[class="policy-position"]
 !#endif
+guzap.ai###pdpa-wrapper
 
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
