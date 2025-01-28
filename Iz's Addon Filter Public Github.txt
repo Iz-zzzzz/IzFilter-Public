@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250124202437
+! Version: 20250128223810
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -298,6 +298,8 @@
 ||singcalager.wiki^$all,from=~facebook-spam
 ||dailytrendstopic.online^$all,from=~facebook-spam
 ||dailytopic.blog^$all,from=~facebook-spam
+||iplis.ru^$all,from=~facebook-spam
+||primecine.fun^$all,from=~facebook-spam
 
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ! ส่งข้อความบอกว่าเพจโดนจำกัด ข้อมูลจาก https://www.facebook.com/ANISUABETA/posts/pfbid031XgEBwJJ7ZAvXLG6Y8EE9quCTW548Bi5m3RYnnmB2bBJZJ6JtVHmpW1RLfyWVa4vl https://www.facebook.com/groups/Nexups/posts/3636032339968015/ 20240308024011
@@ -1893,82 +1895,34 @@ tnews.co.th##^div.desktop
 !#endif
 tnews.co.th##div.desktop
 
-!thansettakij.com 
-!#if cap_html_filtering
-thansettakij.com##^.ads-billboard
-!#endif
+!thansettakij.com 20250125213641
 thansettakij.com##.ads-billboard
-!#if cap_html_filtering
-thansettakij.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 thansettakij.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+thansettakij.com##div[class="desktop"]:upward(1)
+thansettakij.com##div[class="mobile"]:upward(1)
+thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 
 !thestandard.co
-!#if cap_html_filtering
-thestandard.co##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-thestandard.co##^.adsbyadop
-!#endif
 thestandard.co##.adsbyadop
-!#if cap_html_filtering
-thestandard.co##^div[class="banner-box hidden-xs"]
-!#endif
 thestandard.co##div[class="banner-box hidden-xs"]
-!#if cap_html_filtering
-thestandard.co##^.mySlidesMasthead
-!#endif
 thestandard.co##.mySlidesMasthead
 
 !workpointtoday.com 20240322022230
 
 !men.kapook.com 20240608013432
-!#if cap_html_filtering
-men.kapook.com##^.taboola-x2-widget
-!#endif
 men.kapook.com##.taboola-x2-widget
-!#if cap_html_filtering
-men.kapook.com##^div[id^="div-gpt-ad"][class="skin_vdo"]
-!#endif
 men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
-!#if cap_html_filtering
-men.kapook.com##^div[class="ads728 h90"]
-!#endif
 men.kapook.com##div[class="ads728 h90"]
-!#if cap_html_filtering
-men.kapook.com##^div.aside_article
-!#endif
 men.kapook.com##div.aside_article
-!#if cap_html_filtering
-men.kapook.com##^ins[class="adsbygoogle adsbygoogle-noablate"]
-!#endif
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
 
 !pptvhd36.com
-!#if cap_html_filtering
-pptvhd36.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
 pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#if cap_html_filtering
-pptvhd36.com##^[id^="google_ads_iframe"]
-!#endif
 pptvhd36.com##[id^="google_ads_iframe"]
-!#if cap_html_filtering
-pptvhd36.com##^.ads-wrapper
-!#endif
 pptvhd36.com##.ads-wrapper
-!#if cap_html_filtering
-pptvhd36.com##^#taboola-below-article-thumbnails
-!#endif
 pptvhd36.com###taboola-below-article-thumbnails
-!#if cap_html_filtering
-pptvhd36.com##^.ads-ppn
-!#endif
 pptvhd36.com##.ads-ppn
-!#if cap_html_filtering
-pptvhd36.com##^.special-gateway__img
-!#endif
 pptvhd36.com##.special-gateway__img
 
 !dailynews.co.th 20240912173626
@@ -2205,11 +2159,6 @@ posttoday.com##div[class^="dynamic-ads"]
 !bangkokbiznews.com 20240917184546
 bangkokbiznews.com##div[class="desktop"]
 bangkokbiznews.com##div[class="mobile"]
-
-!thansettakij.com 20241017142527
-thansettakij.com##div[class="desktop"]:upward(1)
-thansettakij.com##div[class="mobile"]:upward(1)
-thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 
 !marketthink.co 20241019133329
 marketthink.co##div[class="mb-4"][style="height:250px"]
@@ -3128,11 +3077,7 @@ manga-post.com##^a:has(center>img)
 manga-post.com##a:has(center>img)
 !#endif
 !!click to popup
-!#if cap_html_filtering
-manga-post.com##^body:remove-attr(onclick)
-!#else
 manga-post.com##body:remove-attr(onclick)
-!#endif
 !#if cap_html_filtering
 manga-post.com##^script:has-text(Popupse)
 manga-post.com##^script:has-text(advanced_ads)
@@ -3937,8 +3882,6 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img.img-ads
 ##div[class="dessert-frame"]
 ##div.b-ads
-##img[alt="shopee"]
-##img[alt="Lazada"]
 
 ##img[alt*="สล็อต"]
 ##img[alt*="บาคาร่า"]
@@ -4011,23 +3954,6 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 !Google ads 20240624123556
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$from=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
 @@||googleads.g.doubleclick.net/pagead/id$from=thefreedictionary.com|jpopsingles.eu|lineupsvalorant.com
-
-! google contributor anti adblock
-#@#div[class^="div-gpt-ad"]
-#@#[class^="div-gpt-ad"]
-#@#[id^="div-gpt-ad"]
-#@#div[id^="div-gpt-"]
-#@#div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
-##[class^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-##[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
-
-
-!https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-mobile.txt
-#@#.ad-slot
-!EasyList
-#@#.ad-link
-##.ad-link:not(.adsbox)
-##.ad-slot:not(.adsbox):not(.adsbygoogle)
 
 colabtutorials.com,mukohphetra.com##+js(rmnt, script, detectAdBlock)
 colabtutorials.com,mukohphetra.com###adb
@@ -5335,6 +5261,7 @@ ivethospital.com##^div[class="policy-position"]
 ivethospital.com##div[class="policy-position"]
 !#endif
 guzap.ai###pdpa-wrapper
+bosch-home.in.th##+js(trusted-click-element, a[class="cmpboxbtn cmpboxbtnno cmptxt_btn_no"])
 
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
