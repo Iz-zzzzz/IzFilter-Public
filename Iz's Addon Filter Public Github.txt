@@ -1,7 +1,7 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
 ! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250128223810
+! Version: 20250202232719
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -147,6 +147,7 @@
 ||dooflixtv.com^$all
 ||phognekrsurvey.space^$all
 ||edgeupgrade.com^$all
+||crypto-ck.cc^$all
 
 !!!**************************************************************************************
 !MARK:Mal self gathering
@@ -560,6 +561,90 @@ https://hotgraph*$all
 /NEON24H*.gif$image
 /catcatbet.gif$image
 /lionth.gif$image
+!/betflik4ub4.gif$image
+/betflik*.gif$image
+!/sexy24hrkk1.gif$image
+/sexy24hr*.gif$image
+/kp88a7.gif$image
+!/ufabull88.gif$image
+/ufa*.gif$image
+/sbobetonea1.gif$image
+/188beth2.gif$image
+/mlottop1.gif$image
+/alpha888.gif$image
+/spez888.gif$image
+/FUN88s1.gif$image
+!/fafa666o1.gif$image
+!/ufa64.gif$image
+/heng36.gif$image
+/bk8r1.gif$image
+/shandaojdbk8.gif$image
+/jnxiuxium2.gif$image
+/8196h.gif$image
+/UFABET168kk4.gif$image
+/vt8aa3.gif$image
+/vm9aa2.gif$image
+/59gaa1.gif$image
+/coinbet999w0.gif$image
+!/ufa350w3.gif$image
+/U8196.gif$image
+/Z8196.gif$image
+!/fafa456w4.gif$image
+!/fafa168w2.gif$image
+/fafa*.gif$image
+/A81966aaa1.gif$image
+/lsttwaa1.gif$image
+/D8196555aaa1.gif$image
+!/sexy24hrkk2.gif$image
+/UBET89zz1.gif$image
+!/fafa102c1.gif$image
+/UFA14Kzz.gif$image
+/cuafcz2.gif$image
+/jaosua789.gif$image
+!/slotnew2.gif$image
+/slotnew*.gif$image
+!/fafa168z1.gif$image
+/Q8196.gif$image
+!/ufabetz1.gif$image
+/oki888.gif$image
+/haroldlopeznussaz1.gif$image
+!/ufasexygame.gif$image
+/pgjjoker69.gif$image
+/askmeslotw6.gif$image
+/pgk44o3.gif$image
+/hengjing168.gif$image
+!/fafa365z2.gif$image
+/sbobet888.gif$image
+!/betflik4ub2.gif$image
+/slotking777dd3.gif$image
+!/fafa168w2.gif$image
+/8196VIP1z.gif$image
+!/ufa888aaa1.gif$image
+/UFABETg8196aaa1.gif$image
+/kodpung88b1.gif$image
+!/fafa188aaa1.gif$image
+/fresh-voicesc1.gif$image
+/camel88.gif$image
+!/japandd6.gif$image
+/8196F.gif$image
+!/japandd5.gif$image
+/8196Z.gif$image
+!/japandd4.gif$image
+!/fafa178p1.gif$image
+!/japandd3.gif$image
+!/fafa168x2.gif$image
+!/japandd2.gif$image
+/P8196b1.gif$image
+!/japandd1.gif$image
+/japandd*.gif$image
+/holdemr1.gif$image
+/holdeml1v2.gif$image
+!/holdeml1*.gif$image
+!/ufa11kz1right.gif$image
+!/ufa11k-left.gif$image
+!/ufa11k*.gif$image
+
+
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -964,7 +1049,7 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
 ! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/d66254726f8aec58a95ae748ea8e2c7c2dd13335/BaseFilter/sections/specific.txt#L368
-/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|niceoppai.net
+/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|www.niceoppai.net|reborntrans.com
 
 ! Popular Javascript
 ! #credit: https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/general_extensions.txt
@@ -1081,6 +1166,10 @@ https://cdn.apicdn*.one^$xhr
 ||adsok.co^$3p
 
 ||ads.global.ssl.fastly.net^$3p
+
+||landingi.com^$3p
+
+/\/ads\/[0-9].webp/$image
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1902,20 +1991,56 @@ thansettakij.com##div[class="desktop"]:upward(1)
 thansettakij.com##div[class="mobile"]:upward(1)
 thansettakij.com##.css-sxoh93 .detail:style(min-height: unset !important;)
 
-!thestandard.co
+!thestandard.co 20250128224447
+!#if cap_html_filtering
+thestandard.co##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#else
 thestandard.co##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
+!#if cap_html_filtering
+thestandard.co##^.adsbyadop
+!#else
 thestandard.co##.adsbyadop
+!#endif
+!#if cap_html_filtering
+thestandard.co##^div[class="banner-box hidden-xs"]
+!#else
 thestandard.co##div[class="banner-box hidden-xs"]
+!#endif
+!#if cap_html_filtering
+thestandard.co##^.mySlidesMasthead
+!#else
 thestandard.co##.mySlidesMasthead
+!#endif
 
 !workpointtoday.com 20240322022230
 
-!men.kapook.com 20240608013432
+!men.kapook.com 20250128224610
+!#if cap_html_filtering
+men.kapook.com##^.taboola-x2-widget
+!#else
 men.kapook.com##.taboola-x2-widget
+!#endif
+!#if cap_html_filtering
+men.kapook.com##^div[id^="div-gpt-ad"][class="skin_vdo"]
+!#else
 men.kapook.com##div[id^="div-gpt-ad"][class="skin_vdo"]
+!#endif
+!#if cap_html_filtering
+men.kapook.com##^div[class="ads728 h90"]
+!#else
 men.kapook.com##div[class="ads728 h90"]
+!#endif
+!#if cap_html_filtering
+men.kapook.com##^div.aside_article
+!#else
 men.kapook.com##div.aside_article
+!#endif
+!#if cap_html_filtering
+men.kapook.com##^ins[class="adsbygoogle adsbygoogle-noablate"]
+!#else
 men.kapook.com##ins[class="adsbygoogle adsbygoogle-noablate"]
+!#endif
 
 !pptvhd36.com
 pptvhd36.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -2678,7 +2803,8 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com
+.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com|go-manga.com|www.flash-manga.com
+.webp$image,from=www.go-manga.com
 .mp4$media,from=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
@@ -3226,6 +3352,33 @@ inu-manga.com##^div[class="header-ads-section"]
 !#else
 inu-manga.com##div[class="header-ads-section"]
 !#endif
+
+!www.go-manga.com 20250202215448
+!#if cap_html_filtering
+www.go-manga.com##^div[class="center_gomanga"]
+!#else
+www.go-manga.com##div[class="center_gomanga"]
+!#endif
+!#if cap_html_filtering
+www.go-manga.com##^div[id^="sticky-bottom"]
+!#else
+www.go-manga.com##div[id^="sticky-bottom"]
+!#endif
+
+!www.flash-manga.com 20250202231230
+!#if cap_html_filtering
+www.flash-manga.com##^div[class="header-ads-section"]
+!#else
+www.flash-manga.com##div[class="header-ads-section"]
+!#endif
+
+!reborntrans.com 20250202232421
+!#if cap_html_filtering
+reborntrans.com##^a[rel][target="_blank"] > img
+!#else
+reborntrans.com##a[rel][target="_blank"] > img
+!#endif
+https://www.reborntrans.com/banner/*.gif$from=reborntrans.com,image
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
@@ -3882,6 +4035,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img.img-ads
 ##div[class="dessert-frame"]
 ##div.b-ads
+##div[class="header-ads-section"]
 
 ##img[alt*="สล็อต"]
 ##img[alt*="บาคาร่า"]
@@ -3915,7 +4069,12 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt^="pgslot"]
 
 ##a[href^="https://t.ly/]
+##a[href^="https://cutt.ly/"]
 ##img[alt="Advertisement"]
+
+##a[href^="https://www.nhentai.services]
+
+##div[class="adsok"]
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -4766,6 +4925,9 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||toon168.com^$generichide
 @@||mangasuper.com^$generichide
 @@||inu-manga.com^$generichide
+@@||www.go-manga.com^$generichide
+@@||www.flash-manga.com^$generichide
+@@||reborntrans.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
