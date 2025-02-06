@@ -1,7 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Homepage: https://github.com/Iz-zzzzz/IzFilter-Public
-! Version: 20250202232719
+! Version: 20250206215045
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -643,6 +642,13 @@ https://hotgraph*$all
 !/ufa11kz1right.gif$image
 !/ufa11k-left.gif$image
 !/ufa11k*.gif$image
+/fat.gif$image
+/gta78.gif$image
+/88fed*.gif$image
+/hengjingo*.gif$image
+/meechok777*.gif$image
+/wing1688*.gif$image
+/lotto888*.gif$image
 
 
 !MARK: ---------- URL specific Rules ----------
@@ -2803,7 +2809,7 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com|go-manga.com|www.flash-manga.com
+.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-za.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com|go-manga.com|www.flash-manga.com|up-manga.com
 .webp$image,from=www.go-manga.com
 .mp4$media,from=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
@@ -3379,9 +3385,26 @@ reborntrans.com##^a[rel][target="_blank"] > img
 reborntrans.com##a[rel][target="_blank"] > img
 !#endif
 https://www.reborntrans.com/banner/*.gif$from=reborntrans.com,image
+!#if cap_html_filtering
+reborntrans.com##^div[id="wbnn"]
+!#else
+reborntrans.com##div[id="wbnn"]
+!#endif
+
+!up-manga.com 20250204010447
+!#if cap_html_filtering
+up-manga.com##^div[class^="center_upmanga"]
+!#else
+up-manga.com##div[class^="center_upmanga"]
+!#endif
+!#if cap_html_filtering
+up-manga.com##^div[id^="sticky-bottom"]
+!#else
+up-manga.com##div[id^="sticky-bottom"]
+!#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net
+.gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
 
 !anime-sugoi.com 20250124010430
 !!เอา box ที่เขียนว่า โฆษณา ออก
@@ -3668,6 +3691,18 @@ anime-subth.net##img[class="img-ads"]
 anime-subth.net##^div[class="ads-banner"]
 !#else
 anime-subth.net##div[class="ads-banner"]
+!#endif
+
+!animegojo.com 20250206010819
+!#if cap_html_filtering
+animegojo.com##^div[class="bannerrow"]
+!#else
+animegojo.com##div[class="bannerrow"]
+!#endif
+!#if cap_html_filtering
+animegojo.com##^div[id="bt-ads"]
+!#else
+animegojo.com##div[id="bt-ads"]
 !#endif
 
 !MARK: ---Novel ---
@@ -4068,11 +4103,11 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="บาคาร่า"]
 ##img[alt^="pgslot"]
 
-##a[href^="https://t.ly/]
+##a[href^="https://t.ly/"]
 ##a[href^="https://cutt.ly/"]
 ##img[alt="Advertisement"]
 
-##a[href^="https://www.nhentai.services]
+##a[href^="https://www.nhentai.services"]
 
 ##div[class="adsok"]
 !!!**************************************************************************************
@@ -4807,9 +4842,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||bookwalker.$generichide
 @@||firstpagepro.com*$generichide
 !MARK: ---Manga มังงะ Novel นิยาย Thai ไทย---
-@@||www.nekopost.net^$generichide
-@@||kuro.nekopost.net^$generichide
-@@||mynovel.com^$generichide
+@@||nekopost.net^$generichide
 @@||lionmanga.com^$generichide
 !MARK: ---tech news ---
 @@||siamphone.com^$generichide
@@ -4928,6 +4961,9 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||www.go-manga.com^$generichide
 @@||www.flash-manga.com^$generichide
 @@||reborntrans.com^$generichide
+@@||slow-manga.com^$generichide
+@@||www.readtoon.com^$generichide
+@@||mynovel.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4957,6 +4993,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||animeriku.com^$generichide
 @@||www.mio-anime.net^$generichide
 @@||anime-subth.net^$generichide
+@@||animegojo.com^$generichide
 !!เจอได้จาก animeshiro.com
 @@||stream.anislime.com^$generichide
 @@||overlay.miku-box.com^$generichide
