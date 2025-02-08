@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250208222912
+! Version: 20250208224315
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -3359,6 +3359,7 @@ anime-sugoi.com##^.panel-body > center > p
 !#else
 anime-sugoi.com##.panel-body > center > p
 !#endif
+! Maybe Tracker/DDoS
 ||trycloudflare.com^$from=playermeow.com|anime-sugoi.com
 ||idocdn.com^$from=playermeow.com|anime-sugoi.com
 
@@ -3707,6 +3708,9 @@ thaiboyslove.com##td[align="center"] > a:upward(1)
 !#else
 037hdmovie.com##div[id^="ads-"]
 !#endif
+!maybe tracker/DDoS
+||trycloudflare.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
+||idocdn.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
 
 !nungdeedee.com 20240430215951
 ||nungdeedee.com/externallink*$all,from=nungdeedee.com
