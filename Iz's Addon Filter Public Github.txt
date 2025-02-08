@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250206215045
+! Version: 20250208222912
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -560,12 +560,9 @@ https://hotgraph*$all
 /NEON24H*.gif$image
 /catcatbet.gif$image
 /lionth.gif$image
-!/betflik4ub4.gif$image
 /betflik*.gif$image
-!/sexy24hrkk1.gif$image
 /sexy24hr*.gif$image
 /kp88a7.gif$image
-!/ufabull88.gif$image
 /ufa*.gif$image
 /sbobetonea1.gif$image
 /188beth2.gif$image
@@ -573,8 +570,6 @@ https://hotgraph*$all
 /alpha888.gif$image
 /spez888.gif$image
 /FUN88s1.gif$image
-!/fafa666o1.gif$image
-!/ufa64.gif$image
 /heng36.gif$image
 /bk8r1.gif$image
 /shandaojdbk8.gif$image
@@ -585,63 +580,37 @@ https://hotgraph*$all
 /vm9aa2.gif$image
 /59gaa1.gif$image
 /coinbet999w0.gif$image
-!/ufa350w3.gif$image
 /U8196.gif$image
 /Z8196.gif$image
-!/fafa456w4.gif$image
-!/fafa168w2.gif$image
 /fafa*.gif$image
 /A81966aaa1.gif$image
 /lsttwaa1.gif$image
 /D8196555aaa1.gif$image
-!/sexy24hrkk2.gif$image
 /UBET89zz1.gif$image
-!/fafa102c1.gif$image
 /UFA14Kzz.gif$image
 /cuafcz2.gif$image
 /jaosua789.gif$image
-!/slotnew2.gif$image
 /slotnew*.gif$image
-!/fafa168z1.gif$image
 /Q8196.gif$image
-!/ufabetz1.gif$image
 /oki888.gif$image
 /haroldlopeznussaz1.gif$image
-!/ufasexygame.gif$image
 /pgjjoker69.gif$image
 /askmeslotw6.gif$image
 /pgk44o3.gif$image
 /hengjing168.gif$image
-!/fafa365z2.gif$image
 /sbobet888.gif$image
-!/betflik4ub2.gif$image
 /slotking777dd3.gif$image
-!/fafa168w2.gif$image
 /8196VIP1z.gif$image
-!/ufa888aaa1.gif$image
 /UFABETg8196aaa1.gif$image
 /kodpung88b1.gif$image
-!/fafa188aaa1.gif$image
 /fresh-voicesc1.gif$image
 /camel88.gif$image
-!/japandd6.gif$image
 /8196F.gif$image
-!/japandd5.gif$image
 /8196Z.gif$image
-!/japandd4.gif$image
-!/fafa178p1.gif$image
-!/japandd3.gif$image
-!/fafa168x2.gif$image
-!/japandd2.gif$image
 /P8196b1.gif$image
-!/japandd1.gif$image
 /japandd*.gif$image
 /holdemr1.gif$image
 /holdeml1v2.gif$image
-!/holdeml1*.gif$image
-!/ufa11kz1right.gif$image
-!/ufa11k-left.gif$image
-!/ufa11k*.gif$image
 /fat.gif$image
 /gta78.gif$image
 /88fed*.gif$image
@@ -672,12 +641,10 @@ http://www.jsp.com.mk^$all
 http://www.mathedu.ru.ac.th^$all
 https://168*sagame.com^$all
 https://168pretty.*$all
-!https://168pretty.com^$all
 https://188th.co^$all
 https://42quilts.com^$all
 https://789steps.com^$all
 https://8xbet-vip.*$all
-!https://8xbet0.com^$all
 https://99tded.com^$all
 https://9slotgame.net^$all
 https://aff.123-boss.app^$all
@@ -691,17 +658,11 @@ https://agrokam-czesci.pl^$all
 https://ambbeth.com^$all
 https://anime-hit.com^$all
 https://app.shark-center.cc^$all
-!https://app.xgbet369.com^$all
 https://av-toiture.com^$all
 https://baccarat88-th.com^$all
 https://baccarat888.com^$all
 https://baccarat888th.com^$all
 https://bcr99th.com^$all
-!https://bet777th.com^$all
-!https://betflix*.com^$all
-!https://betfrenzy88.com^$all
-!https://betplay569.com^$all
-!https://betplay569t.com^$all
 https://bit.ly/38y9PSG$all
 https://bit.ly/39SJ38y$all
 https://bit.ly/3BOp05j$all
@@ -750,7 +711,6 @@ https://bit.ly/ufabet*$all
 https://bmjverification-qa.bma.org.uk^$all
 https://boston777s.com^$all
 https://brazil999.*$all
-!https://brazil999.plus^$all
 https://brookfieldedc.org^$all
 https://browbooks.com^$all
 https://bsc.news^$all
@@ -779,17 +739,14 @@ https://fx8.s3.ap-southeast-1.amazonaws.com^$all
 https://gclub321.com^$all
 https://ggband.gg^$all
 https://goatbet88*.com^$all
-!https://goatbet888.com^$all
 https://grand-prize.xyz^$all
 https://harmonyvineyardchurch.com^$all
 https://hengjing168.win^$all
 https://heylink.me/fox888.vip$all
 https://hotgraph88*.co^$all
-!https://hotgraph883.com^$all
 https://hswaynepets.org^$all
 https://huaylike.life^$all
 https://hydra88*.co^$all
-!https://hydra888f.com^$all
 https://icrash2023.lincoln.edu.my^$all
 https://indysb.org^$all
 https://internalaudit.cmru.ac.th^$all
@@ -801,7 +758,6 @@ https://k9wyyl.com^$all
 https://kingdom6*.com^$all
 https://lalikabet168.co^$all
 https://lcbet168.com^$all
-!https://lcbet24hr.com^$all
 https://lcbet88.com^$all
 https://lcbetasia.com^$all
 https://liewayhuntclub.net^$all
@@ -810,18 +766,12 @@ https://lin.ee/1ALiEXl$all
 https://line.me/R/ti/p/%40214gglya$all
 https://line.me/ti/p/lETR15cN-P$all
 https://lion123.asia^$all
-!https://lionth.asia^$all
-!https://lionth.co^$all
-!https://lionth.com^$all
 https://lionth*$all
 https://lkk135.com^$all
 https://lockdown168*$all
 https://london168*$all
 https://luca99th.com^$all
 https://lucabet168.com^$all
-!https://lucky135.com^$all
-!https://lucky269.com^$all
-!https://lucky629.com^$all
 https://mahagame88*.com^$all
 https://maryclairecruz.com^$all
 https://mayalounge.net^$all
@@ -841,7 +791,6 @@ https://ohiovaxamillion.com^$all
 https://oncolife.com.ua^$all
 https://orijendesign.com^$all
 https://palette-sf.com^$all
-!https://panama888*$all
 https://paragon-usa.com^$all
 https://pavetheway.cc^$all
 https://penniesforpeace.org^$all
@@ -868,7 +817,6 @@ https://sbobet888.win^$all
 https://scr888t.co^$all
 https://scrt888.com^$all
 https://search.app.goo.gl^$all
-!https://sexycasino.co^$all
 https://shorturl.asia/gjxW1$all
 https://shorturl.asia/IYvTC$all
 https://shorturl.asia/uUy3t$all
@@ -896,16 +844,12 @@ https://tinyurl.com/2jrg2axo^$all
 https://track.cdnyz.com^$all
 https://treecareandwellness.com^$all
 https://ue.edu.pk^$all
-!https://ufa222.live^$all
-!https://ufac4z.com^$all
-!https://ufakick.io^$all
 https://ukedchat.com^$all
 https://uninta.edu.br^$all
 https://vip168sa*$all
 https://wcmdevaks01.fairfaxcounty.gov^$all
 https://whanmhoo569.com^$all
 https://wk888pluss.com^$all
-!https://wmbet444.com^$all
 https://wvd.simon.com^$all
 https://www.188league.com^$all
 https://www.512xiaojin.com^$all
@@ -931,14 +875,10 @@ https://www.gxy888.vip^$all
 https://www.hapilabs.com^$all
 https://www.hcore.ge^$all
 https://www.huc33.com^$all
-!https://www.huc99.casino^$all
 https://www.immigrantfundca.org^$all
 https://www.immigrationworksusa.org^$all
-!https://www.jinda888.co^$all
-!https://www.jinda888.vip^$all
 https://www.jinda888*$all
 https://www.juad888*$all
-!https://www.juad888d.com^$all
 https://www.kachilodge.co^$all
 https://www.longtablebangkok.com^$all
 https://www.meehay569st.co^$all
@@ -959,7 +899,6 @@ https://www.santeedriveintheatre.com^$all
 https://www.sbfplay*$all
 https://www.scb9.net^$all
 https://www.sexy168.vip^$all
-!https://www.sexycasino.site^$all
 https://www.siriusretail.com^$all
 https://www.slot1234.com^$all
 https://www.slotxo24hr.co^$all
@@ -968,8 +907,6 @@ https://www.tcsoinfo.com^$all
 https://www.thenorthface.com^$all
 https://www.therapeutique-dermatologique.org^$all
 https://www.thunder95.com^$all
-!https://www.ufa*.*$all
-!https://www.ufa350s.world^$all
 https://www.usa567.cc^$all
 https://www.usms.ac.ma^$all
 https://www.wacra.org^$all
@@ -977,17 +914,13 @@ https://www.whitby-photography.com^$all
 https://www.xn--m3cd7amyt0n2a.com^$all
 https://www.yak888.win^$all
 https://wy88bets.com^$all
+https://wy88onlines.com^$all
 https://xn--72c1abpacq3blf5b5e1c2kjb5d7bzabg4g.net^$all
 https://xn--b3cw4apb2b3e1a1gxc.com^$all
 https://zoospassion.com^$all
 mailto:kingsmanga@protonmail.com^$all
 https://www.easy45.net^$all
-!https://www.ufa345.tv^$all
-!https://ufa800.live^$all
-!https://ufa365.football^$all
-!https://www.ufabull88.com^$all
 https://glory88.bet^$all
-!vvv.xn--s3cx7a.com^$all
 www.m88-th.net^$all
 !Top เว็บอันดับที่ 18 ที่คนไทยเข้าระหว่าง Dec 2022 ถึง Nov 2023
 https://pgf-asw0zz.co^$all
@@ -1141,7 +1074,7 @@ https://cdn.apicdn*.one^$xhr
 ||rrc.texas.gov^$popup
 ||amung.us^$all
 ||cdend.com^$3p
-||thapi.aedi.ai^$3p
+||aedi.ai^$3p
 ||d30qdagvt44524.cloudfront.net^$3p
 
 
@@ -1176,6 +1109,11 @@ https://cdn.apicdn*.one^$xhr
 ||landingi.com^$3p
 
 /\/ads\/[0-9].webp/$image
+
+||sakuharuno.com^$3p
+
+||upfastfile.com/upload/*.mp4$3p
+||rsc.cdn77.org^$3p
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1962,32 +1900,18 @@ ch3plus.com##^.sp-banner
 ch3plus.com##.sp-banner
 !#endif
 
-!matichon.co.th 20231216214133
-!#if cap_html_filtering
-matichon.co.th##^.td-a-rec
-!#endif
+!matichon.co.th 20250207164249
 matichon.co.th##.td-a-rec
+matichon.co.th##ins.adsbygoogle
 
 !brighttv.co.th
-!#if cap_html_filtering
-brighttv.co.th##^.b-banner
-!#endif
 brighttv.co.th##.b-banner
 
 !beartai.com 20240302191325
 
 !tnews.co.th 
-!#if cap_html_filtering
-tnews.co.th##^.default-sticky
-!#endif
 tnews.co.th##.default-sticky
-!#if cap_html_filtering
-tnews.co.th##^div.mobile
-!#endif
 tnews.co.th##div.mobile
-!#if cap_html_filtering
-tnews.co.th##^div.desktop
-!#endif
 tnews.co.th##div.desktop
 
 !thansettakij.com 20250125213641
@@ -2414,105 +2338,113 @@ techtalkthai.com##div[class="e3lan e3lan-top"]
 .gif$image,from=techtalkthai.com
 *Sponsors.png$image,from=techtalkthai.com
 
-!blognone.com 20240806212413
+!blognone.com 20250206230727
+!#if cap_html_filtering
+blognone.com##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!#endif
 blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 blognone.com##.advertorial,.sponsored:style(opacity: 0.4 !important;)
 
-!flashfly.net 20240527165914
+!flashfly.net 20250206230724
 !#if cap_html_filtering
 flashfly.net##^iframe[width="500"][height="190"]
-!#endif
+!#else
 flashfly.net##iframe[width="500"][height="190"]
+!#endif
 !#if cap_html_filtering
 flashfly.net##^ins.adsbygoogle[data-ad-slot]
-!#endif
+!#else
 flashfly.net##ins.adsbygoogle[data-ad-slot]
+!#endif
 !#if cap_html_filtering
 flashfly.net##^div.jeg_ad
-!#endif
+!#else
 flashfly.net##div.jeg_ad
+!#endif
 !#if cap_html_filtering
 flashfly.net##^div[align="center"]:upward(1)
-!#endif
+!#else
 flashfly.net##div[align="center"]:upward(1)
+!#endif
 
-!it24hrs.com 20240527165917
+!it24hrs.com 20250206230806
 !#if cap_html_filtering
 it24hrs.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
+!#else
 it24hrs.com##ins.adsbygoogle[data-ad-slot]
+!#endif
 !#if cap_html_filtering
 it24hrs.com##^.bottom-ads
-!#endif
+!#else
 it24hrs.com##.bottom-ads
+!#endif
 !#if cap_html_filtering
 it24hrs.com##^.adrotate_widgets
-!#endif
+!#else
 it24hrs.com##.adrotate_widgets
+!#endif
 ||s.vidpulse.com/all/vp.js$script,from=it24hrs.com
 
-!iphonemod.net 20241028214550
+!iphonemod.net 20250206230842
 !#if cap_html_filtering
 iphonemod.net##^center
-!#endif
+!#else
 iphonemod.net##center
+!#endif
 !#if cap_html_filtering
 iphonemod.net##^#quads-ad4
-!#endif
+!#else
 iphonemod.net###quads-ad4
+!#endif
 !#if cap_html_filtering
 iphonemod.net##^#text-2
-!#endif
+!#else
 iphonemod.net###text-2
+!#endif
 !#if cap_html_filtering
 iphonemod.net##^#text-11
-!#endif
+!#else
 iphonemod.net###text-11
+!#endif
 !#if cap_html_filtering
 iphonemod.net##^.g1-advertisement
-!#endif
+!#else
 iphonemod.net##.g1-advertisement
+!#endif
 !#if cap_html_filtering
 iphonemod.net##^[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
-!#endif
+!#else
 iphonemod.net##[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
+!#endif
 
-!specphone.com
+!specphone.com 20250206230932
 !#if cap_html_filtering
 specphone.com##^div#custom_html-2
-!#endif
+!#else
 specphone.com##div#custom_html-2
-!#if cap_html_filtering
-specphone.com##^div#custom_html-4
 !#endif
-specphone.com##div#custom_html-4
 !#if cap_html_filtering
 specphone.com##^div#sp_top_phone_widget-2
-!#endif
+!#else
 specphone.com##div#sp_top_phone_widget-2
+!#endif
 !#if cap_html_filtering
 specphone.com##^div.ads-desktop
-!#endif
+!#else
 specphone.com##div.ads-desktop
+!#endif
 !#if cap_html_filtering
 specphone.com##^div.ads-mobile
-!#endif
-specphone.com##div.ads-mobile
-!#if cap_html_filtering
-specphone.com##^div#footer-ads
-!#endif
-specphone.com##div#footer-ads
-!#if cap_html_filtering
-specphone.com##^div[style="width:300px; height: 250px; margin:30px auto;"]
-!#endif
-specphone.com##div[style="width:300px; height: 250px; margin:30px auto;"]
-
-!entechreview.com 20241125173603
-!#if cap_html_filtering
-entechreview.com##^div[aria-label^="Sponser"]:upward(1)
 !#else
-entechreview.com##div[aria-label^="Sponser"]:upward(1)
+specphone.com##div.ads-mobile
 !#endif
+!#if cap_html_filtering
+specphone.com##^ins[data-revive-zoneid]:upward(div[style])
+!#else
+specphone.com##ins[data-revive-zoneid]:upward(div[style])
+!#endif
+
+!entechreview.com 20250206231510
 !#if cap_html_filtering
 entechreview.com##^div.promotion-section
 !#else
@@ -2814,7 +2746,6 @@ www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 .mp4$media,from=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
 @@/loadingAnimation.gif$image
-!.webp$image,from=
 
 !manga168.net 20240717162413
 !#if cap_html_filtering
@@ -3404,7 +3335,7 @@ up-manga.com##div[id^="sticky-bottom"]
 !#endif
 
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
-.gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|neko-miku.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
+.gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
 
 !anime-sugoi.com 20250124010430
 !!เอา box ที่เขียนว่า โฆษณา ออก
@@ -3428,6 +3359,8 @@ anime-sugoi.com##^.panel-body > center > p
 !#else
 anime-sugoi.com##.panel-body > center > p
 !#endif
+||trycloudflare.com^$from=playermeow.com|anime-sugoi.com
+||idocdn.com^$from=playermeow.com|anime-sugoi.com
 
 !animeyuzu.com 20250124202026
 !#if cap_html_filtering
@@ -3522,23 +3455,6 @@ anime-kimuchi.net##.ads-banner
 anime-kimuchi.net##^.b-ads
 !#else
 anime-kimuchi.net##.b-ads
-!#endif
-
-!neko-miku.com 20240324021054
-!#if cap_html_filtering
-neko-miku.com##^#footer > .container p
-!#else
-neko-miku.com###footer > .container p
-!#endif
-!#if cap_html_filtering
-neko-miku.com##^.ads-290-100
-!#else
-neko-miku.com##.ads-290-100
-!#endif
-!#if cap_html_filtering
-neko-miku.com##^.ads-825-100
-!#else
-neko-miku.com##.ads-825-100
 !#endif
 
 !fairyanime.net
@@ -3668,9 +3584,6 @@ www.mio-anime.net##^div[class="row"] > div[class="col-lg-12"]
 !#else
 www.mio-anime.net##div[class="row"] > div[class="col-lg-12"]
 !#endif
-||hanime4u.com^$frame
-||www.anime-sm.com^$frame
-||www.rizu-anime.com^$frame
 https://www.mio-anime.net/tracker*$frame
 !maybe local tracker
 wss://$from=mio-anime.doodee-player.com
@@ -3782,6 +3695,18 @@ thaiboyslove.com##td[align="center"] > a:upward(1)
 /series-indy$image
 /928hd$image
 /series168*$image
+
+!037hdmovie.com 20250208222039
+!#if cap_html_filtering
+037hdmovie.com##^div.filmborder > div[style="text-align: center;"] > a[target="_blank"]
+!#else
+037hdmovie.com##div.filmborder > div[style="text-align: center;"] > a[target="_blank"]
+!#endif
+!#if cap_html_filtering
+037hdmovie.com##^div[id^="ads-"]
+!#else
+037hdmovie.com##div[id^="ads-"]
+!#endif
 
 !nungdeedee.com 20240430215951
 ||nungdeedee.com/externallink*$all,from=nungdeedee.com
@@ -4079,7 +4004,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="Panama888"]
 ##img[alt="Hydra888"]
 ##img[alt="Kingdom66"]
-##img[alt*="UFA"]
+##img[alt^="UFA"]
 ##img[alt="askmeslot"]
 ##img[alt*="ufa888"]
 ##img[alt="LALIKABET168"]
@@ -4088,7 +4013,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="BONUS24H"]
 ##img[alt="VGCS"]
 ##img[alt*="BET365"]
-##img[alt="แทงบอล"]
+##img[alt^="แทงบอล"]
 ##img[alt="KP88"]
 ##img[alt="SEXY24HR"]
 ##img[alt*="ufabet"]
@@ -4102,6 +4027,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt*="baccarat"]
 ##img[alt="บาคาร่า"]
 ##img[alt^="pgslot"]
+##img[alt="hentai-buzz"]
 
 ##a[href^="https://t.ly/"]
 ##a[href^="https://cutt.ly/"]
@@ -4964,6 +4890,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||slow-manga.com^$generichide
 @@||www.readtoon.com^$generichide
 @@||mynovel.com^$generichide
+@@||up-manga.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4984,7 +4911,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||anime-nico.com^$generichide
 @@||animehayai.net^$generichide
 @@||anime-kimuchi.net^$generichide
-@@||neko-miku.com^$generichide
 @@||shibaanime.com^$generichide
 @@||www.animerem.com^$generichide
 @@||www.kurokami.me^$generichide
@@ -5461,6 +5387,11 @@ ivethospital.com##div[class="policy-position"]
 !#endif
 guzap.ai###pdpa-wrapper
 bosch-home.in.th##+js(trusted-click-element, a[class="cmpboxbtn cmpboxbtnno cmptxt_btn_no"])
+!#if cap_html_filtering
+specphone.com##^div[class="cookie-consent"]
+!#else
+specphone.com##div[class="cookie-consent"]
+!#endif
 
 
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
