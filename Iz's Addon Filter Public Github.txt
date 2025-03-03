@@ -1,6 +1,6 @@
 ! Title: Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250224011353
+! Version: 20250302191040
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -946,7 +946,7 @@ https://cdn.apicdn*.one^$xhr
 /\/ads\/[0-9].webp/$image
 ||sakuharuno.com^$3p
 ||upfastfile.com/upload/*.mp4$3p,from=037hdmovie.com
-||rsc.cdn77.org^$3p
+||rsc.cdn77.org^$3p,from=037hdmovie.com
 ||fs-loader.com^$3p
 ||www.zogoodnews.com^$3p
 terabox.com##.seo-banner-box
