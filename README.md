@@ -60,7 +60,8 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 
 - [AdGuard extension](https://adguard.com/en/adguard-browser-extension/overview.html) [^1]
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Next > (ทำหรือไม่ก็ได้ มีผลเล็กน้อย) ติ๊กถูก Trusted > กด Subscribe
-รอแก้บัค https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2690, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2259, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2646
+
+  ปล. รอ AdGuard แก้บัค https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2690, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2259, https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2646
 - [uBlock Origin extension](https://github.com/gorhill/uBlock)
   - กด[ที่นี่](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2FIz-zzzzz%2FIzFilter-Public%2Fmain%2FIz's%20Addon%20Filter%20Public%20Github.txt&title=Iz's%20Addon%20Filter%20Public%20Github) > กด Subscribe ที่มุมขวาบน
   - ถ้าเป็นไปได้ เพิ่ม `https://raw.githubusercontent.com/Iz-zzzzz` ลงใน trustedListPrefixes ด้วย [รายละเอียดเพิ่มเติม](https://github.com/gorhill/uBlock/wiki/Advanced-settings#trustedlistprefixes)
