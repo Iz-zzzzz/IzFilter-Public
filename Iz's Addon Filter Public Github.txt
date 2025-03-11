@@ -1,6 +1,6 @@
-! Title: Iz's Addon Filter Public Version (mini version)
+! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250302191040
+! Version: 20250311204409
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 ! Section: Ad Server Links + Specific Ads Rules + General Rules + Anti ad block detect + Cookies
@@ -2661,9 +2661,9 @@ inu-manga.com##^div[class="header-ads-section"]
 inu-manga.com##div[class="header-ads-section"]
 !#endif
 !#if cap_html_filtering
-www.go-manga.com##^div[class="center_gomanga"]
+www.go-manga.com##^div[class^="center_gomanga"]
 !#else
-www.go-manga.com##div[class="center_gomanga"]
+www.go-manga.com##div[class^="center_gomanga"]
 !#endif
 !#if cap_html_filtering
 www.go-manga.com##^div[id^="sticky-bottom"]
@@ -2695,6 +2695,11 @@ up-manga.com##div[class^="center_upmanga"]
 up-manga.com##^div[id^="sticky-bottom"]
 !#else
 up-manga.com##div[id^="sticky-bottom"]
+!#endif
+!#if cap_html_filtering
+www.slow-manga.com##^div[class="header-ads-section"]
+!#else
+www.slow-manga.com##div[class="header-ads-section"]
 !#endif
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
