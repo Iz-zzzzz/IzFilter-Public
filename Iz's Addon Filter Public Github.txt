@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250316212013
+! Version: 20250320204028
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -277,6 +277,8 @@
 ||ilier.lat^$all,from=~facebook-spam
 ||faecabook.com^$all,from=~facebook-spam
 ||aspirinconceptchar.com^$all,from=~facebook-spam
+||member.tg26.net^$all,from=~facebook-spam
+||scheetnews.me^$all,from=~facebook-spam
 !
 ! Spam/Phising in Facebook.com messenger self gathering CONFIRM
 ||rx-help-center.xyz^$all,from=~facebook-spam
@@ -290,6 +292,10 @@
 ||www.casio-japan.store^$all,from=~facebook-fake-ads
 ||www.thailand-centermall.com^$all,from=~facebook-fake-ads
 ||www.casiothailand.pro^$all,from=~facebook-fake-ads
+! #comment : Samsung ปลอม 20250315205850
+||www.central-official.store^$all,from=~facebook-fake-ads
+! #comment : ขอโทษปลอม 20250319194348
+||www.techmall-th.com^$all,from=~facebook-fake-ads
 !!!**************************************************************************************
 !MARK:Discord spam self gathering
 !****************************************************************************************
@@ -1174,8 +1180,8 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !
 !MARK: ---redirect qr code ---
 !
-!qr.me-qr.com 20240701140223
-qr.me-qr.com##+js(trusted-click-element,a[data-action="click->ticket-app--page#increaseSkipAd"])
+!qr.me-qr.com 20250316221331
+qr.me-qr.com##+js(trusted-click-element,button[id="goBtn"])
 !get-qr.com 20241107225035
 get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 !
@@ -2419,7 +2425,7 @@ thaiware.com##^div[class="headerBottom"]
 !#else
 thaiware.com##div[class="headerBottom"]
 !#endif
-!enterpriseitpro.net 20241101143609
+!enterpriseitpro.net 20250320203036
 enterpriseitpro.net##body:style(background-image: unset !important;)
 !#if cap_html_filtering
 enterpriseitpro.net##^.td-ad-m
@@ -2433,6 +2439,7 @@ enterpriseitpro.net##.td-a-rec
 !#endif
 enterpriseitpro.net##+js(set-constant, td_ad_background_click_link, "")
 enterpriseitpro.net##+js(rc, td-ad-background-link, body)
+enterpriseitpro.net##+js(rc, td-background-link, body)
 !appdisqus.com 20250112232030
 !#if cap_html_filtering
 appdisqus.com##^ins.adsbygoogle[data-ad-client]
@@ -5233,6 +5240,11 @@ iphone-droid.net##^div.penci-wrap-gprd-law
 iphone-droid.net##div.penci-wrap-gprd-law
 !#endif
 jeradent.com##div[aria-label="Site Cookies"]
+!#if cap_html_filtering
+enterpriseitpro.net##^div[class^="dpdpa--popup"]
+!#else
+enterpriseitpro.net##div[class^="dpdpa--popup"]
+!#endif
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
@@ -5259,11 +5271,13 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 /gdpr-compliance-cookie-consent$script,css
 /gdpr-option.js$script
 /jquery.cookie.min.js$script
+!!! [Note] แต่มันทำให้เว็บใช้ไม่ได้ 20241030234938
 /jquery.cookie.js$script,from=~order.sukishidelivery.com
 /get-pdpa$xhr,script
 /glowCookies.min.js$script
 /jquery-cookie.min.js$script
 /wp-content/themes/soledad/js/js-cookies.js$script,1p
+/wp-content/plugins/pdpa-thailand/public/assets/js/pdpa-thailand-public.js$script,1p
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
