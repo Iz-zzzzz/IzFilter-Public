@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250324232533
+! Version: 20250401011658
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -101,6 +101,7 @@
 ||kasikorn.go-line.cc^$all
 ||ksecrity.the-line.cc^$all
 ||ksecurity.ta-th.cc^$all
+||sleanmcomnnumnlty.com^$all,from=~fake-steam-log-in
 !!!**************************************************************************************
 !MARK:Mal Bad redirect self gathering
 !****************************************************************************************
@@ -280,8 +281,11 @@
 ||member.tg26.net^$all,from=~facebook-spam
 ||scheetnews.me^$all,from=~facebook-spam
 ||coherentchuckled.com^$all,from=~facebook-spam
+||controversykeenworkshop.com^$all,from=~facebook-spam
+||fecabookr.com^$all,from=~facebook-spam
+||fecabooke.com^$all,from=~facebook-spam
 !
-! Spam/Phising in Facebook.com messenger self gathering CONFIRM
+! Spam/Phishing in Facebook.com messenger self gathering CONFIRM
 ||rx-help-center.xyz^$all,from=~facebook-spam
 ||facbook-supp.pages.dev.br^$all,from=~facebook-spam
 ||home-business-helper.com^$all,from=~facebook-spam
@@ -337,6 +341,7 @@ https://hotgraph*$all
 /Lcd168$media
 /Ufac4$media
 /teenoi168$media
+/HENG36$media
 !/heng99.jpg
 /heng99$image
 !/juad8881 และ /juad8882
@@ -983,6 +988,7 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 ||www.barking-moonbat.com^$all
 ||xn--42c7buadi1b7ccbb5v.com^$all
 ||xn--72c5a8att3k1b.com^$all
+||heng36x.com^$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 !!!**************************************************************************************
@@ -992,7 +998,7 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 !****************************************************************************************
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
-/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|www.niceoppai.net|reborntrans.com
+/^(?!.*(ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|www.niceoppai.net|reborntrans.com
 ! Popular Javascript
 ! Google Adsense in WP plugin
 /assets/js/google-adsense$script
@@ -1204,9 +1210,9 @@ get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 !
 !twitter.com (x.com) 20240626141354
 ||ads-api.x.com^$xhr
-!facebook.com 20250324210930
-!#if !env_mobile
-!#endif
+!facebook.com 20250327182524
+! !#if !env_mobile
+! !#endif
 !
 !MARK: ---wiki ---
 !
@@ -3246,7 +3252,7 @@ www.slow-manga.com##div[class="header-ads-section"]
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
-!anime-sugoi.com 20250124010430
+!anime-sugoi.com 20250331010307
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 !! โฆษณาหลัก
@@ -3259,6 +3265,11 @@ anime-sugoi.com##p[class="center_lnwphp"]
 anime-sugoi.com##^center > a[href^="https://t.ly/"]
 !#else
 anime-sugoi.com##center > a[href^="https://t.ly/"]
+!#endif
+!#if cap_html_filtering
+anime-sugoi.com##^div[class="adsok img-thumbnail"]
+!#else
+anime-sugoi.com##div[class="adsok img-thumbnail"]
 !#endif
 ||animeyuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|animeyuzu.com
 wss://$from=anime-sugoi.com
@@ -5259,6 +5270,7 @@ enterpriseitpro.net##^div[class^="dpdpa--popup"]
 !#else
 enterpriseitpro.net##div[class^="dpdpa--popup"]
 !#endif
+salehere.co.th##div[class="container-accept-cookie"]
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
@@ -5273,8 +5285,8 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 !MARK: --- cookie general ---
 !cookiewow api
 ||cookiecdn.com^$3p,script
-||cdn.cookielaw.org^$3p
-||geolocation.onetrust.com^$3p
+||cookielaw.org^$3p
+||onetrust.com^$3p
 !
 /pdpa.js$script
 /glow-cookies.min.js$script
@@ -5286,12 +5298,14 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 /gdpr-option.js$script
 /jquery.cookie.min.js$script
 !!! [Note] แต่มันทำให้เว็บใช้ไม่ได้ 20241030234938
-/jquery.cookie.js$script,from=~order.sukishidelivery.com
+! [Test] 20250330155944
+/jquery.cookie.js$script,redirect=noopjs
 /get-pdpa$xhr,script
 /glowCookies.min.js$script
 /jquery-cookie.min.js$script
 /wp-content/themes/soledad/js/js-cookies.js$script,1p
 /wp-content/plugins/pdpa-thailand/public/assets/js/pdpa-thailand-public.js$script,1p
+/cookie_policy/js/cookie.js$script
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
