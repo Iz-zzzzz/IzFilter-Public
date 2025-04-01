@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250401011658
+! Version: 20250401194158
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -1144,57 +1144,49 @@ https://www.photopea.com/img/mog/loud_w.jpg$from=www.photopea.com
 !
 !MARK: ---international news ---
 !
-!collider.com 20231212003313
+!collider.com 20250401191716
+!newsweek.com 20250401191438
 !#if cap_html_filtering
-collider.com##^div.ad-zone
+newsweek.com##^.advert
+newsweek.com##^#block-nw-content-recirc
+newsweek.com##^.right-rail-ads
+newsweek.com##^.subscription-tabs
+newsweek.com##^div[style="min-width:300px;min-height:250px"]
+newsweek.com##^#recommended
+newsweek.com##^#didomi-host
+newsweek.com##^iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
+newsweek.com##^div[class*="tickyPlayer"] > div.videocontent
+newsweek.com##^.newsletter-signup
+newsweek.com##^.subscribe-block
+newsweek.com##^.newsletter-signup-horizontal
+newsweek.com##^.promo-link
+newsweek.com##^.subscribe-block-wrapper
+newsweek.com##^#block-fusion-newsletters-fusion-newsletter-signup
+newsweek.com##^.block-ibtmedia-dfp
+newsweek.com##^.right-rail-ads
 !#endif
-collider.com##div.ad-zone
-!www.newsweek.com 20240123185621
-!#if cap_html_filtering
-www.newsweek.com##^#topad
-!#endif
-www.newsweek.com###topad
-!#if cap_html_filtering
-www.newsweek.com##^#right1ad
-!#endif
-www.newsweek.com###right1ad
-!#if cap_html_filtering
-www.newsweek.com##^div[id^="dfp-ad-inarticle"]
-!#endif
-www.newsweek.com##div[id^="dfp-ad-inarticle"]
-!#if cap_html_filtering
-www.newsweek.com##^.block-fusion-ads
-!#endif
-www.newsweek.com##.block-fusion-ads
-!www.bloomberg.com 20240402210932
-www.bloomberg.com##div[class^="media-ui-Placeholder_placeholderParagraphWrapper-"]
-www.bloomberg.com##div[class="adWrapper"]
-!indiatimes.com 20240409021051
-indiatimes.com##.sticky_minitv
-indiatimes.com##div[id^="custom_ad_wrapper_"]
+!www.bloomberg.com 20250401191714
+!indiatimes.com 20250401191840
 !
 !MARK: ---education ---
 !
-!clearnotebooks.com
-!#if cap_html_filtering
-clearnotebooks.com##^div[class$="-notebook-page-banners"]
-!#endif
-clearnotebooks.com##div[class$="-notebook-page-banners"]
-||*.cloudfront.net/public/assets/notebook/note_page_ad_banners-*.svg$from=clearnotebooks.com
-!ptable.com 20240527165809
+!ptable.com 20250401191930
 !#if cap_html_filtering
 ptable.com##^#Notice
-!#endif
+!#else
 ptable.com###Notice
+!#endif
 !#if cap_html_filtering
 ptable.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
+!#else
 ptable.com##ins.adsbygoogle[data-ad-slot]
-!ieltsbuddy.com 
+!#endif
+!ieltsbuddy.com 20250401192004
 !#if cap_html_filtering
 ieltsbuddy.com##^div[class="modal_block modal_ ss-ui-bootstrap"]
-!#endif
+!#else
 ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
+!#endif
 !
 !MARK: ---redirect qr code ---
 !
@@ -1208,44 +1200,47 @@ get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 !
 !MARK: ---social platform ---
 !
-!twitter.com (x.com) 20240626141354
-||ads-api.x.com^$xhr
+!twitter.com (x.com) 20250401192021
 !facebook.com 20250327182524
 ! !#if !env_mobile
 ! !#endif
 !
 !MARK: ---wiki ---
 !
-!fandom.com
+!fandom.com 20250401192120
 !#if cap_html_filtering
+fandom.com##^iframe[data-s1search-id="mainline-top-ads-bing-top"]
 fandom.com##^.top-ads-container
-!#endif
-fandom.com##.top-ads-container
-!#if cap_html_filtering
+fandom.com##^div[class^="aff-unit"]
+fandom.com##^#article-featured-video-container
 fandom.com##^.ad-slot-placeholder
+fandom.com##^#WikiaBar:has(> #WikiaBarWrapper > .wikia-bar-anon > .message[data-wikiabarcontent])
+fandom.com##^body #pageWrapper > #content[role="main"] > div[id^="siderail_"][id*="_gamepedia"]
+fandom.com##^body > div.notifications-placeholder:has(#localNotice a[href^="/wiki/Special:"])
+fandom.com##^.marketing-notifications
+fandom.com##^.mw-parser-output > table[align="center"] ~ div[class^="noprint"]
+fandom.com##^.banner-notifications-placeholder
+fandom.com##^#featured-video__player-container
+fandom.com##^.aff-unit__wrapper
+fandom.com##^.marketplace
+fandom.com##^[id^="siderail_"][id*="_gamepedia"]
+fandom.com##^.instant-suggestion
+fandom.com##^.top-ads-container
+fandom.com##^.ad-slot-wrapper
+fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !#endif
-fandom.com##.ad-slot-placeholder
 !
 !MARK: ---Apk ---
 !
-!apkcombo.com 20240619004113
+!apkcombo.com 20250401192818
 !#if cap_html_filtering
-apkcombo.com##^[data-m-ad-id]
+apkcombo.com##^.ads-revamp
+apkcombo.com##^.column > div.widget:has(> a.installer)
+apkcombo.com##^.diseanmevrtt
+apkcombo.com##^div[class*=-ad]
+apkcombo.com##^p:has-text(Advertisement)
 !#endif
-apkcombo.com##[data-m-ad-id]
-!#if cap_html_filtering
-apkcombo.com##^[data-d-ad-id]
-!#endif
-apkcombo.com##[data-d-ad-id]
-!apkmoddone.com 20240619004033
-!#if cap_html_filtering
-apkmoddone.com##^.blogAd
-!#endif
-apkmoddone.com##.blogAd
-!#if cap_html_filtering
-apkmoddone.com##^#adTop
-!#endif
-apkmoddone.com###adTop
+!apkmoddone.com 20250401193015
 !
 !MARK: ---dictionary ---
 !
@@ -1313,15 +1308,6 @@ gsmarena.com##^span.ad-c-label:upward(1)
 !#else
 gsmarena.com##span.ad-c-label:upward(1)
 !#endif
-!extremeit.com 
-!#if cap_html_filtering
-extremeit.com##^table[border="0"]
-!#endif
-extremeit.com##table[border="0"]
-!#if cap_html_filtering
-extremeit.com##^#tdi_73
-!#endif
-extremeit.com###tdi_73
 !computerworld.com
 !#if cap_html_filtering
 computerworld.com##^.ad
@@ -1518,27 +1504,30 @@ alphr.com##.sticky-ads
 sammyfans.com##^ins.adsbygoogle[data-ad-slot]
 !#endif
 sammyfans.com##ins.adsbygoogle[data-ad-slot]
-!bleepingcomputer.com 20240527165832
+!bleepingcomputer.com 20250401193133
 !#if cap_html_filtering
-bleepingcomputer.com##^section[class="cz-oa-wrapp"]
+bleepingcomputer.com##^.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
+bleepingcomputer.com##^a[href="https://try.flare.io/bleeping-computer/"] > img
+bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
+bleepingcomputer.com##^.s-ou-wrap
+bleepingcomputer.com##^#after_dl
+bleepingcomputer.com##^.cz-sponsorposts
+bleepingcomputer.com##^#ips_Posts > .post_block:has(div.apb)
+bleepingcomputer.com##^.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has(> div > ul > li > a[rel="noopener sponsored"])
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:contains(Sponsored)
+bleepingcomputer.com##^.noti_bar
+bleepingcomputer.com##^.bc_news_letter_sidebar
+bleepingcomputer.com##^.cz-toa-wrapp
+bleepingcomputer.com##^.ia_ad
+bleepingcomputer.com##^.noty_bar
+bleepingcomputer.com##^.s-ou-wrap
+bleepingcomputer.com##^[href="https://try.flare.io/bleeping-computer/"]
+bleepingcomputer.com##^[href^="https://www.bleepingcomputer.com/go/"]
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has-text(Sponsored)
+bleepingcomputer.com##^.post_wrap:-abp-contains(AdBot)
+bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> a[href$="/deals/"])
 !#endif
-bleepingcomputer.com##section[class="cz-oa-wrapp"]
-!#if cap_html_filtering
-bleepingcomputer.com##^section[class="cz-boa-wrapp"]
-!#endif
-bleepingcomputer.com##section[class="cz-boa-wrapp"]
-!#if cap_html_filtering
-bleepingcomputer.com##^.fs-dynamic
-!#endif
-bleepingcomputer.com##.fs-dynamic
-!#if cap_html_filtering
-bleepingcomputer.com##^.asa
-!#endif
-bleepingcomputer.com##.asa
-!#if cap_html_filtering
-bleepingcomputer.com##^ins.adsbygoogle[data-ad-slot]
-!#endif
-bleepingcomputer.com##ins.adsbygoogle[data-ad-slot]
 !pcworld.com
 pcworld.com##div.wp-block-column:nth-of-type(2)
 !#if cap_html_filtering
@@ -1581,18 +1570,44 @@ userbenchmark.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; posi
 cyanogenmods.org##^div#cyan-ad-slot
 !#endif
 cyanogenmods.org##div#cyan-ad-slot
+!#if cap_html_filtering
+w3schools.com##^div[id*="contentadcontainer"]
+w3schools.com##^#sncmp-banner
+w3schools.com##^.sidesection:has(> a[href="/colors/colors_picker.asp"])
+w3schools.com##^#upperfeatureshowcaselink
+w3schools.com##^#lowerfeatureshowcaselink
+w3schools.com##^a[class^="showcase"]
+w3schools.com##^#right > div.sidesection:has(> a[href="https://www.w3schools.com/videos/index.php"])
+w3schools.com##^#right > div#internalCourses
+w3schools.com##^#getdiploma
+w3schools.com##^#mainLeaderboard
+w3schools.com##^#skyscraper
+w3schools.com##^#tryitLeaderboard
+!#endif
 !
 !MARK: ---code coding ---
 !
-!sourceforge.net
+!sourceforge.net 20250401190046
 !#if cap_html_filtering
-sourceforge.net##^[id^="google_ads_iframe"]
+sourceforge.net##^.main-nav-link
+sourceforge.net##^.projects > li.nel[data-cid]
+sourceforge.net##^#nels
+sourceforge.net##^.can-truncate
+sourceforge.net##^.sterling
+sourceforge.net##^div[data-id^="div-gpt-ad-"]
+sourceforge.net##^.truste_box_overlay
+sourceforge.net##^.truste_overlay
+sourceforge.net##^#downloading > #mirror
+sourceforge.net##^#newsletter-floating
+sourceforge.net##^#get-updates
+sourceforge.net##^article.main-content > div.m-kmu:has(.subscribe-tagline)
+sourceforge.net##^.dlp_newsletter_subscribe
+sourceforge.net##^#banner-sterling
+sourceforge.net##^.sterling
+sourceforge.net##^.can-truncate
+sourceforge.net##^#mirror
+sourceforge.net##^#nels
 !#endif
-sourceforge.net##[id^="google_ads_iframe"]
-!#if cap_html_filtering
-sourceforge.net##^div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-!#endif
-sourceforge.net##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !tutorialstonight.com
 !#if cap_html_filtering
 tutorialstonight.com##^span[class^="ezoic-"]
@@ -1741,6 +1756,8 @@ mangakakalot.tv##div[style="max-width: 100%; width: 300px; height: 250px; margin
 mangatop.to##^iframe[src^="//ad.a-ads.com/"]
 !#endif
 mangatop.to##iframe[src^="//ad.a-ads.com/"]
+!mangadex.org 20250401151307
+mangadex.org##img[alt="An ad, just for you!"]:upward(3)
 !
 !MARK: ---Novel Foreign---
 !
@@ -2487,6 +2504,15 @@ appdisqus.com##center
 appdisqus.com##^div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
 !#endif
 appdisqus.com##div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
+!extremeit.com  20250401151621
+!#if cap_html_filtering
+extremeit.com##^table[border="0"]
+!#endif
+extremeit.com##table[border="0"]
+!#if cap_html_filtering
+extremeit.com##^#tdi_73
+!#endif
+extremeit.com###tdi_73
 !
 !MARK: ---tech ---
 !
@@ -4039,7 +4065,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||www.ign.com^$generichide
 @@||www.rd.com^$generichide
 @@||indiatoday.in^$generichide
-@@||www.newsweek.com^$generichide
 @@||www.bloomberg.com^$generichide
 @@||indiatimes.com^$generichide
 !MARK: ---conference ---
@@ -4056,7 +4081,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||www.deezer.com^$generichide
 @@||soundcloud.com^$generichide
 !MARK: ---education ---
-@@||clearnotebooks.com^$generichide
 @@||imtranslator.net^$generichide
 @@||ptable.com^$generichide
 @@||ieltsbuddy.com^$generichide
@@ -4899,9 +4923,6 @@ brighttv.co.th##.dpdpa--popup
 sanook.com##^.ConsentBanner
 !#endif
 sanook.com##.ConsentBanner
-!#if cap_html_filtering
-ch3plus.com##^#cookie_policy
-!#endif
 ch3plus.com###cookie_policy
 !#if cap_html_filtering
 ch7.com##^.cookies-settings-pop
