@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250401194158
+! Version: 20250406015340
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -14,6 +14,7 @@
 ||vvw.$all
 ||vww.$all
 ||vwv.$all
+||wwv.$all
 !!!**************************************************************************************
 !MARK: Specific
 !****************************************************************************************
@@ -314,8 +315,16 @@
 !****************************************************************************************
 ||oec-br.fit^$all,from=~telegram-spam
 !!!**************************************************************************************
-!MARK: Weird behaviour
+!MARK: top level domains (TLD) that are frequently used by scam or phishing sites
 !****************************************************************************************
+||cn^$doc,from=~TDLareFrequentlyUsedByScammer
+||tk^$doc,from=~TDLareFrequentlyUsedByScammer
+||ml^$doc,from=~TDLareFrequentlyUsedByScammer
+||xyz^$doc,from=~TDLareFrequentlyUsedByScammer
+||buzz^$doc,from=~TDLareFrequentlyUsedByScammer
+||shop^$doc,from=~TDLareFrequentlyUsedByScammer
+||cf^$doc,from=~TDLareFrequentlyUsedByScammer
+||ga^$doc,from=~TDLareFrequentlyUsedByScammer
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -342,6 +351,8 @@ https://hotgraph*$all
 /Ufac4$media
 /teenoi168$media
 /HENG36$media
+/pigpg-*.mp4$media
+/weplay-*.mp4$media
 !/heng99.jpg
 /heng99$image
 !/juad8881 และ /juad8882
@@ -705,7 +716,6 @@ https://bit.ly/992-sexygame-sagame-pgslot-joker123$all
 https://bit.ly/anime-sugoii$all
 https://bit.ly/newvegas168-l*$all
 https://bit.ly/pgjoker69-*$all
-https://bit.ly/Pgjoker69-*$all
 https://bit.ly/pgslot-pg-sagaming-newvegas168$all
 https://bit.ly/sbobet-neevegas168-pgslot-fifa55$all
 https://bit.ly/sexygame-*$all
@@ -989,6 +999,15 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 ||xn--42c7buadi1b7ccbb5v.com^$all
 ||xn--72c5a8att3k1b.com^$all
 ||heng36x.com^$all
+||ambsiam.cc^$all
+||popza24k.me^$all
+||singha24s.com^$all
+||ufabetl.com^$all
+||cittapartecipata.com^$all
+||askmeslot.asia^$all
+!pgjoker69e.com
+||pgjoker69*.com^$all
+||demon45.com^$all
 !MARK: ----------  fake game ----------!
 ||qq288.com$all
 !!!**************************************************************************************
@@ -1084,7 +1103,6 @@ https://cdn.apicdn*.one^$xhr
 ||d30qdagvt44524.cloudfront.net^$3p
 ||google.com/generate_204
 ||overcrowdsillyturret.com^$all
-!xn--s3cx7a.com (วาป.com) 20240717162525
 ||xn--s3cx7a.com^$3p
 ||cdn.innity.net/admanager.js
 ||pemsrv.com^
@@ -1162,6 +1180,7 @@ newsweek.com##^.newsletter-signup-horizontal
 newsweek.com##^.promo-link
 newsweek.com##^.subscribe-block-wrapper
 newsweek.com##^#block-fusion-newsletters-fusion-newsletter-signup
+newsweek.com##^#block-nw-content-recirc
 newsweek.com##^.block-ibtmedia-dfp
 newsweek.com##^.right-rail-ads
 !#endif
@@ -1172,14 +1191,9 @@ newsweek.com##^.right-rail-ads
 !
 !ptable.com 20250401191930
 !#if cap_html_filtering
-ptable.com##^#Notice
+ptable.com##^.Notice
 !#else
-ptable.com###Notice
-!#endif
-!#if cap_html_filtering
-ptable.com##^ins.adsbygoogle[data-ad-slot]
-!#else
-ptable.com##ins.adsbygoogle[data-ad-slot]
+ptable.com##.Notice
 !#endif
 !ieltsbuddy.com 20250401192004
 !#if cap_html_filtering
@@ -1464,23 +1478,54 @@ whathifi.com##.newsletter-inbodyContent-slice
 whathifi.com##^#hawkMagWidget
 !#endif
 whathifi.com###hawkMagWidget
-!tomsguide.com 20230430152716
+!tomsguide.com 20250402185820
 !#if cap_html_filtering
 tomsguide.com##^.sponsored-post
-!#endif
+!#else
 tomsguide.com##.sponsored-post
-!#if cap_html_filtering
-tomsguide.com##^#taboola-below-article-thumbnails
 !#endif
-tomsguide.com###taboola-below-article-thumbnails
-!#if cap_html_filtering
-tomsguide.com##^.vid-present > .van_vid_carousel__padding
-!#endif
-tomsguide.com##.vid-present > .van_vid_carousel__padding
 !#if cap_html_filtering
 tomsguide.com##^.dfp-leaderboard-container
-!#endif
+!#else
 tomsguide.com##.dfp-leaderboard-container
+!#endif
+!#if cap_html_filtering
+tomsguide.com##^div[class^="bordeaux-"]
+tomsguide.com##^#article-body > .hawk-nest
+tomsguide.com##^.news-article .hawk-main-editorial-container
+tomsguide.com##^div[data-offer="deal_of_the_week"]
+tomsguide.com##^.hawk-placeholder
+tomsguide.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
+tomsguide.com##^.hawk-widget[data-model-name]
+tomsguide.com##^.space-b20 > #rightcol_top
+tomsguide.com##^.rightcol-ads
+tomsguide.com##^.page-content-rightcol > div[id] > div[class^="_"]
+tomsguide.com##^.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
+tomsguide.com##^.qc-cmp2-container
+tomsguide.com##^#article-body > p + script[src^="https://content.jwplatform.com"] + .future__jwplayer--carousel
+tomsguide.com##^#prism-modal[data-template="banner"]
+tomsguide.com##^amp-embed[type="taboola"]
+tomsguide.com##^amp-ad
+tomsguide.com##^.van_vid_carousel
+tomsguide.com##^#ec-popup-modal
+tomsguide.com##^.onesignal-customlink-container
+tomsguide.com##^#slice-container-newsletterForm-exitIntent
+tomsguide.com##^div[id^="slice-container-newsletter"]
+tomsguide.com##^#slice-container-exitIntent
+tomsguide.com##^body .newsletter-signup
+tomsguide.com##^#footer_leaderboard
+tomsguide.com##^#header_leaderboard
+tomsguide.com##^#rightcol_top
+tomsguide.com##^#video_ad
+tomsguide.com##^.bordeaux-anchored-container
+tomsguide.com##^.bordeaux-slot
+tomsguide.com##^.hawk-main-editorialised
+tomsguide.com##^.hawk-master-widget-hawk-main-wrapper
+tomsguide.com##^div[class*="ad-unit"]
+tomsguide.com##^.vid-present
+tomsguide.com##^.mobile-leaderboard-320-50:upward([style])
+tomsguide.com##^.van_taboola
+!#endif
 !xda-developers.com 20240114015836
 !#if cap_html_filtering
 xda-developers.com##^div[id^="adsninja"]
@@ -1525,7 +1570,6 @@ bleepingcomputer.com##^.s-ou-wrap
 bleepingcomputer.com##^[href="https://try.flare.io/bleeping-computer/"]
 bleepingcomputer.com##^[href^="https://www.bleepingcomputer.com/go/"]
 bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has-text(Sponsored)
-bleepingcomputer.com##^.post_wrap:-abp-contains(AdBot)
 bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> a[href$="/deals/"])
 !#endif
 !pcworld.com
@@ -1547,11 +1591,51 @@ neowin.net##div[data-freestar-ad]
 neowin.net##^.widget-ad
 !#endif
 neowin.net##.widget-ad
-!tomshardware.com 20240114140930
+!tomshardware.com 20250402181743
 !#if cap_html_filtering
 tomshardware.com##^.dfp-leaderboard-container
-!#endif
+!#else
 tomshardware.com##.dfp-leaderboard-container
+!#endif
+!#if cap_html_filtering
+tomshardware.com##^#header_leaderboard
+tomshardware.com##^#footer_leaderboard
+tomshardware.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
+tomshardware.com##^#rightcol_top
+tomshardware.com##^#rightcol_top + .space-b30
+tomshardware.com##^#rightcol_top_anchor
+tomshardware.com##^#video_ad
+tomshardware.com##^.qc-cmp2-container
+tomshardware.com##^#article-body > p + .jwplayer__widthsetter
+tomshardware.com##^amp-consent
+tomshardware.com##^.prism-modal
+tomshardware.com##^amp-embed[type="taboola"]
+tomshardware.com##^amp-ad
+tomshardware.com##^.read-more-container
+tomshardware.com##^.related-articles-block
+tomshardware.com##^#article-body > div.widthsetter ~ div.jwplayer__widthsetter
+tomshardware.com##^.ad-unit + div.jwplayer__widthsetter > div.future__jwplayer
+tomshardware.com##^.van_vid_carousel
+tomshardware.com##^.future__jwplayer--carousel
+tomshardware.com##^.social-promote-box
+tomshardware.com##^#ec-modal
+tomshardware.com##^.ec-popup-modal
+tomshardware.com##^.onesignal-customlink-container
+tomshardware.com##^#newsletter-slice
+tomshardware.com##^#slice-container-newsletterForm-exitIntent
+tomshardware.com##^#slice-container-newsletterForm-articleInbodyContent
+tomshardware.com##^#slice-container-exitIntent
+tomshardware.com##^.box.newsletter-signup
+tomshardware.com##^#footer_leaderboard
+tomshardware.com##^#header_leaderboard
+tomshardware.com##^#rightcol_bottom
+tomshardware.com##^#rightcol_top
+tomshardware.com##^div[class*="ad-unit"]
+tomshardware.com##^.jwplayer__widthsetter
+tomshardware.com##^.vid-present
+tomshardware.com##^.mobile-leaderboard-320-50:upward([style])
+tomshardware.com##^.van_taboola
+!#endif
 !topcpu.net 20240607191040
 !#if cap_html_filtering
 topcpu.net##^div[class="w-full globalsun-c"]
@@ -1562,6 +1646,53 @@ topcpu.net##div[class="w-full globalsun-c"]
 userbenchmark.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#endif
 userbenchmark.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+!thehackernews.com 20250402185708
+!#if cap_html_filtering
+thehackernews.com##^.banners
+thehackernews.com##^body > section.rockstar:has(> center > a[href="https://thehackernews.uk/wiz-demo-d"])
+thehackernews.com##^.dig_two
+thehackernews.com##^a.custom-link[rel*="sponsored"]
+thehackernews.com##^section.box-side:has(> div[class] > a[target="_blank"])
+thehackernews.com##^.blog-posts > .body-post:has(> a[target="_blank"])
+thehackernews.com##^body > [class]:has(> a[href][target="_blank"])
+thehackernews.com##^body > [class^="p"]:has(> center > script)
+thehackernews.com##^body > [class]:has(> center a[href][target="_blank"])
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a[target="_blank"] > img
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a > img[target="_blank"]
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class] + script)
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a > img[target="_blank"]) + script)
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a[target="_blank"]) + script)
+thehackernews.com##^center > a:is([rel^="nofollow"], [target^="_blank"]) > img
+thehackernews.com##^#articlebody > div[class]:has(> center > a:is([rel^="nofollow"], [target^="_blank"]) > img)
+thehackernews.com##^.ad_two
+thehackernews.com##^.right-box > .zoho-box
+thehackernews.com##^.sidewalaad
+thehackernews.com##^.deal-store
+thehackernews.com##^body > div.cf:has(> center > a[rel*="sponsored"])
+thehackernews.com##^.dog_two
+thehackernews.com##^.av-side-box
+thehackernews.com##^body > .google.cf
+thehackernews.com##^#__next > div[class]:has(div[data-testid="modal-overlay"] + div a[href="/privacy"])
+thehackernews.com##^body > .deals > .deal-box
+thehackernews.com##^#ouibounce-modal
+thehackernews.com##^.articlebody > div.cf.note-b:has(> a[href="https://twitter.com/thehackersnews"])
+thehackernews.com##^div[data-testid="newsletter"]
+thehackernews.com##^body > div[role="dialog"]:has(> iframe[title^="Email Capture Technology"])
+thehackernews.com##^body > div[style^="background-image: none;"].fb_lightbox-overlay.fb_lightbox-overlay-fixed
+thehackernews.com##^.sub-button
+thehackernews.com##^ul > li:has(> a[href="#email-outer"])
+thehackernews.com##^#email-outer
+thehackernews.com##^.css-h52rc8
+thehackernews.com##^.custom-link
+thehackernews.com##^.dog_two
+thehackernews.com##^.okfix
+thehackernews.com##^div.rocking
+thehackernews.com##^a[href^="https://thehackernews.uk/"]:matches-attr(href=/https:\/\/thehackernews\.uk\/[a-zA-Z0-9]{4,}/):not([href*="-"]):not([class*="button"]):not([class*="latest"])
+thehackernews.com##^body:has(article) .cf > a[href^="https://thehackernews.uk/"][target="_blank"]
+thehackernews.com##^[href="https://thehackernews.uk/wiz-kubernetes-security"]
+thehackernews.com##^.akku
+thehackernews.com##^section.cf.rocking
+!#endif
 !
 !MARK: ---tech ---
 !
@@ -3908,7 +4039,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="Hydra888"]
 ##img[alt="Kingdom66"]
 ##img[alt^="UFA"]
-##img[alt="askmeslot"]
+##img[alt^="askmeslot"]
 ##img[alt*="ufa888"]
 ##img[alt="LALIKABET168"]
 ##img[alt="LALIKABET88"]
@@ -3932,6 +4063,15 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt^="pgslot"]
 ##img[alt="hentai-buzz"]
 ##img[alt="PG SLOT"]
+##img[alt*="ufasexygame"]
+##img[alt^="ufabet"]
+##img[alt*="pgjoker"]
+##img[alt="FINVER88"]
+##img[alt^="sagame168"]
+##img[alt^="brazil99"]
+##img[alt^="lotto43"]
+##img[alt^="ufac"]
+##img[alt="singha24"]
 ##a[href^="https://t.ly/"]
 ##a[href^="https://cutt.ly/"]
 ##img[alt="Advertisement"]
@@ -3941,6 +4081,11 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##div[class="ad-div-1 disable-script"]
 ##div[class="ad-div-2 disable-script"]
 ##div[class="only-cen"]
+##div[id="slider-r"] > a
+##div[id="spin-r"] > a
+##div[id="slider-l"] > a
+##div[id="slider-l"] > a
+##div[id="slider-f"] > a
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -3975,6 +4120,10 @@ colabtutorials.com,mukohphetra.com##+js(rmnt, script, detectAdBlock)
 colabtutorials.com,mukohphetra.com###adb
 colabtutorials.com,mukohphetra.com###wpsafe-generate:style(display: block !important;)
 colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important;)
+# AdGuard – Ads
+#@#.ad-unit:not(.textads)
+# uBlock filters
+##.ad-unit:not(.text-ad):not(.textads):not([style^="width: 1px; height: 1px; position: absolute;"])
 !!!**************************************************************************************
 !* 
 !* Filtering Performance (No Thai sites)
@@ -5292,6 +5441,7 @@ enterpriseitpro.net##^div[class^="dpdpa--popup"]
 enterpriseitpro.net##div[class^="dpdpa--popup"]
 !#endif
 salehere.co.th##div[class="container-accept-cookie"]
+mot.go.th##div.cookiesPopup
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
