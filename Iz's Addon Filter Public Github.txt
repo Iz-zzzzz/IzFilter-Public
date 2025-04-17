@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250411200657
+! Version: 20250417154939
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -317,14 +317,15 @@
 !!!**************************************************************************************
 !MARK: top level domains (TLD) that are frequently used by scam or phishing sites
 !****************************************************************************************
-||cn^$doc,from=~TDLareFrequentlyUsedByScammer
-||tk^$doc,from=~TDLareFrequentlyUsedByScammer
-||ml^$doc,from=~TDLareFrequentlyUsedByScammer
-||xyz^$doc,from=~TDLareFrequentlyUsedByScammer
-||buzz^$doc,from=~TDLareFrequentlyUsedByScammer
-||shop^$doc,from=~TDLareFrequentlyUsedByScammer
-||cf^$doc,from=~TDLareFrequentlyUsedByScammer
-||ga^$doc,from=~TDLareFrequentlyUsedByScammer
+||cn^$doc,from=~TLDareFrequentlyUsedByScammer
+||tk^$doc,from=~TLDareFrequentlyUsedByScammer
+||ml^$doc,from=~TLDareFrequentlyUsedByScammer
+||xyz^$doc,from=~TLDareFrequentlyUsedByScammer
+||buzz^$doc,from=~TLDareFrequentlyUsedByScammer
+||shop^$doc,from=~TLDareFrequentlyUsedByScammer
+||cf^$doc,from=~TLDareFrequentlyUsedByScammer
+||ga^$doc,from=~TLDareFrequentlyUsedByScammer
+||cc^$doc,from=~TLDareFrequentlyUsedByScammer
 !!!**************************************************************************************
 !* 1
 !* Thai illegal sites
@@ -1020,7 +1021,7 @@ https://admin.sc.chula.ac.th/content/video/?video=*$all
 !****************************************************************************************
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
-/^(?!.*(ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|www.niceoppai.net|reborntrans.com
+/^(?!.*(ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,frame,from=aileen-novel.online|mangapdf-online.com|www.niceoppai.net|reborntrans.com|aileen-novel.online|novelpdf.xyz|xn--72czp5e5a8b.tv|mafia-manga.com
 ! Popular Javascript
 ! Google Adsense in WP plugin
 /assets/js/google-adsense$script
@@ -1169,8 +1170,6 @@ https://www.photopea.com/img/mog/loud_w.jpg$from=www.photopea.com
 !newsweek.com 20250401191438
 !#if cap_html_filtering
 newsweek.com##^.advert
-newsweek.com##^#block-nw-content-recirc
-newsweek.com##^.right-rail-ads
 newsweek.com##^.subscription-tabs
 newsweek.com##^div[style="min-width:300px;min-height:250px"]
 newsweek.com##^#recommended
@@ -1241,6 +1240,7 @@ sciencenews.org##^#emailConversion
 sciencenews.org##^#subscribeConversion
 sciencenews.org##^section[class^="newsletter-signup__wrapper"]
 sciencenews.org##^.ad-block-leaderboard__freestar___Ologr
+sciencenews.org##^.ad-block__mq-wrapper
 sciencenews.org##^.from-nature-index__wrapper___2E2Z9
 sciencenews.org##^p:has-text(Sponsor Message)
 !#endif
@@ -1291,6 +1291,7 @@ fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !
 !apkcombo.com 20250401192818
 !#if cap_html_filtering
+apkcombo.com##^.is-main > div[style="margin-bottom: 10px; max-height: 260px; min-height: 260px; overflow: hidden"]
 apkcombo.com##^.ads-revamp
 apkcombo.com##^.column > div.widget:has(> a.installer)
 apkcombo.com##^.diseanmevrtt
@@ -1597,7 +1598,6 @@ sammyfans.com##ins.adsbygoogle[data-ad-slot]
 bleepingcomputer.com##^.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
 bleepingcomputer.com##^a[href="https://try.flare.io/bleeping-computer/"] > img
 bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
-bleepingcomputer.com##^.s-ou-wrap
 bleepingcomputer.com##^#after_dl
 bleepingcomputer.com##^.cz-sponsorposts
 bleepingcomputer.com##^#ips_Posts > .post_block:has(div.apb)
@@ -1767,7 +1767,6 @@ sourceforge.net##^.main-nav-link
 sourceforge.net##^.projects > li.nel[data-cid]
 sourceforge.net##^#nels
 sourceforge.net##^.can-truncate
-sourceforge.net##^.sterling
 sourceforge.net##^div[data-id^="div-gpt-ad-"]
 sourceforge.net##^.truste_box_overlay
 sourceforge.net##^.truste_overlay
@@ -1960,7 +1959,6 @@ mangatop.to##^iframe[src^="//ad.a-ads.com/"]
 !#endif
 mangatop.to##iframe[src^="//ad.a-ads.com/"]
 !mangadex.org 20250401151307
-mangadex.org##img[alt="An ad, just for you!"]:upward(3)
 !
 !MARK: ---Novel Foreign---
 !
@@ -3319,7 +3317,6 @@ manga-post.com##+js(rmnt, script, /^(Popupse|advanced_ads)$/)
 !! For site frequently change popup script 20241027120834
 /^(?!.*(manga-post.com|facebook.com)).*$/$popup,from=manga-post.com
 !mafia-manga.com 20231217005325
-*$script,third-party,from=mafia-manga.com
 !#if cap_html_filtering
 mafia-manga.com##^div.dessert-frame
 !#else
@@ -3815,10 +3812,8 @@ novel-lucky.com###bottom_center_ads_1
 !#endif
 !aileen-novel.online
 aileen-novel.online##+js(nowoif)
-*$script,third-party,from=aileen-novel.online
 !novelpdf.xyz
 novelpdf.xyz##+js(nowoif)
-*$script,third-party,from=novelpdf.xyz
 !cat2auto.com
 !#if cap_html_filtering
 cat2auto.com##^div.widget_text
@@ -3928,7 +3923,6 @@ doonungsub.com##.popup
 !#else
 ดูหนัง.tv##.row
 !#endif
-*$script,third-party,from=xn--72czp5e5a8b.tv
 !serie-master.com
 !c2movie.com 20240131013442
 !#if cap_html_filtering
@@ -4722,13 +4716,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !#if adguard
 @@||bstarstatic.com^$stealth
 !#endif
-!from easylist
-!!break aws.amazon.com
-/web-vitals.$badfilter
-/web-vitals.$from=~aws.amazon.com
-!from AdGuard – Other Annoyances 20250218190146
-!!break site
-pngtree.com#@#.stylusid-anniversary
 !!!**************************************************************************************
 !* 
 !* Browser Performance
