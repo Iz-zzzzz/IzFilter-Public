@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250417154939
+! Version: 20250419221155
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -634,6 +634,13 @@ https://hotgraph*$all
 /alpha88*.gif$image
 /pgcash88.gif$image
 /Nainoi-*.gif$image
+/JUN88*.gif$image
+/789BET*.gif$image
+/THUNDER95*.gif$image
+/MACAU69*.gif$image
+/TEENOI*.gif$image
+/OLE777*.gif$image
+/Godzilla882*.gif$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -1124,8 +1131,8 @@ https://cdn.apicdn*.one^$xhr
 ||landingi.com^$3p
 /\/ads\/[0-9].webp/$image,1p
 ||sakuharuno.com^$3p
-||upfastfile.com/upload/*.mp4$3p,from=037hdmovie.com
-||rsc.cdn77.org^$3p,from=037hdmovie.com
+||upfastfile.com/upload/*.mp4$media,from=leoplayer7.com
+||rsc.cdn77.org^$media,from=leoplayer7.com
 ||fs-loader.com^$3p
 ||www.zogoodnews.com^$3p
 !!!**************************************************************************************
@@ -1189,6 +1196,7 @@ newsweek.com##^.right-rail-ads
 !www.bloomberg.com 20250401191714
 !indiatimes.com 20250401191840
 !cnbc.com 20250410232626
+cnbc.com##.BoxRail-ad
 !
 !MARK: ---education ---
 !
@@ -2547,7 +2555,7 @@ blognone.com##.advertorial,.sponsored:style(opacity: 0.4 !important;)
 !#if cap_html_filtering
 blognone.com##^#above_comments
 !#endif
-!flashfly.net 20250206230724
+!flashfly.net 20250419221101
 !#if cap_html_filtering
 flashfly.net##^iframe[width="500"][height="190"]
 !#else
@@ -2718,7 +2726,7 @@ appdisqus.com##center
 appdisqus.com##^div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
 !#endif
 appdisqus.com##div[class="label"]:has-text(Advertisement):upward(div[class="a-wrap a-wrap-base a-wrap-7 a-wrap-bg show-lg"])
-!extremeit.com  20250401151621
+!extremeit.com 20250401151621
 !#if cap_html_filtering
 extremeit.com##^table[border="0"]
 !#endif
@@ -3510,7 +3518,7 @@ anime-sugoi.com##^div[class="adsok img-thumbnail"]
 !#else
 anime-sugoi.com##div[class="adsok img-thumbnail"]
 !#endif
-||animeyuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|animeyuzu.com
+||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|anime-yuzu.com
 wss://$from=anime-sugoi.com
 !!เอา tag ออก
 !#if cap_html_filtering
@@ -3521,21 +3529,21 @@ anime-sugoi.com##.panel-body > center > p
 ! Maybe Tracker/DDoS
 ||trycloudflare.com^$from=playermeow.com|anime-sugoi.com
 ||idocdn.com^$from=playermeow.com|anime-sugoi.com
-!animeyuzu.com 20250124202026
+!anime-yuzu.com 20250419013332
 !#if cap_html_filtering
-animeyuzu.com##^.module_home_x
+anime-yuzu.com##^div[class="module_home_x"]
 !#else
-animeyuzu.com##.module_home_x
+anime-yuzu.com##div[class="module_home_x"]
 !#endif
 !#if cap_html_filtering
-animeyuzu.com##^div[id^="animekimiads"]
+anime-yuzu.com##^div[id^="animekimiads"]
 !#else
-animeyuzu.com##div[id^="animekimiads"]
+anime-yuzu.com##div[id^="animekimiads"]
 !#endif
 !#if cap_html_filtering
-animeyuzu.com##^a[href^="https://t.ly/"]
+anime-yuzu.com##^a[href^="https://t.ly/"]
 !#else
-animeyuzu.com##a[href^="https://t.ly/"]
+anime-yuzu.com##a[href^="https://t.ly/"]
 !#endif
 !anime-masters.com 20240709014043
 !! use more performance rule
@@ -3611,13 +3619,19 @@ anime-kimuchi.net##^.b-ads
 !#else
 anime-kimuchi.net##.b-ads
 !#endif
-!fairyanime.net
+!fairyanime.net 20250418010605
 !#if cap_html_filtering
 fairyanime.net##^#kosana
 !#else
 fairyanime.net###kosana
 !#endif
-fairyanime.net###main-content > div.concise.animated.bounce:nth-child(5)
+!#if cap_html_filtering
+fairyanime.net##^div[id="bottom-closed-f"]
+!#else
+fairyanime.net##div[id="bottom-closed-f"]
+!#endif
+streaming.tonytonychopper.com##div[id="overlay-0"]
+||tonytonychopper.com/ads^$script
 !shibaanime.com 20240710221151
 !#if cap_html_filtering
 shibaanime.com##^a[rel$="sponsored"]
@@ -3851,7 +3865,7 @@ thaiboyslove.com##td[align="center"] > a:upward(1)
 !
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,from=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com
+.gif$image,from=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com|037hd-movies.com
 .webp$image,from=uc2hd.com
 !
 /series-indy$image
@@ -4122,6 +4136,12 @@ series-dd.co##^div[id="ads728x90top"][onclick="clickStats()"]
 !#else
 series-dd.co##div[id="ads728x90top"][onclick="clickStats()"]
 !#endif
+!037hd-movies.com 20250418005655
+!#if cap_html_filtering
+037hd-movies.com##^div[id^="ads-"]
+!#else
+037hd-movies.com##div[id^="ads-"]
+!#endif
 !
 !MARK: --- Others
 !
@@ -4175,7 +4195,7 @@ online-station.net##.ads-space:style(margin-top: unset !important;)
 ##img[alt="KP88"]
 ##img[alt="SEXY24HR"]
 ##img[alt*="ufabet"]
-##img[alt*="ufasa"]
+##img[alt^="ufasa"]
 ##img[alt="bf789"]
 ##img[alt="sbobet888"]
 ##img[alt="sbobetone"]
@@ -4333,6 +4353,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||jaggaer.com^$generichide
 !MARK: ---international news ---
 @@||bbc.$generichide
+@@||cnbc.com^$generichide
 @@||economist.com^$generichide
 @@||forbes.com^$generichide
 @@||forbesthailand.com^$generichide
@@ -5052,7 +5073,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !MARK: ---anime illegitimate ---
 @@||www.anime-sugoi.com^$generichide
 @@||anime-masters.com^$generichide
-@@||animeyuzu.com^$generichide
+@@||anime-yuzu.com^$generichide
 @@||anime-suba.com^$generichide
 @@||sub-thai.com^$generichide
 @@||anifume.com^$generichide
@@ -5126,6 +5147,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||almo-hd.com^$generichide
 @@||movie2k.io^$generichide
 @@||series-dd.co^$generichide
+@@||037hd-movies.com^$generichide
 !MARK: ---tech illegitimate ---
 @@||mawtoload.com^$generichide
 @@||axeload.com^$generichide
