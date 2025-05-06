@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250419221155
+! Version: 20250506231739
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -148,6 +148,8 @@
 ||thexpoose.com^$all
 ||9minecraft.net^$all,from=~illegal-minecraft-content-plz-use-dev-site-directly
 ||9minecraft.com^$all,from=~illegal-minecraft-content-plz-use-dev-site-directly
+||potplayer.info^$all,from=~fake-software-site
+||winrar.in.th^$all,from=~fake-software-site
 !!!**************************************************************************************
 !MARK: Mal search engine self gathering
 !****************************************************************************************
@@ -183,6 +185,7 @@
 ||shuna.one^$all,from=~thai-sms-spam
 ||m9s.in^$all,from=~thai-sms-spam
 ||i9i.in^$all,from=~thai-sms-spam
+||mflowthai.cc^$all,from=~thai-sms-spam
 !!!**************************************************************************************
 !MARK:Spam through Browser Notification API self gathering
 !****************************************************************************************
@@ -285,6 +288,7 @@
 ||controversykeenworkshop.com^$all,from=~facebook-spam
 ||fecabookr.com^$all,from=~facebook-spam
 ||fecabooke.com^$all,from=~facebook-spam
+||fecabook1.com^$all,from=~facebook-spam
 !
 ! Spam/Phishing in Facebook.com messenger self gathering CONFIRM
 ||rx-help-center.xyz^$all,from=~facebook-spam
@@ -1135,6 +1139,9 @@ https://cdn.apicdn*.one^$xhr
 ||rsc.cdn77.org^$media,from=leoplayer7.com
 ||fs-loader.com^$3p
 ||www.zogoodnews.com^$3p
+! Maybe Tracker/DDoS
+||trycloudflare.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
+||idocdn.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -1197,6 +1204,7 @@ newsweek.com##^.right-rail-ads
 !indiatimes.com 20250401191840
 !cnbc.com 20250410232626
 cnbc.com##.BoxRail-ad
+!theverge.com 20250420172610
 !
 !MARK: ---education ---
 !
@@ -1319,6 +1327,9 @@ apkcombo.com##^p:has-text(Advertisement)
 !
 !MARK: ---game news ---
 !
+!vlr.gg 20250422215730
+vlr.gg##div.wf-label:has-text("Advertisement")
+vlr.gg##div[class="col mod-2"] > div:nth-child(4)
 !
 !
 !
@@ -1942,6 +1953,7 @@ myanimelist.net##^.border_top
 myanimelist.net##^[src*="/c/img/images/event/"]
 myanimelist.net##^[class*="-malside"]
 myanimelist.net##^[class*="-pdatla"]
+myanimelist.net##^.bookstore-detail-right
 !#endif
 !
 !MARK: ---music illegitimate ---
@@ -2136,6 +2148,7 @@ thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 !!thairath.co.th/futureperfect 20240923140247
 thairath.co.th##div.container-ads:upward(1)
 thairath.co.th##div#article_billboard:upward(1)
+thairath.co.th##div[class*="adsbox"]
 !ch3plus.com 20240220140536
 !#if cap_html_filtering
 ch3plus.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -2239,7 +2252,7 @@ dailynews.co.th##^#div-ads-postarticle:upward(4)
 !#else
 dailynews.co.th###div-ads-postarticle:upward(4)
 !#endif
-!khaosod.co.th 20240516191924
+!khaosod.co.th 20250421013400
 !#if cap_html_filtering
 khaosod.co.th##^div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !#else
@@ -2249,6 +2262,12 @@ khaosod.co.th##div[id^="div-gpt-"]:not([style^="width: 1px; height: 1px; positio
 khaosod.co.th##^div[id*="ScriptRoot"]
 !#else
 khaosod.co.th##div[id*="ScriptRoot"]
+!#endif
+!#if cap_html_filtering
+khaosod.co.th##^.ads_position_wrapper
+khaosod.co.th##^#pdpa-popup
+khaosod.co.th##^.udfollow
+khaosod.co.th##^.pdpa-wrapper
 !#endif
 !khaosodenglish.com 20240130222122
 !#if cap_html_filtering
@@ -3865,33 +3884,19 @@ thaiboyslove.com##td[align="center"] > a:upward(1)
 !
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,from=037hdmovie.com|movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com|037hd-movies.com
+.gif$image,from=movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com|037hd-movies.com|lk-hd.com
 .webp$image,from=uc2hd.com
 !
 /series-indy$image
 /928hd$image
 /series168*$image
-!037hdmovie.com 20250208222039
-!#if cap_html_filtering
-037hdmovie.com##^div.filmborder > div[style="text-align: center;"] > a[target="_blank"]
-!#else
-037hdmovie.com##div.filmborder > div[style="text-align: center;"] > a[target="_blank"]
-!#endif
-!#if cap_html_filtering
-037hdmovie.com##^div[id^="ads-"]
-!#else
-037hdmovie.com##div[id^="ads-"]
-!#endif
-! Maybe Tracker/DDoS
-||trycloudflare.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
-||idocdn.com^$from=www.leoplayer7.com|streamhls.com|playhydrax.com
 !nungdeedee.com 20240430215951
 ||nungdeedee.com/externallink*$all,from=nungdeedee.com
 !#if cap_html_filtering
 nungdeedee.com##^a[href^="https://nungdeedee.com/externallink"]
 !#endif
 nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
-!24-hd.com 20241004013716
+!24-hd.com 20250420021646
 !#if cap_html_filtering
 24-hd.com##^div.adhl
 !#else
@@ -3912,6 +3917,7 @@ nungdeedee.com##a[href^="https://nungdeedee.com/externallink"]
 !#else
 24-hd.com##aside.ad
 !#endif
+wss://$from=24playerhd.com
 !doonungsub.com 20240131013447
 !#if cap_html_filtering
 doonungsub.com##^.banner
@@ -4142,6 +4148,24 @@ series-dd.co##div[id="ads728x90top"][onclick="clickStats()"]
 !#else
 037hd-movies.com##div[id^="ads-"]
 !#endif
+!123-hd.com 20250420020400
+!#if cap_html_filtering
+123-hd.com##^#banner_top
+!#else
+123-hd.com###banner_top
+!#endif
+!#if cap_html_filtering
+123-hd.com##^p[align="center"] > a
+!#else
+123-hd.com##p[align="center"] > a
+!#endif
+!lk-hd.com 20250420020754
+!#if cap_html_filtering
+lk-hd.com##^div[class="ads-above-single-player"]
+!#else
+lk-hd.com##div[class="ads-above-single-player"]
+!#endif
+||lk-hd.com^$media
 !
 !MARK: --- Others
 !
@@ -4162,8 +4186,12 @@ chillpainai.com##img[alt="Lazada"]
 !
 !sanook.com 20240514144944
 sanook.com##+js(trusted-click-element,button[class*="close-btn"])
-!online-station.net 20240926181156
+!online-station.net 20250426200611
+!#if cap_html_filtering
+online-station.net##^div.ads
+!#else
 online-station.net##div.ads
+!#endif
 online-station.net##.ads-space:style(margin-top: unset !important;)
 !!!**************************************************************************************
 !* 
@@ -5110,7 +5138,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||thaiboyslove.com^$generichide
 !MARK: --- movie illegitimate ---
 @@||movie007hd.com^$generichide
-@@||037hdmovie.com^$generichide
 @@||movies-d.com^$generichide
 @@||dooseries4k.com^$generichide
 @@||9nunghd.com^$generichide
@@ -5315,16 +5342,15 @@ election2566.thestandard.co##^.ant-drawer-bottom
 !#endif
 election2566.thestandard.co##.ant-drawer-bottom
 !#if cap_html_filtering
-thestandard.co##^.cwc-sdk-container
+thestandard.co##^div[id="fixedban"]
+!#else
+thestandard.co##div[id="fixedban"]
 !#endif
-thestandard.co##.cwc-sdk-container
 !
 !#if cap_html_filtering
 thematter.co##^#cookie-law-info-bar:not(body):not(html):not(article)
-!#endif
+!#else
 thematter.co###cookie-law-info-bar:not(body):not(html):not(article)
-!#if cap_html_filtering
-voicetv.co.th##^#cookie-notification
 !#endif
 voicetv.co.th###cookie-notification
 !#if cap_html_filtering
@@ -5592,6 +5618,18 @@ ram-hosp.co.th##^div[id="cookiePopup"]
 !#else
 ram-hosp.co.th##div[id="cookiePopup"]
 !#endif
+savemak.com##+js(trusted-click-element, button[id="PDPANotAllow"])
+!#if cap_html_filtering
+savemak.com##^div[id="pdpa_screen"]
+!#else
+savemak.com##div[id="pdpa_screen"]
+!#endif
+swu.ac.th##div[id="pjAcceptCookieBar"]
+!#if cap_html_filtering
+bluporthuahin.com##^div[class^="dpdpa--"]
+!#else
+bluporthuahin.com##div[class^="dpdpa--"]
+!#endif
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
@@ -5617,17 +5655,17 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 /cookie-notice$script,css
 /gdpr-compliance-cookie-consent$script,css
 /gdpr-option.js$script
-/jquery.cookie.min.js$script
+/jquery.cookie.min.js$script,redirect-rule=noop.js
 !!! [Note] แต่มันทำให้เว็บใช้ไม่ได้ 20241030234938
 ! [Test] 20250330155944
-/jquery.cookie.js$script,redirect=noopjs
+/jquery.cookie.js$script,redirect-rule=noop.js
 /get-pdpa$xhr,script
-/glowCookies.min.js$script
-/jquery-cookie.min.js$script
+/glowCookies.min.js$script,redirect-rule=noop.js
+/jquery-cookie.min.js$script,redirect-rule=noop.js
 /wp-content/themes/soledad/js/js-cookies.js$script,1p
 /wp-content/plugins/pdpa-thailand/public/assets/js/pdpa-thailand-public.js$script,1p
-/cookie_policy/js/cookie.js$script
-/js.cookie.min.js$script
+/cookie_policy/js/cookie.js$script,redirect-rule=noop.js
+/js.cookie.min.js$script,redirect-rule=noop.js
 !MadeByMe Cosmestic rules
 ##.eupopup-body
 ##.eupopup-head
