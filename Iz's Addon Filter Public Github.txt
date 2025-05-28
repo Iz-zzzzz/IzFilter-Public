@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250506231739
+! Version: 20250528000553
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -289,6 +289,9 @@
 ||fecabookr.com^$all,from=~facebook-spam
 ||fecabooke.com^$all,from=~facebook-spam
 ||fecabook1.com^$all,from=~facebook-spam
+||annoyinghooteraccomplished.com^$all,from=~facebook-spam
+||impetusorgansseparation.com^$all,from=~facebook-spam
+||bustlefungus.com^$all,from=~facebook-spam
 !
 ! Spam/Phishing in Facebook.com messenger self gathering CONFIRM
 ||rx-help-center.xyz^$all,from=~facebook-spam
@@ -644,7 +647,8 @@ https://hotgraph*$all
 /MACAU69*.gif$image
 /TEENOI*.gif$image
 /OLE777*.gif$image
-/Godzilla882*.gif$image
+/Godzilla88*.gif$image
+/iruay.webp$image
 !MARK: ---------- URL specific Rules ----------
 ||99tdedth.com^$all
 ||meehay569st.bet^$all
@@ -1274,9 +1278,6 @@ get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 !MARK: ---social platform ---
 !
 !twitter.com (x.com) 20250401192021
-!facebook.com 20250327182524
-! !#if !env_mobile
-! !#endif
 !
 !MARK: ---wiki ---
 !
@@ -1954,6 +1955,7 @@ myanimelist.net##^[src*="/c/img/images/event/"]
 myanimelist.net##^[class*="-malside"]
 myanimelist.net##^[class*="-pdatla"]
 myanimelist.net##^.bookstore-detail-right
+myanimelist.net##^.left.bookstores-recommend-plugin-aK0oopie.widget
 !#endif
 !
 !MARK: ---music illegitimate ---
@@ -2568,11 +2570,15 @@ techtalkthai.com##div[class="e3lan e3lan-top"]
 !#endif
 .gif$image,from=techtalkthai.com
 *Sponsors.png$image,from=techtalkthai.com
-!blognone.com 20250406220445
-blognone.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
-blognone.com##.advertorial,.sponsored:style(opacity: 0.4 !important;)
+!blognone.com 20250516153423
+blognone.com##a[href="/user/sponsored"]:upward(div[class="views-row"]):style(opacity: 0.4 !important;)
 !#if cap_html_filtering
 blognone.com##^#above_comments
+!#endif
+!#if cap_html_filtering
+blognone.com##^div[class="adsense"]
+!#else
+blognone.com##div[class="adsense"]
 !#endif
 !flashfly.net 20250419221101
 !#if cap_html_filtering
@@ -2945,7 +2951,7 @@ longdo.com##ins.adsbygoogle[data-ad-slot]
 !แสดงปุ่มกด download
 mawtoload.com##div#delayedText:style(visibility: visible !important;)
 !i-loadzone.com 20240621232153
-blog.i-loadzone.com##+js(nano-sib, , *, 0.02)
+blog.i-loadzone.com##+js(nano-sib, , , 0.02)
 !
 !#if cap_html_filtering
 i-loadzone.com##^div[class^="gads"]
@@ -3590,17 +3596,22 @@ anifume.com##div.topml
 ||anifume.com/a4Eof1D0f/close-x.png$from=anifume.com
 ||anifume.com/a4Eof1D0f/loadgame-float.jpg$from=anifume.com
 anifume.com##+js(nowoif)
-!anime-suba.com 20240324015402
-||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,from=anime-suba.com
-anime-suba.com##+js(nowoif)
-!!!invisible popup overlay video
+!anime-suba.co 20250511024335
+||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,from=anime-suba.co
+anime-suba.co##+js(nowoif)
+anime-suba.co##+js(nano-sib, , , 0.02)
+https://www.anime-suba.co/imges/close.png$from=anime-suba.co
+https://www.anime-suba.co/Anime-Suba/Admin/imgAnadvertisement^$image,from=anime-suba.co
 !#if cap_html_filtering
-anime-suba.com##^.overlay-0
+anime-suba.co##^.Anadvertisement0
 !#else
-anime-suba.com##.overlay-0
+anime-suba.co##.Anadvertisement0
 !#endif
-anime-suba.com##+js(nano-sib, , *, 0.02)
-https://www.anime-suba.com/imges/close.png$from=anime-suba.com
+!#if cap_html_filtering
+anime-suba.co##^div[id="light"]
+!#else
+anime-suba.co##div[id="light"]
+!#endif
 !animehayai.net 20240308222408
 !#if cap_html_filtering
 animehayai.net##^.col-12
@@ -4031,7 +4042,7 @@ subthai.tv##^.announce
 !#else
 subthai.tv##.announce
 !#endif
-subthai.tv##+js(nano-sib, , *, 0.02)
+subthai.tv##+js(nano-sib, , , 0.02)
 !nungkai.com 20240717161625
 !#if cap_html_filtering
 nungkai.com##^aside[class="ad"]
@@ -4765,6 +4776,11 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 !#if adguard
 @@||bstarstatic.com^$stealth
 !#endif
+! break m.facebook.com comment 20250527213512
+!#if env_mobile
+*$removeparam=_nc_cat,from=~instagram.com,badfilter
+*$removeparam=_nc_cat,from=~instagram.com|~facebook.com
+!#endif
 !!!**************************************************************************************
 !* 
 !* Browser Performance
@@ -5102,7 +5118,7 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||www.anime-sugoi.com^$generichide
 @@||anime-masters.com^$generichide
 @@||anime-yuzu.com^$generichide
-@@||anime-suba.com^$generichide
+@@||anime-suba.co^$generichide
 @@||sub-thai.com^$generichide
 @@||anifume.com^$generichide
 @@||animesubthaiz.com^$generichide
@@ -5630,6 +5646,14 @@ bluporthuahin.com##^div[class^="dpdpa--"]
 !#else
 bluporthuahin.com##div[class^="dpdpa--"]
 !#endif
+dbd.go.th##div[class^="fixed bottom-10"]:has-text(Cookies)
+zircon.co.th##.notice-term-condition
+princsuvarnabhumi.com##div[aria-live="polite"]
+!#if cap_html_filtering
+arac.co.th##^div[id="myModal"]
+!#else
+arac.co.th##div[id="myModal"]
+!#endif
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
@@ -5653,7 +5677,7 @@ smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
 /designil-pdpa$script,image,xhr
 /wp-content/plugins/cookie-law-info$script,image,xhr
 /cookie-notice$script,css
-/gdpr-compliance-cookie-consent$script,css
+/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js$script
 /gdpr-option.js$script
 /jquery.cookie.min.js$script,redirect-rule=noop.js
 !!! [Note] แต่มันทำให้เว็บใช้ไม่ได้ 20241030234938
