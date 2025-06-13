@@ -95,9 +95,6 @@ English version (Jun 16, 2023) click  [here](https://github.com/Iz-zzzzz/IzFilte
 - [EasyList Thailand](https://github.com/easylist-thailand/easylist-thailand)
 - [thai-ads-filter](https://github.com/adblock-thai/thai-ads-filter)
 
-### Repository View Counter
-<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=55347&s=4' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
-
 #### หมายเหตุ (Footnote)
 - Iz's Addon Filter Public Version ดึงมาจากส่วนหนึ่งของ filter list ที่ผมใช้เองส่วนตัว ดังนั้นอาจมีข้อผิดพลาดเกิดขึ้นได้
 - This filter list may contain other filter lists. I already commented the sources.
