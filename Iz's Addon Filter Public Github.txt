@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250528000553
+! Version: 20250613235739
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -292,6 +292,10 @@
 ||annoyinghooteraccomplished.com^$all,from=~facebook-spam
 ||impetusorgansseparation.com^$all,from=~facebook-spam
 ||bustlefungus.com^$all,from=~facebook-spam
+||feacboolk.com^$all,from=~facebook-spam
+||newsivox.com^$all,from=~facebook-spam
+||fecaabook.com^$all,from=~facebook-spam
+||faecabock.com^$all,from=~facebook-spam
 !
 ! Spam/Phishing in Facebook.com messenger self gathering CONFIRM
 ||rx-help-center.xyz^$all,from=~facebook-spam
@@ -2057,8 +2061,8 @@ longtunman.com##div[data-testid="feed/Feed/ad"]
 !
 !MARK: ---social platform ---
 !
-!pantip.com 20250323180221
-pantip.com##div[class="frukt-related"]
+!pantip.com 20250613235739
+pantip.com##div[id^="mpantip:script:jatujak:"]
 pantip.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !
 !MARK: ---wiki ---
@@ -2962,17 +2966,13 @@ i-loadzone.com##div[class^="gads"]
 !
 !MARK: ---Manga มังงะ Novel นิยาย Thai ไทย legal ไม่ผิดลิขสิทธิ์---
 !
-!www.nekopost.net,2nd.nekopost.net 20240310181925
-www.nekopost.net,2nd.nekopost.net##div.bg-slate-800.px-2\.5.py-2.rounded-lg
-www.nekopost.net,2nd.nekopost.net##body > div > div.mx-auto.dark\:text-slate-400.mt-16.lg\:mt-0 > div.xl\:max-w-\[1320px\].\32 xl\:max-w-\[1420px\].w-full > table > tr > td.min-w-\[300px\].xl\:min-w-\[330px\].max-w-\[360px\].relative > div > div.h-4
-www.nekopost.net,2nd.nekopost.net##a[class="svelte-rn2hpa"]
 !
 !MARK: ---Anime อนิเมะ Manga มังงะ legal ไม่ผิดลิขสิทธิ์---
 !
 !
 !MARK: ---Manga มังงะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,from=rh2plusmanga.com|kingsmanga.net|nekopost.org|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-zaa.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com|go-manga.com|www.flash-manga.com|up-manga.com
+.gif$image,from=rh2plusmanga.com|kingsmanga.net|mangafins.net|box-manga.com|mangaisekaithai.com|manga-sugoi.com|mangathai.com|dokimori.com|ped-manga.com|thaimanga.net|garasumanga.com|doodmanga.com|manga-zaa.net|mangathailand.com|toomtam-manga.com|mafia-manga.com|moon-toon.com|cats-translator.com|reapertrans.com|manga-post.com|rose-manga.com|hippomanga.com|mangastep.com|mangasuper.com|manga-lc.net|mangakimi.com|go-manga.com|www.flash-manga.com|up-manga.com
 .webp$image,from=www.go-manga.com
 .mp4$media,from=manga-sugoi.com
 @@/wp-content/themes/madara/images/new.gif$image
@@ -4197,13 +4197,12 @@ chillpainai.com##img[alt="Lazada"]
 !
 !sanook.com 20240514144944
 sanook.com##+js(trusted-click-element,button[class*="close-btn"])
-!online-station.net 20250426200611
+!online-station.net 20250604192915
 !#if cap_html_filtering
-online-station.net##^div.ads
+online-station.net##^div[class^="ads-block-"]
 !#else
-online-station.net##div.ads
+online-station.net##div[class^="ads-block-"]
 !#endif
-online-station.net##.ads-space:style(margin-top: unset !important;)
 !!!**************************************************************************************
 !* 
 !* General Cosmetic Rules
@@ -4383,6 +4382,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||client.iamtheme.com^$generichide
 !MARK: ---ai ---
 @@||openai.com^$generichide
+@@||chatgpt.com^$generichide
+@@||claude.ai^$generichide
 !MARK: ---desgin ---
 @@||canva.com^$generichide
 @@||figma.com^$generichide
@@ -4781,6 +4782,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 *$removeparam=_nc_cat,from=~instagram.com,badfilter
 *$removeparam=_nc_cat,from=~instagram.com|~facebook.com
 !#endif
+!! fix incorrect blocking pop-up reel in message 20250601001628
+www.instagram.com#@#div[data-visualcompletion="ignore"] + div[class*=" "]
 !!!**************************************************************************************
 !* 
 !* Browser Performance
@@ -5056,7 +5059,6 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 @@||oremanga.net^$generichide
 @@||www.mangaisekaithai.com^$generichide
 @@||kingsmanga.net^$generichide
-@@||nekopost.org^$generichide
 @@||mangafins.net^$generichide
 @@||box-manga.com^$generichide
 @@||manga-sugoi.com^$generichide
