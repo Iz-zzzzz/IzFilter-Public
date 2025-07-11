@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250710181658
+! Version: 20250712005201
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -265,10 +265,16 @@ sciencenews.org##^p:has-text(Sponsor Message)
 !
 !MARK: ---redirect qr code ---
 !
-!qr.me-qr.com 20250708214656
-qr.me-qr.com##+js(trusted-click-element,button[id="goBtn"], , 1000)
-!get-qr.com 20250708214658
-get-qr.com##+js(trusted-click-element, a[id="g-btn"], , 1000)
+!qr.me-qr.com 20250711141920
+qr.me-qr.com##+js(me-qr-skip)
+!get-qr.com 20250711145242
+get-qr.com##+js(trusted-click-element, a[id="g-btn"])
+get-qr.com##+js(a-href-blank-redirect)
+!#if cap_html_filtering
+get-qr.com##^div[class="cnt-store"]
+!#else
+get-qr.com##div[class="cnt-store"]
+!#endif
 !
 !MARK: ---music ---
 !
@@ -2521,7 +2527,7 @@ www.slow-manga.com##div[class="header-ads-section"]
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
-!anime-sugoi.com 20250331010307
+!anime-sugoi.com 20250711010134
 !!เอา box ที่เขียนว่า โฆษณา ออก
 anime-sugoi.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
 !! โฆษณาหลัก
@@ -2531,9 +2537,9 @@ anime-sugoi.com##^p[class="center_lnwphp"]
 anime-sugoi.com##p[class="center_lnwphp"]
 !#endif
 !#if cap_html_filtering
-anime-sugoi.com##^center > a[href^="https://t.ly/"]
+anime-sugoi.com##^center > a[target="_blank"]
 !#else
-anime-sugoi.com##center > a[href^="https://t.ly/"]
+anime-sugoi.com##center > a[target="_blank"]
 !#endif
 !#if cap_html_filtering
 anime-sugoi.com##^div[class="adsok img-thumbnail"]
@@ -2541,6 +2547,7 @@ anime-sugoi.com##^div[class="adsok img-thumbnail"]
 anime-sugoi.com##div[class="adsok img-thumbnail"]
 !#endif
 ||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|anime-yuzu.com
+||anime-sugoi.com/pic/webp/*.webp$image,domain=anime-sugoi.com|anime-yuzu.com
 wss://$from=anime-sugoi.com
 !!เอา tag ออก
 !#if cap_html_filtering
@@ -4656,6 +4663,11 @@ arac.co.th##^div[id="myModal"]
 !#else
 arac.co.th##div[id="myModal"]
 !#endif
+!#if cap_html_filtering
+soundshow.app##^div[id="website_cookies_bar"]
+!#else
+soundshow.app##div[id="website_cookies_bar"]
+!#endif
 !trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
@@ -4667,6 +4679,10 @@ browserleaks.com##+js(trusted-set-cookie,bl_map,1)
 itcity.in.th##+js(trusted-set-cookie,allowed_cookies,C0001)
 smartscience.co.th##+js(trusted-set-cookie,_acepata,1)
 smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
+srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_MKT,0)
+srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy_Analy,0)
+srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy_Target,0)
+srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy,1)
 !MARK: --- cookie general ---
 !cookiewow api
 ||cookiecdn.com^$3p,script
