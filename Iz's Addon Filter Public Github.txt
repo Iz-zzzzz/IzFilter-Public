@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250712005201
+! Version: 20250731115257
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -266,6 +266,7 @@ sciencenews.org##^p:has-text(Sponsor Message)
 !MARK: ---redirect qr code ---
 !
 !qr.me-qr.com 20250711141920
+qr.me-qr.com##+js(trusted-click-element,button[id="goBtn"])
 qr.me-qr.com##+js(me-qr-skip)
 !get-qr.com 20250711145242
 get-qr.com##+js(trusted-click-element, a[id="g-btn"])
@@ -306,6 +307,9 @@ fandom.com##^.top_leaderboard-odyssey-wrapper
 fandom.com##^[id^="siderail_"][id*="_gamepedia"]
 fandom.com##^.instant-suggestion
 fandom.com##^.top-ads-container
+fandom.com##^#rail-boxad-wrapper
+fandom.com##^#mid_boxad
+fandom.com##^#incontent_boxad
 fandom.com##^.ad-slot-wrapper
 fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !#endif
@@ -3313,6 +3317,8 @@ colabtutorials.com,mukohphetra.com###wpsafe-link:style(display: block !important
 #@#.ad-unit:not(.textads)
 # uBlock filters
 ##.ad-unit:not(.text-ad):not(.textads):not([style^="width: 1px; height: 1px; position: absolute;"])
+! รูปไม่โหลด 20250729232104
+@@||g.doubleclick.net^$script,from=techhub.in.th
 !!!**************************************************************************************
 !* 
 !* Filtering Performance (No Thai sites)
@@ -4540,7 +4546,7 @@ obsproject.com##.notice--cookie:not(body):not(html)
 uploadmx.com##^div[class="cookies show"]
 !#endif
 uploadmx.com##div[class="cookies show"]
-mercular.com##+js(trusted-set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
+mercular.com##+js(set-cookie,gtmConsent,%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%7D)
 mercular.com##div[class="MuiBox-root css-5cawxe"]
 !
 honekrasae.com##div[class^="accept_cookie_wrapper"]
@@ -4668,21 +4674,27 @@ soundshow.app##^div[id="website_cookies_bar"]
 !#else
 soundshow.app##div[id="website_cookies_bar"]
 !#endif
-!trusted-set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
-studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
-studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
-supertone.ai##+js(trusted-set-cookie,sup_consent,{"analytics":false})
-browserleaks.com##+js(trusted-set-cookie,bl_attr,1)
-browserleaks.com##+js(trusted-set-cookie,bl_gaq,1)
-browserleaks.com##+js(trusted-set-cookie,bl_geo,1)
-browserleaks.com##+js(trusted-set-cookie,bl_map,1)
-itcity.in.th##+js(trusted-set-cookie,allowed_cookies,C0001)
-smartscience.co.th##+js(trusted-set-cookie,_acepata,1)
-smartscience.co.th##+js(trusted-set-cookie,_aceprev,111111)
-srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_MKT,0)
-srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy_Analy,0)
-srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy_Target,0)
-srtet.co.th##+js(trusted-set-cookie,SRTET_Cookie_Policy,1)
+news.samsung.com##div[class="cookie_info"]
+!#if cap_html_filtering
+status.proton.me##^div[class="cookie-consent-banner"]
+!#else
+status.proton.me##div[class="cookie-consent-banner"]
+!#endif
+!set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
+studio7thailand.com##+js(set-cookie,ANALYTICAL,false)
+studio7thailand.com##+js(set-cookie,MARKETING,false)
+supertone.ai##+js(set-cookie,sup_consent,{"analytics":false})
+browserleaks.com##+js(set-cookie,bl_attr,1)
+browserleaks.com##+js(set-cookie,bl_gaq,1)
+browserleaks.com##+js(set-cookie,bl_geo,1)
+browserleaks.com##+js(set-cookie,bl_map,1)
+itcity.in.th##+js(set-cookie,allowed_cookies,C0001)
+smartscience.co.th##+js(set-cookie,_acepata,1)
+smartscience.co.th##+js(set-cookie,_aceprev,111111)
+srtet.co.th##+js(set-cookie,SRTET_Cookie_MKT,0)
+srtet.co.th##+js(set-cookie,SRTET_Cookie_Policy_Analy,0)
+srtet.co.th##+js(set-cookie,SRTET_Cookie_Policy_Target,0)
+srtet.co.th##+js(set-cookie,SRTET_Cookie_Policy,1)
 !MARK: --- cookie general ---
 !cookiewow api
 ||cookiecdn.com^$3p,script
