@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20250821161617
+! Version: 20251005001227
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -27,6 +27,7 @@
 ||vww.$all,reason="TLDFrequentlyUsedForScam"
 ||vwv.$all,reason="TLDFrequentlyUsedForScam"
 ||wwv.$all,reason="TLDFrequentlyUsedForScam"
+||run.app^$all,reason="FrequentlyUsedForIllegal"
 !!!**************************************************************************************
 !* 
 !* General common Ad Links/Servers/Javascipt
@@ -227,6 +228,7 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !#endif
 !sciencedaily.com 20250410173457
 !#if cap_html_filtering
+sciencedaily.com##^#callout
 sciencedaily.com##^.impact-unit-wrapper
 sciencedaily.com##^.left-skyscraper
 sciencedaily.com##^.mobile-bottom-rectangle
@@ -257,7 +259,9 @@ sciencenews.org##^.ad-block-leaderboard__freestar___Ologr
 sciencenews.org##^.ad-block__mq-wrapper
 sciencenews.org##^.from-nature-index__wrapper___2E2Z9
 sciencenews.org##^.wp-block-follow-us
+sciencenews.org##^article aside.sn-conversion:has(> #newsletter-helper)
 sciencenews.org##^div[class^="cookie-banner__wrapper"]
+sciencenews.org##^div[class^="newsletter-global-subscribe__container"]
 sciencenews.org##^p:has-text(Sponsor Message)
 sciencenews.org##^section[class^="ad-block-leaderboard__wrapper"]
 sciencenews.org##^section[class^="newsletter-signup__wrapper"]
@@ -317,6 +321,7 @@ fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !
 !apkcombo.com 20250401192818
 !#if cap_html_filtering
+apkcombo.com##^.ad-pss
 apkcombo.com##^.ads-revamp
 apkcombo.com##^.calc-container
 apkcombo.com##^.column > div.widget:has(> a.installer)
@@ -576,9 +581,11 @@ tomsguide.com##^#slice-container-newsletterForm-exitIntent
 tomsguide.com##^#video_ad
 tomsguide.com##^.bordeaux-anchored-container
 tomsguide.com##^.bordeaux-slot
+tomsguide.com##^.hawk-base
 tomsguide.com##^.hawk-main-editorialised
 tomsguide.com##^.hawk-master-widget-hawk-main-wrapper
 tomsguide.com##^.hawk-placeholder
+tomsguide.com##^.hawk-processed
 tomsguide.com##^.hawk-widget[data-model-name]
 tomsguide.com##^.mobile-leaderboard-320-50:upward([style])
 tomsguide.com##^.news-article .hawk-main-editorial-container
@@ -588,6 +595,7 @@ tomsguide.com##^.page-content-rightcol > div[id] > div[class^="_"]
 tomsguide.com##^.qc-cmp2-container
 tomsguide.com##^.rightcol-ads
 tomsguide.com##^.space-b20 > #rightcol_top
+tomsguide.com##^.sponsored-card
 tomsguide.com##^.van_taboola
 tomsguide.com##^.van_vid_carousel
 tomsguide.com##^.vid-present
@@ -700,6 +708,7 @@ tomshardware.com##^.qc-cmp2-container
 tomshardware.com##^.read-more-container
 tomshardware.com##^.related-articles-block
 tomshardware.com##^.social-promote-box
+tomshardware.com##^.sponsored-card
 tomshardware.com##^.van_taboola
 tomshardware.com##^.van_vid_carousel
 tomshardware.com##^.vid-present
@@ -801,6 +810,7 @@ sourceforge.net##^#newsletter-floating
 sourceforge.net##^.can-truncate
 sourceforge.net##^.dlp_newsletter_subscribe
 sourceforge.net##^.main-nav-link
+sourceforge.net##^.projects > .trunc-eligible
 sourceforge.net##^.projects > li.nel[data-cid]
 sourceforge.net##^.sterling
 sourceforge.net##^.truste_box_overlay
@@ -1069,9 +1079,11 @@ longtunman.com##div[data-testid="feed/Feed/ad"]
 !
 !MARK: ---social platform ---
 !
-!pantip.com 20250613235739
+!pantip.com 20250919204038
 pantip.com##div[id^="mpantip:script:jatujak:"]
+pantip.com##div[id^="mpantip:script:mbk:"]
 pantip.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
+pantip.com##div[id="scp_mbl_frukt_related"]
 !
 !MARK: ---wiki ---
 !
@@ -1535,22 +1547,15 @@ worldittoday.com##^ins.adsbygoogle[data-ad-slot]
 !#else
 worldittoday.com##ins.adsbygoogle[data-ad-slot]
 !#endif
-!notebookspec.com 20240113203926
+!notebookspec.com 20250828221929
 !#if cap_html_filtering
-notebookspec.com##^.zox-widget-ad
+notebookspec.com##^div[id="nbs-header-ads"]:upward(1)
 !#else
-notebookspec.com##.zox-widget-ad
+notebookspec.com##div[id="nbs-header-ads"]:upward(1)
 !#endif
-!#if cap_html_filtering
-notebookspec.com##^.zox_ad_widget
-!#else
-notebookspec.com##.zox_ad_widget
-!#endif
-!#if cap_html_filtering
-notebookspec.com##^#zox-lead-bot
-!#else
-notebookspec.com###zox-lead-bot
-!#endif
+notebookspec.com##div[class="banner-set-top-box"]
+notebookspec.com##div[class="banner-set-left-box"]
+notebookspec.com##div[class="banner-set-right-box"]
 !thaimobilecenter.com 20241013182459
 thaimobilecenter.com##ins.adsbygoogle[data-ad-slot]
 !!desktop
@@ -1582,11 +1587,16 @@ techtalkthai.com##div[class="e3lan e3lan-top"]
 !#endif
 .gif$image,from=techtalkthai.com
 *Sponsors.png$image,from=techtalkthai.com
-!blognone.com 20250626202828
+!blognone.com 20250903194023
 blognone.com##a[href="/user/sponsored"]:upward(div[class="views-row"]):style(opacity: 0.4 !important;)
 blognone.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"]):not([style="pointer-events: none; height: 1px; width: 0px; opacity: 0; visibility: hidden; position: fixed; bottom: 0px;"])
 !#if cap_html_filtering
 blognone.com##^#above_comments
+!#endif
+!#if cap_html_filtering
+blognone.com##^div[id="block-thex-doubleclickrightside"]
+!#else
+blognone.com##div[id="block-thex-doubleclickrightside"]
 !#endif
 !flashfly.net 20250419221101
 !#if cap_html_filtering
@@ -1768,6 +1778,17 @@ extremeit.com##table[border="0"]
 extremeit.com##^#tdi_73
 !#endif
 extremeit.com###tdi_73
+!techxcite.com 20250921132408
+!#if cap_html_filtering
+techxcite.com##^div[id="cookie-popup-footer"]
+!#else
+techxcite.com##div[id="cookie-popup-footer"]
+!#endif
+!#if cap_html_filtering
+techxcite.com##^.ads
+!#else
+techxcite.com##.ads
+!#endif
 !
 !MARK: ---tech ---
 !
@@ -2524,6 +2545,8 @@ www.slow-manga.com##^div[class="header-ads-section"]
 !#else
 www.slow-manga.com##div[class="header-ads-section"]
 !#endif
+!butlermanga.com 20250920134433
+butlermanga.com##div[class="wrapper"]
 !
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
@@ -2547,9 +2570,9 @@ anime-sugoi.com,animeseven.com##^div[class="adsok img-thumbnail"]
 !#else
 anime-sugoi.com,animeseven.com##div[class="adsok img-thumbnail"]
 !#endif
-||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com,animeseven.com|anime-yuzu.com
-||anime-sugoi.com/pic/webp/*.webp$image,domain=anime-sugoi.com,animeseven.com|anime-yuzu.com
-wss://$from=anime-sugoi.com,animeseven.com
+||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|animeseven.com|anime-yuzu.com
+||anime-sugoi.com/pic/webp/*.webp$image,domain=anime-sugoi.com|animeseven.com|anime-yuzu.com
+wss://$from=anime-sugoi.com|animeseven.com
 !!เอา tag ออก
 !#if cap_html_filtering
 anime-sugoi.com,animeseven.com##^.panel-body > center > p
@@ -2557,8 +2580,8 @@ anime-sugoi.com,animeseven.com##^.panel-body > center > p
 anime-sugoi.com,animeseven.com##.panel-body > center > p
 !#endif
 ! Maybe Tracker/DDoS
-||trycloudflare.com^$from=playermeow.com|anime-sugoi.com,animeseven.com
-||idocdn.com^$from=playermeow.com|anime-sugoi.com,animeseven.com
+||trycloudflare.com^$from=playermeow.com|anime-sugoi.com|animeseven.com
+||idocdn.com^$from=playermeow.com|anime-sugoi.com|animeseven.com
 !anime-yuzu.com 20250419013332
 !#if cap_html_filtering
 anime-yuzu.com##^div[class="module_home_x"]
@@ -2900,7 +2923,7 @@ thaiboyslove.com##td[align="center"] > a:upward(1)
 !
 !MARK: ---Movie หนัง ภาพยนต์ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
-.gif$image,from=movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com|037hd-movies.com|lk-hd.com
+.gif$image,from=movies-d.com|dooseries4k.com|9nunghd.com|nung2movies.com|nung2hdd.com|zeanmoviehd.com|nungdeedee.com|doofree365.com|movie44.com|doomovie-hd.com|kingmovie88.com|i-moviehd.com|moviehdfree.net|movie678.com|doonungonline.com|24-hd.com|1412hd.com|doonungsub.com|seriethai.co|ดูหนังใหม่ชนโรง.com|serie-master.com|c2movie.com|www.serie-day.com|nungkai.com|subthai.tv|24-hd.tv|123-hd.com|almo-hd.com|037hd-movies.com|lk-hd.com|037-hddmovie.com
 .webp$image,from=uc2hd.com
 !
 /series-indy$image
@@ -3182,6 +3205,8 @@ lk-hd.com##^div[class="ads-above-single-player"]
 lk-hd.com##div[class="ads-above-single-player"]
 !#endif
 ||lk-hd.com^$media
+!037-hddmovie.com 20251005000857
+037-hddmovie.com##^div[id^="ads-"]
 !
 !MARK: --- Others
 !
@@ -4020,6 +4045,7 @@ facebook.com##+js(json-prune, require.0.3.0.__bbox.require.[].3.1.__bbox.result.
 @@||enterpriseitpro.net^$generichide
 @@||appdisqus.com^$generichide
 @@||www.guzap.ai^$generichide
+@@||techxcite.com^$generichide
 !MARK: ---tech ---
 @@||lcdtvthailand.com^$generichide
 @@||techsauce.co^$generichide
@@ -4118,6 +4144,7 @@ facebook.com##+js(json-prune, require.0.3.0.__bbox.require.[].3.1.__bbox.result.
 @@||mynovel.com^$generichide
 @@||up-manga.com^$generichide
 @@||emperor-manga.com^$generichide
+@@||butlermanga.com^$generichide
 !MARK: ---anime legitimate ---  
 @@||bilibili.tv^$generichide
 @@||anitrendz.com^$generichide
@@ -4409,9 +4436,9 @@ siphhospital.com##^#cookit
 !#endif
 siphhospital.com###cookit
 !#if cap_html_filtering
-advice.co.th##^.foot-cookie
+advice.co.th##^.footer-cookie
 !#endif
-advice.co.th##.foot-cookie
+advice.co.th##.footer-cookie
 !#if cap_html_filtering
 ihavecpu.com##^div[class^="cookieNotice_cookieCard"]
 !#endif
@@ -4677,6 +4704,7 @@ status.proton.me##div[class="cookie-consent-banner"]
 !#endif
 mynovel.co##div[class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md z-50"]
 theconcert.com##div[id="cookie-modal"]
+jib.co.th##div[id="reddot"]
 !set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
