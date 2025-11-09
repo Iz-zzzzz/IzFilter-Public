@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20251005001227
+! Version: 20251108031024
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -131,15 +131,15 @@ https://cdn.apicdn*.one^$xhr
 ||nlcjkgdqrdn.com^
 ||wxreiapum.com^
 ||iswpkpzuzgoeai.com^
-||videos.cdnstorage*.top/*$media
+||videos.cdnstorage*.top/*$media,redirect=noop-1s.mp4
 ||clip2thai.com^$image,3p
 ||adsok.co^$3p
 ||ads.global.ssl.fastly.net^$3p
 ||landingi.com^$3p
 /\/ads\/[0-9].webp/$image,1p
 ||sakuharuno.com^$3p
-||upfastfile.com/upload/*.mp4$media,from=leoplayer7.com
-||rsc.cdn77.org^$media,from=leoplayer7.com
+||upfastfile.com/upload/*.mp4$media,from=leoplayer7.com,redirect=noop-1s.mp4
+||rsc.cdn77.org^$media,from=leoplayer7.com,redirect=noop-1s.mp4
 ||fs-loader.com^$3p
 ||www.zogoodnews.com^$3p
 ! Maybe Tracker/DDoS
@@ -148,6 +148,11 @@ https://cdn.apicdn*.one^$xhr
 !Last.fm ads 20250820015108
 ||contextual.media.net^$3p,from=last.fm
 @@||contextual.media.net^$script,badfilter,from=last.fm
+! Video ad cdn 20251108031023
+||jh.ekcdn.cc*.mp4$media,redirect=noop-1s.mp4
+||rakhuay.com*.mp4$media,redirect=noop-1s.mp4
+||onlysubthai.com*.mp4$media,redirect=noop-1s.mp4
+||watermelogic.com*.mp4$media,redirect=noop-1s.mp4
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -193,6 +198,7 @@ newsweek.com##^#block-fusion-newsletters-fusion-newsletter-signup
 newsweek.com##^#block-nw-content-recirc
 newsweek.com##^#didomi-host
 newsweek.com##^#recommended
+newsweek.com##^.FeaturedMedia_articleFeaturedMedia__LEpVY
 newsweek.com##^.advert
 newsweek.com##^.block-ibtmedia-dfp
 newsweek.com##^.newsletter-signup
@@ -684,6 +690,7 @@ tomshardware.com##.dfp-leaderboard-container
 !#if cap_html_filtering
 tomshardware.com##^#article-body > div.widthsetter ~ div.jwplayer__widthsetter
 tomshardware.com##^#article-body > p + .jwplayer__widthsetter
+tomshardware.com##^#article-body > p[id]:not([class]):has(> a[href^="https://news.google.com/publications/"])
 tomshardware.com##^#ec-modal
 tomshardware.com##^#footer_leaderboard
 tomshardware.com##^#header_leaderboard
@@ -712,6 +719,7 @@ tomshardware.com##^.sponsored-card
 tomshardware.com##^.van_taboola
 tomshardware.com##^.van_vid_carousel
 tomshardware.com##^.vid-present
+tomshardware.com##^a[href^="https://news.google.com/publications/"]
 tomshardware.com##^amp-ad
 tomshardware.com##^amp-consent
 tomshardware.com##^amp-embed[type="taboola"]
@@ -2551,37 +2559,35 @@ butlermanga.com##div[class="wrapper"]
 !MARK: ---Anime อนิเมะ Thai ไทย illegal ผิดลิขสิทธิ์---
 !
 .gif$image,from=animehayai.net|animesubthaiz.com|do-anime.com|gg-anime.com|lnwanime.com|mio-anime.com|anime-masters.com|anifume.com|animezeed.net|anime-nico.com|orztoons.com|fairyanime.net|shibaanime.com|animehdzeroo.com|animerem.com|anime-ox.com|anime-subthai.net|mangaza.net|animegojo.com
-!anime-sugoi.com,animeseven.com 20250711010134
-!!เอา box ที่เขียนว่า โฆษณา ออก
-anime-sugoi.com,animeseven.com##div.container:nth-child(3) > div.row > div.col-lg-3:last-child > div.panel.panel-danger:nth-of-type(2)
+!anime-sugoi.com,anime-seven.com 20251012231659
 !! โฆษณาหลัก
 !#if cap_html_filtering
-anime-sugoi.com,animeseven.com##^p[class="center_lnwphp"]
+anime-sugoi.com,anime-seven.com##^p[class="center_lnwphp"] > a[target="_blank"]
 !#else
-anime-sugoi.com,animeseven.com##p[class="center_lnwphp"]
+anime-sugoi.com,anime-seven.com##p[class="center_lnwphp"] > a[target="_blank"]
 !#endif
 !#if cap_html_filtering
-anime-sugoi.com,animeseven.com##^center > a[target="_blank"]
+anime-sugoi.com,anime-seven.com##^center > a[target="_blank"]
 !#else
-anime-sugoi.com,animeseven.com##center > a[target="_blank"]
+anime-sugoi.com,anime-seven.com##center > a[target="_blank"]
 !#endif
 !#if cap_html_filtering
-anime-sugoi.com,animeseven.com##^div[class="adsok img-thumbnail"]
+anime-sugoi.com,anime-seven.com##^div[class="adsok img-thumbnail"]
 !#else
-anime-sugoi.com,animeseven.com##div[class="adsok img-thumbnail"]
+anime-sugoi.com,anime-seven.com##div[class="adsok img-thumbnail"]
 !#endif
-||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|animeseven.com|anime-yuzu.com
-||anime-sugoi.com/pic/webp/*.webp$image,domain=anime-sugoi.com|animeseven.com|anime-yuzu.com
-wss://$from=anime-sugoi.com|animeseven.com
+||anime-yuzu.com/up/img/webp/*.webp$image,domain=anime-sugoi.com|anime-seven.com|anime-yuzu.com
+||anime-sugoi.com/pic/webp/*.webp$image,domain=anime-sugoi.com|anime-seven.com|anime-yuzu.com
+wss://$from=anime-sugoi.com|anime-seven.com
 !!เอา tag ออก
 !#if cap_html_filtering
-anime-sugoi.com,animeseven.com##^.panel-body > center > p
+anime-sugoi.com,anime-seven.com##^.panel-body > center > p
 !#else
-anime-sugoi.com,animeseven.com##.panel-body > center > p
+anime-sugoi.com,anime-seven.com##.panel-body > center > p
 !#endif
 ! Maybe Tracker/DDoS
-||trycloudflare.com^$from=playermeow.com|anime-sugoi.com|animeseven.com
-||idocdn.com^$from=playermeow.com|anime-sugoi.com|animeseven.com
+||trycloudflare.com^$from=playermeow.com|anime-sugoi.com|anime-seven.com
+||idocdn.com^$from=playermeow.com|anime-sugoi.com|anime-seven.com
 !anime-yuzu.com 20250419013332
 !#if cap_html_filtering
 anime-yuzu.com##^div[class="module_home_x"]
@@ -2597,6 +2603,17 @@ anime-yuzu.com##div[id^="animekimiads"]
 anime-yuzu.com##^a[href^="https://t.ly/"]
 !#else
 anime-yuzu.com##a[href^="https://t.ly/"]
+!#endif
+!animeruka.com 20251016013620
+!#if cap_html_filtering
+animeruka.com##^div[class="module_home_x"]
+!#else
+animeruka.com##div[class="module_home_x"]
+!#endif
+!#if cap_html_filtering
+animeruka.com##^div[id^="slider-"]
+!#else
+animeruka.com##div[id^="slider-"]
 !#endif
 !anime-masters.com 20240709014043
 !! use more performance rule
@@ -2625,7 +2642,7 @@ anifume.com##div.topml
 ||anifume.com/a4Eof1D0f/loadgame-float.jpg$from=anifume.com
 anifume.com##+js(nowoif)
 !anime-suba.co 20250511024335
-||sub-thai.com/stream/ads_video/$media,redirect-rule=noopmp3-0.1s,from=anime-suba.co
+||sub-thai.com/stream/ads_video/$media,redirect=noop-1s.mp4,from=anime-suba.co
 anime-suba.co##+js(nowoif)
 anime-suba.co##+js(nano-sib, , , 0.02)
 https://www.anime-suba.co/imges/close.png$from=anime-suba.co
@@ -2856,6 +2873,12 @@ animesiam.com##div[class="code-block code-block-2"]
 animesiam.com##^div[class="code-block code-block-4"]
 !#else
 animesiam.com##div[class="code-block code-block-4"]
+!#endif
+!manga-neko.com 20251018025156
+!#if cap_html_filtering
+manga-neko.com##^center
+!#else
+manga-neko.com##center
 !#endif
 !
 !MARK: ---Novel ---
@@ -3284,6 +3307,9 @@ online-station.net##div[class^="ads-block-"]
 ##img[alt="Joker123"]
 ##img[alt="SLOTXO"]
 ##img[alt*="betflix"]
+##img[alt*="sexygame"]
+##img[alt*="NEXOBET"]
+##img[alt="PGK44"]
 ##a[href^="https://t.ly/"]
 ##a[href^="https://cutt.ly/"]
 ##img[alt="Advertisement"]
@@ -4152,7 +4178,7 @@ facebook.com##+js(json-prune, require.0.3.0.__bbox.require.[].3.1.__bbox.result.
 @@||akibatan.com^$generichide
 !MARK: ---anime illegitimate ---
 @@||www.anime-sugoi.com^$generichide
-@@||animeseven.com^$generichide
+@@||anime-seven.com^$generichide
 @@||anime-masters.com^$generichide
 @@||anime-yuzu.com^$generichide
 @@||anime-suba.co^$generichide
@@ -4705,6 +4731,18 @@ status.proton.me##div[class="cookie-consent-banner"]
 mynovel.co##div[class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md z-50"]
 theconcert.com##div[id="cookie-modal"]
 jib.co.th##div[id="reddot"]
+!#if cap_html_filtering
+zipeventapp.com##^div#cookies-consent
+!#else
+zipeventapp.com##div#cookies-consent
+!#endif
+thaiwatsadu.com##div[class="fixed bottom-[0px] w-full"]
+!#if cap_html_filtering
+sorcharoenchai.com##^div[id="yp-cookie-wrapper"]
+!#else
+sorcharoenchai.com##div[id="yp-cookie-wrapper"]
+!#endif
+dohome.co.th##div[class="sticky bottom-0 z-80"]
 !set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
