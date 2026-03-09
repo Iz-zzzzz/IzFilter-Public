@@ -1,6 +1,6 @@
 ! Title: 🌐 Iz's Addon Filter Public Version (mini version)
 ! Description: Block most of Thai website Ads, Annoyances, and others which Adguard Filter and Easylist don't block
-! Version: 20251108031024
+! Version: 20260310004645
 ! Expires: 3 days
 ! Download: https://raw.githubusercontent.com/Iz-zzzzz/IzFilter-Public/main/Iz's%20Addon%20Filter%20Public%20Github.txt
 !
@@ -153,6 +153,9 @@ https://cdn.apicdn*.one^$xhr
 ||rakhuay.com*.mp4$media,redirect=noop-1s.mp4
 ||onlysubthai.com*.mp4$media,redirect=noop-1s.mp4
 ||watermelogic.com*.mp4$media,redirect=noop-1s.mp4
+||cdn.digitaloceanspaces.com*.mp4$media,redirect=noop-1s.mp4
+! 20260226012815
+https://manage.player24k.com/storage/ads/*$image,3p
 !!!**************************************************************************************
 !* 
 !* Specific Ads Rules (No Thai sites)
@@ -194,23 +197,24 @@ https://www.photopea.com/img/mog/loud_w.jpg$from=www.photopea.com
 !collider.com 20250401191716
 !newsweek.com 20250401191438
 !#if cap_html_filtering
-newsweek.com##^#block-fusion-newsletters-fusion-newsletter-signup
-newsweek.com##^#block-nw-content-recirc
-newsweek.com##^#didomi-host
-newsweek.com##^#recommended
-newsweek.com##^.FeaturedMedia_articleFeaturedMedia__LEpVY
 newsweek.com##^.advert
-newsweek.com##^.block-ibtmedia-dfp
+newsweek.com##^.subscription-tabs
+newsweek.com##^div[style="min-width:300px;min-height:250px"]
+newsweek.com##^#recommended
+newsweek.com##^#didomi-host
+newsweek.com##^iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
+newsweek.com##^div[class*="tickyPlayer"] > div.videocontent
 newsweek.com##^.newsletter-signup
+newsweek.com##^.subscribe-block
+newsweek.com##^section[class^="InlineNewsletterSignup_"]
+newsweek.com##^div[class^="HpRightNewsletters_"]
 newsweek.com##^.newsletter-signup-horizontal
 newsweek.com##^.promo-link
-newsweek.com##^.right-rail-ads
-newsweek.com##^.subscribe-block
 newsweek.com##^.subscribe-block-wrapper
-newsweek.com##^.subscription-tabs
-newsweek.com##^div[class*="tickyPlayer"] > div.videocontent
-newsweek.com##^div[style="min-width:300px;min-height:250px"]
-newsweek.com##^iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
+newsweek.com##^#block-fusion-newsletters-fusion-newsletter-signup
+newsweek.com##^.ArticleTwoColumnLayout_stickyAdContainer__fQzyz
+newsweek.com##^[data-mgid-container="true"]
+newsweek.com##^.FeaturedMedia_articleFeaturedMedia__LEpVY
 !#endif
 !www.bloomberg.com 20250401191714
 !indiatimes.com 20250401191840
@@ -234,14 +238,17 @@ ieltsbuddy.com##div[class="modal_block modal_ ss-ui-bootstrap"]
 !#endif
 !sciencedaily.com 20250410173457
 !#if cap_html_filtering
-sciencedaily.com##^#callout
-sciencedaily.com##^.impact-unit-wrapper
+sciencedaily.com##^.mobile-top-rectangle
+sciencedaily.com##^.mobile-middle-rectangle
+sciencedaily.com##^.mobile-bottom-rectangle
+sciencedaily.com##^.sidebar > .half-page
+sciencedaily.com##^.sidebar > .bottom-rectangle
 sciencedaily.com##^.left-skyscraper
 sciencedaily.com##^.mobile-bottom-rectangle
 sciencedaily.com##^.mobile-middle-rectangle
+sciencedaily.com##^.impact-unit-wrapper
 sciencedaily.com##^.mobile-top-rectangle
-sciencedaily.com##^.sidebar > .bottom-rectangle
-sciencedaily.com##^.sidebar > .half-page
+sciencedaily.com##^#callout
 sciencedaily.com##^.textrule
 sciencedaily.com##^.unit1
 sciencedaily.com##^.unit2
@@ -258,26 +265,26 @@ sciencenews.org##^div[class^="newsletter-global-subscribe__container__"]
 sciencenews.org##div[class^="newsletter-global-subscribe__container__"]
 !#endif
 !#if cap_html_filtering
+sciencenews.org##^section[class^="ad-block-leaderboard__wrapper"]
+sciencenews.org##^div[class^="cookie-banner__wrapper"]
+sciencenews.org##^article aside.sn-conversion:has(> #newsletter-helper)
+sciencenews.org##^div[class^="newsletter-global-subscribe__container"]
+sciencenews.org##^.wp-block-follow-us
+sciencenews.org##^#zephr-user-form-root
 sciencenews.org##^#emailConversion
 sciencenews.org##^#subscribeConversion
-sciencenews.org##^#zephr-user-form-root
+sciencenews.org##^section[class^="newsletter-signup__wrapper"]
 sciencenews.org##^.ad-block-leaderboard__freestar___Ologr
 sciencenews.org##^.ad-block__mq-wrapper
 sciencenews.org##^.from-nature-index__wrapper___2E2Z9
-sciencenews.org##^.wp-block-follow-us
-sciencenews.org##^article aside.sn-conversion:has(> #newsletter-helper)
-sciencenews.org##^div[class^="cookie-banner__wrapper"]
-sciencenews.org##^div[class^="newsletter-global-subscribe__container"]
 sciencenews.org##^p:has-text(Sponsor Message)
-sciencenews.org##^section[class^="ad-block-leaderboard__wrapper"]
-sciencenews.org##^section[class^="newsletter-signup__wrapper"]
 !#endif
 !
 !MARK: ---redirect qr code ---
 !
-!qr.me-qr.com 20250711141920
-qr.me-qr.com##+js(trusted-click-element,button[id="goBtn"])
-qr.me-qr.com##+js(me-qr-skip)
+!qr.me-qr.com 20260103172455
+me-qr.com##+js(trusted-click-element,a[class="text-decoration-underline"][href])
+me-qr.com##+js(me-qr-skip)
 !get-qr.com 20250711145242
 get-qr.com##+js(trusted-click-element, a[id="g-btn"])
 get-qr.com##+js(a-href-blank-redirect)
@@ -298,28 +305,30 @@ get-qr.com##div[class="cnt-store"]
 !
 !fandom.com 20250401192120
 !#if cap_html_filtering
-fandom.com##^#WikiaBar:has(> #WikiaBarWrapper > .wikia-bar-anon > .message[data-wikiabarcontent])
-fandom.com##^#article-featured-video-container
-fandom.com##^#featured-video__player-container
-fandom.com##^#incontent_boxad
-fandom.com##^#mid_boxad
-fandom.com##^#rail-boxad-wrapper
-fandom.com##^.ad-slot-placeholder
-fandom.com##^.ad-slot-wrapper
-fandom.com##^.aff-unit__wrapper
-fandom.com##^.banner-notifications-placeholder
-fandom.com##^.instant-suggestion
+fandom.com##^.page__right-rail:has(> .right-rail-wrapper > #rail-boxad-wrapper)
 fandom.com##^.main-container > .top_leaderboard-odyssey-wrapper:has(> .top-ads-container)
-fandom.com##^.marketing-notifications
-fandom.com##^.marketplace
-fandom.com##^.mw-parser-output > table[align="center"] ~ div[class^="noprint"]
+fandom.com##^iframe[data-s1search-id="mainline-top-ads-bing-top"]
 fandom.com##^.top-ads-container
-fandom.com##^.top_leaderboard-odyssey-wrapper
-fandom.com##^[id^="siderail_"][id*="_gamepedia"]
+fandom.com##^div[class^="aff-unit"]
+fandom.com##^#article-featured-video-container
+fandom.com##^.ad-slot-placeholder
+fandom.com##^#WikiaBar:has(> #WikiaBarWrapper > .wikia-bar-anon > .message[data-wikiabarcontent])
 fandom.com##^body #pageWrapper > #content[role="main"] > div[id^="siderail_"][id*="_gamepedia"]
 fandom.com##^body > div.notifications-placeholder:has(#localNotice a[href^="/wiki/Special:"])
-fandom.com##^div[class^="aff-unit"]
-fandom.com##^iframe[data-s1search-id="mainline-top-ads-bing-top"]
+fandom.com##^.marketing-notifications
+fandom.com##^.mw-parser-output > table[align="center"] ~ div[class^="noprint"]
+fandom.com##^.banner-notifications-placeholder
+fandom.com##^#featured-video__player-container
+fandom.com##^.aff-unit__wrapper
+fandom.com##^.marketplace
+fandom.com##^.top_leaderboard-odyssey-wrapper
+fandom.com##^[id^="siderail_"][id*="_gamepedia"]
+fandom.com##^.instant-suggestion
+fandom.com##^.top-ads-container
+fandom.com##^#rail-boxad-wrapper
+fandom.com##^#mid_boxad
+fandom.com##^#incontent_boxad
+fandom.com##^.ad-slot-wrapper
 fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !#endif
 !
@@ -328,11 +337,11 @@ fandom.com##^li.top-results__item span:has-text(Sponsored):upward(li)
 !apkcombo.com 20250401192818
 !#if cap_html_filtering
 apkcombo.com##^.ad-pss
-apkcombo.com##^.ads-revamp
-apkcombo.com##^.calc-container
-apkcombo.com##^.column > div.widget:has(> a.installer)
-apkcombo.com##^.diseanmevrtt
 apkcombo.com##^.is-main > div[style="margin-bottom: 10px; max-height: 260px; min-height: 260px; overflow: hidden"]
+apkcombo.com##^.ads-revamp
+apkcombo.com##^.column > div.widget:has(> a.installer)
+apkcombo.com##^.calc-container
+apkcombo.com##^.diseanmevrtt
 apkcombo.com##^div[class*=-ad]
 apkcombo.com##^p:has-text(Advertisement)
 !#endif
@@ -346,6 +355,10 @@ apkcombo.com##^p:has-text(Advertisement)
 !
 !MARK: ---game ---
 !
+!prydwen.gg 20260208193132
+prydwen.gg##div.promo-top-new
+prydwen.gg##div[id*="-ad-"]
+prydwen.gg##div.special-promo-image
 !
 !MARK: ---game news ---
 !
@@ -575,44 +588,44 @@ tomsguide.com##^.dfp-leaderboard-container
 tomsguide.com##.dfp-leaderboard-container
 !#endif
 !#if cap_html_filtering
+tomsguide.com##^div[class^="bordeaux-"]
 tomsguide.com##^#article-body > .hawk-nest
+tomsguide.com##^.news-article .hawk-main-editorial-container
+tomsguide.com##^div[data-offer="deal_of_the_week"]
+tomsguide.com##^.hawk-placeholder
+tomsguide.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
+tomsguide.com##^.hawk-widget[data-model-name]
+tomsguide.com##^.space-b20 > #rightcol_top
+tomsguide.com##^.rightcol-ads
+tomsguide.com##^.page-content-rightcol > div[id] > div[class^="_"]
+tomsguide.com##^.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
+tomsguide.com##^.qc-cmp2-container
 tomsguide.com##^#article-body > p + script[src^="https://content.jwplatform.com"] + .future__jwplayer--carousel
+tomsguide.com##^#prism-modal[data-template="banner"]
+tomsguide.com##^amp-embed[type="taboola"]
+tomsguide.com##^amp-ad
+tomsguide.com##^.van_vid_carousel
 tomsguide.com##^#ec-popup-modal
+tomsguide.com##^.onesignal-customlink-container
+tomsguide.com##^#slice-container-newsletterForm-exitIntent
+tomsguide.com##^div[id^="slice-container-newsletter"]
+tomsguide.com##^#slice-container-exitIntent
+tomsguide.com##^body .newsletter-signup
 tomsguide.com##^#footer_leaderboard
 tomsguide.com##^#header_leaderboard
-tomsguide.com##^#prism-modal[data-template="banner"]
 tomsguide.com##^#rightcol_top
-tomsguide.com##^#slice-container-exitIntent
-tomsguide.com##^#slice-container-newsletterForm-exitIntent
 tomsguide.com##^#video_ad
 tomsguide.com##^.bordeaux-anchored-container
 tomsguide.com##^.bordeaux-slot
 tomsguide.com##^.hawk-base
 tomsguide.com##^.hawk-main-editorialised
 tomsguide.com##^.hawk-master-widget-hawk-main-wrapper
-tomsguide.com##^.hawk-placeholder
 tomsguide.com##^.hawk-processed
-tomsguide.com##^.hawk-widget[data-model-name]
-tomsguide.com##^.mobile-leaderboard-320-50:upward([style])
-tomsguide.com##^.news-article .hawk-main-editorial-container
-tomsguide.com##^.onesignal-customlink-container
-tomsguide.com##^.page-content > div.p-u-1.txt-center > div[id] > div[id="[ID]"][class^="_"]
-tomsguide.com##^.page-content-rightcol > div[id] > div[class^="_"]
-tomsguide.com##^.qc-cmp2-container
-tomsguide.com##^.rightcol-ads
-tomsguide.com##^.space-b20 > #rightcol_top
 tomsguide.com##^.sponsored-card
-tomsguide.com##^.van_taboola
-tomsguide.com##^.van_vid_carousel
-tomsguide.com##^.vid-present
-tomsguide.com##^amp-ad
-tomsguide.com##^amp-embed[type="taboola"]
-tomsguide.com##^body .newsletter-signup
-tomsguide.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
 tomsguide.com##^div[class*="ad-unit"]
-tomsguide.com##^div[class^="bordeaux-"]
-tomsguide.com##^div[data-offer="deal_of_the_week"]
-tomsguide.com##^div[id^="slice-container-newsletter"]
+tomsguide.com##^.vid-present
+tomsguide.com##^.mobile-leaderboard-320-50:upward([style])
+tomsguide.com##^.van_taboola
 !#endif
 !xda-developers.com 20240114015836
 !#if cap_html_filtering
@@ -639,28 +652,36 @@ sammyfans.com##^ins.adsbygoogle[data-ad-slot]
 sammyfans.com##ins.adsbygoogle[data-ad-slot]
 !bleepingcomputer.com 20250401193133
 !#if cap_html_filtering
-bleepingcomputer.com##^#after_dl
-bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> a[href$="/deals/"])
-bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
-bleepingcomputer.com##^#ips_Posts > .post_block:has(div.apb)
-bleepingcomputer.com##^#pinned
-bleepingcomputer.com##^.bc_news_letter_sidebar
+bleepingcomputer.com##^.spon_res
+bleepingcomputer.com##^.bc_right_sidebar > div:has(> .cz-line-heading:first-child + ul:last-child > li > .spon_res:only-child)
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has(> .bc_latest_news_text > h4 > a[rel="nofollow"]:not([href*="bleepingcomputer.com"]))
+bleepingcomputer.com##^.articleBody > div[style^="width:"]:not([class]):has(> a[target="_blank"])
+bleepingcomputer.com##^.articleBody > div[data-key] > div[style^="width:"]:not([class]):has(> a[target="_blank"])
+bleepingcomputer.com##^a.center-link-image[target="_blank"][rel="sponsored noopener"]
+bleepingcomputer.com##^.bc_right_sidebar div[align="center"] > a[target="_blank"] > img
 bleepingcomputer.com##^.bc_right_sidebar > .bc_guide:has(> ul > li > a.spon_res)
-bleepingcomputer.com##^.bc_right_sidebar > div[align="center"] > a[target="_blank"] > img
-bleepingcomputer.com##^.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
+bleepingcomputer.com##^a[href="https://try.flare.io/bleeping-computer/"] > img
+bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> div > a[href^="https://www.bleepingcomputer.com/offer/deals/"])
+bleepingcomputer.com##^#after_dl
 bleepingcomputer.com##^.cz-sponsorposts
+bleepingcomputer.com##^#ips_Posts > .post_block:has(div.apb)
+bleepingcomputer.com##^.cz-post-comment-wrapp + .cz-related-article-wrapp:has(> .adsbygoogle)
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has(> div > ul > li > a[rel="noopener sponsored"])
+bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:contains(Sponsored)
+bleepingcomputer.com##^.noti_bar
+bleepingcomputer.com##^.bc_news_letter_sidebar
+bleepingcomputer.com##^.bc_guide
 bleepingcomputer.com##^.cz-toa-wrapp
 bleepingcomputer.com##^.ia_ad
-bleepingcomputer.com##^.noti_bar
-bleepingcomputer.com##^.noty_bar
-bleepingcomputer.com##^.s-ou-wrap
-bleepingcomputer.com##^[href="https://try.flare.io/bleeping-computer/"]
+bleepingcomputer.com##^[href*="https://www.bleepingcomputer.com/mgo/"]
+bleepingcomputer.com##^[href^="https://www.adaptivesecurity.com/"]
 bleepingcomputer.com##^[href^="https://www.bleepingcomputer.com/go/"]
-bleepingcomputer.com##^a.center-link-image[target="_blank"][rel="sponsored noopener"]
-bleepingcomputer.com##^a[href="https://try.flare.io/bleeping-computer/"] > img
-bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:contains(Sponsored)
-bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has(> div > ul > li > a[rel="noopener sponsored"])
+bleepingcomputer.com##^[href^="https://www.threatlocker.com/"]
+bleepingcomputer.com##^[src*="https://www.bleepstatic.com/c/t/threatlocker/"]
+bleepingcomputer.com##^.articleBody > div:has(a[href^="https://www.wiz.io/"])
 bleepingcomputer.com##^ul#bc-home-news-main-wrap > li:has-text(Sponsored)
+bleepingcomputer.com##^#bc-home-news-main-wrap > li:has(> a[href$="/deals/"])
+bleepingcomputer.com##^a[rel="sponsored noopener"]
 !#endif
 !pcworld.com
 pcworld.com##div.wp-block-column:nth-of-type(2)
@@ -688,43 +709,46 @@ tomshardware.com##^.dfp-leaderboard-container
 tomshardware.com##.dfp-leaderboard-container
 !#endif
 !#if cap_html_filtering
-tomshardware.com##^#article-body > div.widthsetter ~ div.jwplayer__widthsetter
-tomshardware.com##^#article-body > p + .jwplayer__widthsetter
-tomshardware.com##^#article-body > p[id]:not([class]):has(> a[href^="https://news.google.com/publications/"])
-tomshardware.com##^#ec-modal
-tomshardware.com##^#footer_leaderboard
 tomshardware.com##^#header_leaderboard
-tomshardware.com##^#newsletter-slice
-tomshardware.com##^#rightcol_bottom
+tomshardware.com##^#footer_leaderboard
+tomshardware.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
 tomshardware.com##^#rightcol_top
 tomshardware.com##^#rightcol_top + .space-b30
 tomshardware.com##^#rightcol_top_anchor
-tomshardware.com##^#slice-container-exitIntent
-tomshardware.com##^#slice-container-newsletterForm-articleInbodyContent
-tomshardware.com##^#slice-container-newsletterForm-exitIntent
 tomshardware.com##^#video_ad
-tomshardware.com##^.ad-unit + div.jwplayer__widthsetter > div.future__jwplayer
-tomshardware.com##^.box.newsletter-signup
-tomshardware.com##^.ec-popup-modal
-tomshardware.com##^.future__jwplayer--carousel
-tomshardware.com##^.jwplayer__widthsetter
-tomshardware.com##^.mobile-leaderboard-320-50:upward([style])
-tomshardware.com##^.onesignal-customlink-container
-tomshardware.com##^.prism-modal
 tomshardware.com##^.qc-cmp2-container
+tomshardware.com##^#article-body > p + .jwplayer__widthsetter
+tomshardware.com##^amp-consent
+tomshardware.com##^.prism-modal
+tomshardware.com##^amp-embed[type="taboola"]
+tomshardware.com##^amp-ad
 tomshardware.com##^.read-more-container
 tomshardware.com##^.related-articles-block
-tomshardware.com##^.social-promote-box
-tomshardware.com##^.sponsored-card
-tomshardware.com##^.van_taboola
+tomshardware.com##^#article-body > div.widthsetter ~ div.jwplayer__widthsetter
+tomshardware.com##^.ad-unit + div.jwplayer__widthsetter > div.future__jwplayer
 tomshardware.com##^.van_vid_carousel
-tomshardware.com##^.vid-present
+tomshardware.com##^.future__jwplayer--carousel
+tomshardware.com##^.social-promote-box
+tomshardware.com##^#ec-modal
+tomshardware.com##^.ec-popup-modal
+tomshardware.com##^.onesignal-customlink-container
 tomshardware.com##^a[href^="https://news.google.com/publications/"]
-tomshardware.com##^amp-ad
-tomshardware.com##^amp-consent
-tomshardware.com##^amp-embed[type="taboola"]
-tomshardware.com##^body > div[style^="position: fixed;"][style*="z-index: 999"][style*="pointer-events:"]:not([class]):not([id])
+tomshardware.com##^#article-body > p[id]:not([class]):has(> a[href^="https://news.google.com/publications/"])
+tomshardware.com##^#newsletter-slice
+tomshardware.com##^#slice-container-newsletterForm-exitIntent
+tomshardware.com##^#slice-container-newsletterForm-articleInbodyContent
+tomshardware.com##^#slice-container-exitIntent
+tomshardware.com##^.box.newsletter-signup
+tomshardware.com##^#footer_leaderboard
+tomshardware.com##^#header_leaderboard
+tomshardware.com##^#rightcol_bottom
+tomshardware.com##^#rightcol_top
+tomshardware.com##^.sponsored-card
 tomshardware.com##^div[class*="ad-unit"]
+tomshardware.com##^.jwplayer__widthsetter
+tomshardware.com##^.vid-present
+tomshardware.com##^.mobile-leaderboard-320-50:upward([style])
+tomshardware.com##^.van_taboola
 !#endif
 !topcpu.net 20240607191040
 !#if cap_html_filtering
@@ -738,49 +762,49 @@ userbenchmark.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; pos
 userbenchmark.com##[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 !thehackernews.com 20250402185708
 !#if cap_html_filtering
-thehackernews.com##^#__next > div[class]:has(div[data-testid="modal-overlay"] + div a[href="/privacy"])
-thehackernews.com##^#articlebody > div[class]:has(> center > a:is([rel^="nofollow"], [target^="_blank"]) > img)
-thehackernews.com##^#email-outer
-thehackernews.com##^#ouibounce-modal
-thehackernews.com##^.ad_two
-thehackernews.com##^.akku
-thehackernews.com##^.articlebody > div.cf.note-b:has(> a[href="https://twitter.com/thehackersnews"])
-thehackernews.com##^.av-side-box
 thehackernews.com##^.banners
-thehackernews.com##^.blog-posts > .body-post:has(> a[target="_blank"])
-thehackernews.com##^.css-h52rc8
-thehackernews.com##^.custom-link
-thehackernews.com##^.deal-store
+thehackernews.com##^body > section.rockstar:has(> center > a[href="https://thehackernews.uk/wiz-demo-d"])
 thehackernews.com##^.dig_two
-thehackernews.com##^.dog_two
-thehackernews.com##^.okfix
-thehackernews.com##^.right-box > .zoho-box
-thehackernews.com##^.sidewalaad
-thehackernews.com##^.sub-button
-thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a > img[target="_blank"]
+thehackernews.com##^a.custom-link[rel*="sponsored"]
+thehackernews.com##^section.box-side:has(> div[class] > a[target="_blank"])
+thehackernews.com##^.blog-posts > .body-post:has(> a[target="_blank"])
+thehackernews.com##^body > [class]:has(> a[href][target="_blank"])
+thehackernews.com##^body > [class^="p"]:has(> center > script)
+thehackernews.com##^body > [class]:has(> center a[href][target="_blank"])
 thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a[target="_blank"] > img
+thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]) a > img[target="_blank"]
 thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class] + script)
 thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a > img[target="_blank"]) + script)
 thehackernews.com##^:is(aside, section, [id*="-"], [class*="right"], [class*="side"]):has(> div[class][id]:has(> a[target="_blank"]) + script)
-thehackernews.com##^[href="https://thehackernews.uk/wiz-kubernetes-security"]
-thehackernews.com##^a.custom-link[rel*="sponsored"]
-thehackernews.com##^a[href^="https://thehackernews.uk/"]:matches-attr(href=/https:\/\/thehackernews\.uk\/[a-zA-Z0-9]{4,}/):not([href*="-"]):not([class*="button"]):not([class*="latest"])
-thehackernews.com##^body > .deals > .deal-box
-thehackernews.com##^body > .google.cf
-thehackernews.com##^body > [class]:has(> a[href][target="_blank"])
-thehackernews.com##^body > [class]:has(> center a[href][target="_blank"])
-thehackernews.com##^body > [class^="p"]:has(> center > script)
+thehackernews.com##^center > a:is([rel^="nofollow"], [target^="_blank"]) > img
+thehackernews.com##^#articlebody > div[class]:has(> center > a:is([rel^="nofollow"], [target^="_blank"]) > img)
+thehackernews.com##^.ad_two
+thehackernews.com##^.right-box > .zoho-box
+thehackernews.com##^.sidewalaad
+thehackernews.com##^.deal-store
 thehackernews.com##^body > div.cf:has(> center > a[rel*="sponsored"])
+thehackernews.com##^.dog_two
+thehackernews.com##^.av-side-box
+thehackernews.com##^body > .google.cf
+thehackernews.com##^#__next > div[class]:has(div[data-testid="modal-overlay"] + div a[href="/privacy"])
+thehackernews.com##^body > .deals > .deal-box
+thehackernews.com##^#ouibounce-modal
+thehackernews.com##^.articlebody > div.cf.note-b:has(> a[href="https://twitter.com/thehackersnews"])
+thehackernews.com##^div[data-testid="newsletter"]
 thehackernews.com##^body > div[role="dialog"]:has(> iframe[title^="Email Capture Technology"])
 thehackernews.com##^body > div[style^="background-image: none;"].fb_lightbox-overlay.fb_lightbox-overlay-fixed
-thehackernews.com##^body > section.rockstar:has(> center > a[href="https://thehackernews.uk/wiz-demo-d"])
-thehackernews.com##^body:has(article) .cf > a[href^="https://thehackernews.uk/"][target="_blank"]
-thehackernews.com##^center > a:is([rel^="nofollow"], [target^="_blank"]) > img
-thehackernews.com##^div.rocking
-thehackernews.com##^div[data-testid="newsletter"]
-thehackernews.com##^section.box-side:has(> div[class] > a[target="_blank"])
-thehackernews.com##^section.cf.rocking
+thehackernews.com##^.sub-button
 thehackernews.com##^ul > li:has(> a[href="#email-outer"])
+thehackernews.com##^#email-outer
+thehackernews.com##^.custom-link
+thehackernews.com##^.dog_two
+thehackernews.com##^.okfix
+thehackernews.com##^div.rocking
+thehackernews.com##^a[href^="https://thehackernews.uk/"]:matches-attr(href=/https:\/\/thehackernews\.uk\/[a-zA-Z0-9]{4,}/):not([href*="-"]):not([class*="button"]):not([class*="latest"])
+thehackernews.com##^body:has(article) .cf > a[href^="https://thehackernews.uk/"][target="_blank"]
+thehackernews.com##^[href="https://thehackernews.uk/wiz-kubernetes-security"]
+thehackernews.com##^.akku
+thehackernews.com##^section.cf.rocking
 !#endif
 !
 !MARK: ---tech ---
@@ -791,41 +815,46 @@ cyanogenmods.org##^div#cyan-ad-slot
 !#endif
 cyanogenmods.org##div#cyan-ad-slot
 !#if cap_html_filtering
-w3schools.com##^#getdiploma
-w3schools.com##^#lowerfeatureshowcaselink
-w3schools.com##^#mainLeaderboard
-w3schools.com##^#right > div#internalCourses
-w3schools.com##^#right > div.sidesection:has(> a[href="https://www.w3schools.com/videos/index.php"])
-w3schools.com##^#skyscraper
-w3schools.com##^#sncmp-banner
-w3schools.com##^#tryitLeaderboard
-w3schools.com##^#upperfeatureshowcaselink
-w3schools.com##^.sidesection:has(> a[href="/colors/colors_picker.asp"])
-w3schools.com##^a[class^="showcase"]
 w3schools.com##^div[id*="contentadcontainer"]
+w3schools.com##^#sncmp-banner
+w3schools.com##^.sidesection:has(> a[href="/colors/colors_picker.asp"])
+w3schools.com##^#upperfeatureshowcaselink
+w3schools.com##^#lowerfeatureshowcaselink
+w3schools.com##^a[class^="showcase"]
+w3schools.com##^#right > div.sidesection:has(> a[href="https://www.w3schools.com/videos/index.php"])
+w3schools.com##^#right > div#internalCourses
+w3schools.com##^#getdiploma
+w3schools.com##^#mainLeaderboard
+w3schools.com##^#skyscraper
+w3schools.com##^#tryitLeaderboard
 !#endif
 !
 !MARK: ---code coding ---
 !
 !sourceforge.net 20250401190046
 !#if cap_html_filtering
-sourceforge.net##^#banner-sterling
-sourceforge.net##^#downloading > #mirror
-sourceforge.net##^#get-updates
-sourceforge.net##^#mirror
-sourceforge.net##^#nels
-sourceforge.net##^#newsletter-floating
-sourceforge.net##^.can-truncate
-sourceforge.net##^.dlp_newsletter_subscribe
+sourceforge.net##^#floating-content-wrapper
 sourceforge.net##^.main-nav-link
-sourceforge.net##^.projects > .trunc-eligible
 sourceforge.net##^.projects > li.nel[data-cid]
-sourceforge.net##^.sterling
+sourceforge.net##^#nels
+sourceforge.net##^.can-truncate
+sourceforge.net##^div[data-id^="div-gpt-ad-"]
 sourceforge.net##^.truste_box_overlay
 sourceforge.net##^.truste_overlay
-sourceforge.net##^a[data-label^="avast"]
+sourceforge.net##^#downloading > #mirror
+sourceforge.net##^#newsletter-floating
+sourceforge.net##^.dlp_newsletter_subscribe
+sourceforge.net##^#get-updates
 sourceforge.net##^article.main-content > div.m-kmu:has(.subscribe-tagline)
-sourceforge.net##^div[data-id^="div-gpt-ad-"]
+sourceforge.net##^.dlp_newsletter_subscribe
+sourceforge.net##^#banner-sterling
+sourceforge.net##^#floating-content
+sourceforge.net##^.projects > .trunc-eligible
+sourceforge.net##^.sterling
+sourceforge.net##^a[data-label^="avast"]
+sourceforge.net##^.can-truncate
+sourceforge.net##^#mirror
+sourceforge.net##^#nels
 !#endif
 !tutorialstonight.com
 !#if cap_html_filtering
@@ -922,6 +951,8 @@ thepythoncode.com##.ezmob-footer
 adfoc.us##^.content > iframe
 !#endif
 adfoc.us##.content > iframe
+!bit.ly 20260207202601
+bit.ly##+js(trusted-click-element,a[id="action:continue"])
 !
 !MARK: ---automatic ---
 !
@@ -954,32 +985,34 @@ animeranku.com##^ins.adsbygoogle[data-ad-slot]
 animeranku.com##ins.adsbygoogle[data-ad-slot]
 !myanimelist.net 20250406195248
 !#if cap_html_filtering
-myanimelist.net##^.amazon-ads
-myanimelist.net##^.anchor-ad
-myanimelist.net##^.bookstore-detail-right
-myanimelist.net##^.bookstores-recommend-plugin
-myanimelist.net##^.border_top
-myanimelist.net##^.bottom-bar
-myanimelist.net##^.btn-mal-service
-myanimelist.net##^.footer-mini-banner
+myanimelist.net##^a[href^="/c/u/"][target="_blank"]
+myanimelist.net##^table[align="center"] > tbody > tr > td > div[class]:has(> div[style] > div > div[data-ad-target])
+myanimelist.net##^div[style="padding:16px 0px 0px 0px;"]
+myanimelist.net##^div[style="margin: 0 0 20px;"]
+myanimelist.net##^div[style="width:760px;"]
+myanimelist.net##^div[data-koukoku-width]
 myanimelist.net##^.mal-koukoku-unit
+myanimelist.net##^div[style="padding:16px 0px 0px 0px;margin:14px 0px 0px 0px;"]:not([class]):not([id])
+myanimelist.net##^.amazon-ads
+myanimelist.net##^.modal-content-overlay
+myanimelist.net##^.modal-content
+myanimelist.net##^.anchor-ad
+myanimelist.net##^.btn-mal-service
+myanimelist.net##^.widget-container:has(> div.widget a[href="https://mxj.myanimelist.net/"])
+myanimelist.net##^table > tbody > tr:has(> td > div.widget-content > h2 > div.floatRightHeader > a[href="https://mxj.myanimelist.net/"])
+myanimelist.net##^.footer-mini-banner
+myanimelist.net##^.bottom-bar
+myanimelist.net##^.top_signup
 myanimelist.net##^.modal-container
 myanimelist.net##^.modal-content
 myanimelist.net##^.modal-content-overlay
-myanimelist.net##^.top_signup
-myanimelist.net##^.widget-container:has(> div.widget a[href="https://mxj.myanimelist.net/"])
+myanimelist.net##^.bookstores-recommend-plugin
+myanimelist.net##^.border_top
+myanimelist.net##^[src*="/c/img/images/event/"]
 myanimelist.net##^[class*="-malside"]
 myanimelist.net##^[class*="-pdatla"]
-myanimelist.net##^[src*="/c/img/images/event/"]
-myanimelist.net##^a[href^="/c/u/"][target="_blank"]
+myanimelist.net##^.bookstore-detail-right
 myanimelist.net##^div[class*="bookstores-recommend-plugin-"]:has(span[class="sponsored"])
-myanimelist.net##^div[data-koukoku-width]
-myanimelist.net##^div[style="margin: 0 0 20px;"]
-myanimelist.net##^div[style="padding:16px 0px 0px 0px;"]
-myanimelist.net##^div[style="padding:16px 0px 0px 0px;margin:14px 0px 0px 0px;"]:not([class]):not([id])
-myanimelist.net##^div[style="width:760px;"]
-myanimelist.net##^table > tbody > tr:has(> td > div.widget-content > h2 > div.floatRightHeader > a[href="https://mxj.myanimelist.net/"])
-myanimelist.net##^table[align="center"] > tbody > tr > td > div[class]:has(> div[style] > div > div[data-ad-target])
 !#endif
 !
 !MARK: ---music illegitimate ---
@@ -1034,16 +1067,16 @@ conomi.co##a[class^="ads--"]
 !#endif
 !time.is 20250406174958
 !#if cap_html_filtering
-time.is##^#recover
 time.is##^#toppromotion
+time.is##^#recover
 time.is##^.rad
 time.is##^div[style="display:flex;justify-content:center;width:100%;margin-top:20px;height:250px"]
 !#endif
 !isitdownrightnow.com 20250406213300
 !#if cap_html_filtering
 isitdownrightnow.com##^#commentstop
-isitdownrightnow.com##^#likeBox
 isitdownrightnow.com##^.rightdiv > div[class^="ad"]:upward(1)
+isitdownrightnow.com##^#likeBox
 !#endif
 #aqicn.org 20250814185032
 !#if cap_html_filtering
@@ -1087,9 +1120,9 @@ longtunman.com##div[data-testid="feed/Feed/ad"]
 !
 !MARK: ---social platform ---
 !
-!pantip.com 20250919204038
-pantip.com##div[id^="mpantip:script:jatujak:"]
-pantip.com##div[id^="mpantip:script:mbk:"]
+!pantip.com 20251109154641
+pantip.com##div[id^="mpantip:script:"]
+pantip.com##div[id^="mpantip:kratoo:"]
 pantip.com##div[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
 pantip.com##div[id="scp_mbl_frukt_related"]
 !
@@ -1183,6 +1216,9 @@ thairath.co.th##div#slot-money-middle-postarticle-mobile:upward(1)
 thairath.co.th##div.container-ads:upward(1)
 thairath.co.th##div#article_billboard:upward(1)
 thairath.co.th##div[class*="adsbox"]
+!
+! แสดงสินค้า 20260310004644
+thairath.co.th##div[class="carousel _tr-widget"]
 !ch3plus.com 20240220140536
 !#if cap_html_filtering
 ch3plus.com##^[id^="div-gpt-ad"]:not([style^="width: 1px; height: 1px; position: absolute; left: -10000px; top: -"])
@@ -1298,10 +1334,10 @@ khaosod.co.th##^div[id*="ScriptRoot"]
 khaosod.co.th##div[id*="ScriptRoot"]
 !#endif
 !#if cap_html_filtering
-khaosod.co.th##^#pdpa-popup
 khaosod.co.th##^.ads_position_wrapper
-khaosod.co.th##^.pdpa-wrapper
+khaosod.co.th##^#pdpa-popup
 khaosod.co.th##^.udfollow
+khaosod.co.th##^.pdpa-wrapper
 !#endif
 !khaosodenglish.com 20240130222122
 !#if cap_html_filtering
@@ -2604,17 +2640,9 @@ anime-yuzu.com##^a[href^="https://t.ly/"]
 !#else
 anime-yuzu.com##a[href^="https://t.ly/"]
 !#endif
-!animeruka.com 20251016013620
-!#if cap_html_filtering
-animeruka.com##^div[class="module_home_x"]
-!#else
+!animeruka.com 20260226012727
 animeruka.com##div[class="module_home_x"]
-!#endif
-!#if cap_html_filtering
-animeruka.com##^div[id^="slider-"]
-!#else
-animeruka.com##div[id^="slider-"]
-!#endif
+animeruka.com##div[id^="box-"]
 !anime-masters.com 20240709014043
 !! use more performance rule
 anime-masters.com#@#p[class^="center_"] > a[target="_blank"] > img
@@ -3229,7 +3257,22 @@ lk-hd.com##div[class="ads-above-single-player"]
 !#endif
 ||lk-hd.com^$media
 !037-hddmovie.com 20251005000857
+!#if cap_html_filtering
 037-hddmovie.com##^div[id^="ads-"]
+!#else
+037-hddmovie.com##div[id^="ads-"]
+!#endif
+!movie2freehd.com 20251110112716
+!#if cap_html_filtering
+movie2freehd.com##^div[class^="ad-"]
+!#else
+movie2freehd.com##div[class^="ad-"]
+!#endif
+!#if cap_html_filtering
+movie2freehd.com##^div[class="bottom-center"]
+!#else
+movie2freehd.com##div[class="bottom-center"]
+!#endif
 !
 !MARK: --- Others
 !
@@ -3291,7 +3334,6 @@ online-station.net##div[class^="ads-block-"]
 ##img[alt="NEON24H"]
 ##img[alt="LUKWIN88"]
 ##img[alt*="baccarat"]
-##img[alt="บาคาร่า"]
 ##img[alt^="pgslot"]
 ##img[alt="hentai-buzz"]
 ##img[alt="PG SLOT"]
@@ -3310,6 +3352,11 @@ online-station.net##div[class^="ads-block-"]
 ##img[alt*="sexygame"]
 ##img[alt*="NEXOBET"]
 ##img[alt="PGK44"]
+##img[alt="series168"]
+##img[title="บาคาร่า"]
+##img[title="ดูหนัง ซีรีย์"]
+##img[title="เอวี"]
+##img[alt="ดูหนังออนไลน์ฟรี"]
 ##a[href^="https://t.ly/"]
 ##a[href^="https://cutt.ly/"]
 ##img[alt="Advertisement"]
@@ -3324,6 +3371,22 @@ online-station.net##div[class^="ads-block-"]
 ##div[id="slider-l"] > a
 ##div[id="slider-l"] > a
 ##div[id="slider-f"] > a
+##img[alt^="lalikabet"]
+##img[alt^="ufafat"]
+##img[alt^="ufac"]
+##img[alt^="Lockdown168"]
+##img[alt^="vip168sa"]
+##img[alt^="sa168vip"]
+##img[alt^="juad888"]
+##img[alt^="ufazeed"]
+##img[alt="สล็อตเว็บตรง"]
+##img[alt="BJ88"]
+##img[alt="alpha88"]
+##img[alt="เว็บหวยออนไลน์"]
+##img[alt="regem"]
+##img[alt="1xbet"]
+##img[alt="ufar8"]
+##img[alt="huay365"]
 !!!**************************************************************************************
 !* 
 !* General Rules
@@ -3346,6 +3409,38 @@ online-station.net##div[class^="ads-block-"]
 !freespin ad พบได้ใน cats-translator.com
 /freespin-ts.gif$image
 /ads_xtradark$image
+/*huayork*.gif$image
+/*regem*.jpg$image
+/*ufag*.gif$image
+/*ufar8*.gif$image
+/*huay365*.gif$image
+/*sagame*.gif$image
+/*sexygame*.gif$image
+/ufa11k.mp4$media
+/pgk44*.gif$image
+/*728x400*.gif$image
+/*ufabet*.gif$image
+/*sexy365*.gif$image
+/*sbobet*.gif$image
+/*baccarat*.gif$image
+/*huaypung*.gif$image
+/*kp88*.gif$image
+/*ufanice*.gif$image
+/*neon24h*.gif$image
+/*thunder24*.gif$image
+/*singha24*.gif$image
+/*heng36*.gif$image
+/*max56*.gif$image
+/*kamo99*.gif$image
+/*kiki49*.gif$image
+/*abm96*.gif$image
+/*mab96*.gif$image
+/*789bet*.gif$image
+/*ufa365*.gif$image
+/*3-xbet*.gif$image
+/*lockdown168*.gif$image
+/*banner-jav*.gif$image
+/*gif-fhm*.gif$image
 !!!**************************************************************************************
 !* 
 !* Anti ad block detect
@@ -4743,6 +4838,7 @@ sorcharoenchai.com##^div[id="yp-cookie-wrapper"]
 sorcharoenchai.com##div[id="yp-cookie-wrapper"]
 !#endif
 dohome.co.th##div[class="sticky bottom-0 z-80"]
+skport.com##section[id="sk-cookies-root"]
 !set-cookie ปฏิเสธทั้งหมดเท่าที่เป็นไปได้
 studio7thailand.com##+js(trusted-set-cookie,ANALYTICAL,false)
 studio7thailand.com##+js(trusted-set-cookie,MARKETING,false)
